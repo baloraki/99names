@@ -6,6 +6,7 @@ import { usePathname, useRouter } from 'next/navigation'
 import type { ReactNode } from 'react'
 import { useEffect, useState } from 'react'
 import { getDict, LANGUAGES } from '@/lib/i18n'
+import { isLanguage } from '@/lib/languagePreference'
 import { getEquivalentLocalizedPath, getLocalizedSeoPath } from '@/lib/seo'
 import { storage } from '@/lib/storage'
 import type { Language } from '@/types/language'
@@ -16,10 +17,6 @@ const getNavItems = (language: Language) => [
   { href: getLocalizedSeoPath('learn', language), key: 'learn', icon: '◐' },
   { href: '/settings', key: 'settings', icon: '⚙' },
 ] as const
-
-const isLanguage = (value: unknown): value is Language => {
-  return value === 'de' || value === 'tr' || value === 'en'
-}
 
 const getInitialLanguage = (routeLanguage?: Language): Language => {
   if (routeLanguage) return routeLanguage
@@ -97,9 +94,6 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
       </header>
       <main className="mx-auto w-full max-w-6xl px-4 pb-28 pt-6 md:pb-12">{children}</main>
       <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-background/95 px-2 py-2 backdrop-blur md:hidden" aria-label={dict.nav.mobile}>
-        <div className="mx-auto mb-2 max-w-md">
-          <LanguageSwitcher language={language} label={dict.settings.language} onChange={onLanguageChange} />
-        </div>
         <div className="mx-auto grid max-w-md grid-cols-4 gap-1">
           {navItems.map((item) => {
             const active = isActive(item.href)

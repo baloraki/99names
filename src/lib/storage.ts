@@ -1,6 +1,13 @@
 import type { ProgressState } from '@/types/progress'
 import type { LearningScheduleSettings } from '@/types/learningSchedule'
 import type { Language } from '@/types/language'
+import {
+  createClearedLanguageCookie,
+  createLanguageCookie,
+  getBrowserLanguage,
+  getLanguageFromCookieHeader,
+  isLanguage,
+} from './languagePreference'
 import { STORAGE_KEYS } from './constants'
 
 const isClient = typeof window !== 'undefined'
@@ -54,10 +61,17 @@ export const storage = {
     setItem(STORAGE_KEYS.PROGRESS, progress)
   },
   getLanguage(): Language {
-    return getItem<Language>(STORAGE_KEYS.LANGUAGE) ?? 'en'
+    const storedLanguage = getItem<unknown>(STORAGE_KEYS.LANGUAGE)
+    if (isLanguage(storedLanguage)) return storedLanguage
+
+    const cookieLanguage = isClient ? getLanguageFromCookieHeader(window.document.cookie) : null
+    return cookieLanguage ?? getBrowserLanguage()
   },
   setLanguage(language: Language): void {
     setItem(STORAGE_KEYS.LANGUAGE, language)
+    if (isClient) {
+      window.document.cookie = createLanguageCookie(language)
+    }
   },
   getSchedule(): LearningScheduleSettings {
     return getItem<LearningScheduleSettings>(STORAGE_KEYS.SCHEDULE) ?? { ...defaultSchedule }
@@ -69,5 +83,8 @@ export const storage = {
     removeItem(STORAGE_KEYS.PROGRESS)
     removeItem(STORAGE_KEYS.LANGUAGE)
     removeItem(STORAGE_KEYS.SCHEDULE)
+    if (isClient) {
+      window.document.cookie = createClearedLanguageCookie()
+    }
   },
 }
