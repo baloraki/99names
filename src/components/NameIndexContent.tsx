@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { JsonLd } from '@/components/JsonLd'
+import { LearningProgressWidget } from '@/components/LearningProgressWidget'
 import { names } from '@/data/names'
 import { getLocalizedNamePath, getLocalizedNamesPath } from '@/lib/seo'
 import { breadcrumbJsonLd, itemListJsonLd } from '@/lib/structuredData'
@@ -68,6 +69,7 @@ export function NameIndexContent({ locale }: { locale: Language }) {
           {text.source}
         </p>
       </section>
+      <LearningProgressWidget locale={locale} />
       <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {names.map((name) => (
           <li key={name.id}>

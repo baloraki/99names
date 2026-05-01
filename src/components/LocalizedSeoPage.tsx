@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { JsonLd } from '@/components/JsonLd'
+import { LearningProgressWidget } from '@/components/LearningProgressWidget'
 import { LearnClient } from '@/components/LearnClient'
 import { names } from '@/data/names'
 import {
@@ -295,6 +296,7 @@ function LearnPage({ locale }: { locale: Language }) {
         <Link className="btn-primary" href={getLocalizedNamesPath(locale)}>{text.primaryCta}</Link>
         <Link className="btn-secondary" href={getLocalizedSeoPath('reflections', locale)}>{text.secondaryCta}</Link>
       </div>
+      <LearningProgressWidget locale={locale} />
       <LearnClient embedded locale={locale} />
     </div>
   )

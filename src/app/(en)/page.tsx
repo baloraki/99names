@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 import Link from 'next/link'
 import { JsonLd } from '@/components/JsonLd'
+import { LearningProgressWidget } from '@/components/LearningProgressWidget'
 import { names } from '@/data/names'
 import { buildMetadata, homeAlternates } from '@/lib/seo'
 import { organizationJsonLd, websiteJsonLd } from '@/lib/structuredData'
@@ -49,6 +50,8 @@ export default function HomePage() {
           </Link>
         </section>
       </section>
+
+      <LearningProgressWidget locale="en" />
 
       <section className="grid gap-4 md:grid-cols-4">
         <Link className="rounded-lg border border-white/10 bg-surface p-5 hover:border-gold/50 focus-ring" href="/names">

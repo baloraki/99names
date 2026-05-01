@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { JsonLd } from '@/components/JsonLd'
+import { LearningProgressWidget } from '@/components/LearningProgressWidget'
 import { names } from '@/data/names'
 import { buildMetadata, homeAlternates } from '@/lib/seo'
 import { organizationJsonLd, websiteJsonLd } from '@/lib/structuredData'
@@ -41,6 +42,8 @@ export default function GermanHomePage() {
           </Link>
         </section>
       </section>
+
+      <LearningProgressWidget locale="de" />
 
       <section className="max-w-4xl space-y-4">
         <h2 className="text-3xl font-semibold">Was sind die 99 Namen Allahs?</h2>
