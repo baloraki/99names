@@ -54,7 +54,7 @@ export const storage = {
     setItem(STORAGE_KEYS.PROGRESS, progress)
   },
   getLanguage(): Language {
-    return getItem<Language>(STORAGE_KEYS.LANGUAGE) ?? 'de'
+    return getItem<Language>(STORAGE_KEYS.LANGUAGE) ?? 'en'
   },
   setLanguage(language: Language): void {
     setItem(STORAGE_KEYS.LANGUAGE, language)

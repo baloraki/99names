@@ -60,6 +60,19 @@ Limits:
 - The contact form requires network access.
 - First visit must be online so the service worker can install and cache assets.
 
+## SEO Architecture
+
+The SEO-critical pages are server-rendered App Router pages. Client components are used only for local progress, settings, and learning interactions, so crawlers can read the core content without JavaScript.
+
+- `src/lib/seo.ts` centralizes `NEXT_PUBLIC_SITE_URL` / `NEXT_PUBLIC_APP_URL` handling, canonical paths, hreflang alternates, Open Graph/Twitter metadata, localized name URLs, and sitemap entries.
+- `src/lib/structuredData.ts` builds and sanitizes JSON-LD for `WebSite`, `Organization`, `BreadcrumbList`, `ItemList`, and `LearningResource` data.
+- `src/app/sitemap.ts` includes the required static routes plus English, German, and Turkish detail routes for all 99 names.
+- `src/app/robots.ts` allows public crawling and references `/sitemap.xml`.
+- English is the default route group. `/de` and `/tr` use separate root layouts so their rendered documents have the correct `lang` attribute.
+- Name detail pages use `generateStaticParams`, `dynamicParams = false`, and `generateMetadata` for static, canonical detail pages.
+
+Religious content remains source-aware: source notes are visible on detail pages, review-required flags are preserved, and the common list is treated as a learning order rather than an unsupported authenticity claim for every individual entry.
+
 ## Learning Schedule Limits
 
 The learning schedule is local in-app reminder logic only. It calculates `nextDueAt` for `2h`, `6h`, or `daily` intervals and shows hints while the app is open.

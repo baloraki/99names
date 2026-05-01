@@ -6,7 +6,7 @@ import { names } from '@/data/names'
 import { useAppState } from '@/hooks/useAppState'
 import { getDict } from '@/lib/i18n'
 
-export function LearnClient() {
+export function LearnClient({ embedded = false }: { embedded?: boolean }) {
   const { language, progress, actions } = useAppState()
   const dict = getDict(language)
   const [offset, setOffset] = useState(0)
@@ -17,7 +17,11 @@ export function LearnClient() {
     return (
       <section className="mx-auto max-w-2xl rounded-lg border border-gold/20 bg-surface p-8 text-center">
         <p className="text-sm uppercase tracking-[0.22em] text-gold">{dict.learn.eyebrow}</p>
-        <h1 className="mt-4 text-3xl font-semibold">{dict.learn.allLearnedTitle}</h1>
+        {embedded ? (
+          <h2 className="mt-4 text-3xl font-semibold">{dict.learn.allLearnedTitle}</h2>
+        ) : (
+          <h1 className="mt-4 text-3xl font-semibold">{dict.learn.allLearnedTitle}</h1>
+        )}
         <p className="mt-3 text-muted">{dict.learn.allLearnedBody}</p>
         <Link href="/names" className="btn-primary mt-6">{dict.learn.overview}</Link>
       </section>
@@ -28,7 +32,11 @@ export function LearnClient() {
     <div className="mx-auto max-w-2xl space-y-6">
       <section>
         <p className="text-sm uppercase tracking-[0.22em] text-gold">{dict.learn.eyebrow}</p>
-        <h1 className="mt-3 text-4xl font-semibold">{dict.learn.title}</h1>
+        {embedded ? (
+          <h2 className="mt-3 text-4xl font-semibold">{dict.learn.title}</h2>
+        ) : (
+          <h1 className="mt-3 text-4xl font-semibold">{dict.learn.title}</h1>
+        )}
         <p className="mt-2 text-muted">{dict.learn.remaining(openNames.length)}</p>
       </section>
       <section className="rounded-lg border border-gold/20 bg-[radial-gradient(circle_at_top,rgba(214,178,94,0.16),rgba(22,22,22,0.98)_60%)] p-6">

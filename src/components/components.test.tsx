@@ -31,19 +31,19 @@ describe('ContactForm', () => {
 
   it('shows validation errors and blocks submit for missing fields', () => {
     render(<ContactForm />)
-    fireEvent.click(screen.getByRole('button', { name: 'Senden' }))
-    expect(screen.getByText('Name ist erforderlich')).toBeInTheDocument()
-    expect(screen.getByText('E-Mail ist erforderlich')).toBeInTheDocument()
-    expect(screen.getByText('Nachricht ist erforderlich')).toBeInTheDocument()
+    fireEvent.click(screen.getByRole('button', { name: 'Send' }))
+    expect(screen.getByText('Name is required')).toBeInTheDocument()
+    expect(screen.getByText('Email is required')).toBeInTheDocument()
+    expect(screen.getByText('Message is required')).toBeInTheDocument()
   })
 
   it('blocks submit if Web3Forms key is missing', () => {
     vi.stubEnv('NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY', '')
     render(<ContactForm />)
     fireEvent.change(screen.getByLabelText('Name'), { target: { value: 'Test' } })
-    fireEvent.change(screen.getByLabelText('E-Mail'), { target: { value: 'test@example.com' } })
-    fireEvent.change(screen.getByLabelText('Nachricht'), { target: { value: 'Hello' } })
-    fireEvent.click(screen.getByRole('button', { name: 'Senden' }))
-    expect(screen.getByText('Das Kontaktformular ist noch nicht konfiguriert.')).toBeInTheDocument()
+    fireEvent.change(screen.getByLabelText('Email'), { target: { value: 'test@example.com' } })
+    fireEvent.change(screen.getByLabelText('Message'), { target: { value: 'Hello' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Send' }))
+    expect(screen.getByText('The contact form is not configured yet.')).toBeInTheDocument()
   })
 })

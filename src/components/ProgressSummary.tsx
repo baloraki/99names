@@ -9,7 +9,7 @@ type Props = {
   language?: Language
 }
 
-export function ProgressSummary({ progress, compact = false, language = 'de' }: Props) {
+export function ProgressSummary({ progress, compact = false, language = 'en' }: Props) {
   const dict = getDict(language)
   const total = 99
   const learned = progress.learnedIds.length

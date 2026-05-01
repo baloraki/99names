@@ -21,7 +21,7 @@ const initialSchedule: LearningScheduleSettings = {
 
 export function useAppState() {
   const [ready, setReady] = useState(false)
-  const [language, setLanguageState] = useState<Language>('de')
+  const [language, setLanguageState] = useState<Language>('en')
   const [progress, setProgressState] = useState<ProgressState>(initialProgress)
   const [schedule, setScheduleState] = useState<LearningScheduleSettings>(initialSchedule)
 

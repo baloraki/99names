@@ -1,9 +1,9 @@
 import type { Language } from '@/types/language'
 
 export const LANGUAGES: { value: Language; label: string }[] = [
+  { value: 'en', label: 'English' },
   { value: 'de', label: 'Deutsch' },
   { value: 'tr', label: 'Türkçe' },
-  { value: 'en', label: 'English' },
 ]
 
 export type Dict = {

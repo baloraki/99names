@@ -1,8 +1,16 @@
-const CACHE_NAME = '99names-app-shell-v1'
+const CACHE_NAME = '99names-app-shell-v2'
 const APP_SHELL = [
   '/',
   '/names',
   '/learn',
+  '/quiz',
+  '/dua',
+  '/reflections',
+  '/asma-ul-husna',
+  '/de',
+  '/de/namen',
+  '/tr',
+  '/tr/esmaul-husna',
   '/settings',
   '/privacy',
   '/imprint',
