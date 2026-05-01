@@ -1,24 +1,194 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-background: #080808;
+  --color-background-soft: #111111;
+  --color-surface: #161616;
+  --color-surface-soft: #1f1f1f;
+  --color-gold: #d6b25e;
+  --color-gold-soft: #f0d98a;
+  --color-gold-muted: #8f7338;
+  --color-primary: #f7f3e8;
+  --color-muted: #b8b2a4;
+  --color-danger: #f87171;
+  --color-success: #86efac;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: #080808;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  min-height: 100vh;
+  overflow-x: hidden;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.font-arabic {
+  font-family: "Times New Roman", serif;
+}
+
+.star-field {
+  background:
+    radial-gradient(circle at 20% 15%, rgba(214, 178, 94, 0.16), transparent 26rem),
+    radial-gradient(circle at 82% 8%, rgba(240, 217, 138, 0.08), transparent 22rem),
+    radial-gradient(circle at 50% 80%, rgba(214, 178, 94, 0.06), transparent 24rem),
+    #080808;
+}
+
+.star-field::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background-image:
+    radial-gradient(circle, rgba(247, 243, 232, 0.28) 1px, transparent 1px),
+    radial-gradient(circle, rgba(214, 178, 94, 0.25) 1px, transparent 1px);
+  background-position: 0 0, 18px 22px;
+  background-size: 58px 58px, 91px 91px;
+  opacity: 0.34;
+  animation: drift 28s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .star-field::before {
+    animation: none;
+  }
+
+  * {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+@keyframes drift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-58px, 58px, 0);
+  }
+}
+
+.focus-ring {
+  outline: none;
+}
+
+.focus-ring:focus-visible {
+  box-shadow: 0 0 0 2px #d6b25e, 0 0 0 5px #080808;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-danger {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  outline: none;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.btn-primary {
+  border: 1px solid rgba(214, 178, 94, 0.68);
+  background: #d6b25e;
+  color: #080808;
+}
+
+.btn-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: #f7f3e8;
+}
+
+.btn-danger {
+  border: 1px solid rgba(248, 113, 113, 0.42);
+  background: rgba(248, 113, 113, 0.11);
+  color: #fecaca;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-danger:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.btn-danger:focus-visible,
+.chip:focus-visible,
+.field:focus-visible {
+  box-shadow: 0 0 0 2px #d6b25e, 0 0 0 5px #080808;
+}
+
+.nav-link {
+  border-radius: 8px;
+  padding: 0.55rem 0.8rem;
+  color: #b8b2a4;
+  outline: none;
+}
+
+.nav-link:hover,
+.nav-link-active {
+  background: rgba(214, 178, 94, 0.11);
+  color: #f0d98a;
+}
+
+.mobile-nav {
+  display: flex;
+  min-height: 54px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+  border-radius: 8px;
+  color: #b8b2a4;
+  font-size: 0.72rem;
+  outline: none;
+}
+
+.mobile-nav-active {
+  background: rgba(214, 178, 94, 0.12);
+  color: #f0d98a;
+}
+
+.chip {
+  min-height: 38px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.45rem 0.8rem;
+  color: #b8b2a4;
+  outline: none;
+}
+
+.chip-active {
+  border-color: rgba(214, 178, 94, 0.55);
+  background: rgba(214, 178, 94, 0.12);
+  color: #f0d98a;
+}
+
+.field {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #111111;
+  color: #f7f3e8;
+  outline: none;
+  padding: 0.75rem 0.9rem;
 }

@@ -6,17 +6,27 @@ const INTERVAL_MS: Record<LearningScheduleSettings['interval'], number> = {
   'daily': 24 * 60 * 60 * 1000,
 }
 
+export const learningIntervals = ['2h', '6h', 'daily'] as const
+
+export function isValidInterval(value: string): value is LearningScheduleSettings['interval'] {
+  return learningIntervals.includes(value as LearningScheduleSettings['interval'])
+}
+
 export function calculateNextDue(
   settings: LearningScheduleSettings,
   now: Date = new Date()
 ): Date | null {
   if (!settings.enabled) return null
+  if (!isValidInterval(settings.interval)) {
+    throw new Error('Invalid learning schedule interval')
+  }
   const base = settings.lastCompletedAt ? new Date(settings.lastCompletedAt) : now
   return new Date(base.getTime() + INTERVAL_MS[settings.interval])
 }
 
 export function isDue(settings: LearningScheduleSettings, now: Date = new Date()): boolean {
   if (!settings.enabled) return false
+  if (!isValidInterval(settings.interval)) return false
   if (!settings.nextDueAt) return true
   return now >= new Date(settings.nextDueAt)
 }
@@ -25,6 +35,9 @@ export function markCompleted(
   settings: LearningScheduleSettings,
   now: Date = new Date()
 ): LearningScheduleSettings {
+  if (!isValidInterval(settings.interval)) {
+    throw new Error('Invalid learning schedule interval')
+  }
   const nextDueAt = new Date(now.getTime() + INTERVAL_MS[settings.interval])
   return {
     ...settings,

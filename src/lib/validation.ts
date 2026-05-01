@@ -7,8 +7,12 @@ export function validateContactForm(data: {
   name: string
   email: string
   message: string
+  honeypot?: string
 }): ValidationResult {
   const errors: Record<string, string> = {}
+  if (data.honeypot?.trim()) {
+    errors.honeypot = 'Unable to send this message'
+  }
   if (!data.name.trim()) {
     errors.name = 'Name is required'
   } else if (data.name.length > 100) {

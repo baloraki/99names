@@ -37,7 +37,7 @@ function removeItem(key: string): void {
 const defaultProgress: ProgressState = {
   learnedIds: [],
   favoriteIds: [],
-  updatedAt: new Date().toISOString(),
+  updatedAt: '',
 }
 
 const defaultSchedule: LearningScheduleSettings = {
@@ -47,7 +47,8 @@ const defaultSchedule: LearningScheduleSettings = {
 
 export const storage = {
   getProgress(): ProgressState {
-    return getItem<ProgressState>(STORAGE_KEYS.PROGRESS) ?? defaultProgress
+    const stored = getItem<ProgressState>(STORAGE_KEYS.PROGRESS)
+    return stored ?? { ...defaultProgress, updatedAt: new Date().toISOString() }
   },
   setProgress(progress: ProgressState): void {
     setItem(STORAGE_KEYS.PROGRESS, progress)
@@ -59,7 +60,7 @@ export const storage = {
     setItem(STORAGE_KEYS.LANGUAGE, language)
   },
   getSchedule(): LearningScheduleSettings {
-    return getItem<LearningScheduleSettings>(STORAGE_KEYS.SCHEDULE) ?? defaultSchedule
+    return getItem<LearningScheduleSettings>(STORAGE_KEYS.SCHEDULE) ?? { ...defaultSchedule }
   },
   setSchedule(schedule: LearningScheduleSettings): void {
     setItem(STORAGE_KEYS.SCHEDULE, schedule)

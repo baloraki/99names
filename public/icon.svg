@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="99 Names icon">
+  <rect width="512" height="512" rx="96" fill="#080808"/>
+  <circle cx="256" cy="256" r="184" fill="none" stroke="#D6B25E" stroke-width="18"/>
+  <text x="256" y="236" text-anchor="middle" font-family="Arial, sans-serif" font-size="118" font-weight="700" fill="#F7F3E8">99</text>
+  <text x="256" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" fill="#D6B25E">Names</text>
+</svg>

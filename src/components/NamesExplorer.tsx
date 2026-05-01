@@ -1,0 +1,79 @@
+'use client'
+
+import { useMemo, useState } from 'react'
+import { names } from '@/data/names'
+import { useAppState } from '@/hooks/useAppState'
+import { filterNames } from '@/lib/filters'
+import { searchNames } from '@/lib/search'
+import { NameCard } from './NameCard'
+import { ProgressSummary } from './ProgressSummary'
+
+type FilterMode = 'all' | 'learned' | 'favorites' | 'open'
+
+export function NamesExplorer() {
+  const { language, progress } = useAppState()
+  const [query, setQuery] = useState('')
+  const [filter, setFilter] = useState<FilterMode>('all')
+
+  const filtered = useMemo(() => {
+    const searched = searchNames(names, query, language)
+    return filterNames(searched, {
+      learnedIds: progress.learnedIds,
+      favoriteIds: progress.favoriteIds,
+      showLearned: filter === 'learned',
+      showFavorites: filter === 'favorites',
+      showUnlearned: filter === 'open',
+    })
+  }, [filter, language, progress.favoriteIds, progress.learnedIds, query])
+
+  return (
+    <div className="space-y-6">
+      <section className="grid gap-4 md:grid-cols-[1fr_360px] md:items-end">
+        <div>
+          <p className="text-sm uppercase tracking-[0.22em] text-gold">Uebersicht</p>
+          <h1 className="mt-3 text-3xl font-semibold md:text-5xl">Alle 99 Namen</h1>
+        </div>
+        <ProgressSummary progress={progress} compact />
+      </section>
+      <section className="rounded-lg border border-white/10 bg-surface p-4">
+        <label className="block text-sm text-muted" htmlFor="name-search">Suche</label>
+        <input
+          id="name-search"
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+          className="mt-2 w-full rounded-md border border-white/10 bg-background-soft px-4 py-3 text-primary outline-none focus:border-gold focus:ring-2 focus:ring-gold/40"
+          placeholder="Arabisch, Transliteration oder Bedeutung"
+        />
+        <div className="mt-4 flex flex-wrap gap-2">
+          {([
+            ['all', 'Alle'],
+            ['learned', 'Gelernt'],
+            ['favorites', 'Favoriten'],
+            ['open', 'Offen'],
+          ] as const).map(([value, label]) => (
+            <button key={value} className={filter === value ? 'chip chip-active' : 'chip'} onClick={() => setFilter(value)}>
+              {label}
+            </button>
+          ))}
+        </div>
+      </section>
+      {filtered.length === 0 ? (
+        <section className="rounded-lg border border-white/10 bg-surface p-8 text-center text-muted">
+          Keine Namen passen zu deiner Suche oder dem Filter.
+        </section>
+      ) : (
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {filtered.map((name) => (
+            <NameCard
+              key={name.id}
+              name={name}
+              language={language}
+              learned={progress.learnedIds.includes(name.id)}
+              favorite={progress.favoriteIds.includes(name.id)}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
