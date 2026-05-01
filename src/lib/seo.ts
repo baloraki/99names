@@ -169,7 +169,7 @@ export function buildMetadata({
   locale = 'en',
   alternates,
   type = 'website',
-  imageAlt = '99 Names learning aid icon',
+  imageAlt = 'Daily Husna icon for the 99 Names learning aid',
   index = true,
 }: BuildMetadataInput): Metadata {
   return {

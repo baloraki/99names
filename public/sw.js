@@ -1,4 +1,4 @@
-const CACHE_NAME = '99names-app-shell-v2'
+const CACHE_NAME = '99names-app-shell-v3'
 const APP_SHELL = [
   '/',
   '/names',
@@ -26,6 +26,7 @@ const APP_SHELL = [
   '/imprint',
   '/offline',
   '/manifest.webmanifest',
+  '/logo.svg',
   '/icon.svg',
   '/maskable-icon.svg'
 ]

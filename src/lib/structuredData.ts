@@ -44,7 +44,7 @@ export function organizationJsonLd(): JsonLdValue {
     '@type': 'Organization',
     name: `${SITE_NAME} Learning Aid`,
     url: absoluteUrl('/'),
-    logo: absoluteUrl('/icon.svg'),
+    logo: absoluteUrl('/logo.svg'),
   }
 }
 

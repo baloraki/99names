@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Daily Husna logo</title>
+  <desc id="desc">A glowing gold logo with a crescent, dome, Arabic Allah calligraphy and the words Daily Husna.</desc>
+  <defs>
+    <linearGradient id="gold" x1="96" y1="64" x2="416" y2="448" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F8E7A8"/>
+      <stop offset="0.45" stop-color="#F0D98A"/>
+      <stop offset="1" stop-color="#C79B37"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="0" stdDeviation="22" flood-color="#F3D77B" flood-opacity="0.85"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="48" flood-color="#F3D77B" flood-opacity="0.38"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#glow)">
+    <g fill="none" stroke="url(#gold)" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M169 301c-22-74 11-145 87-188 76 43 109 114 87 188" stroke-width="6.5"/>
+      <path d="M170 301c34-13 62-28 86-45 24 17 52 32 86 45" stroke-width="4.5" opacity="0.92"/>
+      <path d="M256 110v28" stroke-width="5"/>
+      <path d="M249 112c-18-5-28-21-28-39 0-18 13-33 30-36-11 8-18 21-18 35 0 19 12 33 34 40-6 1-12 1-18 0Z" fill="url(#gold)" stroke="none"/>
+
+      <path d="M179 286l-43 8" stroke-width="4.5" opacity="0.9"/>
+      <path d="M333 286l43 8" stroke-width="4.5" opacity="0.9"/>
+
+      <path d="M256 166v-24" stroke-width="2.5" opacity="0.8"/>
+      <path d="M237 169l-6-22" stroke-width="2.5" opacity="0.78"/>
+      <path d="M218 174l-12-22" stroke-width="2.5" opacity="0.76"/>
+      <path d="M201 183l-16-19" stroke-width="2.5" opacity="0.75"/>
+      <path d="M186 194l-18-15" stroke-width="2.5" opacity="0.74"/>
+      <path d="M174 208l-20-12" stroke-width="2.5" opacity="0.73"/>
+      <path d="M165 225l-22-8" stroke-width="2.5" opacity="0.72"/>
+      <path d="M159 244l-24-4" stroke-width="2.5" opacity="0.71"/>
+      <path d="M158 263h-25" stroke-width="2.5" opacity="0.7"/>
+      <path d="M275 169l6-22" stroke-width="2.5" opacity="0.78"/>
+      <path d="M294 174l12-22" stroke-width="2.5" opacity="0.76"/>
+      <path d="M311 183l16-19" stroke-width="2.5" opacity="0.75"/>
+      <path d="M326 194l18-15" stroke-width="2.5" opacity="0.74"/>
+      <path d="M338 208l20-12" stroke-width="2.5" opacity="0.73"/>
+      <path d="M347 225l22-8" stroke-width="2.5" opacity="0.72"/>
+      <path d="M353 244l24-4" stroke-width="2.5" opacity="0.71"/>
+      <path d="M354 263h25" stroke-width="2.5" opacity="0.7"/>
+    </g>
+
+    <text
+      x="256"
+      y="255"
+      text-anchor="middle"
+      fill="url(#gold)"
+      stroke="#A57A2A"
+      stroke-width="1.2"
+      paint-order="stroke"
+      font-family="'Noto Naskh Arabic', 'Amiri', 'Scheherazade New', serif"
+      font-size="108"
+      direction="rtl"
+      unicode-bidi="plaintext"
+    >الله</text>
+
+    <text
+      x="256"
+      y="360"
+      text-anchor="middle"
+      fill="url(#gold)"
+      stroke="#A57A2A"
+      stroke-width="1"
+      paint-order="stroke"
+      font-family="Georgia, 'Times New Roman', serif"
+      font-size="76"
+    >Daily</text>
+    <text
+      x="256"
+      y="435"
+      text-anchor="middle"
+      fill="url(#gold)"
+      stroke="#A57A2A"
+      stroke-width="1.1"
+      paint-order="stroke"
+      font-family="Georgia, 'Times New Roman', serif"
+      font-size="102"
+    >Husna</text>
+  </g>
+</svg>
+

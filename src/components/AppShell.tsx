@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import type { ReactNode } from 'react'
@@ -67,9 +68,17 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
       <div className="star-field fixed inset-0 -z-10" />
       <header className="sticky top-0 z-30 border-b border-white/10 bg-background/85 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4">
-          <Link href={language === 'de' ? '/de' : language === 'tr' ? '/tr' : '/'} className="focus-ring rounded-md">
-            <span className="block text-lg font-semibold text-primary">99 Names</span>
-            <span className="block text-xs text-gold">{dict.nav.aid}</span>
+          <Link href={language === 'de' ? '/de' : language === 'tr' ? '/tr' : '/'} className="focus-ring rounded-md" aria-label="Daily Husna">
+            <Image
+              src="/logo.svg"
+              alt="Daily Husna logo"
+              width={512}
+              height={512}
+              priority
+              unoptimized
+              className="h-18 w-18 sm:h-20 sm:w-20"
+            />
+            <span className="block text-center text-[11px] text-gold">{dict.nav.aid}</span>
           </Link>
           <div className="flex items-center gap-3">
             <nav className="hidden items-center gap-2 md:flex" aria-label={dict.nav.main}>
