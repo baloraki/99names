@@ -5,9 +5,12 @@ import { useMemo, useState } from 'react'
 import { names } from '@/data/names'
 import { useAppState } from '@/hooks/useAppState'
 import { getDict } from '@/lib/i18n'
+import { getLocalizedNamePath, getLocalizedNamesPath } from '@/lib/seo'
+import type { Language } from '@/types/language'
 
-export function LearnClient({ embedded = false }: { embedded?: boolean }) {
-  const { language, progress, actions } = useAppState()
+export function LearnClient({ embedded = false, locale }: { embedded?: boolean; locale?: Language }) {
+  const { language: storedLanguage, progress, actions } = useAppState()
+  const language = locale ?? storedLanguage
   const dict = getDict(language)
   const [offset, setOffset] = useState(0)
   const openNames = useMemo(() => names.filter((name) => !progress.learnedIds.includes(name.id)), [progress.learnedIds])
@@ -23,7 +26,7 @@ export function LearnClient({ embedded = false }: { embedded?: boolean }) {
           <h1 className="mt-4 text-3xl font-semibold">{dict.learn.allLearnedTitle}</h1>
         )}
         <p className="mt-3 text-muted">{dict.learn.allLearnedBody}</p>
-        <Link href="/names" className="btn-primary mt-6">{dict.learn.overview}</Link>
+        <Link href={getLocalizedNamesPath(language)} className="btn-primary mt-6">{dict.learn.overview}</Link>
       </section>
     )
   }
@@ -48,7 +51,7 @@ export function LearnClient({ embedded = false }: { embedded?: boolean }) {
       <div className="flex flex-col gap-3 sm:flex-row">
         <button className="btn-primary" onClick={() => actions.markLearned(current.id, current.slug)}>{dict.learn.markLearned}</button>
         <button className="btn-secondary" onClick={() => setOffset((value) => value + 1)}>{dict.learn.next}</button>
-        <Link className="btn-secondary" href={`/names/${current.slug}`}>{dict.learn.details}</Link>
+        <Link className="btn-secondary" href={getLocalizedNamePath(language, current.slug)}>{dict.learn.details}</Link>
       </div>
     </div>
   )

@@ -192,3 +192,21 @@ textarea {
   outline: none;
   padding: 0.75rem 0.9rem;
 }
+
+.language-select {
+  min-height: 42px;
+  border-radius: 8px;
+  border: 1px solid rgba(214, 178, 94, 0.42);
+  background: #111111;
+  color: #f7f3e8;
+  outline: none;
+  padding: 0.55rem 2rem 0.55rem 0.75rem;
+}
+
+.language-select-compact {
+  min-width: 8.25rem;
+}
+
+.language-select:focus-visible {
+  box-shadow: 0 0 0 2px #d6b25e, 0 0 0 5px #080808;
+}

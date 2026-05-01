@@ -28,7 +28,7 @@ export default function GermanHomePage() {
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link className="btn-primary" href="/de/namen">99 Namen Allahs Bedeutung</Link>
-            <Link className="btn-secondary" href="/learn">Lernmodus öffnen</Link>
+            <Link className="btn-secondary" href="/de/lernen">Lernmodus öffnen</Link>
           </div>
         </div>
         <section className="rounded-lg border border-gold/25 bg-surface p-6">
@@ -50,6 +50,25 @@ export default function GermanHomePage() {
         <p className="rounded-lg border border-gold/20 bg-surface p-4 text-sm leading-6 text-muted">
           Hinweis: Die App nutzt eine verbreitete Lernreihenfolge. Religiöse Inhalte sollten vor öffentlicher Verwendung fachkundig geprüft werden.
         </p>
+      </section>
+
+      <section className="grid gap-4 md:grid-cols-4">
+        <Link className="rounded-lg border border-white/10 bg-surface p-5 hover:border-gold/50 focus-ring" href="/de/namen">
+          <h2 className="text-xl font-semibold">99 Namen mit Bedeutung</h2>
+          <p className="mt-2 text-sm leading-6 text-muted">Arabisch, Transliteration, Deutsch, Englisch und Türkisch.</p>
+        </Link>
+        <Link className="rounded-lg border border-white/10 bg-surface p-5 hover:border-gold/50 focus-ring" href="/de/lernen">
+          <h2 className="text-xl font-semibold">Täglich lernen</h2>
+          <p className="mt-2 text-sm leading-6 text-muted">Schrittweise auswendig lernen, wiederholen und Fortschritt lokal markieren.</p>
+        </Link>
+        <Link className="rounded-lg border border-white/10 bg-surface p-5 hover:border-gold/50 focus-ring" href="/de/dua">
+          <h2 className="text-xl font-semibold">Dua-Hinweise</h2>
+          <p className="mt-2 text-sm leading-6 text-muted">Allah mit Seinen schönen Namen vorsichtig und ehrfürchtig anrufen.</p>
+        </Link>
+        <Link className="rounded-lg border border-white/10 bg-surface p-5 hover:border-gold/50 focus-ring" href="/de/reflexionen">
+          <h2 className="text-xl font-semibold">Reflexion</h2>
+          <p className="mt-2 text-sm leading-6 text-muted">Bedeutungen mit Charakter, Demut und Alltag verbinden.</p>
+        </Link>
       </section>
     </div>
   )

@@ -69,6 +69,7 @@ The SEO-critical pages are server-rendered App Router pages. Client components a
 - `src/app/sitemap.ts` includes the required static routes plus English, German, and Turkish detail routes for all 99 names.
 - `src/app/robots.ts` allows public crawling and references `/sitemap.xml`.
 - English is the default route group. `/de` and `/tr` use separate root layouts so their rendered documents have the correct `lang` attribute.
+- SEO landing pages for Asma ul Husna, learning, dua, reflections, and quiz have localized English, German, and Turkish routes with page-specific metadata and hreflang alternates.
 - Name detail pages use `generateStaticParams`, `dynamicParams = false`, and `generateMetadata` for static, canonical detail pages.
 
 Religious content remains source-aware: source notes are visible on detail pages, review-required flags are preserved, and the common list is treated as a learning order rather than an unsupported authenticity claim for every individual entry.

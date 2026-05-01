@@ -28,7 +28,7 @@ export default function TurkishHomePage() {
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link className="btn-primary" href="/tr/esmaul-husna">Esmaül Hüsna anlamları</Link>
-            <Link className="btn-secondary" href="/learn">Öğrenme modunu aç</Link>
+            <Link className="btn-secondary" href="/tr/ogren">Öğrenme modunu aç</Link>
           </div>
         </div>
         <section className="rounded-lg border border-gold/25 bg-surface p-6">
@@ -50,6 +50,25 @@ export default function TurkishHomePage() {
         <p className="rounded-lg border border-gold/20 bg-surface p-4 text-sm leading-6 text-muted">
           Not: Bu uygulama bir öğrenme yardımcısıdır. Dini içerik kamuya açık kullanımdan önce uzman kişilerce incelenmelidir.
         </p>
+      </section>
+
+      <section className="grid gap-4 md:grid-cols-4">
+        <Link className="rounded-lg border border-white/10 bg-surface p-5 hover:border-gold/50 focus-ring" href="/tr/esmaul-husna">
+          <h2 className="text-xl font-semibold">99 isim ve anlamları</h2>
+          <p className="mt-2 text-sm leading-6 text-muted">Arapça, transliterasyon, Türkçe, İngilizce ve Almanca anlamlar.</p>
+        </Link>
+        <Link className="rounded-lg border border-white/10 bg-surface p-5 hover:border-gold/50 focus-ring" href="/tr/ogren">
+          <h2 className="text-xl font-semibold">Günlük öğren</h2>
+          <p className="mt-2 text-sm leading-6 text-muted">İsimleri adım adım öğren, tekrar et ve ilerlemeyi yerel olarak işaretle.</p>
+        </Link>
+        <Link className="rounded-lg border border-white/10 bg-surface p-5 hover:border-gold/50 focus-ring" href="/tr/dua">
+          <h2 className="text-xl font-semibold">Dua kullanımı</h2>
+          <p className="mt-2 text-sm leading-6 text-muted">Allah’a güzel isimleriyle ihtiyatlı ve edepli şekilde yönel.</p>
+        </Link>
+        <Link className="rounded-lg border border-white/10 bg-surface p-5 hover:border-gold/50 focus-ring" href="/tr/tefekkur">
+          <h2 className="text-xl font-semibold">Tefekkür</h2>
+          <p className="mt-2 text-sm leading-6 text-muted">Anlamları karakter, tevazu ve günlük davranışla ilişkilendir.</p>
+        </Link>
       </section>
     </div>
   )

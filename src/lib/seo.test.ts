@@ -3,9 +3,12 @@ import sitemap from '@/app/sitemap'
 import { names } from '@/data/names'
 import {
   absoluteUrl,
+  getEquivalentLocalizedPath,
   getLocalizedNamePath,
+  getLocalizedSeoPath,
   getNamePageMetadata,
   nameAlternates,
+  seoPageAlternates,
   staticSitemapPages,
 } from './seo'
 import {
@@ -28,6 +31,27 @@ describe('SEO route helpers', () => {
       tr: '/tr/esmaul-husna/al-malik',
       'x-default': '/names/al-malik',
     })
+  })
+
+  it('generates localized SEO topic paths and alternates', () => {
+    expect(getLocalizedSeoPath('learn', 'en')).toBe('/learn')
+    expect(getLocalizedSeoPath('learn', 'de')).toBe('/de/lernen')
+    expect(getLocalizedSeoPath('learn', 'tr')).toBe('/tr/ogren')
+    expect(seoPageAlternates('asma')).toEqual({
+      en: '/asma-ul-husna',
+      de: '/de/asma-ul-husna',
+      tr: '/tr/esmaul-husna-nedir',
+      'x-default': '/asma-ul-husna',
+    })
+  })
+
+  it('maps current routes to equivalent localized routes', () => {
+    expect(getEquivalentLocalizedPath('/names/ar-rahman', 'de')).toBe('/de/namen/ar-rahman')
+    expect(getEquivalentLocalizedPath('/de/namen/al-malik', 'tr')).toBe('/tr/esmaul-husna/al-malik')
+    expect(getEquivalentLocalizedPath('/tr/esmaul-husna/ar-rahim', 'en')).toBe('/names/ar-rahim')
+    expect(getEquivalentLocalizedPath('/de/lernen', 'tr')).toBe('/tr/ogren')
+    expect(getEquivalentLocalizedPath('/tr/tefekkur', 'en')).toBe('/reflections')
+    expect(getEquivalentLocalizedPath('/settings', 'de')).toBe('/settings')
   })
 })
 

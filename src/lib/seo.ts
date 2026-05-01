@@ -47,6 +47,71 @@ export function getLocalizedHomePath(locale: Language): string {
   return '/'
 }
 
+export type LocalizedSeoPage = 'asma' | 'learn' | 'dua' | 'reflections' | 'quiz'
+
+const localizedSeoPaths: Record<LocalizedSeoPage, Record<Language, string>> = {
+  asma: {
+    en: '/asma-ul-husna',
+    de: '/de/asma-ul-husna',
+    tr: '/tr/esmaul-husna-nedir',
+  },
+  learn: {
+    en: '/learn',
+    de: '/de/lernen',
+    tr: '/tr/ogren',
+  },
+  dua: {
+    en: '/dua',
+    de: '/de/dua',
+    tr: '/tr/dua',
+  },
+  reflections: {
+    en: '/reflections',
+    de: '/de/reflexionen',
+    tr: '/tr/tefekkur',
+  },
+  quiz: {
+    en: '/quiz',
+    de: '/de/quiz',
+    tr: '/tr/quiz',
+  },
+}
+
+export function getLocalizedSeoPath(page: LocalizedSeoPage, locale: Language): string {
+  return localizedSeoPaths[page][locale]
+}
+
+export function seoPageAlternates(page: LocalizedSeoPage): Record<string, string> {
+  return {
+    en: localizedSeoPaths[page].en,
+    de: localizedSeoPaths[page].de,
+    tr: localizedSeoPaths[page].tr,
+    'x-default': localizedSeoPaths[page].en,
+  }
+}
+
+export function getEquivalentLocalizedPath(pathname: string, targetLocale: Language): string {
+  if (pathname === '/' || pathname === '/de' || pathname === '/tr') {
+    return getLocalizedHomePath(targetLocale)
+  }
+
+  if (pathname === '/names' || pathname === '/de/namen' || pathname === '/tr/esmaul-husna') {
+    return getLocalizedNamesPath(targetLocale)
+  }
+
+  const nameMatch = pathname.match(/^\/names\/([^/]+)$|^\/de\/namen\/([^/]+)$|^\/tr\/esmaul-husna\/([^/]+)$/)
+  const nameSlug = nameMatch?.[1] ?? nameMatch?.[2] ?? nameMatch?.[3]
+  if (nameSlug) return getLocalizedNamePath(targetLocale, nameSlug)
+
+  for (const [page, paths] of Object.entries(localizedSeoPaths) as Array<[LocalizedSeoPage, Record<Language, string>]>) {
+    if (Object.values(paths).includes(pathname)) {
+      return getLocalizedSeoPath(page, targetLocale)
+    }
+  }
+
+  return pathname
+}
+
 export function homeAlternates(): Record<string, string> {
   return {
     en: '/',
@@ -223,15 +288,25 @@ export function getNamePageMetadata(name: NameEntry, locale: Language): Metadata
 export const staticSitemapPages = [
   { path: '/', priority: 1, changeFrequency: 'weekly', alternates: homeAlternates() },
   { path: '/names', priority: 0.95, changeFrequency: 'weekly', alternates: namesAlternates() },
-  { path: '/asma-ul-husna', priority: 0.9, changeFrequency: 'weekly' },
-  { path: '/learn', priority: 0.85, changeFrequency: 'monthly' },
-  { path: '/dua', priority: 0.85, changeFrequency: 'monthly' },
-  { path: '/reflections', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/quiz', priority: 0.7, changeFrequency: 'monthly' },
+  { path: '/asma-ul-husna', priority: 0.9, changeFrequency: 'weekly', alternates: seoPageAlternates('asma') },
+  { path: '/learn', priority: 0.85, changeFrequency: 'monthly', alternates: seoPageAlternates('learn') },
+  { path: '/dua', priority: 0.85, changeFrequency: 'monthly', alternates: seoPageAlternates('dua') },
+  { path: '/reflections', priority: 0.8, changeFrequency: 'monthly', alternates: seoPageAlternates('reflections') },
+  { path: '/quiz', priority: 0.7, changeFrequency: 'monthly', alternates: seoPageAlternates('quiz') },
   { path: '/de', priority: 0.9, changeFrequency: 'weekly', alternates: homeAlternates() },
   { path: '/de/namen', priority: 0.9, changeFrequency: 'weekly', alternates: namesAlternates() },
+  { path: '/de/asma-ul-husna', priority: 0.85, changeFrequency: 'weekly', alternates: seoPageAlternates('asma') },
+  { path: '/de/lernen', priority: 0.8, changeFrequency: 'monthly', alternates: seoPageAlternates('learn') },
+  { path: '/de/dua', priority: 0.8, changeFrequency: 'monthly', alternates: seoPageAlternates('dua') },
+  { path: '/de/reflexionen', priority: 0.75, changeFrequency: 'monthly', alternates: seoPageAlternates('reflections') },
+  { path: '/de/quiz', priority: 0.65, changeFrequency: 'monthly', alternates: seoPageAlternates('quiz') },
   { path: '/tr', priority: 0.9, changeFrequency: 'weekly', alternates: homeAlternates() },
   { path: '/tr/esmaul-husna', priority: 0.9, changeFrequency: 'weekly', alternates: namesAlternates() },
+  { path: '/tr/esmaul-husna-nedir', priority: 0.85, changeFrequency: 'weekly', alternates: seoPageAlternates('asma') },
+  { path: '/tr/ogren', priority: 0.8, changeFrequency: 'monthly', alternates: seoPageAlternates('learn') },
+  { path: '/tr/dua', priority: 0.8, changeFrequency: 'monthly', alternates: seoPageAlternates('dua') },
+  { path: '/tr/tefekkur', priority: 0.75, changeFrequency: 'monthly', alternates: seoPageAlternates('reflections') },
+  { path: '/tr/quiz', priority: 0.65, changeFrequency: 'monthly', alternates: seoPageAlternates('quiz') },
   { path: '/settings', priority: 0.35, changeFrequency: 'yearly' },
   { path: '/privacy', priority: 0.3, changeFrequency: 'yearly' },
   { path: '/imprint', priority: 0.3, changeFrequency: 'yearly' },
