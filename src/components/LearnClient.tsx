@@ -4,9 +4,11 @@ import Link from 'next/link'
 import { useMemo, useState } from 'react'
 import { names } from '@/data/names'
 import { useAppState } from '@/hooks/useAppState'
+import { getDict } from '@/lib/i18n'
 
 export function LearnClient() {
   const { language, progress, actions } = useAppState()
+  const dict = getDict(language)
   const [offset, setOffset] = useState(0)
   const openNames = useMemo(() => names.filter((name) => !progress.learnedIds.includes(name.id)), [progress.learnedIds])
   const current = openNames.length > 0 ? openNames[offset % openNames.length] : undefined
@@ -14,10 +16,10 @@ export function LearnClient() {
   if (!current) {
     return (
       <section className="mx-auto max-w-2xl rounded-lg border border-gold/20 bg-surface p-8 text-center">
-        <p className="text-sm uppercase tracking-[0.22em] text-gold">Lernen</p>
-        <h1 className="mt-4 text-3xl font-semibold">Alle Namen sind als gelernt markiert.</h1>
-        <p className="mt-3 text-muted">Du kannst deinen Fortschritt in den Einstellungen zuruecksetzen oder einzelne Namen wieder als offen markieren.</p>
-        <Link href="/names" className="btn-primary mt-6">Zur Uebersicht</Link>
+        <p className="text-sm uppercase tracking-[0.22em] text-gold">{dict.learn.eyebrow}</p>
+        <h1 className="mt-4 text-3xl font-semibold">{dict.learn.allLearnedTitle}</h1>
+        <p className="mt-3 text-muted">{dict.learn.allLearnedBody}</p>
+        <Link href="/names" className="btn-primary mt-6">{dict.learn.overview}</Link>
       </section>
     )
   }
@@ -25,9 +27,9 @@ export function LearnClient() {
   return (
     <div className="mx-auto max-w-2xl space-y-6">
       <section>
-        <p className="text-sm uppercase tracking-[0.22em] text-gold">Lernmodus</p>
-        <h1 className="mt-3 text-4xl font-semibold">Naechster offener Name</h1>
-        <p className="mt-2 text-muted">{openNames.length} Namen sind noch offen.</p>
+        <p className="text-sm uppercase tracking-[0.22em] text-gold">{dict.learn.eyebrow}</p>
+        <h1 className="mt-3 text-4xl font-semibold">{dict.learn.title}</h1>
+        <p className="mt-2 text-muted">{dict.learn.remaining(openNames.length)}</p>
       </section>
       <section className="rounded-lg border border-gold/20 bg-[radial-gradient(circle_at_top,rgba(214,178,94,0.16),rgba(22,22,22,0.98)_60%)] p-6">
         <p className="text-right font-arabic text-7xl leading-tight">{current.arabic}</p>
@@ -36,9 +38,9 @@ export function LearnClient() {
         <p className="mt-4 leading-7 text-muted">{current.explanations[language]}</p>
       </section>
       <div className="flex flex-col gap-3 sm:flex-row">
-        <button className="btn-primary" onClick={() => actions.markLearned(current.id, current.slug)}>Als gelernt markieren</button>
-        <button className="btn-secondary" onClick={() => setOffset((value) => value + 1)}>Naechster Name</button>
-        <Link className="btn-secondary" href={`/names/${current.slug}`}>Details</Link>
+        <button className="btn-primary" onClick={() => actions.markLearned(current.id, current.slug)}>{dict.learn.markLearned}</button>
+        <button className="btn-secondary" onClick={() => setOffset((value) => value + 1)}>{dict.learn.next}</button>
+        <Link className="btn-secondary" href={`/names/${current.slug}`}>{dict.learn.details}</Link>
       </div>
     </div>
   )

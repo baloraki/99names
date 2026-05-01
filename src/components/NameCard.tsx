@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { getDict } from '@/lib/i18n'
 import type { Language } from '@/types/language'
 import type { NameEntry } from '@/types/name'
 
@@ -10,6 +11,8 @@ type Props = {
 }
 
 export function NameCard({ name, language, learned = false, favorite = false }: Props) {
+  const dict = getDict(language)
+
   return (
     <Link
       href={`/names/${name.slug}`}
@@ -18,8 +21,8 @@ export function NameCard({ name, language, learned = false, favorite = false }: 
       <div className="flex items-start justify-between gap-3">
         <p className="text-sm text-gold-muted">#{name.id.toString().padStart(2, '0')}</p>
         <div className="flex gap-2 text-xs">
-          {learned && <span className="rounded-full border border-success/30 px-2 py-1 text-success">Gelernt</span>}
-          {favorite && <span className="rounded-full border border-gold/30 px-2 py-1 text-gold">Favorit</span>}
+          {learned && <span className="rounded-full border border-success/30 px-2 py-1 text-success">{dict.common.learned}</span>}
+          {favorite && <span className="rounded-full border border-gold/30 px-2 py-1 text-gold">{dict.common.favorite}</span>}
         </div>
       </div>
       <p className="mt-4 text-right font-arabic text-4xl leading-tight text-primary">{name.arabic}</p>

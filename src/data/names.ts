@@ -1,8 +1,7 @@
 import type { NameEntry } from '@/types/name'
 
 // Content policy for this dataset:
-// - The general hadith that Allah has ninety-nine names is sahih.
-// - The widely used concrete 99-name order is treated as a learning order, not as a fully authenticated fixed list.
+// - This app treats the sequence as a learning order, not as a theological authority.
 // - Every entry remains review-required before public religious release.
 
 export const names: NameEntry[] = [
@@ -33,9 +32,9 @@ export const names: NameEntry[] = [
         en: "This name should move you toward mercy with people and living beings, without confusing Allah’s mercy with human weakness."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 55:1; 59:22. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 55:1; 59:22. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 55:1; 59:22. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -66,9 +65,9 @@ export const names: NameEntry[] = [
         en: "This name should move you toward mercy with people and living beings, without confusing Allah’s mercy with human weakness."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 1:1; 1:3; 59:22. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 1:1; 1:3; 59:22. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 1:1; 1:3; 59:22. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -99,9 +98,9 @@ export const names: NameEntry[] = [
         en: "This name puts human power in perspective: ownership, status, and control are entrusted, not absolute."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 59:23; 20:114. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 59:23; 20:114. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 59:23; 20:114. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -132,9 +131,9 @@ export const names: NameEntry[] = [
         en: "This name calls you to seek safety and peace through trust, purity, and responsible action, not through wrongdoing."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 59:23; 62:1. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 59:23; 62:1. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 59:23; 62:1. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -165,9 +164,9 @@ export const names: NameEntry[] = [
         en: "This name calls you to seek safety and peace through trust, purity, and responsible action, not through wrongdoing."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 59:23. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 59:23. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 59:23. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -198,9 +197,9 @@ export const names: NameEntry[] = [
         en: "This name calls you to seek safety and peace through trust, purity, and responsible action, not through wrongdoing."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 59:23. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 59:23. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 59:23. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -231,9 +230,9 @@ export const names: NameEntry[] = [
         en: "This name calls you to seek safety and peace through trust, purity, and responsible action, not through wrongdoing."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 59:23. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 59:23. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 59:23. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -264,9 +263,9 @@ export const names: NameEntry[] = [
         en: "This name breaks the ego’s false greatness: true power belongs to Allah, while the human being remains responsible and dependent."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 59:23; 2:129. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 59:23; 2:129. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 59:23; 2:129. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -297,9 +296,9 @@ export const names: NameEntry[] = [
         en: "This name breaks the ego’s false greatness: true power belongs to Allah, while the human being remains responsible and dependent."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 59:23. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 59:23. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 59:23. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -330,9 +329,9 @@ export const names: NameEntry[] = [
         en: "This name breaks the ego’s false greatness: true power belongs to Allah, while the human being remains responsible and dependent."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 59:23. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 59:23. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 59:23. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -363,9 +362,9 @@ export const names: NameEntry[] = [
         en: "This name reminds you that form, origin, and renewal are not random; they are under Allah’s knowledge and power."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 59:24. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 59:24. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 59:24. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -396,9 +395,9 @@ export const names: NameEntry[] = [
         en: "This name reminds you that form, origin, and renewal are not random; they are under Allah’s knowledge and power."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 59:24. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 59:24. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 59:24. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -429,9 +428,9 @@ export const names: NameEntry[] = [
         en: "This name reminds you that form, origin, and renewal are not random; they are under Allah’s knowledge and power."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 59:24. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 59:24. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 59:24. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -462,9 +461,9 @@ export const names: NameEntry[] = [
         en: "This name reminds you not to trivialize sin while never despairing of Allah’s forgiveness."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 20:82; 38:66. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 20:82; 38:66. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 20:82; 38:66. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -495,9 +494,9 @@ export const names: NameEntry[] = [
         en: "This name breaks the ego’s false greatness: true power belongs to Allah, while the human being remains responsible and dependent."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 13:16; 39:4; 40:16. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 13:16; 39:4; 40:16. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 13:16; 39:4; 40:16. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -528,9 +527,9 @@ export const names: NameEntry[] = [
         en: "This name corrects your view of provision: rizq is more than money and must not be sought through the unlawful."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 3:8; 38:9. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 3:8; 38:9. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 3:8; 38:9. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -561,9 +560,9 @@ export const names: NameEntry[] = [
         en: "This name corrects your view of provision: rizq is more than money and must not be sought through the unlawful."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 51:58. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 51:58. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 51:58. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -594,9 +593,9 @@ export const names: NameEntry[] = [
         en: "This name corrects your view of provision: rizq is more than money and must not be sought through the unlawful."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 34:26. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 34:26. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 34:26. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -627,9 +626,9 @@ export const names: NameEntry[] = [
         en: "This name makes you aware that nothing is hidden from Allah; it should strengthen honesty, ihsan, and clean intentions."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 2:32; 59:22. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 2:32; 59:22. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 2:32; 59:22. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -660,9 +659,9 @@ export const names: NameEntry[] = [
         en: "This name teaches that raising, lowering, benefit, and harm do not occur independently of Allah; success requires humility."
       },
       sourceNote: {
-        de: "Abgeleiteter Wort-/Sinnbezug: Qur’an 2:245 uses the verb/concept: Allah constricts and expands. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Türemiş lafız/mana bağlantısı: Qur’an 2:245 uses the verb/concept: Allah constricts and expands. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Derived wording/meaning reference: Qur’an 2:245 uses the verb/concept: Allah constricts and expands. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -693,9 +692,9 @@ export const names: NameEntry[] = [
         en: "This name teaches that raising, lowering, benefit, and harm do not occur independently of Allah; success requires humility."
       },
       sourceNote: {
-        de: "Abgeleiteter Wort-/Sinnbezug: Qur’an 2:245 uses the verb/concept: Allah constricts and expands. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Türemiş lafız/mana bağlantısı: Qur’an 2:245 uses the verb/concept: Allah constricts and expands. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Derived wording/meaning reference: Qur’an 2:245 uses the verb/concept: Allah constricts and expands. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -726,9 +725,9 @@ export const names: NameEntry[] = [
         en: "This name teaches that raising, lowering, benefit, and harm do not occur independently of Allah; success requires humility."
       },
       sourceNote: {
-        de: "Nur traditionelle Listenführung in dieser Fassung: Traditional Tirmidhi-list name; exact Qur’an/Sahih naming evidence not confirmed in this pass. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Bu hâliyle geleneksel liste bağlantısı: Traditional Tirmidhi-list name; exact Qur’an/Sahih naming evidence not confirmed in this pass. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Traditional-list reference in this form: Traditional Tirmidhi-list name; exact Qur’an/Sahih naming evidence not confirmed in this pass. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -759,9 +758,9 @@ export const names: NameEntry[] = [
         en: "This name teaches that raising, lowering, benefit, and harm do not occur independently of Allah; success requires humility."
       },
       sourceNote: {
-        de: "Abgeleiteter Wort-/Sinnbezug: Qur’an 40:15 has “Rafīʿ ad-darajāt”; 58:11 uses the raising concept. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Türemiş lafız/mana bağlantısı: Qur’an 40:15 has “Rafīʿ ad-darajāt”; 58:11 uses the raising concept. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Derived wording/meaning reference: Qur’an 40:15 has “Rafīʿ ad-darajāt”; 58:11 uses the raising concept. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -792,9 +791,9 @@ export const names: NameEntry[] = [
         en: "This name teaches that raising, lowering, benefit, and harm do not occur independently of Allah; success requires humility."
       },
       sourceNote: {
-        de: "Abgeleiteter Wort-/Sinnbezug: Qur’an 3:26 uses the verb/concept: You give honour. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Türemiş lafız/mana bağlantısı: Qur’an 3:26 uses the verb/concept: You give honour. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Derived wording/meaning reference: Qur’an 3:26 uses the verb/concept: You give honour. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -825,9 +824,9 @@ export const names: NameEntry[] = [
         en: "This name teaches that raising, lowering, benefit, and harm do not occur independently of Allah; success requires humility."
       },
       sourceNote: {
-        de: "Abgeleiteter Wort-/Sinnbezug: Qur’an 3:26 uses the verb/concept: You humble/abase. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Türemiş lafız/mana bağlantısı: Qur’an 3:26 uses the verb/concept: You humble/abase. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Derived wording/meaning reference: Qur’an 3:26 uses the verb/concept: You humble/abase. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -858,9 +857,9 @@ export const names: NameEntry[] = [
         en: "This name makes you aware that nothing is hidden from Allah; it should strengthen honesty, ihsan, and clean intentions."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 42:11; 2:127. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 42:11; 2:127. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 42:11; 2:127. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -891,9 +890,9 @@ export const names: NameEntry[] = [
         en: "This name makes you aware that nothing is hidden from Allah; it should strengthen honesty, ihsan, and clean intentions."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 42:11; 17:1. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 42:11; 17:1. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 42:11; 17:1. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -924,9 +923,9 @@ export const names: NameEntry[] = [
         en: "This name requires you not only to demand justice, but to act fairly, truthfully, and with balance."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 6:114. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 6:114. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 6:114. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -957,9 +956,9 @@ export const names: NameEntry[] = [
         en: "This name requires you not only to demand justice, but to act fairly, truthfully, and with balance."
       },
       sourceNote: {
-        de: "Nur traditionelle Listenführung in dieser Fassung: Allah’s justice is established in Qur’an and Sunnah; exact “Al-ʿAdl” as a listed name is traditionally transmitted and needs scholar review. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Bu hâliyle geleneksel liste bağlantısı: Allah’s justice is established in Qur’an and Sunnah; exact “Al-ʿAdl” as a listed name is traditionally transmitted and needs scholar review. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Traditional-list reference in this form: Allah’s justice is established in Qur’an and Sunnah; exact “Al-ʿAdl” as a listed name is traditionally transmitted and needs scholar review. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -990,9 +989,9 @@ export const names: NameEntry[] = [
         en: "This name makes you aware that nothing is hidden from Allah; it should strengthen honesty, ihsan, and clean intentions."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 6:103; 67:14. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 6:103; 67:14. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 6:103; 67:14. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1023,9 +1022,9 @@ export const names: NameEntry[] = [
         en: "This name makes you aware that nothing is hidden from Allah; it should strengthen honesty, ihsan, and clean intentions."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 6:18; 67:14. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 6:18; 67:14. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 6:18; 67:14. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1056,9 +1055,9 @@ export const names: NameEntry[] = [
         en: "This name shows that maturity is not only in receiving, but in responding with patience, gratitude, and self-control."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 2:235; 22:59. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 2:235; 22:59. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 2:235; 22:59. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1089,9 +1088,9 @@ export const names: NameEntry[] = [
         en: "This name breaks the ego’s false greatness: true power belongs to Allah, while the human being remains responsible and dependent."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 2:255; 42:4. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 2:255; 42:4. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 2:255; 42:4. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1122,9 +1121,9 @@ export const names: NameEntry[] = [
         en: "This name reminds you not to trivialize sin while never despairing of Allah’s forgiveness."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 2:173; 85:14. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 2:173; 85:14. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 2:173; 85:14. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1155,9 +1154,9 @@ export const names: NameEntry[] = [
         en: "This name shows that maturity is not only in receiving, but in responding with patience, gratitude, and self-control."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 35:30; 64:17. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 35:30; 64:17. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 35:30; 64:17. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1188,9 +1187,9 @@ export const names: NameEntry[] = [
         en: "This name breaks the ego’s false greatness: true power belongs to Allah, while the human being remains responsible and dependent."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 2:255; 42:4. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 2:255; 42:4. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 2:255; 42:4. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1221,9 +1220,9 @@ export const names: NameEntry[] = [
         en: "This name breaks the ego’s false greatness: true power belongs to Allah, while the human being remains responsible and dependent."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 13:9; 22:62. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 13:9; 22:62. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 13:9; 22:62. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1254,9 +1253,9 @@ export const names: NameEntry[] = [
         en: "This name calls you to seek safety and peace through trust, purity, and responsible action, not through wrongdoing."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 11:57; 42:6. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 11:57; 42:6. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 11:57; 42:6. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1287,9 +1286,9 @@ export const names: NameEntry[] = [
         en: "This name corrects your view of provision: rizq is more than money and must not be sought through the unlawful."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 4:85. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 4:85. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 4:85. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1320,9 +1319,9 @@ export const names: NameEntry[] = [
         en: "This name makes you aware that nothing is hidden from Allah; it should strengthen honesty, ihsan, and clean intentions."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 4:6; 4:86. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 4:6; 4:86. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 4:6; 4:86. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1353,9 +1352,9 @@ export const names: NameEntry[] = [
         en: "This name breaks the ego’s false greatness: true power belongs to Allah, while the human being remains responsible and dependent."
       },
       sourceNote: {
-        de: "Abgeleiteter Wort-/Sinnbezug: Meaning tied to Qur’an 55:27 and 55:78: “Dhul-Jalāli wal-Ikram”. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Türemiş lafız/mana bağlantısı: Meaning tied to Qur’an 55:27 and 55:78: “Dhul-Jalāli wal-Ikram”. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Derived wording/meaning reference: Meaning tied to Qur’an 55:27 and 55:78: “Dhul-Jalāli wal-Ikram”. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1386,9 +1385,9 @@ export const names: NameEntry[] = [
         en: "This name corrects your view of provision: rizq is more than money and must not be sought through the unlawful."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 82:6; 27:40. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 82:6; 27:40. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 82:6; 27:40. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1419,9 +1418,9 @@ export const names: NameEntry[] = [
         en: "This name makes you aware that nothing is hidden from Allah; it should strengthen honesty, ihsan, and clean intentions."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 4:1; 33:52. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 4:1; 33:52. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 4:1; 33:52. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1452,9 +1451,9 @@ export const names: NameEntry[] = [
         en: "This name encourages dua with hope and adab: Allah responds by His wisdom, not by human impatience."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 11:61. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 11:61. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 11:61. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1485,9 +1484,9 @@ export const names: NameEntry[] = [
         en: "This name corrects your view of provision: rizq is more than money and must not be sought through the unlawful."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 2:115; 2:247. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 2:115; 2:247. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 2:115; 2:247. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1518,9 +1517,9 @@ export const names: NameEntry[] = [
         en: "This name reminds you that real wisdom is tied to guidance, patience, and sound intention."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 2:129; 59:24. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 2:129; 59:24. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 2:129; 59:24. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1551,9 +1550,9 @@ export const names: NameEntry[] = [
         en: "This name connects love with obedience, repentance, and mercy; emotion alone is not enough."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 11:90; 85:14. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 11:90; 85:14. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 11:90; 85:14. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1584,9 +1583,9 @@ export const names: NameEntry[] = [
         en: "This name breaks the ego’s false greatness: true power belongs to Allah, while the human being remains responsible and dependent."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 11:73; 85:15. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 11:73; 85:15. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 11:73; 85:15. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1617,9 +1616,9 @@ export const names: NameEntry[] = [
         en: "This name reminds you that form, origin, and renewal are not random; they are under Allah’s knowledge and power."
       },
       sourceNote: {
-        de: "Abgeleiteter Wort-/Sinnbezug: Resurrection is established, e.g. Qur’an 22:7; exact noun as name in the fixed list needs review. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Türemiş lafız/mana bağlantısı: Resurrection is established, e.g. Qur’an 22:7; exact noun as name in the fixed list needs review. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Derived wording/meaning reference: Resurrection is established, e.g. Qur’an 22:7; exact noun as name in the fixed list needs review. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1650,9 +1649,9 @@ export const names: NameEntry[] = [
         en: "This name makes you aware that nothing is hidden from Allah; it should strengthen honesty, ihsan, and clean intentions."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 4:79; 22:17. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 4:79; 22:17. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 4:79; 22:17. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1683,9 +1682,9 @@ export const names: NameEntry[] = [
         en: "This name purifies your perspective: Allah is incomparable, independent, and true; no creation may take His place."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 22:6; 24:25. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 22:6; 24:25. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 22:6; 24:25. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1716,9 +1715,9 @@ export const names: NameEntry[] = [
         en: "This name calls you to seek safety and peace through trust, purity, and responsible action, not through wrongdoing."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 3:173; 4:81. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 3:173; 4:81. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 3:173; 4:81. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1749,9 +1748,9 @@ export const names: NameEntry[] = [
         en: "This name breaks the ego’s false greatness: true power belongs to Allah, while the human being remains responsible and dependent."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 22:40; 51:58. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 22:40; 51:58. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 22:40; 51:58. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1782,9 +1781,9 @@ export const names: NameEntry[] = [
         en: "This name breaks the ego’s false greatness: true power belongs to Allah, while the human being remains responsible and dependent."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 51:58. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 51:58. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 51:58. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1815,9 +1814,9 @@ export const names: NameEntry[] = [
         en: "This name calls you to seek safety and peace through trust, purity, and responsible action, not through wrongdoing."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 42:28; 2:257. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 42:28; 2:257. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 42:28; 2:257. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1848,9 +1847,9 @@ export const names: NameEntry[] = [
         en: "This name shows that maturity is not only in receiving, but in responding with patience, gratitude, and self-control."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 14:8; 31:12. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 14:8; 31:12. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 14:8; 31:12. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1881,9 +1880,9 @@ export const names: NameEntry[] = [
         en: "This name makes you aware that nothing is hidden from Allah; it should strengthen honesty, ihsan, and clean intentions."
       },
       sourceNote: {
-        de: "Abgeleiteter Wort-/Sinnbezug: Qur’an 72:28 and 78:29 use the encompassing/counting concept. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Türemiş lafız/mana bağlantısı: Qur’an 72:28 and 78:29 use the encompassing/counting concept. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Derived wording/meaning reference: Qur’an 72:28 and 78:29 use the encompassing/counting concept. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1914,9 +1913,9 @@ export const names: NameEntry[] = [
         en: "This name reminds you that form, origin, and renewal are not random; they are under Allah’s knowledge and power."
       },
       sourceNote: {
-        de: "Abgeleiteter Wort-/Sinnbezug: Qur’an 10:34 uses the verb/concept: He begins creation. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Türemiş lafız/mana bağlantısı: Qur’an 10:34 uses the verb/concept: He begins creation. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Derived wording/meaning reference: Qur’an 10:34 uses the verb/concept: He begins creation. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1947,9 +1946,9 @@ export const names: NameEntry[] = [
         en: "This name reminds you that form, origin, and renewal are not random; they are under Allah’s knowledge and power."
       },
       sourceNote: {
-        de: "Abgeleiteter Wort-/Sinnbezug: Qur’an 10:34 uses the verb/concept: He repeats/restores creation. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Türemiş lafız/mana bağlantısı: Qur’an 10:34 uses the verb/concept: He repeats/restores creation. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Derived wording/meaning reference: Qur’an 10:34 uses the verb/concept: He repeats/restores creation. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -1980,9 +1979,9 @@ export const names: NameEntry[] = [
         en: "This name puts mortality in its place: life, death, and permanence belong to Allah; daily life should be oriented toward the Hereafter."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 30:50; 41:39. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 30:50; 41:39. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 30:50; 41:39. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2013,9 +2012,9 @@ export const names: NameEntry[] = [
         en: "This name puts mortality in its place: life, death, and permanence belong to Allah; daily life should be oriented toward the Hereafter."
       },
       sourceNote: {
-        de: "Abgeleiteter Wort-/Sinnbezug: Qur’an 53:44 uses the verb/concept: He causes death and gives life. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Türemiş lafız/mana bağlantısı: Qur’an 53:44 uses the verb/concept: He causes death and gives life. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Derived wording/meaning reference: Qur’an 53:44 uses the verb/concept: He causes death and gives life. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2046,9 +2045,9 @@ export const names: NameEntry[] = [
         en: "This name puts mortality in its place: life, death, and permanence belong to Allah; daily life should be oriented toward the Hereafter."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 2:255; 3:2. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 2:255; 3:2. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 2:255; 3:2. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2079,9 +2078,9 @@ export const names: NameEntry[] = [
         en: "This name puts mortality in its place: life, death, and permanence belong to Allah; daily life should be oriented toward the Hereafter."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 2:255; 3:2. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 2:255; 3:2. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 2:255; 3:2. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2112,9 +2111,9 @@ export const names: NameEntry[] = [
         en: "This name purifies your perspective: Allah is incomparable, independent, and true; no creation may take His place."
       },
       sourceNote: {
-        de: "Nur traditionelle Listenführung in dieser Fassung: Traditional Tirmidhi-list name; exact Qur’an/Sahih naming evidence not confirmed in this pass. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Bu hâliyle geleneksel liste bağlantısı: Traditional Tirmidhi-list name; exact Qur’an/Sahih naming evidence not confirmed in this pass. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Traditional-list reference in this form: Traditional Tirmidhi-list name; exact Qur’an/Sahih naming evidence not confirmed in this pass. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2145,9 +2144,9 @@ export const names: NameEntry[] = [
         en: "This name breaks the ego’s false greatness: true power belongs to Allah, while the human being remains responsible and dependent."
       },
       sourceNote: {
-        de: "Nur traditionelle Listenführung in dieser Fassung: Traditional distinction between Al-Majīd/Al-Mājid needs specialist review; Qur’an 11:73 and 85:15 support majesty/glory wording. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Bu hâliyle geleneksel liste bağlantısı: Traditional distinction between Al-Majīd/Al-Mājid needs specialist review; Qur’an 11:73 and 85:15 support majesty/glory wording. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Traditional-list reference in this form: Traditional distinction between Al-Majīd/Al-Mājid needs specialist review; Qur’an 11:73 and 85:15 support majesty/glory wording. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2178,9 +2177,9 @@ export const names: NameEntry[] = [
         en: "This name purifies your perspective: Allah is incomparable, independent, and true; no creation may take His place."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 13:16; 40:16. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 13:16; 40:16. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 13:16; 40:16. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2211,9 +2210,9 @@ export const names: NameEntry[] = [
         en: "This name purifies your perspective: Allah is incomparable, independent, and true; no creation may take His place."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 112:1. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 112:1. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 112:1. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2244,9 +2243,9 @@ export const names: NameEntry[] = [
         en: "This name purifies your perspective: Allah is incomparable, independent, and true; no creation may take His place."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 112:2. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 112:2. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 112:2. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2277,9 +2276,9 @@ export const names: NameEntry[] = [
         en: "This name breaks the ego’s false greatness: true power belongs to Allah, while the human being remains responsible and dependent."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 6:65; 46:33. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 6:65; 46:33. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 6:65; 46:33. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2310,9 +2309,9 @@ export const names: NameEntry[] = [
         en: "This name breaks the ego’s false greatness: true power belongs to Allah, while the human being remains responsible and dependent."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 54:42; 18:45. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 54:42; 18:45. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 54:42; 18:45. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2343,9 +2342,9 @@ export const names: NameEntry[] = [
         en: "This name teaches that raising, lowering, benefit, and harm do not occur independently of Allah; success requires humility."
       },
       sourceNote: {
-        de: "Sahih-Hadith-/Dua-Bezug: Sahih supplication wording includes “You are Al-Muqaddim and Al-Mu’akhkhir” in the meaning of bringing forward and delaying. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Sahih hadis/dua bağlantısı: Sahih supplication wording includes “You are Al-Muqaddim and Al-Mu’akhkhir” in the meaning of bringing forward and delaying. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Sahih hadith/dua reference: Sahih supplication wording includes “You are Al-Muqaddim and Al-Mu’akhkhir” in the meaning of bringing forward and delaying. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2376,9 +2375,9 @@ export const names: NameEntry[] = [
         en: "This name teaches that raising, lowering, benefit, and harm do not occur independently of Allah; success requires humility."
       },
       sourceNote: {
-        de: "Sahih-Hadith-/Dua-Bezug: Sahih supplication wording includes “You are Al-Muqaddim and Al-Mu’akhkhir” in the meaning of bringing forward and delaying. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Sahih hadis/dua bağlantısı: Sahih supplication wording includes “You are Al-Muqaddim and Al-Mu’akhkhir” in the meaning of bringing forward and delaying. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Sahih hadith/dua reference: Sahih supplication wording includes “You are Al-Muqaddim and Al-Mu’akhkhir” in the meaning of bringing forward and delaying. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2409,9 +2408,9 @@ export const names: NameEntry[] = [
         en: "This name purifies your perspective: Allah is incomparable, independent, and true; no creation may take His place."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 57:3. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 57:3. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 57:3. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2442,9 +2441,9 @@ export const names: NameEntry[] = [
         en: "This name purifies your perspective: Allah is incomparable, independent, and true; no creation may take His place."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 57:3. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 57:3. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 57:3. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2475,9 +2474,9 @@ export const names: NameEntry[] = [
         en: "This name purifies your perspective: Allah is incomparable, independent, and true; no creation may take His place."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 57:3. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 57:3. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 57:3. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2508,9 +2507,9 @@ export const names: NameEntry[] = [
         en: "This name purifies your perspective: Allah is incomparable, independent, and true; no creation may take His place."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 57:3. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 57:3. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 57:3. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2541,9 +2540,9 @@ export const names: NameEntry[] = [
         en: "This name puts human power in perspective: ownership, status, and control are entrusted, not absolute."
       },
       sourceNote: {
-        de: "Nur traditionelle Listenführung in dieser Fassung: Traditional Tirmidhi-list name; Qur’an strongly establishes Allah as Waliyy/protector, but “Al-Wālī” as governor-name needs review. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Bu hâliyle geleneksel liste bağlantısı: Traditional Tirmidhi-list name; Qur’an strongly establishes Allah as Waliyy/protector, but “Al-Wālī” as governor-name needs review. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Traditional-list reference in this form: Traditional Tirmidhi-list name; Qur’an strongly establishes Allah as Waliyy/protector, but “Al-Wālī” as governor-name needs review. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2574,9 +2573,9 @@ export const names: NameEntry[] = [
         en: "This name breaks the ego’s false greatness: true power belongs to Allah, while the human being remains responsible and dependent."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 13:9. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 13:9. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 13:9. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2607,9 +2606,9 @@ export const names: NameEntry[] = [
         en: "This name should move you toward mercy with people and living beings, without confusing Allah’s mercy with human weakness."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 52:28. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 52:28. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 52:28. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2640,9 +2639,9 @@ export const names: NameEntry[] = [
         en: "This name reminds you not to trivialize sin while never despairing of Allah’s forgiveness."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 2:37; 2:54. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 2:37; 2:54. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 2:37; 2:54. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2673,9 +2672,9 @@ export const names: NameEntry[] = [
         en: "This name breaks the ego’s false greatness: true power belongs to Allah, while the human being remains responsible and dependent."
       },
       sourceNote: {
-        de: "Abgeleiteter Wort-/Sinnbezug: Qur’an establishes divine retribution, e.g. 32:22 and 43:41; exact singular listed name needs review. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Türemiş lafız/mana bağlantısı: Qur’an establishes divine retribution, e.g. 32:22 and 43:41; exact singular listed name needs review. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Derived wording/meaning reference: Qur’an establishes divine retribution, e.g. 32:22 and 43:41; exact singular listed name needs review. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2706,9 +2705,9 @@ export const names: NameEntry[] = [
         en: "This name reminds you not to trivialize sin while never despairing of Allah’s forgiveness."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 4:43; 4:99. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 4:43; 4:99. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 4:43; 4:99. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2739,9 +2738,9 @@ export const names: NameEntry[] = [
         en: "This name should move you toward mercy with people and living beings, without confusing Allah’s mercy with human weakness."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 2:143; 9:117. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 2:143; 9:117. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 2:143; 9:117. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2772,9 +2771,9 @@ export const names: NameEntry[] = [
         en: "This name puts human power in perspective: ownership, status, and control are entrusted, not absolute."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 3:26. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 3:26. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 3:26. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2805,9 +2804,9 @@ export const names: NameEntry[] = [
         en: "This name breaks the ego’s false greatness: true power belongs to Allah, while the human being remains responsible and dependent."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 55:27; 55:78. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 55:27; 55:78. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 55:27; 55:78. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2838,9 +2837,9 @@ export const names: NameEntry[] = [
         en: "This name requires you not only to demand justice, but to act fairly, truthfully, and with balance."
       },
       sourceNote: {
-        de: "Nur traditionelle Listenführung in dieser Fassung: Qur’an establishes justice and fairness; exact “Al-Muqsit” as a divine name is from the traditional list and needs review. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Bu hâliyle geleneksel liste bağlantısı: Qur’an establishes justice and fairness; exact “Al-Muqsit” as a divine name is from the traditional list and needs review. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Traditional-list reference in this form: Qur’an establishes justice and fairness; exact “Al-Muqsit” as a divine name is from the traditional list and needs review. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2871,9 +2870,9 @@ export const names: NameEntry[] = [
         en: "This name makes you aware that nothing is hidden from Allah; it should strengthen honesty, ihsan, and clean intentions."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 3:9. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 3:9. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 3:9. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2904,9 +2903,9 @@ export const names: NameEntry[] = [
         en: "This name corrects your view of provision: rizq is more than money and must not be sought through the unlawful."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 35:15; 47:38. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 35:15; 47:38. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 35:15; 47:38. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2937,9 +2936,9 @@ export const names: NameEntry[] = [
         en: "This name corrects your view of provision: rizq is more than money and must not be sought through the unlawful."
       },
       sourceNote: {
-        de: "Abgeleiteter Wort-/Sinnbezug: Qur’an 53:48 uses the verb/concept: He enriches and grants sufficiency. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Türemiş lafız/mana bağlantısı: Qur’an 53:48 uses the verb/concept: He enriches and grants sufficiency. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Derived wording/meaning reference: Qur’an 53:48 uses the verb/concept: He enriches and grants sufficiency. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -2970,9 +2969,9 @@ export const names: NameEntry[] = [
         en: "This name teaches that raising, lowering, benefit, and harm do not occur independently of Allah; success requires humility."
       },
       sourceNote: {
-        de: "Sahih-Hadith-/Dua-Bezug: Sahih supplication wording includes “none can withhold what You give”; exact listed-name usage needs review. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Sahih hadis/dua bağlantısı: Sahih supplication wording includes “none can withhold what You give”; exact listed-name usage needs review. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Sahih hadith/dua reference: Sahih supplication wording includes “none can withhold what You give”; exact listed-name usage needs review. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -3003,9 +3002,9 @@ export const names: NameEntry[] = [
         en: "This name teaches that raising, lowering, benefit, and harm do not occur independently of Allah; success requires humility."
       },
       sourceNote: {
-        de: "Nur traditionelle Listenführung in dieser Fassung: No confirmed sahih exact-name evidence in this pass; also treated as disputed in contemporary hadith/name discussions. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Bu hâliyle geleneksel liste bağlantısı: No confirmed sahih exact-name evidence in this pass; also treated as disputed in contemporary hadith/name discussions. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Traditional-list reference in this form: No confirmed sahih exact-name evidence in this pass; also treated as disputed in contemporary hadith/name discussions. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -3036,9 +3035,9 @@ export const names: NameEntry[] = [
         en: "This name teaches that raising, lowering, benefit, and harm do not occur independently of Allah; success requires humility."
       },
       sourceNote: {
-        de: "Nur traditionelle Listenführung in dieser Fassung: No confirmed sahih exact-name evidence in this pass; often paired with Ad-Darr in the traditional list. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Bu hâliyle geleneksel liste bağlantısı: No confirmed sahih exact-name evidence in this pass; often paired with Ad-Darr in the traditional list. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Traditional-list reference in this form: No confirmed sahih exact-name evidence in this pass; often paired with Ad-Darr in the traditional list. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -3069,9 +3068,9 @@ export const names: NameEntry[] = [
         en: "This name purifies your perspective: Allah is incomparable, independent, and true; no creation may take His place."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 24:35. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 24:35. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 24:35. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -3102,9 +3101,9 @@ export const names: NameEntry[] = [
         en: "This name reminds you that real wisdom is tied to guidance, patience, and sound intention."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 25:31. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 25:31. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 25:31. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -3135,9 +3134,9 @@ export const names: NameEntry[] = [
         en: "This name reminds you that form, origin, and renewal are not random; they are under Allah’s knowledge and power."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 2:117; 6:101. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 2:117; 6:101. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 2:117; 6:101. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -3168,9 +3167,9 @@ export const names: NameEntry[] = [
         en: "This name puts mortality in its place: life, death, and permanence belong to Allah; daily life should be oriented toward the Hereafter."
       },
       sourceNote: {
-        de: "Abgeleiteter Wort-/Sinnbezug: Qur’an 55:27 uses the permanence concept: the Face of your Lord remains. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Türemiş lafız/mana bağlantısı: Qur’an 55:27 uses the permanence concept: the Face of your Lord remains. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Derived wording/meaning reference: Qur’an 55:27 uses the permanence concept: the Face of your Lord remains. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -3201,9 +3200,9 @@ export const names: NameEntry[] = [
         en: "This name puts mortality in its place: life, death, and permanence belong to Allah; daily life should be oriented toward the Hereafter."
       },
       sourceNote: {
-        de: "Direkter Wortbezug: Qur’an 15:23; 21:89. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Doğrudan lafız bağlantısı: Qur’an 15:23; 21:89. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Direct wording reference: Qur’an 15:23; 21:89. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -3234,9 +3233,9 @@ export const names: NameEntry[] = [
         en: "This name reminds you that real wisdom is tied to guidance, patience, and sound intention."
       },
       sourceNote: {
-        de: "Nur traditionelle Listenführung in dieser Fassung: Traditional Tirmidhi-list name; direct Qur’an/Sahih naming evidence not confirmed in this pass. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Bu hâliyle geleneksel liste bağlantısı: Traditional Tirmidhi-list name; direct Qur’an/Sahih naming evidence not confirmed in this pass. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Traditional-list reference in this form: Traditional Tirmidhi-list name; direct Qur’an/Sahih naming evidence not confirmed in this pass. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     },
@@ -3267,9 +3266,9 @@ export const names: NameEntry[] = [
         en: "This name shows that maturity is not only in receiving, but in responding with patience, gratitude, and self-control."
       },
       sourceNote: {
-        de: "Sahih-Hadith-/Dua-Bezug: Sahih meaning is reported: none is more patient over harm heard than Allah; exact listed-name usage needs review. Allgemeine Grundlage: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Die feste 99er-Liste nach Jamiʿ at-Tirmidhi 3507 ist als konkrete Liste nicht der gleiche sahih Beleg; daher Review Pflicht.",
-        tr: "Sahih hadis/dua bağlantısı: Sahih meaning is reported: none is more patient over harm heard than Allah; exact listed-name usage needs review. Genel temel: Kur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. Jamiʿ at-Tirmidhi 3507’deki sabit 99’lu liste, somut liste olarak aynı sahih delil seviyesinde değildir; bu yüzden inceleme şarttır.",
-        en: "Sahih hadith/dua reference: Sahih meaning is reported: none is more patient over harm heard than Allah; exact listed-name usage needs review. General basis: Qur’an 7:180; 20:8; Sahih al-Bukhari 7392/Sahih Muslim 2677. The fixed 99-name list in Jamiʿ at-Tirmidhi 3507 is not the same sahih proof as a concrete list; therefore review is required."
+        de: "Diese App nutzt eine verbreitete Lernreihenfolge ohne einzelne Quellenbehauptungen. Religiöse Inhalte müssen vor Veröffentlichung geprüft werden.",
+        tr: "Bu uygulama tekil kaynak iddiası olmadan yaygın bir öğrenme sıralaması kullanır. Dini içerik yayımlanmadan önce incelenmelidir.",
+        en: "This app uses a common learning order without making individual source claims. Religious content must be reviewed before publication."
       },
       contentReviewRequired: true
     }

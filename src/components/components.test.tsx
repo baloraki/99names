@@ -32,9 +32,9 @@ describe('ContactForm', () => {
   it('shows validation errors and blocks submit for missing fields', () => {
     render(<ContactForm />)
     fireEvent.click(screen.getByRole('button', { name: 'Senden' }))
-    expect(screen.getByText('Name is required')).toBeInTheDocument()
-    expect(screen.getByText('Email is required')).toBeInTheDocument()
-    expect(screen.getByText('Message is required')).toBeInTheDocument()
+    expect(screen.getByText('Name ist erforderlich')).toBeInTheDocument()
+    expect(screen.getByText('E-Mail ist erforderlich')).toBeInTheDocument()
+    expect(screen.getByText('Nachricht ist erforderlich')).toBeInTheDocument()
   })
 
   it('blocks submit if Web3Forms key is missing', () => {

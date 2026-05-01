@@ -6,52 +6,105 @@ export const LANGUAGES: { value: Language; label: string }[] = [
   { value: 'en', label: 'English' },
 ]
 
-type Dict = {
+export type Dict = {
   nav: {
     home: string
     names: string
     learn: string
     settings: string
+    aid: string
+    main: string
+    mobile: string
+  }
+  common: {
+    back: string
+    overview: string
+    details: string
+    learned: string
+    favorite: string
+    removeFavorite: string
+    open: string
+    meaning: string
+    explanation: string
+    dua: string
+    reflection: string
+    sourceNote: string
+    nextName: string
+    pronunciation: string
+    none: string
+    notPlanned: string
   }
   home: {
+    eyebrow: string
     title: string
     subtitle: string
     nameOfDay: string
-    progress: string
-    learnedOf: string
     viewAll: string
     startLearning: string
+    openDetails: string
+    schedule: string
+    due: string
+    notDue: string
+    scheduleNote: string
+  }
+  progress: {
+    title: string
+    learned: string
   }
   names: {
+    eyebrow: string
     title: string
+    search: string
     searchPlaceholder: string
     filterAll: string
     filterLearned: string
     filterFavorites: string
-    filterUnlearned: string
+    filterOpen: string
     noResults: string
   }
   learn: {
+    eyebrow: string
     title: string
-    subtitle: string
+    remaining: (count: number) => string
     markLearned: string
-    markUnlearned: string
     next: string
-    previous: string
-    complete: string
-    allLearned: string
+    details: string
+    allLearnedTitle: string
+    allLearnedBody: string
+    overview: string
+  }
+  detail: {
+    backToOverview: string
+    markOpen: string
+    markLearned: string
+    addFavorite: string
+    removeFavorite: string
+    back: string
+    next: string
   }
   settings: {
+    eyebrow: string
     title: string
     language: string
     schedule: string
-    scheduleEnabled: string
+    scheduleBody: string
+    active: string
     interval: string
+    every2h: string
+    every6h: string
+    daily: string
+    lastCompleted: string
+    nextDue: string
+    localData: string
+    localDataBody: (learned: number, favorites: number, lastViewed: string) => string
     resetProgress: string
     resetConfirm: string
+    notificationNote: string
   }
   contact: {
+    eyebrow: string
     title: string
+    intro: string
     name: string
     email: string
     message: string
@@ -61,17 +114,31 @@ type Dict = {
     error: string
     noKey: string
   }
-  common: {
-    loading: string
-    error: string
-    back: string
-    meaning: string
-    explanation: string
-    dua: string
-    reflection: string
-    learned: string
-    favorite: string
-    share: string
+  validation: {
+    nameRequired: string
+    nameTooLong: string
+    emailRequired: string
+    emailInvalid: string
+    emailTooLong: string
+    messageRequired: string
+    messageTooLong: string
+    honeypot: string
+  }
+  privacy: {
+    title: string
+    p1: string
+    p2: string
+    p3: string
+  }
+  imprint: {
+    title: string
+    p1: string
+    p2: string
+  }
+  offline: {
+    title: string
+    p1: string
+    p2: string
   }
 }
 
@@ -80,67 +147,134 @@ const de: Dict = {
     home: 'Start',
     names: 'Namen',
     learn: 'Lernen',
-    settings: 'Einstellungen',
+    settings: 'Setup',
+    aid: 'Lernhilfe',
+    main: 'Hauptnavigation',
+    mobile: 'Mobile Navigation',
+  },
+  common: {
+    back: 'Zurück',
+    overview: 'Übersicht',
+    details: 'Details',
+    learned: 'Gelernt',
+    favorite: 'Favorit',
+    removeFavorite: 'Favorit entfernen',
+    open: 'Offen',
+    meaning: 'Bedeutung',
+    explanation: 'Erklärung',
+    dua: 'Dua',
+    reflection: 'Reflexion',
+    sourceNote: 'Hinweis',
+    nextName: 'Nächster Name',
+    pronunciation: 'Aussprache',
+    none: 'Keine',
+    notPlanned: 'Nicht geplant',
   },
   home: {
-    title: 'Die 99 Namen Allahs',
-    subtitle: 'Lerne und reflektiere über die Eigenschaften Allahs',
+    eyebrow: '99 Namen',
+    title: 'Die 99 Namen Allahs als ruhige Lernhilfe.',
+    subtitle: 'Suche, markiere deinen Fortschritt und lerne in deinem Tempo. Die Inhalte sind bewusst vorsichtig formuliert und müssen vor einer Veröffentlichung fachkundig geprüft werden.',
     nameOfDay: 'Name des Tages',
-    progress: 'Dein Fortschritt',
-    learnedOf: 'von 99 gelernt',
-    viewAll: 'Alle Namen',
-    startLearning: 'Lernen starten',
+    viewAll: 'Alle Namen ansehen',
+    startLearning: 'Lernmodus starten',
+    openDetails: 'Details öffnen',
+    schedule: 'Lernplan',
+    due: 'Eine Lerneinheit ist fällig.',
+    notDue: 'Kein fälliger Hinweis.',
+    scheduleNote: 'Hinweise erscheinen nur in der geöffneten App. Es gibt keine Push- oder Browser-Benachrichtigungen.',
+  },
+  progress: {
+    title: 'Fortschritt',
+    learned: 'gelernt',
   },
   names: {
+    eyebrow: 'Übersicht',
     title: 'Alle 99 Namen',
-    searchPlaceholder: 'Suche nach Namen...',
+    search: 'Suche',
+    searchPlaceholder: 'Arabisch, Transliteration oder Bedeutung',
     filterAll: 'Alle',
     filterLearned: 'Gelernt',
     filterFavorites: 'Favoriten',
-    filterUnlearned: 'Nicht gelernt',
-    noResults: 'Keine Ergebnisse gefunden',
+    filterOpen: 'Offen',
+    noResults: 'Keine Namen passen zu deiner Suche oder dem Filter.',
   },
   learn: {
-    title: 'Lernen',
-    subtitle: 'Lerne die Namen Allahs',
+    eyebrow: 'Lernmodus',
+    title: 'Nächster offener Name',
+    remaining: (count) => `${count} Namen sind noch offen.`,
     markLearned: 'Als gelernt markieren',
-    markUnlearned: 'Als nicht gelernt markieren',
-    next: 'Weiter',
-    previous: 'Zurück',
-    complete: 'Abgeschlossen',
-    allLearned: 'Alle Namen gelernt!',
+    next: 'Nächster Name',
+    details: 'Details',
+    allLearnedTitle: 'Alle Namen sind als gelernt markiert.',
+    allLearnedBody: 'Du kannst deinen Fortschritt in den Einstellungen zurücksetzen oder einzelne Namen wieder als offen markieren.',
+    overview: 'Zur Übersicht',
+  },
+  detail: {
+    backToOverview: 'Zur Übersicht',
+    markOpen: 'Als offen markieren',
+    markLearned: 'Als gelernt markieren',
+    addFavorite: 'Favorit',
+    removeFavorite: 'Favorit entfernen',
+    back: 'Zurück',
+    next: 'Nächster Name',
   },
   settings: {
+    eyebrow: 'Setup',
     title: 'Einstellungen',
     language: 'Sprache',
     schedule: 'Lernplan',
-    scheduleEnabled: 'Lernplan aktivieren',
+    scheduleBody: 'Nur lokale Hinweise innerhalb der geöffneten App.',
+    active: 'Aktiv',
     interval: 'Intervall',
+    every2h: 'Alle 2 Stunden',
+    every6h: 'Alle 6 Stunden',
+    daily: 'Täglich',
+    lastCompleted: 'Letzte Einheit',
+    nextDue: 'Nächster Hinweis',
+    localData: 'Lokale Daten',
+    localDataBody: (learned, favorites, lastViewed) => `Gelernt: ${learned}, Favoriten: ${favorites}, zuletzt angesehen: ${lastViewed}.`,
     resetProgress: 'Fortschritt zurücksetzen',
-    resetConfirm: 'Bist du sicher? Diese Aktion kann nicht rückgängig gemacht werden.',
+    resetConfirm: 'Fortschritt wirklich zurücksetzen?',
+    notificationNote: 'Diese App verwendet keine Push-Benachrichtigungen und keine Browser-Benachrichtigungen. Der Lernplan wird nur berechnet und angezeigt, solange die App geöffnet ist.',
   },
   contact: {
-    title: 'Kontakt',
+    eyebrow: 'Kontakt',
+    title: 'Nachricht senden',
+    intro: 'Das Formular nutzt Web3Forms im Browser. Ohne konfigurierten Zugriffsschlüssel wird das Absenden blockiert.',
     name: 'Name',
     email: 'E-Mail',
     message: 'Nachricht',
     send: 'Senden',
-    sending: 'Wird gesendet...',
-    success: 'Deine Nachricht wurde erfolgreich gesendet.',
-    error: 'Ein Fehler ist aufgetreten. Bitte versuche es erneut.',
-    noKey: 'Kontaktformular ist derzeit nicht verfügbar.',
+    sending: 'Senden...',
+    success: 'Deine Nachricht wurde gesendet.',
+    error: 'Die Nachricht konnte gerade nicht gesendet werden. Bitte versuche es später erneut.',
+    noKey: 'Das Kontaktformular ist noch nicht konfiguriert.',
   },
-  common: {
-    loading: 'Wird geladen...',
-    error: 'Fehler',
-    back: 'Zurück',
-    meaning: 'Bedeutung',
-    explanation: 'Erklärung',
-    dua: 'Dua-Verwendung',
-    reflection: 'Reflexion',
-    learned: 'Gelernt',
-    favorite: 'Favorit',
-    share: 'Teilen',
+  validation: {
+    nameRequired: 'Name ist erforderlich',
+    nameTooLong: 'Name darf höchstens 100 Zeichen lang sein',
+    emailRequired: 'E-Mail ist erforderlich',
+    emailInvalid: 'Bitte gib eine gültige E-Mail-Adresse ein',
+    emailTooLong: 'E-Mail darf höchstens 200 Zeichen lang sein',
+    messageRequired: 'Nachricht ist erforderlich',
+    messageTooLong: 'Nachricht darf höchstens 2000 Zeichen lang sein',
+    honeypot: 'Diese Nachricht kann nicht gesendet werden',
+  },
+  privacy: {
+    title: 'Datenschutz',
+    p1: 'Diese App speichert Sprache, Fortschritt, Favoriten, zuletzt angesehene Namen und Lernplan-Einstellungen lokal im Browser über localStorage.',
+    p2: 'Es werden keine Tracking-Cookies, keine Analytics, keine Push-Benachrichtigungen und keine Browser-Benachrichtigungen verwendet.',
+    p3: 'Das Kontaktformular sendet die eingegebenen Daten an Web3Forms. Der öffentliche Web3Forms-Schlüssel ist im Client sichtbar.',
+  },
+  imprint: {
+    title: 'Impressum',
+    p1: 'Platzhalter: Betreiberangaben müssen vor einer Veröffentlichung ergänzt werden.',
+    p2: 'Es wurden bewusst keine Namen, Adressen, Firmen oder Kontaktdaten erfunden.',
+  },
+  offline: {
+    title: 'Offline',
+    p1: 'Du bist offline. Bereits zwischengespeicherte App-Seiten und die lokal gebündelten Namen bleiben nutzbar.',
+    p2: 'Das Kontaktformular benötigt eine Netzwerkverbindung.',
   },
 }
 
@@ -150,66 +284,133 @@ const tr: Dict = {
     names: 'İsimler',
     learn: 'Öğren',
     settings: 'Ayarlar',
+    aid: 'Öğrenme yardımı',
+    main: 'Ana gezinme',
+    mobile: 'Mobil gezinme',
+  },
+  common: {
+    back: 'Geri',
+    overview: 'Genel bakış',
+    details: 'Detaylar',
+    learned: 'Öğrenildi',
+    favorite: 'Favori',
+    removeFavorite: 'Favoriden kaldır',
+    open: 'Açık',
+    meaning: 'Anlam',
+    explanation: 'Açıklama',
+    dua: 'Dua',
+    reflection: 'Tefekkür',
+    sourceNote: 'Not',
+    nextName: 'Sonraki isim',
+    pronunciation: 'Telaffuz',
+    none: 'Yok',
+    notPlanned: 'Planlanmadı',
   },
   home: {
-    title: "Allah'ın 99 İsmi",
-    subtitle: "Allah'ın sıfatlarını öğren ve düşün",
+    eyebrow: '99 İsim',
+    title: "Allah'ın 99 İsmi için sakin bir öğrenme yardımı.",
+    subtitle: 'Ara, ilerlemeni işaretle ve kendi hızında öğren. İçerikler bilinçli olarak ihtiyatlı yazılmıştır ve yayımlanmadan önce uzman kişilerce incelenmelidir.',
     nameOfDay: 'Günün İsmi',
-    progress: 'İlerleme',
-    learnedOf: "99'dan öğrenildi",
-    viewAll: 'Tüm İsimler',
-    startLearning: 'Öğrenmeye Başla',
+    viewAll: 'Tüm isimleri gör',
+    startLearning: 'Öğrenme modunu başlat',
+    openDetails: 'Detayları aç',
+    schedule: 'Öğrenme planı',
+    due: 'Bir öğrenme oturumu zamanı geldi.',
+    notDue: 'Şu anda hatırlatma yok.',
+    scheduleNote: 'Hatırlatmalar yalnızca uygulama açıkken görünür. Push veya tarayıcı bildirimi yoktur.',
+  },
+  progress: {
+    title: 'İlerleme',
+    learned: 'öğrenildi',
   },
   names: {
-    title: 'Tüm 99 İsim',
-    searchPlaceholder: 'İsim ara...',
+    eyebrow: 'Genel bakış',
+    title: '99 İsmin Tamamı',
+    search: 'Ara',
+    searchPlaceholder: 'Arapça, transliterasyon veya anlam',
     filterAll: 'Tümü',
     filterLearned: 'Öğrenilen',
     filterFavorites: 'Favoriler',
-    filterUnlearned: 'Öğrenilmeyen',
-    noResults: 'Sonuç bulunamadı',
+    filterOpen: 'Açık',
+    noResults: 'Aramana veya filtreye uygun isim bulunamadı.',
   },
   learn: {
-    title: 'Öğren',
-    subtitle: "Allah'ın isimlerini öğren",
+    eyebrow: 'Öğrenme modu',
+    title: 'Sonraki açık isim',
+    remaining: (count) => `${count} isim henüz açık.`,
     markLearned: 'Öğrenildi olarak işaretle',
-    markUnlearned: 'Öğrenilmedi olarak işaretle',
-    next: 'İleri',
-    previous: 'Geri',
-    complete: 'Tamamlandı',
-    allLearned: 'Tüm isimler öğrenildi!',
+    next: 'Sonraki isim',
+    details: 'Detaylar',
+    allLearnedTitle: 'Tüm isimler öğrenildi olarak işaretlendi.',
+    allLearnedBody: 'Ayarlar bölümünde ilerlemeni sıfırlayabilir veya tek tek isimleri tekrar açık olarak işaretleyebilirsin.',
+    overview: 'Genel bakışa git',
+  },
+  detail: {
+    backToOverview: 'Genel bakışa dön',
+    markOpen: 'Açık olarak işaretle',
+    markLearned: 'Öğrenildi olarak işaretle',
+    addFavorite: 'Favori',
+    removeFavorite: 'Favoriden kaldır',
+    back: 'Geri',
+    next: 'Sonraki isim',
   },
   settings: {
+    eyebrow: 'Ayarlar',
     title: 'Ayarlar',
     language: 'Dil',
-    schedule: 'Öğrenme Planı',
-    scheduleEnabled: 'Öğrenme planını etkinleştir',
+    schedule: 'Öğrenme planı',
+    scheduleBody: 'Yalnızca açık uygulama içinde yerel hatırlatmalar.',
+    active: 'Aktif',
     interval: 'Aralık',
+    every2h: 'Her 2 saatte bir',
+    every6h: 'Her 6 saatte bir',
+    daily: 'Günlük',
+    lastCompleted: 'Son oturum',
+    nextDue: 'Sonraki hatırlatma',
+    localData: 'Yerel veriler',
+    localDataBody: (learned, favorites, lastViewed) => `Öğrenilen: ${learned}, favoriler: ${favorites}, son görüntülenen: ${lastViewed}.`,
     resetProgress: 'İlerlemeyi sıfırla',
-    resetConfirm: 'Emin misin? Bu işlem geri alınamaz.',
+    resetConfirm: 'İlerleme gerçekten sıfırlansın mı?',
+    notificationNote: 'Bu uygulama push bildirimi veya tarayıcı bildirimi kullanmaz. Öğrenme planı yalnızca uygulama açıkken hesaplanır ve gösterilir.',
   },
   contact: {
-    title: 'İletişim',
+    eyebrow: 'İletişim',
+    title: 'Mesaj gönder',
+    intro: 'Form Web3Forms hizmetini tarayıcıda kullanır. Yapılandırılmış erişim anahtarı yoksa gönderim engellenir.',
     name: 'Ad',
     email: 'E-posta',
     message: 'Mesaj',
     send: 'Gönder',
     sending: 'Gönderiliyor...',
-    success: 'Mesajın başarıyla gönderildi.',
-    error: 'Bir hata oluştu. Lütfen tekrar dene.',
-    noKey: 'İletişim formu şu an kullanılamıyor.',
+    success: 'Mesajın gönderildi.',
+    error: 'Mesaj şu anda gönderilemedi. Lütfen daha sonra tekrar dene.',
+    noKey: 'İletişim formu henüz yapılandırılmadı.',
   },
-  common: {
-    loading: 'Yükleniyor...',
-    error: 'Hata',
-    back: 'Geri',
-    meaning: 'Anlam',
-    explanation: 'Açıklama',
-    dua: 'Dua Kullanımı',
-    reflection: 'Düşünce',
-    learned: 'Öğrenildi',
-    favorite: 'Favori',
-    share: 'Paylaş',
+  validation: {
+    nameRequired: 'Ad zorunludur',
+    nameTooLong: 'Ad en fazla 100 karakter olabilir',
+    emailRequired: 'E-posta zorunludur',
+    emailInvalid: 'Lütfen geçerli bir e-posta adresi gir',
+    emailTooLong: 'E-posta en fazla 200 karakter olabilir',
+    messageRequired: 'Mesaj zorunludur',
+    messageTooLong: 'Mesaj en fazla 2000 karakter olabilir',
+    honeypot: 'Bu mesaj gönderilemez',
+  },
+  privacy: {
+    title: 'Gizlilik',
+    p1: 'Bu uygulama dili, ilerlemeyi, favorileri, son görüntülenen isimleri ve öğrenme planı ayarlarını tarayıcıda localStorage ile yerel olarak saklar.',
+    p2: 'Takip çerezleri, analytics, push bildirimleri veya tarayıcı bildirimleri kullanılmaz.',
+    p3: 'İletişim formu girilen verileri Web3Forms hizmetine gönderir. Genel Web3Forms anahtarı istemci tarafında görünür.',
+  },
+  imprint: {
+    title: 'Künye',
+    p1: 'Yer tutucu: Yayımlamadan önce işletici bilgileri eklenmelidir.',
+    p2: 'Bilinçli olarak isim, adres, şirket veya iletişim bilgisi uydurulmadı.',
+  },
+  offline: {
+    title: 'Çevrim dışı',
+    p1: 'Çevrim dışısın. Önceden önbelleğe alınmış uygulama sayfaları ve yerel olarak paketlenen isimler kullanılabilir kalır.',
+    p2: 'İletişim formu için ağ bağlantısı gerekir.',
   },
 }
 
@@ -219,66 +420,133 @@ const en: Dict = {
     names: 'Names',
     learn: 'Learn',
     settings: 'Settings',
+    aid: 'Learning aid',
+    main: 'Main navigation',
+    mobile: 'Mobile navigation',
+  },
+  common: {
+    back: 'Back',
+    overview: 'Overview',
+    details: 'Details',
+    learned: 'Learned',
+    favorite: 'Favorite',
+    removeFavorite: 'Remove favorite',
+    open: 'Open',
+    meaning: 'Meaning',
+    explanation: 'Explanation',
+    dua: 'Dua',
+    reflection: 'Reflection',
+    sourceNote: 'Note',
+    nextName: 'Next name',
+    pronunciation: 'Pronunciation',
+    none: 'None',
+    notPlanned: 'Not planned',
   },
   home: {
-    title: '99 Names of Allah',
-    subtitle: 'Learn and reflect on the attributes of Allah',
+    eyebrow: '99 Names',
+    title: 'A calm learning aid for the 99 Names of Allah.',
+    subtitle: 'Search, track your progress, and learn at your own pace. The content is intentionally cautious and must be reviewed by qualified people before publication.',
     nameOfDay: 'Name of the Day',
-    progress: 'Your Progress',
-    learnedOf: 'of 99 learned',
-    viewAll: 'All Names',
-    startLearning: 'Start Learning',
+    viewAll: 'View all names',
+    startLearning: 'Start learning mode',
+    openDetails: 'Open details',
+    schedule: 'Learning schedule',
+    due: 'A learning session is due.',
+    notDue: 'No due reminder.',
+    scheduleNote: 'Hints appear only while the app is open. There are no push or browser notifications.',
+  },
+  progress: {
+    title: 'Progress',
+    learned: 'learned',
   },
   names: {
+    eyebrow: 'Overview',
     title: 'All 99 Names',
-    searchPlaceholder: 'Search names...',
+    search: 'Search',
+    searchPlaceholder: 'Arabic, transliteration, or meaning',
     filterAll: 'All',
     filterLearned: 'Learned',
     filterFavorites: 'Favorites',
-    filterUnlearned: 'Unlearned',
-    noResults: 'No results found',
+    filterOpen: 'Open',
+    noResults: 'No names match your search or filter.',
   },
   learn: {
-    title: 'Learn',
-    subtitle: 'Learn the names of Allah',
+    eyebrow: 'Learning mode',
+    title: 'Next open name',
+    remaining: (count) => `${count} names are still open.`,
     markLearned: 'Mark as learned',
-    markUnlearned: 'Mark as unlearned',
-    next: 'Next',
-    previous: 'Previous',
-    complete: 'Complete',
-    allLearned: 'All names learned!',
+    next: 'Next name',
+    details: 'Details',
+    allLearnedTitle: 'All names are marked as learned.',
+    allLearnedBody: 'You can reset your progress in settings or mark individual names as open again.',
+    overview: 'Go to overview',
+  },
+  detail: {
+    backToOverview: 'Back to overview',
+    markOpen: 'Mark as open',
+    markLearned: 'Mark as learned',
+    addFavorite: 'Favorite',
+    removeFavorite: 'Remove favorite',
+    back: 'Back',
+    next: 'Next name',
   },
   settings: {
+    eyebrow: 'Settings',
     title: 'Settings',
     language: 'Language',
-    schedule: 'Learning Schedule',
-    scheduleEnabled: 'Enable learning schedule',
+    schedule: 'Learning schedule',
+    scheduleBody: 'Local reminders only inside the open app.',
+    active: 'Active',
     interval: 'Interval',
+    every2h: 'Every 2 hours',
+    every6h: 'Every 6 hours',
+    daily: 'Daily',
+    lastCompleted: 'Last session',
+    nextDue: 'Next reminder',
+    localData: 'Local data',
+    localDataBody: (learned, favorites, lastViewed) => `Learned: ${learned}, favorites: ${favorites}, last viewed: ${lastViewed}.`,
     resetProgress: 'Reset progress',
-    resetConfirm: 'Are you sure? This cannot be undone.',
+    resetConfirm: 'Really reset progress?',
+    notificationNote: 'This app does not use push notifications or browser notifications. The learning schedule is calculated and shown only while the app is open.',
   },
   contact: {
-    title: 'Contact',
+    eyebrow: 'Contact',
+    title: 'Send a message',
+    intro: 'The form uses Web3Forms in the browser. Submission is blocked unless an access key is configured.',
     name: 'Name',
     email: 'Email',
     message: 'Message',
     send: 'Send',
     sending: 'Sending...',
-    success: 'Your message has been sent successfully.',
-    error: 'An error occurred. Please try again.',
-    noKey: 'Contact form is not available at this time.',
+    success: 'Your message has been sent.',
+    error: 'The message could not be sent right now. Please try again later.',
+    noKey: 'The contact form is not configured yet.',
   },
-  common: {
-    loading: 'Loading...',
-    error: 'Error',
-    back: 'Back',
-    meaning: 'Meaning',
-    explanation: 'Explanation',
-    dua: 'Dua Usage',
-    reflection: 'Reflection',
-    learned: 'Learned',
-    favorite: 'Favorite',
-    share: 'Share',
+  validation: {
+    nameRequired: 'Name is required',
+    nameTooLong: 'Name must be 100 characters or less',
+    emailRequired: 'Email is required',
+    emailInvalid: 'Please enter a valid email address',
+    emailTooLong: 'Email must be 200 characters or less',
+    messageRequired: 'Message is required',
+    messageTooLong: 'Message must be 2000 characters or less',
+    honeypot: 'This message cannot be sent',
+  },
+  privacy: {
+    title: 'Privacy',
+    p1: 'This app stores language, progress, favorites, last viewed names, and learning schedule settings locally in the browser using localStorage.',
+    p2: 'No tracking cookies, analytics, push notifications, or browser notifications are used.',
+    p3: 'The contact form sends entered data to Web3Forms. The public Web3Forms key is visible in the client.',
+  },
+  imprint: {
+    title: 'Imprint',
+    p1: 'Placeholder: operator data must be added before publication.',
+    p2: 'No names, addresses, companies, or contact details have been invented.',
+  },
+  offline: {
+    title: 'Offline',
+    p1: 'You are offline. Previously cached app pages and the locally bundled names remain usable.',
+    p2: 'The contact form requires a network connection.',
   },
 }
 

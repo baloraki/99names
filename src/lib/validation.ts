@@ -11,24 +11,24 @@ export function validateContactForm(data: {
 }): ValidationResult {
   const errors: Record<string, string> = {}
   if (data.honeypot?.trim()) {
-    errors.honeypot = 'Unable to send this message'
+    errors.honeypot = 'honeypot'
   }
   if (!data.name.trim()) {
-    errors.name = 'Name is required'
+    errors.name = 'nameRequired'
   } else if (data.name.length > 100) {
-    errors.name = 'Name must be 100 characters or less'
+    errors.name = 'nameTooLong'
   }
   if (!data.email.trim()) {
-    errors.email = 'Email is required'
+    errors.email = 'emailRequired'
   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
-    errors.email = 'Invalid email address'
+    errors.email = 'emailInvalid'
   } else if (data.email.length > 200) {
-    errors.email = 'Email must be 200 characters or less'
+    errors.email = 'emailTooLong'
   }
   if (!data.message.trim()) {
-    errors.message = 'Message is required'
+    errors.message = 'messageRequired'
   } else if (data.message.length > 2000) {
-    errors.message = 'Message must be 2000 characters or less'
+    errors.message = 'messageTooLong'
   }
   return { valid: Object.keys(errors).length === 0, errors }
 }

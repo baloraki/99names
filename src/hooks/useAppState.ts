@@ -27,9 +27,11 @@ export function useAppState() {
 
   useEffect(() => {
     queueMicrotask(() => {
-      setLanguageState(storage.getLanguage())
+      const storedLanguage = storage.getLanguage()
+      setLanguageState(storedLanguage)
       setProgressState(storage.getProgress())
       setScheduleState(storage.getSchedule())
+      document.documentElement.lang = storedLanguage
       setReady(true)
     })
   }, [])
@@ -39,6 +41,7 @@ export function useAppState() {
       setLanguageState(next)
       storage.setLanguage(next)
       document.documentElement.lang = next
+      window.dispatchEvent(new CustomEvent('app-language-change', { detail: next }))
     },
     setSchedule(next: LearningScheduleSettings) {
       setScheduleState(next)
