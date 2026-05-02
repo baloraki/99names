@@ -25,49 +25,67 @@ export function useAppState() {
       document.documentElement.lang = storedLanguage
       setReady(true)
     })
+
+    const onProgressChange = (event: Event) => {
+      const next = (event as CustomEvent<ProgressState>).detail
+      setProgressState(next)
+    }
+    window.addEventListener('app-progress-change', onProgressChange)
+    return () => window.removeEventListener('app-progress-change', onProgressChange)
   }, [])
 
-  const actions = useMemo(() => ({
-    setLanguage(next: Language) {
-      setLanguageState(next)
-      storage.setLanguage(next)
-      document.documentElement.lang = next
-      window.dispatchEvent(new CustomEvent('app-language-change', { detail: next }))
-    },
-    markLearned(id: number, slug?: string) {
-      setProgressState((current) => {
-        const next = { ...markLearned(current, id), lastLearnedSlug: slug ?? current.lastLearnedSlug }
+  const actions = useMemo(() => {
+    function broadcastProgress(next: ProgressState) {
+      window.dispatchEvent(new CustomEvent('app-progress-change', { detail: next }))
+    }
+
+    return {
+      setLanguage(next: Language) {
+        setLanguageState(next)
+        storage.setLanguage(next)
+        document.documentElement.lang = next
+        window.dispatchEvent(new CustomEvent('app-language-change', { detail: next }))
+      },
+      markLearned(id: number, slug?: string) {
+        setProgressState((current) => {
+          const next = { ...markLearned(current, id), lastLearnedSlug: slug ?? current.lastLearnedSlug }
+          storage.setProgress(next)
+          broadcastProgress(next)
+          return next
+        })
+      },
+      unmarkLearned(id: number) {
+        setProgressState((current) => {
+          const next = unmarkLearned(current, id)
+          storage.setProgress(next)
+          broadcastProgress(next)
+          return next
+        })
+      },
+      toggleFavorite(id: number) {
+        setProgressState((current) => {
+          const next = toggleFavorite(current, id)
+          storage.setProgress(next)
+          broadcastProgress(next)
+          return next
+        })
+      },
+      setLastViewed(slug: string) {
+        setProgressState((current) => {
+          const next = { ...current, lastViewedSlug: slug, updatedAt: new Date().toISOString() }
+          storage.setProgress(next)
+          broadcastProgress(next)
+          return next
+        })
+      },
+      resetProgress() {
+        const next = { learnedIds: [], favoriteIds: [], updatedAt: new Date().toISOString() }
+        setProgressState(next)
         storage.setProgress(next)
-        return next
-      })
-    },
-    unmarkLearned(id: number) {
-      setProgressState((current) => {
-        const next = unmarkLearned(current, id)
-        storage.setProgress(next)
-        return next
-      })
-    },
-    toggleFavorite(id: number) {
-      setProgressState((current) => {
-        const next = toggleFavorite(current, id)
-        storage.setProgress(next)
-        return next
-      })
-    },
-    setLastViewed(slug: string) {
-      setProgressState((current) => {
-        const next = { ...current, lastViewedSlug: slug, updatedAt: new Date().toISOString() }
-        storage.setProgress(next)
-        return next
-      })
-    },
-    resetProgress() {
-      const next = { learnedIds: [], favoriteIds: [], updatedAt: new Date().toISOString() }
-      setProgressState(next)
-      storage.setProgress(next)
-    },
-  }), [])
+        broadcastProgress(next)
+      },
+    }
+  }, [])
 
   return { ready, language, progress, actions }
 }

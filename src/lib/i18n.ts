@@ -80,6 +80,9 @@ export type Dict = {
     overallLearned: (learned: number, total: number) => string
     sessionLearned: (count: number) => string
     keyboard: string
+    flipSide: string
+    showArabic: string
+    recallArabicPrompt: string
   }
   detail: {
     backToOverview: string
@@ -218,6 +221,9 @@ const de: Dict = {
     overallLearned: (learned, total) => `${learned} von ${total} gelernt`,
     sessionLearned: (count) => `+${count} heute`,
     keyboard: '␣ aufdecken · L gelernt · N überspringen · F Favorit',
+    flipSide: 'Seiten tauschen',
+    showArabic: 'Arabisch aufdecken',
+    recallArabicPrompt: 'Versuche das arabische Wort zu erinnern …',
   },
   detail: {
     backToOverview: 'Zur Übersicht',
@@ -356,6 +362,9 @@ const tr: Dict = {
     overallLearned: (learned, total) => `${total} isimden ${learned} öğrenildi`,
     sessionLearned: (count) => `+${count} bugün`,
     keyboard: '␣ göster · L öğrenildi · N atla · F favori',
+    flipSide: 'Tarafları değiştir',
+    showArabic: 'Arapçayı göster',
+    recallArabicPrompt: 'Arapça kelimeyi hatırlamaya çalış …',
   },
   detail: {
     backToOverview: 'Genel bakışa dön',
@@ -494,6 +503,9 @@ const en: Dict = {
     overallLearned: (learned, total) => `${learned} of ${total} learned`,
     sessionLearned: (count) => `+${count} today`,
     keyboard: '␣ reveal · L learned · N skip · F favorite',
+    flipSide: 'Flip sides',
+    showArabic: 'Reveal Arabic',
+    recallArabicPrompt: 'Try to recall the Arabic word …',
   },
   detail: {
     backToOverview: 'Back to overview',

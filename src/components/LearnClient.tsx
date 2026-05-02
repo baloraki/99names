@@ -19,6 +19,7 @@ export function LearnClient({ embedded = false, locale }: { embedded?: boolean; 
   const [phase, setPhase] = useState<Phase>('question')
   const [sessionCount, setSessionCount] = useState(0)
   const [fading, setFading] = useState(false)
+  const [reversed, setReversed] = useState(false)
 
   const openNames = useMemo(
     () => names.filter((name) => !progress.learnedIds.includes(name.id)),
@@ -55,12 +56,20 @@ export function LearnClient({ embedded = false, locale }: { embedded?: boolean; 
     transition(() => {
       setPhase('question')
     })
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [current, actions, transition])
 
   const handleFavorite = useCallback(() => {
     if (!current) return
     actions.toggleFavorite(current.id)
   }, [current, actions])
+
+  const handleFlipSide = useCallback(() => {
+    transition(() => {
+      setReversed((v) => !v)
+      setPhase('question')
+    })
+  }, [transition])
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
@@ -153,52 +162,92 @@ export function LearnClient({ embedded = false, locale }: { embedded?: boolean; 
         aria-live="polite"
         aria-atomic="true"
       >
-        {/* Card header: number + favorite */}
+        {/* Card header: number + flip + favorite */}
         <div className="mb-4 flex items-center justify-between">
           <span className="rounded bg-surface-soft px-2 py-0.5 text-xs text-gold-muted tabular-nums">
             #{current.id.toString().padStart(2, '0')} / 99
           </span>
-          <button
-            className={`focus-ring rounded p-1.5 text-2xl leading-none transition-all duration-150 ${
-              isFavorite ? 'text-gold scale-110' : 'text-muted/50 hover:text-gold/70'
-            }`}
-            onClick={handleFavorite}
-            aria-label={isFavorite ? dict.common.removeFavorite : dict.common.favorite}
-            aria-pressed={isFavorite}
-          >
-            {isFavorite ? '★' : '☆'}
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              className="focus-ring rounded px-2 py-1 text-xs text-muted/60 hover:text-gold/70 transition-colors"
+              onClick={handleFlipSide}
+              title={dict.learn.flipSide}
+              aria-label={dict.learn.flipSide}
+            >
+              {reversed ? '⇄ AR→' : '⇄ →AR'}
+            </button>
+            <button
+              className={`focus-ring rounded p-1.5 text-2xl leading-none transition-all duration-150 ${
+                isFavorite ? 'text-gold scale-110' : 'text-muted/50 hover:text-gold/70'
+              }`}
+              onClick={handleFavorite}
+              aria-label={isFavorite ? dict.common.removeFavorite : dict.common.favorite}
+              aria-pressed={isFavorite}
+            >
+              {isFavorite ? '★' : '☆'}
+            </button>
+          </div>
         </div>
 
-        {/* Arabic + pronunciation */}
-        <p
-          className="text-right font-arabic text-7xl leading-tight tracking-wide"
-          lang="ar"
-          dir="rtl"
-        >
-          {current.arabic}
-        </p>
-        <p className="mt-1.5 text-right text-sm text-gold-muted tracking-widest">
-          {current.pronunciation}
-        </p>
+        {/* Question side content */}
+        {!reversed ? (
+          <>
+            {/* Arabic + pronunciation (default: Arabic is question side) */}
+            <p
+              className="text-right font-arabic text-7xl leading-tight tracking-wide"
+              lang="ar"
+              dir="rtl"
+            >
+              {current.arabic}
+            </p>
+            <p className="mt-1.5 text-right text-sm text-gold-muted tracking-widest">
+              {current.pronunciation}
+            </p>
+          </>
+        ) : (
+          <>
+            {/* Meaning is question side in reversed mode */}
+            <p className="mt-2 text-2xl font-semibold">{current.transliteration}</p>
+            <p className="mt-1.5 text-lg font-medium text-gold">{current.meanings[language]}</p>
+          </>
+        )}
 
         {phase === 'question' ? (
           /* ── Question phase ── */
           <div className="mt-10 space-y-4">
-            <p className="text-center text-sm italic text-muted/70">{dict.learn.recallPrompt}</p>
+            <p className="text-center text-sm italic text-muted/70">
+              {reversed ? dict.learn.recallArabicPrompt : dict.learn.recallPrompt}
+            </p>
             <button className="btn-primary w-full text-base" onClick={handleReveal}>
-              {dict.learn.showMeaning}
+              {reversed ? dict.learn.showArabic : dict.learn.showMeaning}
             </button>
           </div>
         ) : (
           /* ── Answer phase ── */
           <div className="mt-6 space-y-5">
-            {/* Meaning block */}
-            <div>
-              <p className="text-2xl font-semibold">{current.transliteration}</p>
-              <p className="mt-1.5 text-lg font-medium text-gold">{current.meanings[language]}</p>
-              <p className="mt-3 leading-7 text-muted text-sm">{current.explanations[language]}</p>
-            </div>
+            {reversed ? (
+              /* Reveal Arabic in reversed mode */
+              <div>
+                <p
+                  className="text-right font-arabic text-7xl leading-tight tracking-wide"
+                  lang="ar"
+                  dir="rtl"
+                >
+                  {current.arabic}
+                </p>
+                <p className="mt-1.5 text-right text-sm text-gold-muted tracking-widest">
+                  {current.pronunciation}
+                </p>
+                <p className="mt-3 leading-7 text-muted text-sm">{current.explanations[language]}</p>
+              </div>
+            ) : (
+              /* Reveal meaning in default mode */
+              <div>
+                <p className="text-2xl font-semibold">{current.transliteration}</p>
+                <p className="mt-1.5 text-lg font-medium text-gold">{current.meanings[language]}</p>
+                <p className="mt-3 leading-7 text-muted text-sm">{current.explanations[language]}</p>
+              </div>
+            )}
 
             {/* Expandable: Dua */}
             {current.duaUsage?.[language] && (

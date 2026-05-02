@@ -309,9 +309,8 @@ function LearnPage({ locale }: { locale: Language }) {
   return (
     <div lang={locale} className="mx-auto max-w-4xl space-y-8">
       <LearnClient locale={locale} />
-      <LearningProgressWidget locale={locale} compact />
       <div className="flex flex-col gap-3 sm:flex-row">
-        <Link className="btn-primary" href={getLocalizedNamesPath(locale)}>{text.primaryCta}</Link>
+        <Link className="btn-primary" href={getLocalizedNamesPath(locale)}>{text.secondaryCta}</Link>
         <Link className="btn-secondary" href={getLocalizedSeoPath('reflections', locale)}>{text.secondaryCta}</Link>
       </div>
       <PageIntro page="learn" locale={locale} headingLevel="h2" subdued />
