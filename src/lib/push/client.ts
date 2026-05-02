@@ -154,9 +154,8 @@ export function postponePushSoftPrompt(now = Date.now()): void {
 }
 
 // PWA Installation functions
-export function capturePwaInstallPrompt(): void {
-  if (typeof window === 'undefined') return
-
+// Capture the beforeinstallprompt event at module load time
+if (typeof window !== 'undefined') {
   window.addEventListener('beforeinstallprompt', (event: Event) => {
     // Prevent the browser's default install prompt
     event.preventDefault()

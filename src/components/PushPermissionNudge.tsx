@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react'
 import type { ReminderInterval } from '@/lib/push/reminders'
 import {
-  capturePwaInstallPrompt,
   getBrowserTimeZone,
   getCurrentPushSubscription,
   hasPwaPromptBeenDeferred,
@@ -40,9 +39,6 @@ export function PushPermissionNudge({
   const vapidPublicKey = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY ?? ''
 
   useEffect(() => {
-    // Capture PWA install prompt event
-    capturePwaInstallPrompt()
-
     let cancelled = false
 
     queueMicrotask(() => {
