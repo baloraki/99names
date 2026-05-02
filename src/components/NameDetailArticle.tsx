@@ -187,7 +187,7 @@ export function NameDetailArticle({ name, locale }: { name: NameEntry; locale: L
 
 function InfoBlock({ title, body, subtle }: { title: string; body: string; subtle?: string }) {
   return (
-    <section className={subtle ? 'rounded-lg border border-white/10 bg-white/[0.03] p-5' : 'rounded-lg border border-white/10 bg-surface p-5'}>
+    <section className={subtle ? 'rounded-lg border border-white/10 bg-surface-soft p-5' : 'rounded-lg border border-white/10 bg-surface p-5'}>
       <h2 className="text-sm uppercase tracking-[0.18em] text-gold">{title}</h2>
       <p className="mt-3 leading-7 text-muted">{body}</p>
       {subtle && <p className="mt-3 text-sm leading-6 text-muted">{subtle}</p>}
