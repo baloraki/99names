@@ -102,7 +102,8 @@ export function NameDetailArticle({ name, locale }: { name: NameEntry; locale: L
   const text = labels[locale]
   const { previous, next } = getAdjacentNames(name)
   const related = getRelatedNames(name)
-  const title = `${name.transliteration} ${text.meaningSuffix}`
+  const localizedTransliteration = name.transliteration[locale]
+  const title = `${localizedTransliteration} ${text.meaningSuffix}`
   const breadcrumbItems = [
     { href: locale === 'en' ? '/' : `/${locale}`, label: text.home },
     { href: getLocalizedNamesPath(locale), label: text.names },
@@ -123,11 +124,11 @@ export function NameDetailArticle({ name, locale }: { name: NameEntry; locale: L
         <dl className="mt-6 grid gap-4 sm:grid-cols-2">
           <div>
             <dt className="text-sm text-muted">{text.transliteration}</dt>
-            <dd className="mt-1 text-lg text-primary">{name.transliteration}</dd>
+            <dd className="mt-1 text-lg text-primary">{localizedTransliteration}</dd>
           </div>
           <div>
             <dt className="text-sm text-muted">{text.pronunciation}</dt>
-            <dd className="mt-1 text-lg text-primary">{name.pronunciation}</dd>
+            <dd className="mt-1 text-lg text-primary">{name.pronunciation[locale]}</dd>
           </div>
           <div>
             <dt className="text-sm text-muted">{text.english}</dt>
@@ -151,17 +152,17 @@ export function NameDetailArticle({ name, locale }: { name: NameEntry; locale: L
         </section>
       )}
 
-      <InfoBlock title={text.qMeaning(name.transliteration)} body={name.explanations[locale]} />
-      <InfoBlock title={text.qDua(name.transliteration)} body={name.duaUsage[locale]} />
+      <InfoBlock title={text.qMeaning(localizedTransliteration)} body={name.explanations[locale]} />
+      <InfoBlock title={text.qDua(localizedTransliteration)} body={name.duaUsage[locale]} />
       {name.reflection && <InfoBlock title={text.reflection} body={name.reflection[locale]} />}
       {name.sourceNote && <InfoBlock title={text.source} body={name.sourceNote[locale]} subtle={name.source ? name.source[locale] : undefined} />}
 
       <nav className="grid gap-3 sm:grid-cols-2" aria-label={`${title} navigation`}>
         <Link className="btn-secondary" href={getLocalizedNamePath(locale, previous.slug)}>
-          {text.previous}: {previous.transliteration}
+          {text.previous}: {previous.transliteration[locale]}
         </Link>
         <Link className="btn-primary" href={getLocalizedNamePath(locale, next.slug)}>
-          {text.next}: {next.transliteration}
+          {text.next}: {next.transliteration[locale]}
         </Link>
       </nav>
 
@@ -175,7 +176,7 @@ export function NameDetailArticle({ name, locale }: { name: NameEntry; locale: L
               className="rounded-lg border border-white/10 bg-surface p-4 hover:border-gold/50 focus-ring"
             >
               <span className="block text-right font-arabic text-3xl" lang="ar" dir="rtl">{relatedName.arabic}</span>
-              <span className="mt-3 block font-semibold">{relatedName.transliteration}</span>
+              <span className="mt-3 block font-semibold">{relatedName.transliteration[locale]}</span>
               <span className="mt-1 block text-sm text-muted">{relatedName.meanings[locale]}</span>
             </Link>
           ))}

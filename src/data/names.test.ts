@@ -20,10 +20,10 @@ describe('names data', () => {
   it('fills required multilingual fields and review flags', () => {
     for (const name of names) {
       expect(name.arabic).toBeTruthy()
-      expect(name.transliteration).toBeTruthy()
-      expect(name.pronunciation).toBeTruthy()
       expect(typeof name.contentReviewRequired).toBe('boolean')
       for (const language of languages) {
+        expect(name.transliteration[language]).toBeTruthy()
+        expect(name.pronunciation[language]).toBeTruthy()
         expect(name.meanings[language]).toBeTruthy()
         expect(name.explanations[language]).toBeTruthy()
         expect(name.duaUsage[language]).toBeTruthy()

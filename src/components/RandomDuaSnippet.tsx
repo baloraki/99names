@@ -47,7 +47,7 @@ export function RandomDuaSnippetFallback({ locale }: { locale: Language }) {
       <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <h2 className="text-xl font-semibold text-primary">{text.title}</h2>
-          <p className="mt-1 text-sm text-gold">{name.transliteration} · {name.meanings[locale]}</p>
+          <p className="mt-1 text-sm text-gold">{name.transliteration[locale]} · {name.meanings[locale]}</p>
         </div>
         <p className="text-right font-arabic text-3xl leading-tight text-primary" lang="ar" dir="rtl">{name.arabic}</p>
       </div>
@@ -69,7 +69,7 @@ export async function RandomDuaSnippet({ locale }: { locale: Language }) {
       <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <h2 className="text-xl font-semibold text-primary">{text.title}</h2>
-          <p className="mt-1 text-sm text-gold">{name.transliteration} · {name.meanings[locale]}</p>
+          <p className="mt-1 text-sm text-gold">{name.transliteration[locale]} · {name.meanings[locale]}</p>
         </div>
         <p className="text-right font-arabic text-3xl leading-tight text-primary" lang="ar" dir="rtl">{name.arabic}</p>
       </div>

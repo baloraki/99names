@@ -9,7 +9,7 @@ describe('NameCard', () => {
   it('shows Arabic, transliteration, meaning and status', () => {
     render(<NameCard name={names[0]} language="de" learned favorite />)
     expect(screen.getByText(names[0].arabic)).toBeInTheDocument()
-    expect(screen.getByText(names[0].transliteration)).toBeInTheDocument()
+    expect(screen.getByText(names[0].transliteration.de)).toBeInTheDocument()
     expect(screen.getByText(names[0].meanings.de)).toBeInTheDocument()
     expect(screen.getByText('Gelernt')).toBeInTheDocument()
     expect(screen.getByText('Favorit')).toBeInTheDocument()
