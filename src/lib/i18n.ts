@@ -16,6 +16,13 @@ export type Dict = {
     main: string
     mobile: string
   }
+  share: {
+    button: string
+    title: string
+    text: string
+    copied: string
+    failed: string
+  }
   common: {
     back: string
     overview: string
@@ -156,6 +163,13 @@ const de: Dict = {
     aid: 'Lernhilfe',
     main: 'Hauptnavigation',
     mobile: 'Mobile Navigation',
+  },
+  share: {
+    button: 'Teilen',
+    title: 'Daily Husna',
+    text: 'Lerne die 99 Namen Allahs mit Daily Husna.',
+    copied: 'Kopiert',
+    failed: 'Fehler',
   },
   common: {
     back: 'Zurück',
@@ -298,6 +312,13 @@ const tr: Dict = {
     main: 'Ana gezinme',
     mobile: 'Mobil gezinme',
   },
+  share: {
+    button: 'Paylaş',
+    title: 'Daily Husna',
+    text: "Daily Husna ile Allah'ın 99 İsmini öğren.",
+    copied: 'Kopyalandı',
+    failed: 'Hata',
+  },
   common: {
     back: 'Geri',
     overview: 'Genel bakış',
@@ -438,6 +459,13 @@ const en: Dict = {
     aid: 'Learning aid',
     main: 'Main navigation',
     mobile: 'Mobile navigation',
+  },
+  share: {
+    button: 'Share',
+    title: 'Daily Husna',
+    text: 'Learn the 99 Names of Allah with Daily Husna.',
+    copied: 'Copied',
+    failed: 'Error',
   },
   common: {
     back: 'Back',

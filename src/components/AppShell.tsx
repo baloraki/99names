@@ -87,6 +87,7 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
                   </Link>
                 )
               })}
+              <ShareButton labels={dict.share} variant="desktop" />
             </nav>
             <LanguageSwitcher language={language} label={dict.settings.language} onChange={onLanguageChange} compact />
           </div>
@@ -104,7 +105,7 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
       </footer>
 
       <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-background/95 px-2 py-2 backdrop-blur md:hidden" aria-label={dict.nav.mobile}>
-        <div className="mx-auto grid max-w-md grid-cols-4 gap-1">
+        <div className="mx-auto grid max-w-md grid-cols-5 gap-1">
           {navItems.map((item) => {
             const active = isActive(item.href)
             return (
@@ -114,9 +115,69 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
               </Link>
             )
           })}
+          <ShareButton labels={dict.share} variant="mobile" />
         </div>
       </nav>
     </>
+  )
+}
+
+function ShareButton({
+  labels,
+  variant,
+}: {
+  labels: ReturnType<typeof getDict>['share']
+  variant: 'desktop' | 'mobile'
+}) {
+  const [status, setStatus] = useState<'idle' | 'copied' | 'failed'>('idle')
+
+  useEffect(() => {
+    if (status === 'idle') return
+    const timeout = window.setTimeout(() => setStatus('idle'), 2200)
+    return () => window.clearTimeout(timeout)
+  }, [status])
+
+  async function onShare() {
+    const url = window.location.href
+    const shareData: ShareData = {
+      title: document.title || labels.title,
+      text: labels.text,
+      url,
+    }
+
+    try {
+      if (typeof navigator.share === 'function' && (!navigator.canShare || navigator.canShare(shareData))) {
+        await navigator.share(shareData)
+        return
+      }
+    } catch (error) {
+      if (error instanceof DOMException && error.name === 'AbortError') return
+    }
+
+    try {
+      if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable')
+      await navigator.clipboard.writeText(url)
+      setStatus('copied')
+    } catch {
+      setStatus('failed')
+    }
+  }
+
+  const label = status === 'copied' ? labels.copied : status === 'failed' ? labels.failed : labels.button
+
+  if (variant === 'mobile') {
+    return (
+      <button type="button" className="mobile-nav" onClick={onShare} aria-label={labels.button}>
+        <span aria-hidden="true">↗</span>
+        <span aria-live="polite">{label}</span>
+      </button>
+    )
+  }
+
+  return (
+    <button type="button" className="nav-link" onClick={onShare} aria-label={labels.button}>
+      <span aria-live="polite">{label}</span>
+    </button>
   )
 }
 
