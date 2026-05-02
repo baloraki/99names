@@ -2,7 +2,6 @@ import Link from 'next/link'
 import type { ReactNode } from 'react'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { JsonLd } from '@/components/JsonLd'
-import { NameProgressActions } from '@/components/NameProgressActions'
 import { names } from '@/data/names'
 import { getLocalizedNamePath, getLocalizedNamesPath } from '@/lib/seo'
 import { breadcrumbJsonLd, nameLearningResourceJsonLd } from '@/lib/structuredData'
@@ -147,9 +146,6 @@ export function NameDetailArticle({ name, locale }: { name: NameEntry; locale: L
             <dd className="mt-1 font-arabic text-2xl text-primary" lang="ar" dir="rtl">{name.arabic}</dd>
           </div>
         </dl>
-        <div className="mt-6">
-          <NameProgressActions name={name} language={locale} />
-        </div>
       </header>
 
       {name.contentReviewRequired && (
