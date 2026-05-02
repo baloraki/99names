@@ -50,16 +50,6 @@ export function LearningProgressWidget({ locale, compact = false }: { locale: La
           <h2 id={`learning-progress-${locale}`} className="mt-2 text-2xl font-semibold">
             {text.title}
           </h2>
-          {!compact && (
-            <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-              <Link className="btn-primary" href={getLocalizedSeoPath('learn', locale)}>{text.continue}</Link>
-              {lastViewed && (
-                <Link className="btn-secondary" href={getLocalizedNamePath(locale, lastViewed.slug)}>
-                  {text.openLast}
-                </Link>
-              )}
-            </div>
-          )}
         </div>
         <ProgressSummary progress={progress} compact={compact} language={locale} />
       </div>
