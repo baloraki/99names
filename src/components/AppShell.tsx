@@ -180,6 +180,13 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
                   </Link>
                 )
               })}
+              <Link
+                href={settingsPath}
+                className={isActive(settingsPath) ? 'nav-link nav-link-active' : 'nav-link'}
+                aria-current={isActive(settingsPath) ? 'page' : undefined}
+              >
+                {dict.nav.settings}
+              </Link>
               <ShareButton labels={dict.share} variant="desktop" />
               <LanguageSwitcher language={language} label={dict.settings.language} onChange={onLanguageChange} compact />
             </nav>
