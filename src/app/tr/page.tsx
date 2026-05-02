@@ -4,7 +4,7 @@ import { Suspense } from 'react'
 import { JsonLd } from '@/components/JsonLd'
 import { LearningProgressWidget } from '@/components/LearningProgressWidget'
 import { RandomDuaSnippet, RandomDuaSnippetFallback } from '@/components/RandomDuaSnippet'
-import { firstName } from '@/data/names'
+import {firstName, names} from '@/data/names'
 import { buildMetadata, homeAlternates } from '@/lib/seo'
 import { organizationJsonLd, websiteJsonLd } from '@/lib/structuredData'
 
@@ -17,6 +17,8 @@ export const metadata: Metadata = buildMetadata({
 })
 
 export default function TurkishHomePage() {
+  const featured = names.slice(0, 5)
+
   return (
     <div lang="tr" className="space-y-10">
       <JsonLd data={[websiteJsonLd(), organizationJsonLd()]} />
@@ -46,9 +48,7 @@ export default function TurkishHomePage() {
         </section>
       </section>
 
-      <LearningProgressWidget locale="tr" />
-
-      <section className="max-w-4xl space-y-4">
+      <section className="max-w-6xl space-y-4">
         <h2 className="text-3xl font-semibold">Esmaül Hüsna nedir?</h2>
         <p className="leading-8 text-muted">
           Esmaül Hüsna, Allah’ın güzel isimleri için kullanılan yaygın ifadedir. Bu Türkçe rota, veri setindeki Türkçe anlamları gösterir ve her detay sayfasında kaynak notunu, dua kullanımını, tefekkürü ve inceleme uyarısını görünür tutar.
@@ -97,6 +97,21 @@ export default function TurkishHomePage() {
           <h2 className="text-xl font-semibold">Tefekkür</h2>
           <p className="mt-2 text-sm leading-6 text-muted">Anlamları karakter, tevazu ve günlük davranışla ilişkilendir.</p>
         </Link>
+      </section>
+
+      <LearningProgressWidget locale="tr" />
+
+      <section className="space-y-4">
+        <h2 className="text-3xl font-semibold">Önerilen isimler</h2>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+          {featured.map((name) => (
+              <Link key={name.id} href={`/names/${name.slug}`} className="rounded-lg border border-white/10 bg-surface p-4 hover:border-gold/50 focus-ring">
+                <span className="block text-right font-arabic text-3xl" lang="ar" dir="rtl">{name.arabic}</span>
+                <span className="mt-3 block font-semibold">{name.transliteration.tr}</span>
+                <span className="mt-1 block text-sm text-muted">{name.meanings.tr}</span>
+              </Link>
+          ))}
+        </div>
       </section>
     </div>
   )

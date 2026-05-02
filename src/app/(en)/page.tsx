@@ -53,30 +53,9 @@ export default function HomePage() {
         </section>
       </section>
 
-      <LearningProgressWidget locale="en" />
-
-      <section className="grid gap-4 md:grid-cols-4">
-        <Link className="rounded-lg border border-white/10 bg-surface p-5 hover:border-gold/50 focus-ring" href="/names">
-          <h2 className="text-xl font-semibold">99 names with meaning</h2>
-          <p className="mt-2 text-sm leading-6 text-muted">Arabic, transliteration, English, German, and Turkish meanings.</p>
-        </Link>
-        <Link className="rounded-lg border border-white/10 bg-surface p-5 hover:border-gold/50 focus-ring" href="/learn">
-          <h2 className="text-xl font-semibold">Learn daily</h2>
-          <p className="mt-2 text-sm leading-6 text-muted">Use a simple learning flow for memorization and review.</p>
-        </Link>
-        <Link className="rounded-lg border border-white/10 bg-surface p-5 hover:border-gold/50 focus-ring" href="/dua">
-          <h2 className="text-xl font-semibold">Dua usage</h2>
-          <p className="mt-2 text-sm leading-6 text-muted">Call upon Allah by His beautiful names with careful wording.</p>
-        </Link>
-        <Link className="rounded-lg border border-white/10 bg-surface p-5 hover:border-gold/50 focus-ring" href="/reflections">
-          <h2 className="text-xl font-semibold">Reflection</h2>
-          <p className="mt-2 text-sm leading-6 text-muted">Connect meanings with character, humility, and worship.</p>
-        </Link>
-      </section>
-
-      <section className="space-y-4">
+      <section className="max-w-6xl space-y-4">
         <h2 className="text-3xl font-semibold">What are the 99 Names of Allah?</h2>
-        <div className="max-w-4xl space-y-4 text-base leading-8 text-muted">
+        <div className="space-y-4 text-base leading-8 text-muted">
           <p>
             The 99 Names of Allah are commonly studied as Asma ul Husna, the beautiful names by which Muslims remember Allah and reflect on His perfect attributes. Learners often search for the 99 names of Allah with meaning so they can recognize the Arabic names, pronounce them carefully, and understand a short meaning in their own language.
           </p>
@@ -84,7 +63,7 @@ export default function HomePage() {
             The general concept of calling upon Allah by His beautiful names is rooted in Islamic teaching, and the report that Allah has ninety-nine names is authentically known. This app treats the exact common list with caution: it does not claim every individual entry is independently sahih-confirmed unless the dataset source note supports that claim.
           </p>
         </div>
-        <p className="max-w-4xl rounded-lg border border-gold/20 bg-surface p-4 text-sm leading-6 text-muted">
+        <p className="ounded-lg border border-gold/20 bg-surface p-4 text-sm leading-6 text-muted">
           Source-aware note: every name detail page keeps its source note visible. Entries marked with content review required should be checked by qualified reviewers before public religious reliance.
         </p>
         <div className="mt-5 space-y-5">
@@ -111,18 +90,40 @@ export default function HomePage() {
         <RandomDuaSnippet locale="en" />
       </Suspense>
 
+      <section className="grid gap-6 md:grid-cols-4">
+        <Link className="rounded-lg border border-white/10 bg-surface p-5 hover:border-gold/50 focus-ring" href="/names">
+          <h2 className="text-xl font-semibold">99 names with meaning</h2>
+          <p className="mt-2 text-sm leading-6 text-muted">Arabic, transliteration, English, German, and Turkish meanings.</p>
+        </Link>
+        <Link className="rounded-lg border border-white/10 bg-surface p-5 hover:border-gold/50 focus-ring" href="/learn">
+          <h2 className="text-xl font-semibold">Learn daily</h2>
+          <p className="mt-2 text-sm leading-6 text-muted">Use a simple learning flow for memorization and review.</p>
+        </Link>
+        <Link className="rounded-lg border border-white/10 bg-surface p-5 hover:border-gold/50 focus-ring" href="/dua">
+          <h2 className="text-xl font-semibold">Dua usage</h2>
+          <p className="mt-2 text-sm leading-6 text-muted">Call upon Allah by His beautiful names with careful wording.</p>
+        </Link>
+        <Link className="rounded-lg border border-white/10 bg-surface p-5 hover:border-gold/50 focus-ring" href="/reflections">
+          <h2 className="text-xl font-semibold">Reflection</h2>
+          <p className="mt-2 text-sm leading-6 text-muted">Connect meanings with character, humility, and worship.</p>
+        </Link>
+      </section>
+
+      <LearningProgressWidget locale="en" />
+
       <section className="space-y-4">
         <h2 className="text-3xl font-semibold">Featured names</h2>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
           {featured.map((name) => (
-            <Link key={name.id} href={`/names/${name.slug}`} className="rounded-lg border border-white/10 bg-surface p-4 hover:border-gold/50 focus-ring">
-              <span className="block text-right font-arabic text-3xl" lang="ar" dir="rtl">{name.arabic}</span>
-              <span className="mt-3 block font-semibold">{name.transliteration.en}</span>
-              <span className="mt-1 block text-sm text-muted">{name.meanings.en}</span>
-            </Link>
+              <Link key={name.id} href={`/names/${name.slug}`} className="rounded-lg border border-white/10 bg-surface p-4 hover:border-gold/50 focus-ring">
+                <span className="block text-right font-arabic text-3xl" lang="ar" dir="rtl">{name.arabic}</span>
+                <span className="mt-3 block font-semibold">{name.transliteration.en}</span>
+                <span className="mt-1 block text-sm text-muted">{name.meanings.en}</span>
+              </Link>
           ))}
         </div>
       </section>
+
     </div>
   )
 }

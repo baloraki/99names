@@ -42,7 +42,7 @@ export function RandomDuaSnippetFallback({ locale }: { locale: Language }) {
   const name = names[0]
 
   return (
-    <section className="max-w-4xl rounded-lg border border-gold/20 bg-surface p-5 md:p-6">
+    <section className="max-w-6xl rounded-lg border border-gold/20 bg-surface p-5 md:p-6">
       <p className="text-xs uppercase tracking-[0.2em] text-gold">{text.eyebrow}</p>
       <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
         <div>
@@ -64,7 +64,7 @@ export async function RandomDuaSnippet({ locale }: { locale: Language }) {
   const refreshNonce = `${name.slug}-${locale}`
 
   return (
-    <section className="max-w-4xl rounded-lg border border-gold/20 bg-surface p-5 md:p-6">
+    <section className="max-w-6xl rounded-lg border border-gold/20 bg-surface p-5 md:p-6">
       <p className="text-xs uppercase tracking-[0.2em] text-gold">{text.eyebrow}</p>
       <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
         <div>
