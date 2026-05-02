@@ -767,20 +767,20 @@ function BrowseMode({
                 <div className="flex items-stretch gap-2">
                   <Link
                     href={getLocalizedNamePath(language, name.slug)}
-                    className="flex flex-1 items-center gap-3 focus-ring rounded"
+                    className="flex flex-1 min-w-0 items-center gap-3 focus-ring rounded"
                   >
                     <span className="w-8 shrink-0 text-xs text-gold-muted tabular-nums">
                       #{name.id.toString().padStart(2, '0')}
                     </span>
-                    <span className="font-arabic text-2xl text-primary" lang="ar" dir="rtl">
+                    <span className="shrink-0 font-arabic text-2xl text-primary" lang="ar" dir="rtl">
                       {name.arabic}
                     </span>
-                    <span className="flex-1 truncate">
+                    <span className="flex-1 min-w-0 truncate">
                       <span className="block truncate text-sm font-semibold text-primary">{name.transliteration}</span>
                       <span className="block truncate text-xs text-muted">{name.meanings[language]}</span>
                     </span>
                   </Link>
-                  <div className="flex items-center gap-1.5">
+                  <div className="flex shrink-0 items-center gap-1.5">
                     {learned && (
                       <span className="rounded-full border border-success/40 bg-success/10 px-2 py-0.5 text-[10px] font-semibold text-success">
                         {dict.learn.listLearned}
