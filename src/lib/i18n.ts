@@ -159,7 +159,7 @@ const de: Dict = {
     home: 'Start',
     names: 'Namen',
     learn: 'Lernen',
-    settings: 'Setup',
+    settings: 'Einstellungen',
     aid: 'Lernhilfe',
     main: 'Hauptnavigation',
     mobile: 'Mobile Navigation',

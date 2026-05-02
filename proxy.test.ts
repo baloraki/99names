@@ -36,4 +36,39 @@ describe('proxy', () => {
     expect(response.status).toBe(200)
     expect(response.cookies.get('app_language')?.value).toBe('de')
   })
+
+  it('redirects settings to the preferred localized settings route', () => {
+    const request = new NextRequest('https://99names.app/settings', {
+      headers: { cookie: 'app_language=de' },
+    })
+
+    const response = proxy(request)
+
+    expect(response.status).toBeGreaterThanOrEqual(300)
+    expect(response.status).toBeLessThan(400)
+    expect(response.headers.get('location')).toBe('https://99names.app/de/einstellungen')
+    expect(response.cookies.get('app_language')?.value).toBe('de')
+  })
+
+  it('stores the locale when a localized settings route is opened directly', () => {
+    const request = new NextRequest('https://99names.app/tr/ayarlar')
+
+    const response = proxy(request)
+
+    expect(response.status).toBe(200)
+    expect(response.headers.get('location')).toBeNull()
+    expect(response.cookies.get('app_language')?.value).toBe('tr')
+  })
+
+  it('keeps English settings on the English route for English preference', () => {
+    const request = new NextRequest('https://99names.app/settings', {
+      headers: { cookie: 'app_language=en' },
+    })
+
+    const response = proxy(request)
+
+    expect(response.status).toBe(200)
+    expect(response.headers.get('location')).toBeNull()
+    expect(response.cookies.get('app_language')?.value).toBe('en')
+  })
 })

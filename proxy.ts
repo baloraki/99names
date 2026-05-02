@@ -36,6 +36,12 @@ function getLocalizedPathname(pathname: string, language: Language): string | nu
     return `/names/${slug}`
   }
 
+  if (pathname === '/settings' || pathname === '/de/einstellungen' || pathname === '/tr/ayarlar') {
+    if (language === 'de') return '/de/einstellungen'
+    if (language === 'tr') return '/tr/ayarlar'
+    return '/settings'
+  }
+
   const seoPages: Record<string, Record<Language, string>> = {
     '/asma-ul-husna': { en: '/asma-ul-husna', de: '/de/asma-ul-husna', tr: '/tr/esmaul-husna-nedir' },
     '/de/asma-ul-husna': { en: '/asma-ul-husna', de: '/de/asma-ul-husna', tr: '/tr/esmaul-husna-nedir' },
@@ -98,7 +104,7 @@ export function proxy(request: NextRequest) {
 
   const response = NextResponse.next()
 
-  if (preferredLanguage !== DEFAULT_LANGUAGE || pathname === '/' || pathname === '/names') {
+  if (preferredLanguage !== DEFAULT_LANGUAGE || pathname === '/' || pathname === '/names' || pathname === '/settings') {
     setLanguageCookie(response, preferredLanguage)
   }
 
@@ -110,4 +116,3 @@ export const config = {
 }
 
 export { getLocalizedPathname, getPreferredLanguage, getRouteLanguage }
-

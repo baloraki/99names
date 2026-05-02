@@ -3,6 +3,11 @@ import type { AnchorHTMLAttributes, ImgHTMLAttributes } from 'react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { AppShell } from './AppShell'
 
+const navigationMock = vi.hoisted(() => ({
+  pathname: '/de',
+  push: vi.fn(),
+}))
+
 vi.mock('next/image', () => ({
   default: ({ alt, priority, unoptimized, ...props }: ImgHTMLAttributes<HTMLImageElement> & { priority?: boolean; unoptimized?: boolean }) => {
     void priority
@@ -19,14 +24,18 @@ vi.mock('next/link', () => ({
 }))
 
 vi.mock('next/navigation', () => ({
-  usePathname: () => '/de',
-  useRouter: () => ({ push: vi.fn() }),
+  usePathname: () => navigationMock.pathname,
+  useRouter: () => ({ push: navigationMock.push }),
 }))
 
 const originalClipboard = navigator.clipboard
 const originalShare = navigator.share
 
 afterEach(() => {
+  navigationMock.pathname = '/de'
+  navigationMock.push.mockClear()
+  window.localStorage.clear()
+  document.cookie = 'app_language=; Max-Age=0; Path=/'
   Object.defineProperty(navigator, 'clipboard', {
     configurable: true,
     value: originalClipboard,
@@ -46,6 +55,44 @@ describe('AppShell', () => {
     )
 
     expect(screen.getAllByRole('combobox', { name: 'Sprache' })).toHaveLength(1)
+  })
+
+  it('links to the localized settings route in German navigation', () => {
+    navigationMock.pathname = '/de/einstellungen'
+
+    render(
+      <AppShell routeLanguage="de">
+        <div>Einstellungen</div>
+      </AppShell>,
+    )
+
+    expect(screen.getAllByRole('combobox', { name: 'Sprache' })).toHaveLength(1)
+    expect(screen.getAllByRole('link', { name: 'Namen' })).toHaveLength(2)
+    for (const link of screen.getAllByRole('link', { name: 'Namen' })) {
+      expect(link).toHaveAttribute('href', '/de/namen')
+    }
+    for (const link of screen.getAllByRole('link', { name: 'Einstellungen' })) {
+      expect(link).toHaveAttribute('href', '/de/einstellungen')
+    }
+  })
+
+  it('keeps English content routes bound to the English navigation when the route is English', () => {
+    navigationMock.pathname = '/names'
+
+    render(
+      <AppShell routeLanguage="en">
+        <div>Names</div>
+      </AppShell>,
+    )
+
+    expect(screen.getAllByRole('combobox', { name: 'Language' })).toHaveLength(1)
+    expect(screen.getAllByRole('link', { name: 'Names' })).toHaveLength(2)
+    for (const link of screen.getAllByRole('link', { name: 'Names' })) {
+      expect(link).toHaveAttribute('href', '/names')
+    }
+    for (const link of screen.getAllByRole('link', { name: 'Settings' })) {
+      expect(link).toHaveAttribute('href', '/settings')
+    }
   })
 
   it('copies the current page link when native sharing is unavailable', async () => {
