@@ -34,7 +34,7 @@ export default function GermanHomePage() {
             <Link className="btn-secondary" href="/de/lernen">Lernmodus öffnen</Link>
           </div>
         </div>
-        <section className="rounded-lg border border-gold/25 bg-[radial-gradient(circle_at_top,rgba(214,178,94,0.2),rgba(30,39,66,0.92)_60%)] p-6">
+        <section className="rounded-lg border border-gold/25 hero-gradient-surface p-6">
           <h2 className="text-sm uppercase tracking-[0.18em] text-gold">{firstName.meanings.de}</h2>
           <p className="mt-5 text-right font-arabic text-6xl leading-tight text-primary" lang="ar" dir="rtl">{firstName.arabic}</p>
           <p className="mt-6 text-2xl font-semibold">{firstName.transliteration}</p>

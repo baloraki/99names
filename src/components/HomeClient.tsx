@@ -33,7 +33,7 @@ export function HomeClient() {
             <Link className="btn-secondary" href="/learn">{dict.home.startLearning}</Link>
           </div>
         </div>
-        <div className="rounded-lg border border-gold/25 bg-[radial-gradient(circle_at_top,rgba(214,178,94,0.2),rgba(30,39,66,0.92)_60%)] p-6">
+        <div className="rounded-lg border border-gold/25 hero-gradient-surface p-6">
           <p className="text-sm text-gold">{dict.home.nameOfDay}</p>
           <p className="mt-5 text-right font-arabic text-6xl leading-tight text-primary">{name.arabic}</p>
           <h2 className="mt-6 text-2xl font-semibold">{name.transliteration}</h2>

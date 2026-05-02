@@ -12,6 +12,16 @@
   --color-muted: #b8b2a4;
   --color-danger: #f87171;
   --color-success: #86efac;
+  --color-hero-accent: rgba(214, 178, 94, 0.2);
+  --color-hero-surface-end: rgba(30, 39, 66, 0.92);
+  --color-hero-surface-end-strong: rgba(30, 39, 66, 0.94);
+  --color-btn-secondary-border: rgba(255, 255, 255, 0.14);
+  --color-btn-secondary-bg: rgba(255, 255, 255, 0.09);
+  --color-btn-secondary-border-hover: rgba(255, 255, 255, 0.22);
+  --color-btn-secondary-bg-hover: rgba(255, 255, 255, 0.14);
+  --color-btn-secondary-bg-active: rgba(255, 255, 255, 0.18);
+  --color-nav-link-active-bg: rgba(214, 178, 94, 0.18);
+  --color-nav-link-active-text: #f7e5ae;
 }
 
 * {
@@ -112,8 +122,8 @@ textarea {
 }
 
 .btn-secondary {
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid var(--color-btn-secondary-border);
+  background: var(--color-btn-secondary-bg);
   color: #f7f3e8;
 }
 
@@ -130,12 +140,12 @@ textarea {
 }
 
 .btn-secondary:hover {
-  border-color: rgba(255, 255, 255, 0.22);
-  background: rgba(255, 255, 255, 0.14);
+  border-color: var(--color-btn-secondary-border-hover);
+  background: var(--color-btn-secondary-bg-hover);
 }
 
 .btn-secondary:active {
-  background: rgba(255, 255, 255, 0.18);
+  background: var(--color-btn-secondary-bg-active);
 }
 
 .btn-primary:focus-visible,
@@ -161,8 +171,8 @@ textarea {
 
 .nav-link:hover,
 .nav-link-active {
-  background: rgba(214, 178, 94, 0.18);
-  color: #f7e5ae;
+  background: var(--color-nav-link-active-bg);
+  color: var(--color-nav-link-active-text);
 }
 
 .header-icon-link {
@@ -181,6 +191,14 @@ textarea {
 .header-icon-link-active {
   background: rgba(214, 178, 94, 0.16);
   color: #f0d98a;
+}
+
+.hero-gradient-surface {
+  background: radial-gradient(circle at top, var(--color-hero-accent), var(--color-hero-surface-end) 60%);
+}
+
+.flashcard-gradient-surface {
+  background: radial-gradient(circle at top, var(--color-hero-accent), var(--color-hero-surface-end-strong) 62%);
 }
 
 .app-header {
