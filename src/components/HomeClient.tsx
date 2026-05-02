@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { names } from '@/data/names'
 import { useAppState } from '@/hooks/useAppState'
 import { getDict } from '@/lib/i18n'
-import { isDue } from '@/lib/learningSchedule'
 import { ProgressSummary } from './ProgressSummary'
 
 function getNameOfDay() {
@@ -14,10 +13,9 @@ function getNameOfDay() {
 }
 
 export function HomeClient() {
-  const { language, progress, schedule } = useAppState()
+  const { language, progress } = useAppState()
   const dict = getDict(language)
   const name = getNameOfDay()
-  const due = isDue(schedule)
 
   return (
     <div className="space-y-8">
@@ -45,15 +43,8 @@ export function HomeClient() {
           </Link>
         </div>
       </section>
-      <div className="grid gap-4 md:grid-cols-[1fr_1fr]">
+      <div className="max-w-xl">
         <ProgressSummary progress={progress} language={language} />
-        <section className="rounded-lg border border-white/10 bg-surface p-4">
-          <p className="text-sm text-muted">{dict.home.schedule}</p>
-          <h2 className="mt-2 text-xl font-semibold">{due ? dict.home.due : dict.home.notDue}</h2>
-          <p className="mt-2 text-sm leading-6 text-muted">
-            {dict.home.scheduleNote}
-          </p>
-        </section>
       </div>
     </div>
   )

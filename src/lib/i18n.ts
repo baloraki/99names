@@ -49,10 +49,6 @@ export type Dict = {
     viewAll: string
     startLearning: string
     openDetails: string
-    schedule: string
-    due: string
-    notDue: string
-    scheduleNote: string
   }
   progress: {
     title: string
@@ -98,19 +94,13 @@ export type Dict = {
     eyebrow: string
     title: string
     language: string
-    schedule: string
-    scheduleBody: string
-    active: string
-    interval: string
-    every2h: string
-    every6h: string
-    daily: string
-    lastCompleted: string
-    nextDue: string
     localData: string
     localDataBody: (learned: number, favorites: number, lastViewed: string) => string
     resetProgress: string
     resetConfirm: string
+    pushReminderTitle: string
+    iosPushUnavailable: string
+    iosPwaNote: string
     notificationNote: string
   }
   contact: {
@@ -197,10 +187,6 @@ const de: Dict = {
     viewAll: 'Alle Namen ansehen',
     startLearning: 'Lernmodus starten',
     openDetails: 'Details öffnen',
-    schedule: 'Lernplan',
-    due: 'Eine Lerneinheit ist fällig.',
-    notDue: 'Kein fälliger Hinweis.',
-    scheduleNote: 'Hinweise erscheinen in der geöffneten App. Native Push-Erinnerungen können in den Einstellungen zusätzlich aktiviert werden.',
   },
   progress: {
     title: 'Fortschritt',
@@ -246,19 +232,13 @@ const de: Dict = {
     eyebrow: 'Setup',
     title: 'Einstellungen',
     language: 'Sprache',
-    schedule: 'Lernplan',
-    scheduleBody: 'Nur lokale Hinweise innerhalb der geöffneten App.',
-    active: 'Aktiv',
-    interval: 'Intervall',
-    every2h: 'Alle 2 Stunden',
-    every6h: 'Alle 6 Stunden',
-    daily: 'Täglich',
-    lastCompleted: 'Letzte Einheit',
-    nextDue: 'Nächster Hinweis',
     localData: 'Lokale Daten',
     localDataBody: (learned, favorites, lastViewed) => `Gelernt: ${learned}, Favoriten: ${favorites}, zuletzt angesehen: ${lastViewed}.`,
     resetProgress: 'Fortschritt zurücksetzen',
     resetConfirm: 'Fortschritt wirklich zurücksetzen?',
+    pushReminderTitle: 'Push-Erinnerungen',
+    iosPushUnavailable: 'Push-Erinnerungen sind auf iOS nicht verfügbar.',
+    iosPwaNote: 'iPhone-Hinweis: Daily Husna bleibt im Browser vollständig nutzbar. Push-Erinnerungen werden auf iOS hier nicht angeboten. Bitte nutze die App ohne Push-Benachrichtigungen.',
     notificationNote: 'Push-Erinnerungen sind optional und werden erst nach ausdrücklicher Aktivierung im Browser eingerichtet.',
   },
   contact: {
@@ -286,7 +266,7 @@ const de: Dict = {
   },
   privacy: {
     title: 'Datenschutz',
-    p1: 'Diese App speichert Sprache, Fortschritt, Favoriten, zuletzt angesehene Namen und Lernplan-Einstellungen lokal im Browser über localStorage.',
+    p1: 'Diese App speichert Sprache, Fortschritt, Favoriten, zuletzt angesehene Namen und den lokalen Status optionaler Push-Erinnerungen im Browser über localStorage.',
     p2: 'Es werden keine Tracking-Cookies verwendet. Push-Benachrichtigungen sind optional und müssen im Browser ausdrücklich aktiviert werden.',
     p3: 'Das Kontaktformular sendet die eingegebenen Daten an Web3Forms. Der öffentliche Web3Forms-Schlüssel ist im Client sichtbar.',
   },
@@ -345,10 +325,6 @@ const tr: Dict = {
     viewAll: 'Tüm isimleri gör',
     startLearning: 'Öğrenme modunu başlat',
     openDetails: 'Detayları aç',
-    schedule: 'Öğrenme planı',
-    due: 'Bir öğrenme oturumu zamanı geldi.',
-    notDue: 'Şu anda hatırlatma yok.',
-    scheduleNote: 'Hatırlatmalar uygulama açıkken görünür. Yerel push hatırlatmaları Ayarlar bölümünde ayrıca etkinleştirilebilir.',
   },
   progress: {
     title: 'İlerleme',
@@ -394,19 +370,13 @@ const tr: Dict = {
     eyebrow: 'Ayarlar',
     title: 'Ayarlar',
     language: 'Dil',
-    schedule: 'Öğrenme planı',
-    scheduleBody: 'Yalnızca açık uygulama içinde yerel hatırlatmalar.',
-    active: 'Aktif',
-    interval: 'Aralık',
-    every2h: 'Her 2 saatte bir',
-    every6h: 'Her 6 saatte bir',
-    daily: 'Günlük',
-    lastCompleted: 'Son oturum',
-    nextDue: 'Sonraki hatırlatma',
     localData: 'Yerel veriler',
     localDataBody: (learned, favorites, lastViewed) => `Öğrenilen: ${learned}, favoriler: ${favorites}, son görüntülenen: ${lastViewed}.`,
     resetProgress: 'İlerlemeyi sıfırla',
     resetConfirm: 'İlerleme gerçekten sıfırlansın mı?',
+    pushReminderTitle: 'Push hatırlatmaları',
+    iosPushUnavailable: 'Push hatırlatmaları iOS\'ta kullanılamaz.',
+    iosPwaNote: 'iPhone notu: Daily Husna tarayıcıda tamamen kullanılabilir. iOS\'ta push hatırlatmaları burada sunulmuyor. Lütfen uygulamayı push bildirimleri olmadan kullan.',
     notificationNote: 'Push hatırlatmaları isteğe bağlıdır ve yalnızca tarayıcıda açıkça etkinleştirildikten sonra kurulur.',
   },
   contact: {
@@ -434,7 +404,7 @@ const tr: Dict = {
   },
   privacy: {
     title: 'Gizlilik',
-    p1: 'Bu uygulama dili, ilerlemeyi, favorileri, son görüntülenen isimleri ve öğrenme planı ayarlarını tarayıcıda localStorage ile yerel olarak saklar.',
+    p1: 'Bu uygulama dili, ilerlemeyi, favorileri, son görüntülenen isimleri ve isteğe bağlı push hatırlatmalarının yerel durumunu tarayıcıda localStorage ile saklar.',
     p2: 'Takip çerezleri kullanılmaz. Push bildirimleri isteğe bağlıdır ve tarayıcıda açıkça etkinleştirilmelidir.',
     p3: 'İletişim formu girilen verileri Web3Forms hizmetine gönderir. Genel Web3Forms anahtarı istemci tarafında görünür.',
   },
@@ -493,10 +463,6 @@ const en: Dict = {
     viewAll: 'View all names',
     startLearning: 'Start learning mode',
     openDetails: 'Open details',
-    schedule: 'Learning schedule',
-    due: 'A learning session is due.',
-    notDue: 'No due reminder.',
-    scheduleNote: 'Hints appear while the app is open. Native push reminders can also be enabled in Settings.',
   },
   progress: {
     title: 'Progress',
@@ -542,19 +508,13 @@ const en: Dict = {
     eyebrow: 'Settings',
     title: 'Settings',
     language: 'Language',
-    schedule: 'Learning schedule',
-    scheduleBody: 'Local reminders only inside the open app.',
-    active: 'Active',
-    interval: 'Interval',
-    every2h: 'Every 2 hours',
-    every6h: 'Every 6 hours',
-    daily: 'Daily',
-    lastCompleted: 'Last session',
-    nextDue: 'Next reminder',
     localData: 'Local data',
     localDataBody: (learned, favorites, lastViewed) => `Learned: ${learned}, favorites: ${favorites}, last viewed: ${lastViewed}.`,
     resetProgress: 'Reset progress',
     resetConfirm: 'Really reset progress?',
+    pushReminderTitle: 'Push reminders',
+    iosPushUnavailable: 'Push reminders are not available on iOS.',
+    iosPwaNote: 'iPhone note: Daily Husna works fully in the browser. Push reminders are not offered on iOS here. Please use the app without push notifications.',
     notificationNote: 'Push reminders are optional and are created only after explicit browser activation.',
   },
   contact: {
@@ -582,7 +542,7 @@ const en: Dict = {
   },
   privacy: {
     title: 'Privacy',
-    p1: 'This app stores language, progress, favorites, last viewed names, and learning schedule settings locally in the browser using localStorage.',
+    p1: 'This app stores language, progress, favorites, last viewed names, and local state for optional push reminders in the browser using localStorage.',
     p2: 'No tracking cookies are used. Push notifications are optional and must be explicitly enabled in the browser.',
     p3: 'The contact form sends entered data to Web3Forms. The public Web3Forms key is visible in the client.',
   },

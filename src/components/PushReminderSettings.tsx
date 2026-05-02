@@ -22,7 +22,15 @@ const intervalLabels: Record<ReminderInterval, string> = {
   daily: 'Daily',
 }
 
-export function PushReminderSettings() {
+export function PushReminderSettings({
+  title,
+  iosPushUnavailable,
+  iosPwaNote,
+}: {
+  title: string
+  iosPushUnavailable: string
+  iosPwaNote: string
+}) {
   const [supportState, setSupportState] = useState<SupportState>('checking')
   const [permission, setPermission] = useState<NotificationPermission>('default')
   const [enabled, setEnabled] = useState(false)
@@ -33,21 +41,34 @@ export function PushReminderSettings() {
 
   const vapidPublicKey = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY ?? ''
   const supported = supportState === 'supported'
+  const pushUnavailableOnIOS = isIOS
+  const controlsDisabled = !supported || pushUnavailableOnIOS || isBusy
+  const statusLabel = enabled && !pushUnavailableOnIOS ? 'Enabled' : 'Disabled'
   const statusText = useMemo(() => {
     if (supportState === 'checking') return 'Checking support'
+    if (pushUnavailableOnIOS) return iosPushUnavailable
     return supported ? 'Push reminders are supported in this browser.' : 'Push reminders are not supported in this browser.'
-  }, [supportState, supported])
+  }, [iosPushUnavailable, pushUnavailableOnIOS, supportState, supported])
 
   useEffect(() => {
     queueMicrotask(() => {
       const pushSupported = isPushSupported()
+      const iosDevice = isIOSDevice()
       setSupportState(pushSupported ? 'supported' : 'unsupported')
-      setIsIOS(isIOSDevice())
-
-      if (!pushSupported) return
+      setIsIOS(iosDevice)
 
       const stored = readPersistedPushReminderSettings()
       setSelectedInterval(stored.interval)
+
+      if (iosDevice) {
+        setEnabled(false)
+        persistPushReminderSettings(false, stored.interval)
+        if (typeof Notification !== 'undefined') setPermission(Notification.permission)
+        return
+      }
+
+      if (!pushSupported) return
+
       setEnabled(stored.enabled)
       setPermission(Notification.permission)
 
@@ -62,6 +83,8 @@ export function PushReminderSettings() {
   }, [])
 
   async function onIntervalChange(event: ChangeEvent<HTMLSelectElement>) {
+    if (pushUnavailableOnIOS) return
+
     const nextInterval = event.target.value as ReminderInterval
     setSelectedInterval(nextInterval)
     persistPushReminderSettings(enabled, nextInterval)
@@ -89,7 +112,7 @@ export function PushReminderSettings() {
   }
 
   async function enableReminders() {
-    if (!supported || !vapidPublicKey) return
+    if (!supported || pushUnavailableOnIOS || !vapidPublicKey) return
 
     setIsBusy(true)
     setMessage(null)
@@ -121,6 +144,8 @@ export function PushReminderSettings() {
   }
 
   async function disableReminders() {
+    if (pushUnavailableOnIOS) return
+
     setIsBusy(true)
     setMessage(null)
 
@@ -170,26 +195,26 @@ export function PushReminderSettings() {
     <section className="rounded-lg border border-white/10 bg-surface p-5">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <h2 className="text-xl font-semibold">Native push reminders</h2>
+          <h2 className="text-xl font-semibold">{title}</h2>
           <p className="mt-1 text-sm text-muted">{statusText}</p>
           {isIOS ? (
             <p className="mt-2 rounded-lg border border-gold/30 bg-gold/10 p-3 text-sm text-gold-soft">
-              Web Push on iPhone requires the app to be added to the Home Screen.
+              {iosPwaNote}
             </p>
           ) : null}
         </div>
-        <p className={enabled ? 'text-sm font-semibold text-success' : 'text-sm font-semibold text-muted'}>
-          {enabled ? 'Enabled' : 'Disabled'}
+        <p className={enabled && !pushUnavailableOnIOS ? 'text-sm font-semibold text-success' : 'text-sm font-semibold text-muted'}>
+          {statusLabel}
         </p>
       </div>
 
-      <label className="mt-5 block text-sm text-muted" htmlFor="push-reminder-interval">Reminder interval</label>
+      <label className={pushUnavailableOnIOS ? 'mt-5 block text-sm text-muted opacity-50' : 'mt-5 block text-sm text-muted'} htmlFor="push-reminder-interval">Reminder interval</label>
       <select
         id="push-reminder-interval"
-        className="mt-2 field"
+        className={pushUnavailableOnIOS ? 'mt-2 field opacity-50' : 'mt-2 field'}
         value={selectedInterval}
         onChange={onIntervalChange}
-        disabled={!supported || isBusy}
+        disabled={controlsDisabled}
       >
         <option value="2h" disabled>{intervalLabels['2h']}</option>
         <option value="6h" disabled>{intervalLabels['6h']}</option>
@@ -197,18 +222,18 @@ export function PushReminderSettings() {
       </select>
 
       <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-        <button className="btn-primary" type="button" onClick={enableReminders} disabled={!supported || !vapidPublicKey || isBusy || enabled}>
+        <button className="btn-primary disabled:opacity-50" type="button" onClick={enableReminders} disabled={!supported || pushUnavailableOnIOS || !vapidPublicKey || isBusy || enabled}>
           {isBusy && !enabled ? 'Enabling...' : 'Enable reminders'}
         </button>
-        <button className="btn-secondary" type="button" onClick={disableReminders} disabled={!supported || isBusy || !enabled}>
+        <button className="btn-secondary disabled:opacity-50" type="button" onClick={disableReminders} disabled={!supported || pushUnavailableOnIOS || isBusy || !enabled}>
           {isBusy && enabled ? 'Disabling...' : 'Disable reminders'}
         </button>
       </div>
 
-      {!vapidPublicKey && supported ? (
+      {!vapidPublicKey && supported && !pushUnavailableOnIOS ? (
         <p className="mt-4 text-sm text-danger">The VAPID public key is not configured.</p>
       ) : null}
-      {permission === 'denied' ? (
+      {permission === 'denied' && !pushUnavailableOnIOS ? (
         <p className="mt-4 text-sm text-danger">Notification permission is denied. Change the browser permission to enable reminders.</p>
       ) : null}
       {message ? <p className="mt-4 text-sm text-muted">{message}</p> : null}

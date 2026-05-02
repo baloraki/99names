@@ -2,9 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import type { Language } from '@/types/language'
-import type { LearningScheduleSettings } from '@/types/learningSchedule'
 import type { ProgressState } from '@/types/progress'
-import { markCompleted } from '@/lib/learningSchedule'
 import { markLearned, toggleFavorite, unmarkLearned } from '@/lib/progress'
 import { storage } from '@/lib/storage'
 
@@ -14,23 +12,16 @@ const initialProgress: ProgressState = {
   updatedAt: '',
 }
 
-const initialSchedule: LearningScheduleSettings = {
-  enabled: false,
-  interval: 'daily',
-}
-
 export function useAppState() {
   const [ready, setReady] = useState(false)
   const [language, setLanguageState] = useState<Language>('en')
   const [progress, setProgressState] = useState<ProgressState>(initialProgress)
-  const [schedule, setScheduleState] = useState<LearningScheduleSettings>(initialSchedule)
 
   useEffect(() => {
     queueMicrotask(() => {
       const storedLanguage = storage.getLanguage()
       setLanguageState(storedLanguage)
       setProgressState(storage.getProgress())
-      setScheduleState(storage.getSchedule())
       document.documentElement.lang = storedLanguage
       setReady(true)
     })
@@ -43,20 +34,10 @@ export function useAppState() {
       document.documentElement.lang = next
       window.dispatchEvent(new CustomEvent('app-language-change', { detail: next }))
     },
-    setSchedule(next: LearningScheduleSettings) {
-      setScheduleState(next)
-      storage.setSchedule(next)
-    },
     markLearned(id: number, slug?: string) {
       setProgressState((current) => {
         const next = { ...markLearned(current, id), lastLearnedSlug: slug ?? current.lastLearnedSlug }
         storage.setProgress(next)
-        return next
-      })
-      setScheduleState((current) => {
-        if (!current.enabled) return current
-        const next = markCompleted(current)
-        storage.setSchedule(next)
         return next
       })
     },
@@ -88,5 +69,5 @@ export function useAppState() {
     },
   }), [])
 
-  return { ready, language, progress, schedule, actions }
+  return { ready, language, progress, actions }
 }
