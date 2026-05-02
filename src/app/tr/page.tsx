@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { Suspense } from 'react'
 import { JsonLd } from '@/components/JsonLd'
 import { LearningProgressWidget } from '@/components/LearningProgressWidget'
-import {firstName} from '@/data/names'
+import { RandomDuaSnippet, RandomDuaSnippetFallback } from '@/components/RandomDuaSnippet'
+import { firstName } from '@/data/names'
 import { buildMetadata, homeAlternates } from '@/lib/seo'
 import { organizationJsonLd, websiteJsonLd } from '@/lib/structuredData'
 
@@ -46,8 +48,14 @@ export default function TurkishHomePage() {
 
       <LearningProgressWidget locale="tr" />
 
-      <section className="relative overflow-hidden rounded-2xl border border-gold/30 bg-[radial-gradient(circle_at_top,rgba(214,178,94,0.14),rgba(18,18,18,0.97)_60%)] p-6 md:p-8">
-        <p className="text-sm uppercase tracking-[0.22em] text-gold">Esmâü&apos;l-Hüsnâ</p>
+      <section className="max-w-4xl space-y-4">
+        <h2 className="text-3xl font-semibold">Esmaül Hüsna nedir?</h2>
+        <p className="leading-8 text-muted">
+          Esmaül Hüsna, Allah’ın güzel isimleri için kullanılan yaygın ifadedir. Bu Türkçe rota, veri setindeki Türkçe anlamları gösterir ve her detay sayfasında kaynak notunu, dua kullanımını, tefekkürü ve inceleme uyarısını görünür tutar.
+        </p>
+        <p className="rounded-lg border border-gold/20 bg-surface p-4 text-sm leading-6 text-muted">
+          Not: Bu uygulama bir öğrenme yardımcısıdır. Dini içerik kamuya açık kullanımdan önce uzman kişilerce incelenmelidir.
+        </p>
         <div className="mt-5 space-y-5">
           <article className="rounded-xl border border-white/10 bg-black/25 p-4">
             <p className="text-right font-arabic text-3xl leading-relaxed text-primary" lang="ar" dir="rtl">اللَّهُ لاَ إِلَهَ إِلاَّ هُ</p>
@@ -68,15 +76,9 @@ export default function TurkishHomePage() {
         </div>
       </section>
 
-      <section className="max-w-4xl space-y-4">
-        <h2 className="text-3xl font-semibold">Esmaül Hüsna nedir?</h2>
-        <p className="leading-8 text-muted">
-          Esmaül Hüsna, Allah’ın güzel isimleri için kullanılan yaygın ifadedir. Bu Türkçe rota, veri setindeki Türkçe anlamları gösterir ve her detay sayfasında kaynak notunu, dua kullanımını, tefekkürü ve inceleme uyarısını görünür tutar.
-        </p>
-        <p className="rounded-lg border border-gold/20 bg-surface p-4 text-sm leading-6 text-muted">
-          Not: Bu uygulama bir öğrenme yardımcısıdır. Dini içerik kamuya açık kullanımdan önce uzman kişilerce incelenmelidir.
-        </p>
-      </section>
+      <Suspense fallback={<RandomDuaSnippetFallback locale="tr" />}>
+        <RandomDuaSnippet locale="tr" />
+      </Suspense>
 
       <section className="grid gap-4 md:grid-cols-4">
         <Link className="rounded-lg border border-white/10 bg-surface p-5 hover:border-gold/50 focus-ring" href="/tr/esmaul-husna">

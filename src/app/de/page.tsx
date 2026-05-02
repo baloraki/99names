@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { Suspense } from 'react'
 import { JsonLd } from '@/components/JsonLd'
 import { LearningProgressWidget } from '@/components/LearningProgressWidget'
-import {firstName, names} from '@/data/names'
+import { RandomDuaSnippet, RandomDuaSnippetFallback } from '@/components/RandomDuaSnippet'
+import { firstName } from '@/data/names'
 import { buildMetadata, homeAlternates } from '@/lib/seo'
 import { organizationJsonLd, websiteJsonLd } from '@/lib/structuredData'
 
@@ -46,8 +48,15 @@ export default function GermanHomePage() {
 
       <LearningProgressWidget locale="de" />
 
-      <section className="relative overflow-hidden rounded-2xl border border-gold/30 bg-[radial-gradient(circle_at_top,rgba(214,178,94,0.14),rgba(18,18,18,0.97)_60%)] p-6 md:p-8">
-        <p className="text-sm uppercase tracking-[0.22em] text-gold">Asma ul-Husna</p>
+
+      <section className="max-w-4xl space-y-4">
+        <h2 className="text-3xl font-semibold">Was sind die 99 Namen Allahs?</h2>
+        <p className="leading-8 text-muted">
+          Muslime lernen die schönen Namen Allahs, um Allah mit Ehrfurcht zu gedenken, die Bedeutungen zu verstehen und Dua bewusster zu formulieren. Diese deutschsprachige Route zeigt die verfügbaren deutschen Bedeutungen aus dem Datensatz und verweist auf Detailseiten mit Quellenhinweis und Review-Markierung.
+        </p>
+        <p className="rounded-lg border border-gold/20 bg-surface p-4 text-sm leading-6 text-muted">
+          Hinweis: Die App nutzt eine verbreitete Lernreihenfolge. Religiöse Inhalte sollten vor öffentlicher Verwendung fachkundig geprüft werden.
+        </p>
         <div className="mt-5 space-y-5">
           <article className="rounded-xl border border-white/10 bg-black/25 p-4">
             <p className="text-right font-arabic text-3xl leading-relaxed text-primary" lang="ar" dir="rtl">اللَّهُ لاَ إِلَهَ إِلاَّ هُ</p>
@@ -68,15 +77,9 @@ export default function GermanHomePage() {
         </div>
       </section>
 
-      <section className="max-w-4xl space-y-4">
-        <h2 className="text-3xl font-semibold">Was sind die 99 Namen Allahs?</h2>
-        <p className="leading-8 text-muted">
-          Muslime lernen die schönen Namen Allahs, um Allah mit Ehrfurcht zu gedenken, die Bedeutungen zu verstehen und Dua bewusster zu formulieren. Diese deutschsprachige Route zeigt die verfügbaren deutschen Bedeutungen aus dem Datensatz und verweist auf Detailseiten mit Quellenhinweis und Review-Markierung.
-        </p>
-        <p className="rounded-lg border border-gold/20 bg-surface p-4 text-sm leading-6 text-muted">
-          Hinweis: Die App nutzt eine verbreitete Lernreihenfolge. Religiöse Inhalte sollten vor öffentlicher Verwendung fachkundig geprüft werden.
-        </p>
-      </section>
+      <Suspense fallback={<RandomDuaSnippetFallback locale="de" />}>
+        <RandomDuaSnippet locale="de" />
+      </Suspense>
 
       <section className="grid gap-4 md:grid-cols-4">
         <Link className="rounded-lg border border-white/10 bg-surface p-5 hover:border-gold/50 focus-ring" href="/de/namen">
