@@ -9,6 +9,32 @@ import {
   pickPreferredLanguage,
 } from '@/lib/languagePreference'
 
+const CONTENT_SECURITY_POLICY = [
+  "default-src 'self'",
+  "base-uri 'self'",
+  "object-src 'none'",
+  "frame-ancestors 'none'",
+  "img-src 'self' data: blob:",
+  "font-src 'self' data:",
+  "style-src 'self' 'unsafe-inline'",
+  "script-src 'self' 'unsafe-inline'",
+  "connect-src 'self' https://api.web3forms.com https://vitals.vercel-insights.com",
+  "manifest-src 'self'",
+  "worker-src 'self' blob:",
+  "form-action 'self'",
+  "require-trusted-types-for 'script'",
+  'trusted-types nextjs-bundler',
+  'upgrade-insecure-requests',
+].join('; ')
+
+function applySecurityHeaders(response: NextResponse): NextResponse {
+  response.headers.set('Content-Security-Policy', CONTENT_SECURITY_POLICY)
+  response.headers.set('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload')
+  response.headers.set('Cross-Origin-Opener-Policy', 'same-origin')
+  response.headers.set('X-Frame-Options', 'DENY')
+  return response
+}
+
 function getRouteLanguage(pathname: string): Language | null {
   if (pathname === '/de' || pathname.startsWith('/de/')) return 'de'
   if (pathname === '/tr' || pathname.startsWith('/tr/')) return 'tr'
@@ -109,7 +135,7 @@ export function proxy(request: NextRequest) {
   const routeLanguage = getRouteLanguage(pathname)
 
   if (routeLanguage) {
-    return setLanguageCookie(NextResponse.next(), routeLanguage)
+    return applySecurityHeaders(setLanguageCookie(NextResponse.next(), routeLanguage))
   }
 
   const preferredLanguage = getPreferredLanguage(request)
@@ -118,7 +144,7 @@ export function proxy(request: NextRequest) {
   if (localizedPathname && localizedPathname !== pathname) {
     const redirectUrl = request.nextUrl.clone()
     redirectUrl.pathname = localizedPathname
-    return setLanguageCookie(NextResponse.redirect(redirectUrl), preferredLanguage)
+    return applySecurityHeaders(setLanguageCookie(NextResponse.redirect(redirectUrl), preferredLanguage))
   }
 
   const response = NextResponse.next()
@@ -127,7 +153,7 @@ export function proxy(request: NextRequest) {
     setLanguageCookie(response, preferredLanguage)
   }
 
-  return response
+  return applySecurityHeaders(response)
 }
 
 export const config = {
