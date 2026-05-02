@@ -92,8 +92,8 @@ describe('name metadata', () => {
   it('builds a canonical title and alternates for English detail pages', () => {
     const metadata = getNamePageMetadata(names[0], 'en')
 
-    expect(metadata.title).toBe('Ar-Rahman Meaning – One of the Beautiful Names of Allah')
-    expect(metadata.description).toContain('Ar-Rahman means')
+    expect(metadata.title).toBe(`${names[0].transliteration.en} Meaning – One of the Beautiful Names of Allah`)
+    expect(metadata.description).toContain(`${names[0].transliteration.en} means`)
     expect(metadata.alternates?.canonical).toBe('/names/ar-rahman')
     expect(metadata.alternates?.languages).toMatchObject({
       de: '/de/namen/ar-rahman',
@@ -136,7 +136,7 @@ describe('structured data', () => {
     const parsed = JSON.parse(serialized)
 
     expect(parsed['@type']).toBe('LearningResource')
-    expect(parsed.name).toBe('Ar-Rahman Meaning')
+    expect(parsed.name).toBe(`${names[0].transliteration.en} Meaning`)
     expect(parsed.mainEntityOfPage).toBe(absoluteUrl('/names/ar-rahman'))
     expect(serialized).not.toContain('undefined')
     expect(serialized).not.toContain(':null')

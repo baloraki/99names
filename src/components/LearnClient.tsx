@@ -552,14 +552,14 @@ function CardMode({
                 <span aria-hidden="true">🔊</span>
               </button>
               <div className="text-right">
-                <p className="text-2xl font-semibold italic">{name.transliteration}</p>
-                <p className="mt-0.5 text-sm text-gold-muted tracking-widest">{name.pronunciation}</p>
+                <p className="text-2xl font-semibold italic">{name.transliteration[language]}</p>
+                <p className="mt-0.5 text-sm text-gold-muted tracking-widest">{name.pronunciation[language]}</p>
               </div>
             </div>
           </>
         ) : (
           <>
-            <p className="mt-2 text-2xl font-semibold">{name.transliteration}</p>
+            <p className="mt-2 text-2xl font-semibold">{name.transliteration[language]}</p>
             <p className="mt-1.5 text-lg font-medium text-gold">{name.meanings[language]}</p>
           </>
         )}
@@ -580,12 +580,12 @@ function CardMode({
                 <p className="text-right font-arabic text-7xl leading-tight tracking-wide" lang="ar" dir="rtl">
                   {name.arabic}
                 </p>
-                <p className="mt-1.5 text-right text-sm text-gold-muted tracking-widest">{name.pronunciation}</p>
+                <p className="mt-1.5 text-right text-sm text-gold-muted tracking-widest">{name.pronunciation[language]}</p>
                 <p className="mt-3 leading-7 text-muted text-sm">{name.explanations[language]}</p>
               </div>
             ) : (
               <div>
-                <p className="text-2xl font-semibold">{name.transliteration}</p>
+                <p className="text-2xl font-semibold">{name.transliteration[language]}</p>
                 <p className="mt-1.5 text-lg font-medium text-gold">{name.meanings[language]}</p>
                 {language !== 'en' && (
                   <p className="mt-0.5 text-xs uppercase tracking-[0.18em] text-gold-muted/70">
@@ -695,7 +695,7 @@ function CardMode({
                 <p className="mt-1.5 text-right font-arabic text-2xl leading-none text-primary/80" lang="ar" dir="rtl">
                   {n.arabic}
                 </p>
-                <p className="mt-1.5 text-xs font-semibold text-muted">{n.transliteration}</p>
+                <p className="mt-1.5 text-xs font-semibold text-muted">{n.transliteration[language]}</p>
               </li>
             ))}
           </ul>
@@ -776,7 +776,7 @@ function BrowseMode({
                       {name.arabic}
                     </span>
                     <span className="flex-1 min-w-0 truncate">
-                      <span className="block truncate text-sm font-semibold text-primary">{name.transliteration}</span>
+                      <span className="block truncate text-sm font-semibold text-primary">{name.transliteration[language]}</span>
                       <span className="block truncate text-xs text-muted">{name.meanings[language]}</span>
                     </span>
                   </Link>
