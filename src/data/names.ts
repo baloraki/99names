@@ -6,7 +6,7 @@ export const firstName: NameEntry = {
     "arabic": "الله",
     "transliteration": {
         "de": "Allah",
-        "tr": "Allah",
+        "tr": "Allah (C.C.)",
         "en": "Allah"
     },
     "pronunciation": {
@@ -62,7 +62,7 @@ export const names: NameEntry[] = [
         "arabic": "الرَّحْمَن",
         "transliteration": {
             "de": "Ar-Rahmān",
-            "tr": "Ar-Rahmān",
+            "tr": "Er-Rahmân",
             "en": "Ar-Rahmān"
 
         },
@@ -110,7 +110,7 @@ export const names: NameEntry[] = [
         "arabic": "الرَّحِيم",
         "transliteration": {
             "de": "Ar-Rahīm",
-            "tr": "Ar-Rahīm",
+            "tr": "Er-Rahîm",
             "en": "Ar-Rahīm"
 
         },
@@ -158,7 +158,7 @@ export const names: NameEntry[] = [
         "arabic": "المَلِك",
         "transliteration": {
             "de": "Al-Malik",
-            "tr": "Al-Malik",
+            "tr": "El-Melik",
             "en": "Al-Malik"
 
         },
@@ -206,7 +206,7 @@ export const names: NameEntry[] = [
         "arabic": "القُدُّوس",
         "transliteration": {
             "de": "Al-Quddūs",
-            "tr": "Al-Quddūs",
+            "tr": "El-Kuddûs",
             "en": "Al-Quddūs"
 
         },
@@ -254,7 +254,7 @@ export const names: NameEntry[] = [
         "arabic": "السَّلَام",
         "transliteration": {
             "de": "As-Salām",
-            "tr": "As-Salām",
+            "tr": "Es-Selâm",
             "en": "As-Salām"
 
         },
@@ -302,7 +302,7 @@ export const names: NameEntry[] = [
         "arabic": "المُؤْمِن",
         "transliteration": {
             "de": "Al-Mu'min",
-            "tr": "Al-Mu'min",
+            "tr": "El-Mü'min",
             "en": "Al-Mu'min"
 
         },
@@ -350,7 +350,7 @@ export const names: NameEntry[] = [
         "arabic": "المُهَيْمِن",
         "transliteration": {
             "de": "Al-Muhaymin",
-            "tr": "Al-Muhaymin",
+            "tr": "El-Müheymin",
             "en": "Al-Muhaymin"
 
         },
@@ -398,7 +398,7 @@ export const names: NameEntry[] = [
         "arabic": "العَزِيز",
         "transliteration": {
             "de": "Al-Azīz",
-            "tr": "Al-Azīz",
+            "tr": "El-Azîz",
             "en": "Al-Azīz"
 
         },
@@ -446,7 +446,7 @@ export const names: NameEntry[] = [
         "arabic": "الجَبَّار",
         "transliteration": {
             "de": "Al-Jabbār",
-            "tr": "Al-Jabbār",
+            "tr": "El-Cebbâr",
             "en": "Al-Jabbār"
 
         },
@@ -494,7 +494,7 @@ export const names: NameEntry[] = [
         "arabic": "المُتَكَبِّر",
         "transliteration": {
             "de": "Al-Mutakabbir",
-            "tr": "Al-Mutakabbir",
+            "tr": "El-Mütekebbir",
             "en": "Al-Mutakabbir"
 
         },
@@ -542,7 +542,7 @@ export const names: NameEntry[] = [
         "arabic": "الْخَالِق",
         "transliteration": {
             "de": "Al-Khāliq",
-            "tr": "Al-Khāliq",
+            "tr": "El-Hâlık",
             "en": "Al-Khāliq"
 
         },
@@ -590,7 +590,7 @@ export const names: NameEntry[] = [
         "arabic": "البَارِئ",
         "transliteration": {
             "de": "Al-Bāri'",
-            "tr": "Al-Bāri'",
+            "tr": "El-Bâri",
             "en": "Al-Bāri'"
 
         },
@@ -638,7 +638,7 @@ export const names: NameEntry[] = [
         "arabic": "المُصَوِّر",
         "transliteration": {
             "de": "Al-Musawwir",
-            "tr": "Al-Musawwir",
+            "tr": "El-Musavvir",
             "en": "Al-Musawwir"
 
         },
@@ -686,7 +686,7 @@ export const names: NameEntry[] = [
         "arabic": "الغَفَّار",
         "transliteration": {
             "de": "Al-Ghaffār",
-            "tr": "Al-Ghaffār",
+            "tr": "El-Gaffâr",
             "en": "Al-Ghaffār"
 
         },
@@ -734,7 +734,7 @@ export const names: NameEntry[] = [
         "arabic": "القَهَّار",
         "transliteration": {
             "de": "Al-Qahhār",
-            "tr": "Al-Qahhār",
+            "tr": "El-Kahhâr",
             "en": "Al-Qahhār"
 
         },
@@ -782,7 +782,7 @@ export const names: NameEntry[] = [
         "arabic": "الوَهَّاب",
         "transliteration": {
             "de": "Al-Wahhāb",
-            "tr": "Al-Wahhāb",
+            "tr": "El-Vehhâb",
             "en": "Al-Wahhāb"
 
         },
@@ -830,7 +830,7 @@ export const names: NameEntry[] = [
         "arabic": "الرَّزَّاق",
         "transliteration": {
             "de": "Ar-Razzāq",
-            "tr": "Ar-Razzāq",
+            "tr": "Er-Rezzâk",
             "en": "Ar-Razzāq"
 
         },
@@ -878,7 +878,7 @@ export const names: NameEntry[] = [
         "arabic": "الفَتَّاح",
         "transliteration": {
             "de": "Al-Fattāḥ",
-            "tr": "Al-Fattāḥ",
+            "tr": "El-Fettâh",
             "en": "Al-Fattāḥ"
 
         },
@@ -926,7 +926,7 @@ export const names: NameEntry[] = [
         "arabic": "العَلِيم",
         "transliteration": {
             "de": "Al-Alīm",
-            "tr": "Al-Alīm",
+            "tr": "El-Alîm",
             "en": "Al-Alīm"
 
         },
@@ -974,7 +974,7 @@ export const names: NameEntry[] = [
         "arabic": "القَابِض",
         "transliteration": {
             "de": "Al-Qābiḍ",
-            "tr": "Al-Qābiḍ",
+            "tr": "El-Kâbıd",
             "en": "Al-Qābiḍ"
 
         },
@@ -1022,7 +1022,7 @@ export const names: NameEntry[] = [
         "arabic": "البَاسِط",
         "transliteration": {
             "de": "Al-Bāsiṭ",
-            "tr": "Al-Bāsiṭ",
+            "tr": "El-Bâsıt",
             "en": "Al-Bāsiṭ"
 
         },
@@ -1070,7 +1070,7 @@ export const names: NameEntry[] = [
         "arabic": "الخَافِض",
         "transliteration": {
             "de": "Al-Khāfiḍ",
-            "tr": "Al-Khāfiḍ",
+            "tr": "El-Hâfıd",
             "en": "Al-Khāfiḍ"
 
         },
@@ -1118,7 +1118,7 @@ export const names: NameEntry[] = [
         "arabic": "الرَّافِع",
         "transliteration": {
             "de": "Ar-Rāfi‘",
-            "tr": "Ar-Rāfi‘",
+            "tr": "Er-Râfi",
             "en": "Ar-Rāfi‘"
 
         },
@@ -1166,7 +1166,7 @@ export const names: NameEntry[] = [
         "arabic": "المُعِزّ",
         "transliteration": {
             "de": "Al-Mu‘izz",
-            "tr": "Al-Mu‘izz",
+            "tr": "El-Mu'ız",
             "en": "Al-Mu‘izz"
 
         },
@@ -1214,7 +1214,7 @@ export const names: NameEntry[] = [
         "arabic": "المُذِلّ",
         "transliteration": {
             "de": "Al-Mudhill",
-            "tr": "Al-Mudhill",
+            "tr": "El-Müzil",
             "en": "Al-Mudhill"
 
         },
@@ -1262,7 +1262,7 @@ export const names: NameEntry[] = [
         "arabic": "السَّمِيع",
         "transliteration": {
             "de": "As-Samī‘",
-            "tr": "As-Samī‘",
+            "tr": "Es-Semi",
             "en": "As-Samī‘"
 
         },
@@ -1310,7 +1310,7 @@ export const names: NameEntry[] = [
         "arabic": "البَصِير",
         "transliteration": {
             "de": "Al-Baṣīr",
-            "tr": "Al-Baṣīr",
+            "tr": "El-Basîr",
             "en": "Al-Baṣīr"
 
         },
@@ -1358,7 +1358,7 @@ export const names: NameEntry[] = [
         "arabic": "الحَكَم",
         "transliteration": {
             "de": "Al-Ḥakam",
-            "tr": "Al-Ḥakam",
+            "tr": "El-Hakem",
             "en": "Al-Ḥakam"
 
         },
@@ -1406,7 +1406,7 @@ export const names: NameEntry[] = [
         "arabic": "العَدْل",
         "transliteration": {
             "de": "Al-Adl",
-            "tr": "Al-Adl",
+            "tr": "El-Adl",
             "en": "Al-Adl"
 
         },
@@ -1454,7 +1454,7 @@ export const names: NameEntry[] = [
         "arabic": "اللَّطِيف",
         "transliteration": {
             "de": "Al-Laṭīf",
-            "tr": "Al-Laṭīf",
+            "tr": "El-Latîf",
             "en": "Al-Laṭīf"
 
         },
@@ -1502,7 +1502,7 @@ export const names: NameEntry[] = [
         "arabic": "الخَبِير",
         "transliteration": {
             "de": "Al-Khabīr",
-            "tr": "Al-Khabīr",
+            "tr": "El-Habîr",
             "en": "Al-Khabīr"
 
         },
@@ -1550,7 +1550,7 @@ export const names: NameEntry[] = [
         "arabic": "الحَلِيم",
         "transliteration": {
             "de": "Al-Ḥalīm",
-            "tr": "Al-Ḥalīm",
+            "tr": "El-Halîm",
             "en": "Al-Ḥalīm"
 
         },
@@ -1598,7 +1598,7 @@ export const names: NameEntry[] = [
         "arabic": "العَظِيم",
         "transliteration": {
             "de": "Al-Aẓīm",
-            "tr": "Al-Aẓīm",
+            "tr": "El-Azîm",
             "en": "Al-Aẓīm"
 
         },
@@ -1646,7 +1646,7 @@ export const names: NameEntry[] = [
         "arabic": "الغَفُور",
         "transliteration": {
             "de": "Al-Ghafūr",
-            "tr": "Al-Ghafūr",
+            "tr": "El-Gafûr",
             "en": "Al-Ghafūr"
 
         },
@@ -1694,7 +1694,7 @@ export const names: NameEntry[] = [
         "arabic": "الشَّكُور",
         "transliteration": {
             "de": "Ash-Shakūr",
-            "tr": "Ash-Shakūr",
+            "tr": "Eş-Şekûr",
             "en": "Ash-Shakūr"
 
         },
@@ -1742,7 +1742,7 @@ export const names: NameEntry[] = [
         "arabic": "العَلِيّ",
         "transliteration": {
             "de": "Al-’Aliy",
-            "tr": "Al-’Aliy",
+            "tr": "El-Aliyy",
             "en": "Al-’Aliy"
 
         },
@@ -1790,7 +1790,7 @@ export const names: NameEntry[] = [
         "arabic": "الكَبِير",
         "transliteration": {
             "de": "Al-Kabīr",
-            "tr": "Al-Kabīr",
+            "tr": "El-Kebîr",
             "en": "Al-Kabīr"
 
         },
@@ -1838,7 +1838,7 @@ export const names: NameEntry[] = [
         "arabic": "الحَفِيظ",
         "transliteration": {
             "de": "Al-Ḥafīẓ",
-            "tr": "Al-Ḥafīẓ",
+            "tr": "El-Hafîz",
             "en": "Al-Ḥafīẓ"
 
         },
@@ -1886,7 +1886,7 @@ export const names: NameEntry[] = [
         "arabic": "المُقِيت",
         "transliteration": {
             "de": "Al-Muqīt",
-            "tr": "Al-Muqīt",
+            "tr": "El-Mukît",
             "en": "Al-Muqīt"
 
         },
@@ -1934,7 +1934,7 @@ export const names: NameEntry[] = [
         "arabic": "الحَسِيب",
         "transliteration": {
             "de": "Al-Ḥasīb",
-            "tr": "Al-Ḥasīb",
+            "tr": "El-Hasîb",
             "en": "Al-Ḥasīb"
 
         },
@@ -1982,7 +1982,7 @@ export const names: NameEntry[] = [
         "arabic": "الجَلِيل",
         "transliteration": {
             "de": "Al-Jalīl",
-            "tr": "Al-Jalīl",
+            "tr": "El-Celîl",
             "en": "Al-Jalīl"
 
         },
@@ -2030,7 +2030,7 @@ export const names: NameEntry[] = [
         "arabic": "الكَرِيم",
         "transliteration": {
             "de": "Al-Karīm",
-            "tr": "Al-Karīm",
+            "tr": "El-Kerîm",
             "en": "Al-Karīm"
 
         },
@@ -2078,7 +2078,7 @@ export const names: NameEntry[] = [
         "arabic": "الرَّقِيب",
         "transliteration": {
             "de": "Ar-Raqīb",
-            "tr": "Ar-Raqīb",
+            "tr": "Er-Rakîb",
             "en": "Ar-Raqīb"
 
         },
@@ -2126,7 +2126,7 @@ export const names: NameEntry[] = [
         "arabic": "المُجِيب",
         "transliteration": {
             "de": "Al-Mujīb",
-            "tr": "Al-Mujīb",
+            "tr": "El-Mucîb",
             "en": "Al-Mujīb"
 
         },
@@ -2174,7 +2174,7 @@ export const names: NameEntry[] = [
         "arabic": "الوَاسِع",
         "transliteration": {
             "de": "Al-Wāsi’",
-            "tr": "Al-Wāsi’",
+            "tr": "El-Vâsi",
             "en": "Al-Wāsi’"
 
         },
@@ -2222,7 +2222,7 @@ export const names: NameEntry[] = [
         "arabic": "الحَكِيم",
         "transliteration": {
             "de": "Al-Ḥakīm",
-            "tr": "Al-Ḥakīm",
+            "tr": "El-Hakîm",
             "en": "Al-Ḥakīm"
 
         },
@@ -2270,7 +2270,7 @@ export const names: NameEntry[] = [
         "arabic": "الوَدُود",
         "transliteration": {
             "de": "Al-Wadūd",
-            "tr": "Al-Wadūd",
+            "tr": "El-Vedûd",
             "en": "Al-Wadūd"
 
         },
@@ -2318,7 +2318,7 @@ export const names: NameEntry[] = [
         "arabic": "المَجِيد",
         "transliteration": {
             "de": "Al-Majīd",
-            "tr": "Al-Majīd",
+            "tr": "El-Mecîd",
             "en": "Al-Majīd"
 
         },
@@ -2366,7 +2366,7 @@ export const names: NameEntry[] = [
         "arabic": "البَاعِث",
         "transliteration": {
             "de": "Al-Bā'ith",
-            "tr": "Al-Bā'ith",
+            "tr": "El-Bâis",
             "en": "Al-Bā'ith"
 
         },
@@ -2414,7 +2414,7 @@ export const names: NameEntry[] = [
         "arabic": "الشَّهِيد",
         "transliteration": {
             "de": "Ash-Shahīd",
-            "tr": "Ash-Shahīd",
+            "tr": "Eş-Şehîd",
             "en": "Ash-Shahīd"
 
         },
@@ -2462,7 +2462,7 @@ export const names: NameEntry[] = [
         "arabic": "الحَقّ",
         "transliteration": {
             "de": "Al-Ḥaqq",
-            "tr": "Al-Ḥaqq",
+            "tr": "El-Hakk",
             "en": "Al-Ḥaqq"
 
         },
@@ -2510,7 +2510,7 @@ export const names: NameEntry[] = [
         "arabic": "وَكِيل",
         "transliteration": {
             "de": "Al-Wakīl",
-            "tr": "Al-Wakīl",
+            "tr": "El-Vekîl",
             "en": "Al-Wakīl"
 
         },
@@ -2558,7 +2558,7 @@ export const names: NameEntry[] = [
         "arabic": "القَوِىّ",
         "transliteration": {
             "de": "Al-Qawiy",
-            "tr": "Al-Qawiy",
+            "tr": "El-Kaviyy",
             "en": "Al-Qawiy"
 
         },
@@ -2606,7 +2606,7 @@ export const names: NameEntry[] = [
         "arabic": "المَتِين",
         "transliteration": {
             "de": "Al-Matīn",
-            "tr": "Al-Matīn",
+            "tr": "El-Metîn",
             "en": "Al-Matīn"
 
         },
@@ -2654,7 +2654,7 @@ export const names: NameEntry[] = [
         "arabic": "الوَلِىّ",
         "transliteration": {
             "de": "Al-Waliy",
-            "tr": "Al-Waliy",
+            "tr": "El-Veliyy",
             "en": "Al-Waliy"
 
         },
@@ -2702,7 +2702,7 @@ export const names: NameEntry[] = [
         "arabic": "الحَمِيد",
         "transliteration": {
             "de": "Al-Ḥamīd",
-            "tr": "Al-Ḥamīd",
+            "tr": "El-Hamîd",
             "en": "Al-Ḥamīd"
 
         },
@@ -2750,7 +2750,7 @@ export const names: NameEntry[] = [
         "arabic": "المُحْصِى",
         "transliteration": {
             "de": "Al-Muḥṣī",
-            "tr": "Al-Muḥṣī",
+            "tr": "El-Muhsî",
             "en": "Al-Muḥṣī"
 
         },
@@ -2798,7 +2798,7 @@ export const names: NameEntry[] = [
         "arabic": "المُبْدِئ",
         "transliteration": {
             "de": "Al-Mubdi’",
-            "tr": "Al-Mubdi’",
+            "tr": "El-Mübdi",
             "en": "Al-Mubdi’"
 
         },
@@ -2846,7 +2846,7 @@ export const names: NameEntry[] = [
         "arabic": "المُعِيد",
         "transliteration": {
             "de": "Al-Mu’īd",
-            "tr": "Al-Mu’īd",
+            "tr": "El-Muîd",
             "en": "Al-Mu’īd"
 
         },
@@ -2894,7 +2894,7 @@ export const names: NameEntry[] = [
         "arabic": "المُحْيِى",
         "transliteration": {
             "de": "Al-Muḥyī",
-            "tr": "Al-Muḥyī",
+            "tr": "El-Muhyî",
             "en": "Al-Muḥyī"
 
         },
@@ -2942,7 +2942,7 @@ export const names: NameEntry[] = [
         "arabic": "المُمِيت",
         "transliteration": {
             "de": "Al-Mumīt",
-            "tr": "Al-Mumīt",
+            "tr": "El-Mümît",
             "en": "Al-Mumīt"
 
         },
@@ -2990,7 +2990,7 @@ export const names: NameEntry[] = [
         "arabic": "الحَيّ",
         "transliteration": {
             "de": "Al-Ḥayy",
-            "tr": "Al-Ḥayy",
+            "tr": "El-Hayy",
             "en": "Al-Ḥayy"
 
         },
@@ -3038,7 +3038,7 @@ export const names: NameEntry[] = [
         "arabic": "القَيُّوم",
         "transliteration": {
             "de": "Al-Qayyūm",
-            "tr": "Al-Qayyūm",
+            "tr": "El-Kayyûm",
             "en": "Al-Qayyūm"
 
         },
@@ -3086,7 +3086,7 @@ export const names: NameEntry[] = [
         "arabic": "الوَاجِد",
         "transliteration": {
             "de": "Al-Wājid",
-            "tr": "Al-Wājid",
+            "tr": "El-Vâcid",
             "en": "Al-Wājid"
 
         },
@@ -3134,7 +3134,7 @@ export const names: NameEntry[] = [
         "arabic": "المَاجِد",
         "transliteration": {
             "de": "Al-Mājid",
-            "tr": "Al-Mājid",
+            "tr": "El-Macîd",
             "en": "Al-Mājid"
 
         },
@@ -3182,7 +3182,7 @@ export const names: NameEntry[] = [
         "arabic": "الوَاحِد",
         "transliteration": {
             "de": "Al-Wāḥid",
-            "tr": "Al-Wāḥid",
+            "tr": "El-Vâhid",
             "en": "Al-Wāḥid"
 
         },
@@ -3230,7 +3230,7 @@ export const names: NameEntry[] = [
         "arabic": "الأَحَد",
         "transliteration": {
             "de": "Al-Aḥad",
-            "tr": "Al-Aḥad",
+            "tr": "Es-Samed",
             "en": "Al-Aḥad"
 
         },
@@ -3278,7 +3278,7 @@ export const names: NameEntry[] = [
         "arabic": "ٱلْصَّمَد",
         "transliteration": {
             "de": "Aṣ-Ṣamad",
-            "tr": "Aṣ-Ṣamad",
+            "tr": "El-Kâdir",
             "en": "Aṣ-Ṣamad"
 
         },
@@ -3326,7 +3326,7 @@ export const names: NameEntry[] = [
         "arabic": "القَادِر",
         "transliteration": {
             "de": "Al-Qādir",
-            "tr": "Al-Qādir",
+            "tr": "El-Muktedir",
             "en": "Al-Qādir"
 
         },
@@ -3374,7 +3374,7 @@ export const names: NameEntry[] = [
         "arabic": "المُقْتَدِر",
         "transliteration": {
             "de": "Al-Muqtadir",
-            "tr": "Al-Muqtadir",
+            "tr": "El-Mukaddim",
             "en": "Al-Muqtadir"
 
         },
@@ -3422,7 +3422,7 @@ export const names: NameEntry[] = [
         "arabic": "المُقَدِّم",
         "transliteration": {
             "de": "Al-Muqaddim",
-            "tr": "Al-Muqaddim",
+            "tr": "El-Muahhir",
             "en": "Al-Muqaddim"
 
         },
@@ -3470,7 +3470,7 @@ export const names: NameEntry[] = [
         "arabic": "المُؤَخِّر",
         "transliteration": {
             "de": "Al-Mu'akhkhir",
-            "tr": "Al-Mu'akhkhir",
+            "tr": "El-Evvel",
             "en": "Al-Mu'akhkhir"
 
         },
@@ -3518,7 +3518,7 @@ export const names: NameEntry[] = [
         "arabic": "الأَوَّل",
         "transliteration": {
             "de": "Al-Awwal",
-            "tr": "Al-Awwal",
+            "tr": "El-Âhir",
             "en": "Al-Awwal"
 
         },
@@ -3566,7 +3566,7 @@ export const names: NameEntry[] = [
         "arabic": "الآخِر",
         "transliteration": {
             "de": "Al-Ākhir",
-            "tr": "Al-Ākhir",
+            "tr": "Ez-Zâhir",
             "en": "Al-Ākhir"
 
         },
@@ -3614,7 +3614,7 @@ export const names: NameEntry[] = [
         "arabic": "الظَاهِر",
         "transliteration": {
             "de": "Aẓ-Ẓāhir",
-            "tr": "Aẓ-Ẓāhir",
+            "tr": "El-Bâtın",
             "en": "Aẓ-Ẓāhir"
 
         },
@@ -3662,7 +3662,7 @@ export const names: NameEntry[] = [
         "arabic": "البَاطِن",
         "transliteration": {
             "de": "Al-Bāṭin",
-            "tr": "Al-Bāṭin",
+            "tr": "El-Vâlî",
             "en": "Al-Bāṭin"
 
         },
@@ -3710,7 +3710,7 @@ export const names: NameEntry[] = [
         "arabic": "الوَالِي",
         "transliteration": {
             "de": "Al-Wālī",
-            "tr": "Al-Wālī",
+            "tr": "El-Müteâlî",
             "en": "Al-Wālī"
 
         },
@@ -3758,7 +3758,7 @@ export const names: NameEntry[] = [
         "arabic": "ٱلْمُتَعَالِي",
         "transliteration": {
             "de": "Al-Muta'ālī",
-            "tr": "Al-Muta'ālī",
+            "tr": "El-Berr",
             "en": "Al-Muta'ālī"
 
         },
@@ -3806,7 +3806,7 @@ export const names: NameEntry[] = [
         "arabic": "البَرّ",
         "transliteration": {
             "de": "Al-Barr",
-            "tr": "Al-Barr",
+            "tr": "Et-Tevvâb",
             "en": "Al-Barr"
 
         },
@@ -3854,7 +3854,7 @@ export const names: NameEntry[] = [
         "arabic": "التَّوَّاب",
         "transliteration": {
             "de": "At-Tawwāb",
-            "tr": "At-Tawwāb",
+            "tr": "El-Müntekim",
             "en": "At-Tawwāb"
 
         },
@@ -3902,7 +3902,7 @@ export const names: NameEntry[] = [
         "arabic": "المُنْتَقِم",
         "transliteration": {
             "de": "Al-Muntaqim",
-            "tr": "Al-Muntaqim",
+            "tr": "El-Afüvv",
             "en": "Al-Muntaqim"
 
         },
@@ -3950,7 +3950,7 @@ export const names: NameEntry[] = [
         "arabic": "العَفُوّ",
         "transliteration": {
             "de": "Al-'Afuww",
-            "tr": "Al-'Afuww",
+            "tr": "Er-Raûf",
             "en": "Al-'Afuww"
 
         },
@@ -3998,7 +3998,7 @@ export const names: NameEntry[] = [
         "arabic": "الرَّؤُوف",
         "transliteration": {
             "de": "Ar-Ra'ūf",
-            "tr": "Ar-Ra'ūf",
+            "tr": "Mâlik-ül Mülk",
             "en": "Ar-Ra'ūf"
 
         },
@@ -4046,7 +4046,7 @@ export const names: NameEntry[] = [
         "arabic": "مَالِكُ المُلْك",
         "transliteration": {
             "de": "Mālik al-Mulk",
-            "tr": "Mālik al-Mulk",
+            "tr": "Zül-Celâli vel ikrâm",
             "en": "Mālik al-Mulk"
 
         },
@@ -4094,7 +4094,7 @@ export const names: NameEntry[] = [
         "arabic": "ذُو الجَلَالِ وَالإِكْرَام",
         "transliteration": {
             "de": "Dhū al-Jalāli wa al-Ikrām",
-            "tr": "Dhū al-Jalāli wa al-Ikrām",
+            "tr": "El-Muksit",
             "en": "Dhū al-Jalāli wa al-Ikrām"
 
         },
@@ -4142,7 +4142,7 @@ export const names: NameEntry[] = [
         "arabic": "المُقْسِط",
         "transliteration": {
             "de": "Al-Muqsiṭ",
-            "tr": "Al-Muqsiṭ",
+            "tr": "El-Câmi",
             "en": "Al-Muqsiṭ"
 
         },
@@ -4190,7 +4190,7 @@ export const names: NameEntry[] = [
         "arabic": "الجَامِع",
         "transliteration": {
             "de": "Al-Jāmi'",
-            "tr": "Al-Jāmi'",
+            "tr": "El-Ganiyy",
             "en": "Al-Jāmi'"
 
         },
@@ -4238,7 +4238,7 @@ export const names: NameEntry[] = [
         "arabic": "الغَنِيّ",
         "transliteration": {
             "de": "Al-Ghaniy",
-            "tr": "Al-Ghaniy",
+            "tr": "El-Mugnî",
             "en": "Al-Ghaniy"
 
         },
@@ -4286,7 +4286,7 @@ export const names: NameEntry[] = [
         "arabic": "الْمُغْنِي",
         "transliteration": {
             "de": "Al-Mughnī",
-            "tr": "Al-Mughnī",
+            "tr": "El-Mâni",
             "en": "Al-Mughnī"
 
         },
@@ -4334,7 +4334,7 @@ export const names: NameEntry[] = [
         "arabic": "الْمَانِعُ",
         "transliteration": {
             "de": "Al-Māni'",
-            "tr": "Al-Māni'",
+            "tr": "Ed-Dârr",
             "en": "Al-Māni'"
 
         },
@@ -4382,7 +4382,7 @@ export const names: NameEntry[] = [
         "arabic": "الضَّارُ",
         "transliteration": {
             "de": "Ad-Darr",
-            "tr": "Ad-Darr",
+            "tr": "En-Nâfi",
             "en": "Ad-Darr"
 
         },
@@ -4430,7 +4430,7 @@ export const names: NameEntry[] = [
         "arabic": "النَّافِعُ",
         "transliteration": {
             "de": "An-Nāfi'",
-            "tr": "An-Nāfi'",
+            "tr": "En-Nûr",
             "en": "An-Nāfi'"
 
         },
@@ -4478,7 +4478,7 @@ export const names: NameEntry[] = [
         "arabic": "النُّورُ",
         "transliteration": {
             "de": "An-Nūr",
-            "tr": "An-Nūr",
+            "tr": "El-Hâdî",
             "en": "An-Nūr"
 
         },
@@ -4526,7 +4526,7 @@ export const names: NameEntry[] = [
         "arabic": "الْهَادِي",
         "transliteration": {
             "de": "Al-Hādī",
-            "tr": "Al-Hādī",
+            "tr": "El-Bedî",
             "en": "Al-Hādī"
 
         },
@@ -4574,7 +4574,7 @@ export const names: NameEntry[] = [
         "arabic": "الْبَدِيعُ",
         "transliteration": {
             "de": "Al-Badī'",
-            "tr": "Al-Badī'",
+            "tr": "El-Bâkî",
             "en": "Al-Badī'"
 
         },
@@ -4622,7 +4622,7 @@ export const names: NameEntry[] = [
         "arabic": "الْبَاقِي",
         "transliteration": {
             "de": "Al-Bāqī",
-            "tr": "Al-Bāqī",
+            "tr": "El-Vâris",
             "en": "Al-Bāqī"
 
         },
@@ -4670,7 +4670,7 @@ export const names: NameEntry[] = [
         "arabic": "الْوَارِثُ",
         "transliteration": {
             "de": "Al-Wārith",
-            "tr": "Al-Wārith",
+            "tr": "Er-Reşîd",
             "en": "Al-Wārith"
 
         },
@@ -4718,7 +4718,7 @@ export const names: NameEntry[] = [
         "arabic": "الرَّشِيدُ",
         "transliteration": {
             "de": "Ar-Rashīd",
-            "tr": "Ar-Rashīd",
+            "tr": "Es-Sabûr",
             "en": "Ar-Rashīd"
 
         },
