@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { JsonLd } from '@/components/JsonLd'
-import { LearningProgressWidget } from '@/components/LearningProgressWidget'
 import { LearnClient } from '@/components/LearnClient'
 import { names } from '@/data/names'
 import {
