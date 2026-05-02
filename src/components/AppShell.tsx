@@ -27,7 +27,8 @@ const getInitialLanguage = (routeLanguage?: Language): Language => {
 export function AppShell({ children, routeLanguage }: { children: ReactNode; routeLanguage?: Language }) {
   const pathname = usePathname()
   const router = useRouter()
-  const [language, setLanguage] = useState<Language>(() => getInitialLanguage(routeLanguage))
+  const [storedLanguage, setStoredLanguage] = useState<Language>(() => getInitialLanguage(routeLanguage))
+  const language = routeLanguage ?? storedLanguage
   const dict = getDict(language)
   const navItems = getNavItems(language)
   const isActive = (href: string) => {
@@ -37,23 +38,28 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
 
   useEffect(() => {
     if (routeLanguage) {
-      setLanguage(routeLanguage)
+      storage.setLanguage(routeLanguage)
       document.documentElement.lang = routeLanguage
+      queueMicrotask(() => setStoredLanguage(routeLanguage))
       return
     }
 
-    queueMicrotask(() => setLanguage(storage.getLanguage()))
+    queueMicrotask(() => {
+      const next = storage.getLanguage()
+      setStoredLanguage(next)
+      document.documentElement.lang = next
+    })
 
     const onLanguageChange = (event: Event) => {
       const next = (event as CustomEvent<unknown>).detail
-      if (isLanguage(next)) setLanguage(next)
+      if (isLanguage(next)) setStoredLanguage(next)
     }
     window.addEventListener('app-language-change', onLanguageChange)
     return () => window.removeEventListener('app-language-change', onLanguageChange)
   }, [routeLanguage])
 
   function onLanguageChange(next: Language) {
-    setLanguage(next)
+    setStoredLanguage(next)
     storage.setLanguage(next)
     document.documentElement.lang = next
     window.dispatchEvent(new CustomEvent('app-language-change', { detail: next }))

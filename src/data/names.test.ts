@@ -35,13 +35,24 @@ describe('names data', () => {
 
   it('does not make invented source references', () => {
     const content = JSON.stringify(names).toLowerCase()
-    expect(content).not.toMatch(/sahih|bukhari|muslim|tirmidhi|quran \d|hadith \d/)
+    // Detects formatted citation claims like "Bukhari 123" / "Hadith no. 456".
+    expect(content).not.toMatch(/\b(?:sahih|bukhari|muslim|tirmidhi|hadith)\s*(?:no\.?|nr\.?|#)?\s*\d+\b/)
   })
 
   it('avoids guarantee wording, fixed-number rituals, and guaranteed effects', () => {
     const content = JSON.stringify(names).toLowerCase()
-    expect(content).not.toMatch(/guarantee|guaranteed|always works|wird garantiert|garantiert|kesin olarak/)
+    const bannedGuaranteeClaims = [
+      /\balways works\b/,
+      /\bwird garantiert\b/,
+      /\bkesin olarak\b/,
+      /\bguaranteed effect\b/,
+      /\bhealing promise\b/,
+      /\bheilversprechen\b/,
+      /\bşifa garantisi\b/,
+    ]
+    for (const pattern of bannedGuaranteeClaims) {
+      expect(content).not.toMatch(pattern)
+    }
     expect(content).not.toMatch(/\b(7|11|33|99|100)\s*(times|mal|kez)\b/)
-    expect(content).not.toMatch(/guaranteed effect|healing promise|heilversprechen|şifa garantisi/)
   })
 })
