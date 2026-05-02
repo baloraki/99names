@@ -6,9 +6,11 @@ import {
   getEquivalentLocalizedPath,
   getLocalizedNamePath,
   getLocalizedSeoPath,
+  getLocalizedSettingsPath,
   getNamePageMetadata,
   nameAlternates,
   seoPageAlternates,
+  settingsAlternates,
   staticSitemapPages,
 } from './seo'
 import {
@@ -45,13 +47,27 @@ describe('SEO route helpers', () => {
     })
   })
 
+  it('generates localized settings paths and alternates', () => {
+    expect(getLocalizedSettingsPath('en')).toBe('/settings')
+    expect(getLocalizedSettingsPath('de')).toBe('/de/einstellungen')
+    expect(getLocalizedSettingsPath('tr')).toBe('/tr/ayarlar')
+    expect(settingsAlternates()).toEqual({
+      en: '/settings',
+      de: '/de/einstellungen',
+      tr: '/tr/ayarlar',
+      'x-default': '/settings',
+    })
+  })
+
   it('maps current routes to equivalent localized routes', () => {
     expect(getEquivalentLocalizedPath('/names/ar-rahman', 'de')).toBe('/de/namen/ar-rahman')
     expect(getEquivalentLocalizedPath('/de/namen/al-malik', 'tr')).toBe('/tr/esmaul-husna/al-malik')
     expect(getEquivalentLocalizedPath('/tr/esmaul-husna/ar-rahim', 'en')).toBe('/names/ar-rahim')
     expect(getEquivalentLocalizedPath('/de/lernen', 'tr')).toBe('/tr/ogren')
     expect(getEquivalentLocalizedPath('/tr/tefekkur', 'en')).toBe('/reflections')
-    expect(getEquivalentLocalizedPath('/settings', 'de')).toBe('/settings')
+    expect(getEquivalentLocalizedPath('/settings', 'de')).toBe('/de/einstellungen')
+    expect(getEquivalentLocalizedPath('/de/einstellungen', 'tr')).toBe('/tr/ayarlar')
+    expect(getEquivalentLocalizedPath('/tr/ayarlar', 'en')).toBe('/settings')
   })
 })
 

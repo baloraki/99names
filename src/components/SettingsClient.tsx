@@ -1,16 +1,26 @@
 'use client'
 
 import type { ChangeEvent } from 'react'
+import { useEffect } from 'react'
+import { usePathname, useRouter } from 'next/navigation'
 import { useAppState } from '@/hooks/useAppState'
 import { calculateNextDue, isValidInterval } from '@/lib/learningSchedule'
 import { getDict, LANGUAGES } from '@/lib/i18n'
+import { isLanguage } from '@/lib/languagePreference'
+import { getEquivalentLocalizedPath } from '@/lib/seo'
 import type { Language } from '@/types/language'
 import type { LearningScheduleSettings } from '@/types/learningSchedule'
 import { PushReminderSettings } from './PushReminderSettings'
 
-export function SettingsClient() {
-  const { language, progress, schedule, actions } = useAppState()
-  const dict = getDict(language)
+export function SettingsClient({ locale }: { locale: Language }) {
+  const pathname = usePathname()
+  const router = useRouter()
+  const { progress, schedule, actions } = useAppState()
+  const dict = getDict(locale)
+
+  useEffect(() => {
+    queueMicrotask(() => actions.setLanguage(locale))
+  }, [actions, locale])
 
   function updateSchedule(next: LearningScheduleSettings) {
     actions.setSchedule({
@@ -25,6 +35,15 @@ export function SettingsClient() {
     updateSchedule({ ...schedule, interval })
   }
 
+  function onLanguageChange(event: ChangeEvent<HTMLSelectElement>) {
+    const next = event.target.value
+    if (!isLanguage(next)) return
+
+    actions.setLanguage(next)
+    const nextPath = getEquivalentLocalizedPath(pathname, next)
+    if (nextPath !== pathname) router.push(nextPath)
+  }
+
   return (
     <div className="mx-auto max-w-3xl space-y-6">
       <section>
@@ -33,7 +52,7 @@ export function SettingsClient() {
       </section>
       <section className="rounded-lg border border-white/10 bg-surface p-5">
         <label className="text-sm text-muted" htmlFor="language">{dict.settings.language}</label>
-        <select id="language" className="mt-2 field" value={language} onChange={(event) => actions.setLanguage(event.target.value as Language)}>
+        <select id="language" className="mt-2 field" value={locale} onChange={onLanguageChange}>
           {LANGUAGES.map((item) => <option key={item.value} value={item.value}>{item.label}</option>)}
         </select>
       </section>

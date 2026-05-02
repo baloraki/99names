@@ -7,7 +7,7 @@ import type { ReactNode } from 'react'
 import { useEffect, useState } from 'react'
 import { getDict, LANGUAGES } from '@/lib/i18n'
 import { isLanguage } from '@/lib/languagePreference'
-import { getEquivalentLocalizedPath, getLocalizedSeoPath } from '@/lib/seo'
+import { getEquivalentLocalizedPath, getLocalizedSeoPath, getLocalizedSettingsPath } from '@/lib/seo'
 import { storage } from '@/lib/storage'
 import type { Language } from '@/types/language'
 
@@ -15,7 +15,7 @@ const getNavItems = (language: Language) => [
   { href: language === 'de' ? '/de' : language === 'tr' ? '/tr' : '/', key: 'home', icon: '⌂' },
   { href: language === 'de' ? '/de/namen' : language === 'tr' ? '/tr/esmaul-husna' : '/names', key: 'names', icon: '◇' },
   { href: getLocalizedSeoPath('learn', language), key: 'learn', icon: '◐' },
-  { href: '/settings', key: 'settings', icon: '⚙' },
+  { href: getLocalizedSettingsPath(language), key: 'settings', icon: '⚙' },
 ] as const
 
 const getInitialLanguage = (routeLanguage?: Language): Language => {

@@ -47,6 +47,12 @@ export function getLocalizedHomePath(locale: Language): string {
   return '/'
 }
 
+export function getLocalizedSettingsPath(locale: Language): string {
+  if (locale === 'de') return '/de/einstellungen'
+  if (locale === 'tr') return '/tr/ayarlar'
+  return '/settings'
+}
+
 export type LocalizedSeoPage = 'asma' | 'learn' | 'dua' | 'reflections' | 'quiz'
 
 const localizedSeoPaths: Record<LocalizedSeoPage, Record<Language, string>> = {
@@ -103,6 +109,10 @@ export function getEquivalentLocalizedPath(pathname: string, targetLocale: Langu
   const nameSlug = nameMatch?.[1] ?? nameMatch?.[2] ?? nameMatch?.[3]
   if (nameSlug) return getLocalizedNamePath(targetLocale, nameSlug)
 
+  if (pathname === '/settings' || pathname === '/de/einstellungen' || pathname === '/tr/ayarlar') {
+    return getLocalizedSettingsPath(targetLocale)
+  }
+
   for (const [page, paths] of Object.entries(localizedSeoPaths) as Array<[LocalizedSeoPage, Record<Language, string>]>) {
     if (Object.values(paths).includes(pathname)) {
       return getLocalizedSeoPath(page, targetLocale)
@@ -136,6 +146,15 @@ export function nameAlternates(slug: string): Record<string, string> {
     de: `/de/namen/${slug}`,
     tr: `/tr/esmaul-husna/${slug}`,
     'x-default': `/names/${slug}`,
+  }
+}
+
+export function settingsAlternates(): Record<string, string> {
+  return {
+    en: '/settings',
+    de: '/de/einstellungen',
+    tr: '/tr/ayarlar',
+    'x-default': '/settings',
   }
 }
 
@@ -308,7 +327,9 @@ export const staticSitemapPages = [
   { path: '/tr/tefekkur', priority: 0.75, changeFrequency: 'monthly', alternates: seoPageAlternates('reflections') },
   { path: '/tr/quiz', priority: 0.65, changeFrequency: 'monthly', alternates: seoPageAlternates('quiz') },
   { path: '/about', priority: 0.5, changeFrequency: 'yearly' },
-  { path: '/settings', priority: 0.35, changeFrequency: 'yearly' },
+  { path: '/settings', priority: 0.35, changeFrequency: 'yearly', alternates: settingsAlternates() },
+  { path: '/de/einstellungen', priority: 0.35, changeFrequency: 'yearly', alternates: settingsAlternates() },
+  { path: '/tr/ayarlar', priority: 0.35, changeFrequency: 'yearly', alternates: settingsAlternates() },
   { path: '/privacy', priority: 0.3, changeFrequency: 'yearly' },
   { path: '/imprint', priority: 0.25, changeFrequency: 'yearly' },
   { path: '/contact', priority: 0.3, changeFrequency: 'yearly' },
