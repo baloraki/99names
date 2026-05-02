@@ -105,7 +105,7 @@ export default function GermanHomePage() {
         <h2 className="text-3xl font-semibold">Empfohlene Namen</h2>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
           {featured.map((name) => (
-              <Link key={name.id} href={`/names/${name.slug}`} className="rounded-lg border border-white/10 bg-surface p-4 hover:border-gold/50 focus-ring">
+              <Link key={name.id} href={`/de/namen/${name.slug}`} className="rounded-lg border border-white/10 bg-surface p-4 hover:border-gold/50 focus-ring">
                 <span className="block text-right font-arabic text-3xl" lang="ar" dir="rtl">{name.arabic}</span>
                 <span className="mt-3 block font-semibold">{name.transliteration.de}</span>
                 <span className="mt-1 block text-sm text-muted">{name.meanings.de}</span>
