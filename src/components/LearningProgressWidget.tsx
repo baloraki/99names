@@ -50,18 +50,6 @@ export function LearningProgressWidget({ locale, compact = false }: { locale: La
           <h2 id={`learning-progress-${locale}`} className="mt-2 text-2xl font-semibold">
             {text.title}
           </h2>
-          <dl className="mt-4 grid gap-3 text-sm text-muted sm:grid-cols-2">
-            <div>
-              <dt>{text.favorites}</dt>
-              <dd className="mt-1 text-lg font-semibold text-primary">{progress.favoriteIds.length}</dd>
-            </div>
-            <div>
-              <dt>{text.lastViewed}</dt>
-              <dd className="mt-1 text-lg font-semibold text-primary">
-                {lastViewed ? lastViewed.transliteration : text.none}
-              </dd>
-            </div>
-          </dl>
           {!compact && (
             <div className="mt-5 flex flex-col gap-3 sm:flex-row">
               <Link className="btn-primary" href={getLocalizedSeoPath('learn', locale)}>{text.continue}</Link>
