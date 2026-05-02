@@ -34,8 +34,18 @@ const originalShare = navigator.share
 afterEach(() => {
   navigationMock.pathname = '/de'
   navigationMock.push.mockClear()
+  vi.restoreAllMocks()
   window.localStorage.clear()
   document.cookie = 'app_language=; Max-Age=0; Path=/'
+  Object.defineProperty(window, 'scrollY', {
+    configurable: true,
+    value: 0,
+  })
+  Object.defineProperty(window, 'innerHeight', {
+    configurable: true,
+    value: 768,
+  })
+  Reflect.deleteProperty(document.documentElement, 'scrollHeight')
   Object.defineProperty(navigator, 'clipboard', {
     configurable: true,
     value: originalClipboard,
@@ -67,14 +77,15 @@ describe('AppShell', () => {
     )
 
     expect(screen.getAllByRole('combobox', { name: 'Sprache' })).toHaveLength(1)
+    fireEvent.click(screen.getByRole('button', { name: 'Menü öffnen' }))
+
     expect(screen.getAllByRole('link', { name: 'Namen' })).toHaveLength(2)
     for (const link of screen.getAllByRole('link', { name: 'Namen' })) {
       expect(link).toHaveAttribute('href', '/de/namen')
     }
-    for (const link of screen.getAllByRole('link', { name: 'Einstellungen' })) {
-      expect(link).toHaveAttribute('href', '/de/einstellungen')
-      expect(link).toHaveAttribute('aria-current', 'page')
-    }
+    const settingsLink = screen.getByRole('link', { name: 'Einstellungen' })
+    expect(settingsLink).toHaveAttribute('href', '/de/einstellungen')
+    expect(settingsLink).toHaveAttribute('aria-current', 'page')
     expect(screen.getByRole('link', { name: 'Über uns' })).toHaveAttribute('href', '/de/uber-uns')
     expect(screen.getByRole('link', { name: 'Kontakt' })).toHaveAttribute('href', '/de/kontakt')
     expect(screen.getByRole('link', { name: 'Datenschutz' })).toHaveAttribute('href', '/de/datenschutz')
@@ -89,6 +100,8 @@ describe('AppShell', () => {
         <div>Names</div>
       </AppShell>,
     )
+
+    fireEvent.click(screen.getByRole('button', { name: 'Open menu' }))
 
     for (const link of screen.getAllByRole('link', { name: 'Names' })) {
       expect(link).toHaveAttribute('aria-current', 'page')
@@ -109,6 +122,8 @@ describe('AppShell', () => {
     )
 
     expect(screen.getAllByRole('combobox', { name: 'Language' })).toHaveLength(1)
+    fireEvent.click(screen.getByRole('button', { name: 'Open menu' }))
+
     expect(screen.getAllByRole('link', { name: 'Names' })).toHaveLength(2)
     for (const link of screen.getAllByRole('link', { name: 'Names' })) {
       expect(link).toHaveAttribute('href', '/names')
@@ -120,6 +135,7 @@ describe('AppShell', () => {
     expect(screen.getByRole('link', { name: 'Contact' })).toHaveAttribute('href', '/contact')
     expect(screen.getByRole('link', { name: 'Privacy' })).toHaveAttribute('href', '/privacy')
     expect(screen.getByRole('link', { name: 'Imprint' })).toHaveAttribute('href', '/imprint')
+    expect(screen.getByRole('contentinfo')).not.toHaveClass('hidden')
   })
 
   it('updates static footer links when routeLanguage changes', () => {
@@ -138,6 +154,104 @@ describe('AppShell', () => {
     )
 
     expect(screen.getByRole('link', { name: 'Über uns' })).toHaveAttribute('href', '/de/uber-uns')
+  })
+
+  it('keeps the burger in the mobile header and preserves header scroll behavior', async () => {
+    vi.spyOn(window, 'requestAnimationFrame').mockImplementation((callback: FrameRequestCallback) => {
+      callback(0)
+      return 1
+    })
+    Object.defineProperty(window, 'innerHeight', {
+      configurable: true,
+      value: 600,
+    })
+    Object.defineProperty(document.documentElement, 'scrollHeight', {
+      configurable: true,
+      value: 2000,
+    })
+    Object.defineProperty(window, 'scrollY', {
+      configurable: true,
+      value: 0,
+    })
+
+    render(
+      <AppShell routeLanguage="en">
+        <div>Content</div>
+      </AppShell>,
+    )
+
+    const header = screen.getByRole('banner')
+    const menuButton = screen.getByRole('button', { name: 'Open menu' })
+
+    expect(header).not.toHaveClass('app-header-hidden')
+    expect(header).toContainElement(menuButton)
+
+    Object.defineProperty(window, 'scrollY', {
+      configurable: true,
+      value: 120,
+    })
+    fireEvent.scroll(window)
+
+    await waitFor(() => {
+      expect(header).toHaveClass('app-header-hidden')
+    })
+    expect(header).toContainElement(menuButton)
+
+    Object.defineProperty(window, 'scrollY', {
+      configurable: true,
+      value: 80,
+    })
+    fireEvent.scroll(window)
+
+    await waitFor(() => {
+      expect(header).not.toHaveClass('app-header-hidden')
+      expect(header).toContainElement(menuButton)
+    })
+
+    Object.defineProperty(window, 'scrollY', {
+      configurable: true,
+      value: 1400,
+    })
+    fireEvent.scroll(window)
+
+    await waitFor(() => {
+      expect(header).toHaveClass('app-header-hidden')
+      expect(header).toContainElement(menuButton)
+    })
+  })
+
+  it('keeps the mobile menu open when a scroll event fires after tapping the burger', async () => {
+    vi.spyOn(window, 'requestAnimationFrame').mockImplementation((callback: FrameRequestCallback) => {
+      callback(0)
+      return 1
+    })
+    Object.defineProperty(document.documentElement, 'scrollHeight', {
+      configurable: true,
+      value: 2000,
+    })
+
+    render(
+      <AppShell routeLanguage="en">
+        <div>Content</div>
+      </AppShell>,
+    )
+
+    const header = screen.getByRole('banner')
+
+    fireEvent.click(screen.getByRole('button', { name: 'Open menu' }))
+    expect(screen.getAllByRole('button', { name: 'Close menu' })[0]).toBeInTheDocument()
+    expect(screen.getByRole('navigation', { name: /mobile navigation/i })).toBeInTheDocument()
+
+    Object.defineProperty(window, 'scrollY', {
+      configurable: true,
+      value: 120,
+    })
+    fireEvent.scroll(window)
+
+    await waitFor(() => {
+      expect(header).not.toHaveClass('app-header-hidden')
+      expect(screen.getAllByRole('button', { name: 'Close menu' })[0]).toBeInTheDocument()
+    })
   })
 
   it('copies the current page link when native sharing is unavailable', async () => {
