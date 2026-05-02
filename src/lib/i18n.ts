@@ -308,8 +308,8 @@ const de: Dict = {
     pushNudgeBody: 'Aktiviere Push-Benachrichtigungen, damit du beim Lernen leichter am Ball bleibst.',
     pushNudgeEnable: 'Aktivieren',
     pushNudgeLater: 'Nicht jetzt',
-    pwaInstallTitle: 'App installieren',
-    pwaInstallBody: 'Installiere Daily Husna als App für schnelleren Zugriff und Push-Benachrichtigungen.',
+    pwaInstallTitle: 'App installieren – für Erinnerungen nötig',
+    pwaInstallBody: 'Damit wir dich mit kurzen Lern-Erinnerungen erreichen können, muss Daily Husna als App installiert sein.',
   },
   contact: {
     eyebrow: 'Kontakt',
@@ -483,8 +483,8 @@ const tr: Dict = {
     pushNudgeBody: 'Öğrenme düzenini korumak için push bildirimlerini etkinleştirebilirsin.',
     pushNudgeEnable: 'Etkinleştir',
     pushNudgeLater: 'Şimdi değil',
-    pwaInstallTitle: 'Uygulamayı yükle',
-    pwaInstallBody: 'Daha hızlı erişim ve push bildirimleri için Daily Husna\'yı uygulama olarak yükle.',
+    pwaInstallTitle: 'Uygulama kurulumu – bildirimler için gerekli',
+    pwaInstallBody: 'Kısa öğrenme hatırlatmaları gönderebilmemiz için Daily Husna\'nın uygulama olarak kurulması gerekiyor.',
   },
   contact: {
     eyebrow: 'İletişim',
@@ -658,8 +658,8 @@ const en: Dict = {
     pushNudgeBody: 'Enable push notifications to keep your learning rhythm going.',
     pushNudgeEnable: 'Enable',
     pushNudgeLater: 'Not now',
-    pwaInstallTitle: 'Install the app',
-    pwaInstallBody: 'Install Daily Husna as an app for faster access and push notifications.',
+    pwaInstallTitle: 'Install the app – needed for reminders',
+    pwaInstallBody: 'To send you short learning reminders, Daily Husna needs to be installed as an app.',
   },
   contact: {
     eyebrow: 'Contact',

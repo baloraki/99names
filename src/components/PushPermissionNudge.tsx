@@ -47,51 +47,49 @@ export function PushPermissionNudge({
         // If PWA is installed, check for push notification prompt
         if (!shouldShowPushSoftPrompt(vapidPublicKey)) return
 
+        const stored = readPersistedPushReminderSettings()
+        if (stored.enabled) return
+
+        // Show immediately, then hide in background if subscription already exists
+        if (!cancelled) {
+          setMode('push')
+          setVisible(true)
+        }
+
         getCurrentPushSubscription()
           .then((subscription) => {
             if (cancelled) return
-            const stored = readPersistedPushReminderSettings()
             if (subscription) {
               persistPushReminderSettings(true, stored.interval)
-              return
-            }
-            if (!stored.enabled) {
-              setMode('push')
-              setVisible(true)
+              setVisible(false)
             }
           })
-          .catch(() => {
-            if (!cancelled) {
-              setMode('push')
-              setVisible(true)
-            }
-          })
+          .catch(() => {/* keep visible */})
       } else {
         // PWA is not installed, check if we should show PWA install prompt
         if (isPwaInstallable() && !hasPwaPromptBeenDeferred()) {
           setMode('pwa')
           setVisible(true)
         } else if (shouldShowPushSoftPrompt(vapidPublicKey)) {
-          // If PWA prompt is not available or was deferred, show push prompt
+          // If PWA prompt is not available or was deferred, show push prompt immediately
+          const stored = readPersistedPushReminderSettings()
+          if (stored.enabled) return
+
+          if (!cancelled) {
+            setMode('push')
+            setVisible(true)
+          }
+
+          // Hide in background if subscription already exists
           getCurrentPushSubscription()
             .then((subscription) => {
               if (cancelled) return
-              const stored = readPersistedPushReminderSettings()
               if (subscription) {
                 persistPushReminderSettings(true, stored.interval)
-                return
-              }
-              if (!stored.enabled) {
-                setMode('push')
-                setVisible(true)
+                setVisible(false)
               }
             })
-            .catch(() => {
-              if (!cancelled) {
-                setMode('push')
-                setVisible(true)
-              }
-            })
+            .catch(() => {/* keep visible */})
         }
       }
     })
@@ -108,25 +106,31 @@ export function PushPermissionNudge({
       const outcome = await promptPwaInstall()
 
       if (outcome === 'accepted') {
-        // PWA was installed successfully
-        // Now check if we should show push notification prompt
-        setVisible(false)
-
-        // Wait a bit for PWA to be installed, then check for push
+        // PWA was installed successfully – wait briefly, then show push prompt
         setTimeout(() => {
           if (shouldShowPushSoftPrompt(vapidPublicKey)) {
             setMode('push')
             setVisible(true)
+          } else {
+            setVisible(false)
           }
         }, 1000)
       } else {
-        // User dismissed or prompt unavailable
+        // User dismissed – still offer push so we can contact them
         markPwaPromptAsDeferred()
-        setVisible(false)
+        if (shouldShowPushSoftPrompt(vapidPublicKey)) {
+          setMode('push')
+        } else {
+          setVisible(false)
+        }
       }
     } catch {
       markPwaPromptAsDeferred()
-      setVisible(false)
+      if (shouldShowPushSoftPrompt(vapidPublicKey)) {
+        setMode('push')
+      } else {
+        setVisible(false)
+      }
     } finally {
       setBusy(false)
     }
@@ -159,6 +163,11 @@ export function PushPermissionNudge({
   function onLater() {
     if (mode === 'pwa') {
       markPwaPromptAsDeferred()
+      // Immediately offer push so we can still reach the user
+      if (shouldShowPushSoftPrompt(vapidPublicKey)) {
+        setMode('push')
+        return
+      }
     } else {
       postponePushSoftPrompt()
     }
