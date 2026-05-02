@@ -5,7 +5,7 @@ import type { NameEntry } from '@/types/name'
 
 export const SITE_NAME = '99 Names'
 export const SITE_TAGLINE = 'Learn Asma ul Husna with meaning, dua, and reflection'
-export const DEFAULT_OG_IMAGE = '/icon.svg'
+export const DEFAULT_OG_IMAGE = '/api/og'
 
 const fallbackSiteUrl = 'https://99names.app'
 
@@ -214,6 +214,29 @@ function ogLocale(locale: Language): string {
   return 'en_US'
 }
 
+function ogAlternateLocales(locale: Language): string[] {
+  return locales.filter((entry) => entry !== locale).map((entry) => ogLocale(entry))
+}
+
+function trimForOgText(value: string, maxLength = 110): string {
+  const normalized = value.replace(/\s+/g, ' ').trim()
+  if (normalized.length <= maxLength) return normalized
+  return `${normalized.slice(0, maxLength - 1)}...`
+}
+
+export function buildOgImagePath(options: { title: string; locale: Language; subtitle?: string }): string {
+  const params = new URLSearchParams({
+    title: trimForOgText(options.title, 90),
+    locale: options.locale,
+  })
+
+  if (options.subtitle) {
+    params.set('subtitle', trimForOgText(options.subtitle, 120))
+  }
+
+  return `${DEFAULT_OG_IMAGE}?${params.toString()}`
+}
+
 type BuildMetadataInput = {
   title: string
   description: string
@@ -235,6 +258,12 @@ export function buildMetadata({
   imageAlt = 'Daily Husna icon for the 99 Names learning aid',
   index = true,
 }: BuildMetadataInput): Metadata {
+  const shareImageUrl = buildOgImagePath({
+    title,
+    locale,
+    subtitle: description || SITE_TAGLINE,
+  })
+
   return {
     title,
     description,
@@ -248,10 +277,13 @@ export function buildMetadata({
       url: path,
       siteName: SITE_NAME,
       locale: ogLocale(locale),
+      alternateLocale: ogAlternateLocales(locale),
       type,
       images: [
         {
-          url: DEFAULT_OG_IMAGE,
+          url: shareImageUrl,
+          width: 1200,
+          height: 630,
           alt: imageAlt,
         },
       ],
@@ -262,7 +294,7 @@ export function buildMetadata({
       description,
       images: [
         {
-          url: DEFAULT_OG_IMAGE,
+          url: shareImageUrl,
           alt: imageAlt,
         },
       ],
@@ -294,7 +326,7 @@ export function rootMetadata(locale: Language): Metadata {
       ? 'Lerne die 99 Namen Allahs mit Arabisch, Bedeutung, Dua-Hinweisen, Reflexion und quellenbewussten Notizen.'
       : locale === 'tr'
         ? "Allah'ın 99 ismini Arapça, anlam, dua kullanımı, tefekkür ve kaynak bilinciyle öğren."
-        : 'Learn the 99 Names of Allah with Arabic, transliteration, meaning, dua usage, reflection and daily learning progress.'
+        : `${SITE_TAGLINE} with Arabic, transliteration, and daily learning progress.`
 
   return {
     metadataBase: new URL(SITE_URL),
