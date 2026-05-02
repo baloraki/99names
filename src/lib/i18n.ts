@@ -133,6 +133,9 @@ export type Dict = {
     pushNudgeBody: string
     pushNudgeEnable: string
     pushNudgeLater: string
+    pushPermissionGuideTitle: string
+    pushPermissionGuideBody: string
+    pushPermissionGuideOk: string
     pwaInstallTitle: string
     pwaInstallBody: string
   }
@@ -308,6 +311,9 @@ const de: Dict = {
     pushNudgeBody: 'Aktiviere Push-Benachrichtigungen, damit du beim Lernen leichter am Ball bleibst.',
     pushNudgeEnable: 'Aktivieren',
     pushNudgeLater: 'Nicht jetzt',
+    pushPermissionGuideTitle: 'Benachrichtigungen erlauben',
+    pushPermissionGuideBody: "Klicke oben auf \u201eErlauben\u201c, damit wir dich mit Lern-Erinnerungen erreichen k\u00f6nnen.",
+    pushPermissionGuideOk: 'OK',
     pwaInstallTitle: 'App installieren – für Erinnerungen nötig',
     pwaInstallBody: 'Damit wir dich mit kurzen Lern-Erinnerungen erreichen können, muss Daily Husna als App installiert sein.',
   },
@@ -483,6 +489,9 @@ const tr: Dict = {
     pushNudgeBody: 'Öğrenme düzenini korumak için push bildirimlerini etkinleştirebilirsin.',
     pushNudgeEnable: 'Etkinleştir',
     pushNudgeLater: 'Şimdi değil',
+    pushPermissionGuideTitle: 'Bildirimlere izin ver',
+    pushPermissionGuideBody: '\u00d6\u011frenme hat\u0131rlatmalar\u0131 alabilmek i\u00e7in yukar\u0131daki iletişim kutusunda \u201eİzin ver\u201c se\u00e7ene\u011fine t\u0131kla.',
+    pushPermissionGuideOk: 'Tamam',
     pwaInstallTitle: 'Uygulama kurulumu – bildirimler için gerekli',
     pwaInstallBody: 'Kısa öğrenme hatırlatmaları gönderebilmemiz için Daily Husna\'nın uygulama olarak kurulması gerekiyor.',
   },
@@ -658,6 +667,9 @@ const en: Dict = {
     pushNudgeBody: 'Enable push notifications to keep your learning rhythm going.',
     pushNudgeEnable: 'Enable',
     pushNudgeLater: 'Not now',
+    pushPermissionGuideTitle: 'Allow notifications',
+    pushPermissionGuideBody: 'Click "Allow" in the dialog above to receive learning reminders.',
+    pushPermissionGuideOk: 'OK',
     pwaInstallTitle: 'Install the app – needed for reminders',
     pwaInstallBody: 'To send you short learning reminders, Daily Husna needs to be installed as an app.',
   },

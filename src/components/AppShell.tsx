@@ -241,6 +241,9 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
         laterLabel={dict.settings.pushNudgeLater}
         pwaInstallTitle={dict.settings.pwaInstallTitle}
         pwaInstallBody={dict.settings.pwaInstallBody}
+        permissionGuideTitle={dict.settings.pushPermissionGuideTitle}
+        permissionGuideBody={dict.settings.pushPermissionGuideBody}
+        permissionGuideOk={dict.settings.pushPermissionGuideOk}
       />
       <main className="mx-auto w-full max-w-6xl px-4 pb-32 pt-6 md:pb-12">{children}</main>
 

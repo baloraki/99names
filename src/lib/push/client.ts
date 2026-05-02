@@ -6,9 +6,9 @@ const pushIntervalKey = '99names.pushReminders.interval'
 const pushPromptNextEligibleAtKey = '99names.pushReminders.softPrompt.nextEligibleAt'
 const pwaPromptDeferredKey = '99names.pwa.promptDeferred'
 
-const DAY_IN_MS = 24 * 60 * 60 * 1000
-const PUSH_SOFT_PROMPT_COOLDOWN_DAYS = 30
-const PUSH_SOFT_PROMPT_COOLDOWN_MS = PUSH_SOFT_PROMPT_COOLDOWN_DAYS * DAY_IN_MS
+const PUSH_EXPLICIT_NO_COOLDOWN_MS = 7 * 24 * 60 * 60 * 1000 // 7 days after explicit "No"
+const PROGRESS_STORAGE_KEY = 'app:v1:progress'
+const PROGRESS_THRESHOLD_PERCENT = 5 // show prompts after 5% progress (≥5 of 99 names)
 
 // Global variable to store the beforeinstallprompt event
 let deferredPwaPrompt: BeforeInstallPromptEvent | null = null
@@ -146,9 +146,10 @@ export function shouldShowPushSoftPrompt(vapidPublicKey: string, now = Date.now(
   }
 }
 
+/** Call this only when the user explicitly clicks "No / Not now". Sets a 7-day cooldown. */
 export function postponePushSoftPrompt(now = Date.now()): void {
   try {
-    window.localStorage.setItem(pushPromptNextEligibleAtKey, String(now + PUSH_SOFT_PROMPT_COOLDOWN_MS))
+    window.localStorage.setItem(pushPromptNextEligibleAtKey, String(now + PUSH_EXPLICIT_NO_COOLDOWN_MS))
   } catch {
     // localStorage can be unavailable in private modes or strict browser settings.
   }
@@ -166,6 +167,22 @@ if (typeof window !== 'undefined') {
       listener()
     }
   })
+}
+
+// ── Learning progress threshold ───────────────────────────────────────────────
+/** Returns true once the user has learned ≥5% of the 99 names (≥5 names). */
+export function hasEnoughLearningProgress(): boolean {
+  if (typeof window === 'undefined') return false
+  try {
+    const raw = window.localStorage.getItem(PROGRESS_STORAGE_KEY)
+    if (!raw) return false
+    const parsed = JSON.parse(raw) as { learnedIds?: unknown }
+    if (!Array.isArray(parsed.learnedIds)) return false
+    const percent = (parsed.learnedIds.length / 99) * 100
+    return percent >= PROGRESS_THRESHOLD_PERCENT
+  } catch {
+    return false
+  }
 }
 
 export function isPwaInstallable(): boolean {

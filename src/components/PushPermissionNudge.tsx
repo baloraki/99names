@@ -5,6 +5,7 @@ import type { ReminderInterval } from '@/lib/push/reminders'
 import {
   getBrowserTimeZone,
   getCurrentPushSubscription,
+  hasEnoughLearningProgress,
   hasPwaPromptBeenDeferred,
   isPwaInstallable,
   isPwaInstalled,
@@ -26,6 +27,9 @@ export function PushPermissionNudge({
   laterLabel,
   pwaInstallTitle,
   pwaInstallBody,
+  permissionGuideTitle,
+  permissionGuideBody,
+  permissionGuideOk,
 }: {
   title: string
   body: string
@@ -33,10 +37,14 @@ export function PushPermissionNudge({
   laterLabel: string
   pwaInstallTitle: string
   pwaInstallBody: string
+  permissionGuideTitle: string
+  permissionGuideBody: string
+  permissionGuideOk: string
 }) {
   const [visible, setVisible] = useState(false)
   const [mode, setMode] = useState<'push' | 'pwa'>('push')
   const [busy, setBusy] = useState(false)
+  const [awaitingPermission, setAwaitingPermission] = useState(false)
   const vapidPublicKey = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY ?? ''
 
   useEffect(() => {
@@ -46,10 +54,27 @@ export function PushPermissionNudge({
       if (cancelled) return
 
       if (isPwaInstalled()) {
-        // PWA already installed → offer push
-        if (!shouldShowPushSoftPrompt(vapidPublicKey)) return
+        // PWA already installed → check push
         const stored = readPersistedPushReminderSettings()
-        if (stored.enabled) return
+
+        // Always check subscription status when push was previously enabled
+        // (catches lost/expired subscriptions)
+        if (stored.enabled) {
+          getCurrentPushSubscription()
+            .then((subscription) => {
+              if (cancelled) return
+              if (!subscription) {
+                // Subscription was lost – re-prompt immediately
+                setMode('push')
+                setVisible(true)
+              }
+            })
+            .catch(() => {/* ignore */})
+          return
+        }
+
+        // Not previously enabled – show soft prompt if cooldown passed
+        if (!shouldShowPushSoftPrompt(vapidPublicKey)) return
 
         setMode('push')
         setVisible(true)
@@ -87,14 +112,32 @@ export function PushPermissionNudge({
       }
     }
 
-    // Run immediately (covers case where beforeinstallprompt already fired)
-    queueMicrotask(decidePrompt)
+    function scheduleDecide() {
+      if (hasEnoughLearningProgress()) {
+        queueMicrotask(decidePrompt)
+        return undefined
+      }
+      // Not enough progress yet – poll every 5 s until threshold is reached
+      const interval = setInterval(() => {
+        if (cancelled) {
+          clearInterval(interval)
+          return
+        }
+        if (hasEnoughLearningProgress()) {
+          clearInterval(interval)
+          decidePrompt()
+        }
+      }, 5_000)
+      return interval
+    }
+
+    const interval = scheduleDecide()
 
     // Also subscribe: if beforeinstallprompt fires late, switch to PWA prompt
-    // (only if we haven't already shown the push prompt or pwa prompt)
+    // but only if the 5% progress threshold is already met
     const unsubscribe = subscribeToPwaInstallable(() => {
       if (cancelled) return
-      if (!hasPwaPromptBeenDeferred() && !isPwaInstalled()) {
+      if (hasEnoughLearningProgress() && !hasPwaPromptBeenDeferred() && !isPwaInstalled()) {
         setMode('pwa')
         setVisible(true)
       }
@@ -102,6 +145,7 @@ export function PushPermissionNudge({
 
     return () => {
       cancelled = true
+      if (interval) clearInterval(interval)
       unsubscribe()
     }
   }, [vapidPublicKey])
@@ -145,23 +189,24 @@ export function PushPermissionNudge({
 
   async function onEnablePush() {
     setBusy(true)
-    postponePushSoftPrompt()
+    setVisible(false)
+    setAwaitingPermission(true)
 
     try {
       const stored = readPersistedPushReminderSettings()
       const permission = await requestNotificationPermission()
+      setAwaitingPermission(false)
+
       if (permission !== 'granted') {
         persistPushReminderSettings(false, stored.interval)
-        setVisible(false)
         return
       }
 
       const subscription = await subscribeBrowserToPush(vapidPublicKey)
       await saveSubscription(subscription, stored.interval)
       persistPushReminderSettings(true, stored.interval)
-      setVisible(false)
     } catch {
-      setVisible(false)
+      setAwaitingPermission(false)
     } finally {
       setBusy(false)
     }
@@ -179,6 +224,26 @@ export function PushPermissionNudge({
       postponePushSoftPrompt()
     }
     setVisible(false)
+  }
+
+  if (awaitingPermission) {
+    return (
+      <div className="fixed inset-x-3 top-0 z-50 flex justify-center pointer-events-none">
+        {/* Arrow pointing up toward the browser dialog */}
+        <div className="pointer-events-auto mt-16 w-full max-w-sm rounded-xl border border-gold/40 bg-surface/95 p-4 shadow-xl backdrop-blur">
+          <div className="absolute -top-3 left-1/2 -translate-x-1/2 text-gold text-2xl leading-none">▲</div>
+          <p className="text-sm font-semibold text-primary">{permissionGuideTitle}</p>
+          <p className="mt-1 text-sm text-muted">{permissionGuideBody}</p>
+          <button
+            type="button"
+            className="btn-primary mt-3"
+            onClick={() => setAwaitingPermission(false)}
+          >
+            {permissionGuideOk}
+          </button>
+        </div>
+      </div>
+    )
   }
 
   if (!visible) return null

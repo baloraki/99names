@@ -63,16 +63,23 @@ describe('push soft prompt', () => {
   it('shows on first visit when browser supports push and permission is default', () => {
     mockSupportedBrowser('default')
 
-    expect(shouldShowPushSoftPrompt('test-vapid-key', 1_000)).toBe(true)
+    expect(shouldShowPushSoftPrompt('test-vapid-key')).toBe(true)
   })
 
-  it('does not show after deferring until cooldown expires', () => {
+  it('shows again on next visit without explicit no (no cooldown)', () => {
+    mockSupportedBrowser('default')
+
+    expect(shouldShowPushSoftPrompt('test-vapid-key')).toBe(true)
+    expect(shouldShowPushSoftPrompt('test-vapid-key')).toBe(true)
+  })
+
+  it('does not show for 7 days after explicit "No", then shows again', () => {
     mockSupportedBrowser('default')
 
     postponePushSoftPrompt(1_000)
 
-    expect(shouldShowPushSoftPrompt('test-vapid-key', 1_000 + 29 * 24 * 60 * 60 * 1000)).toBe(false)
-    expect(shouldShowPushSoftPrompt('test-vapid-key', 1_000 + 30 * 24 * 60 * 60 * 1000)).toBe(true)
+    expect(shouldShowPushSoftPrompt('test-vapid-key', 1_000 + 6 * 24 * 60 * 60 * 1000)).toBe(false)
+    expect(shouldShowPushSoftPrompt('test-vapid-key', 1_000 + 7 * 24 * 60 * 60 * 1000)).toBe(true)
   })
 
   it('does not show when notification permission is already denied', () => {
