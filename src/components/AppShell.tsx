@@ -38,6 +38,7 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
 
   useEffect(() => {
     if (routeLanguage) {
+      storage.setLanguage(routeLanguage)
       document.documentElement.lang = routeLanguage
       return
     }

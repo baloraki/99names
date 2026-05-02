@@ -35,6 +35,7 @@ describe('names data', () => {
 
   it('does not make invented source references', () => {
     const content = JSON.stringify(names).toLowerCase()
+    // Detects formatted citation claims like "Bukhari 123" / "Hadith no. 456".
     expect(content).not.toMatch(/\b(?:sahih|bukhari|muslim|tirmidhi|hadith)\s*(?:no\.?|nr\.?|#)?\s*\d+\b/)
   })
 
