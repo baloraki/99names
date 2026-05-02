@@ -72,6 +72,11 @@ export type Dict = {
     allLearnedTitle: string
     allLearnedBody: string
     overview: string
+    showMeaning: string
+    recallPrompt: string
+    overallLearned: (learned: number, total: number) => string
+    sessionLearned: (count: number) => string
+    keyboard: string
   }
   detail: {
     backToOverview: string
@@ -201,13 +206,18 @@ const de: Dict = {
   learn: {
     eyebrow: 'Lernmodus',
     title: 'Nächster offener Name',
-    remaining: (count) => `${count} Namen sind noch offen.`,
+    remaining: (count) => `${count} Namen noch offen`,
     markLearned: 'Als gelernt markieren',
-    next: 'Nächster Name',
+    next: 'Überspringen',
     details: 'Details',
     allLearnedTitle: 'Alle Namen sind als gelernt markiert.',
     allLearnedBody: 'Du kannst deinen Fortschritt in den Einstellungen zurücksetzen oder einzelne Namen wieder als offen markieren.',
     overview: 'Zur Übersicht',
+    showMeaning: 'Bedeutung aufdecken',
+    recallPrompt: 'Versuche die Bedeutung zu erinnern …',
+    overallLearned: (learned, total) => `${learned} von ${total} gelernt`,
+    sessionLearned: (count) => `+${count} heute`,
+    keyboard: '␣ aufdecken · L gelernt · N überspringen · F Favorit',
   },
   detail: {
     backToOverview: 'Zur Übersicht',
@@ -337,13 +347,18 @@ const tr: Dict = {
   learn: {
     eyebrow: 'Öğrenme modu',
     title: 'Sonraki açık isim',
-    remaining: (count) => `${count} isim henüz açık.`,
+    remaining: (count) => `${count} isim henüz açık`,
     markLearned: 'Öğrenildi olarak işaretle',
-    next: 'Sonraki isim',
+    next: 'Atla',
     details: 'Detaylar',
     allLearnedTitle: 'Tüm isimler öğrenildi olarak işaretlendi.',
     allLearnedBody: 'Ayarlar bölümünde ilerlemeni sıfırlayabilir veya tek tek isimleri tekrar açık olarak işaretleyebilirsin.',
     overview: 'Genel bakışa git',
+    showMeaning: 'Anlamı göster',
+    recallPrompt: 'Anlamını hatırlamaya çalış …',
+    overallLearned: (learned, total) => `${total} isimden ${learned} öğrenildi`,
+    sessionLearned: (count) => `+${count} bugün`,
+    keyboard: '␣ göster · L öğrenildi · N atla · F favori',
   },
   detail: {
     backToOverview: 'Genel bakışa dön',
@@ -473,13 +488,18 @@ const en: Dict = {
   learn: {
     eyebrow: 'Learning mode',
     title: 'Next open name',
-    remaining: (count) => `${count} names are still open.`,
+    remaining: (count) => `${count} names still open`,
     markLearned: 'Mark as learned',
-    next: 'Next name',
+    next: 'Skip',
     details: 'Details',
     allLearnedTitle: 'All names are marked as learned.',
     allLearnedBody: 'You can reset your progress in settings or mark individual names as open again.',
     overview: 'Go to overview',
+    showMeaning: 'Reveal meaning',
+    recallPrompt: 'Try to recall the meaning …',
+    overallLearned: (learned, total) => `${learned} of ${total} learned`,
+    sessionLearned: (count) => `+${count} today`,
+    keyboard: '␣ reveal · L learned · N skip · F favorite',
   },
   detail: {
     backToOverview: 'Back to overview',
