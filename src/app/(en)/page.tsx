@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { JsonLd } from '@/components/JsonLd'
 import { LanguageRedirect } from '@/components/LanguageRedirect'
 import { LearningProgressWidget } from '@/components/LearningProgressWidget'
-import { names } from '@/data/names'
+import {firstName, names} from '@/data/names'
 import { buildMetadata, homeAlternates } from '@/lib/seo'
 import { organizationJsonLd, websiteJsonLd } from '@/lib/structuredData'
 
@@ -41,15 +41,14 @@ export default function HomePage() {
           </div>
         </div>
         <section className="rounded-lg border border-gold/25 bg-[radial-gradient(circle_at_top,rgba(214,178,94,0.18),rgba(22,22,22,0.96)_58%)] p-6">
-          <h2 className="text-sm uppercase tracking-[0.18em] text-gold">Begin with mercy</h2>
-          <p className="mt-5 text-right font-arabic text-6xl leading-tight text-primary" lang="ar" dir="rtl">
-            {names[0].arabic}
-          </p>
-          <p className="mt-6 text-2xl font-semibold">{names[0].transliteration}</p>
-          <p className="mt-1 text-muted">{names[0].meanings.en}</p>
-          <Link className="mt-6 inline-flex rounded text-sm font-semibold text-gold hover:text-gold-soft focus-ring" href={`/names/${names[0].slug}`}>
-            Read Ar-Rahman meaning
-          </Link>
+          <h2 className="text-sm uppercase tracking-[0.18em] text-gold">{firstName.meanings.en}</h2>
+          <p className="mt-5 text-right font-arabic text-6xl leading-tight text-primary" lang="ar" dir="rtl">{firstName.arabic}</p>
+          <p className="mt-6 text-2xl font-semibold">{firstName.transliteration}</p>
+          <p className="mt-1 text-gold">{firstName.explanations.en}</p>
+          <p className="mt-1 text-muted">{firstName.duaUsage.en}</p>
+          {firstName.reflection && <p className="mt-1 text-muted">{firstName.reflection?.en}</p>}
+          {firstName.sourceNote && <p className="mt-1 text-muted">{firstName.sourceNote?.en}</p>}
+          {firstName.source && <p className="mt-1 text-gold-muted">{firstName.source?.en}</p>}
         </section>
       </section>
 
@@ -101,28 +100,6 @@ export default function HomePage() {
           ))}
         </div>
       </section>
-
-      <section className="space-y-4">
-        <h2 className="text-3xl font-semibold">FAQ</h2>
-        <Faq question="Is this app a religious authority?">
-          No. It is a learning aid. The wording is cautious, source notes remain visible, and review-required content is preserved.
-        </Faq>
-        <Faq question="Can I use the names of Allah in dua?">
-          Yes, calling upon Allah by His beautiful names is encouraged. This app keeps dua wording generic and avoids invented formulas or guaranteed effects.
-        </Faq>
-        <Faq question="Does the app support German and Turkish?">
-          Yes. Use the German route for 99 Namen Allahs and the Turkish route for Allah&apos;ın 99 ismi / Esmaül Hüsna meanings.
-        </Faq>
-      </section>
     </div>
-  )
-}
-
-function Faq({ question, children }: { question: string; children: ReactNode }) {
-  return (
-    <section className="rounded-lg border border-white/10 bg-surface p-5">
-      <h3 className="text-lg font-semibold">{question}</h3>
-      <p className="mt-2 leading-7 text-muted">{children}</p>
-    </section>
   )
 }

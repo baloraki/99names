@@ -9,5 +9,6 @@ export type NameEntry = {
   duaUsage: { de: string; tr: string; en: string };
   reflection?: { de: string; tr: string; en: string };
   sourceNote?: { de: string; tr: string; en: string };
+  source?: { de: string; tr: string; en: string };
   contentReviewRequired: boolean;
 }

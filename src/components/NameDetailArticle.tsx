@@ -141,10 +141,6 @@ export function NameDetailArticle({ name, locale }: { name: NameEntry; locale: L
             <dt className="text-sm text-muted">{text.turkish}</dt>
             <dd className="mt-1 text-lg text-gold">{name.meanings.tr}</dd>
           </div>
-          <div>
-            <dt className="text-sm text-muted">{text.arabic}</dt>
-            <dd className="mt-1 font-arabic text-2xl text-primary" lang="ar" dir="rtl">{name.arabic}</dd>
-          </div>
         </dl>
       </header>
 
@@ -155,10 +151,10 @@ export function NameDetailArticle({ name, locale }: { name: NameEntry; locale: L
         </section>
       )}
 
-      <InfoBlock title={text.explanation} body={name.explanations[locale]} />
-      <InfoBlock title={text.dua} body={name.duaUsage[locale]} />
+      <InfoBlock title={text.qMeaning(name.transliteration)} body={name.explanations[locale]} />
+      <InfoBlock title={text.qDua(name.transliteration)} body={name.duaUsage[locale]} />
       {name.reflection && <InfoBlock title={text.reflection} body={name.reflection[locale]} />}
-      {name.sourceNote && <InfoBlock title={text.source} body={name.sourceNote[locale]} subtle />}
+      {name.sourceNote && <InfoBlock title={text.source} body={name.sourceNote[locale]} subtle={name.source ? name.source[locale] : undefined} />}
 
       <nav className="grid gap-3 sm:grid-cols-2" aria-label={`${title} navigation`}>
         <Link className="btn-secondary" href={getLocalizedNamePath(locale, previous.slug)}>
@@ -185,37 +181,16 @@ export function NameDetailArticle({ name, locale }: { name: NameEntry; locale: L
           ))}
         </div>
       </section>
-
-      <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">{text.faq}</h2>
-        <FaqItem question={text.qMeaning(name.transliteration)}>
-          {name.transliteration} {locale === 'tr' ? 'anlamı' : locale === 'de' ? 'bedeutet' : 'means'} &quot;{name.meanings[locale]}.&quot;
-        </FaqItem>
-        <FaqItem question={text.qDua(name.transliteration)}>
-          {name.duaUsage[locale]}
-        </FaqItem>
-        <FaqItem question={text.qSource(name.transliteration)}>
-          {text.aSource} {name.sourceNote?.[locale]}
-        </FaqItem>
-      </section>
     </article>
   )
 }
 
-function InfoBlock({ title, body, subtle = false }: { title: string; body: string; subtle?: boolean }) {
+function InfoBlock({ title, body, subtle }: { title: string; body: string; subtle?: string }) {
   return (
     <section className={subtle ? 'rounded-lg border border-white/10 bg-white/[0.03] p-5' : 'rounded-lg border border-white/10 bg-surface p-5'}>
       <h2 className="text-sm uppercase tracking-[0.18em] text-gold">{title}</h2>
       <p className="mt-3 leading-7 text-muted">{body}</p>
-    </section>
-  )
-}
-
-function FaqItem({ question, children }: { question: string; children: ReactNode }) {
-  return (
-    <section className="rounded-lg border border-white/10 bg-surface p-5">
-      <h3 className="text-lg font-semibold">{question}</h3>
-      <p className="mt-2 leading-7 text-muted">{children}</p>
+      {subtle && <p className="mt-3 text-sm leading-6 text-muted">{subtle}</p>}
     </section>
   )
 }
