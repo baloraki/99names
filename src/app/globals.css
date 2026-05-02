@@ -138,9 +138,15 @@ textarea {
 }
 
 .nav-link {
+  display: inline-flex;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
   border-radius: 8px;
   padding: 0.55rem 0.8rem;
   color: #b8b2a4;
+  font: inherit;
   outline: none;
 }
 
@@ -150,6 +156,11 @@ textarea {
   color: #f0d98a;
 }
 
+.nav-link:focus-visible,
+.mobile-nav:focus-visible {
+  box-shadow: 0 0 0 2px #d6b25e, 0 0 0 5px #080808;
+}
+
 .mobile-nav {
   display: flex;
   min-height: 54px;
@@ -157,8 +168,13 @@ textarea {
   align-items: center;
   justify-content: center;
   gap: 0.15rem;
+  width: 100%;
+  border: 0;
   border-radius: 8px;
+  background: transparent;
   color: #b8b2a4;
+  cursor: pointer;
+  font: inherit;
   font-size: 0.72rem;
   outline: none;
 }
