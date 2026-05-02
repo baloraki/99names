@@ -94,4 +94,33 @@ describe('proxy', () => {
     expect(response.headers.get('location')).toBeNull()
     expect(response.cookies.get('app_language')?.value).toBe('de')
   })
+
+  it('sets security headers on normal responses', () => {
+    const request = new NextRequest('https://99names.app/de/namen')
+
+    const response = proxy(request)
+
+    const csp = response.headers.get('content-security-policy')
+    expect(response.status).toBe(200)
+    expect(csp).toContain("default-src 'self'")
+    expect(csp).toContain("frame-ancestors 'none'")
+    expect(csp).toContain("require-trusted-types-for 'script'")
+    expect(response.headers.get('strict-transport-security')).toBe('max-age=63072000; includeSubDomains; preload')
+    expect(response.headers.get('cross-origin-opener-policy')).toBe('same-origin')
+    expect(response.headers.get('x-frame-options')).toBe('DENY')
+  })
+
+  it('sets security headers on redirects', () => {
+    const request = new NextRequest('https://99names.app/privacy', {
+      headers: { cookie: 'app_language=tr' },
+    })
+
+    const response = proxy(request)
+
+    expect(response.status).toBeGreaterThanOrEqual(300)
+    expect(response.status).toBeLessThan(400)
+    expect(response.headers.get('location')).toBe('https://99names.app/tr/gizlilik')
+    expect(response.headers.get('content-security-policy')).toContain("trusted-types nextjs nextjs#bundler")
+    expect(response.headers.get('strict-transport-security')).toBe('max-age=63072000; includeSubDomains; preload')
+  })
 })
