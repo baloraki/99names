@@ -45,7 +45,7 @@ const content: Record<Language, PolicyContent> = {
       {
         heading: '3. Lokaler Browserspeicher (localStorage)',
         paragraphs: [
-          'Diese App speichert folgende Daten lokal im Browserspeicher (localStorage) Ihres Geräts: Spracheinstellung, Lernfortschritt (welche Namen als gelernt markiert wurden), Favoritenliste, zuletzt angesehene Namen, Lernplan-Einstellungen sowie den lokalen Status optionaler Push-Erinnerungen.',
+          'Diese App speichert folgende Daten lokal im Browserspeicher (localStorage) Ihres Geräts: Spracheinstellung, Lernfortschritt (welche Namen als gelernt markiert wurden), Favoritenliste, zuletzt angesehene Namen sowie den lokalen Status optionaler Push-Erinnerungen.',
           'Diese lokalen Daten verlassen Ihr Gerät nicht. Sie können diese Daten jederzeit selbst löschen – über die Einstellungsseite der App oder direkt in Ihren Browsereinstellungen.',
           'Die Nutzung des lokalen Browserspeichers erfolgt ausschließlich zur Bereitstellung der von Ihnen gewünschten App-Funktionen. Es findet keine Nutzung zu Werbe-, Tracking- oder Profilingzwecken statt.',
           'Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bereitstellung einer funktionsfähigen Anwendung).',
@@ -143,7 +143,7 @@ const content: Record<Language, PolicyContent> = {
       {
         heading: '3. Local browser storage (localStorage)',
         paragraphs: [
-          'This app stores the following data in the local browser storage (localStorage) of your device: language setting, learning progress (which names have been marked as learned), favourites list, most recently viewed names, learning schedule settings, and local state for optional push reminders.',
+          'This app stores the following data in the local browser storage (localStorage) of your device: language setting, learning progress (which names have been marked as learned), favourites list, most recently viewed names, and local state for optional push reminders.',
           'This local data does not leave your device. You can delete it at any time via the app\'s Settings page or directly in your browser settings.',
           'Local browser storage is used only to provide the app functions requested by you. It is not used for advertising, tracking, or profiling purposes.',
           'Legal basis: Art. 6(1)(f) GDPR (legitimate interest in providing a functioning application).',
@@ -241,7 +241,7 @@ const content: Record<Language, PolicyContent> = {
       {
         heading: '3. Yerel tarayıcı depolama alanı (localStorage)',
         paragraphs: [
-          'Bu uygulama aşağıdaki verileri cihazınızın yerel tarayıcı belleğinde (localStorage) saklar: dil tercihi, öğrenme ilerleme durumu (hangi isimlerin öğrenildi olarak işaretlendiği), favori listesi, en son görüntülenen isimler, öğrenme planı ayarları ve isteğe bağlı push hatırlatmaları için yerel durum.',
+          'Bu uygulama aşağıdaki verileri cihazınızın yerel tarayıcı belleğinde (localStorage) saklar: dil tercihi, öğrenme ilerleme durumu (hangi isimlerin öğrenildi olarak işaretlendiği), favori listesi, en son görüntülenen isimler ve isteğe bağlı push hatırlatmaları için yerel durum.',
           'Bu yerel veriler cihazınızı terk etmez. Uygulamanın Ayarlar sayfasından veya doğrudan tarayıcı ayarlarınızdan bu verileri istediğiniz zaman silebilirsiniz.',
           'Yerel tarayıcı depolama alanı yalnızca talep ettiğiniz uygulama işlevlerini sunmak için kullanılır. Reklam, izleme veya profil oluşturma amacıyla kullanılmaz.',
           'Hukuki dayanak: GDPR Madde 6(1)(f) – işlevsel bir uygulama sunmaya yönelik meşru menfaat.',
