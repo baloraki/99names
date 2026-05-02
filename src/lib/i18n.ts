@@ -286,8 +286,8 @@ const de: Dict = {
     language: 'Sprache',
     theme: 'Theme',
     themeOptions: {
-      'dark-classic': 'Dunkel (klassisch)',
-      'blue-night': 'Blau (aktuell)',
+      'dark-classic': 'Dunkel',
+      'blue-night': 'Blaue Nacht',
       'soft-light': 'Hell',
     },
     localData: 'Lokale Daten',
@@ -455,8 +455,8 @@ const tr: Dict = {
     language: 'Dil',
     theme: 'Tema',
     themeOptions: {
-      'dark-classic': 'Koyu (klasik)',
-      'blue-night': 'Mavi (mevcut)',
+      'dark-classic': 'Koyu',
+      'blue-night': 'Gece mavisi',
       'soft-light': 'Açık',
     },
     localData: 'Yerel veriler',
@@ -624,8 +624,8 @@ const en: Dict = {
     language: 'Language',
     theme: 'Theme',
     themeOptions: {
-      'dark-classic': 'Dark (classic)',
-      'blue-night': 'Blue (current)',
+      'dark-classic': 'Dark',
+      'blue-night': 'Blue night',
       'soft-light': 'Light',
     },
     localData: 'Local data',
