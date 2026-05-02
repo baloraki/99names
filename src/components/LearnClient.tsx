@@ -763,49 +763,94 @@ function BrowseMode({
           const repeat = repeatIds.includes(name.id)
           return (
             <li key={name.id}>
-              <div className="flex items-stretch gap-2 rounded-lg border border-white/10 bg-surface px-3 py-3 transition-colors hover:border-gold/40">
-                <Link
-                  href={getLocalizedNamePath(language, name.slug)}
-                  className="flex flex-1 items-center gap-3 focus-ring rounded"
-                >
-                  <span className="w-8 shrink-0 text-xs text-gold-muted tabular-nums">
-                    #{name.id.toString().padStart(2, '0')}
-                  </span>
-                  <span className="font-arabic text-2xl text-primary" lang="ar" dir="rtl">
-                    {name.arabic}
-                  </span>
-                  <span className="flex-1 truncate">
-                    <span className="block truncate text-sm font-semibold text-primary">{name.transliteration}</span>
-                    <span className="block truncate text-xs text-muted">{name.meanings[language]}</span>
-                  </span>
-                </Link>
-                <div className="flex items-center gap-1.5">
-                  {learned && (
-                    <span className="rounded-full border border-success/40 bg-success/10 px-2 py-0.5 text-[10px] font-semibold text-success">
-                      {dict.learn.listLearned}
-                    </span>
-                  )}
-                  {!learned && repeat && (
-                    <span className="rounded-full border border-sky-400/40 bg-sky-500/10 px-2 py-0.5 text-[10px] font-semibold text-sky-300">
-                      {dict.learn.listRepeat}
-                    </span>
-                  )}
-                  {!learned && !repeat && (
-                    <span className="rounded-full border border-white/10 bg-surface-soft px-2 py-0.5 text-[10px] font-semibold text-muted">
-                      {dict.learn.listOpen}
-                    </span>
-                  )}
-                  <button
-                    type="button"
-                    onClick={() => actions.toggleFavorite(name.id)}
-                    className={`focus-ring rounded p-1 text-lg leading-none transition-colors ${
-                      favorite ? 'text-gold' : 'text-muted/50 hover:text-gold/70'
-                    }`}
-                    aria-label={favorite ? dict.common.removeFavorite : dict.common.favorite}
-                    aria-pressed={favorite}
+              <div className="flex flex-col gap-2 rounded-lg border border-white/10 bg-surface px-3 py-3 transition-colors hover:border-gold/40">
+                <div className="flex items-stretch gap-2">
+                  <Link
+                    href={getLocalizedNamePath(language, name.slug)}
+                    className="flex flex-1 items-center gap-3 focus-ring rounded"
                   >
-                    {favorite ? '★' : '☆'}
-                  </button>
+                    <span className="w-8 shrink-0 text-xs text-gold-muted tabular-nums">
+                      #{name.id.toString().padStart(2, '0')}
+                    </span>
+                    <span className="font-arabic text-2xl text-primary" lang="ar" dir="rtl">
+                      {name.arabic}
+                    </span>
+                    <span className="flex-1 truncate">
+                      <span className="block truncate text-sm font-semibold text-primary">{name.transliteration}</span>
+                      <span className="block truncate text-xs text-muted">{name.meanings[language]}</span>
+                    </span>
+                  </Link>
+                  <div className="flex items-center gap-1.5">
+                    {learned && (
+                      <span className="rounded-full border border-success/40 bg-success/10 px-2 py-0.5 text-[10px] font-semibold text-success">
+                        {dict.learn.listLearned}
+                      </span>
+                    )}
+                    {!learned && repeat && (
+                      <span className="rounded-full border border-sky-400/40 bg-sky-500/10 px-2 py-0.5 text-[10px] font-semibold text-sky-300">
+                        {dict.learn.listRepeat}
+                      </span>
+                    )}
+                    {!learned && !repeat && (
+                      <span className="rounded-full border border-white/10 bg-surface-soft px-2 py-0.5 text-[10px] font-semibold text-muted">
+                        {dict.learn.listOpen}
+                      </span>
+                    )}
+                    <button
+                      type="button"
+                      onClick={() => actions.toggleFavorite(name.id)}
+                      className={`focus-ring rounded p-1 text-lg leading-none transition-colors ${
+                        favorite ? 'text-gold' : 'text-muted/50 hover:text-gold/70'
+                      }`}
+                      aria-label={favorite ? dict.common.removeFavorite : dict.common.favorite}
+                      aria-pressed={favorite}
+                    >
+                      {favorite ? '★' : '☆'}
+                    </button>
+                  </div>
+                </div>
+                {/* Status action buttons */}
+                <div className="flex gap-1.5">
+                  {learned ? (
+                    <button
+                      type="button"
+                      onClick={() => actions.unmarkLearned(name.id)}
+                      className="focus-ring flex-1 rounded border border-white/10 bg-surface-soft px-2 py-1.5 text-xs font-medium text-muted transition-colors hover:border-gold/40 hover:text-gold"
+                      aria-label={dict.detail.markOpen}
+                    >
+                      {dict.detail.markOpen}
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => actions.markLearned(name.id, name.slug)}
+                      className="focus-ring flex-1 rounded border border-success/40 bg-success/10 px-2 py-1.5 text-xs font-medium text-success transition-colors hover:bg-success/20"
+                      aria-label={dict.learn.markLearned}
+                    >
+                      {dict.learn.markLearned}
+                    </button>
+                  )}
+                  {!learned && (
+                    repeat ? (
+                      <button
+                        type="button"
+                        onClick={() => actions.removeRepeat(name.id)}
+                        className="focus-ring flex-1 rounded border border-white/10 bg-surface-soft px-2 py-1.5 text-xs font-medium text-muted transition-colors hover:border-gold/40 hover:text-gold"
+                        aria-label={dict.learn.skip}
+                      >
+                        {dict.learn.skip}
+                      </button>
+                    ) : (
+                      <button
+                        type="button"
+                        onClick={() => actions.queueRepeat(name.id)}
+                        className="focus-ring flex-1 rounded border border-sky-400/40 bg-sky-500/10 px-2 py-1.5 text-xs font-medium text-sky-300 transition-colors hover:bg-sky-500/20"
+                        aria-label={dict.learn.repeat}
+                      >
+                        {dict.learn.repeat}
+                      </button>
+                    )
+                  )}
                 </div>
               </div>
             </li>
