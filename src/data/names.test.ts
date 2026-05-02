@@ -41,7 +41,18 @@ describe('names data', () => {
 
   it('avoids guarantee wording, fixed-number rituals, and guaranteed effects', () => {
     const content = JSON.stringify(names).toLowerCase()
-    expect(content).not.toMatch(/always works|wird garantiert|kesin olarak|guaranteed effect|healing promise|heilversprechen|şifa garantisi/)
+    const bannedGuaranteeClaims = [
+      /\balways works\b/,
+      /\bwird garantiert\b/,
+      /\bkesin olarak\b/,
+      /\bguaranteed effect\b/,
+      /\bhealing promise\b/,
+      /\bheilversprechen\b/,
+      /\bşifa garantisi\b/,
+    ]
+    for (const pattern of bannedGuaranteeClaims) {
+      expect(content).not.toMatch(pattern)
+    }
     expect(content).not.toMatch(/\b(7|11|33|99|100)\s*(times|mal|kez)\b/)
   })
 })
