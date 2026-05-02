@@ -241,8 +241,6 @@ const homeLabels: Record<Language, string> = {
   tr: 'Ana Sayfa',
 }
 
-const relevantSlugs = ['ar-rahman', 'ar-rahim', 'al-ghaffar', 'ar-razzaq', 'al-wadud']
-
 export function getLocalizedSeoMetadata(page: LocalizedSeoPage, locale: Language): Metadata {
   const text = copy[page][locale]
   return buildMetadata({
@@ -319,20 +317,17 @@ function LearnPage({ locale }: { locale: Language }) {
 
 function DuaPage({ locale }: { locale: Language }) {
   const text = copy.dua[locale]
-  const relevantNames = relevantSlugs
-    .map((slug) => names.find((name) => name.slug === slug))
-    .filter((name): name is (typeof names)[number] => Boolean(name))
 
   return (
     <div lang={locale} className="mx-auto max-w-4xl space-y-8">
       <PageIntro page="dua" locale={locale} />
       <section className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {relevantNames.map((name) => (
+        {names.map((name) => (
           <Link key={name.id} href={getLocalizedNamePath(locale, name.slug)} className="rounded-lg border border-white/10 bg-surface p-4 hover:border-gold/50 focus-ring">
             <span className="block text-right font-arabic text-4xl" lang="ar" dir="rtl">{name.arabic}</span>
             <span className="mt-3 block text-xl font-semibold">{name.transliteration}</span>
-            <span className="mt-1 block text-sm text-muted">{name.meanings[locale]}</span>
-            <span className="mt-3 block text-sm font-semibold text-gold">{text.primaryCta}</span>
+            <span className="mt-3 block text-sm font-semibold text-gold">{name.meanings[locale]}</span>
+            <span className="mt-1 block text-sm text-muted">{name.duaUsage[locale]}</span>
           </Link>
         ))}
       </section>
@@ -347,12 +342,11 @@ function DuaPage({ locale }: { locale: Language }) {
 }
 
 function ReflectionsPage({ locale }: { locale: Language }) {
-  const sample = [names[0], names[2], names[10], names[96]]
   return (
     <div lang={locale} className="mx-auto max-w-4xl space-y-8">
       <PageIntro page="reflections" locale={locale} />
       <section className="grid gap-4 sm:grid-cols-2">
-        {sample.map((name) => (
+        {names.map((name) => (
           <Link key={name.id} href={getLocalizedNamePath(locale, name.slug)} className="rounded-lg border border-white/10 bg-surface p-5 hover:border-gold/50 focus-ring">
             <span className="block text-right font-arabic text-4xl" lang="ar" dir="rtl">{name.arabic}</span>
             <span className="mt-4 block text-xl font-semibold">{name.transliteration}</span>

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { JsonLd } from '@/components/JsonLd'
 import { LearningProgressWidget } from '@/components/LearningProgressWidget'
-import { names } from '@/data/names'
+import {firstName, names} from '@/data/names'
 import { buildMetadata, homeAlternates } from '@/lib/seo'
 import { organizationJsonLd, websiteJsonLd } from '@/lib/structuredData'
 
@@ -32,14 +32,15 @@ export default function GermanHomePage() {
             <Link className="btn-secondary" href="/de/lernen">Lernmodus öffnen</Link>
           </div>
         </div>
-        <section className="rounded-lg border border-gold/25 bg-surface p-6">
-          <h2 className="text-sm uppercase tracking-[0.18em] text-gold">Erster Name</h2>
-          <p className="mt-5 text-right font-arabic text-6xl leading-tight text-primary" lang="ar" dir="rtl">{names[0].arabic}</p>
-          <p className="mt-6 text-2xl font-semibold">{names[0].transliteration}</p>
-          <p className="mt-1 text-muted">{names[0].meanings.de}</p>
-          <Link className="mt-6 inline-flex rounded text-sm font-semibold text-gold hover:text-gold-soft focus-ring" href={`/de/namen/${names[0].slug}`}>
-            Bedeutung lesen
-          </Link>
+        <section className="rounded-lg border border-gold/25 bg-[radial-gradient(circle_at_top,rgba(214,178,94,0.18),rgba(22,22,22,0.96)_58%)] p-6">
+          <h2 className="text-sm uppercase tracking-[0.18em] text-gold">{firstName.meanings.de}</h2>
+          <p className="mt-5 text-right font-arabic text-6xl leading-tight text-primary" lang="ar" dir="rtl">{firstName.arabic}</p>
+          <p className="mt-6 text-2xl font-semibold">{firstName.transliteration}</p>
+          <p className="mt-1 text-gold">{firstName.explanations.de}</p>
+          <p className="mt-1 text-muted">{firstName.duaUsage.de}</p>
+          {firstName.reflection && <p className="mt-1 text-muted">{firstName.reflection?.de}</p>}
+          {firstName.sourceNote && <p className="mt-1 text-muted">{firstName.sourceNote?.de}</p>}
+          {firstName.source && <p className="mt-1 text-gold-muted">{firstName.source?.de}</p>}
         </section>
       </section>
 

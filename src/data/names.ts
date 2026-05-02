@@ -1,5 +1,44 @@
 import type { NameEntry } from '@/types/name'
 
+export const firstName: NameEntry = {
+  "id": 1,
+  "slug": "allah",
+  "arabic": "الله",
+  "transliteration": "Allah",
+  "pronunciation": "Al-lah",
+  "meanings": {
+    "de": "Der Eine Gott",
+    "tr": "Tek İlah",
+    "en": "The One God"
+  },
+  "explanations": {
+    "de": "Der Eigenname des Schöpfers, der alle göttlichen Eigenschaften und Vollkommenheiten in sich vereint. Es ist der umfassendste Name Gottes, der auf Sein absolutes Wesen hinweist.",
+    "tr": "Bütün isimleri ve sıfatları kendinde toplayan, eşi benzeri ve ortağı olmayan mutlak ve tek Allah'ın özel ismidir.",
+    "en": "The proper name of the One True God, encompassing all attributes of perfection. He is the only one Almighty and alone worthy of worship."
+  },
+  "duaUsage": {
+    "de": "Wird verwendet, um Gott in Seiner Gesamtheit, Allmacht und Majestät anzurufen. Es ist das Fundament jedes Bittgebets (Ya Allah).",
+    "tr": "Her türlü yakarışın başında ve sonunda, O'nun mutlak azametine sığınmak ve birliğini ikrar etmek için zikredilir.",
+    "en": "Invoke 'Allah' to call upon Him in His totality, acknowledging that He alone is the ultimate source of all answers and the only one worthy of worship."
+  },
+  "reflection": {
+    "de": "Gott ist die einzige Realität, der wahre Anbetung gebührt. Die Erkenntnis dieses Namens befreit den Menschen von der Abhängigkeit gegenüber der Schöpfung.",
+    "tr": "Allah'ı bu isimle anmak, O'nu tüm sıfatlarıyla birlemek demektir. Bu bilinç, mümini kula kul olmaktan kurtarıp gerçek özgürlüğe kavuşturur.",
+    "en": "Contemplating this name strengthens the understanding of the ultimate source of existence. True self-knowledge begins with the recognition of one's Creator."
+  },
+  "sourceNote": {
+    "de": "Dieser Name ist unübersetzbar und exklusiv für den Schöpfer reserviert. Er bildet die Basis, aus der alle anderen Namen hervorgehen.",
+    "tr": "İsimlerin sultanıdır (Lafza-i Celal); başka hiçbir varlık için kullanılamaz ve tüm güzel isimlerin merkezidir.",
+    "en": "The foundational name and the 'Name of Majesty'. It belongs uniquely to the Creator and is the origin from which all other names derive."
+  },
+  "source": {
+    "de": "Im Koran erwähnt in: (1:1) (3:18 )",
+    "tr": "Kur'an'da geçtiği ayetler: (1:1) (3:18 )",
+    "en": "Found in Quran Ayah(s): (1:1) (3:18 )"
+  },
+  "contentReviewRequired": false
+};
+
 // Content policy for this dataset:
 // - Theology follows a Sunni Hanafi / Maturidi-compatible tanzih approach.
 // - Qur'an 7:180 is the basis for calling upon Allah by His beautiful names.
@@ -40,6 +79,11 @@ export const names: NameEntry[] = [
       "tr": "Rahmetin yoğunluğunu ve bolluğunu ifade eder; R-H-M (anne rahmi) kökünden türetilmiştir.",
       "en": "Derived from the root 'R-H-M' (womb), signifying an all-enveloping, life-sustaining mercy."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (1:3) (17:110)",
+      "tr": "Kur'an'da geçtiği ayetler: (1:3) (17:110)",
+      "en": "Found in Quran Ayah(s): (1:3) (17:110)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -72,6 +116,11 @@ export const names: NameEntry[] = [
       "de": "Die Form 'Fa'īl' deutet auf eine dauerhafte und beständige Eigenschaft hin; oft im Jenseits-Kontext.",
       "tr": "Süreklilik ve kalıcılık ifade eden 'Fa'īl' kalıbındadır; Kur'an'da genellikle bağışlayıcılık vurgusuyla (Gafūr) birlikte zikredilir.",
       "en": "The grammatical form 'Fa'īl' signifies permanence and continuity; often paired with 'Al-Ghafur' (The Forgiving)."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (2:163)(3: 31)(4:100) (5:3)",
+      "tr": "Kur'an'da geçtiği ayetler: (2:163)(3: 31)(4:100) (5:3)",
+      "en": "Found in Quran Ayah(s): (2:163)(3: 31)(4:100) (5:3)"
     },
     "contentReviewRequired": false
   },
@@ -106,6 +155,11 @@ export const names: NameEntry[] = [
       "tr": "Dünyevi otoritelerin geçici olduğunu ve her şeyin Allah'ın hükmüne tabi olduğunu vurgular.",
       "en": "Emphasizes that all worldly authority is delegated and will ultimately return to the Creator."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (20:114)(2 3:116)(59: 23)(62:1)",
+      "tr": "Kur'an'da geçtiği ayetler: (20:114)(2 3:116)(59: 23)(62:1)",
+      "en": "Found in Quran Ayah(s): (20:114)(2 3:116)(59: 23)(62:1)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -138,6 +192,11 @@ export const names: NameEntry[] = [
       "de": "Ein zentraler Name für das Konzept der Transzendenz (Tanzīh) – Gott ist radikal anders als Seine Schöpfung.",
       "tr": "Tenzih inancının temelidir; Allah'ın mahlukata benzemediğini ve her türlü noksanlıktan yüce olduğunu vurgular.",
       "en": "A cornerstone of the concept of transcendence (Tanzih), emphasizing that Allah is fundamentally different from His creation."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (59:23) (62:1)",
+      "tr": "Kur'an'da geçtiği ayetler: (59:23) (62:1)",
+      "en": "Found in Quran Ayah(s): (59:23) (62:1)"
     },
     "contentReviewRequired": false
   },
@@ -172,6 +231,11 @@ export const names: NameEntry[] = [
       "tr": "İslam ve Selamet kavramlarıyla aynı kökten gelir; hem iç huzuru hem de toplumsal barışı temsil eder.",
       "en": "Shares the same linguistic root as 'Islam' and 'Salam', signifying safety, submission, and peace."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (59:23)",
+      "tr": "Kur'an'da geçtiği ayetler: (59:23)",
+      "en": "Found in Quran Ayah(s): (59:23)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -204,6 +268,11 @@ export const names: NameEntry[] = [
       "de": "Leitet sich von derselben Wurzel wie 'Iman' (Glaube) und 'Amn' (Sicherheit) ab; Gott bestätigt die Wahrheit Seiner eigenen Einheit.",
       "tr": "İman ve emniyet (güven) kavramlarıyla aynı kökten gelir; Allah'ın hem güven veren hem de doğruluğu tasdik eden olduğunu vurgular.",
       "en": "Derived from the same root as 'Iman' (faith) and 'Amn' (security). It signifies that Allah is the source of all reliability."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (59:23)",
+      "tr": "Kur'an'da geçtiği ayetler: (59:23)",
+      "en": "Found in Quran Ayah(s): (59:23)"
     },
     "contentReviewRequired": false
   },
@@ -238,6 +307,11 @@ export const names: NameEntry[] = [
       "tr": "İlim, kudret ve muhafaza kavramlarını birleştiren, Allah'ın her şeyi denetlediğini belirten bir isimdir.",
       "en": "Combines the attributes of knowledge, authority, and protection; He is the ultimate overseer."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (59:23)",
+      "tr": "Kur'an'da geçtiği ayetler: (59:23)",
+      "en": "Found in Quran Ayah(s): (59:23)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -270,6 +344,11 @@ export const names: NameEntry[] = [
       "de": "Betont die Unabhängigkeit Gottes; Er braucht niemanden, aber alles braucht Ihn.",
       "tr": "Allah'ın kimseye muhtaç olmadığını, aksine her şeyin O'na muhtaç olduğunu ifade eden bir güç sıfatıdır.",
       "en": "Represents unmatched might combined with dignity; it signifies that Allah is above all and needs none."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (3:6)(4:15 8)(9:40)(4 8:7)",
+      "tr": "Kur'an'da geçtiği ayetler: (3:6)(4:15 8)(9:40)(4 8:7)",
+      "en": "Found in Quran Ayah(s): (3:6)(4:15 8)(9:40)(4 8:7)"
     },
     "contentReviewRequired": false
   },
@@ -304,6 +383,11 @@ export const names: NameEntry[] = [
       "tr": "İsim kökeni olan 'cebr', kırık bir kemiği düzeltip sarmak (iyileştirmek) anlamına da gelir.",
       "en": "The root 'j-b-r' traditionally refers to setting a broken bone, implying both the use of force and the act of healing."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (59:23)",
+      "tr": "Kur'an'da geçtiği ayetler: (59:23)",
+      "en": "Found in Quran Ayah(s): (59:23)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -336,6 +420,11 @@ export const names: NameEntry[] = [
       "de": "Leitet sich von der Wurzel 'K-B-R' (Größe) ab. Es ist ein Name, der in seinem absoluten Sinne ausschließlich Gott zusteht.",
       "tr": "K-B-R (büyüklük) kökünden türetilmiştir. Allah'ın zatına has olan, ortaklık kabul etmeyen bir yüceliği ifade eder.",
       "en": "Derived from the root 'K-B-R' (greatness). In its absolute and rightful sense, this name belongs to Allah alone."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (59:23)",
+      "tr": "Kur'an'da geçtiği ayetler: (59:23)",
+      "en": "Found in Quran Ayah(s): (59:23)"
     },
     "contentReviewRequired": false
   },
@@ -370,6 +459,11 @@ export const names: NameEntry[] = [
       "tr": "Hâlık, Bâri ve Musavvir isimlerinden oluşan yaratılış üçlemesinin ilk sıfatıdır.",
       "en": "The first of the three names related to creation (with Al-Bari and Al-Musawwir), focusing on the initial planning and determination."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (6:102)(13 :16)(39:62 )(40:62)(5 9:24)",
+      "tr": "Kur'an'da geçtiği ayetler: (6:102)(13 :16)(39:62 )(40:62)(5 9:24)",
+      "en": "Found in Quran Ayah(s): (6:102)(13 :16)(39:62 )(40:62)(5 9:24)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -402,6 +496,11 @@ export const names: NameEntry[] = [
       "de": "Betont den Übergang vom Plan (Khaliq) zur physischen Existenz ohne Makel.",
       "tr": "Planlanan varlığın (Hâlık), şekil bulmadan önceki kusursuzca var ediliş aşamasını ifade eder.",
       "en": "Focuses on the execution of creation, bringing the planned measure into a tangible, harmonious reality."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (59:24)",
+      "tr": "Kur'an'da geçtiği ayetler: (59:24)",
+      "en": "Found in Quran Ayah(s): (59:24)"
     },
     "contentReviewRequired": false
   },
@@ -436,6 +535,11 @@ export const names: NameEntry[] = [
       "tr": "Yaratılış sürecini ifade eden isimlerin (Hâlık ve Bâri) tamamlayıcısıdır; son şekli ve estetiği temsil eder.",
       "en": "The final of the three names describing the creative process, focusing on the specific details and aesthetic completion of a being."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (59:24)",
+      "tr": "Kur'an'da geçtiği ayetler: (59:24)",
+      "en": "Found in Quran Ayah(s): (59:24)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -468,6 +572,11 @@ export const names: NameEntry[] = [
       "de": "Die grammatikalische Form 'Fa'āl' deutet auf eine extreme Intensität und endlose Wiederholung hin.",
       "tr": "Mübalağa kalıbı olan 'Fa'āl' formundadır; bağışlamanın sürekliliğini ve bolluğunu ifade eder.",
       "en": "The grammatical form 'Fa'āl' denotes intensity and a repetitive, limitless quality of forgiveness."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (20:82)(38 :66)(39:5) (40:42)(71 :10)",
+      "tr": "Kur'an'da geçtiği ayetler: (20:82)(38 :66)(39:5) (40:42)(71 :10)",
+      "en": "Found in Quran Ayah(s): (20:82)(38 :66)(39:5) (40:42)(71 :10)"
     },
     "contentReviewRequired": false
   },
@@ -502,6 +611,11 @@ export const names: NameEntry[] = [
       "tr": "Mübalağa kalıbı (Fa'āl) ile ifade edilir; Allah'ın kahredici gücünün her an ve her yerde geçerli olduğunu vurgular.",
       "en": "Presented in the intensive 'Fa'āl' form, emphasizing a power that is inescapable, overwhelming, and continuous."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (13:16)(14 :48)(38:65 )(39:4)(40 :16)",
+      "tr": "Kur'an'da geçtiği ayetler: (13:16)(14 :48)(38:65 )(39:4)(40 :16)",
+      "en": "Found in Quran Ayah(s): (13:16)(14 :48)(38:65 )(39:4)(40 :16)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -534,6 +648,11 @@ export const names: NameEntry[] = [
       "de": "Betont das Schenken ('Hiba') als Akt ohne Verpflichtung. Wiederum in der intensiven 'Fa'āl'-Form.",
       "tr": "'Hibe' kökünden gelir; karşılıksız ve gönülden vermeyi ifade eder. Gramer olarak süreklilik ve bolluk bildiren 'Fa'āl' kalıbındadır.",
       "en": "Derived from the root 'Hiba' (gift), referring to a bestowal with no strings attached. The 'Fa'āl' form signifies the repetitive and abundant nature of His giving."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (3:8)(38:9 )(38:35)",
+      "tr": "Kur'an'da geçtiği ayetler: (3:8)(38:9 )(38:35)",
+      "en": "Found in Quran Ayah(s): (3:8)(38:9 )(38:35)"
     },
     "contentReviewRequired": false
   },
@@ -568,6 +687,11 @@ export const names: NameEntry[] = [
       "tr": "Rızık kavramı sadece yemek içmek değildir; akıl, iman ve sağlık da rızka dahildir. İsim, mübalağa kalıbıyla rızkın sürekliliğini ifade eder.",
       "en": "In the intensive 'Fa'āl' form, signifying that He provides endlessly for all beings. Provision (Rizq) includes anything that benefits a living being."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (51:58)",
+      "tr": "Kur'an'da geçtiği ayetler: (51:58)",
+      "en": "Found in Quran Ayah(s): (51:58)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -600,6 +724,11 @@ export const names: NameEntry[] = [
       "de": "Die Form 'Fa'āl' steht für den ständigen Eröffner. Der Name impliziert auch den 'gerechten Richter' (Fatih), der Streitigkeiten beendet.",
       "tr": "Feth (açmak) kökünden gelir. Sadece kapıları değil, zihinleri ve kalpleri de açmayı ifade eder. Mübalağa kalıbı ile her an bir açılış gerçekleştirdiğini vurgular.",
       "en": "The root 'f-t-h' means to open or to judge. It signifies Allah as the one who grants victory and the one who removes all barriers between the servant and His mercy."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (34:26)",
+      "tr": "Kur'an'da geçtiği ayetler: (34:26)",
+      "en": "Found in Quran Ayah(s): (34:26)"
     },
     "contentReviewRequired": false
   },
@@ -634,6 +763,11 @@ export const names: NameEntry[] = [
       "tr": "Zatî sıfatlardan biridir. Allah'ın ilmi sonradan kazanılmış değildir; zamandan ve mekandan bağımsız, her şeyi kuşatan mutlak bilgidir.",
       "en": "One of the fundamental attributes of essence. Unlike human knowledge, which is acquired, Allah’s knowledge is inherent, eternal, and absolute."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (2:158)(3: 92)(4:35)( 24:41)(33: 40)",
+      "tr": "Kur'an'da geçtiği ayetler: (2:158)(3: 92)(4:35)( 24:41)(33: 40)",
+      "en": "Found in Quran Ayah(s): (2:158)(3: 92)(4:35)( 24:41)(33: 40)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -666,6 +800,11 @@ export const names: NameEntry[] = [
       "de": "Dieser Name sollte immer im Kontext mit Al-Bāsiṭ (dem Ausdehnenden) verstanden werden, um ein einseitiges Gottesbild zu vermeiden.",
       "tr": "Genellikle El-Bâsıt ismiyle birlikte zikredilir; bu denge, Allah'ın hem imtihan edici hem de lütfedici sıfatlarını bir arada gösterir.",
       "en": "This name is complementary to Al-Bāsiṭ (The Expander). Together, they represent the divine balance of life's ebbs and flows."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (2: 245)",
+      "tr": "Kur'an'da geçtiği ayetler: (2: 245)",
+      "en": "Found in Quran Ayah(s): (2: 245)"
     },
     "contentReviewRequired": false
   },
@@ -700,6 +839,11 @@ export const names: NameEntry[] = [
       "tr": "El-Kâbıd ismiyle beraber kainattaki dengeyi temsil eder. Bir kapıyı kapatan, diğerini en hayırlı şekilde açan O'dur.",
       "en": "Complements Al-Qābiḍ. Together, these names illustrate the divine rhythm of life—the contraction and expansion that guide spiritual growth."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (2: 245)",
+      "tr": "Kur'an'da geçtiği ayetler: (2: 245)",
+      "en": "Found in Quran Ayah(s): (2: 245)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -732,6 +876,11 @@ export const names: NameEntry[] = [
       "de": "Wird traditionell zusammen mit 'Ar-Rāfi‘' (dem Erhöhenden) genannt. Es beschreibt die göttliche Justierung der Ränge.",
       "tr": "Genellikle 'Er-Râfi' ismiyle birlikte düşünülür. Allah'ın hikmetiyle kimini düşürüp kimini yükseltmesini ifade eder.",
       "en": "Traditionally paired with 'Ar-Rāfi‘' (The Exalter). It represents the divine adjustment of scales and ranks based on truth and merit."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (95:5)",
+      "tr": "Kur'an'da geçtiği ayetler: (95:5)",
+      "en": "Found in Quran Ayah(s): (95:5)"
     },
     "contentReviewRequired": false
   },
@@ -766,6 +915,11 @@ export const names: NameEntry[] = [
       "tr": "Hâfıd isminin zıddıdır; bu iki isim birlikte ilahi adaletin ve liyakatin nasıl işlediğini gösterir.",
       "en": "The direct counterpart to 'Al-Khāfiḍ'. Together, they represent the divine mechanism of justice where pride leads to abasement and humility leads to exaltation."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (58:11)(6: 83)",
+      "tr": "Kur'an'da geçtiği ayetler: (58:11)(6: 83)",
+      "en": "Found in Quran Ayah(s): (58:11)(6: 83)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -798,6 +952,11 @@ export const names: NameEntry[] = [
       "de": "Hängt eng mit dem Begriff 'Izzah' zusammen. Sein direktes Gegenstück ist 'Al-Mudhill' (Der Demütigende).",
       "tr": "El-Müzill isminin zıddıdır. İzzet, sadece güç değil, aynı zamanda kimsenin zarar veremeyeceği bir sağlamlık ve üstünlük manasına gelir.",
       "en": "Linked to the concept of 'Izzat' (honour/might). It is traditionally paired with 'Al-Mudhill' to show the divine control over the rise and fall of dignity."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (3:26)",
+      "tr": "Kur'an'da geçtiği ayetler: (3:26)",
+      "en": "Found in Quran Ayah(s): (3:26)"
     },
     "contentReviewRequired": false
   },
@@ -832,6 +991,11 @@ export const names: NameEntry[] = [
       "tr": "El-Muizz isminin zıddıdır. Bu isim, Allah'ın mutlak iradesinin bir tecellisi olarak hak edenlerin itibarını sarsmasını ifade eder.",
       "en": "Traditionally paired with 'Al-Mu‘izz'. These names together illustrate that true might and lowliness are determined solely by Allah’s wisdom and justice."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (3:26)",
+      "tr": "Kur'an'da geçtiği ayetler: (3:26)",
+      "en": "Found in Quran Ayah(s): (3:26)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -864,6 +1028,11 @@ export const names: NameEntry[] = [
       "de": "Ein Wesensattribut (sifat adh-dhātiyya). Sein Hören ist ewig und unterscheidet sich grundlegend vom begrenzten menschlichen Gehör.",
       "tr": "Zatî sıfatlardandır. Allah'ın işitmesi zamana, mekana veya bir organa bağlı değildir; her şeyi aynı anda ve kusursuzca kuşatır.",
       "en": "A fundamental attribute of essence. Allah's hearing is eternal and absolute, transcending time, space, and physical mechanisms."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (2:127)(2: 256)(8:17) (49:1)",
+      "tr": "Kur'an'da geçtiği ayetler: (2:127)(2: 256)(8:17) (49:1)",
+      "en": "Found in Quran Ayah(s): (2:127)(2: 256)(8:17) (49:1)"
     },
     "contentReviewRequired": false
   },
@@ -898,6 +1067,11 @@ export const names: NameEntry[] = [
       "tr": "Zatî sıfatlardandır. Allah'ın görmesi zamana ve mekâna bağlı değildir. Es-Semî ismiyle birlikte Allah'ın mahlukatı üzerindeki mutlak denetimini ifade eder.",
       "en": "A fundamental attribute of essence (sifat adh-dhātiyya). Often paired with 'As-Samī‘' (The All-Hearing), highlighting Allah's total awareness of His creation."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (4:58)(17: 1)(42:11)( 42:27)",
+      "tr": "Kur'an'da geçtiği ayetler: (4:58)(17: 1)(42:11)( 42:27)",
+      "en": "Found in Quran Ayah(s): (4:58)(17: 1)(42:11)( 42:27)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -930,6 +1104,11 @@ export const names: NameEntry[] = [
       "de": "Drückt die Souveränität Gottes aus. Sein Urteil (Hukm) ist zeitlos und unvoreingenommen.",
       "tr": "Hüküm verenlerin en hayırlısıdır. Bu isim, Allah'ın hem bu dünyadaki kozmik yasalarını hem de ahiretteki adaletini kapsar.",
       "en": "Emphasizes that Allah is the ultimate source of law and order. His decrees are binding, impartial, and based on infinite wisdom."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (22:69)",
+      "tr": "Kur'an'da geçtiği ayetler: (22:69)",
+      "en": "Found in Quran Ayah(s): (22:69)"
     },
     "contentReviewRequired": false
   },
@@ -964,6 +1143,11 @@ export const names: NameEntry[] = [
       "tr": "Bir sıfat değil, mastardır; yani adaletin bizzat kendisidir. Allah'ın her işinde mutlak bir nizam ve hakkaniyet olduğunu simgeler.",
       "en": "A linguistic intensive: He is not just just, He is Justice itself. It emphasizes that His decrees are the very definition of what is right and balanced."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (6:115)",
+      "tr": "Kur'an'da geçtiği ayetler: (6:115)",
+      "en": "Found in Quran Ayah(s): (6:115)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -997,6 +1181,11 @@ export const names: NameEntry[] = [
       "tr": "Bu isim hem 'derin ve ince bilgi' hem de 'sonsuz nezaket' manalarını içerir. Kur'an-ı Kerim'de sıkça 'Habîr' (her şeyden haberdar) ismiyle birlikte geçer.",
       "en": "Combines two meanings: perfect knowledge of microscopic details and extreme gentleness in action. It is a name of immense comfort, often paired with 'Al-Khabīr' in the Quran."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (6:103)(22 :63)(31:16 )(33:34)",
+      "tr": "Kur'an'da geçtiği ayetler: (6:103)(22 :63)(31:16 )(33:34)",
+      "en": "Found in Quran Ayah(s): (6:103)(22 :63)(31:16 )(33:34)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -1017,7 +1206,7 @@ export const names: NameEntry[] = [
     },
     "duaUsage": {
       "de": "Ya Al-Khabīr, schenke mir Einsicht in die Wahrheit der Dinge, bewahre mich vor Selbsttäuschung und leite mich durch Dein Wissen zu dem, was für mich am besten ist.",
-      "tr": "Ya Habîr, kalbimdeki gizli niyetlerimi Senin rızana ulaştır, meselelerin iç yüzünü görmeyi nasip et ve beni gafletten muhafaza eyle.",
+      "tr": "Ya Habîr, kalbimdeki gizli niyetleri Senin rızana ulaştır, meselelerin iç yüzünü görmeyi nasip et ve beni gafletten muhafaza eyle.",
       "en": "Invoke 'Ya Al-Khabīr' to seek clarity in confusing situations, to ask for self-awareness regarding one's own faults, and to find peace in His perfect awareness of your struggles."
     },
     "reflection": {
@@ -1029,6 +1218,11 @@ export const names: NameEntry[] = [
       "de": "Oft zusammen mit 'Al-Laṭīf' genannt. Während 'Al-Alīm' allgemeines Wissen beschreibt, betont 'Al-Khabīr' die Kenntnis des Verborgenen und der inneren Zustände.",
       "tr": "Kur'an'da genellikle 'Latîf' ismiyle beraber zikredilir. 'İlm' (bilgi) kökünden farklı olarak, bir şeyin mahiyetinden ve özünden haberdar olmayı ifade eder.",
       "en": "Often paired with 'Al-Laṭīf'. While 'Al-Alīm' refers to general knowledge, 'Al-Khabīr' emphasizes being aware of the inner workings, the hidden, and the 'ins and outs' of all matters."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (6:18)(17: 30)(49:13) (59:18)",
+      "tr": "Kur'an'da geçtiği ayetler: (6:18)(17: 30)(49:13) (59:18)",
+      "en": "Found in Quran Ayah(s): (6:18)(17: 30)(49:13) (59:18)"
     },
     "contentReviewRequired": false
   },
@@ -1063,6 +1257,11 @@ export const names: NameEntry[] = [
       "tr": "İlahi sabrın ve yumuşaklığın ifadesidir.",
       "en": "Highlights the delay of punishment to allow for spiritual growth."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (2:235)(17 :44)(22:59 )(35:41)",
+      "tr": "Kur'an'da geçtiği ayetler: (2:235)(17 :44)(22:59 )(35:41)",
+      "en": "Found in Quran Ayah(s): (2:235)(17 :44)(22:59 )(35:41)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -1095,6 +1294,11 @@ export const names: NameEntry[] = [
       "de": "Kernbegriff der Verherrlichung Gottes.",
       "tr": "Azamet ve kibriya sahibidir.",
       "en": "Central to the glorification of Allah in daily worship."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (2:255)(42 :4)(56:96)",
+      "tr": "Kur'an'da geçtiği ayetler: (2:255)(42 :4)(56:96)",
+      "en": "Found in Quran Ayah(s): (2:255)(42 :4)(56:96)"
     },
     "contentReviewRequired": false
   },
@@ -1129,6 +1333,11 @@ export const names: NameEntry[] = [
       "tr": "Mübalağa sigasıyla bağışlamanın çokluğunu ifade eder.",
       "en": "An intensive form of forgiveness that implies quantity and quality."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (2:173)(8: 69)(16:11 0)(41:32)",
+      "tr": "Kur'an'da geçtiği ayetler: (2:173)(8: 69)(16:11 0)(41:32)",
+      "en": "Found in Quran Ayah(s): (2:173)(8: 69)(16:11 0)(41:32)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -1161,6 +1370,11 @@ export const names: NameEntry[] = [
       "de": "Ein paradoxer Name: Der Schöpfer bedankt sich beim Geschöpf.",
       "tr": "Şükrün karşılığını fazlasıyla veren demektir.",
       "en": "A beautiful attribute showing how Allah values human effort."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (35:30)(35 :34)(42:23 )(64:17)",
+      "tr": "Kur'an'da geçtiği ayetler: (35:30)(35 :34)(42:23 )(64:17)",
+      "en": "Found in Quran Ayah(s): (35:30)(35 :34)(42:23 )(64:17)"
     },
     "contentReviewRequired": false
   },
@@ -1195,6 +1409,11 @@ export const names: NameEntry[] = [
       "tr": "İzzet ve şeref bakımından en üstün olandır.",
       "en": "Refers to both ontological and status-based height."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (4:34)(31: 30)(42:4)( 42:51)",
+      "tr": "Kur'an'da geçtiği ayetler: (4:34)(31: 30)(42:4)( 42:51)",
+      "en": "Found in Quran Ayah(s): (4:34)(31: 30)(42:4)( 42:51)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -1227,6 +1446,11 @@ export const names: NameEntry[] = [
       "de": "Unterscheidet sich von Azim durch die Betonung der Essenz.",
       "tr": "Zatî büyüklüğü ifade eder.",
       "en": "Refers to greatness in essence and perfection."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (13:9)(22: 62)(31:30)",
+      "tr": "Kur'an'da geçtiği ayetler: (13:9)(22: 62)(31:30)",
+      "en": "Found in Quran Ayah(s): (13:9)(22: 62)(31:30)"
     },
     "contentReviewRequired": false
   },
@@ -1261,6 +1485,11 @@ export const names: NameEntry[] = [
       "tr": "Korumak ve kaydetmek manalarını içerir.",
       "en": "Encompasses physical protection and the preservation of deeds."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (11:57)(34 :21)(42:6)",
+      "tr": "Kur'an'da geçtiği ayetler: (11:57)(34 :21)(42:6)",
+      "en": "Found in Quran Ayah(s): (11:57)(34 :21)(42:6)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -1293,6 +1522,11 @@ export const names: NameEntry[] = [
       "de": "Spezifischer als Ar-Razzaq; betont die Kraftzufuhr.",
       "tr": "Gıdaları yaratan ve her şeye gücü yetendir.",
       "en": "Relates to providing the exact strength and nutrition required."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (4:85)",
+      "tr": "Kur'an'da geçtiği ayetler: (4:85)",
+      "en": "Found in Quran Ayah(s): (4:85)"
     },
     "contentReviewRequired": false
   },
@@ -1327,6 +1561,11 @@ export const names: NameEntry[] = [
       "tr": "Kifayet eden ve hesap soran manasındadır.",
       "en": "Refers both to auditing deeds and being sufficient as a protector."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (4:6)(4:86 )(33:39)",
+      "tr": "Kur'an'da geçtiği ayetler: (4:6)(4:86 )(33:39)",
+      "en": "Found in Quran Ayah(s): (4:6)(4:86 )(33:39)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -1359,6 +1598,11 @@ export const names: NameEntry[] = [
       "de": "Betont die ehrfurchtgebietende Seite Gottes.",
       "tr": "Ululuk ve şan sahibidir.",
       "en": "Focuses on the qualities that inspire awe and reverence."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (55:27)(39 :14)(7:143 )",
+      "tr": "Kur'an'da geçtiği ayetler: (55:27)(39 :14)(7:143 )",
+      "en": "Found in Quran Ayah(s): (55:27)(39 :14)(7:143 )"
     },
     "contentReviewRequired": false
   },
@@ -1393,6 +1637,11 @@ export const names: NameEntry[] = [
       "tr": "İhsan ve cömertliğin zirvesidir.",
       "en": "Combines the concepts of generosity, nobility, and honor."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (27:40)(82 :6)",
+      "tr": "Kur'an'da geçtiği ayetler: (27:40)(82 :6)",
+      "en": "Found in Quran Ayah(s): (27:40)(82 :6)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -1425,6 +1674,11 @@ export const names: NameEntry[] = [
       "de": "Betont die Unmittelbarkeit der göttlichen Wahrnehmung.",
       "tr": "İlahi denetim ve gözetim ismidir.",
       "en": "Focuses on the intimacy of divine observation and guardianship."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (4:1)(5:11 7)",
+      "tr": "Kur'an'da geçtiği ayetler: (4:1)(5:11 7)",
+      "en": "Found in Quran Ayah(s): (4:1)(5:11 7)"
     },
     "contentReviewRequired": false
   },
@@ -1459,6 +1713,11 @@ export const names: NameEntry[] = [
       "tr": "Dua ve icabetin merkezindeki isimdir.",
       "en": "A direct bridge between the Creator and the created through prayer."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (11:61)",
+      "tr": "Kur'an'da geçtiği ayetler: (11:61)",
+      "en": "Found in Quran Ayah(s): (11:61)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -1491,6 +1750,11 @@ export const names: NameEntry[] = [
       "de": "Bezieht sich auf die Unendlichkeit Seiner Eigenschaften.",
       "tr": "Kuşatıcılık ve sonsuzluk ifadesidir.",
       "en": "Emphasizes the infinite scope of divine presence and provision."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (2:268)(3: 73)(5:54)",
+      "tr": "Kur'an'da geçtiği ayetler: (2:268)(3: 73)(5:54)",
+      "en": "Found in Quran Ayah(s): (2:268)(3: 73)(5:54)"
     },
     "contentReviewRequired": false
   },
@@ -1525,6 +1789,11 @@ export const names: NameEntry[] = [
       "tr": "İlim ve adaletin birleştiği makamdır.",
       "en": "The source of all intellectual and moral clarity in the universe."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (31:27)(46 :2)(57:1)( 66:2)",
+      "tr": "Kur'an'da geçtiği ayetler: (31:27)(46 :2)(57:1)( 66:2)",
+      "en": "Found in Quran Ayah(s): (31:27)(46 :2)(57:1)( 66:2)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -1557,6 +1826,11 @@ export const names: NameEntry[] = [
       "de": "Drückt eine aktive, zärtliche Liebe aus.",
       "tr": "Sevginin ve dostluğun asıl kaynağıdır.",
       "en": "One of the most intimate and heart-centered names of Allah."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (11:90)(85 :14)",
+      "tr": "Kur'an'da geçtiği ayetler: (11:90)(85 :14)",
+      "en": "Found in Quran Ayah(s): (11:90)(85 :14)"
     },
     "contentReviewRequired": false
   },
@@ -1591,6 +1865,11 @@ export const names: NameEntry[] = [
       "tr": "Azamet ve keremin birleştiği isimdir.",
       "en": "Reflects the pinnacle of nobility and divine splendor."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (11:73)",
+      "tr": "Kur'an'da geçtiği ayetler: (11:73)",
+      "en": "Found in Quran Ayah(s): (11:73)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -1623,6 +1902,11 @@ export const names: NameEntry[] = [
       "de": "Bezieht sich auf die physische und spirituelle Erweckung.",
       "tr": "Yeniden dirilişin ve hidayetin müjdecisidir.",
       "en": "Dual meaning: sending prophets and resurrecting souls."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (22:7)",
+      "tr": "Kur'an'da geçtiği ayetler: (22:7)",
+      "en": "Found in Quran Ayah(s): (22:7)"
     },
     "contentReviewRequired": false
   },
@@ -1657,6 +1941,11 @@ export const names: NameEntry[] = [
       "tr": "İlahi şahitlik ve hazır bulunma ismidir.",
       "en": "Focuses on the omnipresence and the absolute truth of Allah's observation."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (4:166)(22 :17)(41:53 )(48:28)",
+      "tr": "Kur'an'da geçtiği ayetler: (4:166)(22 :17)(41:53 )(48:28)",
+      "en": "Found in Quran Ayah(s): (4:166)(22 :17)(41:53 )(48:28)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -1689,6 +1978,11 @@ export const names: NameEntry[] = [
       "de": "Der Kernname der ontologischen Realität.",
       "tr": "Varlığın ve adaletin temelidir.",
       "en": "A fundamental attribute describing the essence of the Divine."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (6:62)(22: 6)(23:116) (24:25)",
+      "tr": "Kur'an'da geçtiği ayetler: (6:62)(22: 6)(23:116) (24:25)",
+      "en": "Found in Quran Ayah(s): (6:62)(22: 6)(23:116) (24:25)"
     },
     "contentReviewRequired": false
   },
@@ -1723,6 +2017,11 @@ export const names: NameEntry[] = [
       "tr": "Tevekkül makamının dayanağıdır.",
       "en": "Recognizes Allah as the supreme manager of the universe."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (3:173)(4: 171)(28:2 8)(73:9)",
+      "tr": "Kur'an'da geçtiği ayetler: (3:173)(4: 171)(28:2 8)(73:9)",
+      "en": "Found in Quran Ayah(s): (3:173)(4: 171)(28:2 8)(73:9)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -1755,6 +2054,11 @@ export const names: NameEntry[] = [
       "de": "Betont die Unbezwingbarkeit Gottes.",
       "tr": "Mutlak güç sahibidir.",
       "en": "Shows the absolute and tireless nature of divine force."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (22:40)(22 :74)(42:19 )(57:25)",
+      "tr": "Kur'an'da geçtiği ayetler: (22:40)(22 :74)(42:19 )(57:25)",
+      "en": "Found in Quran Ayah(s): (22:40)(22 :74)(42:19 )(57:25)"
     },
     "contentReviewRequired": false
   },
@@ -1789,6 +2093,11 @@ export const names: NameEntry[] = [
       "tr": "Kuvvetin sarsılmazlık boyutudur.",
       "en": "Focuses on the unwavering endurance of divine power."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (51:58)",
+      "tr": "Kur'an'da geçtiği ayetler: (51:58)",
+      "en": "Found in Quran Ayah(s): (51:58)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -1821,6 +2130,11 @@ export const names: NameEntry[] = [
       "de": "Name der Nähe (Qurb) und der göttlichen Allianz.",
       "tr": "Muhabbet ve yardımın kaynağıdır.",
       "en": "Emphasizes the supportive and loving nature of the Creator toward His creation."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (4:45)(7:1 96)(42:28) (45:19)",
+      "tr": "Kur'an'da geçtiği ayetler: (4:45)(7:1 96)(42:28) (45:19)",
+      "en": "Found in Quran Ayah(s): (4:45)(7:1 96)(42:28) (45:19)"
     },
     "contentReviewRequired": false
   },
@@ -1855,6 +2169,11 @@ export const names: NameEntry[] = [
       "tr": "Sena ve şükrün mutlak hedefidir.",
       "en": "The ultimate target of all sincere appreciation and worship."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (14:8)(31: 12)(31:26) (41:42)",
+      "tr": "Kur'an'da geçtiği ayetler: (14:8)(31: 12)(31:26) (41:42)",
+      "en": "Found in Quran Ayah(s): (14:8)(31: 12)(31:26) (41:42)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -1887,6 +2206,11 @@ export const names: NameEntry[] = [
       "de": "Bezieht sich auf die Unendlichkeit des Wissens in Zahlen ausgedrückt.",
       "tr": "İlahi kuşatıcılığın sayısal ifadesidir.",
       "en": "Highlights the meticulous nature of divine knowledge."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (72:28)(78 :29)(82:10 -12)",
+      "tr": "Kur'an'da geçtiği ayetler: (72:28)(78 :29)(82:10 -12)",
+      "en": "Found in Quran Ayah(s): (72:28)(78 :29)(82:10 -12)"
     },
     "contentReviewRequired": false
   },
@@ -1921,6 +2245,11 @@ export const names: NameEntry[] = [
       "tr": "Yaratılışın başlangıç noktasıdır.",
       "en": "Focuses on the initiation of life and the cosmos."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (10:34)(27 :64)(29:19 )(85:13)",
+      "tr": "Kur'an'da geçtiği ayetler: (10:34)(27 :64)(29:19 )(85:13)",
+      "en": "Found in Quran Ayah(s): (10:34)(27 :64)(29:19 )(85:13)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -1953,6 +2282,11 @@ export const names: NameEntry[] = [
       "de": "Eng verknüpft mit dem Konzept der Auferstehung (Ma’ad).",
       "tr": "Ebedi dönüşün ve dirilişin ismidir.",
       "en": "Emphasizes the cyclical power of divine creation and resurrection."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (10:34)(27 :64)(29:19 )(85:13)",
+      "tr": "Kur'an'da geçtiği ayetler: (10:34)(27 :64)(29:19 )(85:13)",
+      "en": "Found in Quran Ayah(s): (10:34)(27 :64)(29:19 )(85:13)"
     },
     "contentReviewRequired": false
   },
@@ -1987,6 +2321,11 @@ export const names: NameEntry[] = [
       "tr": "Hayatın yegane kaynağıdır.",
       "en": "Attribute of active, life-bestowing creation."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (7:158)(15 :23)(30:50 )(57:2)",
+      "tr": "Kur'an'da geçtiği ayetler: (7:158)(15 :23)(30:50 )(57:2)",
+      "en": "Found in Quran Ayah(s): (7:158)(15 :23)(30:50 )(57:2)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -2019,6 +2358,11 @@ export const names: NameEntry[] = [
       "de": "Ein notwendiges Gegenstück zu Al-Muḥyī.",
       "tr": "Kudretin ölüm üzerindeki hükmüdür.",
       "en": "Attribute reflecting divine authority over the cycle of mortality."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (3:156)(7: 158)(15:2 3)(57:2)",
+      "tr": "Kur'an'da geçtiği ayetler: (3:156)(7: 158)(15:2 3)(57:2)",
+      "en": "Found in Quran Ayah(s): (3:156)(7: 158)(15:2 3)(57:2)"
     },
     "contentReviewRequired": false
   },
@@ -2053,6 +2397,11 @@ export const names: NameEntry[] = [
       "tr": "İlahi zatın temel sıfatıdır.",
       "en": "Fundamental ontological attribute of the Divine."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (2:255)(3: 2)(25:58)( 40:65)",
+      "tr": "Kur'an'da geçtiği ayetler: (2:255)(3: 2)(25:58)( 40:65)",
+      "en": "Found in Quran Ayah(s): (2:255)(3: 2)(25:58)( 40:65)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -2085,6 +2434,11 @@ export const names: NameEntry[] = [
       "de": "Beschreibt die Erhaltung der Schöpfung (Tadbīr).",
       "tr": "Kainatın nizam ve bekasının ismidir.",
       "en": "Reflects the attribute of self-subsistence and universal guardianship."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (2:255)(3: 2)(20:111)",
+      "tr": "Kur'an'da geçtiği ayetler: (2:255)(3: 2)(20:111)",
+      "en": "Found in Quran Ayah(s): (2:255)(3: 2)(20:111)"
     },
     "contentReviewRequired": false
   },
@@ -2119,6 +2473,11 @@ export const names: NameEntry[] = [
       "tr": "İlahi zenginlik ve buluş ismidir.",
       "en": "Focuses on divine self-sufficiency and effortless perception."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (38:44)",
+      "tr": "Kur'an'da geçtiği ayetler: (38:44)",
+      "en": "Found in Quran Ayah(s): (38:44)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -2133,7 +2492,7 @@ export const names: NameEntry[] = [
       "en": "The Illustrious, The Noble"
     },
     "explanations": {
-      "de": "Derjenige, der reich an Ehre und Wohltätigkeit ist. Seine Majestät ist strahlend und Seine Gaben sind überreich.",
+      "de": "Derjenige, der reich an Ehre und Wohltätigkeit. Seine Majestät ist strahlend und Seine Gaben sind überreich.",
       "tr": "Sonsuz şan ve şerefe sahip olan, ihsanı ve cömertliği geniş olan.",
       "en": "The One who is majestic and noble. His glory is vast, and His generosity reflects His sublime and honorable nature."
     },
@@ -2151,6 +2510,11 @@ export const names: NameEntry[] = [
       "de": "Nuance der Nobilität (Karam) innerhalb der Größe.",
       "tr": "Şeref ve cömertliğin birleştiği makamdır.",
       "en": "Similar to Al-Majid but emphasizes the outpouring of nobility."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (11:73)",
+      "tr": "Kur'an'da geçtiği ayetler: (11:73)",
+      "en": "Found in Quran Ayah(s): (11:73)"
     },
     "contentReviewRequired": false
   },
@@ -2185,6 +2549,11 @@ export const names: NameEntry[] = [
       "tr": "Vahdet ve tevhidin temel ismidir.",
       "en": "The starting point of Islamic theology and the concept of Tawhid."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (2:163)(5: 73)(9:31)( 18:110)",
+      "tr": "Kur'an'da geçtiği ayetler: (2:163)(5: 73)(9:31)( 18:110)",
+      "en": "Found in Quran Ayah(s): (2:163)(5: 73)(9:31)( 18:110)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -2217,6 +2586,11 @@ export const names: NameEntry[] = [
       "de": "Höchster Ausdruck der göttlichen Einzigartigkeit (Sure 112).",
       "tr": "İhlas Suresi'nin özü olan isimdir.",
       "en": "The most absolute expression of divine oneness in the Quran."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (112:1)",
+      "tr": "Kur'an'da geçtiği ayetler: (112:1)",
+      "en": "Found in Quran Ayah(s): (112:1)"
     },
     "contentReviewRequired": false
   },
@@ -2251,6 +2625,11 @@ export const names: NameEntry[] = [
       "tr": "Kulların ihtiyaç merciidir.",
       "en": "Found in Surah Al-Ikhlas, emphasizing absolute self-sufficiency."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (112:2)",
+      "tr": "Kur'an'da geçtiği ayetler: (112:2)",
+      "en": "Found in Quran Ayah(s): (112:2)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -2283,6 +2662,11 @@ export const names: NameEntry[] = [
       "de": "Betont die Fähigkeit zur präzisen Bestimmung (Qadar).",
       "tr": "Mutlak kudretin ismidir.",
       "en": "Related to the concept of 'Qadar' (Divine Decree/Measure)."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (6:65)(36: 81)(46:33) (75:40)",
+      "tr": "Kur'an'da geçtiği ayetler: (6:65)(36: 81)(46:33) (75:40)",
+      "en": "Found in Quran Ayah(s): (6:65)(36: 81)(46:33) (75:40)"
     },
     "contentReviewRequired": false
   },
@@ -2317,6 +2701,11 @@ export const names: NameEntry[] = [
       "tr": "Kudretin en üstün derecesidir.",
       "en": "Often associated with Allah's sovereignty over kings and nations."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (18:45)(54 :42)(54:55 )",
+      "tr": "Kur'an'da geçtiği ayetler: (18:45)(54 :42)(54:55 )",
+      "en": "Found in Quran Ayah(s): (18:45)(54 :42)(54:55 )"
+    },
     "contentReviewRequired": false
   },
   {
@@ -2349,6 +2738,11 @@ export const names: NameEntry[] = [
       "de": "Wird meist paarweise mit Al-Mu'akhkhir (72) genannt.",
       "tr": "Tertip ve düzen ismidir.",
       "en": "Relates to the order and sequence of creation."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (16:61)(17:34)",
+      "tr": "Kur'an'da geçtiği ayetler: (16:61)(17:34)",
+      "en": "Found in Quran Ayah(s): (16:61)(17:34)"
     },
     "contentReviewRequired": false
   },
@@ -2383,6 +2777,11 @@ export const names: NameEntry[] = [
       "tr": "Mühlet ve hikmet ismidir.",
       "en": "Often linked to the concept of tests and the 'reprieve' given to people."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (71:4)",
+      "tr": "Kur'an'da geçtiği ayetler: (71:4)",
+      "en": "Found in Quran Ayah(s): (71:4)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -2415,6 +2814,11 @@ export const names: NameEntry[] = [
       "de": "Zeitloser Name, oft mit Al-Akhir (74) genannt.",
       "tr": "Ezeliyet ismidir.",
       "en": "One of the four 'timeless' names mentioned together in Surah Al-Hadid."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (57:3)",
+      "tr": "Kur'an'da geçtiği ayetler: (57:3)",
+      "en": "Found in Quran Ayah(s): (57:3)"
     },
     "contentReviewRequired": false
   },
@@ -2449,6 +2853,11 @@ export const names: NameEntry[] = [
       "tr": "Ebediyet ismidir.",
       "en": "Reassures believers that Allah is the ultimate survivor and final judge."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (57:3)",
+      "tr": "Kur'an'da geçtiği ayetler: (57:3)",
+      "en": "Found in Quran Ayah(s): (57:3)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -2481,6 +2890,11 @@ export const names: NameEntry[] = [
       "de": "Gegenstück zu Al-Bāṭin (76).",
       "tr": "Aşikârlık ve galebe ismidir.",
       "en": "Focuses on the objective signs of God's existence."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (57:3)",
+      "tr": "Kur'an'da geçtiği ayetler: (57:3)",
+      "en": "Found in Quran Ayah(s): (57:3)"
     },
     "contentReviewRequired": false
   },
@@ -2515,6 +2929,11 @@ export const names: NameEntry[] = [
       "tr": "Gizlilik ve derinlik ismidir.",
       "en": "Refers to the divine essence that lies beyond form and physical perception."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (57:3)",
+      "tr": "Kur'an'da geçtiği ayetler: (57:3)",
+      "en": "Found in Quran Ayah(s): (57:3)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -2547,6 +2966,11 @@ export const names: NameEntry[] = [
       "de": "Unterscheidet sich von Al-Waliy (56), da hier die administrative Souveränität im Vordergrund steht.",
       "tr": "Kainatın yönetim ve tasarruf ismidir.",
       "en": "Refers to administrative sovereignty and governance over the cosmos."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (13:11)(22 :7)",
+      "tr": "Kur'an'da geçtiği ayetler: (13:11)(22 :7)",
+      "en": "Found in Quran Ayah(s): (13:11)(22 :7)"
     },
     "contentReviewRequired": false
   },
@@ -2581,6 +3005,11 @@ export const names: NameEntry[] = [
       "tr": "Allah'ın izzet ve azametinin en üst mertebesini ifade eder.",
       "en": "An intensive form reflecting the peak of status and transcendence."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (13:9)",
+      "tr": "Kur'an'da geçtiği ayetler: (13:9)",
+      "en": "Found in Quran Ayah(s): (13:9)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -2613,6 +3042,11 @@ export const names: NameEntry[] = [
       "de": "Wird in Sure At-Tur (28) erwähnt.",
       "tr": "Kur'an-ı Kerim'de Allah'ın lütufkârlığını vurgulayan bir isimdir.",
       "en": "Mentioned in the Quran (52:28) as the Beneficent and Merciful."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (52:28)",
+      "tr": "Kur'an'da geçtiği ayetler: (52:28)",
+      "en": "Found in Quran Ayah(s): (52:28)"
     },
     "contentReviewRequired": false
   },
@@ -2647,6 +3081,11 @@ export const names: NameEntry[] = [
       "tr": "Mağfiret ve dönüş ismidir.",
       "en": "Highlights Allah as the initiator of the process of returning to grace."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (2:128)(4: 64)(49:12) (110:3)",
+      "tr": "Kur'an'da geçtiği ayetler: (2:128)(4: 64)(49:12) (110:3)",
+      "en": "Found in Quran Ayah(s): (2:128)(4: 64)(49:12) (110:3)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -2679,6 +3118,11 @@ export const names: NameEntry[] = [
       "de": "Wird im Koran meist im Kontext der Bestrafung von Unverbesserlichen genannt.",
       "tr": "İlahi adalet ve ceza sıfatıdır.",
       "en": "Signifies divine accountability and the protection of the moral order."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (32:22)(43 :41)(44:16 )",
+      "tr": "Kur'an'da geçtiği ayetler: (32:22)(43 :41)(44:16 )",
+      "en": "Found in Quran Ayah(s): (32:22)(43 :41)(44:16 )"
     },
     "contentReviewRequired": false
   },
@@ -2713,6 +3157,11 @@ export const names: NameEntry[] = [
       "tr": "Günahların tamamen yok edilmesi ismidir.",
       "en": "Often associated with the most powerful nights of worship (Laylatul Qadr)."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (4:99)(4:1 49)(22:60)",
+      "tr": "Kur'an'da geçtiği ayetler: (4:99)(4:1 49)(22:60)",
+      "en": "Found in Quran Ayah(s): (4:99)(4:1 49)(22:60)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -2745,6 +3194,11 @@ export const names: NameEntry[] = [
       "de": "Eine Steigerung der Barmherzigkeit (Rahmah).",
       "tr": "Merhametin en ince ve nazik halidir.",
       "en": "Denotes a degree of mercy that is even more specific and intense than 'Rahmah'."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (3:30)(9:1 17)(57:9)( 59:10)",
+      "tr": "Kur'an'da geçtiği ayetler: (3:30)(9:1 17)(57:9)( 59:10)",
+      "en": "Found in Quran Ayah(s): (3:30)(9:1 17)(57:9)( 59:10)"
     },
     "contentReviewRequired": false
   },
@@ -2779,6 +3233,11 @@ export const names: NameEntry[] = [
       "tr": "Mülk ve tasarruf yetkisinin kaynağıdır.",
       "en": "Emphasizes the absolute ownership of the Creator over the creation."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (3:26)",
+      "tr": "Kur'an'da geçtiği ayetler: (3:26)",
+      "en": "Found in Quran Ayah(s): (3:26)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -2811,6 +3270,11 @@ export const names: NameEntry[] = [
       "de": "Wird zweimal in Sure Ar-Rahman erwähnt.",
       "tr": "Kur'an'da Rahmân Suresi'nde geçen yüce bir isimdir.",
       "en": "Found in Surah Ar-Rahman (55:27, 78)."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (55:27)(55 :78)",
+      "tr": "Kur'an'da geçtiği ayetler: (55:27)(55 :78)",
+      "en": "Found in Quran Ayah(s): (55:27)(55 :78)"
     },
     "contentReviewRequired": false
   },
@@ -2845,6 +3309,11 @@ export const names: NameEntry[] = [
       "tr": "Hakkaniyet ve denge ismidir.",
       "en": "Focuses on the practical and harmonizing aspect of justice."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (7:29)(3:1 8)",
+      "tr": "Kur'an'da geçtiği ayetler: (7:29)(3:1 8)",
+      "en": "Found in Quran Ayah(s): (7:29)(3:1 8)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -2877,6 +3346,11 @@ export const names: NameEntry[] = [
       "de": "Einer der Namen des Jüngsten Tages (Yawm al-Jami').",
       "tr": "Vahdet ve haşir ismidir.",
       "en": "Often related to the final gathering of souls in the hereafter."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (3:9)",
+      "tr": "Kur'an'da geçtiği ayetler: (3:9)",
+      "en": "Found in Quran Ayah(s): (3:9)"
     },
     "contentReviewRequired": false
   },
@@ -2911,6 +3385,11 @@ export const names: NameEntry[] = [
       "tr": "Zatî bir sıfattır.",
       "en": "A fundamental attribute of God's essence."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (3:97)(39: 7)(47:38)( 57:24)",
+      "tr": "Kur'an'da geçtiği ayetler: (3:97)(39: 7)(47:38)( 57:24)",
+      "en": "Found in Quran Ayah(s): (3:97)(39: 7)(47:38)( 57:24)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -2943,6 +3422,11 @@ export const names: NameEntry[] = [
       "de": "Eng verknüpft mit Al-Ghaniy (88).",
       "tr": "Lütuf ve kerem ismidir.",
       "en": "Often mentioned in the context of Allah's bounty after hardship."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (9:28)",
+      "tr": "Kur'an'da geçtiği ayetler: (9:28)",
+      "en": "Found in Quran Ayah(s): (9:28)"
     },
     "contentReviewRequired": false
   },
@@ -2977,6 +3461,11 @@ export const names: NameEntry[] = [
       "tr": "Hikmetli engel ve koruma ismidir.",
       "en": "A name that illustrates divine protection through intervention."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (67:21)",
+      "tr": "Kur'an'da geçtiği ayetler: (67:21)",
+      "en": "Found in Quran Ayah(s): (67:21)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -3009,6 +3498,11 @@ export const names: NameEntry[] = [
       "de": "Theologisch wird dieser Name stets paarweise mit An-Nafi erklärt, um ein einseitiges Gottesbild zu vermeiden.",
       "tr": "Zatî bir kemal sıfatı olarak An-Nâfi ismiyle birlikte zikredilmesi edep gereğidir.",
       "en": "Theologically paired with An-Nafi to maintain the balance of Divine attributes."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (6:17)",
+      "tr": "Kur'an'da geçtiği ayetler: (6:17)",
+      "en": "Found in Quran Ayah(s): (6:17)"
     },
     "contentReviewRequired": false
   },
@@ -3043,6 +3537,11 @@ export const names: NameEntry[] = [
       "tr": "Hayrın ve menfaatin yegane kaynağı olduğunu vurgular.",
       "en": "Complements Ad-Darr to show total control over all outcomes."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (30:37)",
+      "tr": "Kur'an'da geçtiği ayetler: (30:37)",
+      "en": "Found in Quran Ayah(s): (30:37)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -3075,6 +3574,11 @@ export const names: NameEntry[] = [
       "de": "Basierend auf Sure An-Nur (24:35).",
       "tr": "Kur'an-ı Kerim'de müstakil bir sureye adını veren yüce bir isimdir.",
       "en": "Derived from the famous 'Verse of Light' in the Quran (24:35)."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (24:35)",
+      "tr": "Kur'an'da geçtiği ayetler: (24:35)",
+      "en": "Found in Quran Ayah(s): (24:35)"
     },
     "contentReviewRequired": false
   },
@@ -3109,6 +3613,11 @@ export const names: NameEntry[] = [
       "tr": "İrşad ve hidayetin kaynağıdır.",
       "en": "A fundamental attribute for the spiritual journey of a believer."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (25:31)",
+      "tr": "Kur'an'da geçtiği ayetler: (25:31)",
+      "en": "Found in Quran Ayah(s): (25:31)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -3141,6 +3650,11 @@ export const names: NameEntry[] = [
       "de": "Betont die absolute Originalität Gottes (Sure 2:117).",
       "tr": "İlahi sanatın benzersizliğini ifade eder.",
       "en": "Highlights the absolute originality and spontaneity of divine action."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (2:117)(6: 101)",
+      "tr": "Kur'an'da geçtiği ayetler: (2:117)(6: 101)",
+      "en": "Found in Quran Ayah(s): (2:117)(6: 101)"
     },
     "contentReviewRequired": false
   },
@@ -3175,6 +3689,11 @@ export const names: NameEntry[] = [
       "tr": "Beka sıfatının tecellisidir.",
       "en": "Reflects the attribute of 'Baqa' (Eternity)."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (55:27)",
+      "tr": "Kur'an'da geçtiği ayetler: (55:27)",
+      "en": "Found in Quran Ayah(s): (55:27)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -3207,6 +3726,11 @@ export const names: NameEntry[] = [
       "de": "Zentral für das Verständnis von Eigentum im Islam (Sure 15:23).",
       "tr": "Mülkün gerçek ve ebedî sahibidir.",
       "en": "Emphasizes that worldly power is transient and borrowed."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (15:23)",
+      "tr": "Kur'an'da geçtiği ayetler: (15:23)",
+      "en": "Found in Quran Ayah(s): (15:23)"
     },
     "contentReviewRequired": false
   },
@@ -3241,6 +3765,11 @@ export const names: NameEntry[] = [
       "tr": "Doğru yolun ve olgunluğun kaynağıdır.",
       "en": "Signifies the perfect planning and execution of the Divine Will."
     },
+    "source": {
+      "de": "Im Koran erwähnt in: (2:256)",
+      "tr": "Kur'an'da geçtiği ayetler: (2:256)",
+      "en": "Found in Quran Ayah(s): (2:256)"
+    },
     "contentReviewRequired": false
   },
   {
@@ -3273,6 +3802,11 @@ export const names: NameEntry[] = [
       "de": "Der letzte Name in der klassischen Aufzählung; er schließt den Kreis der göttlichen Gnade.",
       "tr": "Cezada acele etmemek ve mühlet vermek O'nun şanındandır.",
       "en": "A beautiful conclusion to the 99 Names, emphasizing Divine restraint and mercy."
+    },
+    "source": {
+      "de": "Im Koran erwähnt in: (2:153) (3:200) (103:3)",
+      "tr": "Kur'an'da geçtiği ayetler: (2:153) (3:200) (103:3)",
+      "en": "Found in Quran Ayah(s): (2:153) (3:200) (103:3)"
     },
     "contentReviewRequired": false
   }
