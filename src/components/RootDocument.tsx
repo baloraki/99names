@@ -15,7 +15,23 @@ export function RootDocument({
   shellLanguage?: Language
 }) {
   return (
-    <html lang={lang} data-theme="blue-night" className="h-full antialiased">
+    <html lang={lang} className="h-full antialiased" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                var theme = localStorage.getItem('app:v1:theme');
+                if (theme) {
+                  document.documentElement.setAttribute('data-theme', JSON.parse(theme));
+                } else {
+                  document.documentElement.setAttribute('data-theme', 'blue-night');
+                }
+              } catch (e) {}
+            `,
+          }}
+        />
+      </head>
       <body className="min-h-screen bg-background text-primary">
         <ServiceWorkerRegister />
         <AppShell routeLanguage={shellLanguage}>{children}</AppShell>
