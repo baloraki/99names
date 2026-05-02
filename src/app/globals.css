@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #080808;
-  --color-background-soft: #111111;
-  --color-surface: #161616;
-  --color-surface-soft: #1f1f1f;
+  --color-background: #060915;
+  --color-background-soft: #0d1324;
+  --color-surface: #151c31;
+  --color-surface-soft: #1e2742;
   --color-gold: #d6b25e;
   --color-gold-soft: #f0d98a;
   --color-gold-muted: #8f7338;
@@ -19,7 +19,7 @@
 }
 
 html {
-  background: #080808;
+  background: #060915;
 }
 
 body {
@@ -41,10 +41,10 @@ textarea {
 
 .star-field {
   background:
-    radial-gradient(circle at 20% 15%, rgba(214, 178, 94, 0.16), transparent 26rem),
-    radial-gradient(circle at 82% 8%, rgba(240, 217, 138, 0.08), transparent 22rem),
-    radial-gradient(circle at 50% 80%, rgba(214, 178, 94, 0.06), transparent 24rem),
-    #080808;
+    radial-gradient(circle at 20% 15%, rgba(214, 178, 94, 0.22), transparent 26rem),
+    radial-gradient(circle at 82% 8%, rgba(56, 189, 248, 0.16), transparent 22rem),
+    radial-gradient(circle at 50% 80%, rgba(168, 85, 247, 0.12), transparent 24rem),
+    #060915;
 }
 
 .star-field::before {

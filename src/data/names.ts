@@ -128,7 +128,7 @@ export const names: NameEntry[] = [
     "id": 3,
     "slug": "al-malik",
     "arabic": "المَلِك",
-    "transliteration": "Al-Malik",
+    "transliteration": "El-Melik",
     "pronunciation": "Al-Ma-lik",
     "meanings": {
       "de": "Der König",
@@ -356,7 +356,7 @@ export const names: NameEntry[] = [
     "id": 9,
     "slug": "al-jabbar",
     "arabic": "الجَبَّار",
-    "transliteration": "Al-Jabbār",
+    "transliteration": "El-Cebbār",
     "pronunciation": "Al-Dschab-baar",
     "meanings": {
       "de": "Der Unterwerfer und Heiler",
