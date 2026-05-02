@@ -2,6 +2,8 @@ import type { ProgressState } from '@/types/progress'
 import type { LearningScheduleSettings } from '@/types/learningSchedule'
 import type { LearnState } from '@/types/learnState'
 import type { Language } from '@/types/language'
+import type { ThemeName } from '@/types/theme'
+import { isThemeName } from '@/types/theme'
 import {
   createClearedLanguageCookie,
   createLanguageCookie,
@@ -53,6 +55,8 @@ const defaultSchedule: LearningScheduleSettings = {
   interval: 'daily',
 }
 
+const defaultTheme: ThemeName = 'blue-night'
+
 const defaultLearnState: LearnState = {
   mode: 'card',
   shuffle: false,
@@ -88,6 +92,13 @@ export const storage = {
   setSchedule(schedule: LearningScheduleSettings): void {
     setItem(STORAGE_KEYS.SCHEDULE, schedule)
   },
+  getTheme(): ThemeName {
+    const stored = getItem<unknown>(STORAGE_KEYS.THEME)
+    return isThemeName(stored) ? stored : defaultTheme
+  },
+  setTheme(theme: ThemeName): void {
+    setItem(STORAGE_KEYS.THEME, theme)
+  },
   getLearnState(): LearnState {
     const stored = getItem<Partial<LearnState>>(STORAGE_KEYS.LEARN_STATE)
     if (!stored) return { ...defaultLearnState }
@@ -101,6 +112,7 @@ export const storage = {
     removeItem(STORAGE_KEYS.LANGUAGE)
     removeItem(STORAGE_KEYS.SCHEDULE)
     removeItem(STORAGE_KEYS.LEARN_STATE)
+    removeItem(STORAGE_KEYS.THEME)
     if (isClient) {
       window.document.cookie = createClearedLanguageCookie()
     }

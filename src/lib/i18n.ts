@@ -119,6 +119,8 @@ export type Dict = {
     eyebrow: string
     title: string
     language: string
+    theme: string
+    themeOptions: Record<'dark-classic' | 'blue-night' | 'soft-light', string>
     localData: string
     localDataBody: (learned: number, favorites: number, lastViewed: string) => string
     resetProgress: string
@@ -282,6 +284,12 @@ const de: Dict = {
     eyebrow: 'Setup',
     title: 'Einstellungen',
     language: 'Sprache',
+    theme: 'Theme',
+    themeOptions: {
+      'dark-classic': 'Dunkel (klassisch)',
+      'blue-night': 'Blau (aktuell)',
+      'soft-light': 'Hell',
+    },
     localData: 'Lokale Daten',
     localDataBody: (learned, favorites, lastViewed) => `Gelernt: ${learned}, Favoriten: ${favorites}, zuletzt angesehen: ${lastViewed}.`,
     resetProgress: 'Fortschritt zurücksetzen',
@@ -445,6 +453,12 @@ const tr: Dict = {
     eyebrow: 'Ayarlar',
     title: 'Ayarlar',
     language: 'Dil',
+    theme: 'Tema',
+    themeOptions: {
+      'dark-classic': 'Koyu (klasik)',
+      'blue-night': 'Mavi (mevcut)',
+      'soft-light': 'Açık',
+    },
     localData: 'Yerel veriler',
     localDataBody: (learned, favorites, lastViewed) => `Öğrenilen: ${learned}, favoriler: ${favorites}, son görüntülenen: ${lastViewed}.`,
     resetProgress: 'İlerlemeyi sıfırla',
@@ -608,6 +622,12 @@ const en: Dict = {
     eyebrow: 'Settings',
     title: 'Settings',
     language: 'Language',
+    theme: 'Theme',
+    themeOptions: {
+      'dark-classic': 'Dark (classic)',
+      'blue-night': 'Blue (current)',
+      'soft-light': 'Light',
+    },
     localData: 'Local data',
     localDataBody: (learned, favorites, lastViewed) => `Learned: ${learned}, favorites: ${favorites}, last viewed: ${lastViewed}.`,
     resetProgress: 'Reset progress',

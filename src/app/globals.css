@@ -25,12 +25,37 @@
   --color-surface-subtle: rgba(255, 255, 255, 0.06);
 }
 
+
+html[data-theme='dark-classic'] {
+  --color-background: #080808;
+  --color-background-soft: #111111;
+  --color-surface: #161616;
+  --color-surface-soft: #1f1f1f;
+  --color-hero-surface-end: rgba(22, 22, 22, 0.96);
+  --color-hero-surface-end-strong: rgba(22, 22, 22, 0.99);
+}
+
+html[data-theme='blue-night'] {
+  --color-background: #060915;
+  --color-background-soft: #0d1324;
+  --color-surface: #151c31;
+  --color-surface-soft: #1e2742;
+}
+
+html[data-theme='soft-light'] {
+  --color-background: #1f2940;
+  --color-background-soft: #2a3552;
+  --color-surface: #344161;
+  --color-surface-soft: #415073;
+  --color-muted: #ddd7cb;
+  --color-primary: #ffffff;
+}
 * {
   box-sizing: border-box;
 }
 
 html {
-  background: #060915;
+  background: var(--color-background);
 }
 
 body {
@@ -55,7 +80,7 @@ textarea {
     radial-gradient(circle at 20% 15%, rgba(214, 178, 94, 0.22), transparent 26rem),
     radial-gradient(circle at 82% 8%, rgba(56, 189, 248, 0.16), transparent 22rem),
     radial-gradient(circle at 50% 80%, rgba(168, 85, 247, 0.12), transparent 24rem),
-    #060915;
+    var(--color-background);
 }
 
 .star-field::before {
@@ -99,7 +124,7 @@ textarea {
 }
 
 .focus-ring:focus-visible {
-  box-shadow: 0 0 0 2px #d6b25e, 0 0 0 5px #060915;
+  box-shadow: 0 0 0 2px #d6b25e, 0 0 0 5px var(--color-background);
 }
 
 .btn-primary,
@@ -119,7 +144,7 @@ textarea {
 .btn-primary {
   border: 1px solid rgba(214, 178, 94, 0.68);
   background: #d6b25e;
-  color: #060915;
+  color: var(--color-background);
 }
 
 .btn-secondary {
@@ -154,7 +179,7 @@ textarea {
 .btn-danger:focus-visible,
 .chip:focus-visible,
 .field:focus-visible {
-  box-shadow: 0 0 0 2px #d6b25e, 0 0 0 5px #060915;
+  box-shadow: 0 0 0 2px #d6b25e, 0 0 0 5px var(--color-background);
 }
 
 .nav-link {
@@ -222,7 +247,7 @@ textarea {
 .header-icon-link:focus-visible,
 .mobile-menu-item:focus-visible,
 .mobile-menu-toggle:focus-visible {
-  box-shadow: 0 0 0 2px #d6b25e, 0 0 0 5px #060915;
+  box-shadow: 0 0 0 2px #d6b25e, 0 0 0 5px var(--color-background);
 }
 
 .mobile-menu-backdrop {
@@ -361,5 +386,5 @@ textarea {
 }
 
 .language-select:focus-visible {
-  box-shadow: 0 0 0 2px #d6b25e, 0 0 0 5px #060915;
+  box-shadow: 0 0 0 2px #d6b25e, 0 0 0 5px var(--color-background);
 }
