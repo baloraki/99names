@@ -1,4 +1,51 @@
-import type { NameEntry } from '@/types/name'
+import type {NameEntry} from '@/types/name'
+
+export const firstName: NameEntry = {
+    "id": 1,
+    "slug": "allah",
+    "arabic": "الله",
+    "transliteration": {
+        "de": "Allah",
+        "tr": "Allah (C.C.)",
+        "en": "Allah"
+    },
+    "pronunciation": {
+        "de": "Al-lah",
+        "tr": "Al-lah",
+        "en": "Al-lah"
+    },
+    "meanings": {
+        "de": "Der Eine Gott",
+        "tr": "Tek İlah",
+        "en": "The One God"
+    },
+    "explanations": {
+        "de": "Der Eigenname des Schöpfers, der alle göttlichen Eigenschaften und Vollkommenheiten in sich vereint. Es ist der umfassendste Name Gottes, der auf Sein absolutes Wesen hinweist.",
+        "tr": "Bütün isimleri ve sıfatları kendinde toplayan, eşi benzeri ve ortağı olmayan mutlak ve tek Allah'ın özel ismidir.",
+        "en": "The proper name of the One True God, encompassing all attributes of perfection. He is the only one Almighty and alone worthy of worship."
+    },
+    "duaUsage": {
+        "de": "Wird verwendet, um Gott in Seiner Gesamtheit, Allmacht und Majestät anzurufen. Es ist das Fundament jedes Bittgebets (Ya Allah).",
+        "tr": "Her türlü yakarışın başında ve sonunda, O'nun mutlak azametine sığınmak ve birliğini ikrar etmek için zikredilir.",
+        "en": "Invoke 'Allah' to call upon Him in His totality, acknowledging that He alone is the ultimate source of all answers and the only one worthy of worship."
+    },
+    "reflection": {
+        "de": "Gott ist die einzige Realität, der wahre Anbetung gebührt. Die Erkenntnis dieses Namens befreit den Menschen von der Abhängigkeit gegenüber der Schöpfung.",
+        "tr": "Allah'ı bu isimle anmak, O'nu tüm sıfatlarıyla birlemek demektir. Bu bilinç, mümini kula kul olmaktan kurtarıp gerçek özgürlüğe kavuşturur.",
+        "en": "Contemplating this name strengthens the understanding of the ultimate source of existence. True self-knowledge begins with the recognition of one's Creator."
+    },
+    "sourceNote": {
+        "de": "Dieser Name ist unübersetzbar und exklusiv für den Schöpfer reserviert. Er bildet die Basis, aus der alle anderen Namen hervorgehen.",
+        "tr": "İsimlerin sultanıdır (Lafza-i Celal); başka hiçbir varlık için kullanılamaz ve tüm güzel isimlerin merkezidir.",
+        "en": "The foundational name and the 'Name of Majesty'. It belongs uniquely to the Creator and is the origin from which all other names derive."
+    },
+    "source": {
+        "de": "Im Koran erwähnt in: (1:1) (3:18 )",
+        "tr": "Kur'an'da geçtiği ayetler: (1:1) (3:18 )",
+        "en": "Found in Quran Ayah(s): (1:1) (3:18 )"
+    },
+    "contentReviewRequired": false
+};
 
 // Content policy for this dataset:
 // - Theology follows a Sunni Hanafi / Maturidi-compatible tanzih approach.
@@ -9,3275 +56,4760 @@ import type { NameEntry } from '@/types/name'
 // - Every entry remains review-required before public religious publication.
 
 export const names: NameEntry[] = [
-  {
-    id: 1,
-    slug: "ar-rahman",
-    arabic: "الرَّحْمَنُ",
-    transliteration: "Ar-Rahman",
-    pronunciation: "ar-rah-MAAN",
-    meanings: {
-      de: "Der besonders Barmherzige",
-      tr: "Çok merhametli olan",
-      en: "The Entirely Merciful"
-    },
-    explanations: {
-      de: "Ar-Rahman beschreibt Allahs umfassende Barmherzigkeit/Rahma, die der ganzen Schöpfung vorausgeht. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Ar-Rahman, Allah’ın bütün mahlûkata ulaşan geniş rahmetini bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Ar-Rahman describes Allah’s all-encompassing mercy that reaches creation before any merit. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um einen weichen Umgang, Schutz vor Hartherzigkeit und Barmherzigkeit im Urteil bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: kalp katılığından korunmayı, merhametli davranmayı ve affa açık olmayı.",
-      en: "In supplication, this name especially fits when asking for a softened heart, mercy in judgment, and protection from harshness."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: Rahma ist kein Zeichen von Schwäche; sie soll dich dazu bringen, Menschen, Tiere und Schwache gerechter zu behandeln.",
-      tr: "Pratik ders şudur: rahmet zayıflık değildir; insanlara, canlılara ve zayıflara daha adil davranmaya götürür.",
-      en: "The practical lesson is this: mercy is not weakness; it should make you more just toward people, animals, and the vulnerable."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Ar-Rahman: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Ar-Rahman için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Ar-Rahman: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 2,
-    slug: "ar-rahim",
-    arabic: "الرَّحِيمُ",
-    transliteration: "Ar-Rahim",
-    pronunciation: "ar-ra-HEEM",
-    meanings: {
-      de: "Der stets Barmherzige",
-      tr: "Daima merhamet eden",
-      en: "The Especially Merciful"
-    },
-    explanations: {
-      de: "Ar-Rahim verweist auf Allahs besondere, beständige Zuwendung zu denen, die Ihn suchen. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "Ar-Rahim ismi Allah’ın kendisine yönelen kullarına özel rahmetini öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "Ar-Rahim points to Allah’s special mercy toward those who turn back to Him. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll Hoffnung nach Fehlern, Annahme von Reue und Bestand im Glauben; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle hatalardan sonra ümit, tevbenin kabulü ve imanda sebat istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for hope after mistakes, accepted repentance, and firmness in faith; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: wer Allahs Rahim-Sein kennt, verzweifelt nicht an Reue, nutzt die Hoffnung aber nicht als Ausrede für Sünde.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: Allah’ın Rahîm oluşunu bilen tevbeden ümit kesmez; fakat ümidi günaha mazeret yapmaz.",
-      en: "In daily life, this name reminds you: knowing this mercy prevents despair, but hope must not become an excuse for sin."
-    },
-    sourceNote: {
-      de: "Einordnung zu Ar-Rahim: Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "Ar-Rahim hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on Ar-Rahim: The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 3,
-    slug: "al-malik",
-    arabic: "الْمَلِكُ",
-    transliteration: "Al-Malik",
-    pronunciation: "al-MA-lik",
-    meanings: {
-      de: "Der König",
-      tr: "Mutlak hükümdar",
-      en: "The Sovereign King"
-    },
-    explanations: {
-      de: "Al-Malik hebt Allahs uneingeschränkte Herrschaft über Besitz, Leben und Ordnung hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Al-Malik ismi Allah’ın mülk, hayat ve düzen üzerindeki mutlak hükümranlığını hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Al-Malik, Allah’s absolute sovereignty over ownership, life, and order is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du innere Freiheit von Statusdruck und gerechte Verantwortung in deiner Machtposition suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken makam baskısından kurtulmayı ve yetki sahibiysen adil sorumluluk taşımayı iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking freedom from status pressure and just responsibility in positions of power. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: kein Besitz ist absolut dein Eigentum; alles, was du führst, ist anvertraut.",
-      tr: "Bu isim bakışı düzeltir: hiçbir mülk mutlak senin değildir; yönettiğin her şey emanettir.",
-      en: "This name corrects your perspective: no possession is absolutely yours; whatever you manage is a trust."
-    },
-    sourceNote: {
-      de: "Hinweis zu Al-Malik: Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Al-Malik için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Al-Malik: The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 4,
-    slug: "al-quddus",
-    arabic: "الْقُدُّوسُ",
-    transliteration: "Al-Quddus",
-    pronunciation: "al-qud-DOOS",
-    meanings: {
-      de: "Der Heilige",
-      tr: "Kusurdan uzak olan",
-      en: "The Holy"
-    },
-    explanations: {
-      de: "Al-Quddus beschreibt Allahs Reinheit von jedem Mangel, Fehler und unwürdigen Begriff. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Al-Quddus, Allah’ın her türlü eksiklikten, kusurdan ve uygunsuz tasavvurdan münezzeh oluşunu bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Al-Quddus describes Allah’s purity from every imperfection, defect, and unworthy concept. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um Reinheit des Herzens, saubere Absichten und Distanz zu entwürdigenden Vorstellungen bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: kalp temizliği, niyet berraklığı ve Allah hakkında uygunsuz tasavvurdan uzak durmayı.",
-      en: "In supplication, this name especially fits when asking for purity of heart, clean intentions, and distance from degrading notions."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: dieser Name korrigiert Sprache und Denken über Allah: Ehrfurcht kommt vor Spekulation.",
-      tr: "Pratik ders şudur: bu isim Allah hakkında dili ve düşünceyi düzeltir: edep, spekülasyondan önce gelir.",
-      en: "The practical lesson is this: this name disciplines speech and thought about Allah: reverence comes before speculation."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Al-Quddus: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Al-Quddus için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Al-Quddus: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 5,
-    slug: "as-salam",
-    arabic: "السَّلاَمُ",
-    transliteration: "As-Salam",
-    pronunciation: "as-sa-LAAM",
-    meanings: {
-      de: "Der Friede",
-      tr: "Esenlik kaynağı",
-      en: "The Source of Peace"
-    },
-    explanations: {
-      de: "As-Salam verweist auf Allah als frei von Mangel und als Quelle wirklicher Sicherheit und Unversehrtheit. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "As-Salam ismi Allah’ın noksanlıktan uzak, gerçek selamet ve esenliğin kaynağı oluşunu öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "As-Salam points to Allah as free from deficiency and the source of real peace and safety. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll Frieden im Herzen, Schutz vor Unheil und ein Verhalten, von dem andere sicher sind; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle kalp huzuru, kötülükten korunma ve insanların senden emin olduğu bir ahlak istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for peace in the heart, protection from harm, and conduct that makes others safe; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: die Nähe zu As-Salam zeigt sich darin, dass deine Zunge und Hand keinen unnötigen Schaden verursachen.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: Es-Selâm’a yakınlık, dilinin ve elinin gereksiz zarar vermemesinde görünür.",
-      en: "In daily life, this name reminds you: closeness to As-Salam is shown when your tongue and hand do not cause needless harm."
-    },
-    sourceNote: {
-      de: "Einordnung zu As-Salam: Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "As-Salam hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on As-Salam: The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 6,
-    slug: "al-mumin",
-    arabic: "الْمُؤْمِنُ",
-    transliteration: "Al-Mu'min",
-    pronunciation: "al-MU-min",
-    meanings: {
-      de: "Der Sicherheit Schenkende",
-      tr: "Güven veren",
-      en: "The Giver of Faith and Security"
-    },
-    explanations: {
-      de: "Al-Mu'min hebt Allahs Gewährung von Sicherheit und Seine Bestätigung der Wahrheit hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Al-Mu'min ismi Allah’ın güven vermesini ve hakikati tasdik etmesini hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Al-Mu'min, Allah’s granting of security and His confirmation of truth is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du festen Iman, Schutz vor innerer Angst und Vertrauenswürdigkeit im Charakter suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken sağlam iman, iç korkulardan korunma ve güvenilir bir karakter iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking firm faith, protection from inner fear, and trustworthiness of character. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: wer Sicherheit von Allah erwartet, darf selbst kein Mensch sein, vor dem andere Angst haben.",
-      tr: "Bu isim bakışı düzeltir: Allah’tan emniyet isteyen kişi, başkalarının korktuğu biri olmamalıdır.",
-      en: "This name corrects your perspective: whoever seeks security from Allah should not become someone others fear."
-    },
-    sourceNote: {
-      de: "Hinweis zu Al-Mu'min: Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Al-Mu'min için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Al-Mu'min: The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 7,
-    slug: "al-muhaymin",
-    arabic: "الْمُهَيْمِنُ",
-    transliteration: "Al-Muhaymin",
-    pronunciation: "al-mu-HAY-min",
-    meanings: {
-      de: "Der Bewahrende",
-      tr: "Gözetip koruyan",
-      en: "The Guardian"
-    },
-    explanations: {
-      de: "Al-Muhaymin beschreibt Allahs wachende Fürsorge, die nichts unbeaufsichtigt lässt. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Al-Muhaymin, Allah’ın hiçbir şeyi gözetimsiz bırakmayan koruyucu idaresini bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Al-Muhaymin describes Allah’s guarding oversight that leaves nothing unattended. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um Schutz in unklaren Situationen, Bewahrung deiner Familie und klare Führung unter Druck bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: belirsiz durumlarda korunma, aileni muhafaza ve baskı altında doğru yönlendirme.",
-      en: "In supplication, this name especially fits when asking for protection in uncertainty, safeguarding of family, and clear guidance under pressure."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: dieser Name stärkt Muraqaba: du bist nie unbeachtet, also handle nicht achtlos.",
-      tr: "Pratik ders şudur: bu isim murakabeyi güçlendirir: hiçbir an başıboş değilsin, o hâlde gafil davranma.",
-      en: "The practical lesson is this: this name strengthens vigilance: you are never unobserved, so do not live carelessly."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Al-Muhaymin: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Al-Muhaymin için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Al-Muhaymin: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 8,
-    slug: "al-aziz",
-    arabic: "الْعَزِيزُ",
-    transliteration: "Al-Aziz",
-    pronunciation: "al-a-ZEEZ",
-    meanings: {
-      de: "Der Allmächtige",
-      tr: "Üstün ve izzet sahibi",
-      en: "The Almighty"
-    },
-    explanations: {
-      de: "Al-Aziz verweist auf Allahs unbesiegbare Macht und Ehre, die niemand mindern kann. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "Al-Aziz ismi Allah’ın yenilmeyen kudret ve izzetini öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "Al-Aziz points to Allah’s invincible power and honor that none can diminish. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll Würde ohne Hochmut, Stärke gegen Unterdrückung und Standhaftigkeit im Recht; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle kibirsiz izzet, zulme karşı güç ve hak üzere sebat istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for dignity without arrogance, strength against oppression, and firmness upon truth; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: wahre Ehre wird nicht durch Dominanz gewonnen, sondern durch Bindung an Allahs Gebot.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: gerçek izzet baskıyla değil, Allah’ın emrine bağlılıkla kazanılır.",
-      en: "In daily life, this name reminds you: true honor is not gained by domination but by loyalty to Allah’s command."
-    },
-    sourceNote: {
-      de: "Einordnung zu Al-Aziz: Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "Al-Aziz hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on Al-Aziz: The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 9,
-    slug: "al-jabbar",
-    arabic: "الْجَبَّارُ",
-    transliteration: "Al-Jabbar",
-    pronunciation: "al-jab-BAAR",
-    meanings: {
-      de: "Der Bezwinger",
-      tr: "Dilediğini yaptıran",
-      en: "The Compeller"
-    },
-    explanations: {
-      de: "Al-Jabbar hebt Allahs Macht, Gebrochenes zu richten und widerspenstige Macht zu bezwingen hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Al-Jabbar ismi Allah’ın kırılmışı onaran ve azgın gücü dize getiren kudretini hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Al-Jabbar, Allah’s power to restore what is broken and subdue rebellious force is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du Heilung nach seelischem Bruch, Schutz vor Zwang und Befreiung von Unrecht suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken kalp kırıklığından sonra onarım, zorbalıktan korunma ve haksızlıktan kurtuluş iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking restoration after brokenness, protection from coercion, and relief from injustice. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: Al-Jabbar rechtfertigt keine menschliche Härte; tyrannische Stärke bleibt vor Allah schwach.",
-      tr: "Bu isim bakışı düzeltir: El-Cebbâr insan sertliğine mazeret değildir; zalim güç Allah katında zayıftır.",
-      en: "This name corrects your perspective: Al-Jabbar does not justify human harshness; tyrannical power remains weak before Allah."
-    },
-    sourceNote: {
-      de: "Hinweis zu Al-Jabbar: Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Al-Jabbar için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Al-Jabbar: The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 10,
-    slug: "al-mutakabbir",
-    arabic: "الْمُتَكَبِّرُ",
-    transliteration: "Al-Mutakabbir",
-    pronunciation: "al-mu-ta-KAB-bir",
-    meanings: {
-      de: "Der Erhabene",
-      tr: "Büyüklük sahibi",
-      en: "The Supreme"
-    },
-    explanations: {
-      de: "Al-Mutakabbir beschreibt Allahs allein angemessene Größe über jeder geschöpflichen Selbstüberhebung. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Al-Mutakabbir, Allah’a mahsus büyüklüğü ve mahlûk kibrinden uzak yüceliği bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Al-Mutakabbir describes Allah’s majesty above every created form of self-exaltation. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um Demut, Reinigung von Stolz und Respekt vor Allahs Grenzen bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: tevazu, kibirden arınma ve Allah’ın sınırlarına saygı.",
-      en: "In supplication, this name especially fits when asking for humility, purification from pride, and respect for Allah’s limits."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: was beim Menschen Hochmut ist, ist bei Allah vollkommene Erhabenheit; verwechsle beides nicht.",
-      tr: "Pratik ders şudur: insanda kibir olan şey, Allah hakkında kemal ve ululuktur; ikisini karıştırma.",
-      en: "The practical lesson is this: what is arrogance in humans is perfect majesty for Allah; do not confuse the two."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Al-Mutakabbir: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Al-Mutakabbir için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Al-Mutakabbir: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 11,
-    slug: "al-khaliq",
-    arabic: "الْخَالِقُ",
-    transliteration: "Al-Khaliq",
-    pronunciation: "al-KHAA-liq",
-    meanings: {
-      de: "Der Schöpfer",
-      tr: "Yaratan",
-      en: "The Creator"
-    },
-    explanations: {
-      de: "Al-Khaliq verweist auf Allahs Erschaffen mit Maß, Wissen und Zweck. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "Al-Khaliq ismi Allah’ın her şeyi ölçü, ilim ve hikmetle yaratmasını öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "Al-Khaliq points to Allah’s creating with measure, knowledge, and purpose. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll heilsame Anfänge, Dankbarkeit für Existenz und verantwortlichen Umgang mit Geschöpfen; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle hayırlı başlangıçlar, varlık nimetine şükür ve mahlûkata karşı sorumluluk istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for blessed beginnings, gratitude for existence, and responsible treatment of creation; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: Schöpfung ist kein Zufallsmaterial; sie trägt Ordnung, Zweck und Verantwortung.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: yaratılış rastgele madde değildir; düzen, gaye ve sorumluluk taşır.",
-      en: "In daily life, this name reminds you: creation is not random material; it carries order, purpose, and responsibility."
-    },
-    sourceNote: {
-      de: "Einordnung zu Al-Khaliq: Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "Al-Khaliq hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on Al-Khaliq: The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 12,
-    slug: "al-bari",
-    arabic: "الْبَارِئُ",
-    transliteration: "Al-Bari'",
-    pronunciation: "al-BAA-ri",
-    meanings: {
-      de: "Der Hervorbringer",
-      tr: "Kusursuzca var eden",
-      en: "The Originator"
-    },
-    explanations: {
-      de: "Al-Bari' hebt Allahs Hervorbringen ohne Vorbild, Mangel oder Abhängigkeit hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Al-Bari' ismi Allah’ın örneksiz, noksansız ve bağımsız şekilde var etmesini hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Al-Bari', Allah’s bringing into being without model, defect, or dependence is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du Neubeginn nach Stillstand, Reinheit in Arbeit und Schutz vor chaotischem Handeln suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken durgunluktan sonra yeniden başlangıç, işte temizlik ve dağınıklıktan korunma iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking a fresh start after stagnation, purity in work, and protection from chaotic action. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: dieser Name erinnert: sauberer Ursprung und klare Ordnung sind Teil göttlicher Weisheit.",
-      tr: "Bu isim bakışı düzeltir: bu isim hatırlatır: temiz başlangıç ve sağlam düzen ilahî hikmetin parçasıdır.",
-      en: "This name corrects your perspective: this name reminds you that clean origin and sound order belong to divine wisdom."
-    },
-    sourceNote: {
-      de: "Hinweis zu Al-Bari': Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Al-Bari' için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Al-Bari': The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 13,
-    slug: "al-musawwir",
-    arabic: "الْمُصَوِّرُ",
-    transliteration: "Al-Musawwir",
-    pronunciation: "al-mu-SAW-wir",
-    meanings: {
-      de: "Der Gestalter",
-      tr: "Şekil veren",
-      en: "The Fashioner"
-    },
-    explanations: {
-      de: "Al-Musawwir beschreibt Allahs Geben von Form, Gestalt und Besonderheit an jedes Wesen. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Al-Musawwir, Allah’ın her varlığa şekil, suret ve özellik vermesini bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Al-Musawwir describes Allah’s giving form, appearance, and distinction to every being. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um Dankbarkeit für den Körper, Schutz vor Eitelkeit und Annahme deiner anvertrauten Gestalt bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: beden nimetine şükür, gösterişten korunma ve emanet edilen sureti kabullenme.",
-      en: "In supplication, this name especially fits when asking for gratitude for the body, protection from vanity, and acceptance of entrusted form."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: Schönheit ist Amanah, nicht Götze; der Wert des Menschen liegt nicht im Spiegel.",
-      tr: "Pratik ders şudur: güzellik emanettir, put değildir; insanın değeri aynada ölçülmez.",
-      en: "The practical lesson is this: beauty is a trust, not an idol; human worth is not measured in the mirror."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Al-Musawwir: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Al-Musawwir için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Al-Musawwir: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 14,
-    slug: "al-ghaffar",
-    arabic: "الْغَفَّارُ",
-    transliteration: "Al-Ghaffar",
-    pronunciation: "al-ghaf-FAAR",
-    meanings: {
-      de: "Der oft Vergebende",
-      tr: "Çok bağışlayan",
-      en: "The Constant Forgiver"
-    },
-    explanations: {
-      de: "Al-Ghaffar verweist auf Allahs wiederholtes Bedecken und Vergeben von Sünden. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "Al-Ghaffar ismi Allah’ın günahları tekrar tekrar örtüp bağışlamasını öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "Al-Ghaffar points to Allah’s repeated covering and forgiving of sins. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll aufrichtige Reue nach wiederholtem Fallen und Schutz vor öffentlicher Bloßstellung; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle tekrar düşüşlerden sonra samimi tevbe ve ayıpların açığa çıkmasından korunma istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for sincere repentance after repeated falls and protection from public exposure; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: wer Vergebung sucht, soll die Fehler anderer nicht genüsslich aufdecken.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: bağışlanma isteyen, başkalarının hatalarını zevkle açığa çıkarmamalıdır.",
-      en: "In daily life, this name reminds you: one who seeks forgiveness should not delight in exposing others’ faults."
-    },
-    sourceNote: {
-      de: "Einordnung zu Al-Ghaffar: Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "Al-Ghaffar hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on Al-Ghaffar: The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 15,
-    slug: "al-qahhar",
-    arabic: "الْقَهَّارُ",
-    transliteration: "Al-Qahhar",
-    pronunciation: "al-qah-HAAR",
-    meanings: {
-      de: "Der alles Bezwingende",
-      tr: "Her şeye galip olan",
-      en: "The Subduer"
-    },
-    explanations: {
-      de: "Al-Qahhar hebt Allahs überwältigende Herrschaft, vor der jede Macht weichen muss hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Al-Qahhar ismi Allah’ın karşısında her gücün boyun eğdiği galip kudretini hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Al-Qahhar, Allah’s overwhelming dominion before which every power yields is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du Sieg über Nafs, falsche Abhängigkeiten und hartnäckiges Unrecht suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken nefsin, yanlış bağlılıkların ve inatçı zulmün yenilmesi iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking victory over the ego, false dependencies, and persistent injustice. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: Al-Qahhar macht klar: keine Gewohnheit, kein Herrscher und kein System ist absolut.",
-      tr: "Bu isim bakışı düzeltir: El-Kahhâr gösterir: hiçbir alışkanlık, yönetici veya düzen mutlak değildir.",
-      en: "This name corrects your perspective: Al-Qahhar makes clear that no habit, ruler, or system is absolute."
-    },
-    sourceNote: {
-      de: "Hinweis zu Al-Qahhar: Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Al-Qahhar için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Al-Qahhar: The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 16,
-    slug: "al-wahhab",
-    arabic: "الْوَهَّابُ",
-    transliteration: "Al-Wahhab",
-    pronunciation: "al-wah-HAAB",
-    meanings: {
-      de: "Der großzügig Gebende",
-      tr: "Karşılıksız veren",
-      en: "The Bestower"
-    },
-    explanations: {
-      de: "Al-Wahhab beschreibt Allahs freies Geben ohne Bedürfnis nach Gegenleistung. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Al-Wahhab, Allah’ın karşılık beklemeden bol bol ihsan etmesini bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Al-Wahhab describes Allah’s free giving without need of return. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um unerwartete Gaben, Großzügigkeit des Herzens und Schutz vor Geiz bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: beklenmedik lütuflar, gönül cömertliği ve cimrilikten korunma.",
-      en: "In supplication, this name especially fits when asking for unexpected gifts, generosity of heart, and protection from stinginess."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: geschenkte Gaben sollen dich dankbar und spendabel machen, nicht anspruchsvoll.",
-      tr: "Pratik ders şudur: verilen nimetler seni talepkâr değil, şükreden ve ikram eden biri yapmalıdır.",
-      en: "The practical lesson is this: gifted blessings should make you grateful and generous, not entitled."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Al-Wahhab: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Al-Wahhab için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Al-Wahhab: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 17,
-    slug: "ar-razzaq",
-    arabic: "الرَّزَّاقُ",
-    transliteration: "Ar-Razzaq",
-    pronunciation: "ar-raz-ZAAQ",
-    meanings: {
-      de: "Der Versorger",
-      tr: "Rızık veren",
-      en: "The Provider"
-    },
-    explanations: {
-      de: "Ar-Razzaq verweist auf Allahs Erschaffen und Zuteilen materieller und geistiger Versorgung. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "Ar-Razzaq ismi Allah’ın maddî ve manevî rızkı yaratıp taksim etmesini öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "Ar-Razzaq points to Allah’s creating and apportioning material and spiritual provision. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll halalen Unterhalt, Baraka und Gelassenheit bei Versorgungssorgen; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle helâl rızık, bereket ve geçim endişesinde sükûnet istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for halal provision, blessing, and calm in worries about livelihood; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: Rizq kommt von Allah; deine Mittel sind wichtig, aber nicht anbetungswürdig.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: rızık Allah’tandır; sebepler önemlidir fakat tapılacak şey değildir.",
-      en: "In daily life, this name reminds you: provision is from Allah; means matter, but they are not to be worshipped."
-    },
-    sourceNote: {
-      de: "Einordnung zu Ar-Razzaq: Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "Ar-Razzaq hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on Ar-Razzaq: The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 18,
-    slug: "al-fattah",
-    arabic: "الْفَتَّاحُ",
-    transliteration: "Al-Fattah",
-    pronunciation: "al-fat-TAAH",
-    meanings: {
-      de: "Der Öffnende",
-      tr: "Kapıları açan",
-      en: "The Opener"
-    },
-    explanations: {
-      de: "Al-Fattah hebt Allahs Öffnen verschlossener Türen und Sein gerechtes Entscheiden hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Al-Fattah ismi Allah’ın kapalı kapıları açmasını ve hükmüyle adaleti göstermesini hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Al-Fattah, Allah’s opening of closed doors and His just deciding is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du einen klaren Ausweg, faire Entscheidung und Öffnung zu Gutem statt bloßem Wunschgewinn suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken açık bir çıkış yolu, adil hüküm ve sadece kazanç değil hayra açılan kapılar iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking a clear way out, fair judgment, and openings toward good rather than mere gain. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: nicht jede geöffnete Tür ist gut; Al-Fattah lehrt, um die richtige Öffnung zu bitten.",
-      tr: "Bu isim bakışı düzeltir: açılan her kapı hayır değildir; El-Fettâh doğru kapıyı istemeyi öğretir.",
-      en: "This name corrects your perspective: not every open door is good; Al-Fattah teaches you to ask for the right opening."
-    },
-    sourceNote: {
-      de: "Hinweis zu Al-Fattah: Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Al-Fattah için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Al-Fattah: The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 19,
-    slug: "al-alim",
-    arabic: "الْعَلِيمُ",
-    transliteration: "Al-Alim",
-    pronunciation: "al-a-LEEM",
-    meanings: {
-      de: "Der Allwissende",
-      tr: "Her şeyi bilen",
-      en: "The All-Knowing"
-    },
-    explanations: {
-      de: "Al-Alim beschreibt Allahs Wissen über Offenbares, Verborgenes, Vergangenes und Kommendes. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Al-Alim, Allah’ın görüneni, gizliyi, geçmişi ve geleceği kuşatan ilmini bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Al-Alim describes Allah’s knowledge of the apparent, hidden, past, and future. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um nützliches Wissen, Aufrichtigkeit im Verborgenen und Schutz vor Selbsttäuschung bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: faydalı ilim, gizlide ihlas ve kendini kandırmaktan korunma.",
-      en: "In supplication, this name especially fits when asking for beneficial knowledge, sincerity in private, and protection from self-deception."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: vor Al-Alim zählt nicht das Bild, das du abgibst, sondern die Wahrheit deines Zustands.",
-      tr: "Pratik ders şudur: El-Alîm katında görüntü değil, hâlinin hakikati önemlidir.",
-      en: "The practical lesson is this: before Al-Alim, your image matters less than the truth of your state."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Al-Alim: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Al-Alim için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Al-Alim: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 20,
-    slug: "al-qabid",
-    arabic: "الْقَابِضُ",
-    transliteration: "Al-Qabid",
-    pronunciation: "al-QAA-bid",
-    meanings: {
-      de: "Der Zurückhaltende",
-      tr: "Daraltan",
-      en: "The Withholder"
-    },
-    explanations: {
-      de: "Al-Qabid verweist auf Allahs weisheitsvolles Verengen von Rizq, Umständen und Möglichkeiten. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "Al-Qabid ismi Allah’ın hikmetiyle rızkı, hâlleri ve imkânları daraltmasını öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "Al-Qabid points to Allah’s wise constriction of provision, circumstances, and possibilities. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll Geduld in Enge, Schutz vor Panik und Verständnis für Prüfungen; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle darlıkta sabır, panikten korunma ve imtihanı doğru anlamayı istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for patience in constriction, protection from panic, and understanding of trials; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: Enge kann Prüfung, Reinigung oder Schutz sein; sie ist nicht automatisch Verwerfung.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: darlık imtihan, arınma veya koruma olabilir; otomatik olarak reddedilme değildir.",
-      en: "In daily life, this name reminds you: constriction may be trial, purification, or protection; it is not automatically rejection."
-    },
-    sourceNote: {
-      de: "Einordnung zu Al-Qabid: Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "Al-Qabid hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on Al-Qabid: The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 21,
-    slug: "al-basit",
-    arabic: "الْبَاسِطُ",
-    transliteration: "Al-Basit",
-    pronunciation: "al-BAA-sit",
-    meanings: {
-      de: "Der Erweiternde",
-      tr: "Genişleten",
-      en: "The Expander"
-    },
-    explanations: {
-      de: "Al-Basit hebt Allahs Erweitern von Versorgung, Herzen und Lebenswegen hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Al-Basit ismi Allah’ın rızkı, kalpleri ve yolları genişletmesini hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Al-Basit, Allah’s expansion of provision, hearts, and life paths is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du Erleichterung nach Enge, Weite im Herzen und Baraka im Erlaubten suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken darlıktan sonra kolaylık, kalp genişliği ve helâlde bereket iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking relief after constriction, spaciousness of heart, and blessing in what is lawful. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: Weite ist ebenfalls Prüfung: Dankbarkeit muss mit der Erweiterung wachsen.",
-      tr: "Bu isim bakışı düzeltir: genişlik de imtihandır; nimet arttıkça şükür de artmalıdır.",
-      en: "This name corrects your perspective: expansion is also a test; gratitude must grow with ease."
-    },
-    sourceNote: {
-      de: "Hinweis zu Al-Basit: Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Al-Basit için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Al-Basit: The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 22,
-    slug: "al-khafid",
-    arabic: "الْخَافِضُ",
-    transliteration: "Al-Khafid",
-    pronunciation: "al-KHAA-fid",
-    meanings: {
-      de: "Der Erniedrigende",
-      tr: "Alçaltan",
-      en: "The Abaser"
-    },
-    explanations: {
-      de: "Al-Khafid beschreibt Allahs Herabsetzen von Hochmut, Unrecht und falscher Erhöhung. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Al-Khafid, Allah’ın kibri, zulmü ve sahte yüceliği alçaltmasını bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Al-Khafid describes Allah’s lowering of arrogance, injustice, and false elevation. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um Schutz vor Erniedrigung durch Sünde und Befreiung von Rangdenken bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: günahla zillete düşmekten korunma ve makam tutkusundan kurtuluş.",
-      en: "In supplication, this name especially fits when asking for protection from humiliation through sin and freedom from obsession with rank."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: wer sich über andere erhebt, kann durch die Wahrheit klein gemacht werden.",
-      tr: "Pratik ders şudur: başkalarının üstüne çıkan kişi hakikat karşısında küçültülebilir.",
-      en: "The practical lesson is this: one who exalts himself over others may be humbled by truth."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Al-Khafid: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Al-Khafid için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Al-Khafid: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 23,
-    slug: "ar-rafi",
-    arabic: "الرَّافِعُ",
-    transliteration: "Ar-Rafi'",
-    pronunciation: "ar-RAA-fi",
-    meanings: {
-      de: "Der Erhöhende",
-      tr: "Yükselten",
-      en: "The Exalter"
-    },
-    explanations: {
-      de: "Ar-Rafi' verweist auf Allahs Erheben durch Iman, Wissen, Gerechtigkeit und Annahme. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "Ar-Rafi' ismi Allah’ın iman, ilim, adalet ve kabul ile yükseltmesini öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "Ar-Rafi' points to Allah’s raising through faith, knowledge, justice, and acceptance. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll Erhöhung ohne Eitelkeit und Würde durch Gehorsam statt Applaus; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle kibirsiz yükseliş ve alkışla değil itaatle gelen izzet istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for elevation without vanity and dignity through obedience rather than applause; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: Allahs Erhöhung braucht keine Bühne; sie kann verborgen beginnen.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: Allah’ın yükseltmesi sahne gerektirmez; gizlide başlayabilir.",
-      en: "In daily life, this name reminds you: Allah’s elevation needs no stage; it can begin in private."
-    },
-    sourceNote: {
-      de: "Einordnung zu Ar-Rafi': Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "Ar-Rafi' hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on Ar-Rafi': The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 24,
-    slug: "al-muizz",
-    arabic: "الْمُعِزُّ",
-    transliteration: "Al-Mu'izz",
-    pronunciation: "al-mu-IZZ",
-    meanings: {
-      de: "Der Ehrende",
-      tr: "İzzet veren",
-      en: "The Giver of Honor"
-    },
-    explanations: {
-      de: "Al-Mu'izz hebt Allahs Verleihen von Ehre, Schutz und Stärke an wen Er will hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Al-Mu'izz ismi Allah’ın dilediğine izzet, koruma ve güç vermesini hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Al-Mu'izz, Allah’s granting of honor, protection, and strength to whom He wills is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du Ehre im Glauben, Würde in Konflikten und Schutz vor Abhängigkeit von Menschen suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken imanda izzet, anlaşmazlıkta vakar ve insanlara bağımlılıktan korunma iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking honor in faith, dignity in conflict, and protection from dependence on people. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: Izzet kommt nicht aus Herkunft, Geld oder Lautstärke, sondern aus Allahs Nähe.",
-      tr: "Bu isim bakışı düzeltir: izzet soy, para veya ses yüksekliğinden değil, Allah’a yakınlıktan gelir.",
-      en: "This name corrects your perspective: honor does not come from lineage, money, or volume, but from nearness to Allah."
-    },
-    sourceNote: {
-      de: "Hinweis zu Al-Mu'izz: Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Al-Mu'izz için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Al-Mu'izz: The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 25,
-    slug: "al-mudhill",
-    arabic: "المُذِلُّ",
-    transliteration: "Al-Mudhill",
-    pronunciation: "al-mu-DHILL",
-    meanings: {
-      de: "Der Demütigende",
-      tr: "Zillet veren",
-      en: "The Humbler"
-    },
-    explanations: {
-      de: "Al-Mudhill beschreibt Allahs Erniedrigen dessen, der Wahrheit und Recht bewusst bekämpft. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Al-Mudhill, Allah’ın hakka ve adalete bilerek karşı duranları zelil kılmasını bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Al-Mudhill describes Allah’s humbling of those who knowingly oppose truth and justice. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um Schutz vor Schande, Reue vor Verhärtung und Rettung vor demütigender Sünde bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: rezil olmaktan korunma, katılaşmadan önce tevbe ve zillete götüren günahtan kurtuluş.",
-      en: "In supplication, this name especially fits when asking for protection from disgrace, repentance before hardening, and rescue from humiliating sin."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: Demütigung durch Sünde ist real; wahre Rettung beginnt mit Umkehr.",
-      tr: "Pratik ders şudur: günahın zilleti gerçektir; gerçek kurtuluş dönüşle başlar.",
-      en: "The practical lesson is this: the humiliation of sin is real; true rescue begins with turning back."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Al-Mudhill: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Al-Mudhill için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Al-Mudhill: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 26,
-    slug: "as-sami",
-    arabic: "السَّمِيعُ",
-    transliteration: "As-Sami'",
-    pronunciation: "as-sa-MEE",
-    meanings: {
-      de: "Der Allhörende",
-      tr: "Her şeyi işiten",
-      en: "The All-Hearing"
-    },
-    explanations: {
-      de: "As-Sami' verweist auf Allahs Hören jedes Lautes, jeder Bitte und jedes unausgesprochenen Kummers. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "As-Sami' ismi Allah’ın her sesi, duayı ve söylenmemiş derdi işitmesini öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "As-Sami' points to Allah’s hearing of every sound, plea, and unspoken grief. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll angenommene Dua, gute Sprache und Schutz vor verletzenden Worten; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle duanın kabulü, güzel söz ve kırıcı dilden korunma istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for accepted supplication, good speech, and protection from harmful words; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: wenn Allah alles hört, ist kein Wort billig und kein Seufzer verloren.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: Allah her şeyi işitiyorsa hiçbir söz ucuz, hiçbir ah kayıp değildir.",
-      en: "In daily life, this name reminds you: if Allah hears everything, no word is cheap and no sigh is lost."
-    },
-    sourceNote: {
-      de: "Einordnung zu As-Sami': Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "As-Sami' hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on As-Sami': The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 27,
-    slug: "al-basir",
-    arabic: "الْبَصِيرُ",
-    transliteration: "Al-Basir",
-    pronunciation: "al-ba-SEER",
-    meanings: {
-      de: "Der Allsehende",
-      tr: "Her şeyi gören",
-      en: "The All-Seeing"
-    },
-    explanations: {
-      de: "Al-Basir hebt Allahs Sehen aller Taten, Zustände und verborgenen Beweggründe hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Al-Basir ismi Allah’ın bütün fiilleri, hâlleri ve gizli sebepleri görmesini hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Al-Basir, Allah’s seeing of all deeds, states, and hidden motives is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du Basira, Ehrlichkeit im Verborgenen und Schutz vor Doppelleben suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken basiret, gizlide doğruluk ve çift hayat yaşamaktan korunma iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking insight, honesty in private, and protection from a double life. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: dieser Name macht Einsamkeit ehrlich: du bist auch ohne Zeugen nicht unbeobachtet.",
-      tr: "Bu isim bakışı düzeltir: bu isim yalnızlığı dürüst kılar: şahitsizken de gözetimsiz değilsin.",
-      en: "This name corrects your perspective: this name makes solitude honest: even without witnesses, you are not unseen."
-    },
-    sourceNote: {
-      de: "Hinweis zu Al-Basir: Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Al-Basir için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Al-Basir: The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 28,
-    slug: "al-hakam",
-    arabic: "الْحَكَمُ",
-    transliteration: "Al-Hakam",
-    pronunciation: "al-HA-kam",
-    meanings: {
-      de: "Der Richter",
-      tr: "Hüküm veren",
-      en: "The Judge"
-    },
-    explanations: {
-      de: "Al-Hakam beschreibt Allahs endgültiges Urteil, dem keine Parteilichkeit überlegen ist. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Al-Hakam, Allah’ın hiçbir tarafgirliğin üstüne çıkamayacağı nihai hükmünü bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Al-Hakam describes Allah’s final judgment beyond bias or manipulation. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um faire Entscheidungen, klare Konfliktlösung und Schutz vor ungerechtem Urteil bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: adil karar, anlaşmazlıkta açıklık ve haksız hükümden korunma.",
-      en: "In supplication, this name especially fits when asking for fair decisions, clear conflict resolution, and protection from unjust judgment."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: wer an Al-Hakam glaubt, verdreht Beweise nicht für den eigenen Vorteil.",
-      tr: "Pratik ders şudur: El-Hakem’e iman eden, delilleri kendi lehine eğip bükmez.",
-      en: "The practical lesson is this: one who believes in Al-Hakam does not bend evidence for personal advantage."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Al-Hakam: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Al-Hakam için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Al-Hakam: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 29,
-    slug: "al-adl",
-    arabic: "الْعَدْلُ",
-    transliteration: "Al-Adl",
-    pronunciation: "al-ADL",
-    meanings: {
-      de: "Der Gerechte",
-      tr: "Adalet sahibi",
-      en: "The Just"
-    },
-    explanations: {
-      de: "Al-Adl verweist auf Allahs vollkommene Gerechtigkeit, die jedes Ding an seinen Ort setzt. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "Al-Adl ismi Allah’ın her şeyi yerli yerine koyan tam adaletini öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "Al-Adl points to Allah’s perfect justice that places everything where it belongs. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll Gerechtigkeit gegenüber Familie, Gegnern und dir selbst; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle ailene, muhatabına ve kendine karşı adalet istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for justice toward family, opponents, and yourself; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: Adl beginnt nicht erst im Gerichtssaal; es beginnt bei Worten, Blicken und Pflichten.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: adalet mahkemede başlamaz; sözde, bakışta ve görevde başlar.",
-      en: "In daily life, this name reminds you: justice does not begin in court; it begins in words, glances, and duties."
-    },
-    sourceNote: {
-      de: "Einordnung zu Al-Adl: Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "Al-Adl hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on Al-Adl: The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 30,
-    slug: "al-latif",
-    arabic: "اللَّطِيفُ",
-    transliteration: "Al-Latif",
-    pronunciation: "al-la-TEEF",
-    meanings: {
-      de: "Der Feinsinnige",
-      tr: "Lütfu ince olan",
-      en: "The Subtle"
-    },
-    explanations: {
-      de: "Al-Latif hebt Allahs feine, verborgene Güte und Sein Wissen um kleinste Zusammenhänge hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Al-Latif ismi Allah’ın ince lütfunu ve en gizli bağlantıları bilmesini hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Al-Latif, Allah’s subtle hidden kindness and knowledge of the finest connections is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du unbemerkte Hilfe, Sanftheit im Umgang und Vertrauen in leise Wendungen suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken fark edilmeyen yardım, muamelede yumuşaklık ve sessiz dönüşlere güven iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking unseen help, gentleness in conduct, and trust in subtle turns. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: nicht jede Hilfe kommt laut; manchmal ist die Rettung gerade ihre Unauffälligkeit.",
-      tr: "Bu isim bakışı düzeltir: her yardım gürültülü gelmez; bazen kurtuluşun kendisi sessizliğindedir.",
-      en: "This name corrects your perspective: not every help arrives loudly; sometimes rescue is quiet by design."
-    },
-    sourceNote: {
-      de: "Hinweis zu Al-Latif: Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Al-Latif için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Al-Latif: The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 31,
-    slug: "al-khabir",
-    arabic: "الْخَبِيرُ",
-    transliteration: "Al-Khabir",
-    pronunciation: "al-kha-BEER",
-    meanings: {
-      de: "Der Kundige",
-      tr: "Her şeyden haberdar",
-      en: "The All-Aware"
-    },
-    explanations: {
-      de: "Al-Khabir beschreibt Allahs genaue Kenntnis aller inneren und äußeren Wirklichkeiten. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Al-Khabir, Allah’ın iç ve dış bütün gerçekliklerden haberdar oluşunu bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Al-Khabir describes Allah’s precise awareness of every inner and outer reality. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um Selbsterkenntnis, Schutz vor Heuchelei und Klarheit über verdeckte Absichten bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: kendini tanıma, nifaktan korunma ve gizli niyetlerin açıklığa kavuşması.",
-      en: "In supplication, this name especially fits when asking for self-knowledge, protection from hypocrisy, and clarity about hidden motives."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: du kannst Menschen beeindrucken, aber Al-Khabir kennt den Kern deiner Absicht.",
-      tr: "Pratik ders şudur: insanları etkileyebilirsin; fakat El-Habîr niyetinin çekirdeğini bilir.",
-      en: "The practical lesson is this: you may impress people, but Al-Khabir knows the core of your intention."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Al-Khabir: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Al-Khabir için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Al-Khabir: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 32,
-    slug: "al-halim",
-    arabic: "الْحَلِيمُ",
-    transliteration: "Al-Halim",
-    pronunciation: "al-ha-LEEM",
-    meanings: {
-      de: "Der Nachsichtige",
-      tr: "Yumuşak davranan",
-      en: "The Forbearing"
-    },
-    explanations: {
-      de: "Al-Halim verweist auf Allahs Nachsicht, obwohl Er Macht zur sofortigen Strafe hat. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "Al-Halim ismi Allah’ın cezalandırmaya gücü yettiği hâlde mühlet vermesini öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "Al-Halim points to Allah’s forbearance despite having power to punish immediately. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll Zornkontrolle, Milde bei Fehlern anderer und Reue vor Ablauf der Frist; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle öfke kontrolü, başkalarının hatasına yumuşaklık ve mühlet bitmeden tevbe istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for anger control, gentleness with others’ mistakes, and repentance before the term ends; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: Aufschub ist keine Zustimmung; er ist Gelegenheit zur Rückkehr.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: mühlet onay değildir; dönüş için fırsattır.",
-      en: "In daily life, this name reminds you: delay is not approval; it is an opportunity to return."
-    },
-    sourceNote: {
-      de: "Einordnung zu Al-Halim: Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "Al-Halim hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on Al-Halim: The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 33,
-    slug: "al-azim",
-    arabic: "الْعَظِيمُ",
-    transliteration: "Al-Azim",
-    pronunciation: "al-a-ZEEM",
-    meanings: {
-      de: "Der Gewaltige",
-      tr: "Azamet sahibi",
-      en: "The Magnificent"
-    },
-    explanations: {
-      de: "Al-Azim hebt Allahs unermessliche Erhabenheit in Wesen, Namen und Eigenschaften hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Al-Azim ismi Allah’ın zatında, isimlerinde ve sıfatlarında sonsuz azametini hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Al-Azim, Allah’s immeasurable greatness in essence, names, and attributes is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du Ehrfurcht, Ernst im Gottesdienst und Schutz vor Verharmlosung von Sünde suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken haşyet, ibadette ciddiyet ve günahı küçümsemekten korunma iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking awe, seriousness in worship, and protection from trivializing sin. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: wer Al-Azim kennt, macht Allahs Gebote nicht klein, um das eigene Ego groß zu lassen.",
-      tr: "Bu isim bakışı düzeltir: El-Azîm’i bilen, nefsini büyütmek için Allah’ın emirlerini küçültmez.",
-      en: "This name corrects your perspective: one who knows Al-Azim does not shrink Allah’s commands to keep the ego large."
-    },
-    sourceNote: {
-      de: "Hinweis zu Al-Azim: Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Al-Azim için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Al-Azim: The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 34,
-    slug: "al-ghafur",
-    arabic: "الْغَفُورُ",
-    transliteration: "Al-Ghafur",
-    pronunciation: "al-gha-FOOR",
-    meanings: {
-      de: "Der Vergebende",
-      tr: "Bağışlayıcı",
-      en: "The Forgiving"
-    },
-    explanations: {
-      de: "Al-Ghafur beschreibt Allahs weites Vergeben, das Schuld bedeckt und den Diener zurückholt. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Al-Ghafur, Allah’ın kulunu geri çağıran geniş bağışlamasını bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Al-Ghafur describes Allah’s vast forgiveness that covers guilt and draws the servant back. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um Vergebung, ehrliches Schuldeingeständnis und einen Neuanfang ohne Verzweiflung bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: bağışlanma, dürüst itiraf ve ümitsizliğe düşmeden yeni başlangıç.",
-      en: "In supplication, this name especially fits when asking for forgiveness, honest admission of guilt, and a new start without despair."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: Ghafur-Sein bedeutet nicht, Sünde zu verharmlosen, sondern den Rückweg ernst zu nehmen.",
-      tr: "Pratik ders şudur: Gafûr oluş günahı hafife almak değil, dönüş yolunu ciddiye almaktır.",
-      en: "The practical lesson is this: forgiveness does not trivialize sin; it makes the path back serious."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Al-Ghafur: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Al-Ghafur için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Al-Ghafur: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 35,
-    slug: "ash-shakur",
-    arabic: "الشَّكُورُ",
-    transliteration: "Ash-Shakur",
-    pronunciation: "ash-sha-KOOR",
-    meanings: {
-      de: "Der Dank Annehmende",
-      tr: "Şükrü karşılıksız bırakmayan",
-      en: "The Appreciative"
-    },
-    explanations: {
-      de: "Ash-Shakur verweist auf Allahs reiches Vergelten selbst kleiner, aufrichtiger guter Taten. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "Ash-Shakur ismi Allah’ın küçük ama samimi amelleri bile bol karşılıklandırmasını öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "Ash-Shakur points to Allah’s generous rewarding of even small sincere deeds. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll Annahme deiner guten Werke, Dankbarkeit und Beständigkeit in kleinen Taten; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle amellerin kabulü, şükür ve küçük iyiliklerde devamlılık istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for acceptance of good deeds, gratitude, and consistency in small acts; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: kein aufrichtiges Gut ist verloren, auch wenn Menschen es nicht bemerken.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: samimi hiçbir hayır kaybolmaz, insanlar fark etmese bile.",
-      en: "In daily life, this name reminds you: no sincere good is lost, even when people do not notice it."
-    },
-    sourceNote: {
-      de: "Einordnung zu Ash-Shakur: Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "Ash-Shakur hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on Ash-Shakur: The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 36,
-    slug: "al-ali",
-    arabic: "الْعَلِيُّ",
-    transliteration: "Al-Ali",
-    pronunciation: "al-a-LEE",
-    meanings: {
-      de: "Der Hohe",
-      tr: "Yüce olan",
-      en: "The Most High"
-    },
-    explanations: {
-      de: "Al-Ali hebt Allahs Erhabenheit über Rang, Ort, Vorstellung und Vergleich hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Al-Ali ismi Allah’ın makam, yer, tasavvur ve kıyastan üstün oluşunu hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Al-Ali, Allah’s exaltedness above rank, place, imagination, and comparison is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du hohe Ziele im Glauben, Demut und Schutz vor niedrigen Begierden suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken imanda yüksek hedef, tevazu ve aşağı arzulara düşmekten korunma iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking elevated aims in faith, humility, and protection from low desires. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: Allahs Höhe ist keine Körperrichtung; sie zeigt Seine absolute Überlegenheit.",
-      tr: "Bu isim bakışı düzeltir: Allah’ın ulviyeti bir cisim yönü değildir; mutlak üstünlüğünü bildirir.",
-      en: "This name corrects your perspective: Allah’s highness is not a bodily direction; it expresses His absolute transcendence."
-    },
-    sourceNote: {
-      de: "Hinweis zu Al-Ali: Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Al-Ali için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Al-Ali: The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 37,
-    slug: "al-kabir",
-    arabic: "الْكَبِيرُ",
-    transliteration: "Al-Kabir",
-    pronunciation: "al-ka-BEER",
-    meanings: {
-      de: "Der Große",
-      tr: "Büyük olan",
-      en: "The Great"
-    },
-    explanations: {
-      de: "Al-Kabir beschreibt Allahs Größe, vor der jede geschöpfliche Größe begrenzt bleibt. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Al-Kabir, Allah’ın karşısında her mahlûk büyüklüğünün sınırlı kaldığı kebriyayı bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Al-Kabir describes Allah’s greatness before which every created greatness remains limited. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um Bescheidenheit, richtige Prioritäten und Abstand von Selbstverherrlichung bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: alçakgönüllülük, doğru öncelik ve kendini yüceltmekten uzak durma.",
-      en: "In supplication, this name especially fits when asking for humility, right priorities, and distance from self-glorification."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: Al-Kabir lässt das Ego schrumpfen, ohne den Menschen wertlos zu machen.",
-      tr: "Pratik ders şudur: El-Kebîr nefsi küçültür; insanı değersizleştirmez.",
-      en: "The practical lesson is this: Al-Kabir shrinks the ego without making the human being worthless."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Al-Kabir: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Al-Kabir için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Al-Kabir: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 38,
-    slug: "al-hafiz",
-    arabic: "الْحَفِيظُ",
-    transliteration: "Al-Hafiz",
-    pronunciation: "al-ha-FEEZ",
-    meanings: {
-      de: "Der Bewahrende",
-      tr: "Koruyan",
-      en: "The Preserver"
-    },
-    explanations: {
-      de: "Al-Hafiz verweist auf Allahs Bewahren von Ordnung, Taten, Glauben und Geschöpfen. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "Al-Hafiz ismi Allah’ın düzeni, amelleri, imanı ve mahlûkatı muhafaza etmesini öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "Al-Hafiz points to Allah’s preservation of order, deeds, faith, and creation. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll Bewahrung deines Iman, deiner Familie und der dir anvertrauten Dinge; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle imanın, ailen ve sana emanet edilenlerin muhafazası istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for preservation of faith, family, and entrusted matters; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: dieser Name ruft dazu auf, selbst ein Hüter von Amanah, Grenzen und Vertrauen zu sein.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: bu isim emanetin, sınırların ve güvenin koruyucusu olmayı öğretir.",
-      en: "In daily life, this name reminds you: this name calls you to guard trusts, limits, and confidence."
-    },
-    sourceNote: {
-      de: "Einordnung zu Al-Hafiz: Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "Al-Hafiz hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on Al-Hafiz: The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 39,
-    slug: "al-muqit",
-    arabic: "المُقِيتُ",
-    transliteration: "Al-Muqit",
-    pronunciation: "al-mu-QEET",
-    meanings: {
-      de: "Der Ernährende",
-      tr: "Besleyen ve gözeten",
-      en: "The Sustainer"
-    },
-    explanations: {
-      de: "Al-Muqit hebt Allahs Zuteilen von Nahrung, Kraft und Erhaltung für jedes Geschöpf hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Al-Muqit ismi Allah’ın her mahlûka gıda, güç ve devam imkânı vermesini hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Al-Muqit, Allah’s giving nourishment, strength, and maintenance to every creature is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du körperliche und geistige Nahrung, Kraft zur Pflicht und Maß im Konsum suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken bedenî ve manevî gıda, farzlara güç ve tüketimde ölçü iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking physical and spiritual nourishment, strength for duties, and moderation in consumption. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: Ernährung ist nicht nur Genuss; der Körper ist Mittel für Gehorsam und Dienst.",
-      tr: "Bu isim bakışı düzeltir: beslenme sadece zevk değildir; beden itaat ve hizmet için araçtır.",
-      en: "This name corrects your perspective: nourishment is not mere pleasure; the body is a means for obedience and service."
-    },
-    sourceNote: {
-      de: "Hinweis zu Al-Muqit: Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Al-Muqit için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Al-Muqit: The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 40,
-    slug: "al-hasib",
-    arabic: "الْحَسِيبُ",
-    transliteration: "Al-Hasib",
-    pronunciation: "al-ha-SEEB",
-    meanings: {
-      de: "Der Abrechnende",
-      tr: "Hesap gören",
-      en: "The Reckoner"
-    },
-    explanations: {
-      de: "Al-Hasib beschreibt Allahs Genügen und Sein genaues Abrechnen aller Taten. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Al-Hasib, Allah’ın kuluna yetmesini ve bütün amelleri hassas şekilde hesaba çekmesini bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Al-Hasib describes Allah’s sufficiency and His precise reckoning of all deeds. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um Genügsamkeit mit Allah, Ordnung in Pflichten und Vorbereitung auf Rechenschaft bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: Allah ile yetinme, görevlerde düzen ve hesaba hazırlık.",
-      en: "In supplication, this name especially fits when asking for sufficiency with Allah, order in duties, and preparation for accountability."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: wer an Al-Hasib denkt, lebt nicht unkontrolliert; jede Rechnung kehrt zurück.",
-      tr: "Pratik ders şudur: El-Hasîb’i düşünen başıboş yaşamaz; her hesap geri döner.",
-      en: "The practical lesson is this: one who remembers Al-Hasib does not live unchecked; every account returns."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Al-Hasib: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Al-Hasib için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Al-Hasib: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 41,
-    slug: "al-jalil",
-    arabic: "الْجَلِيلُ",
-    transliteration: "Al-Jalil",
-    pronunciation: "al-ja-LEEL",
-    meanings: {
-      de: "Der Majestätische",
-      tr: "Celal sahibi",
-      en: "The Majestic"
-    },
-    explanations: {
-      de: "Al-Jalil verweist auf Allahs Majestät, Würde und erhabene Gewaltigkeit ohne Vergleich. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "Al-Jalil ismi Allah’ın kıyassız celalini, vakarını ve yüce azametini öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "Al-Jalil points to Allah’s majesty, dignity, and sublime grandeur without comparison. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll Ehrfurcht, respektvolle Sprache über Religion und Schutz vor Banalisierung; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle haşyet, din hakkında edepli dil ve sıradanlaştırmaktan korunma istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for awe, respectful speech about religion, and protection from trivialization; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: Nähe zu Allah hebt Ehrfurcht nicht auf; Liebe braucht Adab.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: Allah’a yakınlık haşyeti kaldırmaz; sevgi edep ister.",
-      en: "In daily life, this name reminds you: nearness to Allah does not remove awe; love needs adab."
-    },
-    sourceNote: {
-      de: "Einordnung zu Al-Jalil: Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "Al-Jalil hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on Al-Jalil: The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 42,
-    slug: "al-karim",
-    arabic: "الْكَرِيمُ",
-    transliteration: "Al-Karim",
-    pronunciation: "al-ka-REEM",
-    meanings: {
-      de: "Der Großzügige",
-      tr: "Cömert olan",
-      en: "The Generous"
-    },
-    explanations: {
-      de: "Al-Karim hebt Allahs edle Großzügigkeit, die gibt, bedeckt und erhöht hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Al-Karim ismi Allah’ın veren, örten ve yücelten asil cömertliğini hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Al-Karim, Allah’s noble generosity that gives, covers, and elevates is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du Freigebigkeit, schöne Manieren und Schutz vor kleinlicher Berechnung suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken cömertlik, güzel edep ve küçük hesaplardan korunma iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking generosity, noble manners, and protection from petty calculation. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: Karim-Sein lehrt: Ehre zeigt sich auch darin, wie du mit Schwächeren umgehst.",
-      tr: "Bu isim bakışı düzeltir: Kerîm ismi öğretir: asalet, zayıflara muamelede de görünür.",
-      en: "This name corrects your perspective: Karim teaches that nobility appears in how you treat the weaker."
-    },
-    sourceNote: {
-      de: "Hinweis zu Al-Karim: Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Al-Karim için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Al-Karim: The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 43,
-    slug: "ar-raqib",
-    arabic: "الرَّقِيبُ",
-    transliteration: "Ar-Raqib",
-    pronunciation: "ar-ra-QEEB",
-    meanings: {
-      de: "Der Wachende",
-      tr: "Gözetleyen",
-      en: "The Watchful"
-    },
-    explanations: {
-      de: "Ar-Raqib beschreibt Allahs ständige Wachsamkeit über Zustände, Worte und Absichten. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Ar-Raqib, Allah’ın hâller, sözler ve niyetler üzerindeki sürekli murakabesini bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Ar-Raqib describes Allah’s constant watchfulness over states, words, and intentions. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um wache Selbstprüfung, Schutz vor Heimlichkeitssünden und Verantwortungsbewusstsein bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: uyanık nefis muhasebesi, gizli günahlardan korunma ve sorumluluk bilinci.",
-      en: "In supplication, this name especially fits when asking for alert self-audit, protection from hidden sins, and responsibility."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: Muraqaba ist keine Angstkrankheit, sondern würdiges Bewusstsein vor Allah.",
-      tr: "Pratik ders şudur: murakabe hastalıklı korku değil, Allah huzurunda vakarlı bilinçtir.",
-      en: "The practical lesson is this: watchfulness is not anxious paranoia; it is dignified awareness before Allah."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Ar-Raqib: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Ar-Raqib için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Ar-Raqib: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 44,
-    slug: "al-mujib",
-    arabic: "الْمُجِيبُ",
-    transliteration: "Al-Mujib",
-    pronunciation: "al-mu-JEEB",
-    meanings: {
-      de: "Der Erhörende",
-      tr: "Dualara cevap veren",
-      en: "The Responsive"
-    },
-    explanations: {
-      de: "Al-Mujib verweist auf Allahs Antworten auf Bitten in der Weise, die Er weiß und will. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "Al-Mujib ismi Allah’ın dualara bildiği ve dilediği şekilde cevap vermesini öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "Al-Mujib points to Allah’s answering of supplication in the way He knows and wills. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll angenommene Dua, Geduld bei Verzögerung und Vertrauen in bessere Antwortformen; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle duanın kabulü, gecikmede sabır ve daha hayırlı cevap şekillerine güven istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for accepted supplication, patience with delay, and trust in better forms of answer; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: Antwort bedeutet nicht immer sofortige Erfüllung; manchmal ist Abwendung besser als Gabe.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: cevap her zaman anında verme değildir; bazen belayı çevirmek nimetten hayırlıdır.",
-      en: "In daily life, this name reminds you: answer does not always mean immediate fulfillment; sometimes prevention is better than a gift."
-    },
-    sourceNote: {
-      de: "Einordnung zu Al-Mujib: Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "Al-Mujib hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on Al-Mujib: The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 45,
-    slug: "al-wasi",
-    arabic: "الْوَاسِعُ",
-    transliteration: "Al-Wasi'",
-    pronunciation: "al-WAA-si",
-    meanings: {
-      de: "Der Weite",
-      tr: "Varlığı geniş olan",
-      en: "The All-Encompassing"
-    },
-    explanations: {
-      de: "Al-Wasi' hebt Allahs Weite in Wissen, Barmherzigkeit, Macht und Gabe hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Al-Wasi' ismi Allah’ın ilim, rahmet, kudret ve ihsanda genişliğini hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Al-Wasi', Allah’s vastness in knowledge, mercy, power, and giving is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du Weite nach innerer Enge, große Hoffnung und Schutz vor engem Denken suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken iç darlıktan sonra ferahlık, geniş ümit ve dar düşünceden korunma iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking spaciousness after inner constriction, broad hope, and protection from narrow thinking. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: deine Lage ist enger als Allahs Rahme; also beurteile Zukunft nicht nur nach dem Moment.",
-      tr: "Bu isim bakışı düzeltir: durumun Allah’ın rahmetinden dar değildir; geleceği sadece ana bakarak hükme bağlama.",
-      en: "This name corrects your perspective: your situation is not wider than Allah’s mercy; do not judge the future by the moment alone."
-    },
-    sourceNote: {
-      de: "Hinweis zu Al-Wasi': Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Al-Wasi' için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Al-Wasi': The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 46,
-    slug: "al-hakim",
-    arabic: "الْحَكِيمُ",
-    transliteration: "Al-Hakim",
-    pronunciation: "al-ha-KEEM",
-    meanings: {
-      de: "Der Weise",
-      tr: "Hikmet sahibi",
-      en: "The Wise"
-    },
-    explanations: {
-      de: "Al-Hakim beschreibt Allahs Weisheit, die jedes Gebot, Verbot und Ereignis an seinen Ort setzt. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Al-Hakim, Allah’ın her emir, yasak ve olayı hikmetle yerli yerine koymasını bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Al-Hakim describes Allah’s wisdom placing every command, prohibition, and event in its proper place. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um weise Entscheidungen, ruhige Prüfung von Folgen und Schutz vor impulsivem Handeln bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: hikmetli karar, sonuçları sakin düşünme ve aceleci davranıştan korunma.",
-      en: "In supplication, this name especially fits when asking for wise decisions, calm weighing of outcomes, and protection from impulsive action."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: Hikma ist mehr als Intelligenz; sie verbindet Wissen, Ziel und richtige Grenze.",
-      tr: "Pratik ders şudur: hikmet zekâdan fazladır; bilgi, gaye ve doğru sınırı birleştirir.",
-      en: "The practical lesson is this: wisdom is more than intelligence; it joins knowledge, purpose, and proper limits."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Al-Hakim: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Al-Hakim için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Al-Hakim: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 47,
-    slug: "al-wadud",
-    arabic: "الْوَدُودُ",
-    transliteration: "Al-Wadud",
-    pronunciation: "al-wa-DOOD",
-    meanings: {
-      de: "Der Liebevolle",
-      tr: "Çok seven",
-      en: "The Loving"
-    },
-    explanations: {
-      de: "Al-Wadud verweist auf Allahs Liebe zu Seinen gläubigen Dienern und Seine würdige Zuwendung. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "Al-Wadud ismi Allah’ın mümin kullarını sevmesini ve onlara lütufla yönelmesini öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "Al-Wadud points to Allah’s love for His believing servants and His gracious nearness. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll Liebe zu Allah, Liebe um Allahs willen und Reinigung von besitzergreifender Liebe; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle Allah sevgisi, Allah için sevgi ve sahiplenici sevgiden arınma istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for love of Allah, love for Allah’s sake, and purification from possessive love; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: Liebe ohne Gehorsam wird Behauptung; Gehorsam ohne Liebe wird trocken.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: itaatsiz sevgi iddia olur; sevgisiz itaat kuru kalır.",
-      en: "In daily life, this name reminds you: love without obedience becomes a claim; obedience without love becomes dry."
-    },
-    sourceNote: {
-      de: "Einordnung zu Al-Wadud: Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "Al-Wadud hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on Al-Wadud: The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 48,
-    slug: "al-majid",
-    arabic: "الْمَجِيدُ",
-    transliteration: "Al-Majid",
-    pronunciation: "al-ma-JEED",
-    meanings: {
-      de: "Der Ruhmreiche",
-      tr: "Şanı yüce olan",
-      en: "The Glorious"
-    },
-    explanations: {
-      de: "Al-Majid hebt Allahs ruhmreiche Vollkommenheit, verbunden mit Fülle an Güte und Ehre hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Al-Majid ismi Allah’ın eksiklikten uzak, lütuf ve ikramla dolu yüce şanını hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Al-Majid, Allah’s glorious perfection joined with abundant goodness and honor is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du Würde in Anbetung, schöne Erwähnung und Schutz vor billiger Selbstinszenierung suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken ibadette vakar, güzel anılma ve ucuz gösterişten korunma iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking dignity in worship, honorable mention, and protection from cheap self-display. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: wirklicher Ruhm gehört Allah; menschliche Anerkennung bleibt geliehen und vergänglich.",
-      tr: "Bu isim bakışı düzeltir: gerçek şan Allah’a aittir; insanî takdir ödünç ve geçicidir.",
-      en: "This name corrects your perspective: true glory belongs to Allah; human recognition is borrowed and temporary."
-    },
-    sourceNote: {
-      de: "Hinweis zu Al-Majid: Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Al-Majid için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Al-Majid: The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 49,
-    slug: "al-baith",
-    arabic: "الْبَاعِثُ",
-    transliteration: "Al-Ba'ith",
-    pronunciation: "al-BAA-ith",
-    meanings: {
-      de: "Der Erweckende",
-      tr: "Dirilten",
-      en: "The Resurrector"
-    },
-    explanations: {
-      de: "Al-Ba'ith beschreibt Allahs Erwecken der Toten und Sein Senden von Rechtleitung. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Al-Ba'ith, Allah’ın ölüleri diriltmesini ve hidayet için elçiler göndermesini bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Al-Ba'ith describes Allah’s resurrection of the dead and sending of guidance. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um geistige Wiederbelebung, Aufstehen nach Trägheit und Vorbereitung auf die Auferstehung bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: manevî diriliş, tembellikten kalkış ve ahiret dirilişine hazırlık.",
-      en: "In supplication, this name especially fits when asking for spiritual revival, rising after inertia, and preparation for resurrection."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: wer an Auferweckung glaubt, lebt nicht so, als ende alles am Grab.",
-      tr: "Pratik ders şudur: dirilişe iman eden, her şey kabirde bitiyormuş gibi yaşamaz.",
-      en: "The practical lesson is this: one who believes in resurrection does not live as though everything ends at the grave."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Al-Ba'ith: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Al-Ba'ith için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Al-Ba'ith: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 50,
-    slug: "ash-shahid",
-    arabic: "الشَّهِيدُ",
-    transliteration: "Ash-Shahid",
-    pronunciation: "ash-sha-HEED",
-    meanings: {
-      de: "Der Zeuge",
-      tr: "Şahit olan",
-      en: "The Witness"
-    },
-    explanations: {
-      de: "Ash-Shahid verweist auf Allahs Zeugenschaft über alles, dem kein Detail entgeht. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "Ash-Shahid ismi Allah’ın hiçbir ayrıntıyı kaçırmayan şahitliğini öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "Ash-Shahid points to Allah’s witnessing of everything without missing any detail. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll Wahrhaftigkeit, Schutz vor falscher Aussage und Mut für gerechtes Zeugnis; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle doğruluk, yalan şahitlikten korunma ve adil şahitlik cesareti istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for truthfulness, protection from false testimony, and courage for just witness; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: ein verborgenes Unrecht ist nicht unbezeugt; Allahs Wissen bleibt gegenwärtig.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: gizli zulüm şahitsiz değildir; Allah’ın bilgisi hazırdır.",
-      en: "In daily life, this name reminds you: a hidden wrong is not unwitnessed; Allah’s knowledge remains present."
-    },
-    sourceNote: {
-      de: "Einordnung zu Ash-Shahid: Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "Ash-Shahid hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on Ash-Shahid: The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 51,
-    slug: "al-haqq",
-    arabic: "الْحَقُّ",
-    transliteration: "Al-Haqq",
-    pronunciation: "al-HAQQ",
-    meanings: {
-      de: "Die Wahrheit",
-      tr: "Hak olan",
-      en: "The Truth"
-    },
-    explanations: {
-      de: "Al-Haqq hebt Allahs wirkliche, notwendige und unvergängliche Wahrheit hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Al-Haqq ismi Allah’ın gerçek, zorunlu ve yok olmayan hak oluşunu hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Al-Haqq, Allah’s real, necessary, and unfading truth is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du Festigkeit auf Wahrheit, Schutz vor Täuschung und Klarheit gegen innere Ausreden suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken hak üzere sebat, aldanmaktan korunma ve iç mazeretlere karşı açıklık iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking firmness upon truth, protection from deception, and clarity against inner excuses. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: alles Falsche braucht Inszenierung; Al-Haqq bleibt, auch wenn Menschen es verdecken.",
-      tr: "Bu isim bakışı düzeltir: batıl gösteriye muhtaçtır; El-Hakk insanlar örtseler de bâkidir.",
-      en: "This name corrects your perspective: falsehood needs performance; Al-Haqq remains even when people cover it."
-    },
-    sourceNote: {
-      de: "Hinweis zu Al-Haqq: Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Al-Haqq için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Al-Haqq: The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 52,
-    slug: "al-wakil",
-    arabic: "الْوَكِيلُ",
-    transliteration: "Al-Wakil",
-    pronunciation: "al-wa-KEEL",
-    meanings: {
-      de: "Der Verlässliche Sachwalter",
-      tr: "Vekil ve güvenilen",
-      en: "The Trustee"
-    },
-    explanations: {
-      de: "Al-Wakil beschreibt Allahs volle Genügsamkeit als Sachwalter der Angelegenheiten. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Al-Wakil, Allah’ın bütün işlerde güvenilip dayanılan vekil oluşunu bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Al-Wakil describes Allah’s full sufficiency as the disposer of affairs. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um Tawakkul nach richtiger Anstrengung, Ruhe bei Kontrollverlust und Schutz vor Verzweiflung bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: sebeplere sarıldıktan sonra tevekkül, kontrol kaybında sükûnet ve yeisten korunma.",
-      en: "In supplication, this name especially fits when asking for tawakkul after proper effort, calm when control is lost, and protection from despair."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: Tawakkul ersetzt keine Mittel; es befreit das Herz von der Anbetung der Mittel.",
-      tr: "Pratik ders şudur: tevekkül sebebi terk etmek değildir; kalbi sebeplere kulluktan kurtarır.",
-      en: "The practical lesson is this: tawakkul does not replace means; it frees the heart from worshiping the means."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Al-Wakil: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Al-Wakil için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Al-Wakil: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 53,
-    slug: "al-qawiyy",
-    arabic: "الْقَوِيُّ",
-    transliteration: "Al-Qawiyy",
-    pronunciation: "al-qa-WIYY",
-    meanings: {
-      de: "Der Starke",
-      tr: "Çok güçlü",
-      en: "The Strong"
-    },
-    explanations: {
-      de: "Al-Qawiyy verweist auf Allahs vollkommene Kraft, die keine Schwäche berührt. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "Al-Qawiyy ismi Allah’ın hiçbir zayıflığın dokunmadığı mutlak kuvvetini öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "Al-Qawiyy points to Allah’s perfect strength untouched by weakness. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll Kraft für Gehorsam, Standhaftigkeit gegen Druck und Schutz vor Machtmissbrauch; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle taate güç, baskıya karşı sebat ve gücü kötüye kullanmaktan korunma istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for strength for obedience, firmness under pressure, and protection from abusing power; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: menschliche Stärke ist geliehen; sie muss dienen, nicht verletzen.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: insan gücü ödünçtür; hizmet etmeli, yaralamamalıdır.",
-      en: "In daily life, this name reminds you: human strength is borrowed; it must serve, not wound."
-    },
-    sourceNote: {
-      de: "Einordnung zu Al-Qawiyy: Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "Al-Qawiyy hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on Al-Qawiyy: The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 54,
-    slug: "al-matin",
-    arabic: "الْمَتِينُ",
-    transliteration: "Al-Matin",
-    pronunciation: "al-ma-TEEN",
-    meanings: {
-      de: "Der Standhafte",
-      tr: "Sağlam ve metin",
-      en: "The Firm"
-    },
-    explanations: {
-      de: "Al-Matin hebt Allahs feste, unerschütterliche Macht ohne Ermüdung oder Schwäche hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Al-Matin ismi Allah’ın yorulma ve acizlikten uzak sağlam kudretini hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Al-Matin, Allah’s firm, unshakable power without fatigue or weakness is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du Beständigkeit, innere Stabilität und Ausdauer in langen Prüfungen suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken istikrar, iç sağlamlık ve uzun imtihanlarda dayanıklılık iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking steadiness, inner stability, and endurance in long trials. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: Festigkeit zeigt sich nicht im Lärm, sondern im Bleiben auf dem Richtigen.",
-      tr: "Bu isim bakışı düzeltir: sağlamlık gürültüde değil, doğru üzerinde kalmakta görünür.",
-      en: "This name corrects your perspective: firmness is not shown by noise, but by remaining upon what is right."
-    },
-    sourceNote: {
-      de: "Hinweis zu Al-Matin: Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Al-Matin için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Al-Matin: The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 55,
-    slug: "al-waliyy",
-    arabic: "الْوَلِيُّ",
-    transliteration: "Al-Waliyy",
-    pronunciation: "al-wa-LIYY",
-    meanings: {
-      de: "Der schützende Freund",
-      tr: "Dost ve veli",
-      en: "The Protecting Friend"
-    },
-    explanations: {
-      de: "Al-Waliyy beschreibt Allahs Schutzfreundschaft und Hilfe für die Ihm Zugewandten. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Al-Waliyy, Allah’ın kendisine yönelen kullarına velayet ve yardımını bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Al-Waliyy describes Allah’s protective friendship and help for those who turn to Him. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um Nähe zu Allah, Schutz vor schlechten Bündnissen und Loyalität im Guten bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: Allah’a yakınlık, kötü dostluklardan korunma ve hayırda sadakat.",
-      en: "In supplication, this name especially fits when asking for nearness to Allah, protection from harmful alliances, and loyalty in good."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: ein Wali Allahs sucht Nähe durch Gehorsam, nicht durch bloße Behauptung.",
-      tr: "Pratik ders şudur: Allah’ın velî kulu yakınlığı kuru iddiayla değil, itaatle arar.",
-      en: "The practical lesson is this: a friend of Allah seeks nearness through obedience, not mere claim."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Al-Waliyy: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Al-Waliyy için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Al-Waliyy: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 56,
-    slug: "al-hamid",
-    arabic: "الْحَمِيدُ",
-    transliteration: "Al-Hamid",
-    pronunciation: "al-ha-MEED",
-    meanings: {
-      de: "Der Lobenswerte",
-      tr: "Övgüye layık",
-      en: "The Praiseworthy"
-    },
-    explanations: {
-      de: "Al-Hamid verweist auf Allahs vollkommene Lobwürdigkeit in jeder Lage. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "Al-Hamid ismi Allah’ın her hâlükârda hamde layık oluşunu öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "Al-Hamid points to Allah’s perfect praiseworthiness in every circumstance. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll Dankbarkeit in Leichtigkeit und Schwere, schöne Lobpreisung und Zufriedenheit mit Allahs Weisheit; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle kolaylıkta ve zorlukta şükür, güzel hamd ve Allah’ın hikmetine razı oluş istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for gratitude in ease and hardship, beautiful praise, and contentment with Allah’s wisdom; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: Hamd ist tiefer als Dank für Geschenke; er anerkennt Allahs Vollkommenheit.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: ḥamd nimete teşekkürden derindir; Allah’ın kemalini kabul eder.",
-      en: "In daily life, this name reminds you: praise is deeper than thanks for gifts; it recognizes Allah’s perfection."
-    },
-    sourceNote: {
-      de: "Einordnung zu Al-Hamid: Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "Al-Hamid hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on Al-Hamid: The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 57,
-    slug: "al-muhsi",
-    arabic: "الْمُحْصِي",
-    transliteration: "Al-Muhsi",
-    pronunciation: "al-muh-SEE",
-    meanings: {
-      de: "Der alles Erfassende",
-      tr: "Her şeyi sayan",
-      en: "The Appraiser"
-    },
-    explanations: {
-      de: "Al-Muhsi hebt Allahs Erfassen jeder Zahl, Grenze, Tat und Folge hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Al-Muhsi ismi Allah’ın her sayı, sınır, amel ve sonucu kuşatmasını hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Al-Muhsi, Allah’s encompassing count of every number, limit, deed, and consequence is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du Ordnung in deinem Leben, Sorgfalt bei Rechten anderer und Bewusstsein für kleine Taten suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken hayatında düzen, kul haklarında hassasiyet ve küçük amellerin bilinci iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking order in life, care with others’ rights, and awareness of small deeds. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: was du vergisst, ist bei Al-Muhsi nicht verloren; das tröstet und warnt zugleich.",
-      tr: "Bu isim bakışı düzeltir: senin unuttuğun El-Muhsî katında kaybolmaz; bu hem teselli hem uyarıdır.",
-      en: "This name corrects your perspective: what you forget is not lost with Al-Muhsi; that comforts and warns at once."
-    },
-    sourceNote: {
-      de: "Hinweis zu Al-Muhsi: Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Al-Muhsi için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Al-Muhsi: The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 58,
-    slug: "al-mubdi",
-    arabic: "الْمُبْدِئُ",
-    transliteration: "Al-Mubdi'",
-    pronunciation: "al-MUB-di",
-    meanings: {
-      de: "Der Beginnende",
-      tr: "İlk yaratan",
-      en: "The Originator"
-    },
-    explanations: {
-      de: "Al-Mubdi' beschreibt Allahs erstes Hervorbringen ohne vorheriges Muster. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Al-Mubdi', Allah’ın önceki bir örnek olmadan ilk defa var etmesini bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Al-Mubdi' describes Allah’s first origination without prior pattern. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um einen sauberen Anfang, Mut zum Guten und Schutz vor lähmender Vergangenheit bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: temiz başlangıç, hayra cesaret ve geçmişin felç edici etkisinden korunma.",
-      en: "In supplication, this name especially fits when asking for a clean beginning, courage for good, and protection from a paralyzing past."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: jeder echte Anfang braucht Allahs Erlaubnis; plane, aber vergiss den Geber des Anfangs nicht.",
-      tr: "Pratik ders şudur: gerçek her başlangıç Allah’ın izniyledir; plan yap ama başlangıcı vereni unutma.",
-      en: "The practical lesson is this: every real beginning needs Allah’s permission; plan, but do not forget the giver of beginnings."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Al-Mubdi': Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Al-Mubdi' için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Al-Mubdi': Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 59,
-    slug: "al-muid",
-    arabic: "الْمُعِيدُ",
-    transliteration: "Al-Mu'id",
-    pronunciation: "al-mu-EED",
-    meanings: {
-      de: "Der Wiederherstellende",
-      tr: "Yeniden var eden",
-      en: "The Restorer"
-    },
-    explanations: {
-      de: "Al-Mu'id verweist auf Allahs Wiederbringen nach Tod, Verlust und Zerstreuung. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "Al-Mu'id ismi Allah’ın ölümden, kayıptan ve dağılmadan sonra yeniden var etmesini öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "Al-Mu'id points to Allah’s restoring after death, loss, and dispersal. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll Rückkehr zu Gutem, Wiederaufbau nach Fehlern und Hoffnung nach Verlust; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle hayra dönüş, hatadan sonra yeniden inşa ve kayıptan sonra ümit istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for return to good, rebuilding after mistakes, and hope after loss; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: Wiederherstellung ist möglich, aber nicht ohne Verantwortung für den Rückweg.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: yeniden inşa mümkündür; fakat dönüş yolunun sorumluluğu olmadan değil.",
-      en: "In daily life, this name reminds you: restoration is possible, but not without responsibility for the path back."
-    },
-    sourceNote: {
-      de: "Einordnung zu Al-Mu'id: Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "Al-Mu'id hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on Al-Mu'id: The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 60,
-    slug: "al-muhyi",
-    arabic: "الْمُحْيِي",
-    transliteration: "Al-Muhyi",
-    pronunciation: "al-muh-YEE",
-    meanings: {
-      de: "Der Lebensgebende",
-      tr: "Hayat veren",
-      en: "The Giver of Life"
-    },
-    explanations: {
-      de: "Al-Muhyi hebt Allahs Geben von Leben, Belebung der Herzen und Wiederbelebung am Ende hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Al-Muhyi ismi Allah’ın hayat vermesini, kalpleri diriltmesini ve sonunda diriltmesini hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Al-Muhyi, Allah’s giving of life, revival of hearts, and final resurrection is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du ein lebendiges Herz, Segen in Zeit und Wiederbelebung guter Gewohnheiten suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken diri kalp, zamanda bereket ve güzel alışkanlıkların dirilmesi iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking a living heart, blessing in time, and revival of good habits. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: biologisches Leben reicht nicht; ein Herz kann leben oder tot sein.",
-      tr: "Bu isim bakışı düzeltir: diri beden yetmez; kalp de diri veya ölü olabilir.",
-      en: "This name corrects your perspective: biological life is not enough; a heart can be alive or dead."
-    },
-    sourceNote: {
-      de: "Hinweis zu Al-Muhyi: Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Al-Muhyi için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Al-Muhyi: The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 61,
-    slug: "al-mumit",
-    arabic: "اَلْمُمِيتُ",
-    transliteration: "Al-Mumit",
-    pronunciation: "al-mu-MEET",
-    meanings: {
-      de: "Der sterben lässt",
-      tr: "Ölümü veren",
-      en: "The Bringer of Death"
-    },
-    explanations: {
-      de: "Al-Mumit beschreibt Allahs Bestimmen des Todes und Sein Nehmen der Seelen zur gesetzten Frist. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Al-Mumit, Allah’ın ölümü takdir etmesini ve vakti gelince canları almasını bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Al-Mumit describes Allah’s decreeing of death and taking souls at their appointed term. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um ein gutes Ende, Vorbereitung auf den Tod und Schutz vor vergesslicher Weltliebe bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: güzel son, ölüme hazırlık ve gafletli dünya sevgisinden korunma.",
-      en: "In supplication, this name especially fits when asking for a good ending, preparation for death, and protection from heedless worldliness."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: Tod ist kein Thema für später; er ordnet Prioritäten heute.",
-      tr: "Pratik ders şudur: ölüm sonraya bırakılacak konu değildir; bugünün önceliklerini düzene sokar.",
-      en: "The practical lesson is this: death is not a topic for later; it orders priorities today."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Al-Mumit: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Al-Mumit için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Al-Mumit: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 62,
-    slug: "al-hayy",
-    arabic: "الْحَيُّ",
-    transliteration: "Al-Hayy",
-    pronunciation: "al-HAYY",
-    meanings: {
-      de: "Der Lebendige",
-      tr: "Diri olan",
-      en: "The Ever-Living"
-    },
-    explanations: {
-      de: "Al-Hayy verweist auf Allahs ewiges Leben ohne Anfang, Ende, Schlaf oder Schwäche. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "Al-Hayy ismi Allah’ın başlangıçsız, sonsuz, uyku ve acizlikten uzak hayatını öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "Al-Hayy points to Allah’s eternal life without beginning, end, sleep, or weakness. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll Bindung an den Lebendigen, innere Stabilität und Schutz vor Abhängigkeit von Vergänglichem; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle diri olana bağlanma, iç istikrar ve faniye bağımlılıktan korunma istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for attachment to the Ever-Living, inner stability, and protection from dependence on the perishing; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: alles Geschaffene stirbt; dein Herz braucht den, der nicht stirbt.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: her yaratılmış ölür; kalbin ölmeyene muhtaçtır.",
-      en: "In daily life, this name reminds you: every created thing dies; your heart needs the One who does not die."
-    },
-    sourceNote: {
-      de: "Einordnung zu Al-Hayy: Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "Al-Hayy hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on Al-Hayy: The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 63,
-    slug: "al-qayyum",
-    arabic: "الْقَيُّومُ",
-    transliteration: "Al-Qayyum",
-    pronunciation: "al-qay-YOOM",
-    meanings: {
-      de: "Der aus sich Bestehende",
-      tr: "Her şeyi ayakta tutan",
-      en: "The Self-Sustaining"
-    },
-    explanations: {
-      de: "Al-Qayyum hebt Allahs Selbstbestehen und Sein Tragen aller Existenz hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Al-Qayyum ismi Allah’ın zatıyla kaim olup her şeyi ayakta tutmasını hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Al-Qayyum, Allah’s self-subsistence and sustaining of all existence is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du Halt in Unsicherheit, Ordnung im Alltag und Befreiung von falscher Selbstgenügsamkeit suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken belirsizlikte dayanma, gündelik düzende istikrar ve sahte kendine yeterlilikten kurtuluş iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking stability in uncertainty, order in daily life, and freedom from false self-sufficiency. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: du stehst nicht aus dir selbst; selbst dein nächster Atem ist getragen.",
-      tr: "Bu isim bakışı düzeltir: kendi kendine ayakta değilsin; bir sonraki nefesin bile taşınmaktadır.",
-      en: "This name corrects your perspective: you do not stand by yourself; even your next breath is sustained."
-    },
-    sourceNote: {
-      de: "Hinweis zu Al-Qayyum: Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Al-Qayyum için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Al-Qayyum: The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 64,
-    slug: "al-wajid",
-    arabic: "الْوَاجِدُ",
-    transliteration: "Al-Wajid",
-    pronunciation: "al-WAA-jid",
-    meanings: {
-      de: "Der Findende",
-      tr: "Dilediğini bulan",
-      en: "The Perceiver"
-    },
-    explanations: {
-      de: "Al-Wajid beschreibt Allahs Finden, Besitzen und Erfassen dessen, was niemand verliert oder verbirgt. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Al-Wajid, Allah’ın hiçbir şeyin kendisine gizli kalmadığı mutlak vücud ve buluşunu bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Al-Wajid describes Allah’s finding, possessing, and grasping of what none can hide or lose. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um Auffinden des Guten, Zufriedenheit und Vertrauen, dass kein Bedürfnis Allah entgeht bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: güzeli bulma, kanaat ve hiçbir ihtiyacın Allah’a gizli kalmadığına güven.",
-      en: "In supplication, this name especially fits when asking for finding good, contentment, and trust that no need escapes Allah."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: was Menschen übersehen, ist bei Allah nicht verschwunden.",
-      tr: "Pratik ders şudur: insanların gözünden kaçan şey Allah katında kaybolmuş değildir.",
-      en: "The practical lesson is this: what people overlook has not disappeared from Allah."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Al-Wajid: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Al-Wajid için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Al-Wajid: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 65,
-    slug: "al-majid-2",
-    arabic: "الْمَاجِدُ",
-    transliteration: "Al-Majid",
-    pronunciation: "al-MAA-jid",
-    meanings: {
-      de: "Der Edle",
-      tr: "Şerefli ve yüce",
-      en: "The Noble"
-    },
-    explanations: {
-      de: "Al-Majid verweist auf Allahs edle Hoheit und Seinen reichen, würdevollen Ikram. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "Al-Majid ismi Allah’ın yüce şanını ve sonsuz keremini öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "Al-Majid points to Allah’s noble eminence and abundant honorable generosity. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll edlen Charakter, Würde ohne Show und Schutz vor niedriger Gesinnung; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle asil ahlak, gösterişsiz vakar ve aşağı karakterden korunma istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for a noble character, dignity without display, and protection from low conduct; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: Adel im Islam ist nicht Blutlinie, sondern Nähe zu Allah und gutes Verhalten.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: İslam’da asalet soy değil, Allah’a yakınlık ve güzel ahlaktır.",
-      en: "In daily life, this name reminds you: nobility in Islam is not bloodline, but nearness to Allah and good conduct."
-    },
-    sourceNote: {
-      de: "Einordnung zu Al-Majid: Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "Al-Majid hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on Al-Majid: The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 66,
-    slug: "al-wahid",
-    arabic: "الْواحِدُ",
-    transliteration: "Al-Wahid",
-    pronunciation: "al-WAA-hid",
-    meanings: {
-      de: "Der Eine",
-      tr: "Tek olan",
-      en: "The One"
-    },
-    explanations: {
-      de: "Al-Wahid hebt Allahs Einzigkeit in Rububiyya, Uluhiyya und Anbetungswürdigkeit hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Al-Wahid ismi Allah’ın rab oluşunda, ilahlığında ve ibadete layık oluşunda tekliğini hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Al-Wahid, Allah’s oneness in lordship, divinity, and worthiness of worship is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du reinen Tawhid, Sammlung des Herzens und Befreiung von inneren Götzen suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken saf tevhid, kalbin toparlanması ve iç putlardan kurtuluş iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking pure tawhid, gathering of the heart, and freedom from inner idols. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: Einheit im Glauben ordnet auch Wünsche, Ängste und Loyalitäten.",
-      tr: "Bu isim bakışı düzeltir: imandaki birlik arzuları, korkuları ve sadakatleri de düzene sokar.",
-      en: "This name corrects your perspective: the oneness of faith also orders desires, fears, and loyalties."
-    },
-    sourceNote: {
-      de: "Hinweis zu Al-Wahid: Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Al-Wahid için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Al-Wahid: The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 67,
-    slug: "al-ahad",
-    arabic: "اَلاَحَدُ",
-    transliteration: "Al-Ahad",
-    pronunciation: "al-A-had",
-    meanings: {
-      de: "Der Einzige",
-      tr: "Bir ve eşsiz olan",
-      en: "The Unique"
-    },
-    explanations: {
-      de: "Al-Ahad beschreibt Allahs absolute Einzigartigkeit ohne Teilhaber, Gleiches oder Vergleichbares. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Al-Ahad, Allah’ın ortağı, benzeri ve dengi olmayan eşsizliğini bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Al-Ahad describes Allah’s absolute uniqueness without partner, equal, or comparison. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um Ikhlas, Schutz vor Schirk und Klarheit über Allahs Unvergleichlichkeit bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: ihlas, şirkten korunma ve Allah’ın benzersizliğinde açıklık.",
-      en: "In supplication, this name especially fits when asking for sincerity, protection from shirk, and clarity about Allah’s incomparability."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: Al-Ahad lässt keine geteilte Anbetung zu; das Herz braucht eindeutige Ausrichtung.",
-      tr: "Pratik ders şudur: El-Ahad bölünmüş kulluğa yer bırakmaz; kalbin net yönelişe ihtiyacı vardır.",
-      en: "The practical lesson is this: Al-Ahad leaves no room for divided worship; the heart needs a clear direction."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Al-Ahad: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Al-Ahad için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Al-Ahad: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 68,
-    slug: "as-samad",
-    arabic: "الصَّمَدُ",
-    transliteration: "As-Samad",
-    pronunciation: "as-sa-MAD",
-    meanings: {
-      de: "Der Unabhängige",
-      tr: "Her şeyin muhtaç olduğu",
-      en: "The Eternal Refuge"
-    },
-    explanations: {
-      de: "As-Samad verweist auf Allahs vollkommene Unabhängigkeit, während alle auf Ihn angewiesen sind. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "As-Samad ismi Allah’ın kimseye muhtaç olmayıp herkesin O’na muhtaç oluşunu öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "As-Samad points to Allah’s perfect independence while all depend on Him. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll Erfüllung legitimer Bedürfnisse, Würde im Bitten und Loslösung von erniedrigender Abhängigkeit; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle meşru ihtiyaçların giderilmesi, istemede vakar ve zillet veren bağımlılıktan kurtuluş istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for fulfillment of lawful needs, dignity in asking, and release from degrading dependence; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: As-Samad lehrt: Bedürftigkeit ist keine Schande, wenn sie dich zu Allah führt.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: Es-Samed öğretir: ihtiyaç seni Allah’a götürüyorsa utanç değildir.",
-      en: "In daily life, this name reminds you: As-Samad teaches that need is not shameful when it leads you to Allah."
-    },
-    sourceNote: {
-      de: "Einordnung zu As-Samad: Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "As-Samad hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on As-Samad: The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 69,
-    slug: "al-qadir",
-    arabic: "الْقَادِرُ",
-    transliteration: "Al-Qadir",
-    pronunciation: "al-QAA-dir",
-    meanings: {
-      de: "Der Fähige",
-      tr: "Her şeye gücü yeten",
-      en: "The Able"
-    },
-    explanations: {
-      de: "Al-Qadir hebt Allahs Macht, alles Mögliche ohne Ermüdung hervorzubringen hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Al-Qadir ismi Allah’ın her mümküne yorulmadan güç yetirmesini hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Al-Qadir, Allah’s power to bring about all possible things without fatigue is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du Lösung unmöglich wirkender Probleme, Kraft zum Guten und Vertrauen in Allahs Verfügung suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken imkânsız görünen meselelerde çözüm, hayra güç ve Allah’ın takdirine güven iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking relief in seemingly impossible matters, strength for good, and trust in Allah’s decree. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: deine Grenzen sind real, aber sie begrenzen Al-Qadir nicht.",
-      tr: "Bu isim bakışı düzeltir: senin sınırların gerçektir; fakat El-Kâdir’i sınırlamaz.",
-      en: "This name corrects your perspective: your limits are real, but they do not limit Al-Qadir."
-    },
-    sourceNote: {
-      de: "Hinweis zu Al-Qadir: Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Al-Qadir için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Al-Qadir: The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 70,
-    slug: "al-muqtadir",
-    arabic: "الْمُقْتَدِرُ",
-    transliteration: "Al-Muqtadir",
-    pronunciation: "al-muq-ta-DIR",
-    meanings: {
-      de: "Der Machtvolle",
-      tr: "Kudreti tam olan",
-      en: "The Powerful"
-    },
-    explanations: {
-      de: "Al-Muqtadir beschreibt Allahs durchsetzende, grenzenlose Macht über Ursachen und Ergebnisse. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Al-Muqtadir, Allah’ın sebepler ve sonuçlar üzerindeki sınırsız kudretini bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Al-Muqtadir describes Allah’s prevailing limitless power over causes and outcomes. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um Überwindung großer Hindernisse, Mut bei Pflicht und Demut nach Erfolg bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: büyük engelleri aşma, vazifede cesaret ve başarıdan sonra tevazu.",
-      en: "In supplication, this name especially fits when asking for overcoming major obstacles, courage in duty, and humility after success."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: kein Plan ist stärker als Allahs Qadar; Erfolg bleibt abhängig von Ihm.",
-      tr: "Pratik ders şudur: hiçbir plan Allah’ın kaderinden güçlü değildir; başarı O’na bağlıdır.",
-      en: "The practical lesson is this: no plan is stronger than Allah’s decree; success remains dependent on Him."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Al-Muqtadir: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Al-Muqtadir için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Al-Muqtadir: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 71,
-    slug: "al-muqaddim",
-    arabic: "الْمُقَدِّمُ",
-    transliteration: "Al-Muqaddim",
-    pronunciation: "al-mu-QAD-dim",
-    meanings: {
-      de: "Der Voranstellende",
-      tr: "Öne geçiren",
-      en: "The Expediter"
-    },
-    explanations: {
-      de: "Al-Muqaddim verweist auf Allahs Voranstellen von Menschen, Ereignissen und Ergebnissen nach Weisheit. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "Al-Muqaddim ismi Allah’ın hikmetiyle kişileri, olayları ve sonuçları öne almasını öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "Al-Muqaddim points to Allah’s bringing people, events, and outcomes forward by wisdom. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll rechten Zeitpunkt, Vorrang für das Gute und Schutz vor neidischem Vergleichen; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle doğru zaman, hayrın öne alınması ve kıskanç kıyaslardan korunma istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for the right timing, precedence for good, and protection from envious comparison; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: wer vorankommt, trägt mehr Verantwortung; Vorsprung ist keine bloße Belohnung.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: öne geçen daha çok sorumluluk taşır; öne alınmak sadece ödül değildir.",
-      en: "In daily life, this name reminds you: whoever is advanced carries more responsibility; precedence is not mere reward."
-    },
-    sourceNote: {
-      de: "Einordnung zu Al-Muqaddim: Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "Al-Muqaddim hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on Al-Muqaddim: The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 72,
-    slug: "al-muakhkhir",
-    arabic: "الْمُؤَخِّرُ",
-    transliteration: "Al-Mu'akhkhir",
-    pronunciation: "al-mu-AKH-khir",
-    meanings: {
-      de: "Der Aufschiebende",
-      tr: "Geri bırakan",
-      en: "The Delayer"
-    },
-    explanations: {
-      de: "Al-Mu'akhkhir hebt Allahs Zurückstellen aus Weisheit, Schutz oder gerechter Ordnung hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Al-Mu'akhkhir ismi Allah’ın hikmet, koruma veya adil düzen gereği geriye bırakmasını hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Al-Mu'akhkhir, Allah’s delaying by wisdom, protection, or just order is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du Geduld bei Verzögerung, Vertrauen in verborgenen Nutzen und Ruhe vor Hast suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken gecikmede sabır, gizli faydaya güven ve aceleden korunma iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking patience with delay, trust in hidden benefit, and calm against haste. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: Verzögerung kann Barmherzigkeit sein; nicht jede späte Antwort ist Ablehnung.",
-      tr: "Bu isim bakışı düzeltir: gecikme rahmet olabilir; her geç cevap ret değildir.",
-      en: "This name corrects your perspective: delay may be mercy; not every late answer is rejection."
-    },
-    sourceNote: {
-      de: "Hinweis zu Al-Mu'akhkhir: Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Al-Mu'akhkhir için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Al-Mu'akhkhir: The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 73,
-    slug: "al-awwal",
-    arabic: "الأَوَّلُ",
-    transliteration: "Al-Awwal",
-    pronunciation: "al-AW-wal",
-    meanings: {
-      de: "Der Erste",
-      tr: "İlk olan",
-      en: "The First"
-    },
-    explanations: {
-      de: "Al-Awwal beschreibt Allahs Anfangslosigkeit und Sein Vor-Sein vor allem Geschaffenen. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Al-Awwal, Allah’ın başlangıçsız oluşunu ve her şeyden önce varlığını bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Al-Awwal describes Allah’s beginninglessness and being before all creation. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um Rückkehr zum Ursprung, Reinigung der Absicht und Dank für den ersten Anstoß bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: asıl amaca dönüş, niyet temizliği ve ilk tevfik için şükür.",
-      en: "In supplication, this name especially fits when asking for return to the origin, purification of intention, and gratitude for the first enabling."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: vor deiner Geschichte war Allah; darum ist Identität mehr als Vergangenheit.",
-      tr: "Pratik ders şudur: senin hikâyenden önce Allah vardı; kimlik geçmişten ibaret değildir.",
-      en: "The practical lesson is this: Allah was before your story; identity is more than the past."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Al-Awwal: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Al-Awwal için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Al-Awwal: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 74,
-    slug: "al-akhir",
-    arabic: "الآخِرُ",
-    transliteration: "Al-Akhir",
-    pronunciation: "al-AA-khir",
-    meanings: {
-      de: "Der Letzte",
-      tr: "Son olan",
-      en: "The Last"
-    },
-    explanations: {
-      de: "Al-Akhir verweist auf Allahs Endlosigkeit und Sein Bleiben nach allem Geschaffenen. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "Al-Akhir ismi Allah’ın sonsuz oluşunu ve her yaratılmıştan sonra baki kalmasını öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "Al-Akhir points to Allah’s endlessness and remaining after every created thing. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll ein gutes Ende, Prioritäten für das Jenseits und Schutz vor Kurzsichtigkeit; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle güzel akıbet, ahiret önceliği ve kısa görüşlülükten korunma istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for a good ending, priorities for the Hereafter, and protection from short-sightedness; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: das letzte Wort gehört nicht Menschen, Trends oder Märkten, sondern Allah.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: son söz insanlara, akımlara veya piyasalara değil Allah’a aittir.",
-      en: "In daily life, this name reminds you: the final word belongs not to people, trends, or markets, but to Allah."
-    },
-    sourceNote: {
-      de: "Einordnung zu Al-Akhir: Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "Al-Akhir hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on Al-Akhir: The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 75,
-    slug: "az-zahir",
-    arabic: "الظَّاهِرُ",
-    transliteration: "Az-Zahir",
-    pronunciation: "az-ZAA-hir",
-    meanings: {
-      de: "Der Offenbare",
-      tr: "Açık olan",
-      en: "The Manifest"
-    },
-    explanations: {
-      de: "Az-Zahir hebt Allahs Offenbar-Sein durch Zeichen Seiner Einheit und Macht hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Az-Zahir ismi Allah’ın birlik ve kudret delilleriyle apaçık oluşunu hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Az-Zahir, Allah’s manifestness through signs of His oneness and power is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du klare Sicht auf Wahrheit, Dank für erkennbare Zeichen und Schutz vor absichtlicher Blindheit suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken hakikati açık görme, delillere şükür ve bilerek körleşmekten korunma iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking clear sight of truth, gratitude for visible signs, and protection from willful blindness. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: die Welt ist nicht stumm; sie trägt Hinweise, aber das Herz muss lesen wollen.",
-      tr: "Bu isim bakışı düzeltir: evren sessiz değildir; deliller taşır, fakat kalp okumak istemelidir.",
-      en: "This name corrects your perspective: the world is not mute; it carries signs, but the heart must want to read."
-    },
-    sourceNote: {
-      de: "Hinweis zu Az-Zahir: Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Az-Zahir için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Az-Zahir: The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 76,
-    slug: "al-batin",
-    arabic: "الْبَاطِنُ",
-    transliteration: "Al-Batin",
-    pronunciation: "al-BAA-tin",
-    meanings: {
-      de: "Der Verborgene",
-      tr: "Gizli olan",
-      en: "The Hidden"
-    },
-    explanations: {
-      de: "Al-Batin beschreibt Allahs Verborgenheit vor sinnlicher Erfassung und Sein Wissen des Innersten. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Al-Batin, Allah’ın duyularla kuşatılamaz oluşunu ve en içi bilmesini bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Al-Batin describes Allah’s hiddenness from sensory grasp and His knowledge of the innermost. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um innere Reinigung, Wahrhaftigkeit ohne Publikum und Schutz vor Oberflächlichkeit bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: iç arınma, seyircisiz doğruluk ve yüzeysellikten korunma.",
-      en: "In supplication, this name especially fits when asking for inner purification, truthfulness without an audience, and protection from superficiality."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: nicht alles Wirkliche ist sichtbar; der wichtigste Kampf kann im Inneren liegen.",
-      tr: "Pratik ders şudur: gerçek olan her şey görünür değildir; en önemli mücadele içeride olabilir.",
-      en: "The practical lesson is this: not everything real is visible; the most important struggle may be within."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Al-Batin: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Al-Batin için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Al-Batin: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 77,
-    slug: "al-wali",
-    arabic: "الْوَالِي",
-    transliteration: "Al-Wali",
-    pronunciation: "al-WAA-li",
-    meanings: {
-      de: "Der Regierende",
-      tr: "Yöneten",
-      en: "The Governor"
-    },
-    explanations: {
-      de: "Al-Wali verweist auf Allahs Walten über die Ordnung des Universums und die Angelegenheiten der Diener. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "Al-Wali ismi Allah’ın kâinat düzenini ve kulların işlerini yönetmesini öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "Al-Wali points to Allah’s governing of cosmic order and the affairs of servants. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll Ordnung in chaotischen Umständen, gute Führung und Vertrauen in Allahs Verwaltung; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle dağınık şartlarda düzen, güzel idare ve Allah’ın yönetimine güven istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for order in chaotic circumstances, good management, and trust in Allah’s governance; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: Weltgeschehen ist nicht herrenlos; menschliche Planung bleibt unter Allahs Verfügung.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: dünya işleri sahipsiz değildir; insan planı Allah’ın tasarrufu altındadır.",
-      en: "In daily life, this name reminds you: world events are not ownerless; human planning remains under Allah’s disposal."
-    },
-    sourceNote: {
-      de: "Einordnung zu Al-Wali: Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "Al-Wali hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on Al-Wali: The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 78,
-    slug: "al-mutaali",
-    arabic: "الْمُتَعَالِي",
-    transliteration: "Al-Muta'ali",
-    pronunciation: "al-mu-ta-AA-li",
-    meanings: {
-      de: "Der Hocherhabene",
-      tr: "Pek yüce olan",
-      en: "The Most Exalted"
-    },
-    explanations: {
-      de: "Al-Muta'ali hebt Allahs Erhabenheit über alles Niedrige, Fehlerhafte und Begrenzte hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Al-Muta'ali ismi Allah’ın her aşağılıktan, kusurdan ve sınırlılıktan aşkın oluşunu hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Al-Muta'ali, Allah’s transcendence over everything low, defective, and limited is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du Erhebung über Sünde, edle Ziele und Schutz vor entwürdigenden Bindungen suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken günahtan yükselme, asil hedefler ve insanı alçaltan bağlardan korunma iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking rising above sin, noble aims, and protection from degrading attachments. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: Transzendenz soll dein Verhalten erhöhen, nicht dich über Menschen arrogant machen.",
-      tr: "Bu isim bakışı düzeltir: aşkınlık bilinci davranışını yükseltmeli; seni insanlara karşı kibirli yapmamalı.",
-      en: "This name corrects your perspective: transcendence should elevate your conduct, not make you arrogant over people."
-    },
-    sourceNote: {
-      de: "Hinweis zu Al-Muta'ali: Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Al-Muta'ali için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Al-Muta'ali: The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 79,
-    slug: "al-barr",
-    arabic: "الْبَرُّ",
-    transliteration: "Al-Barr",
-    pronunciation: "al-BARR",
-    meanings: {
-      de: "Der Gütige",
-      tr: "İyilik sahibi",
-      en: "The Source of Goodness"
-    },
-    explanations: {
-      de: "Al-Barr beschreibt Allahs reichliche Güte, Fürsorge und Wohltat gegenüber Seinen Geschöpfen. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Al-Barr, Allah’ın mahlûkatına bol iyilik, şefkat ve lütufla muamele etmesini bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Al-Barr describes Allah’s abundant goodness, care, and beneficence toward creation. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um Güte zu Eltern, Familie und Bedürftigen sowie Schutz vor kalter Religiosität bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: anne babaya, aileye ve muhtaçlara iyilik; soğuk dindarlıktan korunma.",
-      en: "In supplication, this name especially fits when asking for goodness to parents, family, and the needy, and protection from cold religiosity."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: Birr ist praktische Güte; schöne Worte reichen ohne Wohltat nicht aus.",
-      tr: "Pratik ders şudur: birr pratik iyiliktir; iyilik olmadan güzel söz yetmez.",
-      en: "The practical lesson is this: birr is practical goodness; beautiful words are not enough without beneficence."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Al-Barr: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Al-Barr için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Al-Barr: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 80,
-    slug: "at-tawwab",
-    arabic: "التَّوَابُ",
-    transliteration: "At-Tawwab",
-    pronunciation: "at-taw-WAAB",
-    meanings: {
-      de: "Der Reue Annehmende",
-      tr: "Tevbeleri kabul eden",
-      en: "The Acceptor of Repentance"
-    },
-    explanations: {
-      de: "At-Tawwab verweist auf Allahs wiederholtes Annehmen der Reue und Öffnen des Rückwegs. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "At-Tawwab ismi Allah’ın tevbeleri tekrar tekrar kabul edip dönüş yolunu açmasını öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "At-Tawwab points to Allah’s repeated acceptance of repentance and opening of the path back. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll aufrichtige Tawba, Abkehr von Gewohnheitssünden und Hoffnung ohne Selbstbetrug; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle samimi tevbe, alışkanlık günahlarından ayrılma ve kendini kandırmadan ümit istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for sincere repentance, leaving habitual sins, and hope without self-deception; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: Tawba ist Rückkehr mit Richtung, nicht nur schlechtes Gefühl.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: tevbe sadece kötü his değil, yön değiştirerek dönmektir.",
-      en: "In daily life, this name reminds you: tawba is return with direction, not merely feeling bad."
-    },
-    sourceNote: {
-      de: "Einordnung zu At-Tawwab: Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "At-Tawwab hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on At-Tawwab: The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 81,
-    slug: "al-muntaqim",
-    arabic: "الْمُنْتَقِمُ",
-    transliteration: "Al-Muntaqim",
-    pronunciation: "al-mun-ta-QIM",
-    meanings: {
-      de: "Der Vergelter",
-      tr: "Adaletle karşılık veren",
-      en: "The Avenger"
-    },
-    explanations: {
-      de: "Al-Muntaqim hebt Allahs gerechte Vergeltung gegen hartnäckige Schuld und Unrecht hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Al-Muntaqim ismi Allah’ın inatçı suç ve zulme karşı adil karşılık vermesini hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Al-Muntaqim, Allah’s just retribution against stubborn guilt and injustice is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du Schutz vor Unterdrückung, gerechte Wiederherstellung und Reinigung von persönlicher Rachsucht suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken zulümden korunma, adil telafi ve şahsî intikam hırsından arınma iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking protection from oppression, just restoration, and purification from personal revenge. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: Al-Muntaqim gehört Allah; deine Aufgabe bleibt Gerechtigkeit, nicht blinde Rache.",
-      tr: "Bu isim bakışı düzeltir: El-Müntakım Allah’a aittir; sana düşen adalet, kör intikam değil.",
-      en: "This name corrects your perspective: Al-Muntaqim belongs to Allah; your task remains justice, not blind revenge."
-    },
-    sourceNote: {
-      de: "Hinweis zu Al-Muntaqim: Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Al-Muntaqim için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Al-Muntaqim: The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 82,
-    slug: "al-afuw",
-    arabic: "العَفُوُّ",
-    transliteration: "Al-Afuw",
-    pronunciation: "al-a-FUWW",
-    meanings: {
-      de: "Der Verzeihende",
-      tr: "Affeden",
-      en: "The Pardoner"
-    },
-    explanations: {
-      de: "Al-Afuw beschreibt Allahs Auslöschen und Übergehen von Schuld über bloßes Vergeben hinaus. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Al-Afuw, Allah’ın günahı sadece bağışlamayıp silip geçmesini bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Al-Afuw describes Allah’s erasing and overlooking of guilt beyond mere forgiveness. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um vollständige Verzeihung, Befreiung von Scham und die Kraft, berechtigt zu verzeihen bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: tam af, utanç yükünden kurtuluş ve yerinde affedebilme gücü.",
-      en: "In supplication, this name especially fits when asking for complete pardon, release from shame, and strength to forgive appropriately."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: Afw lehrt: nicht jede mögliche Strafe muss ausgeführt werden.",
-      tr: "Pratik ders şudur: Afv öğretir: mümkün olan her ceza uygulanmak zorunda değildir.",
-      en: "The practical lesson is this: pardon teaches that not every possible punishment must be carried out."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Al-Afuw: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Al-Afuw için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Al-Afuw: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 83,
-    slug: "ar-rauf",
-    arabic: "الرَّؤُوفُ",
-    transliteration: "Ar-Ra'uf",
-    pronunciation: "ar-ra-OOF",
-    meanings: {
-      de: "Der Milde",
-      tr: "Çok şefkatli",
-      en: "The Kind"
-    },
-    explanations: {
-      de: "Ar-Ra'uf verweist auf Allahs besonders sanfte, mitleidvolle Zuwendung zu Seinen Dienern. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "Ar-Ra'uf ismi Allah’ın kullarına çok şefkatli ve incelikli rahmetini öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "Ar-Ra'uf points to Allah’s especially gentle and compassionate care for His servants. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll Sanftmut, Schutz vor Härte in der Familie und heilende Barmherzigkeit; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle yumuşaklık, aile içinde sertlikten korunma ve iyileştirici merhamet istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for gentleness, protection from harshness in family, and healing compassion; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: Ra’fa macht Religion nicht schwach, sondern menschlich tragbar.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: ra’fet dini zayıflatmaz; insana taşınabilir hâle getirir.",
-      en: "In daily life, this name reminds you: compassion does not weaken religion; it makes it humanly bearable."
-    },
-    sourceNote: {
-      de: "Einordnung zu Ar-Ra'uf: Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "Ar-Ra'uf hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on Ar-Ra'uf: The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 84,
-    slug: "malik-al-mulk",
-    arabic: "مَالِكُ الْمُلْكِ",
-    transliteration: "Malik al-Mulk",
-    pronunciation: "MAA-lik al-MULK",
-    meanings: {
-      de: "Der Herr der Herrschaft",
-      tr: "Mülkün sahibi",
-      en: "Master of the Kingdom"
-    },
-    explanations: {
-      de: "Malik al-Mulk hebt Allahs wahres Eigentum an aller Herrschaft, Macht und Verfügung hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Malik al-Mulk ismi Allah’ın bütün mülk, iktidar ve tasarrufun gerçek sahibi oluşunu hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Malik al-Mulk, Allah’s true ownership of all dominion, power, and disposal is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du Demut bei Besitz, gerechte Führung und Schutz vor Machtvergiftung suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken mülkte tevazu, adil yönetim ve iktidar sarhoşluğundan korunma iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking humility with possessions, just leadership, and protection from intoxication with power. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: Autorität ist Leihgabe; wer sie missbraucht, verrät den Eigentümer der Herrschaft.",
-      tr: "Bu isim bakışı düzeltir: yetki ödünçtür; onu kötüye kullanan mülkün sahibine ihanet eder.",
-      en: "This name corrects your perspective: authority is lent; whoever abuses it betrays the Owner of dominion."
-    },
-    sourceNote: {
-      de: "Hinweis zu Malik al-Mulk: Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Malik al-Mulk için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Malik al-Mulk: The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 85,
-    slug: "dhul-jalali-wal-ikram",
-    arabic: "ذُو الْجَلاَلِ وَالإكْرَامِ",
-    transliteration: "Dhul-Jalali wal-Ikram",
-    pronunciation: "dhul-ja-LAA-li wal-ik-RAAM",
-    meanings: {
-      de: "Herr von Majestät und Ehre",
-      tr: "Celal ve ikram sahibi",
-      en: "Lord of Majesty and Honor"
-    },
-    explanations: {
-      de: "Dhul-Jalali wal-Ikram beschreibt Allahs Vereinigung von majestätischer Erhabenheit und großzügigem Ikram. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Dhul-Jalali wal-Ikram, Allah’ın celal yüceliği ile ikram cömertliğini birlikte taşımasını bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Dhul-Jalali wal-Ikram describes Allah’s union of majestic exaltedness and generous honoring. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um Ehrfurcht und Hoffnung zugleich, edles Bitten und Dank für Würde bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: korku ve ümidi birlikte, edepli istemeyi ve izzete şükrü.",
-      en: "In supplication, this name especially fits when asking for awe and hope together, noble asking, and gratitude for dignity."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: dieser Name hält das Herz im Gleichgewicht: nicht frech in Hoffnung, nicht hart in Furcht.",
-      tr: "Pratik ders şudur: bu isim kalbi dengede tutar: ümitle şımarmaz, korkuyla katılaşmaz.",
-      en: "The practical lesson is this: this name balances the heart: not presumptuous in hope, not hardened by fear."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Dhul-Jalali wal-Ikram: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Dhul-Jalali wal-Ikram için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Dhul-Jalali wal-Ikram: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 86,
-    slug: "al-muqsit",
-    arabic: "الْمُقْسِطُ",
-    transliteration: "Al-Muqsit",
-    pronunciation: "al-MUQ-sit",
-    meanings: {
-      de: "Der Ausgleichende",
-      tr: "Adaletle davranan",
-      en: "The Equitable"
-    },
-    explanations: {
-      de: "Al-Muqsit verweist auf Allahs Herstellen von Ausgleich, Recht und gerechter Ordnung. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "Al-Muqsit ismi Allah’ın hakkaniyet, denge ve adaletli düzeni gerçekleştirmesini öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "Al-Muqsit points to Allah’s establishing of equity, balance, and just order. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll fairen Ausgleich, gerechte Verteilung und Korrektur eigener Voreingenommenheit; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle adil denge, hakkaniyetli paylaşım ve kendi tarafgirliğini düzeltme istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for fair balance, just distribution, and correction of personal bias; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: Gerechtigkeit ist mehr als Gleichverteilung; sie gibt jedem Recht seinen Platz.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: adalet sadece eşit dağıtım değildir; her hakkı yerine koymaktır.",
-      en: "In daily life, this name reminds you: justice is more than equal distribution; it gives each right its place."
-    },
-    sourceNote: {
-      de: "Einordnung zu Al-Muqsit: Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "Al-Muqsit hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on Al-Muqsit: The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 87,
-    slug: "al-jami",
-    arabic: "الْجَامِعُ",
-    transliteration: "Al-Jami'",
-    pronunciation: "al-JAA-mi",
-    meanings: {
-      de: "Der Versammelnde",
-      tr: "Toplayan",
-      en: "The Gatherer"
-    },
-    explanations: {
-      de: "Al-Jami' hebt Allahs Sammeln des Zerstreuten und Versammeln der Geschöpfe am Ende hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Al-Jami' ismi Allah’ın dağılmışı toplamasını ve mahlûkatı sonunda bir araya getirmesini hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Al-Jami', Allah’s gathering of the scattered and assembling creation at the end is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du Zusammenführung von Herzen, Heilung von Trennung und Vorbereitung auf das große Versammeln suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken kalplerin birleşmesi, ayrılığın şifası ve büyük toplanmaya hazırlık iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking uniting hearts, healing separation, and preparation for the great gathering. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: jede Versammlung im Diesseits erinnert an die endgültige Versammlung vor Allah.",
-      tr: "Bu isim bakışı düzeltir: dünyadaki her toplanma Allah huzurundaki son toplanmayı hatırlatır.",
-      en: "This name corrects your perspective: every gathering in this world hints at the final gathering before Allah."
-    },
-    sourceNote: {
-      de: "Hinweis zu Al-Jami': Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Al-Jami' için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Al-Jami': The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 88,
-    slug: "al-ghani",
-    arabic: "الْغَنِيُّ",
-    transliteration: "Al-Ghani",
-    pronunciation: "al-gha-NEE",
-    meanings: {
-      de: "Der Unbedürftige",
-      tr: "Hiçbir şeye muhtaç olmayan",
-      en: "The Self-Sufficient"
-    },
-    explanations: {
-      de: "Al-Ghani beschreibt Allahs völlige Unbedürftigkeit gegenüber allem Geschaffenen. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Al-Ghani, Allah’ın bütün yaratılmışlardan tamamen müstağni oluşunu bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Al-Ghani describes Allah’s complete independence from all creation. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um Würde trotz Bedürftigkeit, Befreiung von Menschengefälligkeit und Genügsamkeit bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: ihtiyaç hâlinde vakar, insanlara yaranmaktan kurtuluş ve kanaat.",
-      en: "In supplication, this name especially fits when asking for dignity despite need, freedom from people-pleasing, and contentment."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: Allah braucht deine Anbetung nicht; du brauchst sie.",
-      tr: "Pratik ders şudur: Allah senin ibadetine muhtaç değildir; ona muhtaç olan sensin.",
-      en: "The practical lesson is this: Allah does not need your worship; you need it."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Al-Ghani: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Al-Ghani için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Al-Ghani: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 89,
-    slug: "al-mughni",
-    arabic: "الْمُغْنِي",
-    transliteration: "Al-Mughni",
-    pronunciation: "al-mugh-NEE",
-    meanings: {
-      de: "Der Reich Machende",
-      tr: "Zengin kılan",
-      en: "The Enricher"
-    },
-    explanations: {
-      de: "Al-Mughni verweist auf Allahs Geben von Genüge, innerem Reichtum und erlaubtem Vermögen. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "Al-Mughni ismi Allah’ın yeterlilik, gönül zenginliği ve helâl imkân vermesini öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "Al-Mughni points to Allah’s granting of sufficiency, inner richness, and lawful means. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll Genüge, Baraka im Besitz und Schutz vor Armut an Herz trotz Reichtum; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle yeterlilik, malda bereket ve zenginlik içinde kalp fakirliğinden korunma istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for enoughness, blessing in wealth, and protection from poverty of heart despite riches; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: Reichtum ohne Genüge bleibt Hunger; Al-Mughni kann das Herz reich machen.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: yeterliliksiz zenginlik açlık olarak kalır; El-Muğnî kalbi zengin kılar.",
-      en: "In daily life, this name reminds you: wealth without sufficiency remains hunger; Al-Mughni can enrich the heart."
-    },
-    sourceNote: {
-      de: "Einordnung zu Al-Mughni: Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "Al-Mughni hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on Al-Mughni: The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 90,
-    slug: "al-mani",
-    arabic: "اَلْمَانِعُ",
-    transliteration: "Al-Mani'",
-    pronunciation: "al-MAA-ni",
-    meanings: {
-      de: "Der Abwehrende",
-      tr: "Engelleyen",
-      en: "The Preventer"
-    },
-    explanations: {
-      de: "Al-Mani' hebt Allahs Verhindern dessen, was Er aus Weisheit zurückhält hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Al-Mani' ismi Allah’ın hikmetiyle bazı şeylere engel koymasını hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Al-Mani', Allah’s preventing of what He withholds by wisdom is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du Schutz vor schädlichen Wegen, Akzeptanz verschlossener Türen und klare Alternativen suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken zararlı yollardan korunma, kapalı kapıları kabullenme ve hayırlı alternatifler iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking protection from harmful paths, acceptance of closed doors, and clear alternatives. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: manche Verbote und Blockaden sind Schutz, nicht Entzug von Würde.",
-      tr: "Bu isim bakışı düzeltir: bazı yasaklar ve engeller korumadır; değerden eksiltme değildir.",
-      en: "This name corrects your perspective: some prohibitions and blocks are protection, not deprivation of dignity."
-    },
-    sourceNote: {
-      de: "Hinweis zu Al-Mani': Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Al-Mani' için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Al-Mani': The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 91,
-    slug: "ad-darr",
-    arabic: "الضَّارُّ",
-    transliteration: "Ad-Darr",
-    pronunciation: "ad-DARR",
-    meanings: {
-      de: "Der Schaden Zulassende",
-      tr: "Zarara izin veren",
-      en: "The Distresser"
-    },
-    explanations: {
-      de: "Ad-Darr beschreibt Allahs Erschaffen von Schaden als Prüfung, Warnung oder gerechte Folge. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Ad-Darr, Allah’ın zararı imtihan, uyarı veya adil sonuç olarak yaratmasını bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Ad-Darr describes Allah’s creating harm as trial, warning, or just consequence. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um Geduld im Schmerz, schnelle Zuflucht bei Allah und Schutz davor, Leid anderen zuzufügen bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: acıda sabır, Allah’a hızlı sığınma ve başkasına zarar vermekten korunma.",
-      en: "In supplication, this name especially fits when asking for patience in pain, quick refuge in Allah, and protection from harming others."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: Ad-Darr heißt nicht, Menschen Schaden zu erlauben; Schaden steht nur unter Allahs Verfügung.",
-      tr: "Pratik ders şudur: Ed-Dârr insanlara zarar vermeyi meşru kılmaz; zarar ancak Allah’ın tasarrufu altındadır.",
-      en: "The practical lesson is this: Ad-Darr does not permit people to harm; harm remains under Allah’s disposal alone."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Ad-Darr: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Ad-Darr için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Ad-Darr: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 92,
-    slug: "an-nafi",
-    arabic: "النَّافِعُ",
-    transliteration: "An-Nafi'",
-    pronunciation: "an-NAA-fi",
-    meanings: {
-      de: "Der Nutzen Gebende",
-      tr: "Fayda veren",
-      en: "The Benefactor"
-    },
-    explanations: {
-      de: "An-Nafi' verweist auf Allahs Schaffen und Geben jedes wirklichen Nutzens. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "An-Nafi' ismi Allah’ın gerçek faydayı yaratıp vermesini öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "An-Nafi' points to Allah’s creating and granting of every real benefit. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll nützliches Wissen, heilsame Entscheidungen und Nutzen ohne Sünde; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle faydalı ilim, şifalı kararlar ve günahsız menfaat istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for beneficial knowledge, healing decisions, and benefit without sin; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: Nutzen ist nicht alles, was kurzfristig hilft; wahrer Nutzen endet nicht in Schaden.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: fayda kısa vadeli işe yarayan her şey değildir; gerçek fayda zararla bitmez.",
-      en: "In daily life, this name reminds you: benefit is not everything that helps briefly; true benefit does not end in harm."
-    },
-    sourceNote: {
-      de: "Einordnung zu An-Nafi': Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "An-Nafi' hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on An-Nafi': The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 93,
-    slug: "an-nur",
-    arabic: "النُّورُ",
-    transliteration: "An-Nur",
-    pronunciation: "an-NOOR",
-    meanings: {
-      de: "Das Licht",
-      tr: "Nur olan",
-      en: "The Light"
-    },
-    explanations: {
-      de: "An-Nur hebt Allahs Licht der Rechtleitung, Klarheit und geistigen Erhellung hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "An-Nur ismi Allah’ın hidayet, açıklık ve manevi aydınlığın nuru oluşunu hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through An-Nur, Allah’s light of guidance, clarity, and spiritual illumination is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du Licht im Herzen, klare Erkenntnis und Schutz vor dunkler Verwirrung suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken kalpte nur, açık idrak ve karanlık şaşkınlıktan korunma iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking light in the heart, clear understanding, and protection from dark confusion. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: Nur ist nicht bloße Stimmung; es zeigt den Weg und macht Verantwortung sichtbar.",
-      tr: "Bu isim bakışı düzeltir: nur sadece his değildir; yolu gösterir ve sorumluluğu görünür kılar.",
-      en: "This name corrects your perspective: light is not mere mood; it shows the path and makes responsibility visible."
-    },
-    sourceNote: {
-      de: "Hinweis zu An-Nur: Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "An-Nur için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For An-Nur: The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 94,
-    slug: "al-hadi",
-    arabic: "الْهَادِي",
-    transliteration: "Al-Hadi",
-    pronunciation: "al-HAA-di",
-    meanings: {
-      de: "Der Rechtleitende",
-      tr: "Hidayet veren",
-      en: "The Guide"
-    },
-    explanations: {
-      de: "Al-Hadi beschreibt Allahs Führung zum geraden Weg durch Wissen, Zeichen und Tawfiq. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Al-Hadi, Allah’ın ilim, ayetler ve tevfik ile doğru yola iletmesini bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Al-Hadi describes Allah’s guidance to the straight path through knowledge, signs, and divine enabling. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um Hidaya, Festigkeit nach Erkenntnis und Schutz vor Irrwegen bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: hidayet, bildikten sonra sebat ve sapma yollarından korunma.",
-      en: "In supplication, this name especially fits when asking for guidance, firmness after knowing, and protection from paths of error."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: Führung muss angenommen werden; wer Wahrheit erkennt, trägt Verantwortung.",
-      tr: "Pratik ders şudur: hidayet kabul edilmeyi ister; hakikati gören sorumluluk taşır.",
-      en: "The practical lesson is this: guidance must be accepted; whoever recognizes truth carries responsibility."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Al-Hadi: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Al-Hadi için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Al-Hadi: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 95,
-    slug: "al-badi",
-    arabic: "الْبَدِيعُ",
-    transliteration: "Al-Badi'",
-    pronunciation: "al-ba-DEE",
-    meanings: {
-      de: "Der unvergleichlich Hervorbringende",
-      tr: "Eşsiz yaratan",
-      en: "The Incomparable Originator"
-    },
-    explanations: {
-      de: "Al-Badi' verweist auf Allahs unvergleichliches Hervorbringen ohne Beispiel und ohne Begrenzung. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "Al-Badi' ismi Allah’ın örneksiz, benzersiz ve sınırsız yaratmasını öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "Al-Badi' points to Allah’s incomparable originating without precedent or limitation. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll neue gute Wege, kreative Klarheit und Staunen ohne Regelbruch; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle yeni hayırlı yollar, berrak fikir ve sınır çiğnemeden hayret istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for new good paths, creative clarity, and wonder without breaking limits; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: Kreativität ist wertvoll, wenn sie Demut vor dem unvergleichlichen Schöpfer behält.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: yaratıcılık, benzersiz Yaratıcı karşısında tevazuyu korursa değerlidir.",
-      en: "In daily life, this name reminds you: creativity is valuable when it keeps humility before the incomparable Creator."
-    },
-    sourceNote: {
-      de: "Einordnung zu Al-Badi': Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "Al-Badi' hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on Al-Badi': The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 96,
-    slug: "al-baqi",
-    arabic: "اَلْبَاقِي",
-    transliteration: "Al-Baqi",
-    pronunciation: "al-BAA-qi",
-    meanings: {
-      de: "Der Bleibende",
-      tr: "Baki olan",
-      en: "The Everlasting"
-    },
-    explanations: {
-      de: "Al-Baqi hebt Allahs Bleiben, während alles Geschaffene vergeht hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "Al-Baqi ismi Allah’ın baki kalmasını ve bütün yaratılmışların geçici oluşunu hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through Al-Baqi, Allah’s remaining while every created thing passes away is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du bleibende gute Werke, Loslösung von Vergänglichem und Hoffnung auf das Jenseits suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken kalıcı salih amel, faniye bağlanmaktan kurtuluş ve ahiret ümidi iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking lasting good deeds, release from the perishing, and hope for the Hereafter. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: was du für Allah tust, gewinnt Dauer; was nur für Ego ist, verblasst.",
-      tr: "Bu isim bakışı düzeltir: Allah için yaptığın kalıcılık kazanır; sadece nefis için olan solar.",
-      en: "This name corrects your perspective: what you do for Allah gains permanence; what is only for ego fades."
-    },
-    sourceNote: {
-      de: "Hinweis zu Al-Baqi: Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "Al-Baqi için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For Al-Baqi: The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 97,
-    slug: "al-warith",
-    arabic: "الْوَارِثُ",
-    transliteration: "Al-Warith",
-    pronunciation: "al-WAA-rith",
-    meanings: {
-      de: "Der Erbende",
-      tr: "Her şeyin varisi",
-      en: "The Inheritor"
-    },
-    explanations: {
-      de: "Al-Warith beschreibt Allahs endgültiges Eigentum, nachdem alle Besitzer verschwunden sind. Nach sunnitisch-hanafitischer Einordnung wird diese Bedeutung ohne Gleichsetzung mit Geschöpfen verstanden.",
-      tr: "Al-Warith, Allah’ın bütün sahipler yok olduktan sonra da gerçek malik oluşunu bildirir. Ehl-i sünnet/Hanefî çizgide bu mana Allah’a layık şekilde, mahlûkata benzetmeden anlaşılır.",
-      en: "Al-Warith describes Allah’s final ownership after all possessors disappear. In a Sunni Hanafi-compatible framing, this is understood in a manner befitting Allah, without likeness to creation."
-    },
-    duaUsage: {
-      de: "In der Dua passt dieser Name besonders, wenn du um ein gutes Vermächtnis, richtige Nutzung von Besitz und Erinnerung an Rückgabe bittest.",
-      tr: "Dua ederken bu isim özellikle şunları isterken uygundur: güzel miras, malı doğru kullanma ve geri verileceğini hatırlama.",
-      en: "In supplication, this name especially fits when asking for a good legacy, proper use of possessions, and remembrance that all is returned."
-    },
-    reflection: {
-      de: "Die praktische Lehre ist: am Ende verlässt du den Besitz, oder der Besitz verlässt dich; nur Rechenschaft bleibt.",
-      tr: "Pratik ders şudur: sonunda ya sen malı bırakırsın ya mal seni; geriye hesap kalır.",
-      en: "The practical lesson is this: in the end you leave possessions or they leave you; accountability remains."
-    },
-    sourceNote: {
-      de: "Quellenrahmen für Al-Warith: Qur’an 7:180 erlaubt die Anrufung Allahs mit den schönsten Namen; der 99er-Rahmen ist durch Bukhari/Muslim belegt, ohne die Namen Allahs darauf zu begrenzen.",
-      tr: "Al-Warith için kaynak çerçevesi: A‘râf 7:180 Allah’ın güzel isimleriyle dua etmeyi bildirir; 99 isim hadisi Buhârî/Müslim’de sabittir, fakat Allah’ın isimleri bununla sınırlanmaz.",
-      en: "Source frame for Al-Warith: Qur’an 7:180 permits calling upon Allah by His beautiful names; the ninety-nine framework is established in Bukhari/Muslim without limiting Allah’s names to that number."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 98,
-    slug: "ar-rashid",
-    arabic: "الرَّشِيدُ",
-    transliteration: "Ar-Rashid",
-    pronunciation: "ar-ra-SHEED",
-    meanings: {
-      de: "Der zum Rechten Leitende",
-      tr: "Doğruya ulaştıran",
-      en: "The Guide to the Right Path"
-    },
-    explanations: {
-      de: "Ar-Rashid verweist auf Allahs rechtes Leiten zu reifer Einsicht und treffendem Handeln. Gemeint ist eine göttliche Vollkommenheit, frei von Mangel, Körperlichkeit und menschlicher Begrenzung.",
-      tr: "Ar-Rashid ismi Allah’ın doğru olana, olgun akla ve isabetli fiile yöneltmesini öne çıkarır. Bu, eksiklikten, cisimden ve insanî sınırlardan münezzeh bir kemal sıfatıdır.",
-      en: "Ar-Rashid points to Allah’s right guidance to mature insight and sound action. It is a divine perfection, free from deficiency, embodiment, and human limitation."
-    },
-    duaUsage: {
-      de: "Mit diesem Namen erbittest du sinnvoll reife Entscheidungen, Schutz vor Verirrung trotz Intelligenz und Beständigkeit im Guten; daraus darf kein garantiertes Ritual mit festen Zahlen gemacht werden.",
-      tr: "Bu isimle olgun kararlar, zekâya rağmen sapmaktan korunma ve hayırda istikrar istenir; bundan sabit sayılı ve garanti sonuçlu bir ritüel çıkarılmaz.",
-      en: "By this name, it is appropriate to ask for mature decisions, protection from misguidance despite intelligence, and steadiness in good; it should not be turned into a guaranteed fixed-number ritual."
-    },
-    reflection: {
-      de: "Im Alltag erinnert dich der Name daran: nicht jede kluge Idee ist richtig; Rushd verbindet Einsicht mit Rechtleitung.",
-      tr: "Günlük hayatta bu isim şunu hatırlatır: her zeki fikir doğru değildir; rüşd basireti hidayetle birleştirir.",
-      en: "In daily life, this name reminds you: not every clever idea is right; rushd joins insight with guidance."
-    },
-    sourceNote: {
-      de: "Einordnung zu Ar-Rashid: Die Erklärung folgt der verbreiteten Esmāʾ-al-Ḥusnā-Lehrliste und bleibt bei Tawhid und Tanzih; besondere Wirkversprechen werden nicht behauptet.",
-      tr: "Ar-Rashid hakkında not: Açıklama yaygın Esmâ-i Hüsnâ öğretim listesiyle uyumludur ve tevhid/tenzih çizgisinde kalır; özel etki vaadi ileri sürülmez.",
-      en: "Note on Ar-Rashid: The explanation follows the widely taught Asma al-Husna list and stays within tawhid and tanzih; no special effect claim is asserted."
-    },
-    contentReviewRequired: true
-  },
-  {
-    id: 99,
-    slug: "as-sabur",
-    arabic: "الصَّبُورُ",
-    transliteration: "As-Sabur",
-    pronunciation: "as-sa-BOOR",
-    meanings: {
-      de: "Der Geduldige",
-      tr: "Çok sabırlı",
-      en: "The Patient"
-    },
-    explanations: {
-      de: "As-Sabur hebt Allahs Nicht-Übereilen der Strafe und Seine vollkommene Geduld mit den Dienern hervor. Der Name bleibt im Rahmen von Tawhid und Tanzih, nicht als menschliche oder bildhafte Eigenschaft.",
-      tr: "As-Sabur ismi Allah’ın cezayı aceleye getirmeyip kullarına mühlet vermesini hatırlatır. Mana tevhid ve tenzih çerçevesinde ele alınır; insana veya şekle benzetilmez.",
-      en: "Through As-Sabur, Allah’s not hastening punishment and His perfect patience with servants is emphasized. The name remains within tawhid and tanzih, not as a human-like or pictorial attribute."
-    },
-    duaUsage: {
-      de: "Rufe Allah damit an, wenn du Geduld in Prüfung, Beherrschung bei Provokation und Umkehr vor Ablauf der Frist suchst. Die Bitte bleibt demütig und an Allahs Willen gebunden.",
-      tr: "Bu isimle Allah’a yönelirken imtihanda sabır, tahrikte kontrol ve mühlet bitmeden dönüş iste. Dua, edeple ve Allah’ın iradesine teslimiyetle yapılır.",
-      en: "Call upon Allah with this name when seeking patience in trial, self-control under provocation, and return before the term ends. The request remains humble and bound to Allah’s will."
-    },
-    reflection: {
-      de: "Dieser Name korrigiert den Blick: Sabr bedeutet nicht Passivität; es ist kontrollierte Treue zum Richtigen.",
-      tr: "Bu isim bakışı düzeltir: sabır pasiflik değildir; doğruya kontrollü sadakattir.",
-      en: "This name corrects your perspective: patience is not passivity; it is controlled loyalty to what is right."
-    },
-    sourceNote: {
-      de: "Hinweis zu As-Sabur: Die Bedeutung ist an klassische sunnitische Erklärungen angelehnt. Die konkrete Reihenfolge ist Lernordnung, nicht alleinige Glaubensgrenze.",
-      tr: "As-Sabur için açıklama: Mana klasik sünnî izahlarla uyumlu tutulmuştur. Sıralama öğretim kolaylığıdır; tek başına inanç sınırı gibi sunulmaz.",
-      en: "For As-Sabur: The meaning is aligned with classical Sunni explanation. The order is a learning order, not an exclusive boundary of belief."
-    },
-    contentReviewRequired: true
-  }
+    {
+        "id": 1,
+        "slug": "ar-rahman",
+        "arabic": "الرَّحْمَن",
+        "transliteration": {
+            "de": "Ar-Rahmān",
+            "tr": "Er-Rahmân",
+            "en": "Ar-Rahmān"
+
+        },
+        "pronunciation": {
+            "de": "Ar-Rah-mään",
+            "tr": "Ar-Rah-mään",
+            "en": "Ar-Rah-mään"
+
+        },
+        "meanings": {
+            "de": "Der Allerbarmer",
+            "tr": "Dünyada her kula merhamet eden",
+            "en": "The Entirely Merciful"
+        },
+        "explanations": {
+            "de": "Beschreibt die universelle, alles umfassende Barmherzigkeit Gottes, die jedem Geschöpf im Diesseits (unabhängig vom Glauben) zuteilwird.",
+            "tr": "Hiçbir ayrım yapmaksızın dünyadaki tüm mahlukata rızık veren, şefkat gösteren ve sonsuz merhamet sahibi olan.",
+            "en": "Refers to the vastness of Allah's mercy that encompasses all creation in this world, providing for believers and non-believers alike."
+        },
+        "duaUsage": {
+            "de": "Ya Ar-Rahman, schenke mir Deine grenzenlose Barmherzigkeit und erweiche mein Herz gegenüber Deiner Schöpfung.",
+            "tr": "Dünya ve ahirette Allah'ın rahmetine nail olmak ve kalbin yumuşaması için 'Ya Rahman' şeklinde zikredilir.",
+            "en": "Invoke 'Ya Ar-Rahman' to seek general divine compassion and to cure hardness of the heart."
+        },
+        "reflection": {
+            "de": "Gottes Barmherzigkeit ist die Basis unserer Existenz; wir sollten diese Gnade durch Güte gegenüber anderen widerspiegeln.",
+            "tr": "O'nun rahmeti her şeyi kuşatmıştır; bu isim bize her canlıya şefkatle yaklaşmamız gerektiğini hatırlatır.",
+            "en": "His mercy is the foundation of existence. Reflecting on this name encourages us to be compassionate toward all living beings."
+        },
+        "sourceNote": {
+            "de": "Der Name betont die Intensität und Fülle der Gnade; abgeleitet von der Wurzel R-H-M (Mutterleib).",
+            "tr": "Rahmetin yoğunluğunu ve bolluğunu ifade eder; R-H-M (anne rahmi) kökünden türetilmiştir.",
+            "en": "Derived from the root 'R-H-M' (womb), signifying an all-enveloping, life-sustaining mercy."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (1:3) (17:110)",
+            "tr": "Kur'an'da geçtiği ayetler: (1:3) (17:110)",
+            "en": "Found in Quran Ayah(s): (1:3) (17:110)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 2,
+        "slug": "ar-rahim",
+        "arabic": "الرَّحِيم",
+        "transliteration": {
+            "de": "Ar-Rahīm",
+            "tr": "Er-Rahîm",
+            "en": "Ar-Rahīm"
+
+        },
+        "pronunciation": {
+            "de": "Ar-Ra-hiim",
+            "tr": "Ar-Ra-hiim",
+            "en": "Ar-Ra-hiim"
+
+        },
+        "meanings": {
+            "de": "Der Barmherzige",
+            "tr": "Ahirette müminlere merhamet eden",
+            "en": "The Especially Merciful"
+        },
+        "explanations": {
+            "de": "Bezeichnet eine spezifische und beständige Barmherzigkeit, die besonders den Gläubigen und Rechtschaffenen (vor allem im Jenseits) zuteilwird.",
+            "tr": "Müminlere özel, sürekli ve sonsuz bir şefkat gösteren; ahirette sadece onlara lütufta bulunan.",
+            "en": "Refers to a specific and continuous mercy reserved for the believers, especially in the Hereafter."
+        },
+        "duaUsage": {
+            "de": "Ya Ar-Rahim, überhäufe mich mit Deiner Gnade am Tage des Jüngsten Gerichts und verzeih mir meine Unzulänglichkeiten.",
+            "tr": "Dünya ve ahirette Allah'ın özel lütfuna ermek, hidayet üzere kalmak ve af dilemek için zikredilir.",
+            "en": "Invoke 'Ya Ar-Rahim' to seek divine forgiveness and special protection in both worlds, especially the next."
+        },
+        "reflection": {
+            "de": "Während Seine allgemeine Gnade alle erreicht, ist Seine besondere Liebe denjenigen versprochen, die Ihn suchen.",
+            "tr": "Bu isim, Allah'ın mümin kullarına olan özel sevgisini ve onları ebedi saadete ulaştırma vaadini temsil eder.",
+            "en": "A reminder that Allah has a special kindness for those who strive in their faith and seek His closeness."
+        },
+        "sourceNote": {
+            "de": "Die Form 'Fa'īl' deutet auf eine dauerhafte und beständige Eigenschaft hin; oft im Jenseits-Kontext.",
+            "tr": "Süreklilik ve kalıcılık ifade eden 'Fa'īl' kalıbındadır; Kur'an'da genellikle bağışlayıcılık vurgusuyla (Gafūr) birlikte zikredilir.",
+            "en": "The grammatical form 'Fa'īl' signifies permanence and continuity; often paired with 'Al-Ghafur' (The Forgiving)."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (2:163)(3: 31)(4:100) (5:3)",
+            "tr": "Kur'an'da geçtiği ayetler: (2:163)(3: 31)(4:100) (5:3)",
+            "en": "Found in Quran Ayah(s): (2:163)(3: 31)(4:100) (5:3)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 3,
+        "slug": "al-malik",
+        "arabic": "المَلِك",
+        "transliteration": {
+            "de": "Al-Malik",
+            "tr": "El-Melik",
+            "en": "Al-Malik"
+
+        },
+        "pronunciation": {
+            "de": "Al-Ma-lik",
+            "tr": "Al-Ma-lik",
+            "en": "Al-Ma-lik"
+
+        },
+        "meanings": {
+            "de": "Der König",
+            "tr": "Mülkün Sahibi, Mutlak Hükümdar",
+            "en": "The Sovereign Lord"
+        },
+        "explanations": {
+            "de": "Der absolute Herrscher und rechtmäßige Eigentümer des gesamten Universums. Er steht über jeder menschlichen Macht und ist niemandem rechenschaftspflichtig.",
+            "tr": "Bütün kâinatın tek hakimi, mutlak sahibi ve mülkünde dilediği gibi tasarruf eden yegane hükümdar.",
+            "en": "The absolute ruler and rightful owner of the entire universe, whose authority is supreme and beyond any human power."
+        },
+        "duaUsage": {
+            "de": "Ya Al-Malik, schenke mir Standhaftigkeit und lass mich erkennen, dass wahre Macht nur bei Dir liegt.",
+            "tr": "Ya Melik, mülkün gerçek sahibi olan Sen, beni sadece Sana muhtaç eyle ve irademi güçlendir.",
+            "en": "Invoke 'Ya Al-Malik' to seek divine guidance and to find security under the protection of the Supreme King."
+        },
+        "reflection": {
+            "de": "Wahrer Besitz gehört allein Gott; wir sind in dieser Welt nur Treuhänder unseres Besitzes.",
+            "tr": "Dünyevi hiçbir güç kalıcı değildir; gerçek mülk Allah'ındır ve bizler sadece birer emanetçiyiz.",
+            "en": "Reminds us that worldly power is temporary and that we are merely stewards of what He has entrusted to us."
+        },
+        "sourceNote": {
+            "de": "Betont, dass weltliche Herrschaft nur geliehen und Gott gegenüber rechenschaftspflichtig ist.",
+            "tr": "Dünyevi otoritelerin geçici olduğunu ve her şeyin Allah'ın hükmüne tabi olduğunu vurgular.",
+            "en": "Emphasizes that all worldly authority is delegated and will ultimately return to the Creator."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (20:114)(2 3:116)(59: 23)(62:1)",
+            "tr": "Kur'an'da geçtiği ayetler: (20:114)(2 3:116)(59: 23)(62:1)",
+            "en": "Found in Quran Ayah(s): (20:114)(2 3:116)(59: 23)(62:1)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 4,
+        "slug": "al-quddus",
+        "arabic": "القُدُّوس",
+        "transliteration": {
+            "de": "Al-Quddūs",
+            "tr": "El-Kuddûs",
+            "en": "Al-Quddūs"
+
+        },
+        "pronunciation": {
+            "de": "Al-Kud-duus",
+            "tr": "Al-Kud-duus",
+            "en": "Al-Kud-duus"
+
+        },
+        "meanings": {
+            "de": "Der Heilige",
+            "tr": "Hata ve noksanlıktan uzak",
+            "en": "The Most Holy"
+        },
+        "explanations": {
+            "de": "Der absolut Reine, der frei von jeglichem Mangel, Fehler oder menschlicher Unzulänglichkeit ist. Er ist über alles Erhabene hinaus rein.",
+            "tr": "Her türlü eksiklikten, hatadan, gafletten ve yaratılmışlara özgü kusurlardan tamamen uzak olan, tertemiz.",
+            "en": "The One who is absolutely pure, free from all defects, imperfections, or any likeness to His creation."
+        },
+        "duaUsage": {
+            "de": "Ya Al-Quddus, reinige mein Herz von schlechten Absichten und bewahre mich vor Ablenkungen vom rechten Weg.",
+            "tr": "Ya Kuddûs, kalbimi kötü düşüncelerden ve nefsimin arzularından arındır, beni tertemiz bir hayata ulaştır.",
+            "en": "Invoke 'Ya Al-Quddus' to seek spiritual purification, clarity of mind, and protection from inner doubts."
+        },
+        "reflection": {
+            "de": "Die Besinnung auf Gottes Reinheit erinnert uns daran, unser eigenes Ego von Stolz, Neid und Heuchelei zu säubern.",
+            "tr": "Allah'ın kutsallığını tefekkür etmek, insanın kendi iç dünyasını kibir ve haset gibi manevi kirlerden temizlemesi gerektiğini hatırlatır.",
+            "en": "Reflecting on His sanctity encourages believers to strive for purity in their own thoughts, intentions, and actions."
+        },
+        "sourceNote": {
+            "de": "Ein zentraler Name für das Konzept der Transzendenz (Tanzīh) – Gott ist radikal anders als Seine Schöpfung.",
+            "tr": "Tenzih inancının temelidir; Allah'ın mahlukata benzemediğini ve her türlü noksanlıktan yüce olduğunu vurgular.",
+            "en": "A cornerstone of the concept of transcendence (Tanzih), emphasizing that Allah is fundamentally different from His creation."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (59:23) (62:1)",
+            "tr": "Kur'an'da geçtiği ayetler: (59:23) (62:1)",
+            "en": "Found in Quran Ayah(s): (59:23) (62:1)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 5,
+        "slug": "as-salam",
+        "arabic": "السَّلَام",
+        "transliteration": {
+            "de": "As-Salām",
+            "tr": "Es-Selâm",
+            "en": "As-Salām"
+
+        },
+        "pronunciation": {
+            "de": "As-Sa-laam",
+            "tr": "As-Sa-laam",
+            "en": "As-Sa-laam"
+
+        },
+        "meanings": {
+            "de": "Der Friede",
+            "tr": "Barış ve esenliğin kaynağı",
+            "en": "The Source of Peace"
+        },
+        "explanations": {
+            "de": "Gott ist die Quelle allen Friedens. Er ist frei von jeglichen Mängeln und schenkt Seinen Geschöpfen Sicherheit und Geborgenheit.",
+            "tr": "Esenliğin kaynağı olan, her türlü eksiklikten salim olan ve kullarını selamete çıkaran yegane varlık.",
+            "en": "The Giver of peace and security who is Himself free from all imperfections and provides safety to His creation."
+        },
+        "duaUsage": {
+            "de": "Ya As-Salam, schenke meinem Herzen inneren Frieden und bewahre mich vor den Unruhen dieser Welt.",
+            "tr": "Ya Selâm, kalbime huzur ver, beni her türlü korku ve tehlikeden selamete ulaştır.",
+            "en": "Invoke 'Ya As-Salam' to seek tranquility of the soul, safety in times of crisis, and a heart free from anxiety."
+        },
+        "reflection": {
+            "de": "Wahrer Friede entsteht durch das Vertrauen in Gott. Wer sich Ihm hingibt, findet Schutz vor innerer Zerrissenheit.",
+            "tr": "Gerçek huzur ancak Allah'a teslimiyetle mümkündür; bu isim bize barışçıl bir ruh halini aşılar.",
+            "en": "True serenity is found through submission to the Divine. Reflecting on this name helps to cultivate a peaceful character."
+        },
+        "sourceNote": {
+            "de": "Eng verwandt mit den Begriffen 'Islam' (Hingabe) und 'Salam' (Sicherheit/Gruß).",
+            "tr": "İslam ve Selamet kavramlarıyla aynı kökten gelir; hem iç huzuru hem de toplumsal barışı temsil eder.",
+            "en": "Shares the same linguistic root as 'Islam' and 'Salam', signifying safety, submission, and peace."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (59:23)",
+            "tr": "Kur'an'da geçtiği ayetler: (59:23)",
+            "en": "Found in Quran Ayah(s): (59:23)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 6,
+        "slug": "al-mu-min",
+        "arabic": "المُؤْمِن",
+        "transliteration": {
+            "de": "Al-Mu'min",
+            "tr": "El-Mü'min",
+            "en": "Al-Mu'min"
+
+        },
+        "pronunciation": {
+            "de": "Al-Mu'-min",
+            "tr": "Al-Mu'-min",
+            "en": "Al-Mu'-min"
+
+        },
+        "meanings": {
+            "de": "Der Gewährer der Sicherheit und des Glaubens",
+            "tr": "Güven veren, iman bahşeden",
+            "en": "The Giver of Security and Faith"
+        },
+        "explanations": {
+            "de": "Derjenige, der den Herzen Glauben schenkt, die Wahrheit Seiner Gesandten bestätigt und Seinen Geschöpfen Schutz vor Ungerechtigkeit und Furcht garantiert.",
+            "tr": "Kalplere iman ışığı veren, kendine sığınanlara güven sağlayan ve vaadine güvenilen yegane varlık.",
+            "en": "The Giver of faith who grants security to His creation, protecting them from fear and injustice, and confirming the truth of His messengers."
+        },
+        "duaUsage": {
+            "de": "Ya Al-Mu'min, stärke meinen Iman, festige mein Vertrauen in Dich und gewähre mir Sicherheit in Zeiten der Angst.",
+            "tr": "Ya Mü'min, imanımı tazele, kalbimdeki şüpheleri gider ve beni her türlü korkudan emin eyle.",
+            "en": "Invoke 'Ya Al-Mu'min' to strengthen your faith, find inner peace during uncertainty, and seek protection from harm."
+        },
+        "reflection": {
+            "de": "Gott ist die einzige Quelle wahrer Geborgenheit; wer auf Ihn vertraut, findet Standhaftigkeit gegenüber den Prüfungen des Lebens.",
+            "tr": "Gerçek güven ancak Allah'a dayanmakla mümkündür; bu isim bize dürüstlüğü ve güvenilir olmayı öğütler.",
+            "en": "Reflecting on this name brings assurance to the heart, knowing that Allah is the ultimate protector of those who trust in Him."
+        },
+        "sourceNote": {
+            "de": "Leitet sich von derselben Wurzel wie 'Iman' (Glaube) und 'Amn' (Sicherheit) ab; Gott bestätigt die Wahrheit Seiner eigenen Einheit.",
+            "tr": "İman ve emniyet (güven) kavramlarıyla aynı kökten gelir; Allah'ın hem güven veren hem de doğruluğu tasdik eden olduğunu vurgular.",
+            "en": "Derived from the same root as 'Iman' (faith) and 'Amn' (security). It signifies that Allah is the source of all reliability."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (59:23)",
+            "tr": "Kur'an'da geçtiği ayetler: (59:23)",
+            "en": "Found in Quran Ayah(s): (59:23)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 7,
+        "slug": "al-muhaymin",
+        "arabic": "المُهَيْمِن",
+        "transliteration": {
+            "de": "Al-Muhaymin",
+            "tr": "El-Müheymin",
+            "en": "Al-Muhaymin"
+
+        },
+        "pronunciation": {
+            "de": "Al-Mu-hay-min",
+            "tr": "Al-Mu-hay-min",
+            "en": "Al-Mu-hay-min"
+
+        },
+        "meanings": {
+            "de": "Der Hüter und Zeuge",
+            "tr": "Her şeyi görüp gözeten, koruyan ve denetleyen",
+            "en": "The Guardian and Witness"
+        },
+        "explanations": {
+            "de": "Derjenige, der über die gesamte Schöpfung wacht, ihre Angelegenheiten lenkt und Zeuge aller Taten ist. Nichts entgeht Seiner Aufsicht.",
+            "tr": "Kainatı gözetimi altında tutan, mahlukatın işlerini düzenleyen ve her an her şeyi murakabe eden yegane varlık.",
+            "en": "The One who watches over His creation, overseeing all affairs and standing as a witness to every action and existence."
+        },
+        "duaUsage": {
+            "de": "Ya Al-Muhaymin, gewähre mir Deinen Schutz und lass mich unter Deiner Obhut sicher sein.",
+            "tr": "Ya Müheymin, beni ve sevdiklerimi her türlü kötülükten koru, Senin gözetimine ve emniyetine sığınıyorum.",
+            "en": "Invoke 'Ya Al-Muhaymin' to seek divine protection and to find peace in the knowledge that He is watching over you."
+        },
+        "reflection": {
+            "de": "Gottes ständige Präsenz gibt uns Sicherheit, mahnt uns aber auch zur Rechtschaffenheit, da Er unser Zeuge ist.",
+            "tr": "Allah'ın her şeyi gördüğünü bilmek, hem büyük bir huzur hem de her adımımızda bir sorumluluk bilinci verir.",
+            "en": "Reflecting on this name brings comfort and a heightened sense of accountability, knowing that we are never truly alone."
+        },
+        "sourceNote": {
+            "de": "Beinhaltet drei Konzepte: Wissen, Beherrschung und Bewahrung.",
+            "tr": "İlim, kudret ve muhafaza kavramlarını birleştiren, Allah'ın her şeyi denetlediğini belirten bir isimdir.",
+            "en": "Combines the attributes of knowledge, authority, and protection; He is the ultimate overseer."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (59:23)",
+            "tr": "Kur'an'da geçtiği ayetler: (59:23)",
+            "en": "Found in Quran Ayah(s): (59:23)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 8,
+        "slug": "al-aziz",
+        "arabic": "العَزِيز",
+        "transliteration": {
+            "de": "Al-Azīz",
+            "tr": "El-Azîz",
+            "en": "Al-Azīz"
+
+        },
+        "pronunciation": {
+            "de": "Al-A-ziiz",
+            "tr": "Al-A-ziiz",
+            "en": "Al-A-ziiz"
+
+        },
+        "meanings": {
+            "de": "Der Allmächtige und Unbezwingbare",
+            "tr": "İzzet sahibi, mağlup edilmesi mümkün olmayan mutlak güç sahibi",
+            "en": "The Almighty and Unconquerable"
+        },
+        "explanations": {
+            "de": "Der Ehrenwürdige und Erhabene, dessen Macht unüberwindbar ist. Er ist der Ursprung aller Kraft und kann von niemandem bezwungen werden.",
+            "tr": "İzzeti ve şerefi en yüce olan, her şeye galip gelen ve hiçbir güç tarafından mağlup edilemeyen mutlak izzet sahibi.",
+            "en": "The One who is the source of all honor and power; He is invincible, and His will cannot be resisted or overcome."
+        },
+        "duaUsage": {
+            "de": "Ya Al-Aziz, schenke mir Würde in meinem Handeln und bewahre mich davor, mich vor anderen als Dir zu demütigen.",
+            "tr": "Ya Azîz, beni Senin katında izzetli kıl, beni zilletten koru ve sadece Sana muhtaç eyle.",
+            "en": "Invoke 'Ya Al-Aziz' to seek spiritual strength, dignity, and independence from the creation by relying solely on the Creator."
+        },
+        "reflection": {
+            "de": "Wahre Ehre (Izza) kommt nicht durch Status oder Besitz, sondern durch die Nähe zum Schöpfer.",
+            "tr": "Gerçek izzet ve şeref sadece Allah'ın yanındadır; O'na yakın olan, her iki cihanda da aziz olur.",
+            "en": "Reflecting on this name reminds believers that true honor and dignity are derived from faith and submission, not worldly status."
+        },
+        "sourceNote": {
+            "de": "Betont die Unabhängigkeit Gottes; Er braucht niemanden, aber alles braucht Ihn.",
+            "tr": "Allah'ın kimseye muhtaç olmadığını, aksine her şeyin O'na muhtaç olduğunu ifade eden bir güç sıfatıdır.",
+            "en": "Represents unmatched might combined with dignity; it signifies that Allah is above all and needs none."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (3:6)(4:15 8)(9:40)(4 8:7)",
+            "tr": "Kur'an'da geçtiği ayetler: (3:6)(4:15 8)(9:40)(4 8:7)",
+            "en": "Found in Quran Ayah(s): (3:6)(4:15 8)(9:40)(4 8:7)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 9,
+        "slug": "al-jabbar",
+        "arabic": "الجَبَّار",
+        "transliteration": {
+            "de": "Al-Jabbār",
+            "tr": "El-Cebbâr",
+            "en": "Al-Jabbār"
+
+        },
+        "pronunciation": {
+            "de": "Al-Dschab-baar",
+            "tr": "Al-Dschab-baar",
+            "en": "Al-Dschab-baar"
+
+        },
+        "meanings": {
+            "de": "Der Unterwerfer und Heiler",
+            "tr": "Dilediğini zorla yaptıran, kırılanları onaran ve eksikleri tamamlayan",
+            "en": "The Compeller and Restorer"
+        },
+        "explanations": {
+            "de": "Derjenige, dessen Wille unwiderstehlich geschieht und der gleichzeitig das Gebrochene heilt, den Schwachen aufhilft und den Zustand Seiner Diener verbessert.",
+            "tr": "Kudretiyle her şeyi hükmü altına alan, iradesine karşı gelinemeyen; aynı zamanda kırık kalpleri onaran ve darda kalanların halini düzelten.",
+            "en": "The One who irresistibly enforces His will, but also the One who mends what is broken and restores the condition of His servants."
+        },
+        "duaUsage": {
+            "de": "Ya Al-Jabbar, heile meine Wunden, stärke meine Schwächen und lass Deinen Willen in meinem Leben zum Guten geschehen.",
+            "tr": "Ya Cabbâr, kalbimdeki kırıklıkları onar, eksiklerimi tamamla ve beni her türlü zulümden koruyarak irademi güçlendir.",
+            "en": "Invoke 'Ya Al-Jabbar' to seek healing for a broken heart, strength in times of weakness, and protection from oppression."
+        },
+        "reflection": {
+            "de": "Gott unterwirft die Schöpfung Seinen Gesetzen, doch Seine Macht dient auch dazu, uns nach Schicksalsschlägen wieder aufzurichten.",
+            "tr": "Allah'ın mutlak gücü karşısında acziyetimizi anlamak ve O'nun her türlü yarayı sarabileceğine güvenmek gerekir.",
+            "en": "Reflecting on this name teaches us that while Allah's power is absolute, it is also the source of ultimate comfort and restoration."
+        },
+        "sourceNote": {
+            "de": "Die Wurzel 'j-b-r' bezieht sich ursprünglich auf das Schienen eines gebrochenen Knochens (Heilung und Zwang zur Form).",
+            "tr": "İsim kökeni olan 'cebr', kırık bir kemiği düzeltip sarmak (iyileştirmek) anlamına da gelir.",
+            "en": "The root 'j-b-r' traditionally refers to setting a broken bone, implying both the use of force and the act of healing."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (59:23)",
+            "tr": "Kur'an'da geçtiği ayetler: (59:23)",
+            "en": "Found in Quran Ayah(s): (59:23)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 10,
+        "slug": "al-mutakabbir",
+        "arabic": "المُتَكَبِّر",
+        "transliteration": {
+            "de": "Al-Mutakabbir",
+            "tr": "El-Mütekebbir",
+            "en": "Al-Mutakabbir"
+
+        },
+        "pronunciation": {
+            "de": "Al-Mu-ta-kab-bir",
+            "tr": "Al-Mu-ta-kab-bir",
+            "en": "Al-Mu-ta-kab-bir"
+
+        },
+        "meanings": {
+            "de": "Der wahrhaft Erhabene",
+            "tr": "Büyüklük ve azamet sahibi, tek ve mutlak büyük",
+            "en": "The Supreme, The Majestic"
+        },
+        "explanations": {
+            "de": "Derjenige, dem allein wahre Größe und rechtmäßiger Stolz zustehen. Er ist über jede Unzulänglichkeit erhaben und zeigt Seine Herrlichkeit in der gesamten Schöpfung.",
+            "tr": "Her şeyde büyüklüğünü gösteren, azametini ve yüceliğini her an izhar eden; mahlukata ait sıfatlardan ve eksikliklerden münezzeh olan.",
+            "en": "The One who is supremely great and rightfully proud, being far above any deficiency or the qualities of His creation."
+        },
+        "duaUsage": {
+            "de": "Ya Al-Mutakabbir, bewahre mich vor Hochmut und schenke mir die Demut, meine eigene Begrenztheit vor Deiner Größe zu erkennen.",
+            "tr": "Ya Mütekebbir, kalbimdeki kibri temizle, beni nefsimin gururundan koru ve Senden başka kimseye boyun eğdirme.",
+            "en": "Invoke 'Ya Al-Mutakabbir' to seek protection from arrogance and to cultivate a heart full of humility and awe before the Creator."
+        },
+        "reflection": {
+            "de": "Stolz ist beim Menschen eine Täuschung, bei Gott jedoch Ausdruck Seiner absoluten Realität. Wahre Größe findet der Mensch nur in der Demut vor Ihm.",
+            "tr": "Kibir ve büyüklük sadece Allah'a mahsustur; kulun görevi ise bu azamet karşısında haddini bilip tevazu göstermektir.",
+            "en": "While pride is a vice for humans, it is a divine attribute for Allah. Reflecting on this name helps believers keep their ego in check."
+        },
+        "sourceNote": {
+            "de": "Leitet sich von der Wurzel 'K-B-R' (Größe) ab. Es ist ein Name, der in seinem absoluten Sinne ausschließlich Gott zusteht.",
+            "tr": "K-B-R (büyüklük) kökünden türetilmiştir. Allah'ın zatına has olan, ortaklık kabul etmeyen bir yüceliği ifade eder.",
+            "en": "Derived from the root 'K-B-R' (greatness). In its absolute and rightful sense, this name belongs to Allah alone."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (59:23)",
+            "tr": "Kur'an'da geçtiği ayetler: (59:23)",
+            "en": "Found in Quran Ayah(s): (59:23)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 11,
+        "slug": "al-khaliq",
+        "arabic": "الْخَالِق",
+        "transliteration": {
+            "de": "Al-Khāliq",
+            "tr": "El-Hâlık",
+            "en": "Al-Khāliq"
+
+        },
+        "pronunciation": {
+            "de": "Al-Khaa-lik",
+            "tr": "Al-Khaa-lik",
+            "en": "Al-Khaa-lik"
+
+        },
+        "meanings": {
+            "de": "Der Schöpfer",
+            "tr": "Her şeyi yoktan var eden, yaratan",
+            "en": "The Creator"
+        },
+        "explanations": {
+            "de": "Derjenige, der die Existenz aller Dinge plant, ihre Maße bestimmt und sie aus dem Nichts ins Dasein bringt.",
+            "tr": "Her şeyin varlığını planlayan, ölçüsünü belirleyen ve tüm mahlukatı yoktan var eden.",
+            "en": "The One who brings everything into existence from non-existence, determining the measure and proportion of all things."
+        },
+        "duaUsage": {
+            "de": "Ya Al-Khaliq, segne mein Vorhaben und lass mich die Schönheit Deiner Schöpfung in meinem Leben erkennen.",
+            "tr": "Ya Hâlık, işlerimi rast getir, kalbimi Senin nurunla aydınlat ve beni yaradılış gayemden ayırma.",
+            "en": "Invoke 'Ya Al-Khaliq' to seek guidance in creative endeavors and to find spiritual light and purpose in life."
+        },
+        "reflection": {
+            "de": "Nichts im Universum ist zufällig; alles existiert, weil Er es geplant und gewollt hat. Wir ehren den Schöpfer, indem wir Seine Schöpfung achten.",
+            "tr": "Yaratmak sadece Allah'a mahsustur; kainattaki her zerre O'nun planının ve kudretinin bir eseridir.",
+            "en": "Reflecting on this name teaches us that nothing is accidental. Everything exists by His decree 'Be!', calling us to respect all life."
+        },
+        "sourceNote": {
+            "de": "Bildet zusammen mit 'Al-Bari' und 'Al-Musawwir' die Trias der Schöpfungsattribute.",
+            "tr": "Hâlık, Bâri ve Musavvir isimlerinden oluşan yaratılış üçlemesinin ilk sıfatıdır.",
+            "en": "The first of the three names related to creation (with Al-Bari and Al-Musawwir), focusing on the initial planning and determination."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (6:102)(13 :16)(39:62 )(40:62)(5 9:24)",
+            "tr": "Kur'an'da geçtiği ayetler: (6:102)(13 :16)(39:62 )(40:62)(5 9:24)",
+            "en": "Found in Quran Ayah(s): (6:102)(13 :16)(39:62 )(40:62)(5 9:24)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 12,
+        "slug": "al-bari",
+        "arabic": "البَارِئ",
+        "transliteration": {
+            "de": "Al-Bāri'",
+            "tr": "El-Bâri",
+            "en": "Al-Bāri'"
+
+        },
+        "pronunciation": {
+            "de": "Al-Baa-ri'",
+            "tr": "Al-Baa-ri'",
+            "en": "Al-Baa-ri'"
+
+        },
+        "meanings": {
+            "de": "Der Erschaffer aus dem Nichts",
+            "tr": "Her şeyi birbirine uygun ve kusursuzca var eden",
+            "en": "The Originator, The Evolver"
+        },
+        "explanations": {
+            "de": "Derjenige, der die Schöpfung ohne Vorbild ins Dasein ruft und dabei jedes Teil perfekt auf das andere abstimmt, sodass keine Disharmonie entsteht.",
+            "tr": "Eşyayı ve canlıları azalarından hücrelerine kadar birbirine uyumlu, kusursuz ve bir model olmaksızın yoktan var eden.",
+            "en": "The One who brings things into existence without a pre-existing model, ensuring that every part of creation is in perfect harmony and free from flaw."
+        },
+        "duaUsage": {
+            "de": "Ya Al-Bari', schenke meinen Angelegenheiten Ordnung und lass meine Taten im Einklang mit Deiner Weisheit stehen.",
+            "tr": "Ya Bâri, işlerimi yoluna koy, beni bedensel ve ruhsal hastalıklardan selamete çıkar ve yaratılışındaki hikmeti anlamayı nasip eyle.",
+            "en": "Invoke 'Ya Al-Bāri'' to seek order in your life, harmony in your actions, and protection from any spiritual or physical imbalance."
+        },
+        "reflection": {
+            "de": "Gottes Schöpfung ist nicht nur gewaltig, sondern bis ins kleinste Detail fehlerfrei aufeinander abgestimmt. Dies lehrt uns Vertrauen in den göttlichen Plan.",
+            "tr": "Kainattaki muazzam düzen O'nun eseridir; her şeyin birbiriyle uyumu, O'nun kusursuz yaratışının bir tecellisidir.",
+            "en": "Reflecting on this name reveals the seamless order of the universe, where everything follows a divine progression and perfect design."
+        },
+        "sourceNote": {
+            "de": "Betont den Übergang vom Plan (Khaliq) zur physischen Existenz ohne Makel.",
+            "tr": "Planlanan varlığın (Hâlık), şekil bulmadan önceki kusursuzca var ediliş aşamasını ifade eder.",
+            "en": "Focuses on the execution of creation, bringing the planned measure into a tangible, harmonious reality."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (59:24)",
+            "tr": "Kur'an'da geçtiği ayetler: (59:24)",
+            "en": "Found in Quran Ayah(s): (59:24)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 13,
+        "slug": "al-musawwir",
+        "arabic": "المُصَوِّر",
+        "transliteration": {
+            "de": "Al-Musawwir",
+            "tr": "El-Musavvir",
+            "en": "Al-Musawwir"
+
+        },
+        "pronunciation": {
+            "de": "Al-Mu-saw-wir",
+            "tr": "Al-Mu-saw-wir",
+            "en": "Al-Mu-saw-wir"
+
+        },
+        "meanings": {
+            "de": "Der Gestalter und Formgebende",
+            "tr": "Her şeye bir şekil, suret ve özellik veren",
+            "en": "The Fashioner, The Shaper"
+        },
+        "explanations": {
+            "de": "Derjenige, der jedem Geschöpf seine einzigartige Form, Farbe und Charakteristik verleiht. Er gibt der Schöpfung ihre endgültige, vollendete Gestalt.",
+            "tr": "Varlıklara birbirinden farklı suretler veren, onları en uygun biçimde şekillendiren ve her birini kendine has özelliklerle donatan.",
+            "en": "The perfect designer who gives every creation its unique form, color, and specific characteristics, bringing it to its final appearance."
+        },
+        "duaUsage": {
+            "de": "Ya Al-Musawwir, verschönere meinen Charakter und lass mich die Harmonie Deiner Kunst in allen Dingen erkennen.",
+            "tr": "Ya Musavvir, ahlakımı ve niyetimi güzelleştir, her işimi hayırlı bir sonuca ve güzel bir surete ulaştır.",
+            "en": "Invoke 'Ya Al-Musawwir' to seek inner beauty, success in creative endeavors, and a deeper appreciation for divine artistry."
+        },
+        "reflection": {
+            "de": "Die unendliche Vielfalt der Natur und des Menschen ist kein Zufall, sondern ein Zeichen göttlicher Meisterschaft.",
+            "tr": "Kainattaki benzersiz çeşitlilik ve her varlığın kendine has güzelliği, Allah'ın sınırsız sanatının bir tecellisidir.",
+            "en": "The diversity of nature and humanity is a testament to Allah's infinite creativity. No two things are exactly alike, reflecting His mastery."
+        },
+        "sourceNote": {
+            "de": "Abschluss der Schöpfungs-Trias (Khaliq, Bari, Musawwir). Betont die Detailgestaltung.",
+            "tr": "Yaratılış sürecini ifade eden isimlerin (Hâlık ve Bâri) tamamlayıcısıdır; son şekli ve estetiği temsil eder.",
+            "en": "The final of the three names describing the creative process, focusing on the specific details and aesthetic completion of a being."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (59:24)",
+            "tr": "Kur'an'da geçtiği ayetler: (59:24)",
+            "en": "Found in Quran Ayah(s): (59:24)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 14,
+        "slug": "al-ghaffar",
+        "arabic": "الغَفَّار",
+        "transliteration": {
+            "de": "Al-Ghaffār",
+            "tr": "El-Gaffâr",
+            "en": "Al-Ghaffār"
+
+        },
+        "pronunciation": {
+            "de": "Al-Ghaf-faar",
+            "tr": "Al-Ghaf-faar",
+            "en": "Al-Ghaf-faar"
+
+        },
+        "meanings": {
+            "de": "Der stets Verzeihende",
+            "tr": "Günahları çokça örten ve bağışlayan",
+            "en": "The Oft-Forgiving"
+        },
+        "explanations": {
+            "de": "Derjenige, der Sünden immer wieder zudeckt, sie vor den Augen anderer verbirgt und trotz wiederholter Fehltritte Vergebung gewährt.",
+            "tr": "Kullarının günahlarını ve ayıplarını örtmekte mübalağa eden, tövbeleri kabul edip suçları tekrar tekrar bağışlayan.",
+            "en": "The One who continuously veils the sins of His servants and forgives them, protecting them from the consequences of their faults time and again."
+        },
+        "duaUsage": {
+            "de": "Ya Al-Ghaffar, bedecke meine Fehler, vergib mir meine Sünden und lass mich nicht durch meine eigenen Taten beschämt werden.",
+            "tr": "Ya Gaffâr, günahlarımı ört, hatalarımı bağışla ve beni nefsimin kötülüklerinden muhafaza eyle.",
+            "en": "Invoke 'Ya Al-Ghaffār' to seek sincere repentance, the veiling of one’s faults, and protection from the shame of past mistakes."
+        },
+        "reflection": {
+            "de": "Gott verdeckt unsere hässlichen Seiten und zeigt den Menschen unsere schönen. Wer Seine Vergebung sucht, sollte auch bereit sein, die Fehler anderer zu verhüllen.",
+            "tr": "Allah'ın ayıpları örtmesi büyük bir lütuftur; bu ismi tefekkür eden kişi, başkalarının kusurlarını araştırmak yerine onları örtmeye çalışmalıdır.",
+            "en": "Just as Allah veils our weaknesses, we are encouraged to be forgiving and to hide the faults of others rather than exposing them."
+        },
+        "sourceNote": {
+            "de": "Die grammatikalische Form 'Fa'āl' deutet auf eine extreme Intensität und endlose Wiederholung hin.",
+            "tr": "Mübalağa kalıbı olan 'Fa'āl' formundadır; bağışlamanın sürekliliğini ve bolluğunu ifade eder.",
+            "en": "The grammatical form 'Fa'āl' denotes intensity and a repetitive, limitless quality of forgiveness."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (20:82)(38 :66)(39:5) (40:42)(71 :10)",
+            "tr": "Kur'an'da geçtiği ayetler: (20:82)(38 :66)(39:5) (40:42)(71 :10)",
+            "en": "Found in Quran Ayah(s): (20:82)(38 :66)(39:5) (40:42)(71 :10)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 15,
+        "slug": "al-qahhar",
+        "arabic": "القَهَّار",
+        "transliteration": {
+            "de": "Al-Qahhār",
+            "tr": "El-Kahhâr",
+            "en": "Al-Qahhār"
+
+        },
+        "pronunciation": {
+            "de": "Al-Kah-haar",
+            "tr": "Al-Kah-haar",
+            "en": "Al-Kah-haar"
+
+        },
+        "meanings": {
+            "de": "Der alles Unterwerfende",
+            "tr": "Her şeye galip gelen, mutlak hakim",
+            "en": "The All-Prevailing, The Subduer"
+        },
+        "explanations": {
+            "de": "Derjenige, dem sich alles beugen muss. Er besitzt die absolute Macht, jede Kraft im Universum zu bezwingen, und Seinem Willen kann niemand entkommen.",
+            "tr": "Her istediğini yapacak kudrette olan, her şeyi hükmü altına alan ve karşısında hiçbir gücün duramadığı yegane galip.",
+            "en": "The One who has absolute dominance over all of creation. He subdues all opposing forces, and nothing can escape His decree or authority."
+        },
+        "duaUsage": {
+            "de": "Ya Al-Qahhar, hilf mir, mein eigenes Ego (Nafs) zu bezwingen und befreie mich von den Ketten weltlicher Abhängigkeiten.",
+            "tr": "Ya Kahhâr, nefsimin kötü arzularını dizginlememe yardım et, beni zulmetmekten ve zulme uğramaktan muhafaza eyle.",
+            "en": "Invoke 'Ya Al-Qahhār' to seek strength over one’s lower self (nafs), to overcome inner weaknesses, and to find protection from oppression."
+        },
+        "reflection": {
+            "de": "Wahre Macht liegt nicht darin, andere zu beherrschen, sondern darin, die eigenen Impulse im Einklang mit Gottes Willen zu kontrollieren.",
+            "tr": "Allah'ın mutlak hakimiyeti karşısında insanın kendi acziyetini bilmesi ve sadece O'na teslim olması gerekir.",
+            "en": "Reflecting on this name humbles the soul, reminding us that ultimate victory belongs only to Allah and that we should strive to subdue our pride."
+        },
+        "sourceNote": {
+            "de": "Ebenfalls in der intensiven 'Fa'āl'-Form; deutet auf eine Macht hin, die alles ohne Ausnahme durchdringt.",
+            "tr": "Mübalağa kalıbı (Fa'āl) ile ifade edilir; Allah'ın kahredici gücünün her an ve her yerde geçerli olduğunu vurgular.",
+            "en": "Presented in the intensive 'Fa'āl' form, emphasizing a power that is inescapable, overwhelming, and continuous."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (13:16)(14 :48)(38:65 )(39:4)(40 :16)",
+            "tr": "Kur'an'da geçtiği ayetler: (13:16)(14 :48)(38:65 )(39:4)(40 :16)",
+            "en": "Found in Quran Ayah(s): (13:16)(14 :48)(38:65 )(39:4)(40 :16)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 16,
+        "slug": "al-wahhab",
+        "arabic": "الوَهَّاب",
+        "transliteration": {
+            "de": "Al-Wahhāb",
+            "tr": "El-Vehhâb",
+            "en": "Al-Wahhāb"
+
+        },
+        "pronunciation": {
+            "de": "Al-Wah-haab",
+            "tr": "Al-Wah-haab",
+            "en": "Al-Wah-haab"
+
+        },
+        "meanings": {
+            "de": "Der Gabenverleiher",
+            "tr": "Karşılıksız veren, ihsanı bol olan",
+            "en": "The Supreme Bestower, The Giver of All"
+        },
+        "explanations": {
+            "de": "Derjenige, der Seine Gaben ohne Erwartung einer Gegenleistung und im Überfluss verteilt. Er schenkt aus reiner Huld, wem Er will und wie Er will.",
+            "tr": "Hiçbir karşılık beklemeden, kullarına dilediği her şeyi bolca ve sürekli olarak ihsan eden; lütfu sonsuz olan.",
+            "en": "The One who bestows blessings and gifts continuously without any expectation of return, giving freely to whom He wills from His endless bounty."
+        },
+        "duaUsage": {
+            "de": "Ya Al-Wahhab, öffne mir die Tore Deiner Barmherzigkeit und schenke mir Weisheit und Genügsamkeit aus Deinem unendlichen Schatz.",
+            "tr": "Ya Vehhâb, bana Senin katından hayırlı kapılar aç, ilmimi ve rızkımı bereketlendir; beni Senden başkasına muhtaç etme.",
+            "en": "Invoke 'Ya Al-Wahhāb' to seek spiritual and material blessings, wisdom, and the contentment that comes from His divine generosity."
+        },
+        "reflection": {
+            "de": "Wahrer Reichtum ist das Bewusstsein, dass alles, was wir besitzen, eine Leihgabe des 'Wahhāb' ist. Dies befreit uns von Geiz und Habgier.",
+            "tr": "Elimizdeki her şeyin Allah'ın bir lütfu olduğunu bilmek, insanı haset ve cimrilikten kurtarır; paylaşmanın ve şükretmenin önemini hatırlatır.",
+            "en": "Reflecting on this name encourages a heart of gratitude. Since everything is a gift from Him, we should also be generous with what we have been given."
+        },
+        "sourceNote": {
+            "de": "Betont das Schenken ('Hiba') als Akt ohne Verpflichtung. Wiederum in der intensiven 'Fa'āl'-Form.",
+            "tr": "'Hibe' kökünden gelir; karşılıksız ve gönülden vermeyi ifade eder. Gramer olarak süreklilik ve bolluk bildiren 'Fa'āl' kalıbındadır.",
+            "en": "Derived from the root 'Hiba' (gift), referring to a bestowal with no strings attached. The 'Fa'āl' form signifies the repetitive and abundant nature of His giving."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (3:8)(38:9 )(38:35)",
+            "tr": "Kur'an'da geçtiği ayetler: (3:8)(38:9 )(38:35)",
+            "en": "Found in Quran Ayah(s): (3:8)(38:9 )(38:35)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 17,
+        "slug": "ar-razzaq",
+        "arabic": "الرَّزَّاق",
+        "transliteration": {
+            "de": "Ar-Razzāq",
+            "tr": "Er-Rezzâk",
+            "en": "Ar-Razzāq"
+
+        },
+        "pronunciation": {
+            "de": "Ar-Raz-zaak",
+            "tr": "Ar-Raz-zaak",
+            "en": "Ar-Raz-zaak"
+
+        },
+        "meanings": {
+            "de": "Der Allversorger",
+            "tr": "Her canlının rızkını veren, maddi ve manevi ihtiyaçları karşılayan",
+            "en": "The Total Provider, The Sustainer"
+        },
+        "explanations": {
+            "de": "Derjenige, der für den Lebensunterhalt aller Geschöpfe bürgt. Er schenkt sowohl die physische Nahrung als auch die spirituelle Versorgung wie Wissen, Weisheit und Glauben.",
+            "tr": "Bütün mahlukatın rızkını yaratıp veren; sadece bedeni doyuran değil, kalplere ve ruhlara da gıda bahşeden mutlak rızık verici.",
+            "en": "The One who creates and delivers sustenance to all His creation. He provides not only material nourishment but also spiritual provision, such as knowledge and faith."
+        },
+        "duaUsage": {
+            "de": "Ya Ar-Razzāq, segne meine Arbeit, schenke mir ein rechtmäßiges Einkommen und nähre meine Seele mit Deiner Weisheit.",
+            "tr": "Ya Rezzâk, rızkımı helal ve bereketli kıl, beni darlık ve açlıktan muhafaza eyle; gönlümü marifetinle doyur.",
+            "en": "Invoke 'Ya Ar-Razzāq' to seek lawful sustenance, relief from financial anxiety, and the enrichment of the soul through divine knowledge."
+        },
+        "reflection": {
+            "de": "Das Vertrauen in diesen Namen befreit von der Sorge um die Zukunft. Wer weiß, dass Gott der Versorger ist, wird großzügig gegenüber anderen, anstatt aus Angst zu horten.",
+            "tr": "Rızık endişesi taşımak, Allah'ın bu ismine olan tevekkülde eksiklik olduğunu gösterir. Gerçek mümin, rızkın Allah'tan geldiğini bilip hırstan uzak durur.",
+            "en": "True reliance on Ar-Razzāq eliminates the fear of poverty. Understanding that He is the source of all provision encourages generosity and contentment."
+        },
+        "sourceNote": {
+            "de": "Die Form 'Fa'āl' betont, dass Er ununterbrochen und für alle gleichzeitig sorgt. Versorgung (Rizq) ist ein Geschenk ohne Gegenleistung.",
+            "tr": "Rızık kavramı sadece yemek içmek değildir; akıl, iman ve sağlık da rızka dahildir. İsim, mübalağa kalıbıyla rızkın sürekliliğini ifade eder.",
+            "en": "In the intensive 'Fa'āl' form, signifying that He provides endlessly for all beings. Provision (Rizq) includes anything that benefits a living being."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (51:58)",
+            "tr": "Kur'an'da geçtiği ayetler: (51:58)",
+            "en": "Found in Quran Ayah(s): (51:58)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 18,
+        "slug": "al-fattah",
+        "arabic": "الفَتَّاح",
+        "transliteration": {
+            "de": "Al-Fattāḥ",
+            "tr": "El-Fettâh",
+            "en": "Al-Fattāḥ"
+
+        },
+        "pronunciation": {
+            "de": "Al-Fat-taah",
+            "tr": "Al-Fat-taah",
+            "en": "Al-Fat-taah"
+
+        },
+        "meanings": {
+            "de": "Der Öffner und Richter",
+            "tr": "Zorlukları açan, hayır kapılarını aralayan ve hüküm veren",
+            "en": "The Opener, The Supreme Arbiter"
+        },
+        "explanations": {
+            "de": "Derjenige, der die Türen zu Wissen, Erfolg und Versorgung öffnet. Er ist auch der Richter, der die Wahrheit vom Falschen trennt und jede festgefahrene Situation auflöst.",
+            "tr": "Her türlü müşkülü çözen, hayır kapılarını açan ve hak ile batılın arasını hükmüyle ayıran; darlıktan ferahlığa çıkaran.",
+            "en": "The One who opens the doors to success, knowledge, and mercy. He is the ultimate judge who clarifies what is hidden and resolves all complex matters with justice."
+        },
+        "duaUsage": {
+            "de": "Ya Al-Fattāḥ, öffne mir die Tore Deiner Rechtleitung, nimm die Lasten von meinem Herzen und zeige mir einen Ausweg aus meinen Sorgen.",
+            "tr": "Ya Fettâh, üzerimdeki darlığı gider, hayırlı kapılar aç ve kalbimi ilminin nurlarıyla fetheyle.",
+            "en": "Invoke 'Ya Al-Fattāḥ' to seek breakthroughs in difficult situations, clarity in decision-making, and the opening of one's heart to faith."
+        },
+        "reflection": {
+            "de": "Wenn alle weltlichen Wege verschlossen scheinen, erinnert uns dieser Name daran, dass Gott Wege aus dem Nichts erschaffen kann. Er öffnet nicht nur Türen, sondern auch verhärtete Herzen.",
+            "tr": "İnsan çaresiz kaldığında Fettâh ismine sığınmalıdır; O, bitti denilen yerden yeni yollar açan ve adaletiyle hükmedendir.",
+            "en": "Reflecting on this name brings hope. It teaches us that no obstacle is permanent when the Opener decides to grant a way through, whether in material or spiritual life."
+        },
+        "sourceNote": {
+            "de": "Die Form 'Fa'āl' steht für den ständigen Eröffner. Der Name impliziert auch den 'gerechten Richter' (Fatih), der Streitigkeiten beendet.",
+            "tr": "Feth (açmak) kökünden gelir. Sadece kapıları değil, zihinleri ve kalpleri de açmayı ifade eder. Mübalağa kalıbı ile her an bir açılış gerçekleştirdiğini vurgular.",
+            "en": "The root 'f-t-h' means to open or to judge. It signifies Allah as the one who grants victory and the one who removes all barriers between the servant and His mercy."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (34:26)",
+            "tr": "Kur'an'da geçtiği ayetler: (34:26)",
+            "en": "Found in Quran Ayah(s): (34:26)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 19,
+        "slug": "al-alim",
+        "arabic": "العَلِيم",
+        "transliteration": {
+            "de": "Al-Alīm",
+            "tr": "El-Alîm",
+            "en": "Al-Alīm"
+
+        },
+        "pronunciation": {
+            "de": "Al-A-liim",
+            "tr": "Al-A-liim",
+            "en": "Al-A-liim"
+
+        },
+        "meanings": {
+            "de": "Der Allwissende",
+            "tr": "Her şeyi hakkıyla bilen, ilmi her şeyi kuşatan",
+            "en": "The All-Knowing, The Omniscient"
+        },
+        "explanations": {
+            "de": "Sein Wissen ist grenzenlos und umfasst alles Sichtbare und Unsichtbare, Vergangenes und Zukünftiges. Er kennt die Details der gesamten Schöpfung und sogar die verborgensten Gedanken der Herzen.",
+            "tr": "Gizli veya açık, geçmiş veya gelecek, kalplerde saklı olan niyetlerden kainattaki en küçük zerreye kadar her şeyi eksiksiz, ezelî ve ebedî ilmiyle bilen.",
+            "en": "The One whose knowledge is comprehensive and eternal. He knows every detail of the seen and unseen, from the vastness of the universe to the most fleeting thoughts in the depths of the heart."
+        },
+        "duaUsage": {
+            "de": "Ya Al-Alīm, bereichere mich mit nutzbringendem Wissen, öffne meinen Verstand für die Wahrheit und leite mich durch Deine Weisheit.",
+            "tr": "Ya Alîm, ilmimi artır, zihnimi aç ve beni hakikate ulaştır; kalbimdeki niyetlerimi Senin rızana uygun eyle.",
+            "en": "Invoke 'Ya Al-Alīm' to seek beneficial knowledge, clarity of mind, and the wisdom to understand the deeper meanings of life and faith."
+        },
+        "reflection": {
+            "de": "Das Wissen, dass Gott alles sieht und weiß, gibt dem Gläubigen Sicherheit, mahnt aber auch zur Aufrichtigkeit. Es gibt keinen Ort, an dem man vor Seinem Wissen verborgen ist.",
+            "tr": "Allah'ın her şeyi bildiğini idrak eden bir mümin, yalnızken de topluluk içindeyken de aynı dürüstlükle davranır; çünkü hiçbir sırrın O'ndan gizlenemeyeceğini bilir.",
+            "en": "Reflecting on this name creates a sense of awe and accountability. Knowing that He is aware of our struggles brings comfort, while knowing He sees our intentions inspires integrity."
+        },
+        "sourceNote": {
+            "de": "Eines der zentralen Wesensattribute (sifāt adh-dhātiyya). Im Gegensatz zum menschlichen Wissen ist Seines nicht erlernt, sondern ewig.",
+            "tr": "Zatî sıfatlardan biridir. Allah'ın ilmi sonradan kazanılmış değildir; zamandan ve mekandan bağımsız, her şeyi kuşatan mutlak bilgidir.",
+            "en": "One of the fundamental attributes of essence. Unlike human knowledge, which is acquired, Allah’s knowledge is inherent, eternal, and absolute."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (2:158)(3: 92)(4:35)( 24:41)(33: 40)",
+            "tr": "Kur'an'da geçtiği ayetler: (2:158)(3: 92)(4:35)( 24:41)(33: 40)",
+            "en": "Found in Quran Ayah(s): (2:158)(3: 92)(4:35)( 24:41)(33: 40)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 20,
+        "slug": "al-qabid",
+        "arabic": "القَابِض",
+        "transliteration": {
+            "de": "Al-Qābiḍ",
+            "tr": "El-Kâbıd",
+            "en": "Al-Qābiḍ"
+
+        },
+        "pronunciation": {
+            "de": "Al-Kaa-bid",
+            "tr": "Al-Kaa-bid",
+            "en": "Al-Kaa-bid"
+
+        },
+        "meanings": {
+            "de": "Der Verknapper und Zurückhaltende",
+            "tr": "Dilediğine darlık veren, rızkı ve ruhları kabzeden",
+            "en": "The Withholder, The Constrictor"
+        },
+        "explanations": {
+            "de": "Derjenige, der nach Seiner Weisheit die Versorgung, die Herzen oder die Lebenskraft einengt oder zurückhält. Er ist es, der die Seelen im Tod zu Sich nimmt.",
+            "tr": "Hikmeti gereği rızkı daraltan, kalpleri sıkan veya canlıların ruhlarını ecelleri geldiğinde teslim alan; her şeyi kudret elinde tutan.",
+            "en": "The One who withholds or restricts sustenance, hearts, or souls according to His divine wisdom. He is the one who takes the souls at the time of death."
+        },
+        "duaUsage": {
+            "de": "Ya Al-Qābiḍ, schenke mir Standhaftigkeit in Zeiten der Prüfung und lass mich erkennen, dass jede Einengung ein Weg zu Deiner Nähe ist.",
+            "tr": "Ya Kâbıd, darlık zamanlarımda kalbime inşirah ver, beni nefsimin eline bırakma ve her türlü zulümden Sana sığınıyorum.",
+            "en": "Invoke 'Ya Al-Qābiḍ' during times of spiritual or material hardship to seek patience and the understanding that after every constriction comes ease."
+        },
+        "reflection": {
+            "de": "Phasen der Knappheit oder inneren Enge sind oft Prüfungen der Geduld (Sabr). Sie lehren uns, dass wir letztlich von niemandem außer Gott abhängig sind.",
+            "tr": "Darlık ve sıkıntı anları, kulun Rabbine olan bağlılığının sınandığı demlerdir. Veren de alan da O'dur; her daralmanın ardından bir genişlik geleceğine inanmak gerekir.",
+            "en": "Constriction in life is not a sign of abandonment, but a call to patience and trust. It reminds the believer that true control lies solely with the Creator."
+        },
+        "sourceNote": {
+            "de": "Dieser Name sollte immer im Kontext mit Al-Bāsiṭ (dem Ausdehnenden) verstanden werden, um ein einseitiges Gottesbild zu vermeiden.",
+            "tr": "Genellikle El-Bâsıt ismiyle birlikte zikredilir; bu denge, Allah'ın hem imtihan edici hem de lütfedici sıfatlarını bir arada gösterir.",
+            "en": "This name is complementary to Al-Bāsiṭ (The Expander). Together, they represent the divine balance of life's ebbs and flows."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (2: 245)",
+            "tr": "Kur'an'da geçtiği ayetler: (2: 245)",
+            "en": "Found in Quran Ayah(s): (2: 245)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 21,
+        "slug": "al-basit",
+        "arabic": "البَاسِط",
+        "transliteration": {
+            "de": "Al-Bāsiṭ",
+            "tr": "El-Bâsıt",
+            "en": "Al-Bāsiṭ"
+
+        },
+        "pronunciation": {
+            "de": "Al-Baa-sit",
+            "tr": "Al-Baa-sit",
+            "en": "Al-Baa-sit"
+
+        },
+        "meanings": {
+            "de": "Der Ausdehnende und Gewährende",
+            "tr": "Rızkı ve imkanları genişleten, ferahlık veren",
+            "en": "The Expander, The Enlarger"
+        },
+        "explanations": {
+            "de": "Derjenige, der die Gaben großzügig gewährt, das Herz weitet und Möglichkeiten dort eröffnet, wo vorher Enge war. Er ist es, der die Seelen mit Leben erfüllt und Hoffnung schenkt.",
+            "tr": "Dilediğine rızkı bolca veren, kalplere huzur ve genişlik bahşeden; lütfuyla darlığı giderip bolluk ve ferahlık getiren.",
+            "en": "The One who expands and amplifies sustenance and mercy. He opens the hearts to joy and faith, and provides abundantly to His creation according to His wisdom."
+        },
+        "duaUsage": {
+            "de": "Ya Al-Bāsiṭ, weite mein Herz für den Glauben, segne meine Mittel und schenke mir Erleichterung nach jeder Erschwernis.",
+            "tr": "Ya Bâsıt, kalbime inşirah ver, rızkımı ve ömrümü bereketlendir; beni darlıktan kurtarıp genişliğe ulaştır.",
+            "en": "Invoke 'Ya Al-Bāsiṭ' to seek spiritual relief, an open heart (Inshirah), and the expansion of lawful means and opportunities."
+        },
+        "reflection": {
+            "de": "Expansion ist ein Geschenk Gottes, das zur Dankbarkeit (Shukr) aufruft. Wer Weite erfährt, sollte diese Weite auch an seine Mitmenschen weitergeben.",
+            "tr": "Bolluk ve ferahlık anları şükür imtihanıdır. Allah'ın bize sunduğu genişliği, başkalarının dertlerine derman olmak için kullanmalıyız.",
+            "en": "Expansion (Bast) is a state that requires gratitude. Recognizing Allah as the source of relief helps a believer remain humble during times of ease and prosperity."
+        },
+        "sourceNote": {
+            "de": "Ergänzt Al-Qābiḍ. Zusammen beschreiben sie das rhythmische Geben und Nehmen, das Leben und das Universum bestimmt.",
+            "tr": "El-Kâbıd ismiyle beraber kainattaki dengeyi temsil eder. Bir kapıyı kapatan, diğerini en hayırlı şekilde açan O'dur.",
+            "en": "Complements Al-Qābiḍ. Together, these names illustrate the divine rhythm of life—the contraction and expansion that guide spiritual growth."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (2: 245)",
+            "tr": "Kur'an'da geçtiği ayetler: (2: 245)",
+            "en": "Found in Quran Ayah(s): (2: 245)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 22,
+        "slug": "al-khafid",
+        "arabic": "الخَافِض",
+        "transliteration": {
+            "de": "Al-Khāfiḍ",
+            "tr": "El-Hâfıd",
+            "en": "Al-Khāfiḍ"
+
+        },
+        "pronunciation": {
+            "de": "Al-Khaa-fid",
+            "tr": "Al-Khaa-fid",
+            "en": "Al-Khaa-fid"
+
+        },
+        "meanings": {
+            "de": "Der Erniedrigende",
+            "tr": "Alçaltan, mertebeleri düşüren",
+            "en": "The Abaser, The Humiliator"
+        },
+        "explanations": {
+            "de": "Derjenige, der den Rang der Hochmütigen, Ungerechten und Leugner herabsetzt. Er erniedrigt jene, die sich selbst über andere erheben und sich gegen die Wahrheit auflehnen.",
+            "tr": "Kibirlenenleri, zalimleri ve hakikati inkar edenleri alçaltan; haksız yere yükselenlerin rütbesini ve itibarını yerle bir eden.",
+            "en": "The One who humbles the proud and abases the arrogant and unjust. He reduces the status of those who elevate themselves above others or rebel against the truth."
+        },
+        "duaUsage": {
+            "de": "Ya Al-Khāfiḍ, bewahre mich vor eigenem Hochmut und schütze mich vor der Unterdrückung derer, die sich in ihrem Stolz gegen Deine Gebote stellen.",
+            "tr": "Ya Hâfıd, beni kibirden ve nefsimin gururundan koru; zalimlerin zulmünü üzerimizden kaldır ve onları hak ettikleri mertebeye indir.",
+            "en": "Invoke 'Ya Al-Khāfiḍ' to seek protection from arrogance, to ask for the removal of oppression, and to cultivate a heart of true humility."
+        },
+        "reflection": {
+            "de": "Wahrer Fall beginnt im Herzen. Wer sich vor Gott großmacht, wird durch Ihn klein. Dieser Name ist eine Warnung an alle Tyrannen und eine Hoffnung für die Unterdrückten.",
+            "tr": "İnsanın gerçek değeri Allah katındaki takvasıyladır. Dünyalık makamlarla kibirlenenler, Allah'ın bu ismiyle her an alçaltılabilirler.",
+            "en": "True status is granted by Allah alone. Reflecting on this name reminds us that no power or rank is permanent if it is built on injustice or pride."
+        },
+        "sourceNote": {
+            "de": "Wird traditionell zusammen mit 'Ar-Rāfi‘' (dem Erhöhenden) genannt. Es beschreibt die göttliche Justierung der Ränge.",
+            "tr": "Genellikle 'Er-Râfi' ismiyle birlikte düşünülür. Allah'ın hikmetiyle kimini düşürüp kimini yükseltmesini ifade eder.",
+            "en": "Traditionally paired with 'Ar-Rāfi‘' (The Exalter). It represents the divine adjustment of scales and ranks based on truth and merit."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (95:5)",
+            "tr": "Kur'an'da geçtiği ayetler: (95:5)",
+            "en": "Found in Quran Ayah(s): (95:5)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 23,
+        "slug": "ar-rafi",
+        "arabic": "الرَّافِع",
+        "transliteration": {
+            "de": "Ar-Rāfi‘",
+            "tr": "Er-Râfi",
+            "en": "Ar-Rāfi‘"
+
+        },
+        "pronunciation": {
+            "de": "Ar-Raa-fi‘",
+            "tr": "Ar-Raa-fi‘",
+            "en": "Ar-Raa-fi‘"
+
+        },
+        "meanings": {
+            "de": "Der Erhöhende",
+            "tr": "Dereceleri yükselten, şan ve şeref veren",
+            "en": "The Exalter, The Uplifter"
+        },
+        "explanations": {
+            "de": "Derjenige, der die Demütigen, Aufrichtigen und Gläubigen in ihrem Rang, ihrem Ansehen und ihrer spirituellen Stufe erhöht. Er hebt jene empor, die sich für das Gute einsetzen.",
+            "tr": "Müminleri ve salih kulları yücelten, derecelerini artıran; hakikati üstün kılıp dostlarını izzetli ve şerefli kılan.",
+            "en": "The One who uplifts the believers in rank and spiritual status. He elevates those who are humble and sincere, granting them honor in this world and the hereafter."
+        },
+        "duaUsage": {
+            "de": "Ya Ar-Rāfi‘, erhöhe meinen Charakter, festige meinen Glauben und schenke mir ein ehrenvolles Ansehen unter Deinen Dienern.",
+            "tr": "Ya Râfi, ahlakımı ve ilmimi yükselt, beni Senin katında kıymetli bir kul eyle ve izzetimi sadece Senin rızana bağla.",
+            "en": "Invoke 'Ya Ar-Rāfi‘' to seek spiritual elevation, strength of character, and to be raised among those who are righteous and beloved by Allah."
+        },
+        "reflection": {
+            "de": "Wahre Erhöhung findet nicht durch Stolz statt, sondern durch Demut. Wer sich vor Gott klein macht, den wird Gott im Jenseits und in den Herzen der Menschen groß machen.",
+            "tr": "Gerçek yükseliş maddi makamlarla değil, takva ve güzel ahlakladır. Allah için tevazu gösteren kimseyi, Allah mutlaka yüceltir.",
+            "en": "Reflecting on this name teaches us that true honor comes from Allah alone. To be raised high by the Creator, one must practice humility and serve others with a pure heart."
+        },
+        "sourceNote": {
+            "de": "Ergänzt 'Al-Khāfiḍ'. Während 'Al-Khāfiḍ' die Hochmütigen senkt, hebt 'Ar-Rāfi‘' die Bescheidenen hervor.",
+            "tr": "Hâfıd isminin zıddıdır; bu iki isim birlikte ilahi adaletin ve liyakatin nasıl işlediğini gösterir.",
+            "en": "The direct counterpart to 'Al-Khāfiḍ'. Together, they represent the divine mechanism of justice where pride leads to abasement and humility leads to exaltation."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (58:11)(6: 83)",
+            "tr": "Kur'an'da geçtiği ayetler: (58:11)(6: 83)",
+            "en": "Found in Quran Ayah(s): (58:11)(6: 83)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 24,
+        "slug": "al-muizz",
+        "arabic": "المُعِزّ",
+        "transliteration": {
+            "de": "Al-Mu‘izz",
+            "tr": "El-Mu'ız",
+            "en": "Al-Mu‘izz"
+
+        },
+        "pronunciation": {
+            "de": "Al-Mu-izz",
+            "tr": "Al-Mu-izz",
+            "en": "Al-Mu-izz"
+
+        },
+        "meanings": {
+            "de": "Der Ehrende und Stärkende",
+            "tr": "İzzet ve şeref veren, dilediğini aziz kılan",
+            "en": "The Bestower of Honour, The Giver of Might"
+        },
+        "explanations": {
+            "de": "Derjenige, der Würde, Macht und Ansehen verleiht. Er macht Seine Diener stark und standhaft und schenkt ihnen Ehre, die nicht auf weltlichem Besitz, sondern auf innerer Rechtschaffenheit gründet.",
+            "tr": "Dilediğine izzet, şeref ve güç bahşeden; müminleri yardımıyla aziz kılan ve onları başkalarına muhtaç etmeyerek yücelten.",
+            "en": "The One who grants honour, dignity, and strength. He elevates whom He wills by guiding them to righteousness and granting them a status that cannot be taken away by worldly powers."
+        },
+        "duaUsage": {
+            "de": "Ya Al-Mu‘izz, schenke mir Würde durch meinen Glauben, bewahre mich vor moralischer Schwäche und lass mich niemals die Anerkennung von Menschen über Deine Zufriedenheit stellen.",
+            "tr": "Ya Muizz, beni Senin yolunda aziz eyle, nefsimin ve insanların yanında küçük düşürme; gerçek izzeti Senin rızanda aramayı nasip et.",
+            "en": "Invoke 'Ya Al-Mu‘izz' to seek inner strength, to maintain dignity in difficult circumstances, and to be honored with a life of faith and integrity."
+        },
+        "reflection": {
+            "de": "Wahre Ehre kann man nicht kaufen oder erben. Sie ist ein Geschenk für jene, die Gott treu bleiben. Wer die Ehre bei Menschen sucht, wird oft enttäuscht; wer sie bei Gott sucht, wird unbezwingbar.",
+            "tr": "İzzet ve şerefi yanlış yerlerde arayanlar hüsrana uğrar. Gerçek güç, Allah'a kul olmakla elde edilir; zira O'nun aziz kıldığını kimse zelil edemez.",
+            "en": "Reflecting on this name frees the believer from the need for worldly validation. True 'Izzah' (honour) is found in servitude to Allah, protecting one from being a slave to the opinions of others."
+        },
+        "sourceNote": {
+            "de": "Hängt eng mit dem Begriff 'Izzah' zusammen. Sein direktes Gegenstück ist 'Al-Mudhill' (Der Demütigende).",
+            "tr": "El-Müzill isminin zıddıdır. İzzet, sadece güç değil, aynı zamanda kimsenin zarar veremeyeceği bir sağlamlık ve üstünlük manasına gelir.",
+            "en": "Linked to the concept of 'Izzat' (honour/might). It is traditionally paired with 'Al-Mudhill' to show the divine control over the rise and fall of dignity."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (3:26)",
+            "tr": "Kur'an'da geçtiği ayetler: (3:26)",
+            "en": "Found in Quran Ayah(s): (3:26)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 25,
+        "slug": "al-mudhill",
+        "arabic": "المُذِلّ",
+        "transliteration": {
+            "de": "Al-Mudhill",
+            "tr": "El-Müzil",
+            "en": "Al-Mudhill"
+
+        },
+        "pronunciation": {
+            "de": "Al-Mu-dhill",
+            "tr": "Al-Mu-dhill",
+            "en": "Al-Mu-dhill"
+
+        },
+        "meanings": {
+            "de": "Der Erniedrigende",
+            "tr": "Dilediğini zelil eden, değersiz kılan",
+            "en": "The Humiliator, The Dishonourer"
+        },
+        "explanations": {
+            "de": "Derjenige, der den Hochmütigen, Tyrannen und jenen, die sich gegen die göttliche Wahrheit auflehnen, die Ehre entzieht. Er bringt jene zu Fall, die ihre Macht missbrauchen und sich über andere erheben.",
+            "tr": "Kibirlenenleri, zalimleri ve hak yoldan sapanları zillete düşüren; sahte vakar ve makamları yerle bir ederek hakikati izhar eden.",
+            "en": "The One who humbles and abases those who are arrogant and unjust. He removes the cloak of honor from those who defy the truth or use their power to oppress others."
+        },
+        "duaUsage": {
+            "de": "Ya Al-Mudhill, bewahre mich davor, jemals stolz oder herablassend gegenüber Deiner Schöpfung zu sein, und schütze mich vor der Demütigung durch meine eigenen Fehltritte.",
+            "tr": "Ya Müzill, beni nefsimin gururundan ve rezil olmaktan muhafaza eyle; zalimlerin baskısını üzerimizden kaldır ve onları adaletinle zelil et.",
+            "en": "Invoke 'Ya Al-Mudhill' to seek protection from the arrogance of the self, to be shielded from social disgrace, and to ask for the subduing of oppressive forces."
+        },
+        "reflection": {
+            "de": "Wahre Erniedrigung ist nicht Armut oder ein niedriger sozialer Status, sondern der Verlust der Nähe zu Gott. Wer sich von Gott abwendet, um Ehre bei anderen zu suchen, wird letztlich Enttäuschung erfahren.",
+            "tr": "Zillet, sadece maddi bir kayıp değil, ilahi rahmetten mahrum kalmaktır. Allah katında küçülen, kainatın nazarında da küçülür; gerçek onur ancak O'na itaattedir.",
+            "en": "Reflecting on this name teaches that power and prestige are a trust. When that trust is betrayed through pride, Al-Mudhill restores justice by revealing the inherent weakness of the arrogant."
+        },
+        "sourceNote": {
+            "de": "Das direkte Gegenstück zu 'Al-Mu‘izz'. Beide Namen zeigen, dass Ehre und Demütigung Werkzeuge der göttlichen Erziehung und Gerechtigkeit sind.",
+            "tr": "El-Muizz isminin zıddıdır. Bu isim, Allah'ın mutlak iradesinin bir tecellisi olarak hak edenlerin itibarını sarsmasını ifade eder.",
+            "en": "Traditionally paired with 'Al-Mu‘izz'. These names together illustrate that true might and lowliness are determined solely by Allah’s wisdom and justice."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (3:26)",
+            "tr": "Kur'an'da geçtiği ayetler: (3:26)",
+            "en": "Found in Quran Ayah(s): (3:26)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 26,
+        "slug": "as-sami",
+        "arabic": "السَّمِيع",
+        "transliteration": {
+            "de": "As-Samī‘",
+            "tr": "Es-Semi",
+            "en": "As-Samī‘"
+
+        },
+        "pronunciation": {
+            "de": "As-Sa-miii",
+            "tr": "As-Sa-miii",
+            "en": "As-Sa-miii"
+
+        },
+        "meanings": {
+            "de": "Der Allhörende",
+            "tr": "Her şeyi en iyi işiten, duaları duyan",
+            "en": "The All-Hearing, The Ever-Listening"
+        },
+        "explanations": {
+            "de": "Derjenige, dessen Hören alles umfasst. Er hört das laute Wort ebenso wie das leiseste Flüstern und die unausgesprochenen Regungen der Herzen. Nichts kann Sein Gehör überlagern oder Ihm entgehen.",
+            "tr": "Her türlü sesi, fısıltıyı ve kalplerden geçen niyazları gizli-açık ayrımı olmaksızın işiten; dualara icabet eden ve hiçbir sesin diğeriyle karışmadığı mutlak işitme sahibi.",
+            "en": "The One whose hearing encompasses everything in existence. He hears every voice, every whisper, and every silent plea within the heart, without any limitation or need for physical ears."
+        },
+        "duaUsage": {
+            "de": "Ya As-Samī‘, höre meine Bittgebete, nimm meine Reue an und lass mich zu denen gehören, die das Gute hören und ihm auf die beste Weise folgen.",
+            "tr": "Ya Semî, dualarımı kabul eyle, kalbimdeki sessiz yakarışlarımı işit ve beni hakkı dinleyip ona en güzel şekilde uyanlardan eyle.",
+            "en": "Invoke 'Ya As-Samī‘' to seek the acceptance of prayers, to find comfort in being heard during loneliness, and to refine one's own listening to truth and wisdom."
+        },
+        "reflection": {
+            "de": "Das Wissen, dass Gott jedes Wort hört, lehrt uns Achtsamkeit in unserer Sprache. Es schenkt uns aber auch tiefen Trost: Wir sind niemals allein, denn Er ist der beste Zuhörer für unsere Sorgen.",
+            "tr": "Allah'ın her şeyi işittiğini bilen bir mümin, dilini kötü sözlerden muhafaza eder. Bu isim aynı zamanda kul için büyük bir tesellidir; kimsenin duymadığı feryatları Allah işitmektedir.",
+            "en": "Knowing He hears all serves as both a moral compass for our speech and a source of immense peace. It reassures the believer that no prayer is lost and no struggle is unnoticed."
+        },
+        "sourceNote": {
+            "de": "Ein Wesensattribut (sifat adh-dhātiyya). Sein Hören ist ewig und unterscheidet sich grundlegend vom begrenzten menschlichen Gehör.",
+            "tr": "Zatî sıfatlardandır. Allah'ın işitmesi zamana, mekana veya bir organa bağlı değildir; her şeyi aynı anda ve kusursuzca kuşatır.",
+            "en": "A fundamental attribute of essence. Allah's hearing is eternal and absolute, transcending time, space, and physical mechanisms."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (2:127)(2: 256)(8:17) (49:1)",
+            "tr": "Kur'an'da geçtiği ayetler: (2:127)(2: 256)(8:17) (49:1)",
+            "en": "Found in Quran Ayah(s): (2:127)(2: 256)(8:17) (49:1)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 27,
+        "slug": "al-basir",
+        "arabic": "البَصِير",
+        "transliteration": {
+            "de": "Al-Baṣīr",
+            "tr": "El-Basîr",
+            "en": "Al-Baṣīr"
+
+        },
+        "pronunciation": {
+            "de": "Al-Ba-siir",
+            "tr": "Al-Ba-siir",
+            "en": "Al-Ba-siir"
+
+        },
+        "meanings": {
+            "de": "Der Allsehende",
+            "tr": "Her şeyi hakkıyla gören",
+            "en": "The All-Seeing, The All-Perceiving"
+        },
+        "explanations": {
+            "de": "Derjenige, dessen Sicht alles umfasst. Er sieht das Verborgene ebenso wie das Offensichtliche, das Große wie das winzig Kleine. Sein Sehen ist ewig und benötigt keine physischen Organe oder Lichtquellen.",
+            "tr": "Gizli veya açık, küçük veya büyük her şeyi her an gören; hiçbir şeyin O'nun görüşünden saklanamadığı ve her şeyin hakikatini müşahede eden mutlak basiret sahibi.",
+            "en": "The One whose vision encompasses all things. He sees the hidden and the manifest, the vast and the microscopic, with perfect clarity, regardless of light or distance, and without the need for physical eyes."
+        },
+        "duaUsage": {
+            "de": "Ya Al-Baṣīr, schenke mir geistige Einsicht (Basira), bewahre mich vor den Irrtümern meiner Augen und leite mich dazu an, das Schöne in Deiner Schöpfung zu erkennen.",
+            "tr": "Ya Basîr, basiretimi aç, bana eşyanın hakikatini görmeyi nasip et ve beni Senin razı olmayacağın her türlü günahtan muhafaza eyle.",
+            "en": "Invoke 'Ya Al-Baṣīr' to seek clarity of vision (both physical and spiritual), to ask for guidance in making correct choices, and to find solace in the fact that He sees one's silent struggles."
+        },
+        "reflection": {
+            "de": "Das Bewusstsein, dass Gott uns in jedem Moment sieht (Ihsan), ist die höchste Stufe der spirituellen Achtsamkeit. Es schützt uns in der Einsamkeit vor Fehltritten und gibt uns Kraft, wenn wir uns von Menschen missverstanden fühlen.",
+            "tr": "Allah'ın bizi her an gördüğünü bilmek (İhsan makamı), davranışlarımıza edep ve çekidüzen verir. Kimsenin şahit olmadığı iyiliklerimizin Allah tarafından görülmesi mümin için en büyük ödüldür.",
+            "en": "Knowing that Allah is watching over us creates a sense of accountability and peace. It encourages us to act with excellence (Ihsan) even when alone, knowing that our good deeds and patient endurances are never lost."
+        },
+        "sourceNote": {
+            "de": "Ein Wesensattribut (sifat adh-dhātiyya), das oft zusammen mit 'As-Samī‘' genannt wird. Es beschreibt Gottes absolute Wahrnehmungskraft.",
+            "tr": "Zatî sıfatlardandır. Allah'ın görmesi zamana ve mekâna bağlı değildir. Es-Semî ismiyle birlikte Allah'ın mahlukatı üzerindeki mutlak denetimini ifade eder.",
+            "en": "A fundamental attribute of essence (sifat adh-dhātiyya). Often paired with 'As-Samī‘' (The All-Hearing), highlighting Allah's total awareness of His creation."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (4:58)(17: 1)(42:11)( 42:27)",
+            "tr": "Kur'an'da geçtiği ayetler: (4:58)(17: 1)(42:11)( 42:27)",
+            "en": "Found in Quran Ayah(s): (4:58)(17: 1)(42:11)( 42:27)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 28,
+        "slug": "al-hakam",
+        "arabic": "الحَكَم",
+        "transliteration": {
+            "de": "Al-Ḥakam",
+            "tr": "El-Hakem",
+            "en": "Al-Ḥakam"
+
+        },
+        "pronunciation": {
+            "de": "Al-Ha-kam",
+            "tr": "Al-Ha-kam",
+            "en": "Al-Ha-kam"
+
+        },
+        "meanings": {
+            "de": "Der Richter, der Schiedsherr",
+            "tr": "Mutlak hakim, nihai hükmü veren",
+            "en": "The Judge, The Arbitrator"
+        },
+        "explanations": {
+            "de": "Derjenige, dessen Urteil endgültig ist und den niemand abweisen kann. Er trennt das Wahre vom Falschen mit vollkommener Gerechtigkeit, und Seine Gesetzmäßigkeiten durchdringen die gesamte Schöpfung.",
+            "tr": "Hüküm verme yetkisi kendisine ait olan, hakkı batıldan ayıran ve kararlarını tam bir adaletle veren; O'nun hükmünü bozacak hiçbir makam yoktur.",
+            "en": "The One whose judgment is final and irrevocable. He is the ultimate arbitrator who distinguishes truth from falsehood and justice from injustice with absolute wisdom and fairness."
+        },
+        "duaUsage": {
+            "de": "Ya Al-Ḥakam, richte zwischen uns mit der Wahrheit, schenke mir Weisheit in meinen Entscheidungen und lass mich stets gerecht gegenüber anderen handeln.",
+            "tr": "Ya Hakem, aramizda hak ile hükmet, beni adaletten ayırma ve her türlü haksızlıktan Sana sığınıyorum.",
+            "en": "Invoke 'Ya Al-Ḥakam' to seek clarity in complex disputes, to ask for justice when wronged, and to beg for wisdom in making life-altering decisions."
+        },
+        "reflection": {
+            "de": "Menschliche Richter können irren, doch Gottes Urteil basiert auf absolutem Wissen. Wer weiß, dass Gott der Schiedsherr ist, strebt nach Integrität, auch wenn niemand zusieht.",
+            "tr": "Son hükmün Allah'a ait olduğunu bilmek, mümini haksızlık yapmaktan alıkoyar. Dünya hayatındaki adaletsizliklerin nihai bir mahkemede çözüleceğine olan inanç huzur verir.",
+            "en": "Reflecting on this name brings peace to the oppressed, knowing that a final, perfect judgment awaits. It also warns the oppressor that no worldly authority can bypass divine justice."
+        },
+        "sourceNote": {
+            "de": "Drückt die Souveränität Gottes aus. Sein Urteil (Hukm) ist zeitlos und unvoreingenommen.",
+            "tr": "Hüküm verenlerin en hayırlısıdır. Bu isim, Allah'ın hem bu dünyadaki kozmik yasalarını hem de ahiretteki adaletini kapsar.",
+            "en": "Emphasizes that Allah is the ultimate source of law and order. His decrees are binding, impartial, and based on infinite wisdom."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (22:69)",
+            "tr": "Kur'an'da geçtiği ayetler: (22:69)",
+            "en": "Found in Quran Ayah(s): (22:69)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 29,
+        "slug": "al-adl",
+        "arabic": "العَدْل",
+        "transliteration": {
+            "de": "Al-Adl",
+            "tr": "El-Adl",
+            "en": "Al-Adl"
+
+        },
+        "pronunciation": {
+            "de": "Al-Adl",
+            "tr": "Al-Adl",
+            "en": "Al-Adl"
+
+        },
+        "meanings": {
+            "de": "Der Gerechte, der Inbegriff der Gerechtigkeit",
+            "tr": "Mutlak adil, her şeyi yerli yerinde yapan",
+            "en": "The Utterly Just, The Embodiment of Justice"
+        },
+        "explanations": {
+            "de": "Derjenige, der in Seinem Wesen und Handeln absolut gerecht ist. Er ist frei von jeder Parteilichkeit oder Unrechtmäßigkeit. Seine Gerechtigkeit zeigt sich in der perfekten Ausgewogenheit des Universums.",
+            "tr": "Zatında ve fiillerinde mutlak adalet sahibi olan; her şeyi hikmetle yerli yerine koyan ve hiçbir varlığa asla zulmetmeyen, dengeyi kuran.",
+            "en": "The One who is the essence of justice. He acts with perfect equity and is far removed from any form of injustice or bias. His justice governs the laws of the universe and the destiny of souls."
+        },
+        "duaUsage": {
+            "de": "Ya Al-Adl, erfülle mein Herz mit dem Sinn für Gerechtigkeit, schütze mich davor, anderen Unrecht zu tun, und lass mich mit Deiner Gnade und Fairness behandelt werden.",
+            "tr": "Ya Adl, beni adaletten ayırma, nefsimin zulmünden muhafaza eyle; hakkımdaki hükümlerine rıza göstermeyi ve her işimde hakkaniyetli olmayı nasip et.",
+            "en": "Invoke 'Ya Al-Adl' to seek strength in standing for what is right, to find peace in divine decrees, and to ask for protection against acting unjustly toward others."
+        },
+        "reflection": {
+            "de": "Gottes Gerechtigkeit bedeutet nicht immer Gleichheit, sondern dass jedem das gegeben wird, was ihm zusteht. Wer an Al-Adl glaubt, erkennt in jeder Prüfung eine verborgene Weisheit und ein vollkommenes Maß.",
+            "tr": "Allah'ın adaletini anlamak, kainattaki hassas dengeyi görmektir. Adalet sadece ceza vermek değil, hak sahibine hakkını teslim etmektir. Bu isim, mümini her şartta dürüstlüğe davet eder.",
+            "en": "Reflecting on Al-Adl teaches us that nothing in the universe is haphazard. Divine justice ensures that no atom's weight of good or evil goes unnoticed, providing a profound sense of moral order."
+        },
+        "sourceNote": {
+            "de": "Ein Infinitiv (Substantiv), der als Name verwendet wird, was bedeutet: Er 'ist' die Gerechtigkeit selbst. Es bildet die ethische Basis des islamischen Weltbildes.",
+            "tr": "Bir sıfat değil, mastardır; yani adaletin bizzat kendisidir. Allah'ın her işinde mutlak bir nizam ve hakkaniyet olduğunu simgeler.",
+            "en": "A linguistic intensive: He is not just just, He is Justice itself. It emphasizes that His decrees are the very definition of what is right and balanced."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (6:115)",
+            "tr": "Kur'an'da geçtiği ayetler: (6:115)",
+            "en": "Found in Quran Ayah(s): (6:115)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 30,
+        "slug": "al-latif",
+        "arabic": "اللَّطِيف",
+        "transliteration": {
+            "de": "Al-Laṭīf",
+            "tr": "El-Latîf",
+            "en": "Al-Laṭīf"
+
+        },
+        "pronunciation": {
+            "de": "Al-La-tiif",
+            "tr": "Al-La-tiif",
+            "en": "Al-La-tiif"
+
+        },
+        "meanings": {
+            "de": "Der Feinfühlige, der Gütige",
+            "tr": "Lütuf sahibi, en ince işleri bilen ve sezdirmeden veren",
+            "en": "The Subtle One, The Most Gentle"
+        },
+        "explanations": {
+            "de": "Derjenige, der das Feinste und Verborgenste kennt und Seinen Geschöpfen auf so subtile, sanfte Weise Gutes zukommen lässt, dass sie es oft erst im Nachhinein bemerken. Er ist der Kenner aller Geheimnisse.",
+            "tr": "En ince ve gizli işleri bilen, mahlukatına lütuf ve ihsanını sezdirmeden ulaştıran; nezaket, yumuşaklık ve derin bir ilim sahibi olan.",
+            "en": "The One who is infinitely subtle and gracious. He has perfect knowledge of the most delicate details and bestows His kindness upon His creation in ways that are imperceptible and gentle."
+        },
+        "duaUsage": {
+            "de": "Ya Al-Laṭīf, sei mir gnädig in Deiner Vorsehung, kläre meine verborgenen Angelegenheiten und lass mich Deine sanfte Leitung in meinem Leben spüren.",
+            "tr": "Ya Latîf, bana lütfunla muamele eyle, bilmediğim hayırları bana ulaştır ve gönlümdeki darlığı Senin sonsuz nezaketinle gider.",
+            "en": "Invoke 'Ya Al-Laṭīf' to seek relief in hidden difficulties, to ask for gentle guidance in life's decisions, and to find comfort in Allah's subtle and kind providence."
+        },
+        "reflection": {
+            "de": "Oft verzweifeln wir an einer Situation, weil wir den subtilen Segen darin nicht sofort sehen. Al-Laṭīf lehrt uns Vertrauen: Gott wirkt im Stillen und bereitet Wege vor, die wir uns nicht vorstellen können.",
+            "tr": "Allah'ın lütfu bazen bir musibet gibi görünse de arkasında binlerce hayır gizli olabilir. Bu isim, kulun Rabbine olan güvenini tazeler; O, kuluna şah damarından daha yakın ve latiftir.",
+            "en": "Reflecting on this name teaches patience and trust. Divine grace often works through the quietest events of our lives, guiding us toward what is best for us without any force or fanfare."
+        },
+        "sourceNote": {
+            "de": "Dieser Name vereint zwei Bedeutungen: 1. Wissen um das Winzigste (Subtile) und 2. Sanftmut im Handeln. Ein Name voll Trost und Zärtlichkeit.",
+            "tr": "Bu isim hem 'derin ve ince bilgi' hem de 'sonsuz nezaket' manalarını içerir. Kur'an-ı Kerim'de sıkça 'Habîr' (her şeyden haberdar) ismiyle birlikte geçer.",
+            "en": "Combines two meanings: perfect knowledge of microscopic details and extreme gentleness in action. It is a name of immense comfort, often paired with 'Al-Khabīr' in the Quran."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (6:103)(22 :63)(31:16 )(33:34)",
+            "tr": "Kur'an'da geçtiği ayetler: (6:103)(22 :63)(31:16 )(33:34)",
+            "en": "Found in Quran Ayah(s): (6:103)(22 :63)(31:16 )(33:34)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 31,
+        "slug": "al-khabir",
+        "arabic": "الخَبِير",
+        "transliteration": {
+            "de": "Al-Khabīr",
+            "tr": "El-Habîr",
+            "en": "Al-Khabīr"
+
+        },
+        "pronunciation": {
+            "de": "Al-Kha-biir",
+            "tr": "Al-Kha-biir",
+            "en": "Al-Kha-biir"
+
+        },
+        "meanings": {
+            "de": "Der Allkundige, der bestens Informierte",
+            "tr": "Her şeyin iç yüzünden haberdar olan",
+            "en": "The All-Aware, The All-Cognizant"
+        },
+        "explanations": {
+            "de": "Derjenige, dem keine noch so verborgene Realität entgeht. Er kennt nicht nur das Offensichtliche, sondern auch die tiefen Hintergründe, die Absichten der Herzen und die feinsten Details aller Ereignisse.",
+            "tr": "Eşyanın ve olayların iç yüzünü, gizli taraflarını ve asıllarını en ince ayrıntısına kadar bilen; hiçbir şeyin kendisinden gizlenmesi mümkün olmayan mutlak haber sahibi.",
+            "en": "The One who possesses deep, internal knowledge of all things. He is aware of the hidden realities, the secrets of the hearts, and the ultimate consequences of every action and event."
+        },
+        "duaUsage": {
+            "de": "Ya Al-Khabīr, schenke mir Einsicht in die Wahrheit der Dinge, bewahre mich vor Selbsttäuschung und leite mich durch Dein Wissen zu dem, was für mich am besten ist.",
+            "tr": "Ya Habîr, kalbimdeki gizli niyetleri Senin rızana ulaştır, meselelerin iç yüzünü görmeyi nasip et ve beni gafletten muhafaza eyle.",
+            "en": "Invoke 'Ya Al-Khabīr' to seek clarity in confusing situations, to ask for self-awareness regarding one's own faults, and to find peace in His perfect awareness of your struggles."
+        },
+        "reflection": {
+            "de": "Gott kennt unsere Motive oft besser als wir selbst. Das Wissen um diesen Namen mahnt zur Aufrichtigkeit (Ikhlās): Man kann vor den Menschen Masken tragen, aber vor dem Allkundigen gibt es keine Geheimnisse.",
+            "tr": "İnsan bazen kendi niyetinden bile emin olamazken, Allah kulunun kalbindeki en ince fısıltıyı bilir. Bu isim mümini riyadan korur ve samimiyete sevk eder.",
+            "en": "Reflecting on Al-Khabīr encourages true sincerity. It reminds the believer that while the world judges by appearances, Allah knows the core motives, providing comfort to the misunderstood and a warning to the insincere."
+        },
+        "sourceNote": {
+            "de": "Oft zusammen mit 'Al-Laṭīf' genannt. Während 'Al-Alīm' allgemeines Wissen beschreibt, betont 'Al-Khabīr' die Kenntnis des Verborgenen und der inneren Zustände.",
+            "tr": "Kur'an'da genellikle 'Latîf' ismiyle beraber zikredilir. 'İlm' (bilgi) kökünden farklı olarak, bir şeyin mahiyetinden ve özünden haberdar olmayı ifade eder.",
+            "en": "Often paired with 'Al-Laṭīf'. While 'Al-Alīm' refers to general knowledge, 'Al-Khabīr' emphasizes being aware of the inner workings, the hidden, and the 'ins and outs' of all matters."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (6:18)(17: 30)(49:13) (59:18)",
+            "tr": "Kur'an'da geçtiği ayetler: (6:18)(17: 30)(49:13) (59:18)",
+            "en": "Found in Quran Ayah(s): (6:18)(17: 30)(49:13) (59:18)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 32,
+        "slug": "al-halim",
+        "arabic": "الحَلِيم",
+        "transliteration": {
+            "de": "Al-Ḥalīm",
+            "tr": "El-Halîm",
+            "en": "Al-Ḥalīm"
+
+        },
+        "pronunciation": {
+            "de": "Al-Ha-liim",
+            "tr": "Al-Ha-liim",
+            "en": "Al-Ha-liim"
+
+        },
+        "meanings": {
+            "de": "Der Langmütige, der Milde",
+            "tr": "Cezalandırmada acele etmeyen",
+            "en": "The Forbearing, The Most Clement"
+        },
+        "explanations": {
+            "de": "Derjenige, der trotz Seiner Macht zur Bestrafung Nachsicht übt und den Menschen Zeit zur Einsicht und Umkehr gibt.",
+            "tr": "Kullarının günahlarını görüp bildiği halde, onları hemen cezalandırmayan; tövbe etmeleri için onlara mühlet veren ve öfkesine yenik düşmeyen.",
+            "en": "The One who does not hasten to punish His servants for their mistakes, despite having the power to do so. He is calm and gives respite for repentance."
+        },
+        "duaUsage": {
+            "de": "Ya Ḥalīm, schenke mir Ruhe in Momenten des Zorns und die Kraft, anderen mit der gleichen Milde zu begegnen, die Du mir zeigst.",
+            "tr": "Ya Halîm, öfkemi kontrol etmeme yardım et; nefsimin hırçınlığından Sana sığınırım, bana hilm ve vakar ihsan eyle.",
+            "en": "Invoke 'Ya Ḥalīm' to seek emotional stability, to overcome anger, and to ask for Allah's forbearance when we have fallen short."
+        },
+        "reflection": {
+            "de": "Gottes Milde ist keine Schwäche, sondern Ausdruck vollkommener Beherrschung. Ein Gläubiger sollte diese Qualität widerspiegeln, indem er nicht impulsiv reagiert.",
+            "tr": "Allah'ın Halîm ismini tefekkür eden, başkalarının hatalarına karşı sabırlı olmayı ve öfkesini yutmayı öğrenir.",
+            "en": "Reflection on Al-Ḥalīm teaches us that true strength is not in outbursts of anger, but in the ability to remain calm and forgiving when provoked."
+        },
+        "sourceNote": {
+            "de": "Betont die Aufschiebung der Strafe aus Barmherzigkeit.",
+            "tr": "İlahi sabrın ve yumuşaklığın ifadesidir.",
+            "en": "Highlights the delay of punishment to allow for spiritual growth."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (2:235)(17 :44)(22:59 )(35:41)",
+            "tr": "Kur'an'da geçtiği ayetler: (2:235)(17 :44)(22:59 )(35:41)",
+            "en": "Found in Quran Ayah(s): (2:235)(17 :44)(22:59 )(35:41)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 33,
+        "slug": "al-azim",
+        "arabic": "العَظِيم",
+        "transliteration": {
+            "de": "Al-Aẓīm",
+            "tr": "El-Azîm",
+            "en": "Al-Aẓīm"
+
+        },
+        "pronunciation": {
+            "de": "Al-A-ziim",
+            "tr": "Al-A-ziim",
+            "en": "Al-A-ziim"
+
+        },
+        "meanings": {
+            "de": "Der Gewaltige, der unendlich Große",
+            "tr": "Zatının büyüklüğüne sınır olmayan",
+            "en": "The Magnificent, The Infinite"
+        },
+        "explanations": {
+            "de": "Derjenige, dessen wahre Größe den menschlichen Verstand übersteigt. Seine Erhabenheit ist absolut und unabhängig von der Schöpfung.",
+            "tr": "Büyüklüğü akılla kavranamayan, her bakımdan yüce olan; hiçbir şey O'ndan üstün veya O'na denk olamaz.",
+            "en": "The One whose greatness is absolute and beyond the grasp of human intellect. He is magnificent in His essence, attributes, and actions."
+        },
+        "duaUsage": {
+            "de": "Wird im Gebet (Ruku') rezitiert, um sich der eigenen Kleinheit vor Seiner unendlichen Majestät bewusst zu werden.",
+            "tr": "Rükûda 'Subhâne Rabbiye’l-Azîm' diyerek O'nun huzurunda eğilir, kendi acziyetimizi ve O'nun sonsuz büyüklüğünü itiraf ederiz.",
+            "en": "Invoked to instill awe and humility in the heart, acknowledging that only Allah is truly Great."
+        },
+        "reflection": {
+            "de": "Wenn man die Größe Gottes verinnerlicht, verlieren weltliche Ängste und Sorgen ihre Macht über das Herz.",
+            "tr": "Azamet sahibi Allah'ı tanıyan, O'ndan başkası önünde eğilmez ve dünyevi güçlerden korkmaz.",
+            "en": "Recognizing Al-Aẓīm makes everything else appear small and manageable, freeing the believer from the tyranny of worldly ego."
+        },
+        "sourceNote": {
+            "de": "Kernbegriff der Verherrlichung Gottes.",
+            "tr": "Azamet ve kibriya sahibidir.",
+            "en": "Central to the glorification of Allah in daily worship."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (2:255)(42 :4)(56:96)",
+            "tr": "Kur'an'da geçtiği ayetler: (2:255)(42 :4)(56:96)",
+            "en": "Found in Quran Ayah(s): (2:255)(42 :4)(56:96)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 34,
+        "slug": "al-ghafur",
+        "arabic": "الغَفُور",
+        "transliteration": {
+            "de": "Al-Ghafūr",
+            "tr": "El-Gafûr",
+            "en": "Al-Ghafūr"
+
+        },
+        "pronunciation": {
+            "de": "Al-Gha-fuur",
+            "tr": "Al-Gha-fuur",
+            "en": "Al-Gha-fuur"
+
+        },
+        "meanings": {
+            "de": "Der Allvergebende, der ständig Verzeihende",
+            "tr": "Mağfireti çok olan",
+            "en": "The All-Forgiving, The Exceedingly Forgiving"
+        },
+        "explanations": {
+            "de": "Die Steigerungsform von Ghafir; Er vergibt immer wieder, deckt die Fehler Seiner Diener zu und schützt sie vor den Konsequenzen.",
+            "tr": "Kullarının günahlarını tekrar tekrar bağışlayan, onları örten ve cezalandırmaktan vazgeçen; mağfireti bol olan.",
+            "en": "The One who forgives extensively and repeatedly. He veils the sins of His servants and protects them from the spiritual consequences of their actions."
+        },
+        "duaUsage": {
+            "de": "Ya Ghafūr, ich komme mit meinen Unzulänglichkeiten zu Dir; hülle mich in Deine Vergebung ein und reinige mein Herz.",
+            "tr": "Ya Gafûr, günahlarım ne kadar çok olursa olsun Senin mağfiretin daha büyüktür; beni bağışla ve ayıplarımı ört.",
+            "en": "The primary name to invoke when seeking 'Istighfar' (forgiveness), especially for repeated failings."
+        },
+        "reflection": {
+            "de": "Vergebung ist bei Gott kein einmaliger Akt, sondern ein permanentes Angebot für jeden, der aufrichtig zurückkehrt.",
+            "tr": "Allah'ın Gafûr olması, kulun asla ümitsizliğe düşmemesi gerektiğini öğretir.",
+            "en": "Al-Ghafūr reminds us that no sin is too large for His mercy, as long as the turn back to Him is sincere."
+        },
+        "sourceNote": {
+            "de": "Drückt die Intensität und Häufigkeit der Vergebung aus.",
+            "tr": "Mübalağa sigasıyla bağışlamanın çokluğunu ifade eder.",
+            "en": "An intensive form of forgiveness that implies quantity and quality."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (2:173)(8: 69)(16:11 0)(41:32)",
+            "tr": "Kur'an'da geçtiği ayetler: (2:173)(8: 69)(16:11 0)(41:32)",
+            "en": "Found in Quran Ayah(s): (2:173)(8: 69)(16:11 0)(41:32)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 35,
+        "slug": "ash-shakur",
+        "arabic": "الشَّكُور",
+        "transliteration": {
+            "de": "Ash-Shakūr",
+            "tr": "Eş-Şekûr",
+            "en": "Ash-Shakūr"
+
+        },
+        "pronunciation": {
+            "de": "Asch-Schakuur",
+            "tr": "Asch-Schakuur",
+            "en": "Asch-Schakuur"
+
+        },
+        "meanings": {
+            "de": "Der Dankbare, der überreich Belohnende",
+            "tr": "Az amele çok sevap veren",
+            "en": "The Most Appreciative, The Grateful"
+        },
+        "explanations": {
+            "de": "Gott 'dankt' Seinen Dienern, indem Er kleine Taten mit gewaltigen Belohnungen würdigt und ihre Bemühungen niemals vergisst.",
+            "tr": "Kullarının küçük bir iyiliğine bile büyük karşılıklar veren, onların şükrünü kabul eden ve nimetlerini artıran.",
+            "en": "The One who acknowledges the smallest good deeds of His servants and rewards them manifold. He appreciates the efforts of the faithful."
+        },
+        "duaUsage": {
+            "de": "Ya Shakūr, nimm meine schwachen Bemühungen an und segne das Wenige, das ich für Dich tue.",
+            "tr": "Ya Şekûr, Sana olan hamdımı kabul et ve bana verdiklerine şükredebilme gücü ver.",
+            "en": "Invoke to ask Allah to accept and multiply the reward of your deeds, despite their imperfection."
+        },
+        "reflection": {
+            "de": "Wenn der Schöpfer des Universums unsere Taten würdigt, wie viel mehr sollten wir dann einander und Gott gegenüber dankbar sein?",
+            "tr": "Allah Şekûr ise, mümin de hem Allah'a hem de insanlara karşı teşekkür etmeyi bir ahlak edinmelidir.",
+            "en": "Faith in Ash-Shakūr motivates a believer to keep doing good, even when no one else notices or appreciates it."
+        },
+        "sourceNote": {
+            "de": "Ein paradoxer Name: Der Schöpfer bedankt sich beim Geschöpf.",
+            "tr": "Şükrün karşılığını fazlasıyla veren demektir.",
+            "en": "A beautiful attribute showing how Allah values human effort."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (35:30)(35 :34)(42:23 )(64:17)",
+            "tr": "Kur'an'da geçtiği ayetler: (35:30)(35 :34)(42:23 )(64:17)",
+            "en": "Found in Quran Ayah(s): (35:30)(35 :34)(42:23 )(64:17)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 36,
+        "slug": "al-aliy",
+        "arabic": "العَلِيّ",
+        "transliteration": {
+            "de": "Al-’Aliy",
+            "tr": "El-Aliyy",
+            "en": "Al-’Aliy"
+
+        },
+        "pronunciation": {
+            "de": "Al-A-lii",
+            "tr": "Al-A-lii",
+            "en": "Al-A-lii"
+
+        },
+        "meanings": {
+            "de": "Der Allerhöchste, der Transzendente",
+            "tr": "Yüceler yücesi",
+            "en": "The Most High, The Exalted"
+        },
+        "explanations": {
+            "de": "Er ist über alles erhaben – in Seiner Essenz, Seiner Macht und Seinem Rang. Nichts kann Ihn erreichen oder Seinem Status nahekommen.",
+            "tr": "Mertebesi, şânı ve kudreti en yüksek olan; her bakımdan mahlukatın fevkinde olan mutlak yüce.",
+            "en": "The One who is exalted above all creation in essence, power, and status. There is nothing above Him or comparable to His height."
+        },
+        "duaUsage": {
+            "de": "Wird oft in der Niederwerfung (Sujud) gerufen: 'Subhāna Rabbiye’l-A’lā'.",
+            "tr": "Secdede 'Subhâne Rabbiye’l-A’lâ' diyerek, en aşağıda olduğumuz an en Yüce olanı anarız.",
+            "en": "Invoke to lift your aspirations and to remind yourself that Allah's decree is above all human plans."
+        },
+        "reflection": {
+            "de": "Das Bewusstsein für Al-’Aliy schützt vor Übermut. Egal wie hoch ein Mensch steigt, er bleibt unter dem Allerhöchsten.",
+            "tr": "Gerçek yüceliğin sadece Allah'a ait olduğunu bilen, kibrinden arınır ve tevazu sahibi olur.",
+            "en": "True humility is born from recognizing Al-’Aliy; knowing that no matter our success, we are always beneath His majesty."
+        },
+        "sourceNote": {
+            "de": "Bezeichnet die absolute Höhe des Rangs.",
+            "tr": "İzzet ve şeref bakımından en üstün olandır.",
+            "en": "Refers to both ontological and status-based height."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (4:34)(31: 30)(42:4)( 42:51)",
+            "tr": "Kur'an'da geçtiği ayetler: (4:34)(31: 30)(42:4)( 42:51)",
+            "en": "Found in Quran Ayah(s): (4:34)(31: 30)(42:4)( 42:51)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 37,
+        "slug": "al-kabir",
+        "arabic": "الكَبِير",
+        "transliteration": {
+            "de": "Al-Kabīr",
+            "tr": "El-Kebîr",
+            "en": "Al-Kabīr"
+
+        },
+        "pronunciation": {
+            "de": "Al-Ka-biir",
+            "tr": "Al-Ka-biir",
+            "en": "Al-Ka-biir"
+
+        },
+        "meanings": {
+            "de": "Der Unendlich Große, der Gewaltige",
+            "tr": "Büyüklükte benzeri olmayan",
+            "en": "The Most Great, The Grand"
+        },
+        "explanations": {
+            "de": "Derjenige, dem absolute Größe in jeder Hinsicht zusteht. Im Vergleich zu Ihm ist das gesamte Universum unbedeutend.",
+            "tr": "Zatının büyüklüğü bilinemeyecek kadar ulu olan; kibriya ve azamet sahibi.",
+            "en": "The One whose essence and greatness are beyond measurement. He is Great in a way that makes all other 'greatness' insignificant."
+        },
+        "duaUsage": {
+            "de": "Grundlage des 'Allahu Akbar'. Erinnert in schwierigen Zeiten daran, dass Gott größer ist als jedes Problem.",
+            "tr": "Hayatın her alanında 'Allahu Ekber' diyerek sorunlarımızın Allah'tan büyük olmadığını hatırlarız.",
+            "en": "Use this name to find courage when facing overwhelming odds or powerful oppressors."
+        },
+        "reflection": {
+            "de": "Wenn wir 'Allahu Akbar' sagen, erklären wir alles andere für klein. Das befreit das Herz von der Götzenanbetung des Materiellen.",
+            "tr": "Allah'ı büyük tanıyanın gözünde, dünya ve içindekiler küçülür.",
+            "en": "Saying 'Allah is Great' is a declaration of independence from the fear of anything other than Him."
+        },
+        "sourceNote": {
+            "de": "Unterscheidet sich von Azim durch die Betonung der Essenz.",
+            "tr": "Zatî büyüklüğü ifade eder.",
+            "en": "Refers to greatness in essence and perfection."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (13:9)(22: 62)(31:30)",
+            "tr": "Kur'an'da geçtiği ayetler: (13:9)(22: 62)(31:30)",
+            "en": "Found in Quran Ayah(s): (13:9)(22: 62)(31:30)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 38,
+        "slug": "al-hafiz",
+        "arabic": "الحَفِيظ",
+        "transliteration": {
+            "de": "Al-Ḥafīẓ",
+            "tr": "El-Hafîz",
+            "en": "Al-Ḥafīẓ"
+
+        },
+        "pronunciation": {
+            "de": "Al-Ha-fiiz",
+            "tr": "Al-Ha-fiiz",
+            "en": "Al-Ha-fiiz"
+
+        },
+        "meanings": {
+            "de": "Der Bewahrer, der Beschützer",
+            "tr": "Her şeyi koruyup gözeten",
+            "en": "The Preserver, The All-Heedful Protector"
+        },
+        "explanations": {
+            "de": "Er bewahrt das Universum vor dem Chaos, schützt Seine Diener vor Unheil und zeichnet jede Tat lückenlos auf.",
+            "tr": "Kainatı dengede tutan, kullarını tehlikelerden koruyan ve yaptıkları hiçbir ameli zayi etmeden muhafaza eden.",
+            "en": "The One who preserves and guards all things. He maintains the balance of the universe, protects His servants from harm, and records every deed."
+        },
+        "duaUsage": {
+            "de": "Ya Ḥafīẓ, beschütze mich, meine Familie und meinen Glauben vor den Versuchungen und Gefahren dieser Welt.",
+            "tr": "Ya Hafîz, beni ve sevdiklerimi görünür görünmez kazalardan, nefsimin ve şeytanın şerrinden koru.",
+            "en": "Invoke for protection during travel, against spiritual corruption, and for the safety of loved ones."
+        },
+        "reflection": {
+            "de": "Wahrer Schutz kommt nicht von Sicherheitsvorkehrungen, sondern von Gott. Er bewahrt auch unser Wissen und unsere Taten für das Jenseits.",
+            "tr": "Gerçek koruyucunun Allah olduğunu bilen, O'na tevekkül eder ve O'nun yasaklarını çiğnemekten sakınarak kendi ahiretini korur.",
+            "en": "Believing in Al-Ḥafīẓ gives peace of mind; nothing is lost with Him, and no evil can reach us except by His permission."
+        },
+        "sourceNote": {
+            "de": "Kombiniert Schutz mit Buchführung (Aufzeichnung).",
+            "tr": "Korumak ve kaydetmek manalarını içerir.",
+            "en": "Encompasses physical protection and the preservation of deeds."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (11:57)(34 :21)(42:6)",
+            "tr": "Kur'an'da geçtiği ayetler: (11:57)(34 :21)(42:6)",
+            "en": "Found in Quran Ayah(s): (11:57)(34 :21)(42:6)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 39,
+        "slug": "al-muqit",
+        "arabic": "المُقِيت",
+        "transliteration": {
+            "de": "Al-Muqīt",
+            "tr": "El-Mukît",
+            "en": "Al-Muqīt"
+
+        },
+        "pronunciation": {
+            "de": "Al-Mu-kiit",
+            "tr": "Al-Mu-kiit",
+            "en": "Al-Mu-kiit"
+
+        },
+        "meanings": {
+            "de": "Der Ernährer, der Erhalter",
+            "tr": "Rızıkları yaratan ve veren",
+            "en": "The Sustainer, The Nourisher"
+        },
+        "explanations": {
+            "de": "Derjenige, der jedem Lebewesen genau das gibt, was es zum Überleben braucht – sowohl körperlich als auch geistig.",
+            "tr": "Her canlıya gıdasını veren, muhtaç oldukları şeyi her an ulaştıran ve onları koruyan.",
+            "en": "The One who provides for every creature's needs and sustains them. He creates nourishment for both the body and the soul."
+        },
+        "duaUsage": {
+            "de": "Ya Muqīt, gib mir Kraft für meinen Gehorsam und versorge mich mit dem, was mein Herz lebendig hält.",
+            "tr": "Ya Mukît, rızkımı helalinden ver ve kalbimi iman gıdasıyla doyur.",
+            "en": "Invoke when feeling weak, either physically or spiritually, asking for the 'sustenance' needed to carry on."
+        },
+        "reflection": {
+            "de": "Unsere Versorgung ist bereits garantiert. Statt uns um das Morgen zu sorgen, sollten wir uns darauf konzentrieren, wofür wir diese Kraft einsetzen.",
+            "tr": "Rızkın Allah'tan geldiğini bilen, başkasına el açmaz ve rızık endişesiyle harama yönelmez.",
+            "en": "Al-Muqīt teaches us that sustenance is more than food; it is everything that keeps us going on the path to Him."
+        },
+        "sourceNote": {
+            "de": "Spezifischer als Ar-Razzaq; betont die Kraftzufuhr.",
+            "tr": "Gıdaları yaratan ve her şeye gücü yetendir.",
+            "en": "Relates to providing the exact strength and nutrition required."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (4:85)",
+            "tr": "Kur'an'da geçtiği ayetler: (4:85)",
+            "en": "Found in Quran Ayah(s): (4:85)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 40,
+        "slug": "al-hasib",
+        "arabic": "الحَسِيب",
+        "transliteration": {
+            "de": "Al-Ḥasīb",
+            "tr": "El-Hasîb",
+            "en": "Al-Ḥasīb"
+
+        },
+        "pronunciation": {
+            "de": "Al-Ha-siib",
+            "tr": "Al-Ha-siib",
+            "en": "Al-Ha-siib"
+
+        },
+        "meanings": {
+            "de": "Der Rechner, der Genügende",
+            "tr": "Kullarına yeten, hesap gören",
+            "en": "The Reckoner, The Sufficient One"
+        },
+        "explanations": {
+            "de": "Er führt genauestens Buch über alles und Er allein reicht als Schutz und Helfer aus. Am Ende ist Er derjenige, der die Abrechnung vornimmt.",
+            "tr": "Kullarının bütün fiillerini bilen ve kaydeden; aynı zamanda onlara her konuda yeten ve hesap gününde hesaba çekecek olan.",
+            "en": "The One who takes account of everything and the One who is sufficient for His servants. He is the ultimate auditor of our lives."
+        },
+        "duaUsage": {
+            "de": "Hasbiyallahu wa ni'mal wakīl (Gott genügt mir). Wird gerufen, wenn Menschen einen enttäuschen oder Unrecht droht.",
+            "tr": "Darda kalan mümin 'Hasbünallahu ve ni'mel vekîl' diyerek sadece Allah'ın yardımının kendisine yeteceğini haykırır.",
+            "en": "Recited to find sufficiency in Allah when facing hardship or injustice from people."
+        },
+        "reflection": {
+            "de": "Wenn Gott uns genügt, werden wir unabhängig vom Urteil oder der Gunst der Menschen.",
+            "tr": "Allah'ın hesap görücü olduğunu bilen, nefis muhasebesini dünyada yapar.",
+            "en": "Knowing Al-Ḥasīb leads to self-accountability; we judge ourselves before we are judged."
+        },
+        "sourceNote": {
+            "de": "Doppelaspekt: Rechenschaft und Genügsamkeit.",
+            "tr": "Kifayet eden ve hesap soran manasındadır.",
+            "en": "Refers both to auditing deeds and being sufficient as a protector."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (4:6)(4:86 )(33:39)",
+            "tr": "Kur'an'da geçtiği ayetler: (4:6)(4:86 )(33:39)",
+            "en": "Found in Quran Ayah(s): (4:6)(4:86 )(33:39)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 41,
+        "slug": "al-dschaliil",
+        "arabic": "الجَلِيل",
+        "transliteration": {
+            "de": "Al-Jalīl",
+            "tr": "El-Celîl",
+            "en": "Al-Jalīl"
+
+        },
+        "pronunciation": {
+            "de": "Al-Dschaliil",
+            "tr": "Al-Dschaliil",
+            "en": "Al-Dschaliil"
+
+        },
+        "meanings": {
+            "de": "Der Majestätische, der Erhabene",
+            "tr": "Celal ve azamet sahibi",
+            "en": "The Majestic, The Sublime"
+        },
+        "explanations": {
+            "de": "Derjenige, dem absolute Vollkommenheit und Würde eigen sind. Er ist die Quelle aller Schönheit und Erhabenheit (Jalal).",
+            "tr": "Sıfatları sonsuz mükemmellikte olan, büyüklük ve ululuk sahibi; hürmet edilmeye en layık olan.",
+            "en": "The One who is attributed with the perfection of attributes. He possesses absolute majesty and grandeur."
+        },
+        "duaUsage": {
+            "de": "Ya Dhal-Jalāli wal-Ikrām (O Besitzer der Majestät und Ehre). Wird genutzt, um die Annahme von Gebeten zu erbitten.",
+            "tr": "Dua ederken 'Ya Ze'l-Celâli ve'l-İkrâm' diyerek O'nun büyüklüğüne sığınıp lütfunu dileriz.",
+            "en": "Often used in the phrase 'Owner of Majesty and Honor' to address Allah in earnest supplication."
+        },
+        "reflection": {
+            "de": "Majestät löst im Herzen Ehrfurcht aus. Ein Diener des Jalīl sollte einen edlen Charakter entwickeln, der Gottes Majestät widerspiegelt.",
+            "tr": "Allah'ın celalinden korkan, O'nun cemaline (güzelliğine) sığınır ve ahlakını güzelleştirmeye çalışır.",
+            "en": "True majesty belongs to Allah alone; human power is but a shadow and should never lead to arrogance."
+        },
+        "sourceNote": {
+            "de": "Betont die ehrfurchtgebietende Seite Gottes.",
+            "tr": "Ululuk ve şan sahibidir.",
+            "en": "Focuses on the qualities that inspire awe and reverence."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (55:27)(39 :14)(7:143 )",
+            "tr": "Kur'an'da geçtiği ayetler: (55:27)(39 :14)(7:143 )",
+            "en": "Found in Quran Ayah(s): (55:27)(39 :14)(7:143 )"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 42,
+        "slug": "al-karim",
+        "arabic": "الكَرِيم",
+        "transliteration": {
+            "de": "Al-Karīm",
+            "tr": "El-Kerîm",
+            "en": "Al-Karīm"
+
+        },
+        "pronunciation": {
+            "de": "Al-Ka-riim",
+            "tr": "Al-Ka-riim",
+            "en": "Al-Ka-riim"
+
+        },
+        "meanings": {
+            "de": "Der Großzügige, der Edle",
+            "tr": "Lütfu bol, karşılıksız veren",
+            "en": "The Most Generous, The Bountiful"
+        },
+        "explanations": {
+            "de": "Er gibt ohne Maß, ohne gefragt zu werden und ohne eine Gegenleistung zu erwarten. Seine Großzügigkeit entspringt Seiner edlen Essenz.",
+            "tr": "Hiçbir karşılık beklemeden veren, vaadini yerine getiren ve lütfuyla kullarını sevindiren; keremi sonsuz olan.",
+            "en": "The One who is most generous, giving without being asked and without expecting anything in return. He is noble in His forgiveness and bountiful in His gifts."
+        },
+        "duaUsage": {
+            "de": "Ya Karīm, behandle mich nicht nach meiner Unwürdigkeit, sondern nach Deiner unendlichen Edelmütigkeit.",
+            "tr": "Ya Kerîm, kusurlarıma bakma, bana lütfunla muamele eyle; beni Senden başkasına muhtaç etme.",
+            "en": "Invoke when asking for blessings, or when fearing that your sins might prevent you from receiving Allah's grace."
+        },
+        "reflection": {
+            "de": "Gottes Großzügigkeit sollte uns nicht leichtfertig machen, sondern unsere Scham und Liebe zu Ihm vertiefen.",
+            "tr": "Allah'ın Kerîm olduğunu bilen, cömertliği kendine şiar edinir ve insanlara ihsanda bulunur.",
+            "en": "Al-Karīm gives even to those who disobey Him. This should inspire us to be generous and kind even to those who do not deserve it from us."
+        },
+        "sourceNote": {
+            "de": "Verbindet Güte mit Ehre und Adel.",
+            "tr": "İhsan ve cömertliğin zirvesidir.",
+            "en": "Combines the concepts of generosity, nobility, and honor."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (27:40)(82 :6)",
+            "tr": "Kur'an'da geçtiği ayetler: (27:40)(82 :6)",
+            "en": "Found in Quran Ayah(s): (27:40)(82 :6)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 43,
+        "slug": "ar-raqib",
+        "arabic": "الرَّقِيب",
+        "transliteration": {
+            "de": "Ar-Raqīb",
+            "tr": "Er-Rakîb",
+            "en": "Ar-Raqīb"
+
+        },
+        "pronunciation": {
+            "de": "Ar-Ra-kiib",
+            "tr": "Ar-Ra-kiib",
+            "en": "Ar-Ra-kiib"
+
+        },
+        "meanings": {
+            "de": "Der Beobachter, der Wachsame",
+            "tr": "Her an gözeten ve denetleyen",
+            "en": "The Watchful, The All-Observing"
+        },
+        "explanations": {
+            "de": "Derjenige, dem keine Bewegung und kein Gedanke entgeht. Er wacht über Seine Schöpfung mit einer Aufmerksamkeit, die niemals nachlässt.",
+            "tr": "Bütün varlıkları her an gözeten, bütün işleri denetimi altında tutan ve hiçbir şey nazarından kaçmayan mutlak denetleyici.",
+            "en": "The One from whose observation nothing escapes. He is vigilant over all thoughts and actions, maintaining constant care over the cosmos."
+        },
+        "duaUsage": {
+            "de": "Wird angerufen, um die Wahrhaftigkeit im Verborgenen zu stärken und sich der ständigen Gegenwart Gottes bewusst zu werden (Muraqaba).",
+            "tr": "Ya Rakîb, kalbimden geçenleri ve amellerimi Sana layık eyle; beni Sen'den gafil eyleme.",
+            "en": "Invoke to cultivate 'Ihsan'—worshipping Allah as if you see Him, knowing that He certainly sees you."
+        },
+        "reflection": {
+            "de": "Das Bewusstsein für Ar-Raqīb führt zu einer inneren Ethik: Man schämt sich, in der Gegenwart des Königs der Könige Unrecht zu tun.",
+            "tr": "Allah'ın Rakîb olduğunu bilen bir mümin, kimsenin olmadığı yerde bile günah işlemekten haya eder.",
+            "en": "Reflection on Ar-Raqīb creates a sense of security and accountability, knowing that we are never truly alone or neglected."
+        },
+        "sourceNote": {
+            "de": "Betont die Unmittelbarkeit der göttlichen Wahrnehmung.",
+            "tr": "İlahi denetim ve gözetim ismidir.",
+            "en": "Focuses on the intimacy of divine observation and guardianship."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (4:1)(5:11 7)",
+            "tr": "Kur'an'da geçtiği ayetler: (4:1)(5:11 7)",
+            "en": "Found in Quran Ayah(s): (4:1)(5:11 7)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 44,
+        "slug": "al-mudschib",
+        "arabic": "المُجِيب",
+        "transliteration": {
+            "de": "Al-Mujīb",
+            "tr": "El-Mucîb",
+            "en": "Al-Mujīb"
+
+        },
+        "pronunciation": {
+            "de": "Al-Mudschiib",
+            "tr": "Al-Mudschiib",
+            "en": "Al-Mudschiib"
+
+        },
+        "meanings": {
+            "de": "Der Erhörer, der Antwortende",
+            "tr": "Duaları kabul eden",
+            "en": "The Responsive One, The Answerer"
+        },
+        "explanations": {
+            "de": "Derjenige, der auf die Rufe Seiner Diener antwortet. Er ist nah und reagiert auf jedes Gebet auf die Weise, die am besten für das Geschöpf ist.",
+            "tr": "Kullarının duasını işiten, onlara karşılık veren ve ihtiyaçlarını en hayırlı şekilde karşılayan.",
+            "en": "The One who responds to the supplications and needs of His creation. He is near to those who call upon Him and answers according to His wisdom."
+        },
+        "duaUsage": {
+            "de": "Ya Mujīb, Du hast versprochen zu antworten; erhöre mein Flehen und schenke mir das, was für mein Jenseits am besten ist.",
+            "tr": "Ya Mucîb, dualarımı katında kabul eyle; hayırlı isteklerime cevap ver.",
+            "en": "Invoke with full certainty (Yaqin) that no prayer is lost, and that Allah will respond in His perfect timing."
+        },
+        "reflection": {
+            "de": "Dass Gott antwortet, bedeutet nicht immer, dass Er sofort gibt, was wir wollen, sondern dass Er gibt, was wir brauchen.",
+            "tr": "Allah'ın Mucîb olması, kul ile Rabbi arasındaki en büyük ümit köprüsüdür.",
+            "en": "The responsiveness of Allah is a sign of His nearness; He is closer to us than we are to ourselves."
+        },
+        "sourceNote": {
+            "de": "Name der Hoffnung und der Nähe Gottes.",
+            "tr": "Dua ve icabetin merkezindeki isimdir.",
+            "en": "A direct bridge between the Creator and the created through prayer."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (11:61)",
+            "tr": "Kur'an'da geçtiği ayetler: (11:61)",
+            "en": "Found in Quran Ayah(s): (11:61)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 45,
+        "slug": "al-wasi",
+        "arabic": "الوَاسِع",
+        "transliteration": {
+            "de": "Al-Wāsi’",
+            "tr": "El-Vâsi",
+            "en": "Al-Wāsi’"
+
+        },
+        "pronunciation": {
+            "de": "Al-Waa-si’",
+            "tr": "Al-Waa-si’",
+            "en": "Al-Waa-si’"
+
+        },
+        "meanings": {
+            "de": "Der Allumfassende, der Weite",
+            "tr": "İlmi ve rahmeti her şeyi kuşatan",
+            "en": "The All-Encompassing, The Boundless"
+        },
+        "explanations": {
+            "de": "Dessen Wissen, Barmherzigkeit und Macht keine Grenzen kennen. Sein Reichtum ist unerschöpflich und Sein Wesen umfasst alles Sein.",
+            "tr": "Lütfu, rahmeti, ilmi ve kudretiyle her şeyi ihata eden; darlık ve sınır tanımayan mutlak zenginlik sahibi.",
+            "en": "The One whose attributes and mercy are infinite. His capacity to forgive and provide is vast beyond human imagination."
+        },
+        "duaUsage": {
+            "de": "Ya Wāsi’, weite mein Herz in Zeiten der Enge und schenke mir Anteil an Deiner unendlichen Barmherzigkeit.",
+            "tr": "Ya Vâsi, daldığım darlıklardan beni çıkar; rızkımı ve kalbimi genişlet.",
+            "en": "Invoke when feeling restricted by life's circumstances, seeking the spiritual vastness and ease that only Allah can provide."
+        },
+        "reflection": {
+            "de": "In einer Welt der Knappheit erinnert Al-Wāsi’ daran, dass bei Gott niemals Mangel herrscht. Er hat genug für alle Bedürfnisse.",
+            "tr": "Allah'ın Vâsi olduğunu bilen, başkalarının sahip olduklarına haset etmez; çünkü O'nun hazinesi herkese yeter.",
+            "en": "Reflection on Al-Wāsi’ removes the fear of poverty and the narrowness of the ego, opening the heart to universal compassion."
+        },
+        "sourceNote": {
+            "de": "Bezieht sich auf die Unendlichkeit Seiner Eigenschaften.",
+            "tr": "Kuşatıcılık ve sonsuzluk ifadesidir.",
+            "en": "Emphasizes the infinite scope of divine presence and provision."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (2:268)(3: 73)(5:54)",
+            "tr": "Kur'an'da geçtiği ayetler: (2:268)(3: 73)(5:54)",
+            "en": "Found in Quran Ayah(s): (2:268)(3: 73)(5:54)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 46,
+        "slug": "al-hakim",
+        "arabic": "الحَكِيم",
+        "transliteration": {
+            "de": "Al-Ḥakīm",
+            "tr": "El-Hakîm",
+            "en": "Al-Ḥakīm"
+
+        },
+        "pronunciation": {
+            "de": "Al-Ha-kiim",
+            "tr": "Al-Ha-kiim",
+            "en": "Al-Ha-kiim"
+
+        },
+        "meanings": {
+            "de": "Der Allweise",
+            "tr": "Her işi hikmetli olan",
+            "en": "The All-Wise"
+        },
+        "explanations": {
+            "de": "Derjenige, der alles mit perfekter Präzision und tiefem Sinn erschaffen hat. Nichts in Seinem Plan ist zufällig oder vergeblich.",
+            "tr": "Her şeyi yerli yerinde yapan, bütün emirleri ve işleri bir amaca dayalı olan; hikmetin kaynağı.",
+            "en": "The One who possesses ultimate wisdom. Every decree, law, and creation has a profound purpose, even if it remains hidden from human understanding."
+        },
+        "duaUsage": {
+            "de": "Ya Ḥakīm, lass mich den Sinn in Deinen Prüfungen erkennen und schenke mir Weisheit für meine Entscheidungen.",
+            "tr": "Ya Hakîm, bana eşyanın hakikatini göster; kararlarımda beni doğruya ve hikmete yönelt.",
+            "en": "Invoke to seek guidance and clarity, asking Allah to align your will with His wise purpose."
+        },
+        "reflection": {
+            "de": "Gottes Weisheit bedeutet, dass Er die Dinge an ihren richtigen Platz setzt. Geduld ist die Frucht des Vertrauens in Al-Ḥakīm.",
+            "tr": "Allah'ın Hakîm olduğuna inanan, başına gelen musibetlere rıza gösterir; çünkü bilir ki O, abesle iştigal etmez.",
+            "en": "Wisdom is knowing the 'why' behind the 'what.' Believing in Al-Ḥakīm provides tranquility in the face of life's mysteries."
+        },
+        "sourceNote": {
+            "de": "Kombiniert Wissen mit vollkommener Umsetzung.",
+            "tr": "İlim ve adaletin birleştiği makamdır.",
+            "en": "The source of all intellectual and moral clarity in the universe."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (31:27)(46 :2)(57:1)( 66:2)",
+            "tr": "Kur'an'da geçtiği ayetler: (31:27)(46 :2)(57:1)( 66:2)",
+            "en": "Found in Quran Ayah(s): (31:27)(46 :2)(57:1)( 66:2)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 47,
+        "slug": "al-wadud",
+        "arabic": "الوَدُود",
+        "transliteration": {
+            "de": "Al-Wadūd",
+            "tr": "El-Vedûd",
+            "en": "Al-Wadūd"
+
+        },
+        "pronunciation": {
+            "de": "Al-Wa-duud",
+            "tr": "Al-Wa-duud",
+            "en": "Al-Wa-duud"
+
+        },
+        "meanings": {
+            "de": "Der Liebende, der voller Zuneigung ist",
+            "tr": "Çok seven ve sevilen",
+            "en": "The Most Loving, The Affectionate"
+        },
+        "explanations": {
+            "de": "Gott liebt Seine aufrichtigen Diener nicht nur, Er zeigt ihnen Seine Liebe durch Gnade und Nähe. Er ist das Ziel aller Sehnsucht.",
+            "tr": "Kullarını çok seven, onları sevgisine mazhar kılan ve müminlerin kalbinde sevgisi her şeyden üstün olan.",
+            "en": "The One who is full of loving-kindness. He loves His righteous servants and is the ultimate object of their devotion and love."
+        },
+        "duaUsage": {
+            "de": "Ya Wadūd, erfülle mein Herz mit Deiner Liebe und mach mich zu einem Menschen, den Du liebst und der Deine Schöpfung liebt.",
+            "tr": "Ya Vedûd, Seni sevmeyi ve Senin sevdiklerini sevmeyi bana nasip eyle; kalbimi muhabbetinle doldur.",
+            "en": "The most intimate name to call upon when seeking spiritual warmth and to heal a hardened or lonely heart."
+        },
+        "reflection": {
+            "de": "Al-Wadūd zeigt, dass die Beziehung zu Gott auf Liebe basiert, nicht nur auf Gehorsam. Er ist uns zugewandt, noch bevor wir Ihn suchen.",
+            "tr": "Allah'ın Vedûd olması, ibadetin bir borçtan ziyade bir aşk yolculuğu olduğunu hatırlatır.",
+            "en": "Love is the essence of creation. To know Al-Wadūd is to see every blessing as a gift of affection from the Creator."
+        },
+        "sourceNote": {
+            "de": "Drückt eine aktive, zärtliche Liebe aus.",
+            "tr": "Sevginin ve dostluğun asıl kaynağıdır.",
+            "en": "One of the most intimate and heart-centered names of Allah."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (11:90)(85 :14)",
+            "tr": "Kur'an'da geçtiği ayetler: (11:90)(85 :14)",
+            "en": "Found in Quran Ayah(s): (11:90)(85 :14)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 48,
+        "slug": "al-madschid",
+        "arabic": "المَجِيد",
+        "transliteration": {
+            "de": "Al-Majīd",
+            "tr": "El-Mecîd",
+            "en": "Al-Majīd"
+
+        },
+        "pronunciation": {
+            "de": "Al-Ma-dschiid",
+            "tr": "Al-Ma-dschiid",
+            "en": "Al-Ma-dschiid"
+
+        },
+        "meanings": {
+            "de": "Der Glorreiche, der Ehrenvolle",
+            "tr": "Şanı yüce, keremi bol",
+            "en": "The All-Glorious, The Illustrious"
+        },
+        "explanations": {
+            "de": "Er besitzt vollkommene Ehre und unendliche Großzügigkeit. Seine Taten sind herrlich und Sein Wesen ist voller Licht und Glanz.",
+            "tr": "Şerefi çok yüksek, lütuf ve ihsanı sınırsız olan; övgüye en layık olan yüce varlık.",
+            "en": "The One who is perfectly glorious. He possesses absolute nobility and His generosity is as vast as His majesty."
+        },
+        "duaUsage": {
+            "de": "Wird oft in den Segenswünschen für den Propheten (Salawat) rezitiert: 'Innika Hamīdun Majīd'.",
+            "tr": "Ya Mecîd, şanına yakışır şekilde bizlere ikram eyle; bizleri Senin katında şerefli kıl.",
+            "en": "Invoke to glorify Allah and to ask for a share of noble character and spiritual dignity."
+        },
+        "reflection": {
+            "de": "Al-Majīd erinnert uns daran, dass wahre Ehre nur bei Gott zu finden ist. Wer weltlichen Ruhm sucht, jagt Schatten hinterher.",
+            "tr": "Allah'ın Mecîd ismini tefekkür eden, izzeti sadece Allah'ın yanında arar.",
+            "en": "To recognize Al-Majīd is to find contentment in His praise alone, disregarding the fickle opinions of people."
+        },
+        "sourceNote": {
+            "de": "Vereint die Konzepte von Ehre (Majd) und Güte.",
+            "tr": "Azamet ve keremin birleştiği isimdir.",
+            "en": "Reflects the pinnacle of nobility and divine splendor."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (11:73)",
+            "tr": "Kur'an'da geçtiği ayetler: (11:73)",
+            "en": "Found in Quran Ayah(s): (11:73)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 49,
+        "slug": "al-ba-ith",
+        "arabic": "البَاعِث",
+        "transliteration": {
+            "de": "Al-Bā'ith",
+            "tr": "El-Bâis",
+            "en": "Al-Bā'ith"
+
+        },
+        "pronunciation": {
+            "de": "Al-Ba-ith",
+            "tr": "Al-Ba-ith",
+            "en": "Al-Ba-ith"
+
+        },
+        "meanings": {
+            "de": "Der Erwecker, der Gesandte schickt",
+            "tr": "Ölüleri dirilten, peygamber gönderen",
+            "en": "The Resurrector, The Awakener"
+        },
+        "explanations": {
+            "de": "Derjenige, der das Leben nach dem Tod zurückgibt und der die Propheten schickte, um die Herzen aus dem Schlummer der Ignoranz zu wecken.",
+            "tr": "Ölüleri kabirlerinden çıkarıp dirilten ve insanların hidayeti için peygamberler gönderen.",
+            "en": "The One who brings life back to the dead on the Day of Judgment. He also 'awakens' hearts by sending messengers and revelation."
+        },
+        "duaUsage": {
+            "de": "Ya Bā'ith, erwecke mein Herz zum Glauben und lass mich am Tag der Auferstehung unter den Rechtschaffenen sein.",
+            "tr": "Ya Bâis, kalbimi gaflet uykusundan uyandır; beni huzuruna ak yüzle çıkar.",
+            "en": "Invoke to ask for spiritual awakening and to prepare the soul for the inevitable meeting with the Creator."
+        },
+        "reflection": {
+            "de": "Die Auferstehung ist kein fernes Ereignis; Gott erweckt in jedem Moment totes Land durch Regen und tote Herzen durch Sein Gedenken.",
+            "tr": "Bâis ismini bilen, ölümün bir yok oluş değil, yeni bir başlangıç olduğunu anlar.",
+            "en": "A reminder that life is a cycle of awakening, and that the ultimate awakening is the Return to Him."
+        },
+        "sourceNote": {
+            "de": "Bezieht sich auf die physische und spirituelle Erweckung.",
+            "tr": "Yeniden dirilişin ve hidayetin müjdecisidir.",
+            "en": "Dual meaning: sending prophets and resurrecting souls."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (22:7)",
+            "tr": "Kur'an'da geçtiği ayetler: (22:7)",
+            "en": "Found in Quran Ayah(s): (22:7)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 50,
+        "slug": "ash-shahid",
+        "arabic": "الشَّهِيد",
+        "transliteration": {
+            "de": "Ash-Shahīd",
+            "tr": "Eş-Şehîd",
+            "en": "Ash-Shahīd"
+
+        },
+        "pronunciation": {
+            "de": "Asch-Schahiid",
+            "tr": "Asch-Schahiid",
+            "en": "Asch-Schahiid"
+
+        },
+        "meanings": {
+            "de": "Der Zeuge, der Allgegenwärtige",
+            "tr": "Her şeye şahit olan",
+            "en": "The All-Witnessing, The Omnipresent"
+        },
+        "explanations": {
+            "de": "Derjenige, dessen Zeugnis absolut ist. Er ist bei jedem Ereignis präsent und kennt die Wahrheit hinter jeder Aussage.",
+            "tr": "Zaman ve mekan olmaksızın her yerde hazır olan; her şeyi gören ve doğruluğuna şahitlik eden.",
+            "en": "The One who witnesses all things. No event, word, or inner thought is hidden from His presence. He is the ultimate witness on the Day of Judgment."
+        },
+        "duaUsage": {
+            "de": "Ya Shahīd, Du bist Zeuge meiner Absichten; reinige sie, damit sie nur für Dich sind.",
+            "tr": "Ya Şehîd, Sen her şeye şahitsin; beni hakikatten ayırma, amellerimi rızana şahit eyle.",
+            "en": "Invoke to establish truth and to find comfort in the fact that your struggles are seen by the Divine."
+        },
+        "reflection": {
+            "de": "Wer Ash-Shahīd kennt, braucht keine menschlichen Zeugen für sein Gutes. Gott genügt als Zeuge (Kafā billāhi Shahīdā).",
+            "tr": "Allah'ın Şehîd olduğunu bilen, insanların takdirine değil, Allah'ın rızasına odaklanır.",
+            "en": "This name inspires integrity; we act rightly because the Supreme Witness is always present."
+        },
+        "sourceNote": {
+            "de": "Betont die Präsenz Gottes in der Zeit.",
+            "tr": "İlahi şahitlik ve hazır bulunma ismidir.",
+            "en": "Focuses on the omnipresence and the absolute truth of Allah's observation."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (4:166)(22 :17)(41:53 )(48:28)",
+            "tr": "Kur'an'da geçtiği ayetler: (4:166)(22 :17)(41:53 )(48:28)",
+            "en": "Found in Quran Ayah(s): (4:166)(22 :17)(41:53 )(48:28)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 51,
+        "slug": "al-haqq",
+        "arabic": "الحَقّ",
+        "transliteration": {
+            "de": "Al-Ḥaqq",
+            "tr": "El-Hakk",
+            "en": "Al-Ḥaqq"
+
+        },
+        "pronunciation": {
+            "de": "Al-Hakk",
+            "tr": "Al-Hakk",
+            "en": "Al-Hakk"
+
+        },
+        "meanings": {
+            "de": "Die Wahrheit, das Reale",
+            "tr": "Varlığı gerçek olan, hakikatin kaynağı",
+            "en": "The Absolute Truth, The Reality"
+        },
+        "explanations": {
+            "de": "Gott ist die einzige absolute Realität. Alles andere existiert nur durch Ihn. Er ist wahrhaftig in Seinem Versprechen und Seinem Wesen.",
+            "tr": "Varlığı hiç değişmeden duran, var olan, hakikati temsil eden ve hakkı ortaya çıkaran.",
+            "en": "The One who truly exists. He is the ultimate Reality, and His word and promises are the absolute truth. Everything besides Him is transient."
+        },
+        "duaUsage": {
+            "de": "Ya Ḥaqq, führe mich zur Wahrheit und lass mich nicht dem Trugbild der Welt verfallen.",
+            "tr": "Ya Hakk, bana hakkı hak olarak göster ve ona uymayı nasip et; batılı batıl olarak göster ve ondan sakınmamı sağla.",
+            "en": "Invoke to seek clarity in a world of illusions and to stand firm on justice and truth."
+        },
+        "reflection": {
+            "de": "In einer Welt der Meinungen und Täuschungen ist Gott der feste Anker der Realität. Alles, was nicht auf Ihm gründet, vergeht.",
+            "tr": "Hakk'ı tanıyan, batılın peşinden gitmez ve adaletten sapmaz.",
+            "en": "To live by Al-Ḥaqq is to be authentic and to align one's life with the eternal principles of the Creator."
+        },
+        "sourceNote": {
+            "de": "Der Kernname der ontologischen Realität.",
+            "tr": "Varlığın ve adaletin temelidir.",
+            "en": "A fundamental attribute describing the essence of the Divine."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (6:62)(22: 6)(23:116) (24:25)",
+            "tr": "Kur'an'da geçtiği ayetler: (6:62)(22: 6)(23:116) (24:25)",
+            "en": "Found in Quran Ayah(s): (6:62)(22: 6)(23:116) (24:25)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 52,
+        "slug": "al-wakil",
+        "arabic": "وَكِيل",
+        "transliteration": {
+            "de": "Al-Wakīl",
+            "tr": "El-Vekîl",
+            "en": "Al-Wakīl"
+
+        },
+        "pronunciation": {
+            "de": "Al-Wa-kiil",
+            "tr": "Al-Wa-kiil",
+            "en": "Al-Wa-kiil"
+
+        },
+        "meanings": {
+            "de": "Der Sachverwalter, der Vertrauenswürdige",
+            "tr": "Güvenilip dayanılan, işleri yoluna koyan",
+            "en": "The Trustee, The Disposer of Affairs"
+        },
+        "explanations": {
+            "de": "Derjenige, dem man seine Angelegenheiten anvertraut und der sie besser ordnet, als man es selbst könnte.",
+            "tr": "Kendisine tevekkül edenlerin işlerini en iyi şekilde neticelendiren, güvenilen mutlak vekil.",
+            "en": "The One who manages all affairs with perfect wisdom. He is the ultimate Trustee upon whom the believers rely for their worldly and spiritual needs."
+        },
+        "duaUsage": {
+            "de": "Ya Wakīl, ich überlasse Dir meine Sorgen; leite Du meine Wege, denn ich weiß nicht weiter.",
+            "tr": "Ya Vekîl, işlerimi Sana bıraktım; Sen benim için en hayırlısını takdir eyle.",
+            "en": "Invoke when feeling overwhelmed by responsibilities, placing your trust (Tawakkul) in His divine management."
+        },
+        "reflection": {
+            "de": "Tawakkul (Gottvertrauen) bedeutet nicht Faulheit, sondern nach bestem Wissen zu handeln und das Ergebnis Al-Wakīl zu überlassen.",
+            "tr": "Allah'ı vekil edinen, stres ve kaygıdan kurtulur; çünkü en güvenilir kapıya sığınmıştır.",
+            "en": "Relinquishing control to Al-Wakīl is the ultimate path to inner peace."
+        },
+        "sourceNote": {
+            "de": "Zentraler Name für das Gottvertrauen.",
+            "tr": "Tevekkül makamının dayanağıdır.",
+            "en": "Recognizes Allah as the supreme manager of the universe."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (3:173)(4: 171)(28:2 8)(73:9)",
+            "tr": "Kur'an'da geçtiği ayetler: (3:173)(4: 171)(28:2 8)(73:9)",
+            "en": "Found in Quran Ayah(s): (3:173)(4: 171)(28:2 8)(73:9)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 53,
+        "slug": "al-qawiy",
+        "arabic": "القَوِىّ",
+        "transliteration": {
+            "de": "Al-Qawiy",
+            "tr": "El-Kaviyy",
+            "en": "Al-Qawiy"
+
+        },
+        "pronunciation": {
+            "de": "Al-Ka-wii",
+            "tr": "Al-Ka-wii",
+            "en": "Al-Ka-wii"
+
+        },
+        "meanings": {
+            "de": "Der Starke, der Kraftvolle",
+            "tr": "Gücü tükenmez olan",
+            "en": "The All-Strong, The Possessor of All Strength"
+        },
+        "explanations": {
+            "de": "Dessen Stärke absolut ist und niemals schwindet. Er unterliegt keiner Ermüdung und keinem Widerstand.",
+            "tr": "Kudreti tam olan, hiçbir güç tarafından engellenemeyen ve asla yorulmayan.",
+            "en": "The One who possesses inexhaustible strength. His power is perfect and absolute, and no force in the heavens or earth can weaken Him."
+        },
+        "duaUsage": {
+            "de": "Ya Qawiy, stärke meinen Glauben und gib mir die Kraft, den Prüfungen des Lebens standzuhalten.",
+            "tr": "Ya Kavî, zayıf düştüğümde bana kuvvet ver; nefsimin karşısında beni güçlü kıl.",
+            "en": "Invoke when feeling weak or oppressed, seeking resilience from the source of all power."
+        },
+        "reflection": {
+            "de": "Alle Kraft im Universum ist nur eine geliehene Spiegelung von Al-Qawiy. Wer sich auf Seine Stärke stützt, kann nicht besiegt werden.",
+            "tr": "Gerçek gücün Allah'a ait olduğunu anlayan, zalimlerden korkmaz ve sadece Allah'a dayanır.",
+            "en": "True strength is not physical, but the spiritual connection to the All-Strong."
+        },
+        "sourceNote": {
+            "de": "Betont die Unbezwingbarkeit Gottes.",
+            "tr": "Mutlak güç sahibidir.",
+            "en": "Shows the absolute and tireless nature of divine force."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (22:40)(22 :74)(42:19 )(57:25)",
+            "tr": "Kur'an'da geçtiği ayetler: (22:40)(22 :74)(42:19 )(57:25)",
+            "en": "Found in Quran Ayah(s): (22:40)(22 :74)(42:19 )(57:25)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 54,
+        "slug": "al-matin",
+        "arabic": "المَتِين",
+        "transliteration": {
+            "de": "Al-Matīn",
+            "tr": "El-Metîn",
+            "en": "Al-Matīn"
+
+        },
+        "pronunciation": {
+            "de": "Al-Ma-tiin",
+            "tr": "Al-Ma-tiin",
+            "en": "Al-Ma-tiin"
+
+        },
+        "meanings": {
+            "de": "Der Standhafte, der absolut Feste",
+            "tr": "Sarsılmaz ve çok güçlü",
+            "en": "The Firm, The Steadfast"
+        },
+        "explanations": {
+            "de": "Derjenige, dessen Stärke unerschütterlich ist und der niemals Ermüdung oder Schwäche zeigt. Seine Macht ist kompakt und absolut stabil.",
+            "tr": "Kuvveti sarsılmaz, kudretinde hiçbir gevşeme olmayan; hiçbir şeyin kendisini sarsamayacağı mutlak sağlamlık sahibi.",
+            "en": "The One whose strength is unshakeable and whose power is constant. He possesses ultimate endurance and is never affected by fatigue or frailty."
+        },
+        "duaUsage": {
+            "de": "Wird angerufen, um Standhaftigkeit im Glauben (Istiqaamah) und Charakterfestigkeit in schwierigen Zeiten zu bitten.",
+            "tr": "Ya Metîn, imanımı sarsılmaz eyle; zorluklar karşısında kalbimi sabit kıl.",
+            "en": "Invoke to seek firmness in conviction and the strength to remain upright amidst the trials of life."
+        },
+        "reflection": {
+            "de": "In einer Welt des Wandels ist Al-Matīn der einzige feste Punkt. Wer sich an Ihn hält, findet unerschütterlichen Halt.",
+            "tr": "Allah'ın Metîn olduğunu bilen, batılın geçici gücünden korkmaz ve Hakk'a olan bağlılığını korur.",
+            "en": "Reflection on Al-Matīn provides psychological and spiritual stability, knowing that the Divine support is never brittle."
+        },
+        "sourceNote": {
+            "de": "Betont die Dauerhaftigkeit und Intensität Seiner Kraft.",
+            "tr": "Kuvvetin sarsılmazlık boyutudur.",
+            "en": "Focuses on the unwavering endurance of divine power."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (51:58)",
+            "tr": "Kur'an'da geçtiği ayetler: (51:58)",
+            "en": "Found in Quran Ayah(s): (51:58)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 55,
+        "slug": "al-waliy",
+        "arabic": "الوَلِىّ",
+        "transliteration": {
+            "de": "Al-Waliy",
+            "tr": "El-Veliyy",
+            "en": "Al-Waliy"
+
+        },
+        "pronunciation": {
+            "de": "Al-Wa-lii",
+            "tr": "Al-Wa-lii",
+            "en": "Al-Wa-lii"
+
+        },
+        "meanings": {
+            "de": "Der Schutzherr, der nahe Freund",
+            "tr": "Dost, yardımcı ve koruyucu",
+            "en": "The Protecting Friend, The Ally"
+        },
+        "explanations": {
+            "de": "Der nahe Freund der Gläubigen, der sie liebt, ihnen beisteht und sie aus der Dunkelheit ins Licht führt.",
+            "tr": "Müminlerin en yakını, onları seven, yardım eden, işlerini üstlenen ve karanlıklardan aydınlığa çıkaran.",
+            "en": "The One who is the near Guardian and Supporter of the believers. He is the ultimate Friend who provides guidance and loving protection."
+        },
+        "duaUsage": {
+            "de": "Ya Waliy, sei mein Beschützer in dieser Welt und im Jenseits; lass mich niemals ohne Deinen Beistand sein.",
+            "tr": "Ya Velî, Sen benim tek dostumsun; beni yalnız bırakma, işlerimi Sana emanet ettim.",
+            "en": "Invoke to seek divine intimacy and to feel the reassurance of being under God's personal care."
+        },
+        "reflection": {
+            "de": "Wahre Freundschaft mit Gott bedeutet, sich Seiner Führung anzuvertrauen. Er ist ein Freund, der niemals enttäuscht.",
+            "tr": "Allah'ı dost edinen, yalnızlıktan kurtulur ve mahlukattan bir beklentisi kalmaz.",
+            "en": "Reflecting on Al-Waliy transforms fear into peace, as the believer realizes they are never without an ally."
+        },
+        "sourceNote": {
+            "de": "Name der Nähe (Qurb) und der göttlichen Allianz.",
+            "tr": "Muhabbet ve yardımın kaynağıdır.",
+            "en": "Emphasizes the supportive and loving nature of the Creator toward His creation."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (4:45)(7:1 96)(42:28) (45:19)",
+            "tr": "Kur'an'da geçtiği ayetler: (4:45)(7:1 96)(42:28) (45:19)",
+            "en": "Found in Quran Ayah(s): (4:45)(7:1 96)(42:28) (45:19)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 56,
+        "slug": "al-hamid",
+        "arabic": "الحَمِيد",
+        "transliteration": {
+            "de": "Al-Ḥamīd",
+            "tr": "El-Hamîd",
+            "en": "Al-Ḥamīd"
+
+        },
+        "pronunciation": {
+            "de": "Al-Ha-miid",
+            "tr": "Al-Ha-miid",
+            "en": "Al-Ha-miid"
+
+        },
+        "meanings": {
+            "de": "Der Preiswürdige, der Lobenswerte",
+            "tr": "Her türlü övgüye layık olan",
+            "en": "The Praiseworthy, The Laudable"
+        },
+        "explanations": {
+            "de": "Derjenige, dem aus Seinem eigenen Wesen heraus alles Lob gebührt, unabhängig davon, ob Seine Geschöpfe Ihn preisen oder nicht.",
+            "tr": "Varlığıyla, sıfatlarıyla ve fiilleriyle her türlü hamd ve senaya layık olan tek varlık.",
+            "en": "The One who is inherently praiseworthy. All gratitude and glory belong to Him because of His perfect attributes and benevolent actions."
+        },
+        "duaUsage": {
+            "de": "Wird genutzt, um Gott in allen Zuständen – in Freude wie in Leid – Dankbarkeit auszudrücken (Alhamdulillah).",
+            "tr": "Ya Hamîd, dillerimizi Senin zikrinle, kalplerimizi Sana olan şükürle süsle.",
+            "en": "Invoke to cultivate a heart of gratitude and to acknowledge the source of every blessing."
+        },
+        "reflection": {
+            "de": "Wenn wir Gott preisen, fügen wir Seiner Herrlichkeit nichts hinzu; wir veredeln lediglich unsere eigene Seele durch die Anerkennung der Wahrheit.",
+            "tr": "Hamd, sadece nimet için değil, Allah'ın mükemmelliği için yapılır.",
+            "en": "Reflection on Al-Ḥamīd turns every breath into an act of appreciation for the beauty of existence."
+        },
+        "sourceNote": {
+            "de": "Einer der am häufigsten rezitierten Namen im rituellen Gebet.",
+            "tr": "Sena ve şükrün mutlak hedefidir.",
+            "en": "The ultimate target of all sincere appreciation and worship."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (14:8)(31: 12)(31:26) (41:42)",
+            "tr": "Kur'an'da geçtiği ayetler: (14:8)(31: 12)(31:26) (41:42)",
+            "en": "Found in Quran Ayah(s): (14:8)(31: 12)(31:26) (41:42)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 57,
+        "slug": "al-muhsi",
+        "arabic": "المُحْصِى",
+        "transliteration": {
+            "de": "Al-Muḥṣī",
+            "tr": "El-Muhsî",
+            "en": "Al-Muḥṣī"
+
+        },
+        "pronunciation": {
+            "de": "Al-Muh-sii",
+            "tr": "Al-Muh-sii",
+            "en": "Al-Muh-sii"
+
+        },
+        "meanings": {
+            "de": "Der alles Erfassende, der Rechner",
+            "tr": "Her şeyi sayan, her şeyin miktarını bilen",
+            "en": "The Accounter, The All-Enumerating"
+        },
+        "explanations": {
+            "de": "Derjenige, der die genaue Anzahl und das Maß aller Dinge kennt. Nichts – kein Atom und kein Gedanke – entgeht Seiner präzisen Aufzeichnung.",
+            "tr": "Yarattıklarının sayısını bilen, her şeyi tek tek saymışçasına kuşatan ve hiçbir şeyi ihmal etmeyen.",
+            "en": "The One who knows the exact count of all things. He encompasses every detail of the universe, keeping a perfect record of all deeds and particles."
+        },
+        "duaUsage": {
+            "de": "Wird angerufen, um sich der Rechenschaftspflicht bewusst zu werden und um Genauigkeit in den eigenen Handlungen zu bitten.",
+            "tr": "Ya Muhsî, günahlarımı rahmetinle ört; hesabımı kolay eyle.",
+            "en": "Invoke to develop mindfulness (Taqwa), knowing that every intention and action is recorded with precision."
+        },
+        "reflection": {
+            "de": "Al-Muḥṣī erinnert uns an die Ernsthaftigkeit des Lebens. Keine gute Tat ist zu klein, um gezählt zu werden, und kein Fehler ist vergessen.",
+            "tr": "İlahi kayıttan hiçbir şeyin kaçmadığını bilmek, insana sorumluluk bilinci yükler.",
+            "en": "Precision in the divine record ensures ultimate justice on the Day of Account."
+        },
+        "sourceNote": {
+            "de": "Bezieht sich auf die Unendlichkeit des Wissens in Zahlen ausgedrückt.",
+            "tr": "İlahi kuşatıcılığın sayısal ifadesidir.",
+            "en": "Highlights the meticulous nature of divine knowledge."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (72:28)(78 :29)(82:10 -12)",
+            "tr": "Kur'an'da geçtiği ayetler: (72:28)(78 :29)(82:10 -12)",
+            "en": "Found in Quran Ayah(s): (72:28)(78 :29)(82:10 -12)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 58,
+        "slug": "al-mubdi",
+        "arabic": "المُبْدِئ",
+        "transliteration": {
+            "de": "Al-Mubdi’",
+            "tr": "El-Mübdi",
+            "en": "Al-Mubdi’"
+
+        },
+        "pronunciation": {
+            "de": "Al-Mub-dii",
+            "tr": "Al-Mub-dii",
+            "en": "Al-Mub-dii"
+
+        },
+        "meanings": {
+            "de": "Der Urheber, der Beginnende",
+            "tr": "Örneksiz ve yoktan yaratan",
+            "en": "The Originator, The Initiator"
+        },
+        "explanations": {
+            "de": "Derjenige, der die Schöpfung aus dem Nichts hervorgebracht hat, ohne ein Modell oder ein Vorbild zu benötigen.",
+            "tr": "Mahlukatı maddesiz, örneksiz ve yoktan ilk kez var eden.",
+            "en": "The One who starts the creation from nothingness. He is the source who initiated the existence of everything for the first time."
+        },
+        "duaUsage": {
+            "de": "Ya Mubdi’, segne den Anfang meiner Vorhaben und lass sie aus einer reinen Absicht entspringen.",
+            "tr": "Ya Mübdi, işlerimi Senin rızanla başlat; başlangıçlarımı hayra ulaştır.",
+            "en": "Invoke when starting a new chapter in life, seeking a blessed beginning from the Ultimate Originator."
+        },
+        "reflection": {
+            "de": "Gott ist nicht nur der Schöpfer, sondern derjenige, der die Idee der Existenz selbst initiiert hat.",
+            "tr": "Yaratılışın ilk adımı Allah'ın iradesiyle atılmıştır; O ol demese hiçbir şey olmazdı.",
+            "en": "Reflection on Al-Mubdi’ fills the soul with awe for the sheer originality of the cosmos."
+        },
+        "sourceNote": {
+            "de": "Wird oft zusammen mit Al-Mu'id betrachtet.",
+            "tr": "Yaratılışın başlangıç noktasıdır.",
+            "en": "Focuses on the initiation of life and the cosmos."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (10:34)(27 :64)(29:19 )(85:13)",
+            "tr": "Kur'an'da geçtiği ayetler: (10:34)(27 :64)(29:19 )(85:13)",
+            "en": "Found in Quran Ayah(s): (10:34)(27 :64)(29:19 )(85:13)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 59,
+        "slug": "al-mu-id",
+        "arabic": "المُعِيد",
+        "transliteration": {
+            "de": "Al-Mu’īd",
+            "tr": "El-Muîd",
+            "en": "Al-Mu’īd"
+
+        },
+        "pronunciation": {
+            "de": "Al-Mu-iid",
+            "tr": "Al-Mu-iid",
+            "en": "Al-Mu-iid"
+
+        },
+        "meanings": {
+            "de": "Der Wiederhersteller, der Zurückbringende",
+            "tr": "Geri getiren, yeniden yaratan",
+            "en": "The Restorer, The Bringer-Back"
+        },
+        "explanations": {
+            "de": "Derjenige, der die Macht hat, die Schöpfung nach ihrem Vergehen wiederherzustellen und am Tag der Auferstehung zu erneuern.",
+            "tr": "Varlıkları yok olduktan sonra tekrar hayata döndüren; mahşerde herkesi yeniden diriltecek olan.",
+            "en": "The One who restores and repeats the creation. He has the power to bring back what has perished and will resurrect all beings after death."
+        },
+        "duaUsage": {
+            "de": "Ya Mu’īd, stelle meinen Glauben wieder her, wenn er schwach wird, und schenke mir eine Rückkehr zu Dir in Schönheit.",
+            "tr": "Ya Muîd, kalbimdeki huzuru geri ver; beni en güzel halimle Sana döndür.",
+            "en": "Invoke to find hope in renewal—whether it be restoration of health, faith, or the final resurrection."
+        },
+        "reflection": {
+            "de": "Wer den ersten Anfang gemacht hat (Al-Mubdi’), dem fällt es leicht, die Schöpfung zu wiederholen. Der Tod ist kein Ende, sondern eine Pause.",
+            "tr": "Ölüm bir son değil, Muîd olan Allah'ın elinde bir dönüşümdür.",
+            "en": "Faith in Al-Mu’īd is the antidote to despair; nothing lost is truly gone if Allah chooses to restore it."
+        },
+        "sourceNote": {
+            "de": "Eng verknüpft mit dem Konzept der Auferstehung (Ma’ad).",
+            "tr": "Ebedi dönüşün ve dirilişin ismidir.",
+            "en": "Emphasizes the cyclical power of divine creation and resurrection."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (10:34)(27 :64)(29:19 )(85:13)",
+            "tr": "Kur'an'da geçtiği ayetler: (10:34)(27 :64)(29:19 )(85:13)",
+            "en": "Found in Quran Ayah(s): (10:34)(27 :64)(29:19 )(85:13)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 60,
+        "slug": "al-muhyi",
+        "arabic": "المُحْيِى",
+        "transliteration": {
+            "de": "Al-Muḥyī",
+            "tr": "El-Muhyî",
+            "en": "Al-Muḥyī"
+
+        },
+        "pronunciation": {
+            "de": "Al-Muh-yii",
+            "tr": "Al-Muh-yii",
+            "en": "Al-Muh-yii"
+
+        },
+        "meanings": {
+            "de": "Der Lebensspender",
+            "tr": "Hayat veren, dirilten",
+            "en": "The Giver of Life, The Enlivener"
+        },
+        "explanations": {
+            "de": "Der Urheber allen Lebens. Er schenkt Körpern die Seele und macht tote Herzen durch Glauben lebendig.",
+            "tr": "Cansızlara hayat veren, ölüleri dirilten ve kalpleri iman nuruyla canlandıran.",
+            "en": "The One who bestows life. He gives physical life to bodies and spiritual life to hearts through light and knowledge."
+        },
+        "duaUsage": {
+            "de": "Ya Muḥyī, belebe mein totes Herz mit Deinem Gedenken und schenke mir ein Leben voller Rechtschaffenheit.",
+            "tr": "Ya Muhyî, kalbimi Senin sevginle canlandır; bedenime ve ruhuma afiyet ver.",
+            "en": "Invoke for spiritual revitalization and for physical well-being or recovery from illness."
+        },
+        "reflection": {
+            "de": "Jeder Herzschlag ist ein fortlaufendes Geschenk von Al-Muḥyī. Wahres Leben ist das Leben des Herzens in der Nähe Gottes.",
+            "tr": "Gerçek hayat, sadece nefes almak değil, Allah ile beraber olmaktır.",
+            "en": "Life is a sacred trust. To know Al-Muḥyī is to honor every living thing as a sign of His vitality."
+        },
+        "sourceNote": {
+            "de": "Bezieht sich auf die biologische und die spirituelle Existenz.",
+            "tr": "Hayatın yegane kaynağıdır.",
+            "en": "Attribute of active, life-bestowing creation."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (7:158)(15 :23)(30:50 )(57:2)",
+            "tr": "Kur'an'da geçtiği ayetler: (7:158)(15 :23)(30:50 )(57:2)",
+            "en": "Found in Quran Ayah(s): (7:158)(15 :23)(30:50 )(57:2)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 61,
+        "slug": "al-mumit",
+        "arabic": "المُمِيت",
+        "transliteration": {
+            "de": "Al-Mumīt",
+            "tr": "El-Mümît",
+            "en": "Al-Mumīt"
+
+        },
+        "pronunciation": {
+            "de": "Al-Mu-miit",
+            "tr": "Al-Mu-miit",
+            "en": "Al-Mu-miit"
+
+        },
+        "meanings": {
+            "de": "Der den Tod Bestimmende",
+            "tr": "Öldüren, ölümü yaratan",
+            "en": "The Inflicter of Death, The Slayer"
+        },
+        "explanations": {
+            "de": "Derjenige, der das Ende jeder irdischen Existenz festlegt. Er entzieht das Leben, wenn die festgesetzte Frist erreicht ist.",
+            "tr": "Her canlı için ölümü takdir eden, canları bedenlerden ayıran.",
+            "en": "The One who ordains death and brings life to its appointed end. He controls the transition from the physical world to the next."
+        },
+        "duaUsage": {
+            "de": "Ya Mumīt, lass mich mein Ego (Nafs) besiegen, bevor mein physischer Tod eintritt, und gewähre mir ein gutes Ende.",
+            "tr": "Ya Mumît, nefsimin kötü arzularını öldürmeme yardım et; son nefesimde imanla gitmeyi nasip eyle.",
+            "en": "Invoke to seek a peaceful transition at the end of life and to 'slay' one's base ego and arrogance."
+        },
+        "reflection": {
+            "de": "Al-Mumīt zu kennen nimmt dem Tod den Schrecken der Zufälligkeit. Der Tod ist ein geordnetes Tor zu einer höheren Form der Existenz.",
+            "tr": "Ölüm, Allah'ın emriyle gerçekleşen bir terhistir; O'nun kontrolü altındadır.",
+            "en": "Reflection on Al-Mumīt encourages prioritizing eternal values over fleeting worldly pleasures."
+        },
+        "sourceNote": {
+            "de": "Ein notwendiges Gegenstück zu Al-Muḥyī.",
+            "tr": "Kudretin ölüm üzerindeki hükmüdür.",
+            "en": "Attribute reflecting divine authority over the cycle of mortality."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (3:156)(7: 158)(15:2 3)(57:2)",
+            "tr": "Kur'an'da geçtiği ayetler: (3:156)(7: 158)(15:2 3)(57:2)",
+            "en": "Found in Quran Ayah(s): (3:156)(7: 158)(15:2 3)(57:2)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 62,
+        "slug": "al-hayy",
+        "arabic": "الحَيّ",
+        "transliteration": {
+            "de": "Al-Ḥayy",
+            "tr": "El-Hayy",
+            "en": "Al-Ḥayy"
+
+        },
+        "pronunciation": {
+            "de": "Al-Hayy",
+            "tr": "Al-Hayy",
+            "en": "Al-Hayy"
+
+        },
+        "meanings": {
+            "de": "Der ewig Lebendige",
+            "tr": "Sonsuz hayat sahibi, hep diri",
+            "en": "The Ever-Living, The Alive"
+        },
+        "explanations": {
+            "de": "Derjenige, dessen Leben ewig und absolut ist. Er unterliegt niemals dem Schlaf, dem Vergehen oder dem Tod.",
+            "tr": "Zatı ile kaim olan, ezeli ve ebedi hayat sahibi; asla ölmeyecek olan yegane diri.",
+            "en": "The One who is eternally alive. His existence has no beginning and no end. He is the source from which all life flows and remains independent of it."
+        },
+        "duaUsage": {
+            "de": "Ya Ḥayy, der Du niemals stirbst, stütze mich in meiner Vergänglichkeit. (Oft kombiniert mit Al-Qayyūm).",
+            "tr": "Ya Hayy, Sen hep dirisin; beni bitip tükenenlerin peşinden gitmekten kurtar.",
+            "en": "Invoke to find comfort in the Eternal Presence when facing the loss or transience of the world."
+        },
+        "reflection": {
+            "de": "Alles andere lebt nur 'durch' Ihn. Er allein lebt 'aus' sich selbst. Das Wissen um Al-Ḥayy befreit von der Angst vor dem Nichts.",
+            "tr": "Allah'ın Hayy olması, O'nun her an her yerde tasarruf sahibi olduğu anlamına gelir.",
+            "en": "He is the absolute Subject. Reflection on Al-Ḥayy connects the believer to the source of all vitality."
+        },
+        "sourceNote": {
+            "de": "Gilt als einer der gewaltigsten Namen (Ism al-A'zam).",
+            "tr": "İlahi zatın temel sıfatıdır.",
+            "en": "Fundamental ontological attribute of the Divine."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (2:255)(3: 2)(25:58)( 40:65)",
+            "tr": "Kur'an'da geçtiği ayetler: (2:255)(3: 2)(25:58)( 40:65)",
+            "en": "Found in Quran Ayah(s): (2:255)(3: 2)(25:58)( 40:65)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 63,
+        "slug": "al-qayyum",
+        "arabic": "القَيُّوم",
+        "transliteration": {
+            "de": "Al-Qayyūm",
+            "tr": "El-Kayyûm",
+            "en": "Al-Qayyūm"
+
+        },
+        "pronunciation": {
+            "de": "Al-Kay-yuum",
+            "tr": "Al-Kay-yuum",
+            "en": "Al-Kay-yuum"
+
+        },
+        "meanings": {
+            "de": "Der Beständige, der Selbsterhaltende",
+            "tr": "Her şeyi ayakta tutan, kendi kendine var olan",
+            "en": "The Self-Subsisting, The Sustainer"
+        },
+        "explanations": {
+            "de": "Derjenige, der aus sich selbst besteht und zugleich alles Geschaffene in jedem Moment aufrechterhält.",
+            "tr": "Gökleri, yeri ve her şeyi ayakta tutan, varlığı için kimseye muhtaç olmayan ancak her şeyin O'na muhtaç olduğu.",
+            "en": "The One who remains and sustains all of creation. He is self-sufficient and requires nothing to exist, while everything else depends on Him for every second of its being."
+        },
+        "duaUsage": {
+            "de": "Ya Qayyūm, ordne meine Angelegenheiten und überlass mich nicht für einen Wimpernschlag mir selbst.",
+            "tr": "Ya Kayyûm, işlerimi yoluna koy; beni bir an bile nefsimle baş başa bırakma.",
+            "en": "Invoke to seek stability and to ask Allah to manage one's life affairs with His perfect sustaining power."
+        },
+        "reflection": {
+            "de": "Wenn Al-Qayyūm Seine Unterstützung für nur einen Augenblick entzöge, würde das gesamte Universum in sich zusammenbrechen.",
+            "tr": "Kainattaki nizam, Kayyûm olan Allah'ın kudretiyle devam etmektedir.",
+            "en": "To know Al-Qayyūm is to realize our total dependence on God and to find security in His constant maintenance."
+        },
+        "sourceNote": {
+            "de": "Beschreibt die Erhaltung der Schöpfung (Tadbīr).",
+            "tr": "Kainatın nizam ve bekasının ismidir.",
+            "en": "Reflects the attribute of self-subsistence and universal guardianship."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (2:255)(3: 2)(20:111)",
+            "tr": "Kur'an'da geçtiği ayetler: (2:255)(3: 2)(20:111)",
+            "en": "Found in Quran Ayah(s): (2:255)(3: 2)(20:111)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 64,
+        "slug": "al-wadschid",
+        "arabic": "الوَاجِد",
+        "transliteration": {
+            "de": "Al-Wājid",
+            "tr": "El-Vâcid",
+            "en": "Al-Wājid"
+
+        },
+        "pronunciation": {
+            "de": "Al-Wadschid",
+            "tr": "Al-Wadschid",
+            "en": "Al-Wadschid"
+
+        },
+        "meanings": {
+            "de": "Der Findende, der Reiche",
+            "tr": "İstediğini bulan, zengin",
+            "en": "The Perceiver, The Finder"
+        },
+        "explanations": {
+            "de": "Derjenige, dem nichts entgeht und dem es an nichts mangelt. Er findet alles, was Er will, ohne Mühe.",
+            "tr": "Zenginliğinden hiçbir şey eksilmeyen, aradığını istediği an bulan, hiçbir şeye muhtaç olmayan.",
+            "en": "The One who finds whatever He wills whenever He wills. He lacks nothing and perceives everything without search or effort."
+        },
+        "duaUsage": {
+            "de": "Ya Wājid, lass mich den rechten Weg finden und schenke mir Zufriedenheit mit dem, was ich bei Dir finde.",
+            "tr": "Ya Vâjid, beni hidayetten ayırma; kalbime gerçek zenginliği ver.",
+            "en": "Invoke to seek clarity and to find what is spiritually beneficial in times of confusion."
+        },
+        "reflection": {
+            "de": "In Gottes Gegenwart gibt es kein 'Verlorensein'. Alles ist in Seiner Reichweite und in Seiner Kenntnis vorhanden.",
+            "tr": "Allah için 'kayıp' diye bir şey yoktur; O her şeye vakıf ve galiptir.",
+            "en": "Reflecting on Al-Wājid reminds us that God is always present and aware of our location and state."
+        },
+        "sourceNote": {
+            "de": "Drückt Fülle und ständige Wahrnehmung aus.",
+            "tr": "İlahi zenginlik ve buluş ismidir.",
+            "en": "Focuses on divine self-sufficiency and effortless perception."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (38:44)",
+            "tr": "Kur'an'da geçtiği ayetler: (38:44)",
+            "en": "Found in Quran Ayah(s): (38:44)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 65,
+        "slug": "al-maadschid",
+        "arabic": "المَاجِد",
+        "transliteration": {
+            "de": "Al-Mājid",
+            "tr": "El-Macîd",
+            "en": "Al-Mājid"
+
+        },
+        "pronunciation": {
+            "de": "Al-Ma-dschid",
+            "tr": "Al-Ma-dschid",
+            "en": "Al-Ma-dschid"
+
+        },
+        "meanings": {
+            "de": "Der Ruhmreiche, der Großzügige",
+            "tr": "Şanı yüce, keremi bol olan",
+            "en": "The Illustrious, The Noble"
+        },
+        "explanations": {
+            "de": "Derjenige, der reich an Ehre und Wohltätigkeit. Seine Majestät ist strahlend und Seine Gaben sind überreich.",
+            "tr": "Sonsuz şan ve şerefe sahip olan, ihsanı ve cömertliği geniş olan.",
+            "en": "The One who is majestic and noble. His glory is vast, and His generosity reflects His sublime and honorable nature."
+        },
+        "duaUsage": {
+            "de": "Ya Mājid, veredle meinen Charakter und lass mich Anteil haben an Deiner Großzügigkeit gegenüber Deinen Dienern.",
+            "tr": "Ya Mâjid, ahlakımı güzelleştir; beni Senin katında değerli kıl.",
+            "en": "Invoke to seek spiritual elevation and to reflect noble qualities in one's own life."
+        },
+        "reflection": {
+            "de": "Wahre Größe zeigt sich in Großzügigkeit. Al-Mājid verbindet erhabene Macht mit überströmender Güte.",
+            "tr": "Allah'ın azameti, O'nun kullarına olan ikramıyla birleşir.",
+            "en": "Reflection on Al-Mājid inspires awe at the combination of divine power and boundless nobility."
+        },
+        "sourceNote": {
+            "de": "Nuance der Nobilität (Karam) innerhalb der Größe.",
+            "tr": "Şeref ve cömertliğin birleştiği makamdır.",
+            "en": "Similar to Al-Majid but emphasizes the outpouring of nobility."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (11:73)",
+            "tr": "Kur'an'da geçtiği ayetler: (11:73)",
+            "en": "Found in Quran Ayah(s): (11:73)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 66,
+        "slug": "al-wahid",
+        "arabic": "الوَاحِد",
+        "transliteration": {
+            "de": "Al-Wāḥid",
+            "tr": "El-Vâhid",
+            "en": "Al-Wāḥid"
+
+        },
+        "pronunciation": {
+            "de": "Al-Wa-hid",
+            "tr": "Al-Wa-hid",
+            "en": "Al-Wa-hid"
+
+        },
+        "meanings": {
+            "de": "Der Eine",
+            "tr": "Tek olan",
+            "en": "The One"
+        },
+        "explanations": {
+            "de": "Der Einzige in Seinem Wesen, Seinen Eigenschaften und Seinen Taten. Er ist die unteilbare Einheit, die allem Sein zugrunde liegt.",
+            "tr": "Zatında, sıfatlarında ve fiillerinde ortağı, benzeri ve dengi olmayan tek varlık.",
+            "en": "The Unique One. He is singular in His essence and attributes, without partner, peer, or division. He is the primary source of all that exists."
+        },
+        "duaUsage": {
+            "de": "Wird angerufen, um das Herz von der Abhängigkeit von Geschöpfen zu reinigen und den reinen Monotheismus (Tawhid) zu festigen.",
+            "tr": "Ya Vâhid, kalbimi Senden başkasına yönelmekten ve şirkten koru; beni tevhid üzere yaşat.",
+            "en": "Invoke to unify one's purpose and to find focus by directing all devotion to the only One worthy of worship."
+        },
+        "reflection": {
+            "de": "Al-Wāḥid zu erkennen bedeutet, die Vielfalt der Welt auf ihren einzigen Ursprung zurückzuführen. Es gibt keine zwei Herren im Universum.",
+            "tr": "Vâhid ismini tefekkür eden, sebeplere takılmak yerine sebeplerin gerçek sahibine teslim olur.",
+            "en": "Reflecting on Al-Wāḥid brings simplicity to the soul: when the Goal is One, the path becomes clear."
+        },
+        "sourceNote": {
+            "de": "Zentraler Name der göttlichen Einheit.",
+            "tr": "Vahdet ve tevhidin temel ismidir.",
+            "en": "The starting point of Islamic theology and the concept of Tawhid."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (2:163)(5: 73)(9:31)( 18:110)",
+            "tr": "Kur'an'da geçtiği ayetler: (2:163)(5: 73)(9:31)( 18:110)",
+            "en": "Found in Quran Ayah(s): (2:163)(5: 73)(9:31)( 18:110)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 67,
+        "slug": "al-ahad",
+        "arabic": "الأَحَد",
+        "transliteration": {
+            "de": "Al-Aḥad",
+            "tr": "Es-Samed",
+            "en": "Al-Aḥad"
+
+        },
+        "pronunciation": {
+            "de": "Al-A-had",
+            "tr": "Al-A-had",
+            "en": "Al-A-had"
+
+        },
+        "meanings": {
+            "de": "Der Einzige, der Alleinige",
+            "tr": "Eşi benzeri olmayan, tek",
+            "en": "The Unique, The Indivisible"
+        },
+        "explanations": {
+            "de": "Der absolut Einzige, der weder gezeugt hat noch gezeugt wurde. Er ist unteilbar und unvergleichlich in Seiner absoluten Singularität.",
+            "tr": "Zatında bölünme ve parçalanma kabul etmeyen, eşi, benzeri ve ikincisi olması imkansız olan mutlak tek.",
+            "en": "The Unique One who is indivisible and incomparable. Unlike 'Al-Wahid' which can denote 'first of a sequence', Al-Ahad denotes an absolute, solitary oneness."
+        },
+        "duaUsage": {
+            "de": "Wird angerufen, um die absolute Transzendenz Gottes zu würdigen und sich von jeglichem menschlichen Vergleich zu lösen.",
+            "tr": "Ya Ahad, Senin benzerin yoktur; beni kula kul olmaktan kurtar, sadece Senin eşsizliğine sığındım.",
+            "en": "Invoke to affirm the purity of faith, especially when faced with misconceptions about the nature of God."
+        },
+        "reflection": {
+            "de": "Al-Aḥad erinnert uns daran, dass Gott jenseits aller Kategorien steht. Er ist nicht Teil der Schöpfung, sondern ihr Schöpfer.",
+            "tr": "Ahad ismi, mümini her türlü batıl inançtan ve putperestlikten arındıran en keskin hakikattir.",
+            "en": "Reflecting on Al-Ahad inspires a sense of awe for a Reality that is completely 'Other' and self-contained."
+        },
+        "sourceNote": {
+            "de": "Höchster Ausdruck der göttlichen Einzigartigkeit (Sure 112).",
+            "tr": "İhlas Suresi'nin özü olan isimdir.",
+            "en": "The most absolute expression of divine oneness in the Quran."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (112:1)",
+            "tr": "Kur'an'da geçtiği ayetler: (112:1)",
+            "en": "Found in Quran Ayah(s): (112:1)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 68,
+        "slug": "as-samad",
+        "arabic": "ٱلْصَّمَد",
+        "transliteration": {
+            "de": "Aṣ-Ṣamad",
+            "tr": "El-Kâdir",
+            "en": "Aṣ-Ṣamad"
+
+        },
+        "pronunciation": {
+            "de": "As-Sa-mad",
+            "tr": "As-Sa-mad",
+            "en": "As-Sa-mad"
+
+        },
+        "meanings": {
+            "de": "Der Ewige, der Absolute, der Unabhängige",
+            "tr": "Hiçbir şeye ihtiyacı olmayan, herkesin muhtaç olduğu",
+            "en": "The Eternal, The Self-Sufficient"
+        },
+        "explanations": {
+            "de": "Derjenige, der von nichts und niemandem abhängt, während alles von Ihm abhängt. Er ist vollkommen in Sich selbst und erfüllt alle Bedürfnisse.",
+            "tr": "Herkesin kendisine muhtaç olduğu, kendisi ise hiçbir şeye muhtaç olmayan; ebedi, eksiksiz ve mutlak dayanak.",
+            "en": "The Self-Sufficient Master whom all creatures need, while He is free from all needs. He is the eternal refuge to whom all turn for their desires and necessities."
+        },
+        "duaUsage": {
+            "de": "Ya Ṣamad, Du bist die einzige Zuflucht; mach mich unabhängig von den Gaben der Menschen und lass mich nur bei Dir Ruhe finden.",
+            "tr": "Ya Samed, bütün ihtiyaçlarımı Sana arz ediyorum; beni Senden başkasına muhtaç etme.",
+            "en": "Invoke to seek emotional and spiritual stability, acknowledging Allah as the only permanent support in a changing world."
+        },
+        "reflection": {
+            "de": "Alles in der Schöpfung hat Lücken und Bedürfnisse. Nur As-Ṣamad ist 'massiv' und vollkommen ohne Mangel.",
+            "tr": "Samed ismini bilen, fani olanlara dayanmayı bırakır ve her işinde Allah'a yönelir.",
+            "en": "Reflection on As-Ṣamad leads to 'Ghani' (inner wealth)—the realization that being a servant to the Independent makes one free."
+        },
+        "sourceNote": {
+            "de": "Bezeichnet Gott als das unverrückbare Fundament der Existenz.",
+            "tr": "Kulların ihtiyaç merciidir.",
+            "en": "Found in Surah Al-Ikhlas, emphasizing absolute self-sufficiency."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (112:2)",
+            "tr": "Kur'an'da geçtiği ayetler: (112:2)",
+            "en": "Found in Quran Ayah(s): (112:2)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 69,
+        "slug": "al-qadir",
+        "arabic": "القَادِر",
+        "transliteration": {
+            "de": "Al-Qādir",
+            "tr": "El-Muktedir",
+            "en": "Al-Qādir"
+
+        },
+        "pronunciation": {
+            "de": "Al-Kaa-dir",
+            "tr": "Al-Kaa-dir",
+            "en": "Al-Kaa-dir"
+
+        },
+        "meanings": {
+            "de": "Der Mächtige, der Fähige",
+            "tr": "Her şeye gücü yeten",
+            "en": "The Omnipotent, The Capable"
+        },
+        "explanations": {
+            "de": "Derjenige, der die Macht besitzt, alles zu erschaffen oder zu vernichten, was Er will, nach Seinem vollkommenen Maß und Plan.",
+            "tr": "Dilediğini dilediği gibi yapmaya gücü yeten, her şeyi bir ölçüye göre takdir eden kudret sahibi.",
+            "en": "The One who possesses the power and ability to do everything according to His decree. He is the master of measures and potentiality."
+        },
+        "duaUsage": {
+            "de": "Ya Qādir, Du hast die Macht über alle Dinge; schenke mir Kraft für meine Aufgaben und erleichtere mir das Schwere.",
+            "tr": "Ya Kadîr, Senin gücünün önünde hiçbir engel yoktur; zorluklarımı kolaylığa çevir.",
+            "en": "Invoke when facing tasks that seem impossible, trusting in the divine capacity to bring about change."
+        },
+        "reflection": {
+            "de": "Gottes Macht ist nicht willkürlich, sondern stets weise. Al-Qādir setzt die Grenzen für alles Existierende.",
+            "tr": "Kendi güçsüzlüğünü anlayan insan, Kadîr olan Allah'ın kudretine sığınarak huzur bulur.",
+            "en": "To know Al-Qādir is to realize that no obstacle is too great for the Creator, inspiring hope and courage."
+        },
+        "sourceNote": {
+            "de": "Betont die Fähigkeit zur präzisen Bestimmung (Qadar).",
+            "tr": "Mutlak kudretin ismidir.",
+            "en": "Related to the concept of 'Qadar' (Divine Decree/Measure)."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (6:65)(36: 81)(46:33) (75:40)",
+            "tr": "Kur'an'da geçtiği ayetler: (6:65)(36: 81)(46:33) (75:40)",
+            "en": "Found in Quran Ayah(s): (6:65)(36: 81)(46:33) (75:40)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 70,
+        "slug": "al-muqtadir",
+        "arabic": "المُقْتَدِر",
+        "transliteration": {
+            "de": "Al-Muqtadir",
+            "tr": "El-Mukaddim",
+            "en": "Al-Muqtadir"
+
+        },
+        "pronunciation": {
+            "de": "Al-Muk-ta-dir",
+            "tr": "Al-Muk-ta-dir",
+            "en": "Al-Muk-ta-dir"
+
+        },
+        "meanings": {
+            "de": "Der absolut Mächtige, der Allbezwinger",
+            "tr": "Kudreti her şeye galip gelen",
+            "en": "The All-Determining, The Omnipotent"
+        },
+        "explanations": {
+            "de": "Eine intensivierte Form der Macht. Er ist derjenige, dessen Überlegenheit so absolut ist, dass kein Wille Seinem Plan widerstehen kann.",
+            "tr": "Kudreti her şeyi kuşatan, her şeye hükmeden ve dilediğini yapmaya hiçbir engel tanımayan mutlak güç sahibi.",
+            "en": "The One whose supreme power is so vast that it prevails over all creation. It emphasizes the active and overwhelming nature of His authority."
+        },
+        "duaUsage": {
+            "de": "Ya Muqtadir, Du lenkst die Herzen und die Welten; nimm meine Angelegenheiten in Deine Hand und beschütze mich vor Unterdrückung.",
+            "tr": "Ya Muktedir, her şey Senin elindedir; beni nefsimin ve zalimlerin eline bırakma.",
+            "en": "Invoke when seeking protection from powerful enemies or when feeling completely helpless in the face of destiny."
+        },
+        "reflection": {
+            "de": "Menschliche Macht ist flüchtig und zerbrechlich. Al-Muqtadir erinnert uns daran, wer der wahre Herrscher hinter den Kulissen ist.",
+            "tr": "Dünyevi güçlerin geçiciliğini bilen mümin, sadece Muktedir olan Allah'a boyun eğer.",
+            "en": "Reflecting on Al-Muqtadir humbles the arrogant and empowers the weak through divine connection."
+        },
+        "sourceNote": {
+            "de": "Drückt die vollendete Umsetzung der Macht aus.",
+            "tr": "Kudretin en üstün derecesidir.",
+            "en": "Often associated with Allah's sovereignty over kings and nations."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (18:45)(54 :42)(54:55 )",
+            "tr": "Kur'an'da geçtiği ayetler: (18:45)(54 :42)(54:55 )",
+            "en": "Found in Quran Ayah(s): (18:45)(54 :42)(54:55 )"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 71,
+        "slug": "al-muqaddim",
+        "arabic": "المُقَدِّم",
+        "transliteration": {
+            "de": "Al-Muqaddim",
+            "tr": "El-Muahhir",
+            "en": "Al-Muqaddim"
+
+        },
+        "pronunciation": {
+            "de": "Al-Mu-kad-dim",
+            "tr": "Al-Mu-kad-dim",
+            "en": "Al-Mu-kad-dim"
+
+        },
+        "meanings": {
+            "de": "Der Beförderer, der Voranbringende",
+            "tr": "Dilediğini öne alan",
+            "en": "The Expediter, The Advancer"
+        },
+        "explanations": {
+            "de": "Derjenige, der Dinge, Personen oder Ereignisse nach Seiner Weisheit bevorzugt oder beschleunigt.",
+            "tr": "Dilediği şeyi veya kimseyi öne alan, ileri geçiren, yükselten.",
+            "en": "The One who brings forward whatever He wills. He grants precedence to certain people or events according to His infinite wisdom and justice."
+        },
+        "duaUsage": {
+            "de": "Ya Muqaddim, bringe mich in den guten Taten voran und lass mich zu denen gehören, die Dir am nächsten sind.",
+            "tr": "Ya Mukaddim, beni Sana yaklaştıracak amellerde öne geçir; hidayette beni ileri kıl.",
+            "en": "Invoke to ask for spiritual advancement or for the successful acceleration of beneficial projects."
+        },
+        "reflection": {
+            "de": "Wer von Gott nach vorne gebracht wird, den kann niemand zurückhalten. Erfolg ist die Frucht Seiner Beförderung.",
+            "tr": "Önde olmanın bir üstünlük değil, Allah'ın bir takdiri ve imtihanı olduğunu bilmek gerekir.",
+            "en": "Reflecting on Al-Muqaddim teaches us to strive, while trusting that the final 'rank' is in Allah's hands."
+        },
+        "sourceNote": {
+            "de": "Wird meist paarweise mit Al-Mu'akhkhir (72) genannt.",
+            "tr": "Tertip ve düzen ismidir.",
+            "en": "Relates to the order and sequence of creation."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (16:61)(17:34)",
+            "tr": "Kur'an'da geçtiği ayetler: (16:61)(17:34)",
+            "en": "Found in Quran Ayah(s): (16:61)(17:34)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 72,
+        "slug": "al-mu-akhkhir",
+        "arabic": "المُؤَخِّر",
+        "transliteration": {
+            "de": "Al-Mu'akhkhir",
+            "tr": "El-Evvel",
+            "en": "Al-Mu'akhkhir"
+
+        },
+        "pronunciation": {
+            "de": "Al-Mu-a-khir",
+            "tr": "Al-Mu-a-khir",
+            "en": "Al-Mu-a-khir"
+
+        },
+        "meanings": {
+            "de": "Der Aufschiebende, der Zurücksetzende",
+            "tr": "Dilediğini geriye bırakan",
+            "en": "The Delayer, The Deferrer"
+        },
+        "explanations": {
+            "de": "Derjenige, der Dinge oder Strafen verzögert, um Raum für Reue zu geben, oder Personen nach Seiner Gerechtigkeit zurückstellt.",
+            "tr": "Hikmeti gereği dilediğini geriye bırakan, sona alan veya cezayı erteleyen.",
+            "en": "The One who delays whatever He wills. He may postpone a decree or a punishment to give time for repentance, or place something later in sequence for a hidden benefit."
+        },
+        "duaUsage": {
+            "de": "Ya Mu'akhkhir, verzögere meine Strafe durch Deine Gnade und schenke mir Zeit, mich zu bessern.",
+            "tr": "Ya Muahhir, beni kötülüklerden uzaklaştır; hatalarımın cezasını rahmetinle tehir eyle.",
+            "en": "Invoke to ask for patience when things are not moving as fast as desired, trusting in Allah's perfect timing."
+        },
+        "reflection": {
+            "de": "Aufschub ist oft kein Mangel an Macht, sondern ein Übermaß an Barmherzigkeit. Gott gibt uns Zeit, zu Ihm zurückzukehren.",
+            "tr": "Her gecikmede bir hayır olduğunu bilmek, sabrın ve tevekkülün anahtarıdır.",
+            "en": "Delay is not denial. Al-Mu'akhkhir acts with wisdom to ensure everything happens at the best possible moment."
+        },
+        "sourceNote": {
+            "de": "Das Gegenstück zu Al-Muqaddim.",
+            "tr": "Mühlet ve hikmet ismidir.",
+            "en": "Often linked to the concept of tests and the 'reprieve' given to people."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (71:4)",
+            "tr": "Kur'an'da geçtiği ayetler: (71:4)",
+            "en": "Found in Quran Ayah(s): (71:4)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 73,
+        "slug": "al-awwal",
+        "arabic": "الأَوَّل",
+        "transliteration": {
+            "de": "Al-Awwal",
+            "tr": "El-Âhir",
+            "en": "Al-Awwal"
+
+        },
+        "pronunciation": {
+            "de": "Al-Aw-wal",
+            "tr": "Al-Aw-wal",
+            "en": "Al-Aw-wal"
+
+        },
+        "meanings": {
+            "de": "Der Erste",
+            "tr": "Ezeli olan, başlangıcı olmayan",
+            "en": "The First"
+        },
+        "explanations": {
+            "de": "Derjenige, der vor allem anderen existierte. Er hat keinen Anfang und ist die Ursache aller Ursachen.",
+            "tr": "Varlığının başlangıcı olmayan, her şeyden önce var olan ezeli başlangıç.",
+            "en": "The One who existed before anything else was created. He is the eternal First, without beginning, from whom all of existence originates."
+        },
+        "duaUsage": {
+            "de": "Ya Awwal, sei Du der Anfang all meiner Gedanken und Taten; lass nichts zwischen mich und Deine Priorität kommen.",
+            "tr": "Ya Evvel, her işimin başında Seni anarım; kalbimde ilk ve tek olan Sensin.",
+            "en": "Invoke to remind oneself that Allah should be the primary priority in life and the starting point of every intention."
+        },
+        "reflection": {
+            "de": "Al-Awwal zu kennen bedeutet zu verstehen, dass wir aus Gott kommen. Er ist der Ursprung unserer Seele.",
+            "tr": "Kainatın tesadüf olmadığını, her şeyin bir 'Evvel'i olduğunu bilmek ruhu teskin eder.",
+            "en": "Reflecting on Al-Awwal directs the heart toward the source of all blessings, fostering humility."
+        },
+        "sourceNote": {
+            "de": "Zeitloser Name, oft mit Al-Akhir (74) genannt.",
+            "tr": "Ezeliyet ismidir.",
+            "en": "One of the four 'timeless' names mentioned together in Surah Al-Hadid."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (57:3)",
+            "tr": "Kur'an'da geçtiği ayetler: (57:3)",
+            "en": "Found in Quran Ayah(s): (57:3)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 74,
+        "slug": "al-akhir",
+        "arabic": "الآخِر",
+        "transliteration": {
+            "de": "Al-Ākhir",
+            "tr": "Ez-Zâhir",
+            "en": "Al-Ākhir"
+
+        },
+        "pronunciation": {
+            "de": "Al-Aa-khir",
+            "tr": "Al-Aa-khir",
+            "en": "Al-Aa-khir"
+
+        },
+        "meanings": {
+            "de": "Der Letzte",
+            "tr": "Ebedi olan, sonu olmayan",
+            "en": "The Last"
+        },
+        "explanations": {
+            "de": "Derjenige, der ewig bleibt, nachdem alles Geschaffene vergangen ist. Er ist das endgültige Ziel der Rückkehr.",
+            "tr": "Varlığının sonu olmayan, her şey yok olduktan sonra baki kalacak olan ebedi son.",
+            "en": "The One who remains after all of creation has perished. He is the ultimate Destination and the eternal Last, without end."
+        },
+        "duaUsage": {
+            "de": "Ya Ākhir, sei Du mein Ziel am Ende meines Weges; lass mein letztes Wort das Zeugnis Deiner Einheit sein.",
+            "tr": "Ya Âhir, son nefesimde ve ebedi hayatta Sensin sığınağım; akıbetimi hayreyle.",
+            "en": "Invoke when thinking about the afterlife or the end of a phase in life, seeking a good ending from the Eternal."
+        },
+        "reflection": {
+            "de": "In einer vergänglichen Welt ist Al-Ākhir die einzige Konstante. Alles kehrt zu Ihm zurück.",
+            "tr": "Dünyanın geçiciliğini anlayan, kalbini sadece Baki olan Âhir'e bağlar.",
+            "en": "Reflection on Al-Ākhir provides perspective on the transience of worldly gain and the permanence of the Divine."
+        },
+        "sourceNote": {
+            "de": "Name der Endgültigkeit.",
+            "tr": "Ebediyet ismidir.",
+            "en": "Reassures believers that Allah is the ultimate survivor and final judge."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (57:3)",
+            "tr": "Kur'an'da geçtiği ayetler: (57:3)",
+            "en": "Found in Quran Ayah(s): (57:3)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 75,
+        "slug": "az-zahir",
+        "arabic": "الظَاهِر",
+        "transliteration": {
+            "de": "Aẓ-Ẓāhir",
+            "tr": "El-Bâtın",
+            "en": "Aẓ-Ẓāhir"
+
+        },
+        "pronunciation": {
+            "de": "Az-Za-hir",
+            "tr": "Az-Za-hir",
+            "en": "Az-Za-hir"
+
+        },
+        "meanings": {
+            "de": "Der Offenbare, der Sichtbare",
+            "tr": "Varlığı aşikâr olan",
+            "en": "The Manifest, The Evident"
+        },
+        "explanations": {
+            "de": "Derjenige, dessen Existenz durch Seine Zeichen in der Natur und im Universum vollkommen offensichtlich ist. Er steht über allem.",
+            "tr": "Eserleriyle, delilleriyle varlığı apaçık görünen; her şeyin üstünde galip olan.",
+            "en": "The One who is Manifest. His existence is clearly evidenced by His creation, and His power is triumphant over all. He is the Outward Reality."
+        },
+        "duaUsage": {
+            "de": "Ya Ẓāhir, lass mich Deine Zeichen in der Schöpfung erkennen und stärke meinen Glauben durch das, was ich sehe.",
+            "tr": "Ya Zâhir, kainattaki delillerinle imanımı artır; hakikati her şeyde görmemi nasip et.",
+            "en": "Invoke to ask for clarity and to find spiritual evidence and truth in the physical world."
+        },
+        "reflection": {
+            "de": "Gott ist nicht 'versteckt', Er ist am offensichtlichsten – wir sind es, die oft blind für Seine Zeichen sind.",
+            "tr": "Her zerrede Allah'ın mührünü görmek, kalbi gafletten uyandırır.",
+            "en": "To know Aẓ-Ẓāhir is to see the universe as a vast mirror reflecting the attributes of the Creator."
+        },
+        "sourceNote": {
+            "de": "Gegenstück zu Al-Bāṭin (76).",
+            "tr": "Aşikârlık ve galebe ismidir.",
+            "en": "Focuses on the objective signs of God's existence."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (57:3)",
+            "tr": "Kur'an'da geçtiği ayetler: (57:3)",
+            "en": "Found in Quran Ayah(s): (57:3)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 76,
+        "slug": "al-batin",
+        "arabic": "البَاطِن",
+        "transliteration": {
+            "de": "Al-Bāṭin",
+            "tr": "El-Vâlî",
+            "en": "Al-Bāṭin"
+
+        },
+        "pronunciation": {
+            "de": "Al-Baa-tin",
+            "tr": "Al-Baa-tin",
+            "en": "Al-Baa-tin"
+
+        },
+        "meanings": {
+            "de": "Der Verborgene, der Innerliche",
+            "tr": "Yüceliği gizli olan, her şeyin iç yüzünü bilen",
+            "en": "The Hidden, The Inward"
+        },
+        "explanations": {
+            "de": "Derjenige, dessen wahres Wesen dem Verstand verborgen bleibt und der zugleich das Innerste aller Dinge kennt.",
+            "tr": "Zatının hakikati akıllardan gizli olan, ancak her şeyin iç yüzüne, sırlarına vakıf olan.",
+            "en": "The One who is Hidden. His essence cannot be fully grasped by the senses or the mind, yet He is closer to things than they are to themselves. He is the Inward Reality."
+        },
+        "duaUsage": {
+            "de": "Ya Bāṭin, reinige mein Inneres, das nur Du siehst, und schenke mir tiefes spirituelles Verständnis.",
+            "tr": "Ya Bâtın, kalbimdeki gizli niyetleri Sana malum; içimi dışımdan daha hayırlı eyle.",
+            "en": "Invoke to seek protection for one's secrets and to ask for the purification of the heart and soul."
+        },
+        "reflection": {
+            "de": "Während wir das Äußere beurteilen, sieht Al-Bāṭin den Kern. Diese Erkenntnis führt zu Aufrichtigkeit (Ikhlas).",
+            "tr": "Allah'ın her gizliyi bildiğini idrak etmek, insanı samimiyete ve iç disipline götürür.",
+            "en": "Reflection on Al-Bāṭin encourages inwardness and contemplation, reminding us that reality is more than what meets the eye."
+        },
+        "sourceNote": {
+            "de": "Beschreibt die Unbegreiflichkeit des göttlichen Wesens.",
+            "tr": "Gizlilik ve derinlik ismidir.",
+            "en": "Refers to the divine essence that lies beyond form and physical perception."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (57:3)",
+            "tr": "Kur'an'da geçtiği ayetler: (57:3)",
+            "en": "Found in Quran Ayah(s): (57:3)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 77,
+        "slug": "al-wali",
+        "arabic": "الوَالِي",
+        "transliteration": {
+            "de": "Al-Wālī",
+            "tr": "El-Müteâlî",
+            "en": "Al-Wālī"
+
+        },
+        "pronunciation": {
+            "de": "Al-Waa-lii",
+            "tr": "Al-Waa-lii",
+            "en": "Al-Waa-lii"
+
+        },
+        "meanings": {
+            "de": "Der absolute Herrscher, der Verwalter",
+            "tr": "Kâinatı idare eden, mutlak yönetici",
+            "en": "The Sole Governor, The Patron"
+        },
+        "explanations": {
+            "de": "Der einzige Regent, der die gesamte Schöpfung souverän verwaltet. Er lenkt alle Angelegenheiten der Existenz, sorgt für Ordnung und trägt die alleinige Verantwortung für das System des Universums.",
+            "tr": "Bütün kâinatı ve mahlûkatı tek başına çekip çeviren, her şeyi hikmetle yöneten ve idaresinde hiçbir ortağı olmayan mutlak hükümdar.",
+            "en": "The Supreme Governor who manages all affairs of the universe. He is the sole administrator who plans and executes the order of existence without any need for assistance."
+        },
+        "duaUsage": {
+            "de": "Wird angerufen, um Führung in schwierigen administrativen Aufgaben oder bei der Leitung einer Gemeinschaft zu bitten. Man bittet Ihn, die eigenen Angelegenheiten in die beste Ordnung zu bringen.",
+            "tr": "Ya Vâlî, dünya ve ahiret işlerimi en güzel şekilde idare eyle; beni kendi başıma ve başkalarının insafına bırakma.",
+            "en": "Invoke when seeking guidance in leadership roles or when one's personal life feels chaotic, asking the Governor to restore divine order."
+        },
+        "reflection": {
+            "de": "Al-Wālī zu erkennen bedeutet, weltliche Macht als geliehen zu verstehen. Er allein hält die Fäden des Universums in der Hand.",
+            "tr": "Kâinatın mutlak bir idarecisi olduğunu bilen mümin, başıboşluk hissinden kurtulur ve her şeyin O'nun tasarrufunda olduğunu anlar.",
+            "en": "Reflecting on Al-Wālī encourages trust in the divine management of life, fostering a sense of security that the world is in capable hands."
+        },
+        "sourceNote": {
+            "de": "Unterscheidet sich von Al-Waliy (56), da hier die administrative Souveränität im Vordergrund steht.",
+            "tr": "Kainatın yönetim ve tasarruf ismidir.",
+            "en": "Refers to administrative sovereignty and governance over the cosmos."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (13:11)(22 :7)",
+            "tr": "Kur'an'da geçtiği ayetler: (13:11)(22 :7)",
+            "en": "Found in Quran Ayah(s): (13:11)(22 :7)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 78,
+        "slug": "al-muta-ali",
+        "arabic": "ٱلْمُتَعَالِي",
+        "transliteration": {
+            "de": "Al-Muta'ālī",
+            "tr": "El-Berr",
+            "en": "Al-Muta'ālī"
+
+        },
+        "pronunciation": {
+            "de": "Al-Mu-ta-aa-lii",
+            "tr": "Al-Mu-ta-aa-lii",
+            "en": "Al-Mu-ta-aa-lii"
+
+        },
+        "meanings": {
+            "de": "Der Erhabene über jeglichen Mangel",
+            "tr": "Son derece yüce, aşkın",
+            "en": "The Self-Exalted, The Supreme"
+        },
+        "explanations": {
+            "de": "Derjenige, dessen Erhabenheit über jedes menschliche Vorstellungsvermögen und jede Definition hinausgeht. Er ist frei von allen Unvollkommenheiten, die Geschöpfen eigen sind.",
+            "tr": "Yüceliği akla gelebilecek her türlü sınırın ötesinde olan, her bakımdan eksiksiz ve mahlûkatın sıfatlarından tamamen münezzeh olan mutlak yüce.",
+            "en": "The One who is supremely exalted above all creation. His greatness is beyond human imagination, and He is completely free from any limitations or flaws of the created world."
+        },
+        "duaUsage": {
+            "de": "Wird angerufen, um die eigene Seele von niederen Begierden zu erheben und Gott in Seiner absoluten Reinheit zu lobpreisen.",
+            "tr": "Ya Müteâlî, Sen her türlü noksanlıktan yücesin; benim kalbimi ve ahlakımı da kötü hasletlerden yücelt.",
+            "en": "Invoke to elevate one's spiritual state and to find humility by acknowledging the infinite distance between the Creator and the created."
+        },
+        "reflection": {
+            "de": "Al-Muta'ālī erinnert uns daran, dass wir Gott niemals 'begreifen' können; wir können Ihn nur in Seiner Erhabenheit anbeten.",
+            "tr": "İnsanın kendi acziyetini ve Allah'ın sonsuz yüceliğini idrak etmesi, kibrin en büyük ilacıdır.",
+            "en": "Reflecting on Al-Muta'ālī helps dismantle ego, as no human achievement can compare to the supreme status of the Divine."
+        },
+        "sourceNote": {
+            "de": "Die intensivierte Form von Al-'Aliy (37).",
+            "tr": "Allah'ın izzet ve azametinin en üst mertebesini ifade eder.",
+            "en": "An intensive form reflecting the peak of status and transcendence."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (13:9)",
+            "tr": "Kur'an'da geçtiği ayetler: (13:9)",
+            "en": "Found in Quran Ayah(s): (13:9)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 79,
+        "slug": "al-barr",
+        "arabic": "البَرّ",
+        "transliteration": {
+            "de": "Al-Barr",
+            "tr": "Et-Tevvâb",
+            "en": "Al-Barr"
+
+        },
+        "pronunciation": {
+            "de": "Al-Barr",
+            "tr": "Al-Barr",
+            "en": "Al-Barr"
+
+        },
+        "meanings": {
+            "de": "Der Gütige, der Quell aller Güte",
+            "tr": "İyilik ve ihsanı bol olan",
+            "en": "The Source of Goodness, The Benign"
+        },
+        "explanations": {
+            "de": "Der Quell allen Guten, der großzügig Wohltaten gewährt und Seinen Dienern gegenüber stets wohlwollend ist. Er erfüllt Seine Versprechen und belohnt das Gute reichlich.",
+            "tr": "Kullarına karşı çok lütufkâr olan, iyiliği sonsuz, vaadini yerine getiren ve her türlü güzelliğin kaynağı olan.",
+            "en": "The Source of all virtue and kindness. He is extremely generous and benevolent to His creatures, bestowing favors and fulfilling His promises with perfection."
+        },
+        "duaUsage": {
+            "de": "Wird angerufen, um Güte im eigenen Charakter zu entwickeln und um den Segen Gottes in den täglichen Taten zu bitten.",
+            "tr": "Ya Berr, Sen iyilik sahibisin; beni de iyilik yapanlardan ve iyiliğe vesile olanlardan eyle.",
+            "en": "Invoke to seek a kind heart and to ask for divine assistance in performing righteous deeds that are pleasing to Him."
+        },
+        "reflection": {
+            "de": "Seine Güte ist die Grundlage für alles Positive in der Welt. Ein gläubiger Mensch versucht, ein Spiegel dieser Güte (Birr) für andere zu sein.",
+            "tr": "Allah'ın bize olan iyiliğini tefekkür etmek, mahlûkata karşı şefkatli ve iyiliksever olmamızı sağlar.",
+            "en": "To know Al-Barr is to realize that all goodness we experience is a reflection of His vast benevolence."
+        },
+        "sourceNote": {
+            "de": "Wird in Sure At-Tur (28) erwähnt.",
+            "tr": "Kur'an-ı Kerim'de Allah'ın lütufkârlığını vurgulayan bir isimdir.",
+            "en": "Mentioned in the Quran (52:28) as the Beneficent and Merciful."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (52:28)",
+            "tr": "Kur'an'da geçtiği ayetler: (52:28)",
+            "en": "Found in Quran Ayah(s): (52:28)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 80,
+        "slug": "at-tawwab",
+        "arabic": "التَّوَّاب",
+        "transliteration": {
+            "de": "At-Tawwāb",
+            "tr": "El-Müntekim",
+            "en": "At-Tawwāb"
+
+        },
+        "pronunciation": {
+            "de": "At-Taw-waab",
+            "tr": "At-Taw-waab",
+            "en": "At-Taw-waab"
+
+        },
+        "meanings": {
+            "de": "Der Reue-Annehmende",
+            "tr": "Tövbeleri kabul eden",
+            "en": "The Ever-Relenting, The Accepter of Repentance"
+        },
+        "explanations": {
+            "de": "Derjenige, der Seine Diener immer wieder zur Reue führt und diese gnädig annimmt. Er ermüdet nicht dabei, demjenigen zu vergeben, der aufrichtig zurückkehrt.",
+            "tr": "Kullarını tövbeye sevk eden, tövbe kapısını daima açık tutan ve samimiyetle dönenleri her seferinde kabul buyuran.",
+            "en": "The One who repeatedly turns toward His servants with forgiveness. He facilitates the means for repentance and accepts it graciously, no matter how many times a person returns."
+        },
+        "duaUsage": {
+            "de": "Ya Tawwāb, führe mein Herz zur aufrichtigen Reue und nimm meine Umkehr an. Lass mich nicht in meinen Fehlern verharren.",
+            "tr": "Ya Tevvâb, tövbemi kabul et ve beni Sana yönelenlerin arasından ayırma.",
+            "en": "Invoke when feeling burdened by sins, asking for the grace to change one's ways and for the assurance of being forgiven."
+        },
+        "reflection": {
+            "de": "Gott liebt die Reue mehr als die Sündlosigkeit der Arroganten. At-Tawwāb ist die Hoffnung für jede Seele, die sich verirrt hat.",
+            "tr": "Tevbe etmek, kulun Rabbine olan en samimi dönüşüdür; Tevvâb ismi bu dönüşün karşılıksız kalmayacağının garantisidir.",
+            "en": "Reflection on At-Tawwāb removes despair. It teaches that the door to God's pleasure is never permanently closed to a sincere seeker."
+        },
+        "sourceNote": {
+            "de": "Betont die Initiative Gottes, dem Menschen die Umkehr zu ermöglichen.",
+            "tr": "Mağfiret ve dönüş ismidir.",
+            "en": "Highlights Allah as the initiator of the process of returning to grace."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (2:128)(4: 64)(49:12) (110:3)",
+            "tr": "Kur'an'da geçtiği ayetler: (2:128)(4: 64)(49:12) (110:3)",
+            "en": "Found in Quran Ayah(s): (2:128)(4: 64)(49:12) (110:3)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 81,
+        "slug": "al-muntaqim",
+        "arabic": "المُنْتَقِم",
+        "transliteration": {
+            "de": "Al-Muntaqim",
+            "tr": "El-Afüvv",
+            "en": "Al-Muntaqim"
+
+        },
+        "pronunciation": {
+            "de": "Al-Mun-ta-kim",
+            "tr": "Al-Mun-ta-kim",
+            "en": "Al-Mun-ta-kim"
+
+        },
+        "meanings": {
+            "de": "Der gerechte Vergelter",
+            "tr": "Zalimlerin cezasını veren, intikam alan",
+            "en": "The Avenger, The Retaliator"
+        },
+        "explanations": {
+            "de": "Derjenige, der die Schuldigen für ihre Grausamkeiten zur Rechenschaft zieht. Seine Vergeltung ist kein emotionaler Zorn, sondern die Wiederherstellung der göttlichen Gerechtigkeit.",
+            "tr": "Suçluları yaptıklarına karşılık adaletiyle cezalandıran, zalimlerden mazlumların hakkını alan mutlak adil.",
+            "en": "The One who exacts retribution against those who persist in wrongdoing and oppression. His 'revenge' is a manifestation of perfect justice and a deterrent against evil."
+        },
+        "duaUsage": {
+            "de": "Wird angerufen, wenn man unter Unterdrückung leidet, um die Angelegenheit der Gerechtigkeit Gottes zu überlassen, statt selbst in blinde Rache zu verfallen.",
+            "tr": "Ya Müntekim, mazlumların ahını yerde bırakma; zalimlere hak ettikleri cezayı adaletinle ver.",
+            "en": "Invoke when witnessing or experiencing systemic injustice, asking Allah to manifest His justice and to protect the weak from the tyrants."
+        },
+        "reflection": {
+            "de": "Gottes Vergeltung beginnt oft dort, wo menschliche Justiz versagt. Sie dient dem Schutz der Schöpfung vor dem Chaos des Unrechts.",
+            "tr": "Müntekim ismini bilen, kimseden haksız yere intikam almaz; hesabı Allah'a havale eder.",
+            "en": "Reflecting on Al-Muntaqim reminds us that no injustice goes unnoticed and that ultimate accountability is inevitable."
+        },
+        "sourceNote": {
+            "de": "Wird im Koran meist im Kontext der Bestrafung von Unverbesserlichen genannt.",
+            "tr": "İlahi adalet ve ceza sıfatıdır.",
+            "en": "Signifies divine accountability and the protection of the moral order."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (32:22)(43 :41)(44:16 )",
+            "tr": "Kur'an'da geçtiği ayetler: (32:22)(43 :41)(44:16 )",
+            "en": "Found in Quran Ayah(s): (32:22)(43 :41)(44:16 )"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 82,
+        "slug": "al-afuww",
+        "arabic": "العَفُوّ",
+        "transliteration": {
+            "de": "Al-'Afuww",
+            "tr": "Er-Raûf",
+            "en": "Al-'Afuww"
+
+        },
+        "pronunciation": {
+            "de": "Al-A-fuww",
+            "tr": "Al-A-fuww",
+            "en": "Al-A-fuww"
+
+        },
+        "meanings": {
+            "de": "Der Tilger der Sünden",
+            "tr": "Affı çok olan, günahları silen",
+            "en": "The Pardoner, The Effacer"
+        },
+        "explanations": {
+            "de": "Der Vergeber, der die Sünde nicht nur nicht bestraft, sondern sie gänzlich aus dem Register löscht, als hätte sie nie existiert.",
+            "tr": "Günahları sadece affetmekle kalmayan, onları defterden tamamen silen ve izlerini yok eden.",
+            "en": "The One who pardons and erases sins. Unlike 'Ghafur' (who covers sins), Al-'Afuww wipes them away completely, removing even the trace of the misdeed."
+        },
+        "duaUsage": {
+            "de": "Besonders empfohlen in der Nacht der Bestimmung: 'O Allah, Du bist der Vergeber, Du liebst das Vergeben, so vergib mir.'",
+            "tr": "Allahümme inneke afüvvün, tühibbül afve, fa'fü annî (Allah'ım, Sen affedicisin, affetmeyi seversin, beni de affet).",
+            "en": "Invoke specifically during times of deep spiritual seeking, asking for a total 'clean slate' and the removal of all past burdens."
+        },
+        "reflection": {
+            "de": "Die Gnade von Al-'Afuww ist so weit, dass sie den Menschen völlig rein wäscht. Wer Gottes Verzeihung will, sollte auch Menschen verzeihen können.",
+            "tr": "Başkalarının hatalarını silen, Allah'ın 'Afüvv' isminden bir nasip almış demektir.",
+            "en": "Pardon is a higher state than mere forgiveness. It teaches us to let go of grudges entirely, just as we want Allah to let go of our sins."
+        },
+        "sourceNote": {
+            "de": "Name der totalen Tilgung und Barmherzigkeit.",
+            "tr": "Günahların tamamen yok edilmesi ismidir.",
+            "en": "Often associated with the most powerful nights of worship (Laylatul Qadr)."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (4:99)(4:1 49)(22:60)",
+            "tr": "Kur'an'da geçtiği ayetler: (4:99)(4:1 49)(22:60)",
+            "en": "Found in Quran Ayah(s): (4:99)(4:1 49)(22:60)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 83,
+        "slug": "ar-rauf",
+        "arabic": "الرَّؤُوف",
+        "transliteration": {
+            "de": "Ar-Ra'ūf",
+            "tr": "Mâlik-ül Mülk",
+            "en": "Ar-Ra'ūf"
+
+        },
+        "pronunciation": {
+            "de": "Ar-Ra-uuf",
+            "tr": "Ar-Ra-uuf",
+            "en": "Ar-Ra-uuf"
+
+        },
+        "meanings": {
+            "de": "Der Mitleidige, der Gütigste",
+            "tr": "Çok şefkatli, çok esirgeyen",
+            "en": "The Most Kind, The Tenderly Compassionate"
+        },
+        "explanations": {
+            "de": "Derjenige, dessen Mitleid und Sanftmut gegenüber Seiner Schöpfung grenzenlos sind. Er bewahrt Seine Diener vor unnötiger Härte und Last.",
+            "tr": "Merhameti çok ince ve şefkati sonsuz olan; kullarının üzerine titreyen, onları koruyup gözeten.",
+            "en": "The One who is extremely kind and full of pity. His mercy is specific and tender, manifesting as a protective gentleness that shields creatures from hardship."
+        },
+        "duaUsage": {
+            "de": "Wird angerufen, wenn man Milde in seinem Schicksal oder Trost in schwierigen Zeiten sucht.",
+            "tr": "Ya Raûf, bize şefkatinle muamele et; kalbimize merhamet ve yumuşaklık ver.",
+            "en": "Invoke to ask for gentleness in one's heart and for Allah to treat one with tenderness during times of trial."
+        },
+        "reflection": {
+            "de": "Ar-Ra'ūf zu kennen führt dazu, dass man selbst sanftmütig mit anderen umgeht. Es ist die Liebe, die Leiden lindern möchte.",
+            "tr": "Raûf ismini tefekkür eden, hiçbir canlıya kaba ve katı davranamaz; her şeye şefkat nazarıyla bakar.",
+            "en": "Reflecting on Ar-Ra'ūf teaches us the value of 'Rifq' (gentleness). Power without kindness is tyranny, but Allah's power is infused with kindness."
+        },
+        "sourceNote": {
+            "de": "Eine Steigerung der Barmherzigkeit (Rahmah).",
+            "tr": "Merhametin en ince ve nazik halidir.",
+            "en": "Denotes a degree of mercy that is even more specific and intense than 'Rahmah'."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (3:30)(9:1 17)(57:9)( 59:10)",
+            "tr": "Kur'an'da geçtiği ayetler: (3:30)(9:1 17)(57:9)( 59:10)",
+            "en": "Found in Quran Ayah(s): (3:30)(9:1 17)(57:9)( 59:10)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 84,
+        "slug": "malik-al-mulk",
+        "arabic": "مَالِكُ المُلْك",
+        "transliteration": {
+            "de": "Mālik al-Mulk",
+            "tr": "Zül-Celâli vel ikrâm",
+            "en": "Mālik al-Mulk"
+
+        },
+        "pronunciation": {
+            "de": "Ma-lik Al-Mulk",
+            "tr": "Ma-lik Al-Mulk",
+            "en": "Ma-lik Al-Mulk"
+
+        },
+        "meanings": {
+            "de": "Der Eigentümer aller Reiche",
+            "tr": "Mülkün gerçek sahibi",
+            "en": "The Owner of All Sovereignty"
+        },
+        "explanations": {
+            "de": "Der uneingeschränkte Eigentümer des gesamten Universums. Er allein hat das Recht zu geben und zu nehmen, zu erhöhen oder zu erniedrigen.",
+            "tr": "Bütün kainatın, mülkün ve saltanatın tek ve mutlak sahibi; dilediğine dilediği kadar veren ve geri alan.",
+            "en": "The Eternal Owner of Sovereignty. He is the Lord of the Kingdom who possesses all things and has total authority over all dominions, physical and spiritual."
+        },
+        "duaUsage": {
+            "de": "Ya Mālik al-Mulk, Du gibst die Macht, wem Du willst. Lass mich ein verantwortungsvoller Verwalter dessen sein, was Du mir anvertraut hast.",
+            "tr": "Ya Mâlikü'l-Mülk, Sen her şeyin sahibisin; bana lütfettiğin nimetleri Senin rızan doğrultusunda kullanmayı nasip et.",
+            "en": "Invoke to acknowledge that all material possessions and positions of power are temporary trusts from Allah."
+        },
+        "reflection": {
+            "de": "Wer erkennt, dass Gott der wahre Eigentümer ist, verliert den Stolz auf Besitz und die Angst vor Verlust.",
+            "tr": "Mülk Allah'ındır sözünü idrak eden kişi, hırstan kurtulur ve elindekini emanet olarak görür.",
+            "en": "Reflecting on this name humbles those in power and reassures those with nothing that their Lord owns the treasures of the heavens and earth."
+        },
+        "sourceNote": {
+            "de": "Name der absoluten Souveränität.",
+            "tr": "Mülk ve tasarruf yetkisinin kaynağıdır.",
+            "en": "Emphasizes the absolute ownership of the Creator over the creation."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (3:26)",
+            "tr": "Kur'an'da geçtiği ayetler: (3:26)",
+            "en": "Found in Quran Ayah(s): (3:26)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 85,
+        "slug": "dhul-dschalami-wal-ikram",
+        "arabic": "ذُو الجَلَالِ وَالإِكْرَام",
+        "transliteration": {
+            "de": "Dhū al-Jalāli wa al-Ikrām",
+            "tr": "El-Muksit",
+            "en": "Dhū al-Jalāli wa al-Ikrām"
+
+        },
+        "pronunciation": {
+            "de": "Dhul-Dschalali-Wal-Ikram",
+            "tr": "Dhul-Dschalali-Wal-Ikram",
+            "en": "Dhul-Dschalali-Wal-Ikram"
+
+        },
+        "meanings": {
+            "de": "Der Herr der Majestät und der Ehre",
+            "tr": "Celal ve ikram sahibi",
+            "en": "The Lord of Majesty and Generosity"
+        },
+        "explanations": {
+            "de": "Derjenige, dem Ehrfurcht gebietende Erhabenheit (Jalal) und überreichliche Großzügigkeit (Ikram) gleichermaßen eigen sind.",
+            "tr": "Hem sonsuz büyüklük, azamet ve heybet sahibi olan, hem de kullarına karşı sonsuz ikram ve kerem sahibi olan.",
+            "en": "The Lord of Majesty and Generosity. He possesses the most sublime attributes of power and awe, yet He is also the Source of extreme honor and bountiful gifts."
+        },
+        "duaUsage": {
+            "de": "Wird oft am Ende von Bittgebeten gerufen. Der Prophet (s) empfahl, diesen Namen im Gebet oft zu wiederholen.",
+            "tr": "Duaların sonunda 'Ya Zelcelali vel ikram' diyerek Allah'ın büyüklüğüne ve cömertliğine sığınılır.",
+            "en": "Invoke to honor Allah's greatness while simultaneously pleading for His generosity to fulfill one's needs."
+        },
+        "reflection": {
+            "de": "In diesem Namen vereinen sich Furcht und Liebe. Wir respektieren Seine Majestät und vertrauen auf Seine Freigiebigkeit.",
+            "tr": "Celalinden korkulan, ikramından ise umut kesilmeyen Allah, kulun dengesini sağlar.",
+            "en": "The perfect balance of a believer: living between awe of Allah's power and hope in His kindness."
+        },
+        "sourceNote": {
+            "de": "Wird zweimal in Sure Ar-Rahman erwähnt.",
+            "tr": "Kur'an'da Rahmân Suresi'nde geçen yüce bir isimdir.",
+            "en": "Found in Surah Ar-Rahman (55:27, 78)."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (55:27)(55 :78)",
+            "tr": "Kur'an'da geçtiği ayetler: (55:27)(55 :78)",
+            "en": "Found in Quran Ayah(s): (55:27)(55 :78)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 86,
+        "slug": "al-muqsit",
+        "arabic": "المُقْسِط",
+        "transliteration": {
+            "de": "Al-Muqsiṭ",
+            "tr": "El-Câmi",
+            "en": "Al-Muqsiṭ"
+
+        },
+        "pronunciation": {
+            "de": "Al-Muk-sit",
+            "tr": "Al-Muk-sit",
+            "en": "Al-Muk-sit"
+
+        },
+        "meanings": {
+            "de": "Der unparteiisch Richtende, der Gerechte",
+            "tr": "Adaleti sağlayan, hakkaniyetli",
+            "en": "The Equitable, The Just"
+        },
+        "explanations": {
+            "de": "Derjenige, der alle Taten abwägt und in vollkommener Balance Gerechtigkeit herstellt. Er schützt die Rechte der Schwachen gegen die Starken.",
+            "tr": "Bütün işleri birbirine uygun ve denk yapan, mazlumun hakkını zalimden alan, her şeyi yerli yerinde ve hakkaniyetle yapan.",
+            "en": "The One who acts with perfect equity. He ensures that every right is restored and that justice is served in a way that balances all interests perfectly."
+        },
+        "duaUsage": {
+            "de": "Wird angerufen, um Ausgewogenheit im eigenen Leben zu finden und um Beistand bei Rechtsstreitigkeiten.",
+            "tr": "Ya Muksit, işlerimde ve sözlerimde adaletten ayırma; hakkı hak sahibine vermemde bana yardım et.",
+            "en": "Invoke to ask for a balanced life and the ability to deal fairly with others, avoiding all forms of prejudice."
+        },
+        "reflection": {
+            "de": "Al-Muqsiṭ sorgt für die kosmische Harmonie. Ein Gläubiger sollte danach streben, in seinem Umfeld ebenfalls ein gerechter Schlichter zu sein.",
+            "tr": "Adalet sadece hukukta değil, ahlakta da lazımdır. Allah'ın adaletine güvenen, sabreder.",
+            "en": "Reflecting on Al-Muqsiṭ inspires us to be mediators of peace and fairness in our communities."
+        },
+        "sourceNote": {
+            "de": "Bezieht sich auf die 'gerechte Verteilung' und Balance.",
+            "tr": "Hakkaniyet ve denge ismidir.",
+            "en": "Focuses on the practical and harmonizing aspect of justice."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (7:29)(3:1 8)",
+            "tr": "Kur'an'da geçtiği ayetler: (7:29)(3:1 8)",
+            "en": "Found in Quran Ayah(s): (7:29)(3:1 8)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 87,
+        "slug": "al-dschami",
+        "arabic": "الجَامِع",
+        "transliteration": {
+            "de": "Al-Jāmi'",
+            "tr": "El-Ganiyy",
+            "en": "Al-Jāmi'"
+
+        },
+        "pronunciation": {
+            "de": "Al-Dschaami'",
+            "tr": "Al-Dschaami'",
+            "en": "Al-Dschaami'"
+
+        },
+        "meanings": {
+            "de": "Der Versammelnde, der Vereiniger",
+            "tr": "Her şeyi bir araya getiren",
+            "en": "The Gatherer, The Uniter"
+        },
+        "explanations": {
+            "de": "Derjenige, der alle Geschöpfe am Tag des Gerichts versammeln wird. Er vereint auch die Herzen und bringt scheinbar unvereinbare Dinge zusammen.",
+            "tr": "Dilediği her şeyi, dilediği zaman ve mekanda bir araya getiren; kıyamet günü mahlûkatı mahşerde toplayacak olan.",
+            "en": "The One who gathers. He will assemble all of humanity for the Day of Reckoning, and He is the One who unifies hearts and disparate elements of the universe."
+        },
+        "duaUsage": {
+            "de": "Wird angerufen, um Einheit in der Familie oder Gemeinde zu erbitten oder um verlorene Dinge wiederzufinden.",
+            "tr": "Ya Câmi, dağınık işlerimi toparla; kalplerimizi sevgi ve tevhid üzere birleştir.",
+            "en": "Invoke to ask for reconciliation between people or to ask for the gathering of one's scattered thoughts and efforts."
+        },
+        "reflection": {
+            "de": "Al-Jāmi' zeigt uns, dass alles in der Schöpfung Teil eines großen Ganzen ist. Er bringt Ordnung in die Vielfalt.",
+            "tr": "Kıyamette toplanacağımızı bilmek, bugün ne biriktirdiğimize dikkat etmemizi sağlar.",
+            "en": "Reflection on Al-Jāmi' teaches us that we are all headed toward a final meeting, which should inspire unity and mutual respect today."
+        },
+        "sourceNote": {
+            "de": "Einer der Namen des Jüngsten Tages (Yawm al-Jami').",
+            "tr": "Vahdet ve haşir ismidir.",
+            "en": "Often related to the final gathering of souls in the hereafter."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (3:9)",
+            "tr": "Kur'an'da geçtiği ayetler: (3:9)",
+            "en": "Found in Quran Ayah(s): (3:9)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 88,
+        "slug": "al-ghaniy",
+        "arabic": "الغَنِيّ",
+        "transliteration": {
+            "de": "Al-Ghaniy",
+            "tr": "El-Mugnî",
+            "en": "Al-Ghaniy"
+
+        },
+        "pronunciation": {
+            "de": "Al-Gha-nii",
+            "tr": "Al-Gha-nii",
+            "en": "Al-Gha-nii"
+
+        },
+        "meanings": {
+            "de": "Der Reiche, der Unabhängige",
+            "tr": "Hiçbir şeye ihtiyacı olmayan, mutlak zengin",
+            "en": "The Self-Sufficient, The Rich"
+        },
+        "explanations": {
+            "de": "Derjenige, der absolut autark ist. Er braucht niemanden und nichts, während die gesamte Schöpfung in jedem Moment auf Ihn angewiesen ist.",
+            "tr": "Kendi zatında her bakımdan zengin olan, hiçbir şeye ve hiçbir kimseye muhtaç olmayan; her şeyin O'na muhtaç olduğu.",
+            "en": "The Self-Sufficient One. He possesses absolute wealth and independence. He is free from any need, while all of creation depends on Him for survival and sustenance."
+        },
+        "duaUsage": {
+            "de": "Ya Ghaniy, Du bist unabhängig und ich bin arm vor Dir. Bereichere meine Seele mit Genügsamkeit und mein Leben mit Deinem Segen.",
+            "tr": "Ya Ganî, beni Senden başkasına muhtaç etme; gönlümü Seninle zengin kıl.",
+            "en": "Invoke to find inner peace and to ask for independence from the expectations and gifts of people."
+        },
+        "reflection": {
+            "de": "Wahrer Reichtum ist nicht der Besitz von Dingen, sondern die Unabhängigkeit der Seele durch die Verbindung zum 'Ghaniy'.",
+            "tr": "Gerçek zenginlik mal çokluğu değil, gönül tokluğudur. Bu da ancak Allah'a dayanmakla olur.",
+            "en": "To know Al-Ghaniy is to find freedom. When you rely on the One who needs nothing, you become free from the world."
+        },
+        "sourceNote": {
+            "de": "Ontologischer Name der göttlichen Essenz.",
+            "tr": "Zatî bir sıfattır.",
+            "en": "A fundamental attribute of God's essence."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (3:97)(39: 7)(47:38)( 57:24)",
+            "tr": "Kur'an'da geçtiği ayetler: (3:97)(39: 7)(47:38)( 57:24)",
+            "en": "Found in Quran Ayah(s): (3:97)(39: 7)(47:38)( 57:24)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 89,
+        "slug": "al-mughni",
+        "arabic": "الْمُغْنِي",
+        "transliteration": {
+            "de": "Al-Mughnī",
+            "tr": "El-Mâni",
+            "en": "Al-Mughnī"
+
+        },
+        "pronunciation": {
+            "de": "al-MUGH-nee",
+            "tr": "al-MUGH-nee",
+            "en": "al-MUGH-nee"
+
+        },
+        "meanings": {
+            "de": "Der Reichmachende, der Genügenlassende",
+            "tr": "Zengin kılan, ihtiyaç gideren",
+            "en": "The Enricher, The Bestower of Sufficiency"
+        },
+        "explanations": {
+            "de": "Derjenige, der Seine Geschöpfe aus Seiner Fülle bereichert. Dies umfasst materiellen Wohlstand ebenso wie die innere Genügsamkeit (Qana'ah).",
+            "tr": "Dilediğini ihtiyaçtan kurtaran, kullarına yeterli gelen ve onlara zenginlik veren.",
+            "en": "The One who grants wealth and sufficiency. He provides His servants with what they need, whether in material possessions or in spiritual contentment."
+        },
+        "duaUsage": {
+            "de": "Wird angerufen, um aus einer finanziellen Notlage befreit zu werden oder um die Gabe der Zufriedenheit mit dem Erhaltenen zu bitten.",
+            "tr": "Ya Mugnî, helalinden rızık ver; beni ve ailemi kimseden bir şey istemeyecek kadar zengin eyle.",
+            "en": "Invoke to seek lawful provision and to ask for a heart that is satisfied with Allah's decree."
+        },
+        "reflection": {
+            "de": "Reichtum ist eine Prüfung. Al-Mughni gibt uns Mittel, damit wir sie weise und zum Wohle anderer einsetzen.",
+            "tr": "Bizi zengin kılan Allah'tır; öyleyse biz de başkalarının ihtiyacını görmeliyiz.",
+            "en": "True enrichment is when Allah suffices a person so that they no longer look toward the hands of others."
+        },
+        "sourceNote": {
+            "de": "Eng verknüpft mit Al-Ghaniy (88).",
+            "tr": "Lütuf ve kerem ismidir.",
+            "en": "Often mentioned in the context of Allah's bounty after hardship."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (9:28)",
+            "tr": "Kur'an'da geçtiği ayetler: (9:28)",
+            "en": "Found in Quran Ayah(s): (9:28)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 90,
+        "slug": "al-mani",
+        "arabic": "الْمَانِعُ",
+        "transliteration": {
+            "de": "Al-Māni'",
+            "tr": "Ed-Dârr",
+            "en": "Al-Māni'"
+
+        },
+        "pronunciation": {
+            "de": "al-MAA-ni",
+            "tr": "al-MAA-ni",
+            "en": "al-MAA-ni"
+
+        },
+        "meanings": {
+            "de": "Der Zurückhaltende, der Schützende",
+            "tr": "Engelleyen, engel olan, koruyan",
+            "en": "The Withholder, The Preventer"
+        },
+        "explanations": {
+            "de": "Derjenige, der Schaden von Seinen Dienern abwendet, indem Er bestimmte Dinge verhindert oder zurückhält. Seine Verweigerung ist oft eine verborgene Form der Gnade.",
+            "tr": "Hikmeti gereği bir şeyin olmasına izin vermeyen, kullarını zarardan korumak için engel koyan.",
+            "en": "The One who prevents or withholds. He protects His servants by blocking paths that would lead to their harm, and His withholding is an act of wisdom."
+        },
+        "duaUsage": {
+            "de": "Wird angerufen, um Schutz vor schädlichen Einflüssen oder falschen Entscheidungen zu erbitten.",
+            "tr": "Ya Mâni, beni şerlerden ve günahlardan koru; bana zarar verecek her şeye engel ol.",
+            "en": "Invoke when facing temptation or when a door seems closed, asking Allah to prevent any outcome that is not good for one's soul."
+        },
+        "reflection": {
+            "de": "Nicht jede verwehrte Chance ist ein Verlust. Oft verhindert Gott das Kleine, um uns vor dem großen Unheil zu bewahren.",
+            "tr": "Verilmeyen her şeyde bir hayır, her engelde bir rahmet vardır.",
+            "en": "Reflecting on Al-Māni' helps build patience. We learn to say 'Alhamdulillah' even for the things we did not get."
+        },
+        "sourceNote": {
+            "de": "Bezeichnet Gott als den ultimativen Beschützer durch Prävention.",
+            "tr": "Hikmetli engel ve koruma ismidir.",
+            "en": "A name that illustrates divine protection through intervention."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (67:21)",
+            "tr": "Kur'an'da geçtiği ayetler: (67:21)",
+            "en": "Found in Quran Ayah(s): (67:21)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 91,
+        "slug": "ad-darr",
+        "arabic": "الضَّارُ",
+        "transliteration": {
+            "de": "Ad-Darr",
+            "tr": "En-Nâfi",
+            "en": "Ad-Darr"
+
+        },
+        "pronunciation": {
+            "de": "ad-DAARR",
+            "tr": "ad-DAARR",
+            "en": "ad-DAARR"
+
+        },
+        "meanings": {
+            "de": "Der Schaden Zulassende, der Schöpfer des Widrigen",
+            "tr": "Zararın da hükmü altında olduğu, dilediğine keder veren",
+            "en": "The Distresser, The One Who Allows Harm"
+        },
+        "explanations": {
+            "de": "Ad-Darr darf nicht isoliert verstanden werden. Es bedeutet, dass auch Leid, Prüfung und Verlust nicht außerhalb von Allahs Macht stehen. Er ist der Schöpfer aller Kausalitäten; nichts schadet ohne Seine Erlaubnis. Dieser Name wird traditionell zusammen mit An-Nafi (92) genannt, um das Gleichgewicht Seiner Macht über alle Zustände zu wahren.",
+            "tr": "Ad-Darr ismi tek başına kaba bir anlamla anlaşılmamalıdır. Zarar, imtihan ve kayıp da Allah’ın kudret ve hikmetinin dışında değildir. Bu isim en doğru şekilde An-Nafi ile birlikte anlaşılır: O, hikmeti gereği dilediğine zarar verme kudretine sahip olandır, ancak bu O'nun mutlak adaletinin bir parçasıdır.",
+            "en": "Ad-Darr must not be understood as an isolated attribute of malice. It signifies that harm, trials, and loss are within Allah’s sovereign power and wisdom. He is the ultimate cause of all conditions, and this name is paired with An-Nafi to show that neither harm nor benefit occurs outside His decree."
+        },
+        "duaUsage": {
+            "de": "Wird angerufen, um Schutz vor den schädlichen Folgen eigener Fehler oder vor Prüfungen zu bitten, denen man nicht gewachsen ist. Man erkennt an, dass nur Er den Schaden abwenden kann, den Er zugelassen hat.",
+            "tr": "Ya Darr, hatalarımın zararlı sonuçlarından ve taşıyamayacağım imtihanlardan Sana sığınırım. Senden gelen her sıkıntıyı yine Senin rahmetinle gidermeni dilerim.",
+            "en": "Invoke with deep humility to ask for protection from trials and to acknowledge that as He is the one who allows hardship, He is also the only one who can remove it."
+        },
+        "reflection": {
+            "de": "Dieser Name schützt vor der Vergötterung von Ursachen. Menschen oder Umstände können uns nur schaden, wenn Allah es zulässt. Dies befreit von der Furcht vor der Schöpfung und lenkt den Blick auf den Schöpfer.",
+            "tr": "Bu isim sebepleri mutlaklaştırmaktan korur: İnsanlar ve şartlar ancak Allah izin verirse tesir edebilir. Bu bilinç, mümini kula kul olmaktan kurtarır.",
+            "en": "Reflecting on Ad-Darr removes the fear of created things. It teaches that no person or system has ultimate power to harm unless the Creator permits it for a higher wisdom."
+        },
+        "sourceNote": {
+            "de": "Theologisch wird dieser Name stets paarweise mit An-Nafi erklärt, um ein einseitiges Gottesbild zu vermeiden.",
+            "tr": "Zatî bir kemal sıfatı olarak An-Nâfi ismiyle birlikte zikredilmesi edep gereğidir.",
+            "en": "Theologically paired with An-Nafi to maintain the balance of Divine attributes."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (6:17)",
+            "tr": "Kur'an'da geçtiği ayetler: (6:17)",
+            "en": "Found in Quran Ayah(s): (6:17)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 92,
+        "slug": "an-nafi",
+        "arabic": "النَّافِعُ",
+        "transliteration": {
+            "de": "An-Nāfi'",
+            "tr": "En-Nûr",
+            "en": "An-Nāfi'"
+
+        },
+        "pronunciation": {
+            "de": "an-NAA-fi'",
+            "tr": "an-NAA-fi'",
+            "en": "an-NAA-fi'"
+
+        },
+        "meanings": {
+            "de": "Der Nutzen Gebende, der Günstige",
+            "tr": "Fayda veren, hayır ulaştıran",
+            "en": "The Propitious, The Benefiter"
+        },
+        "explanations": {
+            "de": "An-Nafi' beschreibt, dass jeder wirkliche Nutzen letztlich von Allah stammt. Materielle Mittel wie Medizin oder Nahrung sind nur Kanäle; die heilende oder stärkende Wirkung wird durch Seine Erlaubnis und Gnade manifest.",
+            "tr": "An-Nafi' ismi gerçek faydanın nihayetinde Allah’ın izni ve hikmetiyle gerçekleştiğini bildirir. Sebepler birer vasıtadır; asıl faydayı yaratan ve ulaştıran O'dur.",
+            "en": "An-Nafi' signifies that all true benefit and goodness originate from Allah. While the world provides means—like medicine or wealth—the actual benefit within them is a gift from the Creator."
+        },
+        "duaUsage": {
+            "de": "Wird angerufen, um nützliches Wissen, heilsame Entscheidungen und Segen in den eigenen Bemühungen zu erbitten. Man bittet Ihn, dass das Erreichte einem nicht nur weltlich, sondern auch spirituell nützt.",
+            "tr": "Ya Nâfi, ömrümü, ilmimi ve kazancımı hakkımda faydalı kıl; bana hem dünyada hem ahirette yarar sağlayacak ameller nasip et.",
+            "en": "Invoke when seeking beneficial knowledge, fruitful outcomes in work, or when needing a 'blessing' (Barakah) in one's time and efforts."
+        },
+        "reflection": {
+            "de": "Nicht alles, was kurzfristig nützt, ist langfristig gut. Der Name lehrt uns, Nutzen an moralischen Werten und der Ewigkeit zu messen.",
+            "tr": "Gerçek fayda, insanı Allah'a yaklaştırandır. Dünya menfaati gelip geçicidir; baki olan faydayı aramak gerekir.",
+            "en": "Reflection on An-Nafi' teaches us to seek 'wholesome' benefit. We should evaluate our gains not just by profit, but by their alignment with truth and divine pleasure."
+        },
+        "sourceNote": {
+            "de": "Bildet mit Ad-Darr (91) eine theologische Einheit der Souveränität.",
+            "tr": "Hayrın ve menfaatin yegane kaynağı olduğunu vurgular.",
+            "en": "Complements Ad-Darr to show total control over all outcomes."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (30:37)",
+            "tr": "Kur'an'da geçtiği ayetler: (30:37)",
+            "en": "Found in Quran Ayah(s): (30:37)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 93,
+        "slug": "an-nur",
+        "arabic": "النُّورُ",
+        "transliteration": {
+            "de": "An-Nūr",
+            "tr": "El-Hâdî",
+            "en": "An-Nūr"
+
+        },
+        "pronunciation": {
+            "de": "an-NOOR",
+            "tr": "an-NOOR",
+            "en": "an-NOOR"
+
+        },
+        "meanings": {
+            "de": "Das Licht, der Erleuchter",
+            "tr": "Nur olan, alemleri nurlandıran",
+            "en": "The Light, The Illuminator"
+        },
+        "explanations": {
+            "de": "Allah ist das Licht der Himmel und der Erde. Er ist das metaphysische Licht, das die Existenz aus der Dunkelheit des Nichts hervorholt und den Herzen durch Rechtleitung Klarheit schenkt. Dieses 'Licht' wird ohne körperliche Form oder Richtung verstanden (Tanzih).",
+            "tr": "An-Nur ismi Allah’ın göklerin ve yerin nuru olduğunu bildirir. O, varlığı aydınlatan, kalplere iman ışığı veren ve hakikati görünür kılandır. O'nun nuru mahlukatın nuruna benzemez.",
+            "en": "An-Nur is the Light of the heavens and the earth. He is the one who makes things manifest, guides the lost out of darkness, and illuminates the hearts of believers with faith and understanding."
+        },
+        "duaUsage": {
+            "de": "Wird angerufen, um Erleuchtung des Verstandes, Klarheit im Herzen und Schutz vor der Dunkelheit der Verwirrung oder Sünde zu erbitten.",
+            "tr": "Ya Nûr, kalbimi nurunla aydınlat; beni karanlıklardan selamete çıkar ve yolumu rızanla ışıklandır.",
+            "en": "Invoke to ask for spiritual clarity, light in the grave, and the ability to discern truth from falsehood in confusing times."
+        },
+        "reflection": {
+            "de": "Licht dient der Orientierung. Wer Gottes Licht sucht, muss bereit sein, den Stolz und die Selbsttäuschung abzulegen, die wie Schatten auf der Seele liegen.",
+            "tr": "Nur, sadece görmek için değil, doğru yolu bulmak içindir. Allah'ın nurundan nasibi olanın basireti açılır.",
+            "en": "Reflecting on An-Nur reminds us that without divine guidance, the soul is in total darkness. Guidance is a light that requires a transparent and humble heart to be received."
+        },
+        "sourceNote": {
+            "de": "Basierend auf Sure An-Nur (24:35).",
+            "tr": "Kur'an-ı Kerim'de müstakil bir sureye adını veren yüce bir isimdir.",
+            "en": "Derived from the famous 'Verse of Light' in the Quran (24:35)."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (24:35)",
+            "tr": "Kur'an'da geçtiği ayetler: (24:35)",
+            "en": "Found in Quran Ayah(s): (24:35)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 94,
+        "slug": "al-hadi",
+        "arabic": "الْهَادِي",
+        "transliteration": {
+            "de": "Al-Hādī",
+            "tr": "El-Bedî",
+            "en": "Al-Hādī"
+
+        },
+        "pronunciation": {
+            "de": "al-HAA-dee",
+            "tr": "al-HAA-dee",
+            "en": "al-HAA-dee"
+
+        },
+        "meanings": {
+            "de": "Der Rechtleitende, der Führer",
+            "tr": "Hidayet veren, doğru yola ulaştıran",
+            "en": "The Guide, The Waymaker"
+        },
+        "explanations": {
+            "de": "Al-Hadi ist derjenige, der jedes Geschöpf zu dem führt, was es zum Überleben braucht, und der den Menschen den Weg zur ewigen Glückseligkeit zeigt. Rechtleitung ist ein Geschenk, das Er den Suchenden gewährt.",
+            "tr": "Al-Hadi ismi Allah’ın kullarını hakka ve hayra muvaffak kılmasını ifade eder. O, her mahlûka ne yapacağını ilham eden ve müminleri 'sırat-ı müstakim'e iletendir.",
+            "en": "Al-Hadi is the One who provides guidance. From the instinct of an animal to the spiritual enlightenment of a human, He directs all things toward their purpose and the straight path."
+        },
+        "duaUsage": {
+            "de": "Die wichtigste Bitte: 'Führe uns den geraden Weg.' Man ruft Ihn an, wenn man an einem Scheideweg steht oder wenn der Glaube wankt.",
+            "tr": "Ya Hâdî, beni hidayet üzere sabit kıl; kararsız kaldığımda kalbimi en hayırlı olana yönelt.",
+            "en": "Invoke when feeling lost or confused. It is the primary request in every prayer (Surah Al-Fatiha), asking for consistent direction toward the truth."
+        },
+        "reflection": {
+            "de": "Intelligenz ist nicht gleich Rechtleitung. Man kann klug sein und dennoch den Weg verlieren. Al-Hadi erinnert uns an unsere Abhängigkeit von Seiner Führung.",
+            "tr": "Hidayet bir lütuftur; zekâ veya bilgiyle garanti edilemez. Rehberlik isteyen, önce rehbere muhtaç olduğunu kabul etmelidir.",
+            "en": "Reflection on Al-Hadi teaches humility. We realize that our efforts are fruitless without the Divine Guide opening the way and softening our hearts."
+        },
+        "sourceNote": {
+            "de": "Zentraler Name für die menschliche Beziehung zu Gott.",
+            "tr": "İrşad ve hidayetin kaynağıdır.",
+            "en": "A fundamental attribute for the spiritual journey of a believer."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (25:31)",
+            "tr": "Kur'an'da geçtiği ayetler: (25:31)",
+            "en": "Found in Quran Ayah(s): (25:31)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 95,
+        "slug": "al-badi",
+        "arabic": "الْبَدِيعُ",
+        "transliteration": {
+            "de": "Al-Badī'",
+            "tr": "El-Bâkî",
+            "en": "Al-Badī'"
+
+        },
+        "pronunciation": {
+            "de": "al-ba-DEE'",
+            "tr": "al-ba-DEE'",
+            "en": "al-ba-DEE'"
+
+        },
+        "meanings": {
+            "de": "Der unvergleichliche Schöpfer, der Erfinder",
+            "tr": "Eşi benzeri olmayan, örneksiz yaratan",
+            "en": "The Incomparable Originator"
+        },
+        "explanations": {
+            "de": "Al-Badi' erschafft aus dem Nichts, ohne Vorbild und ohne existierende Muster. Seine Schöpfung ist absolut originell und zeugt von unendlicher Kreativität und Weisheit.",
+            "tr": "Al-Badi' ismi Allah’ın gökleri ve yeri örneksiz, maddeye muhtaç olmadan ve hayret verici bir güzellikte var etmesini bildirir. O'nun sanatında hiçbir taklit yoktur.",
+            "en": "Al-Badi' is the One who creates from nothingness without any prior model. His creation is unique, unprecedented, and displays a beauty that is incomparable to anything else."
+        },
+        "duaUsage": {
+            "de": "Wird angerufen, wenn man vor scheinbar unlösbaren Problemen steht, für die es kein bekanntes Muster gibt. Man bittet den 'Erfinder' um einen wunderbaren Ausweg.",
+            "tr": "Ya Bedî, ey her şeyi örneksiz yaratan Rabbim; hayatımda hayırlı ve güzel kapılar aç, bana çıkış yolları ihsan et.",
+            "en": "Invoke when seeking a breakthrough or a 'creative' solution to a difficult life situation, trusting that Allah can bring something new into existence."
+        },
+        "reflection": {
+            "de": "Der Name bricht die Illusion der Begrenzung. Wer Al-Badi' kennt, weiß, dass Gott nicht an die Gesetze der Gewohnheit gebunden ist.",
+            "tr": "Allah'ın yaratmasındaki eşsizliği gören mümin, kainata hayranlık nazarıyla bakar ve ümitsizliğe düşmez.",
+            "en": "To reflect on Al-Badi' is to marvel at the diversity of nature. It teaches us that Allah's power is not confined by the existing laws of physics or habit."
+        },
+        "sourceNote": {
+            "de": "Betont die absolute Originalität Gottes (Sure 2:117).",
+            "tr": "İlahi sanatın benzersizliğini ifade eder.",
+            "en": "Highlights the absolute originality and spontaneity of divine action."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (2:117)(6: 101)",
+            "tr": "Kur'an'da geçtiği ayetler: (2:117)(6: 101)",
+            "en": "Found in Quran Ayah(s): (2:117)(6: 101)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 96,
+        "slug": "al-baqi",
+        "arabic": "الْبَاقِي",
+        "transliteration": {
+            "de": "Al-Bāqī",
+            "tr": "El-Vâris",
+            "en": "Al-Bāqī"
+
+        },
+        "pronunciation": {
+            "de": "al-BAA-kee",
+            "tr": "al-BAA-kee",
+            "en": "al-BAA-kee"
+
+        },
+        "meanings": {
+            "de": "Der ewig Bleibende, der Unvergängliche",
+            "tr": "Varlığı sürekli olan, ebedî",
+            "en": "The Everlasting, The Immutable"
+        },
+        "explanations": {
+            "de": "Während alles Geschaffene dem Verfall und dem Tod unterworfen ist, bleibt Allah ewig. Seine Existenz hat kein Ende, Er steht außerhalb der Zeit.",
+            "tr": "Al-Baqi ismi bütün mahlûkat fani iken Allah’ın ebedî kalmasını bildirir. O, zamanın ve değişimin ötesindedir; sonu olmayan tek varlıktır.",
+            "en": "Al-Baqi is the Everlasting. While everything in the universe is transient and subject to decay, Allah remains. He is the permanent reality beyond the flow of time."
+        },
+        "duaUsage": {
+            "de": "Wird angerufen, um sich von der Bindung an vergängliche Dinge (Besitz, Jugend, Status) zu lösen und sich dem zuzuwenden, was vor Gott Bestand hat.",
+            "tr": "Ya Bâkî, fani olanın peşinden koşmaktan beni kurtar; beni Senin katında baki kalacak işlere yönelt.",
+            "en": "Invoke to find stability in a changing world and to ask for one's good deeds to be accepted and made 'everlasting' in the afterlife."
+        },
+        "reflection": {
+            "de": "Der Name macht unsere Prioritäten nüchtern. Wenn wir erkennen, dass alles außer Ihm vergeht, investieren wir mehr in unsere spirituelle Zukunft als in temporäre Illusionen.",
+            "tr": "Her şeyin geçici olduğunu bilen kalp, ancak ebedî olana tutunur. 'Bâkî kalan ancak O'dur' bilinci huzurun anahtarıdır.",
+            "en": "Reflection on Al-Baqi provides a sense of detachment (Zuhd). It humbles the ego by reminding us that our physical lives are brief whispers compared to His eternity."
+        },
+        "sourceNote": {
+            "de": "Ein Name der göttlichen Beständigkeit (Sure 55:27).",
+            "tr": "Beka sıfatının tecellisidir.",
+            "en": "Reflects the attribute of 'Baqa' (Eternity)."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (55:27)",
+            "tr": "Kur'an'da geçtiği ayetler: (55:27)",
+            "en": "Found in Quran Ayah(s): (55:27)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 97,
+        "slug": "al-warith",
+        "arabic": "الْوَارِثُ",
+        "transliteration": {
+            "de": "Al-Wārith",
+            "tr": "Er-Reşîd",
+            "en": "Al-Wārith"
+
+        },
+        "pronunciation": {
+            "de": "al-WAA-rith",
+            "tr": "al-WAA-rith",
+            "en": "al-WAA-rith"
+
+        },
+        "meanings": {
+            "de": "Der Erbe aller Dinge, der endgültige Besitzer",
+            "tr": "Her şeyin asıl ve son sahibi",
+            "en": "The Ultimate Inheritor"
+        },
+        "explanations": {
+            "de": "Alles, was wir besitzen, ist uns nur geliehen. Wenn alle Besitzer sterben und alle Reiche untergehen, kehrt der gesamte Besitz zum eigentlichen Herrn zurück.",
+            "tr": "Al-Warith ismi nihayetinde her şeyin Allah’a döneceğini bildirir. Mülkün geçici sahipleri gider, mülk ise gerçek sahibine kalır.",
+            "en": "Al-Warith is the One who inherits all. When all owners vanish and generations pass, Allah remains as the sole owner of all that ever existed. Our 'ownership' is merely a temporary loan."
+        },
+        "duaUsage": {
+            "de": "Wird angerufen, um Segen für die Nachkommen zu erbitten oder um die Gnade zu flehen, das Geliehene (Besitz, Wissen) verantwortungsvoll im Sinne Gottes zu verwalten.",
+            "tr": "Ya Vâris, bana verdiğin nimetleri rızan yolunda harcamayı nasip et; geride hayırlı bir miras bırakmamı sağla.",
+            "en": "Invoke when thinking about legacy or when feeling a loss of property, remembering that everything returns to Him and is never truly lost."
+        },
+        "reflection": {
+            "de": "Dieser Name nimmt den Stolz auf Reichtum und Macht. Er erinnert uns daran, dass wir 'Verwalter' sind, nicht 'Besitzer'. Wahre Investition ist das, was wir für Gott geben.",
+            "tr": "Mülk Allah'ındır. Bu ismi bilen kişi, elindekini cimrilik etmeden paylaşır ve gerçek sahibine emaneti temiz teslim etmeye çalışır.",
+            "en": "Reflection on Al-Warith demystifies material wealth. It teaches us to be generous stewards of our resources, knowing we cannot take them with us."
+        },
+        "sourceNote": {
+            "de": "Zentral für das Verständnis von Eigentum im Islam (Sure 15:23).",
+            "tr": "Mülkün gerçek ve ebedî sahibidir.",
+            "en": "Emphasizes that worldly power is transient and borrowed."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (15:23)",
+            "tr": "Kur'an'da geçtiği ayetler: (15:23)",
+            "en": "Found in Quran Ayah(s): (15:23)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 98,
+        "slug": "ar-rashid",
+        "arabic": "الرَّشِيدُ",
+        "transliteration": {
+            "de": "Ar-Rashīd",
+            "tr": "Es-Sabûr",
+            "en": "Ar-Rashīd"
+
+        },
+        "pronunciation": {
+            "de": "ar-ra-SHEED",
+            "tr": "ar-ra-SHEED",
+            "en": "ar-ra-SHEED"
+
+        },
+        "meanings": {
+            "de": "Der weise Rechtleitende, der Unfehlbare",
+            "tr": "İşlerini hikmetle yürüten, doğru yolu gösteren",
+            "en": "The Righteous Teacher, The Wise Guide"
+        },
+        "explanations": {
+            "de": "Ar-Rashid führt alle Dinge mit vollkommener Weisheit zum richtigen Ziel. Er braucht keinen Ratgeber und macht niemals Fehler. Seine Führung ist die höchste Form der Ordnung.",
+            "tr": "Ar-Rashid ismi Allah’ın her işini yerli yerinde, bir nizam ve hikmetle yapmasını ifade eder. O, kullarını en doğru ve en hayırlı hedefe ulaştırandır.",
+            "en": "Ar-Rashid is the One who guides toward the right path with perfect wisdom. Unlike human guidance, His direction is free from error, confusion, or ulterior motives."
+        },
+        "duaUsage": {
+            "de": "Wird angerufen, um Reife im Urteil, Besonnenheit und Schutz vor impulsiven Fehlentscheidungen zu erbitten.",
+            "tr": "Ya Raşîd, işlerimde beni rüşde (doğruluğa) ulaştır; aklımı ve kalbimi yanlış kararlardan koru.",
+            "en": "Invoke when needing to make a major life decision, asking for 'Rushd' (spiritual and intellectual maturity) to choose what is truly beneficial."
+        },
+        "reflection": {
+            "de": "Reife (Rushd) bedeutet, das Ende einer Sache zu bedenken, bevor man beginnt. Ar-Rashid lehrt uns, mit Bedacht und im Einklang mit göttlicher Weisheit zu handeln.",
+            "tr": "Mürşid-i hakiki Allah'tır. O'nun yolundan giden, pişmanlık duyacağı işlerden uzak durur.",
+            "en": "Reflection on Ar-Rashid reminds us that success is not just about effort, but about alignment with the divine order and wisdom."
+        },
+        "sourceNote": {
+            "de": "Bezieht sich auf die vollkommene Zielstrebigkeit und Weisheit Gottes.",
+            "tr": "Doğru yolun ve olgunluğun kaynağıdır.",
+            "en": "Signifies the perfect planning and execution of the Divine Will."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (2:256)",
+            "tr": "Kur'an'da geçtiği ayetler: (2:256)",
+            "en": "Found in Quran Ayah(s): (2:256)"
+        },
+        "contentReviewRequired": false
+    },
+    {
+        "id": 99,
+        "slug": "as-sabur",
+        "arabic": "الصَّبُورُ",
+        "transliteration": {
+            "de": "As-Sabūr",
+            "tr": "As-Sabūr",
+            "en": "As-Sabūr"
+
+        },
+        "pronunciation": {
+            "de": "as-sa-BOOR",
+            "tr": "as-sa-BOOR",
+            "en": "as-sa-BOOR"
+
+        },
+        "meanings": {
+            "de": "Der Langmütige, der Geduldige",
+            "tr": "Çok sabırlı, cezalandırmada acele etmeyen",
+            "en": "The Patient One, The Forbearing"
+        },
+        "explanations": {
+            "de": "As-Sabur eilt nicht mit der Bestrafung der Sündigen. Er gewährt Frist, damit Reue möglich ist. Seine Geduld entspringt nicht der Schwäche, sondern der souveränen Kontrolle und Weisheit.",
+            "tr": "As-Sabur ismi Allah’ın cezayı aceleye getirmeyip mühlet vermesini bildirir. Bu acizlikten doğan bir bekleme değil, mahlûkatına tövbe imkanı tanıyan ilahî bir kemaldir.",
+            "en": "As-Sabur is the One who does not hasten to punish. He grants respite and continues to provide for even those who defy Him, allowing time for repentance and growth. His patience is a manifestation of His absolute power."
+        },
+        "duaUsage": {
+            "de": "Wird angerufen, um Standhaftigkeit in Krisen zu finden und um die Fähigkeit zu bitten, selbst geduldig mit den Fehlern anderer umzugehen.",
+            "tr": "Ya Sabûr, bana dayanma gücü ver; öfkeme yenik düşmemi engelle ve beni sabredenlerden eyle.",
+            "en": "Invoke to ask for personal steadfastness (Sabr) and to pray for the ability to endure trials without losing faith or becoming bitter."
+        },
+        "reflection": {
+            "de": "Gott ist geduldig mit uns, obwohl Er uns jederzeit zur Rechenschaft ziehen könnte. Wer dies erkennt, wird barmherziger und geduldiger im Umgang mit seinen Mitmenschen.",
+            "tr": "Allah'ın bize olan sabrını tefekkür etmek, bizim de insanlara karşı daha hoşgörülü olmamızı sağlar. Sabır, zafere giden yolun azığıdır.",
+            "en": "Reflection on As-Sabur teaches us that strength is often shown through restraint. If the Creator is patient with us, we should strive to be patient with ourselves and others."
+        },
+        "sourceNote": {
+            "de": "Der letzte Name in der klassischen Aufzählung; er schließt den Kreis der göttlichen Gnade.",
+            "tr": "Cezada acele etmemek ve mühlet vermek O'nun şanındandır.",
+            "en": "A beautiful conclusion to the 99 Names, emphasizing Divine restraint and mercy."
+        },
+        "source": {
+            "de": "Im Koran erwähnt in: (2:153) (3:200) (103:3)",
+            "tr": "Kur'an'da geçtiği ayetler: (2:153) (3:200) (103:3)",
+            "en": "Found in Quran Ayah(s): (2:153) (3:200) (103:3)"
+        },
+        "contentReviewRequired": false
+    }
 ]
 
 export function getNameBySlug(slug: string): NameEntry | undefined {
-  return names.find((name) => name.slug === slug)
+    return names.find((name) => name.slug === slug)
 }

@@ -83,6 +83,28 @@ export type Dict = {
     flipSide: string
     showArabic: string
     recallArabicPrompt: string
+    modeCard: string
+    modeList: string
+    repeat: string
+    skip: string
+    skipHint: string
+    learnedHint: string
+    repeatHint: string
+    streakDays: (count: number) => string
+    streakLabel: string
+    shuffleOn: string
+    shuffleOff: string
+    listOpen: string
+    listLearned: string
+    listFavorite: string
+    listRepeat: string
+    next3Title: string
+    audioLabel: string
+    audioUnavailable: string
+    restart: string
+    tapToReveal: string
+    completedTitle: string
+    completedBody: string
   }
   detail: {
     backToOverview: string
@@ -97,6 +119,8 @@ export type Dict = {
     eyebrow: string
     title: string
     language: string
+    theme: string
+    themeOptions: Record<'dark-classic' | 'blue-night' | 'soft-light', string>
     localData: string
     localDataBody: (learned: number, favorites: number, lastViewed: string) => string
     resetProgress: string
@@ -214,7 +238,7 @@ const de: Dict = {
     eyebrow: 'Lernmodus',
     title: 'Nächster offener Name',
     remaining: (count) => `${count} Namen noch offen`,
-    markLearned: 'Als gelernt markieren',
+    markLearned: 'Gelernt ✓',
     next: 'Überspringen',
     details: 'Details',
     allLearnedTitle: 'Alle Namen sind als gelernt markiert.',
@@ -222,12 +246,34 @@ const de: Dict = {
     overview: 'Zur Übersicht',
     showMeaning: 'Bedeutung aufdecken',
     recallPrompt: 'Versuche die Bedeutung zu erinnern …',
-    overallLearned: (learned, total) => `${learned} von ${total} gelernt`,
+    overallLearned: (learned, total) => `${learned} / ${total}`,
     sessionLearned: (count) => `+${count} heute`,
-    keyboard: '␣ aufdecken · L gelernt · N überspringen · F Favorit',
+    keyboard: '␣ aufdecken · L gelernt · N überspringen · R wiederholen · F Favorit · A Audio',
     flipSide: 'Seiten tauschen',
     showArabic: 'Arabisch aufdecken',
     recallArabicPrompt: 'Versuche das arabische Wort zu erinnern …',
+    modeCard: 'Karteikarte',
+    modeList: 'Durchgehen',
+    repeat: 'Wiederholen',
+    skip: 'Überspringen',
+    skipHint: 'Überspringen',
+    learnedHint: 'Gelernt',
+    repeatHint: 'Wiederholen',
+    streakDays: (count) => `${count} ${count === 1 ? 'Tag' : 'Tage'}`,
+    streakLabel: 'Tages-Streak',
+    shuffleOn: 'Zufallsmodus aktiv',
+    shuffleOff: 'Zufallsmodus aus',
+    listOpen: 'Offen',
+    listLearned: 'Gelernt',
+    listFavorite: 'Favorit',
+    listRepeat: 'Wiederholen',
+    next3Title: 'Nächste',
+    audioLabel: 'Aussprache anhören',
+    audioUnavailable: 'Audio nicht verfügbar',
+    restart: 'Von vorne beginnen',
+    tapToReveal: 'Tippen zum Aufdecken',
+    completedTitle: 'Alle 99 Namen gelernt',
+    completedBody: 'Mashallah! Du kannst von vorne beginnen oder einzelne Namen erneut wiederholen.',
   },
   detail: {
     backToOverview: 'Zur Übersicht',
@@ -242,6 +288,12 @@ const de: Dict = {
     eyebrow: 'Setup',
     title: 'Einstellungen',
     language: 'Sprache',
+    theme: 'Theme',
+    themeOptions: {
+      'dark-classic': 'Dunkel',
+      'blue-night': 'Blaue Nacht',
+      'soft-light': 'Hell',
+    },
     localData: 'Lokale Daten',
     localDataBody: (learned, favorites, lastViewed) => `Gelernt: ${learned}, Favoriten: ${favorites}, zuletzt angesehen: ${lastViewed}.`,
     resetProgress: 'Fortschritt zurücksetzen',
@@ -359,7 +411,7 @@ const tr: Dict = {
     eyebrow: 'Öğrenme modu',
     title: 'Sonraki açık isim',
     remaining: (count) => `${count} isim henüz açık`,
-    markLearned: 'Öğrenildi olarak işaretle',
+    markLearned: 'Öğrenildi ✓',
     next: 'Atla',
     details: 'Detaylar',
     allLearnedTitle: 'Tüm isimler öğrenildi olarak işaretlendi.',
@@ -367,12 +419,34 @@ const tr: Dict = {
     overview: 'Genel bakışa git',
     showMeaning: 'Anlamı göster',
     recallPrompt: 'Anlamını hatırlamaya çalış …',
-    overallLearned: (learned, total) => `${total} isimden ${learned} öğrenildi`,
+    overallLearned: (learned, total) => `${learned} / ${total}`,
     sessionLearned: (count) => `+${count} bugün`,
-    keyboard: '␣ göster · L öğrenildi · N atla · F favori',
+    keyboard: '␣ göster · L öğrenildi · N atla · R tekrar · F favori · A ses',
     flipSide: 'Tarafları değiştir',
     showArabic: 'Arapçayı göster',
     recallArabicPrompt: 'Arapça kelimeyi hatırlamaya çalış …',
+    modeCard: 'Kart',
+    modeList: 'Liste',
+    repeat: 'Tekrarla',
+    skip: 'Atla',
+    skipHint: 'Atla',
+    learnedHint: 'Öğrenildi',
+    repeatHint: 'Tekrarla',
+    streakDays: (count) => `${count} gün`,
+    streakLabel: 'Günlük seri',
+    shuffleOn: 'Rastgele mod açık',
+    shuffleOff: 'Rastgele mod kapalı',
+    listOpen: 'Açık',
+    listLearned: 'Öğrenildi',
+    listFavorite: 'Favori',
+    listRepeat: 'Tekrar',
+    next3Title: 'Sıradaki',
+    audioLabel: 'Telaffuzu dinle',
+    audioUnavailable: 'Ses kullanılamıyor',
+    restart: 'Baştan başla',
+    tapToReveal: 'Açmak için dokun',
+    completedTitle: 'Tüm 99 isim öğrenildi',
+    completedBody: 'Maşallah! Baştan başlayabilir veya seçtiğin isimleri yeniden tekrarlayabilirsin.',
   },
   detail: {
     backToOverview: 'Genel bakışa dön',
@@ -387,6 +461,12 @@ const tr: Dict = {
     eyebrow: 'Ayarlar',
     title: 'Ayarlar',
     language: 'Dil',
+    theme: 'Tema',
+    themeOptions: {
+      'dark-classic': 'Koyu',
+      'blue-night': 'Gece mavisi',
+      'soft-light': 'Açık',
+    },
     localData: 'Yerel veriler',
     localDataBody: (learned, favorites, lastViewed) => `Öğrenilen: ${learned}, favoriler: ${favorites}, son görüntülenen: ${lastViewed}.`,
     resetProgress: 'İlerlemeyi sıfırla',
@@ -504,7 +584,7 @@ const en: Dict = {
     eyebrow: 'Learning mode',
     title: 'Next open name',
     remaining: (count) => `${count} names still open`,
-    markLearned: 'Mark as learned',
+    markLearned: 'Learned ✓',
     next: 'Skip',
     details: 'Details',
     allLearnedTitle: 'All names are marked as learned.',
@@ -512,12 +592,34 @@ const en: Dict = {
     overview: 'Go to overview',
     showMeaning: 'Reveal meaning',
     recallPrompt: 'Try to recall the meaning …',
-    overallLearned: (learned, total) => `${learned} of ${total} learned`,
+    overallLearned: (learned, total) => `${learned} / ${total}`,
     sessionLearned: (count) => `+${count} today`,
-    keyboard: '␣ reveal · L learned · N skip · F favorite',
+    keyboard: '␣ reveal · L learned · N skip · R repeat · F favorite · A audio',
     flipSide: 'Flip sides',
     showArabic: 'Reveal Arabic',
     recallArabicPrompt: 'Try to recall the Arabic word …',
+    modeCard: 'Flashcard',
+    modeList: 'Browse',
+    repeat: 'Repeat',
+    skip: 'Skip',
+    skipHint: 'Skip',
+    learnedHint: 'Learned',
+    repeatHint: 'Repeat',
+    streakDays: (count) => `${count} ${count === 1 ? 'day' : 'days'}`,
+    streakLabel: 'Daily streak',
+    shuffleOn: 'Shuffle on',
+    shuffleOff: 'Shuffle off',
+    listOpen: 'Open',
+    listLearned: 'Learned',
+    listFavorite: 'Favorite',
+    listRepeat: 'Repeat',
+    next3Title: 'Next',
+    audioLabel: 'Play pronunciation',
+    audioUnavailable: 'Audio unavailable',
+    restart: 'Start over',
+    tapToReveal: 'Tap to reveal',
+    completedTitle: 'All 99 names learned',
+    completedBody: 'Alhamdulillah. You can start over or revisit individual names.',
   },
   detail: {
     backToOverview: 'Back to overview',
@@ -532,6 +634,12 @@ const en: Dict = {
     eyebrow: 'Settings',
     title: 'Settings',
     language: 'Language',
+    theme: 'Theme',
+    themeOptions: {
+      'dark-classic': 'Dark',
+      'blue-night': 'Blue night',
+      'soft-light': 'Light',
+    },
     localData: 'Local data',
     localDataBody: (learned, favorites, lastViewed) => `Learned: ${learned}, favorites: ${favorites}, last viewed: ${lastViewed}.`,
     resetProgress: 'Reset progress',

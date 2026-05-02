@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import type { ReactNode, SVGProps } from 'react'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { getDict, LANGUAGES } from '@/lib/i18n'
 import { isLanguage } from '@/lib/languagePreference'
 import { getEquivalentLocalizedPath, getLocalizedSeoPath, getLocalizedSettingsPath, getLocalizedStaticPath } from '@/lib/seo'
@@ -16,8 +16,13 @@ const getNavItems = (language: Language) => [
   { href: language === 'de' ? '/de' : language === 'tr' ? '/tr' : '/', key: 'home', icon: HomeIcon },
   { href: language === 'de' ? '/de/namen' : language === 'tr' ? '/tr/esmaul-husna' : '/names', key: 'names', icon: DiamondIcon },
   { href: getLocalizedSeoPath('learn', language), key: 'learn', icon: CompassIcon },
-  { href: getLocalizedSettingsPath(language), key: 'settings', icon: SettingsIcon },
 ] as const
+
+const mobileMenuLabels: Record<Language, { open: string; close: string }> = {
+  de: { open: 'Menü öffnen', close: 'Menü schließen' },
+  en: { open: 'Open menu', close: 'Close menu' },
+  tr: { open: 'Menüyü aç', close: 'Menüyü kapat' },
+}
 
 const getInitialLanguage = (routeLanguage?: Language): Language => {
   if (routeLanguage) return routeLanguage
@@ -29,10 +34,13 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
   const pathname = usePathname()
   const router = useRouter()
   const [storedLanguage, setStoredLanguage] = useState<Language>(() => getInitialLanguage(routeLanguage))
+  const [mobileHeaderHidden, setMobileHeaderHidden] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const mobileMenuOpenRef = useRef(false)
   const language = routeLanguage ?? storedLanguage
   const dict = getDict(language)
   const navItems = getNavItems(language)
-  const mobileNavItems = navItems.filter((item) => item.key !== 'settings')
+  const menuLabels = mobileMenuLabels[language]
   const settingsPath = getLocalizedSettingsPath(language)
   const isActive = (href: string) => {
     const exactOnly = href === '/' || href === '/de' || href === '/tr'
@@ -61,6 +69,59 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
     return () => window.removeEventListener('app-language-change', onLanguageChange)
   }, [routeLanguage])
 
+  useEffect(() => {
+    let lastScrollY = Math.max(window.scrollY, 0)
+    let ticking = false
+
+    const updateMobileChrome = () => {
+      ticking = false
+
+      const currentScrollY = Math.max(window.scrollY, 0)
+      const scrollHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight)
+      const maxScrollY = Math.max(scrollHeight - window.innerHeight, 0)
+      const atTop = currentScrollY <= 16
+      const atBottom = maxScrollY - currentScrollY <= 2
+      const scrollDelta = currentScrollY - lastScrollY
+
+      if (mobileMenuOpenRef.current) {
+        setMobileHeaderHidden(false)
+        lastScrollY = currentScrollY
+        return
+      }
+
+      if (atTop) {
+        setMobileHeaderHidden(false)
+        lastScrollY = currentScrollY
+        return
+      }
+
+      if (atBottom) {
+        setMobileHeaderHidden(true)
+        lastScrollY = currentScrollY
+        return
+      }
+
+      if (Math.abs(scrollDelta) < 8) return
+
+      setMobileHeaderHidden(scrollDelta > 0)
+      lastScrollY = currentScrollY
+    }
+
+    const scheduleUpdate = () => {
+      if (ticking) return
+      ticking = true
+      window.requestAnimationFrame(updateMobileChrome)
+    }
+
+    window.addEventListener('scroll', scheduleUpdate, { passive: true })
+    window.addEventListener('resize', scheduleUpdate)
+
+    return () => {
+      window.removeEventListener('scroll', scheduleUpdate)
+      window.removeEventListener('resize', scheduleUpdate)
+    }
+  }, [])
+
   function onLanguageChange(next: Language) {
     setStoredLanguage(next)
     storage.setLanguage(next)
@@ -70,10 +131,28 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
     if (nextPath !== pathname) router.push(nextPath)
   }
 
+  function closeMobileMenu() {
+    mobileMenuOpenRef.current = false
+    setMobileMenuOpen(false)
+  }
+
+  function toggleMobileMenu() {
+    setMobileMenuOpen((open) => {
+      const next = !open
+      mobileMenuOpenRef.current = next
+      return next
+    })
+  }
+
+  const headerClassName = [
+    'app-header sticky top-0 z-30 border-b border-white/10 bg-background/85 backdrop-blur',
+    mobileHeaderHidden ? 'app-header-hidden' : '',
+  ].filter(Boolean).join(' ')
+
   return (
     <>
       <div className="star-field fixed inset-0 -z-10" />
-      <header className="sticky top-0 z-30 border-b border-white/10 bg-background/85 backdrop-blur">
+      <header className={headerClassName}>
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4">
           <Link href={language === 'de' ? '/de' : language === 'tr' ? '/tr' : '/'} className="focus-ring rounded-md" aria-label="Daily Husna">
             <Image
@@ -102,19 +181,58 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
                   </Link>
                 )
               })}
+              <Link
+                href={settingsPath}
+                className={isActive(settingsPath) ? 'nav-link nav-link-active' : 'nav-link'}
+                aria-current={isActive(settingsPath) ? 'page' : undefined}
+              >
+                {dict.nav.settings}
+              </Link>
               <ShareButton labels={dict.share} variant="desktop" />
               <LanguageSwitcher language={language} label={dict.settings.language} onChange={onLanguageChange} compact />
             </nav>
-            <Link
-              href={settingsPath}
-              className={isActive(settingsPath) ? 'header-icon-link header-icon-link-active md:hidden' : 'header-icon-link md:hidden'}
-              aria-label={dict.nav.settings}
-              aria-current={isActive(settingsPath) ? 'page' : undefined}
+            <button
+              type="button"
+              className="mobile-menu-toggle md:hidden"
+              onClick={toggleMobileMenu}
+              aria-controls="mobile-menu-panel"
+              aria-expanded={mobileMenuOpen}
+              aria-label={mobileMenuOpen ? menuLabels.close : menuLabels.open}
             >
-              <span className="mobile-nav-icon" aria-hidden="true"><SettingsIcon /></span>
-            </Link>
+              <span className="mobile-menu-icon" aria-hidden="true">{mobileMenuOpen ? <CloseIcon /> : <MenuIcon />}</span>
+            </button>
           </div>
         </div>
+        {mobileMenuOpen ? (
+          <nav id="mobile-menu-panel" className="mobile-menu-panel md:hidden" aria-label={dict.nav.mobile}>
+            {navItems.map((item) => {
+              const active = isActive(item.href)
+              const Icon = item.icon
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={active ? 'mobile-menu-item mobile-menu-item-active' : 'mobile-menu-item'}
+                  aria-current={active ? 'page' : undefined}
+                  onClick={closeMobileMenu}
+                >
+                  <span className="mobile-menu-icon" aria-hidden="true"><Icon /></span>
+                  <span className="mobile-menu-label">{dict.nav[item.key]}</span>
+                </Link>
+              )
+            })}
+            <Link
+              href={settingsPath}
+              className={isActive(settingsPath) ? 'mobile-menu-item mobile-menu-item-active' : 'mobile-menu-item'}
+              aria-current={isActive(settingsPath) ? 'page' : undefined}
+              onClick={closeMobileMenu}
+            >
+              <span className="mobile-menu-icon" aria-hidden="true"><SettingsIcon /></span>
+              <span className="mobile-menu-label">{dict.nav.settings}</span>
+            </Link>
+            <ShareButton labels={dict.share} variant="menu" />
+          </nav>
+        ) : null}
       </header>
       <PushPermissionNudge
         title={dict.settings.pushNudgeTitle}
@@ -124,7 +242,7 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
       />
       <main className="mx-auto w-full max-w-6xl px-4 pb-32 pt-6 md:pb-12">{children}</main>
 
-      <footer className="hidden md:block border-t border-white/10 bg-background/60 py-4 text-xs text-muted">
+      <footer className="border-t border-white/10 bg-background/60 py-4 text-xs text-muted">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-6 gap-y-1 px-4">
           <Link href={getLocalizedStaticPath('about', language)} className="hover:text-gold transition-colors">{language === 'de' ? 'Über uns' : language === 'tr' ? 'Hakkımızda' : 'About'}</Link>
           <Link href={getLocalizedStaticPath('contact', language)} className="hover:text-gold transition-colors">{language === 'de' ? 'Kontakt' : language === 'tr' ? 'İletişim' : 'Contact'}</Link>
@@ -133,26 +251,14 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
         </div>
       </footer>
 
-      <nav className="mobile-nav-bar fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-background/95 px-2 pt-2 backdrop-blur md:hidden" aria-label={dict.nav.mobile}>
-        <div className="mx-auto grid max-w-md grid-cols-4 gap-1">
-          {mobileNavItems.map((item) => {
-            const active = isActive(item.href)
-            const Icon = item.icon
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={active ? 'mobile-nav mobile-nav-active' : 'mobile-nav'}
-                aria-current={active ? 'page' : undefined}
-              >
-                <span className="mobile-nav-icon" aria-hidden="true"><Icon /></span>
-                <span className="mobile-nav-label">{dict.nav[item.key]}</span>
-              </Link>
-            )
-          })}
-          <ShareButton labels={dict.share} variant="mobile" />
-        </div>
-      </nav>
+      {mobileMenuOpen ? (
+        <button
+          type="button"
+          className="mobile-menu-backdrop fixed inset-0 z-20 md:hidden"
+          onClick={closeMobileMenu}
+          aria-label={menuLabels.close}
+        />
+      ) : null}
     </>
   )
 }
@@ -162,7 +268,7 @@ function ShareButton({
   variant,
 }: {
   labels: ReturnType<typeof getDict>['share']
-  variant: 'desktop' | 'mobile'
+  variant: 'desktop' | 'menu'
 }) {
   const [status, setStatus] = useState<'idle' | 'copied' | 'failed'>('idle')
 
@@ -200,11 +306,11 @@ function ShareButton({
 
   const label = status === 'copied' ? labels.copied : status === 'failed' ? labels.failed : labels.button
 
-  if (variant === 'mobile') {
+  if (variant === 'menu') {
     return (
-      <button type="button" className="mobile-nav mobile-nav-icon-only" onClick={onShare} aria-label={labels.button}>
-        <span className="mobile-nav-icon" aria-hidden="true"><ShareIcon /></span>
-        <span className="sr-only" aria-live="polite">{label}</span>
+      <button type="button" className="mobile-menu-item" onClick={onShare} aria-label={labels.button}>
+        <span className="mobile-menu-icon" aria-hidden="true"><ShareIcon /></span>
+        <span className="mobile-menu-label" aria-live="polite">{label}</span>
       </button>
     )
   }
@@ -259,6 +365,25 @@ function ShareIcon(props: SVGProps<SVGSVGElement>) {
       <path d="M12 15V4" />
       <path d="M8 8l4-4 4 4" />
       <path d="M5 13v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5" />
+    </svg>
+  )
+}
+
+function MenuIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M4 7h16" />
+      <path d="M4 12h16" />
+      <path d="M4 17h16" />
+    </svg>
+  )
+}
+
+function CloseIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M6 6l12 12" />
+      <path d="M18 6L6 18" />
     </svg>
   )
 }

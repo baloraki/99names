@@ -24,8 +24,8 @@ export function NameDetailClient({ name }: { name: NameEntry }) {
       <section className="rounded-lg border border-gold/20 bg-surface p-6">
         <p className="text-sm text-gold-muted">#{name.id.toString().padStart(2, '0')}</p>
         <p className="mt-6 text-right font-arabic text-7xl leading-tight text-primary">{name.arabic}</p>
-        <h1 className="mt-8 text-4xl font-semibold">{name.transliteration}</h1>
-        <p className="mt-2 text-muted">{dict.common.pronunciation}: {name.pronunciation}</p>
+        <h1 className="mt-8 text-4xl font-semibold">{name.transliteration[language]}</h1>
+        <p className="mt-2 text-muted">{dict.common.pronunciation}: {name.pronunciation[language]}</p>
         <p className="mt-4 text-xl text-gold">{name.meanings[language]}</p>
         <div className="mt-6 flex flex-wrap gap-3">
           <button className={learned ? 'btn-secondary' : 'btn-primary'} onClick={() => learned ? actions.unmarkLearned(name.id) : actions.markLearned(name.id, name.slug)}>

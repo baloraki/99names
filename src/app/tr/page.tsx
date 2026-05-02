@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { Suspense } from 'react'
 import { JsonLd } from '@/components/JsonLd'
 import { LearningProgressWidget } from '@/components/LearningProgressWidget'
-import { names } from '@/data/names'
+import { RandomDuaSnippet, RandomDuaSnippetFallback } from '@/components/RandomDuaSnippet'
+import { firstName } from '@/data/names'
 import { buildMetadata, homeAlternates } from '@/lib/seo'
 import { organizationJsonLd, websiteJsonLd } from '@/lib/structuredData'
 
@@ -32,14 +34,15 @@ export default function TurkishHomePage() {
             <Link className="btn-secondary" href="/tr/ogren">Öğrenme modunu aç</Link>
           </div>
         </div>
-        <section className="rounded-lg border border-gold/25 bg-surface p-6">
-          <h2 className="text-sm uppercase tracking-[0.18em] text-gold">İlk isim</h2>
-          <p className="mt-5 text-right font-arabic text-6xl leading-tight text-primary" lang="ar" dir="rtl">{names[0].arabic}</p>
-          <p className="mt-6 text-2xl font-semibold">{names[0].transliteration}</p>
-          <p className="mt-1 text-muted">{names[0].meanings.tr}</p>
-          <Link className="mt-6 inline-flex rounded text-sm font-semibold text-gold hover:text-gold-soft focus-ring" href={`/tr/esmaul-husna/${names[0].slug}`}>
-            Anlamı oku
-          </Link>
+        <section className="rounded-lg border border-gold/25 hero-gradient-surface p-6">
+          <h2 className="text-sm uppercase tracking-[0.18em] text-gold">{firstName.meanings.tr}</h2>
+          <p className="mt-5 text-right font-arabic text-6xl leading-tight text-primary" lang="ar" dir="rtl">{firstName.arabic}</p>
+          <p className="mt-6 text-2xl font-semibold">{firstName.transliteration.tr}</p>
+          <p className="mt-1 text-gold">{firstName.explanations.tr}</p>
+          <p className="mt-1 text-muted">{firstName.duaUsage.tr}</p>
+          {firstName.reflection && <p className="mt-1 text-muted">{firstName.reflection?.tr}</p>}
+          {firstName.sourceNote && <p className="mt-1 text-muted">{firstName.sourceNote?.tr}</p>}
+          {firstName.source && <p className="mt-1 text-gold-muted">{firstName.source?.tr}</p>}
         </section>
       </section>
 
@@ -53,7 +56,29 @@ export default function TurkishHomePage() {
         <p className="rounded-lg border border-gold/20 bg-surface p-4 text-sm leading-6 text-muted">
           Not: Bu uygulama bir öğrenme yardımcısıdır. Dini içerik kamuya açık kullanımdan önce uzman kişilerce incelenmelidir.
         </p>
+        <div className="mt-5 space-y-5">
+          <article className="rounded-xl border border-white/10 surface-subtle p-4">
+            <p className="text-right font-arabic text-3xl leading-relaxed text-primary" lang="ar" dir="rtl">اللَّهُ لاَ إِلَهَ إِلاَّ هُ</p>
+            <p className="mt-3 text-sm text-muted">Allah, O&apos;ndan başka ilâh olmayandır. (2:255)</p>
+          </article>
+          <article className="rounded-xl border border-white/10 surface-subtle p-4">
+            <p className="text-right font-arabic text-3xl leading-relaxed text-primary" lang="ar" dir="rtl">وَلِلّهِ الأَسْمَاء الْحُسْنَى فَادْعُوهُ بِهَا وَذَرُواْ الَّذِينَ يُلْحِدُونَ فِي</p>
+            <p className="mt-3 text-sm text-muted">En güzel isimler Allah&apos;ındır; bu güzel isimlerle O&apos;na dua edin. O&apos;nun isimleri hakkında gerçeği çarpıtanları bırakın. Onlar yapmakta olduklarının cezasına çarptırılacaklardır. (7:180)</p>
+          </article>
+          <article className="rounded-xl border border-white/10 surface-subtle p-4">
+            <p className="text-right font-arabic text-3xl leading-relaxed text-primary" lang="ar" dir="rtl">اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ ۖ لَهُ الْأَسْمَاءُ الْحُسْنَىٰ</p>
+            <p className="mt-3 text-sm text-muted">Allah, kendisinden başka hiçbir ilâh bulunmayandır. En güzel isimler O&apos;nundur. (20:8)</p>
+          </article>
+          <article className="rounded-xl border border-white/10 surface-subtle p-4">
+            <p className="text-right font-arabic text-2xl leading-relaxed text-primary md:text-3xl" lang="ar" dir="rtl">هُوَ اللَّهُ الْخَالِقُ الْبَارِئُ الْمُصَوِّرُ ۖ لَهُ الْأَسْمَاءُ الْحُسْنَىٰ ۚ يُسَبِّحُ لَهُ مَا فِي السَّمَاوَاتِ وَالْأَرْضِ ۖ وَهُوَ الْعَزِيزُ الْحَكِيمُ</p>
+            <p className="mt-3 text-sm text-muted">O, yaratan, var eden, şekil veren Allah&apos;tır. En güzel isimler O&apos;nundur. Göklerde ve yerde olanlar O&apos;nu tesbih ederler. O mutlak güç sahibidir, hüküm ve hikmet sahibidir. (59:24)</p>
+          </article>
+        </div>
       </section>
+
+      <Suspense fallback={<RandomDuaSnippetFallback locale="tr" />}>
+        <RandomDuaSnippet locale="tr" />
+      </Suspense>
 
       <section className="grid gap-4 md:grid-cols-4">
         <Link className="rounded-lg border border-white/10 bg-surface p-5 hover:border-gold/50 focus-ring" href="/tr/esmaul-husna">

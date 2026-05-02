@@ -33,10 +33,10 @@ export function HomeClient() {
             <Link className="btn-secondary" href="/learn">{dict.home.startLearning}</Link>
           </div>
         </div>
-        <div className="rounded-lg border border-gold/25 bg-[radial-gradient(circle_at_top,rgba(214,178,94,0.18),rgba(22,22,22,0.96)_58%)] p-6">
+        <div className="rounded-lg border border-gold/25 hero-gradient-surface p-6">
           <p className="text-sm text-gold">{dict.home.nameOfDay}</p>
           <p className="mt-5 text-right font-arabic text-6xl leading-tight text-primary">{name.arabic}</p>
-          <h2 className="mt-6 text-2xl font-semibold">{name.transliteration}</h2>
+          <h2 className="mt-6 text-2xl font-semibold">{name.transliteration[language]}</h2>
           <p className="mt-1 text-muted">{name.meanings[language]}</p>
           <Link className="mt-6 inline-flex text-sm font-semibold text-gold hover:text-gold-soft focus-ring rounded" href={`/names/${name.slug}`}>
             {dict.home.openDetails}

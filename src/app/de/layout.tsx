@@ -7,7 +7,7 @@ import '../globals.css'
 export const metadata = rootMetadata('de')
 
 export const viewport: Viewport = {
-  themeColor: '#080808',
+  themeColor: '#060915',
   colorScheme: 'dark',
 }
 

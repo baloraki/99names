@@ -15,7 +15,7 @@ export function RootDocument({
   shellLanguage?: Language
 }) {
   return (
-    <html lang={lang} className="h-full antialiased">
+    <html lang={lang} data-theme="blue-night" className="h-full antialiased">
       <body className="min-h-screen bg-background text-primary">
         <ServiceWorkerRegister />
         <AppShell routeLanguage={shellLanguage}>{children}</AppShell>

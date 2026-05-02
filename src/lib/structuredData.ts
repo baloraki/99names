@@ -77,10 +77,10 @@ export function itemListJsonLd(names: NameEntry[], locale: Language): JsonLdValu
       '@type': 'ListItem',
       position: name.id,
       url: absoluteUrl(getLocalizedNamePath(locale, name.slug)),
-      name: name.transliteration,
+      name: name.transliteration[locale],
       item: {
         '@type': 'Thing',
-        name: name.transliteration,
+        name: name.transliteration[locale],
         alternateName: name.arabic,
         description: name.meanings[locale],
       },
@@ -94,16 +94,16 @@ export function nameLearningResourceJsonLd(name: NameEntry, locale: Language): J
     '@type': 'LearningResource',
     name:
       locale === 'de'
-        ? `${name.transliteration} Bedeutung`
+          ? `${name.transliteration[locale]} Bedeutung`
         : locale === 'tr'
-          ? `${name.transliteration} Anlamı`
-          : `${name.transliteration} Meaning`,
+          ? `${name.transliteration[locale]} Anlamı`
+          : `${name.transliteration[locale]} Meaning`,
     headline:
       locale === 'de'
-        ? `${name.transliteration} Bedeutung`
+          ? `${name.transliteration[locale]} Bedeutung`
         : locale === 'tr'
-          ? `${name.transliteration} Anlamı`
-          : `${name.transliteration} Meaning`,
+          ? `${name.transliteration[locale]} Anlamı`
+          : `${name.transliteration[locale]} Meaning`,
     description: name.explanations[locale],
     inLanguage: locale,
     url: absoluteUrl(getLocalizedNamePath(locale, name.slug)),
@@ -120,7 +120,7 @@ export function nameLearningResourceJsonLd(name: NameEntry, locale: Language): J
     },
     about: {
       '@type': 'Thing',
-      name: name.transliteration,
+      name: name.transliteration[locale],
       alternateName: name.arabic,
       description: name.meanings[locale],
     },

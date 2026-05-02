@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
-import type { ReactNode } from 'react'
 import Link from 'next/link'
+import { Suspense } from 'react'
 import { JsonLd } from '@/components/JsonLd'
 import { LanguageRedirect } from '@/components/LanguageRedirect'
 import { LearningProgressWidget } from '@/components/LearningProgressWidget'
-import { names } from '@/data/names'
+import { RandomDuaSnippet, RandomDuaSnippetFallback } from '@/components/RandomDuaSnippet'
+import { firstName, names } from '@/data/names'
 import { buildMetadata, homeAlternates } from '@/lib/seo'
 import { organizationJsonLd, websiteJsonLd } from '@/lib/structuredData'
 
@@ -40,16 +41,15 @@ export default function HomePage() {
             <Link className="btn-secondary" href="/learn">Start learning</Link>
           </div>
         </div>
-        <section className="rounded-lg border border-gold/25 bg-[radial-gradient(circle_at_top,rgba(214,178,94,0.18),rgba(22,22,22,0.96)_58%)] p-6">
-          <h2 className="text-sm uppercase tracking-[0.18em] text-gold">Begin with mercy</h2>
-          <p className="mt-5 text-right font-arabic text-6xl leading-tight text-primary" lang="ar" dir="rtl">
-            {names[0].arabic}
-          </p>
-          <p className="mt-6 text-2xl font-semibold">{names[0].transliteration}</p>
-          <p className="mt-1 text-muted">{names[0].meanings.en}</p>
-          <Link className="mt-6 inline-flex rounded text-sm font-semibold text-gold hover:text-gold-soft focus-ring" href={`/names/${names[0].slug}`}>
-            Read Ar-Rahman meaning
-          </Link>
+        <section className="rounded-lg border border-gold/25 hero-gradient-surface p-6">
+          <h2 className="text-sm uppercase tracking-[0.18em] text-gold">{firstName.meanings.en}</h2>
+          <p className="mt-5 text-right font-arabic text-6xl leading-tight text-primary" lang="ar" dir="rtl">{firstName.arabic}</p>
+          <p className="mt-6 text-2xl font-semibold">{firstName.transliteration.en}</p>
+          <p className="mt-1 text-gold">{firstName.explanations.en}</p>
+          <p className="mt-1 text-muted">{firstName.duaUsage.en}</p>
+          {firstName.reflection && <p className="mt-1 text-muted">{firstName.reflection?.en}</p>}
+          {firstName.sourceNote && <p className="mt-1 text-muted">{firstName.sourceNote?.en}</p>}
+          {firstName.source && <p className="mt-1 text-gold-muted">{firstName.source?.en}</p>}
         </section>
       </section>
 
@@ -87,7 +87,29 @@ export default function HomePage() {
         <p className="max-w-4xl rounded-lg border border-gold/20 bg-surface p-4 text-sm leading-6 text-muted">
           Source-aware note: every name detail page keeps its source note visible. Entries marked with content review required should be checked by qualified reviewers before public religious reliance.
         </p>
+        <div className="mt-5 space-y-5">
+          <article className="rounded-xl border border-white/10 surface-subtle p-4">
+            <p className="text-right font-arabic text-3xl leading-relaxed text-primary" lang="ar" dir="rtl">اللَّهُ لاَ إِلَهَ إِلاَّ هُ</p>
+            <p className="mt-3 text-sm text-muted">Allah! There is no god but He. (2:255)</p>
+          </article>
+          <article className="rounded-xl border border-white/10 surface-subtle p-4">
+            <p className="text-right font-arabic text-3xl leading-relaxed text-primary" lang="ar" dir="rtl">وَلِلّهِ الأَسْمَاء الْحُسْنَى فَادْعُوهُ بِهَا وَذَرُواْ الَّذِينَ يُلْحِدُونَ فِي</p>
+            <p className="mt-3 text-sm text-muted">And to Allah belong the best names, so invoke Him by them. And leave [the company of] those who practice deviation concerning His names. They will be recompensed for what they have been doing. (7:180)</p>
+          </article>
+          <article className="rounded-xl border border-white/10 surface-subtle p-4">
+            <p className="text-right font-arabic text-3xl leading-relaxed text-primary" lang="ar" dir="rtl">اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ ۖ لَهُ الْأَسْمَاءُ الْحُسْنَىٰ</p>
+            <p className="mt-3 text-sm text-muted">Allah! There is no Allah save Him. His are the most beautiful names. (20:8)</p>
+          </article>
+          <article className="rounded-xl border border-white/10 surface-subtle p-4">
+            <p className="text-right font-arabic text-2xl leading-relaxed text-primary md:text-3xl" lang="ar" dir="rtl">هُوَ اللَّهُ الْخَالِقُ الْبَارِئُ الْمُصَوِّرُ ۖ لَهُ الْأَسْمَاءُ الْحُسْنَىٰ ۚ يُسَبِّحُ لَهُ مَا فِي السَّمَاوَاتِ وَالْأَرْضِ ۖ وَهُوَ الْعَزِيزُ الْحَكِيمُ</p>
+            <p className="mt-3 text-sm text-muted">He is Allah, the Creator, the Shaper out of naught, the Fashioner. His are the most beautiful names. All that is in the heavens and the earth glorifieth Him, and He is the Mighty, the Wise. (59:24)</p>
+          </article>
+        </div>
       </section>
+
+      <Suspense fallback={<RandomDuaSnippetFallback locale="en" />}>
+        <RandomDuaSnippet locale="en" />
+      </Suspense>
 
       <section className="space-y-4">
         <h2 className="text-3xl font-semibold">Featured names</h2>
@@ -95,34 +117,12 @@ export default function HomePage() {
           {featured.map((name) => (
             <Link key={name.id} href={`/names/${name.slug}`} className="rounded-lg border border-white/10 bg-surface p-4 hover:border-gold/50 focus-ring">
               <span className="block text-right font-arabic text-3xl" lang="ar" dir="rtl">{name.arabic}</span>
-              <span className="mt-3 block font-semibold">{name.transliteration}</span>
+              <span className="mt-3 block font-semibold">{name.transliteration.en}</span>
               <span className="mt-1 block text-sm text-muted">{name.meanings.en}</span>
             </Link>
           ))}
         </div>
       </section>
-
-      <section className="space-y-4">
-        <h2 className="text-3xl font-semibold">FAQ</h2>
-        <Faq question="Is this app a religious authority?">
-          No. It is a learning aid. The wording is cautious, source notes remain visible, and review-required content is preserved.
-        </Faq>
-        <Faq question="Can I use the names of Allah in dua?">
-          Yes, calling upon Allah by His beautiful names is encouraged. This app keeps dua wording generic and avoids invented formulas or guaranteed effects.
-        </Faq>
-        <Faq question="Does the app support German and Turkish?">
-          Yes. Use the German route for 99 Namen Allahs and the Turkish route for Allah&apos;ın 99 ismi / Esmaül Hüsna meanings.
-        </Faq>
-      </section>
     </div>
-  )
-}
-
-function Faq({ question, children }: { question: string; children: ReactNode }) {
-  return (
-    <section className="rounded-lg border border-white/10 bg-surface p-5">
-      <h3 className="text-lg font-semibold">{question}</h3>
-      <p className="mt-2 leading-7 text-muted">{children}</p>
-    </section>
   )
 }
