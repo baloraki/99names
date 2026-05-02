@@ -46,6 +46,28 @@ export default function TurkishHomePage() {
 
       <LearningProgressWidget locale="tr" />
 
+      <section className="relative overflow-hidden rounded-2xl border border-gold/30 bg-[radial-gradient(circle_at_top,rgba(214,178,94,0.14),rgba(18,18,18,0.97)_60%)] p-6 md:p-8">
+        <p className="text-sm uppercase tracking-[0.22em] text-gold">Esmâü&apos;l-Hüsnâ</p>
+        <div className="mt-5 space-y-5">
+          <article className="rounded-xl border border-white/10 bg-black/25 p-4">
+            <p className="text-right font-arabic text-3xl leading-relaxed text-primary" lang="ar" dir="rtl">اللَّهُ لاَ إِلَهَ إِلاَّ هُ</p>
+            <p className="mt-3 text-sm text-muted">Allah, O&apos;ndan başka ilâh olmayandır. (2:255)</p>
+          </article>
+          <article className="rounded-xl border border-white/10 bg-black/25 p-4">
+            <p className="text-right font-arabic text-3xl leading-relaxed text-primary" lang="ar" dir="rtl">وَلِلّهِ الأَسْمَاء الْحُسْنَى فَادْعُوهُ بِهَا وَذَرُواْ الَّذِينَ يُلْحِدُونَ فِي</p>
+            <p className="mt-3 text-sm text-muted">En güzel isimler Allah&apos;ındır; bu güzel isimlerle O&apos;na dua edin. O&apos;nun isimleri hakkında gerçeği çarpıtanları bırakın. Onlar yapmakta olduklarının cezasına çarptırılacaklardır. (7:180)</p>
+          </article>
+          <article className="rounded-xl border border-white/10 bg-black/25 p-4">
+            <p className="text-right font-arabic text-3xl leading-relaxed text-primary" lang="ar" dir="rtl">اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ ۖ لَهُ الْأَسْمَاءُ الْحُسْنَىٰ</p>
+            <p className="mt-3 text-sm text-muted">Allah, kendisinden başka hiçbir ilâh bulunmayandır. En güzel isimler O&apos;nundur. (20:8)</p>
+          </article>
+          <article className="rounded-xl border border-white/10 bg-black/25 p-4">
+            <p className="text-right font-arabic text-2xl leading-relaxed text-primary md:text-3xl" lang="ar" dir="rtl">هُوَ اللَّهُ الْخَالِقُ الْبَارِئُ الْمُصَوِّرُ ۖ لَهُ الْأَسْمَاءُ الْحُسْنَىٰ ۚ يُسَبِّحُ لَهُ مَا فِي السَّمَاوَاتِ وَالْأَرْضِ ۖ وَهُوَ الْعَزِيزُ الْحَكِيمُ</p>
+            <p className="mt-3 text-sm text-muted">O, yaratan, var eden, şekil veren Allah&apos;tır. En güzel isimler O&apos;nundur. Göklerde ve yerde olanlar O&apos;nu tesbih ederler. O mutlak güç sahibidir, hüküm ve hikmet sahibidir. (59:24)</p>
+          </article>
+        </div>
+      </section>
+
       <section className="max-w-4xl space-y-4">
         <h2 className="text-3xl font-semibold">Esmaül Hüsna nedir?</h2>
         <p className="leading-8 text-muted">

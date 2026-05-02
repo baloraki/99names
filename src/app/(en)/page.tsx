@@ -54,6 +54,29 @@ export default function HomePage() {
 
       <LearningProgressWidget locale="en" />
 
+      <section className="relative overflow-hidden rounded-2xl border border-gold/30 bg-[radial-gradient(circle_at_top,rgba(214,178,94,0.16),rgba(18,18,18,0.96)_60%)] p-6 md:p-8">
+        <div className="pointer-events-none absolute -right-16 -top-16 h-52 w-52 rounded-full bg-gold/10 blur-3xl" />
+        <p className="text-sm uppercase tracking-[0.22em] text-gold">Asma ul-Husna</p>
+        <div className="mt-5 space-y-5">
+          <article className="rounded-xl border border-white/10 bg-black/25 p-4">
+            <p className="text-right font-arabic text-3xl leading-relaxed text-primary" lang="ar" dir="rtl">اللَّهُ لاَ إِلَهَ إِلاَّ هُ</p>
+            <p className="mt-3 text-sm text-muted">Allah! There is no god but He. (2:255)</p>
+          </article>
+          <article className="rounded-xl border border-white/10 bg-black/25 p-4">
+            <p className="text-right font-arabic text-3xl leading-relaxed text-primary" lang="ar" dir="rtl">وَلِلّهِ الأَسْمَاء الْحُسْنَى فَادْعُوهُ بِهَا وَذَرُواْ الَّذِينَ يُلْحِدُونَ فِي</p>
+            <p className="mt-3 text-sm text-muted">And to Allah belong the best names, so invoke Him by them. And leave [the company of] those who practice deviation concerning His names. They will be recompensed for what they have been doing. (7:180)</p>
+          </article>
+          <article className="rounded-xl border border-white/10 bg-black/25 p-4">
+            <p className="text-right font-arabic text-3xl leading-relaxed text-primary" lang="ar" dir="rtl">اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ ۖ لَهُ الْأَسْمَاءُ الْحُسْنَىٰ</p>
+            <p className="mt-3 text-sm text-muted">Allah! There is no Allah save Him. His are the most beautiful names. (20:8)</p>
+          </article>
+          <article className="rounded-xl border border-white/10 bg-black/25 p-4">
+            <p className="text-right font-arabic text-2xl leading-relaxed text-primary md:text-3xl" lang="ar" dir="rtl">هُوَ اللَّهُ الْخَالِقُ الْبَارِئُ الْمُصَوِّرُ ۖ لَهُ الْأَسْمَاءُ الْحُسْنَىٰ ۚ يُسَبِّحُ لَهُ مَا فِي السَّمَاوَاتِ وَالْأَرْضِ ۖ وَهُوَ الْعَزِيزُ الْحَكِيمُ</p>
+            <p className="mt-3 text-sm text-muted">He is Allah, the Creator, the Shaper out of naught, the Fashioner. His are the most beautiful names. All that is in the heavens and the earth glorifieth Him, and He is the Mighty, the Wise. (59:24)</p>
+          </article>
+        </div>
+      </section>
+
       <section className="grid gap-4 md:grid-cols-4">
         <Link className="rounded-lg border border-white/10 bg-surface p-5 hover:border-gold/50 focus-ring" href="/names">
           <h2 className="text-xl font-semibold">99 names with meaning</h2>
