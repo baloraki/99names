@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useAppState } from '@/hooks/useAppState'
 import type { Language } from '@/types/language'
+import { ObfuscatedEmail } from '@/components/ObfuscatedEmail'
 
 // ─── OPERATOR DATA ────────────────────────────────────────────────────────────
 // TODO: Replace ALL values below with real data before going live.
@@ -12,18 +13,22 @@ const OPERATOR = {
   street: '[Straße und Hausnummer]',
   city: '[PLZ Ort]',
   country: 'Deutschland',
-  email: '[ihre@email.de]',
 }
 
-type Section = { heading: string; items: (string | { label: string; value: string })[] }
+// ─── EMAIL OBFUSCATION ────────────────────────────────────────────────────────
+// Handled by <ObfuscatedEmail /> (see ObfuscatedEmail.tsx)
+
+
+type Item = string | { label: string; value: string } | { label: string; isEmail: true }
 
 type Content = {
   title: string
   subtitle: string
-  sections: Section[]
+  sections: { heading: string; items: Item[] }[]
   disclaimer: { heading: string; body: string[] }
   privacyLink: string
 }
+
 
 const content: Record<Language, Content> = {
   de: {
@@ -36,7 +41,7 @@ const content: Record<Language, Content> = {
           { label: 'Name', value: OPERATOR.name },
           { label: 'Adresse', value: `${OPERATOR.street}, ${OPERATOR.city}` },
           { label: 'Land', value: OPERATOR.country },
-          { label: 'E-Mail', value: OPERATOR.email },
+          { label: 'E-Mail', isEmail: true },
         ],
       },
       {
@@ -71,7 +76,7 @@ const content: Record<Language, Content> = {
           { label: 'Name', value: OPERATOR.name },
           { label: 'Address', value: `${OPERATOR.street}, ${OPERATOR.city}` },
           { label: 'Country', value: OPERATOR.country },
-          { label: 'Email', value: OPERATOR.email },
+          { label: 'Email', isEmail: true },
         ],
       },
       {
@@ -106,7 +111,7 @@ const content: Record<Language, Content> = {
           { label: 'Ad Soyad', value: OPERATOR.name },
           { label: 'Adres', value: `${OPERATOR.street}, ${OPERATOR.city}` },
           { label: 'Ülke', value: OPERATOR.country },
-          { label: 'E-posta', value: OPERATOR.email },
+          { label: 'E-posta', isEmail: true },
         ],
       },
       {
@@ -151,6 +156,11 @@ export function ImprintPageContent() {
             {section.items.map((item, i) =>
               typeof item === 'string' ? (
                 <p key={i}>{item}</p>
+              ) : 'isEmail' in item ? (
+                <p key={i}>
+                  <span className="font-medium text-primary">{item.label}:</span>{' '}
+                  <ObfuscatedEmail />
+                </p>
               ) : (
                 <p key={i}>
                   <span className="font-medium text-primary">{item.label}:</span>{' '}

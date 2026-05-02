@@ -3,17 +3,23 @@
 import Link from 'next/link'
 import { useAppState } from '@/hooks/useAppState'
 import type { Language } from '@/types/language'
+import { ObfuscatedEmail } from '@/components/ObfuscatedEmail'
 
 // The app uses Vercel Analytics + Speed Insights (see RootDocument.tsx).
 // Both are disclosed in this policy. Update OPERATOR below before publishing.
 const OPERATOR_NAME = '[Vorname Nachname]'
 const OPERATOR_ADDRESS = '[Straße und Hausnummer, PLZ Ort, Deutschland]'
-const OPERATOR_EMAIL = '[ihre@email.de]'
+
+// E-Mail is intentionally NOT stored here → see <ObfuscatedEmail />
+
+// A paragraph is either plain text OR a sentence that contains the e-mail
+// address split into a prefix and a suffix around the <ObfuscatedEmail />.
+type Paragraph = string | { before: string; isEmail: true; after: string }
 
 type PolicyContent = {
   title: string
   lastUpdated: string
-  sections: { heading: string; paragraphs: string[] }[]
+  sections: { heading: string; paragraphs: Paragraph[] }[]
 }
 
 const content: Record<Language, PolicyContent> = {
@@ -25,7 +31,7 @@ const content: Record<Language, PolicyContent> = {
         heading: '1. Verantwortlicher',
         paragraphs: [
           `Verantwortlich für die Datenverarbeitung im Sinne der Datenschutz-Grundverordnung (DSGVO) ist: ${OPERATOR_NAME}, ${OPERATOR_ADDRESS}.`,
-          `E-Mail: ${OPERATOR_EMAIL}`,
+          { before: 'E-Mail: ', isEmail: true, after: '' },
         ],
       },
       {
@@ -78,7 +84,7 @@ const content: Record<Language, PolicyContent> = {
         paragraphs: [
           'Sie haben nach der DSGVO folgende Rechte gegenüber dem Verantwortlichen:',
           '• Recht auf Auskunft (Art. 15 DSGVO)\n• Recht auf Berichtigung (Art. 16 DSGVO)\n• Recht auf Löschung (Art. 17 DSGVO)\n• Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)\n• Recht auf Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)\n• Recht auf Datenübertragbarkeit (Art. 20 DSGVO)',
-          `Zur Ausübung Ihrer Rechte wenden Sie sich bitte per E-Mail an: ${OPERATOR_EMAIL}`,
+          { before: 'Zur Ausübung Ihrer Rechte wenden Sie sich bitte per E-Mail an: ', isEmail: true, after: '' },
           'Unbeschadet eines anderweitigen verwaltungsrechtlichen oder gerichtlichen Rechtsbehelfs haben Sie das Recht auf Beschwerde bei einer Datenschutz-Aufsichtsbehörde, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer Daten gegen die DSGVO verstößt.',
         ],
       },
@@ -99,7 +105,7 @@ const content: Record<Language, PolicyContent> = {
         heading: '1. Data controller',
         paragraphs: [
           `The controller for data processing within the meaning of the General Data Protection Regulation (GDPR) is: ${OPERATOR_NAME}, ${OPERATOR_ADDRESS}.`,
-          `Email: ${OPERATOR_EMAIL}`,
+          { before: 'Email: ', isEmail: true, after: '' },
         ],
       },
       {
@@ -152,7 +158,7 @@ const content: Record<Language, PolicyContent> = {
         paragraphs: [
           'Under the GDPR you have the following rights against the data controller:',
           '• Right of access (Art. 15 GDPR)\n• Right to rectification (Art. 16 GDPR)\n• Right to erasure (Art. 17 GDPR)\n• Right to restriction of processing (Art. 18 GDPR)\n• Right to object to processing (Art. 21 GDPR)\n• Right to data portability (Art. 20 GDPR)',
-          `To exercise your rights, please contact us by email at: ${OPERATOR_EMAIL}`,
+          { before: 'To exercise your rights, please contact us by email at: ', isEmail: true, after: '' },
           'Without prejudice to any other administrative or judicial remedy, you have the right to lodge a complaint with a data protection supervisory authority if you believe that the processing of your data violates the GDPR.',
         ],
       },
@@ -173,7 +179,7 @@ const content: Record<Language, PolicyContent> = {
         heading: '1. Veri sorumlusu',
         paragraphs: [
           `Genel Veri Koruma Yönetmeliği (GDPR/DSGVO) kapsamında veri sorumlusu: ${OPERATOR_NAME}, ${OPERATOR_ADDRESS}.`,
-          `E-posta: ${OPERATOR_EMAIL}`,
+          { before: 'E-posta: ', isEmail: true, after: '' },
         ],
       },
       {
@@ -226,7 +232,7 @@ const content: Record<Language, PolicyContent> = {
         paragraphs: [
           'GDPR kapsamında veri sorumlusuna karşı aşağıdaki haklara sahipsiniz:',
           '• Erişim hakkı (Madde 15)\n• Düzeltme hakkı (Madde 16)\n• Silme hakkı (Madde 17)\n• İşlemeyi kısıtlama hakkı (Madde 18)\n• İşlemeye itiraz hakkı (Madde 21)\n• Veri taşınabilirliği hakkı (Madde 20)',
-          `Haklarınızı kullanmak için lütfen e-posta ile iletişime geçin: ${OPERATOR_EMAIL}`,
+          { before: 'Haklarınızı kullanmak için lütfen e-posta ile iletişime geçin: ', isEmail: true, after: '' },
           'Başka bir idari veya yargısal başvuru yoluna halel gelmeksizin, verilerinizin GDPR\'a aykırı olarak işlendiğine inanıyorsanız bir veri koruma denetim makamına şikayette bulunma hakkına sahipsiniz.',
         ],
       },
@@ -255,9 +261,17 @@ export function PrivacyPageContent() {
         <section key={section.heading} className="rounded-lg border border-white/10 bg-surface p-5 space-y-3">
           <h2 className="text-lg font-semibold text-primary">{section.heading}</h2>
           <div className="space-y-3 leading-7 text-muted">
-            {section.paragraphs.map((para, i) => (
-              <p key={i} className="whitespace-pre-line">{para}</p>
-            ))}
+            {section.paragraphs.map((para, i) =>
+              typeof para === 'string' ? (
+                <p key={i} className="whitespace-pre-line">{para}</p>
+              ) : (
+                <p key={i}>
+                  {para.before}
+                  <ObfuscatedEmail />
+                  {para.after}
+                </p>
+              ),
+            )}
           </div>
         </section>
       ))}
