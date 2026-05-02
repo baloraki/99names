@@ -133,6 +133,8 @@ export type Dict = {
     pushNudgeBody: string
     pushNudgeEnable: string
     pushNudgeLater: string
+    pwaInstallTitle: string
+    pwaInstallBody: string
   }
   contact: {
     eyebrow: string
@@ -306,6 +308,8 @@ const de: Dict = {
     pushNudgeBody: 'Aktiviere Push-Benachrichtigungen, damit du beim Lernen leichter am Ball bleibst.',
     pushNudgeEnable: 'Aktivieren',
     pushNudgeLater: 'Nicht jetzt',
+    pwaInstallTitle: 'App installieren',
+    pwaInstallBody: 'Installiere Daily Husna als App für schnelleren Zugriff und Push-Benachrichtigungen.',
   },
   contact: {
     eyebrow: 'Kontakt',
@@ -479,6 +483,8 @@ const tr: Dict = {
     pushNudgeBody: 'Öğrenme düzenini korumak için push bildirimlerini etkinleştirebilirsin.',
     pushNudgeEnable: 'Etkinleştir',
     pushNudgeLater: 'Şimdi değil',
+    pwaInstallTitle: 'Uygulamayı yükle',
+    pwaInstallBody: 'Daha hızlı erişim ve push bildirimleri için Daily Husna\'yı uygulama olarak yükle.',
   },
   contact: {
     eyebrow: 'İletişim',
@@ -652,6 +658,8 @@ const en: Dict = {
     pushNudgeBody: 'Enable push notifications to keep your learning rhythm going.',
     pushNudgeEnable: 'Enable',
     pushNudgeLater: 'Not now',
+    pwaInstallTitle: 'Install the app',
+    pwaInstallBody: 'Install Daily Husna as an app for faster access and push notifications.',
   },
   contact: {
     eyebrow: 'Contact',

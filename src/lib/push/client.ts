@@ -4,10 +4,23 @@ const serviceWorkerPath = '/sw.js'
 const pushEnabledKey = '99names.pushReminders.enabled'
 const pushIntervalKey = '99names.pushReminders.interval'
 const pushPromptNextEligibleAtKey = '99names.pushReminders.softPrompt.nextEligibleAt'
+const pwaPromptDeferredKey = '99names.pwa.promptDeferred'
 
 const DAY_IN_MS = 24 * 60 * 60 * 1000
 const PUSH_SOFT_PROMPT_COOLDOWN_DAYS = 30
 const PUSH_SOFT_PROMPT_COOLDOWN_MS = PUSH_SOFT_PROMPT_COOLDOWN_DAYS * DAY_IN_MS
+
+// Global variable to store the beforeinstallprompt event
+let deferredPwaPrompt: BeforeInstallPromptEvent | null = null
+
+interface BeforeInstallPromptEvent extends Event {
+  readonly platforms: string[]
+  readonly userChoice: Promise<{
+    outcome: 'accepted' | 'dismissed'
+    platform: string
+  }>
+  prompt(): Promise<void>
+}
 
 export function isPushSupported(): boolean {
   return (
@@ -135,6 +148,72 @@ export function shouldShowPushSoftPrompt(vapidPublicKey: string, now = Date.now(
 export function postponePushSoftPrompt(now = Date.now()): void {
   try {
     window.localStorage.setItem(pushPromptNextEligibleAtKey, String(now + PUSH_SOFT_PROMPT_COOLDOWN_MS))
+  } catch {
+    // localStorage can be unavailable in private modes or strict browser settings.
+  }
+}
+
+// PWA Installation functions
+export function capturePwaInstallPrompt(): void {
+  if (typeof window === 'undefined') return
+
+  window.addEventListener('beforeinstallprompt', (event: Event) => {
+    // Prevent the browser's default install prompt
+    event.preventDefault()
+    // Store the event for later use
+    deferredPwaPrompt = event as BeforeInstallPromptEvent
+  })
+}
+
+export function isPwaInstallable(): boolean {
+  return deferredPwaPrompt !== null
+}
+
+export function isPwaInstalled(): boolean {
+  if (typeof window === 'undefined') return false
+  if (typeof window.matchMedia !== 'function') return false
+
+  // Check if app is running in standalone mode (installed PWA)
+  const nav = window.navigator as { standalone?: boolean }
+  return (
+    window.matchMedia('(display-mode: standalone)').matches ||
+    nav.standalone === true || // iOS Safari
+    document.referrer.includes('android-app://')
+  )
+}
+
+export async function promptPwaInstall(): Promise<'accepted' | 'dismissed' | 'unavailable'> {
+  if (!deferredPwaPrompt) {
+    return 'unavailable'
+  }
+
+  try {
+    // Show the install prompt
+    await deferredPwaPrompt.prompt()
+
+    // Wait for the user to respond to the prompt
+    const { outcome } = await deferredPwaPrompt.userChoice
+
+    // Clear the deferred prompt
+    deferredPwaPrompt = null
+
+    return outcome
+  } catch {
+    return 'dismissed'
+  }
+}
+
+export function hasPwaPromptBeenDeferred(): boolean {
+  try {
+    return window.localStorage.getItem(pwaPromptDeferredKey) === 'yes'
+  } catch {
+    return false
+  }
+}
+
+export function markPwaPromptAsDeferred(): void {
+  try {
+    window.localStorage.setItem(pwaPromptDeferredKey, 'yes')
   } catch {
     // localStorage can be unavailable in private modes or strict browser settings.
   }
