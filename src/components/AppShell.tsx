@@ -10,6 +10,7 @@ import { isLanguage } from '@/lib/languagePreference'
 import { getEquivalentLocalizedPath, getLocalizedSeoPath, getLocalizedSettingsPath, getLocalizedStaticPath } from '@/lib/seo'
 import { storage } from '@/lib/storage'
 import type { Language } from '@/types/language'
+import { PushPermissionNudge } from './PushPermissionNudge'
 
 const getNavItems = (language: Language) => [
   { href: language === 'de' ? '/de' : language === 'tr' ? '/tr' : '/', key: 'home', icon: HomeIcon },
@@ -115,6 +116,12 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
           </div>
         </div>
       </header>
+      <PushPermissionNudge
+        title={dict.settings.pushNudgeTitle}
+        body={dict.settings.pushNudgeBody}
+        enableLabel={dict.settings.pushNudgeEnable}
+        laterLabel={dict.settings.pushNudgeLater}
+      />
       <main className="mx-auto w-full max-w-6xl px-4 pb-32 pt-6 md:pb-12">{children}</main>
 
       <footer className="hidden md:block border-t border-white/10 bg-background/60 py-4 text-xs text-muted">

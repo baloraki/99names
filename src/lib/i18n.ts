@@ -105,6 +105,10 @@ export type Dict = {
     iosPushUnavailable: string
     iosPwaNote: string
     notificationNote: string
+    pushNudgeTitle: string
+    pushNudgeBody: string
+    pushNudgeEnable: string
+    pushNudgeLater: string
   }
   contact: {
     eyebrow: string
@@ -246,6 +250,10 @@ const de: Dict = {
     iosPushUnavailable: 'Push-Erinnerungen sind auf iOS nicht verfügbar.',
     iosPwaNote: 'iPhone-Hinweis: Daily Husna bleibt im Browser vollständig nutzbar. Push-Erinnerungen werden auf iOS hier nicht angeboten. Bitte nutze die App ohne Push-Benachrichtigungen.',
     notificationNote: 'Push-Erinnerungen sind optional und werden erst nach ausdrücklicher Aktivierung im Browser eingerichtet.',
+    pushNudgeTitle: 'Bleib dran mit kurzen Erinnerungen',
+    pushNudgeBody: 'Aktiviere Push-Benachrichtigungen, damit du beim Lernen leichter am Ball bleibst.',
+    pushNudgeEnable: 'Aktivieren',
+    pushNudgeLater: 'Nicht jetzt',
   },
   contact: {
     eyebrow: 'Kontakt',
@@ -387,6 +395,10 @@ const tr: Dict = {
     iosPushUnavailable: 'Push hatırlatmaları iOS\'ta kullanılamaz.',
     iosPwaNote: 'iPhone notu: Daily Husna tarayıcıda tamamen kullanılabilir. iOS\'ta push hatırlatmaları burada sunulmuyor. Lütfen uygulamayı push bildirimleri olmadan kullan.',
     notificationNote: 'Push hatırlatmaları isteğe bağlıdır ve yalnızca tarayıcıda açıkça etkinleştirildikten sonra kurulur.',
+    pushNudgeTitle: 'Kısa hatırlatmalarla devam et',
+    pushNudgeBody: 'Öğrenme düzenini korumak için push bildirimlerini etkinleştirebilirsin.',
+    pushNudgeEnable: 'Etkinleştir',
+    pushNudgeLater: 'Şimdi değil',
   },
   contact: {
     eyebrow: 'İletişim',
@@ -528,6 +540,10 @@ const en: Dict = {
     iosPushUnavailable: 'Push reminders are not available on iOS.',
     iosPwaNote: 'iPhone note: Daily Husna works fully in the browser. Push reminders are not offered on iOS here. Please use the app without push notifications.',
     notificationNote: 'Push reminders are optional and are created only after explicit browser activation.',
+    pushNudgeTitle: 'Stay on track with quick reminders',
+    pushNudgeBody: 'Enable push notifications to keep your learning rhythm going.',
+    pushNudgeEnable: 'Enable',
+    pushNudgeLater: 'Not now',
   },
   contact: {
     eyebrow: 'Contact',

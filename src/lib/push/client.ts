@@ -1,6 +1,13 @@
 import type { ReminderInterval } from './reminders'
 
 const serviceWorkerPath = '/sw.js'
+const pushEnabledKey = '99names.pushReminders.enabled'
+const pushIntervalKey = '99names.pushReminders.interval'
+const pushPromptNextEligibleAtKey = '99names.pushReminders.softPrompt.nextEligibleAt'
+
+const DAY_IN_MS = 24 * 60 * 60 * 1000
+const PUSH_SOFT_PROMPT_COOLDOWN_DAYS = 30
+const PUSH_SOFT_PROMPT_COOLDOWN_MS = PUSH_SOFT_PROMPT_COOLDOWN_DAYS * DAY_IN_MS
 
 export function isPushSupported(): boolean {
   return (
@@ -8,6 +15,15 @@ export function isPushSupported(): boolean {
     'serviceWorker' in navigator &&
     'PushManager' in window &&
     'Notification' in window
+  )
+}
+
+export function isIOSDevice(): boolean {
+  if (typeof navigator === 'undefined') return false
+
+  return (
+    /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
   )
 }
 
@@ -78,8 +94,8 @@ export function getBrowserTimeZone(): string {
 
 export function persistPushReminderSettings(enabled: boolean, interval: ReminderInterval): void {
   try {
-    window.localStorage.setItem('99names.pushReminders.enabled', enabled ? 'yes' : 'no')
-    window.localStorage.setItem('99names.pushReminders.interval', interval)
+    window.localStorage.setItem(pushEnabledKey, enabled ? 'yes' : 'no')
+    window.localStorage.setItem(pushIntervalKey, interval)
   } catch {
     // localStorage can be unavailable in private modes or strict browser settings.
   }
@@ -87,8 +103,8 @@ export function persistPushReminderSettings(enabled: boolean, interval: Reminder
 
 export function readPersistedPushReminderSettings(): { enabled: boolean; interval: ReminderInterval } {
   try {
-    const enabled = window.localStorage.getItem('99names.pushReminders.enabled') === 'yes'
-    const interval = window.localStorage.getItem('99names.pushReminders.interval')
+    const enabled = window.localStorage.getItem(pushEnabledKey) === 'yes'
+    const interval = window.localStorage.getItem(pushIntervalKey)
 
     return {
       enabled,
@@ -101,3 +117,26 @@ export function readPersistedPushReminderSettings(): { enabled: boolean; interva
     }
   }
 }
+
+export function shouldShowPushSoftPrompt(vapidPublicKey: string, now = Date.now()): boolean {
+  if (!vapidPublicKey) return false
+  if (!isPushSupported() || isIOSDevice()) return false
+  if (typeof Notification === 'undefined' || Notification.permission !== 'default') return false
+
+  try {
+    const nextEligibleAt = Number(window.localStorage.getItem(pushPromptNextEligibleAtKey) ?? '0')
+    if (!Number.isFinite(nextEligibleAt)) return true
+    return nextEligibleAt <= now
+  } catch {
+    return true
+  }
+}
+
+export function postponePushSoftPrompt(now = Date.now()): void {
+  try {
+    window.localStorage.setItem(pushPromptNextEligibleAtKey, String(now + PUSH_SOFT_PROMPT_COOLDOWN_MS))
+  } catch {
+    // localStorage can be unavailable in private modes or strict browser settings.
+  }
+}
+
