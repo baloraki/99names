@@ -469,7 +469,7 @@ function CardMode({
       <section
         ref={cardRef}
         key={name.id}
-        className="relative touch-pan-y select-none rounded-lg border border-gold/20 bg-[radial-gradient(circle_at_top,rgba(214,178,94,0.14),rgba(22,22,22,0.99)_60%)] p-6"
+        className="relative touch-pan-y select-none rounded-lg border border-gold/20 flashcard-gradient-surface p-6"
         style={{
           opacity: fading ? 0 : 1,
           transform: cardTransform,

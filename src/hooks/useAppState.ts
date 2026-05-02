@@ -6,6 +6,7 @@ import type { LearnMode, LearnState } from '@/types/learnState'
 import type { ProgressState } from '@/types/progress'
 import { markLearned, toggleFavorite, unmarkLearned } from '@/lib/progress'
 import { storage } from '@/lib/storage'
+import type { ThemeName } from '@/types/theme'
 import { bumpStreak } from '@/lib/streak'
 
 const initialProgress: ProgressState = {
@@ -26,6 +27,7 @@ export function useAppState() {
   const [ready, setReady] = useState(false)
   const [language, setLanguageState] = useState<Language>('en')
   const [progress, setProgressState] = useState<ProgressState>(initialProgress)
+  const [theme, setThemeState] = useState<ThemeName>('blue-night')
   const [learnState, setLearnStateValue] = useState<LearnState>(initialLearnState)
 
   useEffect(() => {
@@ -33,6 +35,9 @@ export function useAppState() {
       const storedLanguage = storage.getLanguage()
       setLanguageState(storedLanguage)
       setProgressState(storage.getProgress())
+      const storedTheme = storage.getTheme()
+      setThemeState(storedTheme)
+      document.documentElement.dataset.theme = storedTheme
       setLearnStateValue(storage.getLearnState())
       document.documentElement.lang = storedLanguage
       setReady(true)
@@ -68,6 +73,11 @@ export function useAppState() {
         storage.setLanguage(next)
         document.documentElement.lang = next
         window.dispatchEvent(new CustomEvent('app-language-change', { detail: next }))
+      },
+      setTheme(next: ThemeName) {
+        setThemeState(next)
+        storage.setTheme(next)
+        document.documentElement.dataset.theme = next
       },
       markLearned(id: number, slug?: string) {
         setProgressState((current) => {
@@ -154,5 +164,5 @@ export function useAppState() {
     }
   }, [])
 
-  return { ready, language, progress, learnState, actions }
+  return { ready, language, theme, progress, learnState, actions }
 }

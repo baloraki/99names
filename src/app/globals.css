@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #080808;
-  --color-background-soft: #111111;
-  --color-surface: #161616;
-  --color-surface-soft: #1f1f1f;
+  --color-background: #060915;
+  --color-background-soft: #0d1324;
+  --color-surface: #151c31;
+  --color-surface-soft: #1e2742;
   --color-gold: #d6b25e;
   --color-gold-soft: #f0d98a;
   --color-gold-muted: #8f7338;
@@ -12,14 +12,50 @@
   --color-muted: #b8b2a4;
   --color-danger: #f87171;
   --color-success: #86efac;
+  --color-hero-accent: rgba(214, 178, 94, 0.2);
+  --color-hero-surface-end: rgba(30, 39, 66, 0.92);
+  --color-hero-surface-end-strong: rgba(30, 39, 66, 0.94);
+  --color-btn-secondary-border: rgba(255, 255, 255, 0.14);
+  --color-btn-secondary-bg: rgba(255, 255, 255, 0.09);
+  --color-btn-secondary-border-hover: rgba(255, 255, 255, 0.22);
+  --color-btn-secondary-bg-hover: rgba(255, 255, 255, 0.14);
+  --color-btn-secondary-bg-active: rgba(255, 255, 255, 0.18);
+  --color-nav-link-active-bg: rgba(214, 178, 94, 0.18);
+  --color-nav-link-active-text: #f7e5ae;
+  --color-surface-subtle: rgba(255, 255, 255, 0.06);
 }
 
+
+html[data-theme='dark-classic'] {
+  --color-background: #080808;
+  --color-background-soft: #111111;
+  --color-surface: #161616;
+  --color-surface-soft: #1f1f1f;
+  --color-hero-surface-end: rgba(22, 22, 22, 0.96);
+  --color-hero-surface-end-strong: rgba(22, 22, 22, 0.99);
+}
+
+html[data-theme='blue-night'] {
+  --color-background: #060915;
+  --color-background-soft: #0d1324;
+  --color-surface: #151c31;
+  --color-surface-soft: #1e2742;
+}
+
+html[data-theme='soft-light'] {
+  --color-background: #1f2940;
+  --color-background-soft: #2a3552;
+  --color-surface: #344161;
+  --color-surface-soft: #415073;
+  --color-muted: #ddd7cb;
+  --color-primary: #ffffff;
+}
 * {
   box-sizing: border-box;
 }
 
 html {
-  background: #080808;
+  background: var(--color-background);
 }
 
 body {
@@ -41,10 +77,10 @@ textarea {
 
 .star-field {
   background:
-    radial-gradient(circle at 20% 15%, rgba(214, 178, 94, 0.16), transparent 26rem),
-    radial-gradient(circle at 82% 8%, rgba(240, 217, 138, 0.08), transparent 22rem),
-    radial-gradient(circle at 50% 80%, rgba(214, 178, 94, 0.06), transparent 24rem),
-    #080808;
+    radial-gradient(circle at 20% 15%, rgba(214, 178, 94, 0.22), transparent 26rem),
+    radial-gradient(circle at 82% 8%, rgba(56, 189, 248, 0.16), transparent 22rem),
+    radial-gradient(circle at 50% 80%, rgba(168, 85, 247, 0.12), transparent 24rem),
+    var(--color-background);
 }
 
 .star-field::before {
@@ -88,7 +124,7 @@ textarea {
 }
 
 .focus-ring:focus-visible {
-  box-shadow: 0 0 0 2px #d6b25e, 0 0 0 5px #080808;
+  box-shadow: 0 0 0 2px #d6b25e, 0 0 0 5px var(--color-background);
 }
 
 .btn-primary,
@@ -108,12 +144,12 @@ textarea {
 .btn-primary {
   border: 1px solid rgba(214, 178, 94, 0.68);
   background: #d6b25e;
-  color: #080808;
+  color: var(--color-background);
 }
 
 .btn-secondary {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-btn-secondary-border);
+  background: var(--color-btn-secondary-bg);
   color: #f7f3e8;
 }
 
@@ -129,12 +165,21 @@ textarea {
   transform: translateY(-1px);
 }
 
+.btn-secondary:hover {
+  border-color: var(--color-btn-secondary-border-hover);
+  background: var(--color-btn-secondary-bg-hover);
+}
+
+.btn-secondary:active {
+  background: var(--color-btn-secondary-bg-active);
+}
+
 .btn-primary:focus-visible,
 .btn-secondary:focus-visible,
 .btn-danger:focus-visible,
 .chip:focus-visible,
 .field:focus-visible {
-  box-shadow: 0 0 0 2px #d6b25e, 0 0 0 5px #080808;
+  box-shadow: 0 0 0 2px #d6b25e, 0 0 0 5px var(--color-background);
 }
 
 .nav-link {
@@ -152,8 +197,8 @@ textarea {
 
 .nav-link:hover,
 .nav-link-active {
-  background: rgba(214, 178, 94, 0.11);
-  color: #f0d98a;
+  background: var(--color-nav-link-active-bg);
+  color: var(--color-nav-link-active-text);
 }
 
 .header-icon-link {
@@ -174,6 +219,18 @@ textarea {
   color: #f0d98a;
 }
 
+.surface-subtle {
+  background: var(--color-surface-subtle);
+}
+
+.hero-gradient-surface {
+  background: radial-gradient(circle at top, var(--color-hero-accent), var(--color-hero-surface-end) 60%);
+}
+
+.flashcard-gradient-surface {
+  background: radial-gradient(circle at top, var(--color-hero-accent), var(--color-hero-surface-end-strong) 62%);
+}
+
 .app-header {
   transition: transform 180ms ease;
   will-change: transform;
@@ -190,7 +247,7 @@ textarea {
 .header-icon-link:focus-visible,
 .mobile-menu-item:focus-visible,
 .mobile-menu-toggle:focus-visible {
-  box-shadow: 0 0 0 2px #d6b25e, 0 0 0 5px #080808;
+  box-shadow: 0 0 0 2px #d6b25e, 0 0 0 5px var(--color-background);
 }
 
 .mobile-menu-backdrop {
@@ -206,7 +263,7 @@ textarea {
   margin: 0 auto 1rem;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 8px;
-  background: rgba(8, 8, 8, 0.96);
+  background: rgba(6, 9, 21, 0.96);
   padding: 0.5rem;
   box-shadow: 0 18px 48px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(18px);
@@ -308,7 +365,7 @@ textarea {
   width: 100%;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  background: #111111;
+  background: #0d1324;
   color: #f7f3e8;
   outline: none;
   padding: 0.75rem 0.9rem;
@@ -318,7 +375,7 @@ textarea {
   min-height: 42px;
   border-radius: 8px;
   border: 1px solid rgba(214, 178, 94, 0.42);
-  background: #111111;
+  background: #0d1324;
   color: #f7f3e8;
   outline: none;
   padding: 0.55rem 2rem 0.55rem 0.75rem;
@@ -329,5 +386,5 @@ textarea {
 }
 
 .language-select:focus-visible {
-  box-shadow: 0 0 0 2px #d6b25e, 0 0 0 5px #080808;
+  box-shadow: 0 0 0 2px #d6b25e, 0 0 0 5px var(--color-background);
 }

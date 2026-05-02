@@ -83,9 +83,11 @@ describe('AppShell', () => {
     for (const link of screen.getAllByRole('link', { name: 'Namen' })) {
       expect(link).toHaveAttribute('href', '/de/namen')
     }
-    const settingsLink = screen.getByRole('link', { name: 'Einstellungen' })
-    expect(settingsLink).toHaveAttribute('href', '/de/einstellungen')
-    expect(settingsLink).toHaveAttribute('aria-current', 'page')
+    expect(screen.getAllByRole('link', { name: 'Einstellungen' })).toHaveLength(2)
+    for (const settingsLink of screen.getAllByRole('link', { name: 'Einstellungen' })) {
+      expect(settingsLink).toHaveAttribute('href', '/de/einstellungen')
+      expect(settingsLink).toHaveAttribute('aria-current', 'page')
+    }
     expect(screen.getByRole('link', { name: 'Über uns' })).toHaveAttribute('href', '/de/uber-uns')
     expect(screen.getByRole('link', { name: 'Kontakt' })).toHaveAttribute('href', '/de/kontakt')
     expect(screen.getByRole('link', { name: 'Datenschutz' })).toHaveAttribute('href', '/de/datenschutz')
