@@ -307,9 +307,10 @@ export const staticSitemapPages = [
   { path: '/tr/dua', priority: 0.8, changeFrequency: 'monthly', alternates: seoPageAlternates('dua') },
   { path: '/tr/tefekkur', priority: 0.75, changeFrequency: 'monthly', alternates: seoPageAlternates('reflections') },
   { path: '/tr/quiz', priority: 0.65, changeFrequency: 'monthly', alternates: seoPageAlternates('quiz') },
+  { path: '/about', priority: 0.5, changeFrequency: 'yearly' },
   { path: '/settings', priority: 0.35, changeFrequency: 'yearly' },
   { path: '/privacy', priority: 0.3, changeFrequency: 'yearly' },
-  { path: '/imprint', priority: 0.3, changeFrequency: 'yearly' },
+  { path: '/imprint', priority: 0.25, changeFrequency: 'yearly' },
   { path: '/contact', priority: 0.3, changeFrequency: 'yearly' },
   { path: '/offline', priority: 0.2, changeFrequency: 'yearly' },
 ] as const satisfies ReadonlyArray<{

@@ -93,6 +93,16 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
         </div>
       </header>
       <main className="mx-auto w-full max-w-6xl px-4 pb-28 pt-6 md:pb-12">{children}</main>
+
+      <footer className="hidden md:block border-t border-white/10 bg-background/60 py-4 text-xs text-muted">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-6 gap-y-1 px-4">
+          <Link href="/about" className="hover:text-gold transition-colors">{language === 'de' ? 'Über uns' : language === 'tr' ? 'Hakkımızda' : 'About'}</Link>
+          <Link href="/contact" className="hover:text-gold transition-colors">{language === 'de' ? 'Kontakt' : language === 'tr' ? 'İletişim' : 'Contact'}</Link>
+          <Link href="/privacy" className="hover:text-gold transition-colors">{language === 'de' ? 'Datenschutz' : language === 'tr' ? 'Gizlilik' : 'Privacy'}</Link>
+          <Link href="/imprint" className="hover:text-gold transition-colors">{language === 'de' ? 'Impressum' : language === 'tr' ? 'Künye' : 'Imprint'}</Link>
+        </div>
+      </footer>
+
       <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-background/95 px-2 py-2 backdrop-blur md:hidden" aria-label={dict.nav.mobile}>
         <div className="mx-auto grid max-w-md grid-cols-4 gap-1">
           {navItems.map((item) => {

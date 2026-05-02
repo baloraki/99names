@@ -2,9 +2,25 @@
 
 import type { FormEvent, ReactNode } from 'react'
 import { useState } from 'react'
+import Link from 'next/link'
 import { useAppState } from '@/hooks/useAppState'
 import { getDict } from '@/lib/i18n'
 import { validateContactForm } from '@/lib/validation'
+
+const privacyNote: Record<string, { text: string; linkLabel: string }> = {
+  de: {
+    text: 'Die von Ihnen eingegebenen Daten (Name, E-Mail, Nachricht) werden über Web3Forms verarbeitet und direkt per E-Mail an uns weitergeleitet. Es findet keine Speicherung der Daten auf den Servern von Web3Forms statt. Weitere Informationen finden Sie in unserer ',
+    linkLabel: 'Datenschutzerklärung',
+  },
+  en: {
+    text: 'The data you enter (name, email, message) is processed via Web3Forms and forwarded directly to us by email. According to Web3Forms, no data is stored on their servers. For details see our ',
+    linkLabel: 'Privacy Policy',
+  },
+  tr: {
+    text: 'Girdiğiniz veriler (ad, e-posta, mesaj) Web3Forms aracılığıyla işlenerek doğrudan e-posta ile tarafımıza iletilir. Web3Forms\'un belirttiğine göre veriler kendi sunucularında saklanmamaktadır. Ayrıntılar için ',
+    linkLabel: 'Gizlilik Politikamıza',
+  },
+}
 
 const maxMessageLength = 2000
 
@@ -68,6 +84,15 @@ export function ContactForm() {
       {status === 'missing-key' && <p className="text-sm text-danger">{dict.contact.noKey}</p>}
       {status === 'success' && <p className="text-sm text-success">{dict.contact.success}</p>}
       {status === 'error' && <p className="text-sm text-danger">{dict.contact.error}</p>}
+      {/* DSGVO / GDPR privacy notice */}
+      <p className="rounded-md border border-white/10 bg-surface px-4 py-3 text-xs leading-6 text-muted">
+        {privacyNote[language]?.text ?? privacyNote.en.text}
+        <Link href="/privacy" className="text-gold underline underline-offset-2 hover:text-gold/80">
+          {privacyNote[language]?.linkLabel ?? privacyNote.en.linkLabel}
+        </Link>
+        {language === 'tr' ? ' bakabilirsiniz.' : '.'}
+      </p>
+
       <button className="btn-primary" disabled={status === 'loading'}>{status === 'loading' ? dict.contact.sending : dict.contact.send}</button>
     </form>
   )
