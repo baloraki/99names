@@ -22,6 +22,7 @@
   --color-btn-secondary-bg-active: rgba(255, 255, 255, 0.18);
   --color-nav-link-active-bg: rgba(214, 178, 94, 0.18);
   --color-nav-link-active-text: #f7e5ae;
+  --color-surface-subtle: rgba(255, 255, 255, 0.06);
 }
 
 * {
@@ -191,6 +192,10 @@ textarea {
 .header-icon-link-active {
   background: rgba(214, 178, 94, 0.16);
   color: #f0d98a;
+}
+
+.surface-subtle {
+  background: var(--color-surface-subtle);
 }
 
 .hero-gradient-surface {
