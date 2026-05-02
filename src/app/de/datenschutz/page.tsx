@@ -3,14 +3,15 @@ import { PrivacyPageContent } from '@/components/PrivacyPageContent'
 import { buildMetadata, staticPageAlternates } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Privacy Policy / Datenschutzerklärung – 99 Names Learning Aid',
+  title: 'Datenschutzerklärung – 99 Namen Lernhilfe',
   description:
-    'GDPR-compliant privacy policy for the 99 Names of Allah learning aid. Covers localStorage, Vercel Analytics, Web3Forms contact, and no cookies.',
-  path: '/privacy',
-  locale: 'en',
+    'Datenschutzerklärung der 99-Namen-Lernhilfe mit Informationen zu localStorage, Analytics, Kontaktformular und Push-Erinnerungen.',
+  path: '/de/datenschutz',
+  locale: 'de',
   alternates: staticPageAlternates('privacy'),
 })
 
-export default function PrivacyPage() {
+export default function GermanPrivacyPage() {
   return <PrivacyPageContent />
 }
+

@@ -71,4 +71,27 @@ describe('proxy', () => {
     expect(response.headers.get('location')).toBeNull()
     expect(response.cookies.get('app_language')?.value).toBe('en')
   })
+
+  it('redirects unlocalized privacy route to preferred localized route', () => {
+    const request = new NextRequest('https://99names.app/privacy', {
+      headers: { cookie: 'app_language=tr' },
+    })
+
+    const response = proxy(request)
+
+    expect(response.status).toBeGreaterThanOrEqual(300)
+    expect(response.status).toBeLessThan(400)
+    expect(response.headers.get('location')).toBe('https://99names.app/tr/gizlilik')
+    expect(response.cookies.get('app_language')?.value).toBe('tr')
+  })
+
+  it('keeps localized static route when already localized', () => {
+    const request = new NextRequest('https://99names.app/de/impressum')
+
+    const response = proxy(request)
+
+    expect(response.status).toBe(200)
+    expect(response.headers.get('location')).toBeNull()
+    expect(response.cookies.get('app_language')?.value).toBe('de')
+  })
 })

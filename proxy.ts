@@ -42,6 +42,25 @@ function getLocalizedPathname(pathname: string, language: Language): string | nu
     return '/settings'
   }
 
+  const staticPages: Record<string, Record<Language, string>> = {
+    '/about': { en: '/about', de: '/de/uber-uns', tr: '/tr/hakkimizda' },
+    '/de/uber-uns': { en: '/about', de: '/de/uber-uns', tr: '/tr/hakkimizda' },
+    '/tr/hakkimizda': { en: '/about', de: '/de/uber-uns', tr: '/tr/hakkimizda' },
+    '/contact': { en: '/contact', de: '/de/kontakt', tr: '/tr/iletisim' },
+    '/de/kontakt': { en: '/contact', de: '/de/kontakt', tr: '/tr/iletisim' },
+    '/tr/iletisim': { en: '/contact', de: '/de/kontakt', tr: '/tr/iletisim' },
+    '/privacy': { en: '/privacy', de: '/de/datenschutz', tr: '/tr/gizlilik' },
+    '/de/datenschutz': { en: '/privacy', de: '/de/datenschutz', tr: '/tr/gizlilik' },
+    '/tr/gizlilik': { en: '/privacy', de: '/de/datenschutz', tr: '/tr/gizlilik' },
+    '/imprint': { en: '/imprint', de: '/de/impressum', tr: '/tr/kunye' },
+    '/de/impressum': { en: '/imprint', de: '/de/impressum', tr: '/tr/kunye' },
+    '/tr/kunye': { en: '/imprint', de: '/de/impressum', tr: '/tr/kunye' },
+  }
+
+  if (staticPages[pathname]) {
+    return staticPages[pathname][language]
+  }
+
   const seoPages: Record<string, Record<Language, string>> = {
     '/asma-ul-husna': { en: '/asma-ul-husna', de: '/de/asma-ul-husna', tr: '/tr/esmaul-husna-nedir' },
     '/de/asma-ul-husna': { en: '/asma-ul-husna', de: '/de/asma-ul-husna', tr: '/tr/esmaul-husna-nedir' },

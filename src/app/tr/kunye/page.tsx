@@ -3,14 +3,17 @@ import { ImprintPageContent } from '@/components/ImprintPageContent'
 import { buildMetadata, staticPageAlternates } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Imprint / Impressum – 99 Names Learning Aid',
-  description: 'Legal notice (Impressum) for the 99 Names of Allah learning aid, pursuant to § 5 TMG and § 18 Abs. 2 MStV.',
-  path: '/imprint',
-  locale: 'en',
+  title: "Künye – Allah'ın 99 İsmi Öğrenme Yardımı",
+  description:
+    '99 isim öğrenme yardımı için yasal bildirim ve sorumlu kişi bilgileri.',
+  path: '/tr/kunye',
+  locale: 'tr',
   alternates: staticPageAlternates('imprint'),
   index: false,
 })
 
-export default function ImprintPage() {
+export default function TurkishImprintPage() {
   return <ImprintPageContent />
 }
+
+

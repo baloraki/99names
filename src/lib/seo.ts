@@ -53,6 +53,44 @@ export function getLocalizedSettingsPath(locale: Language): string {
   return '/settings'
 }
 
+export type LocalizedStaticPage = 'about' | 'contact' | 'privacy' | 'imprint'
+
+const localizedStaticPaths: Record<LocalizedStaticPage, Record<Language, string>> = {
+  about: {
+    en: '/about',
+    de: '/de/uber-uns',
+    tr: '/tr/hakkimizda',
+  },
+  contact: {
+    en: '/contact',
+    de: '/de/kontakt',
+    tr: '/tr/iletisim',
+  },
+  privacy: {
+    en: '/privacy',
+    de: '/de/datenschutz',
+    tr: '/tr/gizlilik',
+  },
+  imprint: {
+    en: '/imprint',
+    de: '/de/impressum',
+    tr: '/tr/kunye',
+  },
+}
+
+export function getLocalizedStaticPath(page: LocalizedStaticPage, locale: Language): string {
+  return localizedStaticPaths[page][locale]
+}
+
+export function staticPageAlternates(page: LocalizedStaticPage): Record<string, string> {
+  return {
+    en: localizedStaticPaths[page].en,
+    de: localizedStaticPaths[page].de,
+    tr: localizedStaticPaths[page].tr,
+    'x-default': localizedStaticPaths[page].en,
+  }
+}
+
 export type LocalizedSeoPage = 'asma' | 'learn' | 'dua' | 'reflections' | 'quiz'
 
 const localizedSeoPaths: Record<LocalizedSeoPage, Record<Language, string>> = {
@@ -111,6 +149,12 @@ export function getEquivalentLocalizedPath(pathname: string, targetLocale: Langu
 
   if (pathname === '/settings' || pathname === '/de/einstellungen' || pathname === '/tr/ayarlar') {
     return getLocalizedSettingsPath(targetLocale)
+  }
+
+  for (const [page, paths] of Object.entries(localizedStaticPaths) as Array<[LocalizedStaticPage, Record<Language, string>]>) {
+    if (Object.values(paths).includes(pathname)) {
+      return getLocalizedStaticPath(page, targetLocale)
+    }
   }
 
   for (const [page, paths] of Object.entries(localizedSeoPaths) as Array<[LocalizedSeoPage, Record<Language, string>]>) {
@@ -326,13 +370,21 @@ export const staticSitemapPages = [
   { path: '/tr/dua', priority: 0.8, changeFrequency: 'monthly', alternates: seoPageAlternates('dua') },
   { path: '/tr/tefekkur', priority: 0.75, changeFrequency: 'monthly', alternates: seoPageAlternates('reflections') },
   { path: '/tr/quiz', priority: 0.65, changeFrequency: 'monthly', alternates: seoPageAlternates('quiz') },
-  { path: '/about', priority: 0.5, changeFrequency: 'yearly' },
+  { path: '/about', priority: 0.5, changeFrequency: 'yearly', alternates: staticPageAlternates('about') },
+  { path: '/de/uber-uns', priority: 0.5, changeFrequency: 'yearly', alternates: staticPageAlternates('about') },
+  { path: '/tr/hakkimizda', priority: 0.5, changeFrequency: 'yearly', alternates: staticPageAlternates('about') },
+  { path: '/contact', priority: 0.3, changeFrequency: 'yearly', alternates: staticPageAlternates('contact') },
+  { path: '/de/kontakt', priority: 0.3, changeFrequency: 'yearly', alternates: staticPageAlternates('contact') },
+  { path: '/tr/iletisim', priority: 0.3, changeFrequency: 'yearly', alternates: staticPageAlternates('contact') },
+  { path: '/privacy', priority: 0.3, changeFrequency: 'yearly', alternates: staticPageAlternates('privacy') },
+  { path: '/de/datenschutz', priority: 0.3, changeFrequency: 'yearly', alternates: staticPageAlternates('privacy') },
+  { path: '/tr/gizlilik', priority: 0.3, changeFrequency: 'yearly', alternates: staticPageAlternates('privacy') },
+  { path: '/imprint', priority: 0.25, changeFrequency: 'yearly', alternates: staticPageAlternates('imprint') },
+  { path: '/de/impressum', priority: 0.25, changeFrequency: 'yearly', alternates: staticPageAlternates('imprint') },
+  { path: '/tr/kunye', priority: 0.25, changeFrequency: 'yearly', alternates: staticPageAlternates('imprint') },
   { path: '/settings', priority: 0.35, changeFrequency: 'yearly', alternates: settingsAlternates() },
   { path: '/de/einstellungen', priority: 0.35, changeFrequency: 'yearly', alternates: settingsAlternates() },
   { path: '/tr/ayarlar', priority: 0.35, changeFrequency: 'yearly', alternates: settingsAlternates() },
-  { path: '/privacy', priority: 0.3, changeFrequency: 'yearly' },
-  { path: '/imprint', priority: 0.25, changeFrequency: 'yearly' },
-  { path: '/contact', priority: 0.3, changeFrequency: 'yearly' },
   { path: '/offline', priority: 0.2, changeFrequency: 'yearly' },
 ] as const satisfies ReadonlyArray<{
   path: string

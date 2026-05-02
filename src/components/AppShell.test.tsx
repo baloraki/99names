@@ -74,6 +74,10 @@ describe('AppShell', () => {
     for (const link of screen.getAllByRole('link', { name: 'Einstellungen' })) {
       expect(link).toHaveAttribute('href', '/de/einstellungen')
     }
+    expect(screen.getByRole('link', { name: 'Über uns' })).toHaveAttribute('href', '/de/uber-uns')
+    expect(screen.getByRole('link', { name: 'Kontakt' })).toHaveAttribute('href', '/de/kontakt')
+    expect(screen.getByRole('link', { name: 'Datenschutz' })).toHaveAttribute('href', '/de/datenschutz')
+    expect(screen.getByRole('link', { name: 'Impressum' })).toHaveAttribute('href', '/de/impressum')
   })
 
   it('keeps English content routes bound to the English navigation when the route is English', () => {
@@ -93,6 +97,28 @@ describe('AppShell', () => {
     for (const link of screen.getAllByRole('link', { name: 'Settings' })) {
       expect(link).toHaveAttribute('href', '/settings')
     }
+    expect(screen.getByRole('link', { name: 'About' })).toHaveAttribute('href', '/about')
+    expect(screen.getByRole('link', { name: 'Contact' })).toHaveAttribute('href', '/contact')
+    expect(screen.getByRole('link', { name: 'Privacy' })).toHaveAttribute('href', '/privacy')
+    expect(screen.getByRole('link', { name: 'Imprint' })).toHaveAttribute('href', '/imprint')
+  })
+
+  it('updates static footer links when routeLanguage changes', () => {
+    const { rerender } = render(
+      <AppShell routeLanguage="en">
+        <div>Content</div>
+      </AppShell>,
+    )
+
+    expect(screen.getByRole('link', { name: 'About' })).toHaveAttribute('href', '/about')
+
+    rerender(
+      <AppShell routeLanguage="de">
+        <div>Inhalt</div>
+      </AppShell>,
+    )
+
+    expect(screen.getByRole('link', { name: 'Über uns' })).toHaveAttribute('href', '/de/uber-uns')
   })
 
   it('copies the current page link when native sharing is unavailable', async () => {

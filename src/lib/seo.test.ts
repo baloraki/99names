@@ -7,10 +7,12 @@ import {
   getLocalizedNamePath,
   getLocalizedSeoPath,
   getLocalizedSettingsPath,
+  getLocalizedStaticPath,
   getNamePageMetadata,
   nameAlternates,
   seoPageAlternates,
   settingsAlternates,
+  staticPageAlternates,
   staticSitemapPages,
 } from './seo'
 import {
@@ -59,6 +61,18 @@ describe('SEO route helpers', () => {
     })
   })
 
+  it('generates localized static page paths and alternates', () => {
+    expect(getLocalizedStaticPath('about', 'en')).toBe('/about')
+    expect(getLocalizedStaticPath('about', 'de')).toBe('/de/uber-uns')
+    expect(getLocalizedStaticPath('about', 'tr')).toBe('/tr/hakkimizda')
+    expect(staticPageAlternates('imprint')).toEqual({
+      en: '/imprint',
+      de: '/de/impressum',
+      tr: '/tr/kunye',
+      'x-default': '/imprint',
+    })
+  })
+
   it('maps current routes to equivalent localized routes', () => {
     expect(getEquivalentLocalizedPath('/names/ar-rahman', 'de')).toBe('/de/namen/ar-rahman')
     expect(getEquivalentLocalizedPath('/de/namen/al-malik', 'tr')).toBe('/tr/esmaul-husna/al-malik')
@@ -68,6 +82,9 @@ describe('SEO route helpers', () => {
     expect(getEquivalentLocalizedPath('/settings', 'de')).toBe('/de/einstellungen')
     expect(getEquivalentLocalizedPath('/de/einstellungen', 'tr')).toBe('/tr/ayarlar')
     expect(getEquivalentLocalizedPath('/tr/ayarlar', 'en')).toBe('/settings')
+    expect(getEquivalentLocalizedPath('/about', 'de')).toBe('/de/uber-uns')
+    expect(getEquivalentLocalizedPath('/de/kontakt', 'tr')).toBe('/tr/iletisim')
+    expect(getEquivalentLocalizedPath('/tr/gizlilik', 'en')).toBe('/privacy')
   })
 })
 

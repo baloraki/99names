@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useAppState } from '@/hooks/useAppState'
+import { getLocalizedStaticPath } from '@/lib/seo'
 import type { Language } from '@/types/language'
 
 type Source = {
@@ -262,7 +263,7 @@ export function AboutPageContent() {
       {/* Contact nudge */}
       <p className="text-sm text-muted">
         {c.contactNote}{' '}
-        <Link href="/contact" className="text-gold underline underline-offset-2 hover:text-gold/80">
+        <Link href={getLocalizedStaticPath('contact', language)} className="text-gold underline underline-offset-2 hover:text-gold/80">
           {c.contactLink}
         </Link>
       </p>

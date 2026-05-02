@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useAppState } from '@/hooks/useAppState'
 import type { Language } from '@/types/language'
 import { ObfuscatedEmail } from '@/components/ObfuscatedEmail'
+import { getLocalizedStaticPath } from '@/lib/seo'
 
 // ─── OPERATOR DATA ────────────────────────────────────────────────────────────
 // TODO: Replace ALL values below with real data before going live.
@@ -182,7 +183,7 @@ export function ImprintPageContent() {
       </section>
 
       <p className="text-sm text-muted">
-        <Link href="/privacy" className="text-gold underline underline-offset-2 hover:text-gold/80">
+        <Link href={getLocalizedStaticPath('privacy', language)} className="text-gold underline underline-offset-2 hover:text-gold/80">
           {c.privacyLink}
         </Link>
       </p>

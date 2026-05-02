@@ -5,6 +5,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { useAppState } from '@/hooks/useAppState'
 import { getDict } from '@/lib/i18n'
+import { getLocalizedStaticPath } from '@/lib/seo'
 import { validateContactForm } from '@/lib/validation'
 
 const privacyNote: Record<string, { text: string; linkLabel: string }> = {
@@ -87,7 +88,7 @@ export function ContactForm() {
       {/* DSGVO / GDPR privacy notice */}
       <p className="rounded-md border border-white/10 bg-surface px-4 py-3 text-xs leading-6 text-muted">
         {privacyNote[language]?.text ?? privacyNote.en.text}
-        <Link href="/privacy" className="text-gold underline underline-offset-2 hover:text-gold/80">
+        <Link href={getLocalizedStaticPath('privacy', language)} className="text-gold underline underline-offset-2 hover:text-gold/80">
           {privacyNote[language]?.linkLabel ?? privacyNote.en.linkLabel}
         </Link>
         {language === 'tr' ? ' bakabilirsiniz.' : '.'}

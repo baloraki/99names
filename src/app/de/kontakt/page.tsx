@@ -3,13 +3,15 @@ import { ContactPageClient } from '@/components/ContactPageClient'
 import { buildMetadata, staticPageAlternates } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Contact 99 Names Learning Aid',
-  description: 'Contact the 99 Names learning aid team about content review, corrections, source notes or technical feedback.',
-  path: '/contact',
-  locale: 'en',
+  title: 'Kontakt – 99 Namen Lernhilfe',
+  description:
+    'Kontakt zur 99-Namen-Lernhilfe für Korrekturen, Quellenhinweise oder technisches Feedback.',
+  path: '/de/kontakt',
+  locale: 'de',
   alternates: staticPageAlternates('contact'),
 })
 
-export default function ContactPage() {
+export default function GermanContactPage() {
   return <ContactPageClient />
 }
+

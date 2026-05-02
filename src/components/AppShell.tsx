@@ -7,7 +7,7 @@ import type { ReactNode } from 'react'
 import { useEffect, useState } from 'react'
 import { getDict, LANGUAGES } from '@/lib/i18n'
 import { isLanguage } from '@/lib/languagePreference'
-import { getEquivalentLocalizedPath, getLocalizedSeoPath, getLocalizedSettingsPath } from '@/lib/seo'
+import { getEquivalentLocalizedPath, getLocalizedSeoPath, getLocalizedSettingsPath, getLocalizedStaticPath } from '@/lib/seo'
 import { storage } from '@/lib/storage'
 import type { Language } from '@/types/language'
 
@@ -37,6 +37,7 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
 
   useEffect(() => {
     if (routeLanguage) {
+      setLanguage(routeLanguage)
       document.documentElement.lang = routeLanguage
       return
     }
@@ -97,10 +98,10 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
 
       <footer className="hidden md:block border-t border-white/10 bg-background/60 py-4 text-xs text-muted">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-6 gap-y-1 px-4">
-          <Link href="/about" className="hover:text-gold transition-colors">{language === 'de' ? 'Über uns' : language === 'tr' ? 'Hakkımızda' : 'About'}</Link>
-          <Link href="/contact" className="hover:text-gold transition-colors">{language === 'de' ? 'Kontakt' : language === 'tr' ? 'İletişim' : 'Contact'}</Link>
-          <Link href="/privacy" className="hover:text-gold transition-colors">{language === 'de' ? 'Datenschutz' : language === 'tr' ? 'Gizlilik' : 'Privacy'}</Link>
-          <Link href="/imprint" className="hover:text-gold transition-colors">{language === 'de' ? 'Impressum' : language === 'tr' ? 'Künye' : 'Imprint'}</Link>
+          <Link href={getLocalizedStaticPath('about', language)} className="hover:text-gold transition-colors">{language === 'de' ? 'Über uns' : language === 'tr' ? 'Hakkımızda' : 'About'}</Link>
+          <Link href={getLocalizedStaticPath('contact', language)} className="hover:text-gold transition-colors">{language === 'de' ? 'Kontakt' : language === 'tr' ? 'İletişim' : 'Contact'}</Link>
+          <Link href={getLocalizedStaticPath('privacy', language)} className="hover:text-gold transition-colors">{language === 'de' ? 'Datenschutz' : language === 'tr' ? 'Gizlilik' : 'Privacy'}</Link>
+          <Link href={getLocalizedStaticPath('imprint', language)} className="hover:text-gold transition-colors">{language === 'de' ? 'Impressum' : language === 'tr' ? 'Künye' : 'Imprint'}</Link>
         </div>
       </footer>
 

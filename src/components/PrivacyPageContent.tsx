@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useAppState } from '@/hooks/useAppState'
 import type { Language } from '@/types/language'
 import { ObfuscatedEmail } from '@/components/ObfuscatedEmail'
+import { getLocalizedStaticPath } from '@/lib/seo'
 
 // The app uses Vercel Analytics + Speed Insights (see RootDocument.tsx).
 // Push reminders use Supabase for storing technical push subscriptions.
@@ -352,7 +353,7 @@ export function PrivacyPageContent() {
 
         <p className="text-sm text-muted">
           {language === 'de' ? 'Zum Impressum: ' : language === 'tr' ? 'Künye için: ' : 'Legal notice: '}
-          <Link href="/imprint" className="text-gold underline underline-offset-2 hover:text-gold/80">
+          <Link href={getLocalizedStaticPath('imprint', language)} className="text-gold underline underline-offset-2 hover:text-gold/80">
             {language === 'de' ? 'Impressum' : language === 'tr' ? 'Künye' : 'Imprint'}
           </Link>
         </p>
