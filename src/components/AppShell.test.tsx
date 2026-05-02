@@ -73,11 +73,30 @@ describe('AppShell', () => {
     }
     for (const link of screen.getAllByRole('link', { name: 'Einstellungen' })) {
       expect(link).toHaveAttribute('href', '/de/einstellungen')
+      expect(link).toHaveAttribute('aria-current', 'page')
     }
     expect(screen.getByRole('link', { name: 'Über uns' })).toHaveAttribute('href', '/de/uber-uns')
     expect(screen.getByRole('link', { name: 'Kontakt' })).toHaveAttribute('href', '/de/kontakt')
     expect(screen.getByRole('link', { name: 'Datenschutz' })).toHaveAttribute('href', '/de/datenschutz')
     expect(screen.getByRole('link', { name: 'Impressum' })).toHaveAttribute('href', '/de/impressum')
+  })
+
+  it('marks active and inactive navigation links with proper aria-current states', () => {
+    navigationMock.pathname = '/names'
+
+    render(
+      <AppShell routeLanguage="en">
+        <div>Names</div>
+      </AppShell>,
+    )
+
+    for (const link of screen.getAllByRole('link', { name: 'Names' })) {
+      expect(link).toHaveAttribute('aria-current', 'page')
+    }
+
+    for (const link of screen.getAllByRole('link', { name: 'Home' })) {
+      expect(link).not.toHaveAttribute('aria-current')
+    }
   })
 
   it('keeps English content routes bound to the English navigation when the route is English', () => {
