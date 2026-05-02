@@ -3,6 +3,8 @@ import sitemap from '@/app/sitemap'
 import { names } from '@/data/names'
 import {
   absoluteUrl,
+  buildMetadata,
+  buildOgImagePath,
   getEquivalentLocalizedPath,
   getLocalizedNamePath,
   getLocalizedSeoPath,
@@ -22,6 +24,15 @@ import {
 } from './structuredData'
 
 describe('SEO route helpers', () => {
+  it('creates localized dynamic share image paths', () => {
+    expect(buildOgImagePath({ title: 'Ar-Rahman Meaning', locale: 'en' })).toBe(
+      '/api/og?title=Ar-Rahman+Meaning&locale=en',
+    )
+    expect(buildOgImagePath({ title: 'Allah Namen', locale: 'de', subtitle: 'Lerne Schritt fuer Schritt' })).toBe(
+      '/api/og?title=Allah+Namen&locale=de&subtitle=Lerne+Schritt+fuer+Schritt',
+    )
+  })
+
   it('generates localized name paths from stable slugs', () => {
     expect(getLocalizedNamePath('en', 'ar-rahman')).toBe('/names/ar-rahman')
     expect(getLocalizedNamePath('de', 'ar-rahman')).toBe('/de/namen/ar-rahman')
@@ -99,6 +110,35 @@ describe('name metadata', () => {
       de: '/de/namen/ar-rahman',
       tr: '/tr/esmaul-husna/ar-rahman',
     })
+    const ogImages = metadata.openGraph?.images
+    const ogImage = Array.isArray(ogImages) ? ogImages[0] : ogImages
+    expect(ogImage).toMatchObject({ width: 1200, height: 630 })
+    if (typeof ogImage === 'string') throw new Error('expected object image metadata')
+    const ogImageUrl = ogImage instanceof URL ? ogImage.toString() : ogImage?.url?.toString() ?? ''
+    expect(ogImageUrl).toContain('/api/og?')
+    expect(ogImageUrl).toContain('title=Ar-Rahman+Meaning')
+    expect(ogImageUrl).toContain('locale=en')
+  })
+
+  it('adds locale and alternate locale fields for Open Graph', () => {
+    const metadata = buildMetadata({
+      title: 'Quiz',
+      description: 'Test your daily progress',
+      path: '/tr/quiz',
+      locale: 'tr',
+    })
+
+    expect(metadata.openGraph?.locale).toBe('tr_TR')
+    expect(metadata.openGraph?.alternateLocale).toEqual(['en_US', 'de_DE'])
+    const twitterImages = metadata.twitter?.images
+    const twitterImage = Array.isArray(twitterImages) ? twitterImages[0] : twitterImages
+    const twitterImageUrl =
+      twitterImage instanceof URL
+        ? twitterImage.toString()
+        : typeof twitterImage === 'string'
+          ? twitterImage
+          : twitterImage?.url?.toString() ?? ''
+    expect(twitterImageUrl).toContain('/api/og?title=Quiz&locale=tr&subtitle=Test+your+daily+progress')
   })
 })
 
