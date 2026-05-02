@@ -27,6 +27,8 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
   const pathname = usePathname()
   const router = useRouter()
   const [storedLanguage, setStoredLanguage] = useState<Language>(() => getInitialLanguage(routeLanguage))
+  const [mobileHeaderHidden, setMobileHeaderHidden] = useState(false)
+  const [mobileNavHidden, setMobileNavHidden] = useState(false)
   const language = routeLanguage ?? storedLanguage
   const dict = getDict(language)
   const navItems = getNavItems(language)
@@ -58,6 +60,56 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
     return () => window.removeEventListener('app-language-change', onLanguageChange)
   }, [routeLanguage])
 
+  useEffect(() => {
+    let lastScrollY = Math.max(window.scrollY, 0)
+    let ticking = false
+
+    const updateMobileChrome = () => {
+      ticking = false
+
+      const currentScrollY = Math.max(window.scrollY, 0)
+      const scrollHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight)
+      const maxScrollY = Math.max(scrollHeight - window.innerHeight, 0)
+      const atTop = currentScrollY <= 16
+      const atBottom = maxScrollY - currentScrollY <= 2
+      const scrollDelta = currentScrollY - lastScrollY
+
+      if (atTop) {
+        setMobileHeaderHidden(false)
+        setMobileNavHidden(false)
+        lastScrollY = currentScrollY
+        return
+      }
+
+      if (atBottom) {
+        setMobileHeaderHidden(true)
+        setMobileNavHidden(true)
+        lastScrollY = currentScrollY
+        return
+      }
+
+      if (Math.abs(scrollDelta) < 8) return
+
+      setMobileHeaderHidden(scrollDelta > 0)
+      setMobileNavHidden(scrollDelta < 0)
+      lastScrollY = currentScrollY
+    }
+
+    const scheduleUpdate = () => {
+      if (ticking) return
+      ticking = true
+      window.requestAnimationFrame(updateMobileChrome)
+    }
+
+    window.addEventListener('scroll', scheduleUpdate, { passive: true })
+    window.addEventListener('resize', scheduleUpdate)
+
+    return () => {
+      window.removeEventListener('scroll', scheduleUpdate)
+      window.removeEventListener('resize', scheduleUpdate)
+    }
+  }, [])
+
   function onLanguageChange(next: Language) {
     setStoredLanguage(next)
     storage.setLanguage(next)
@@ -67,10 +119,19 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
     if (nextPath !== pathname) router.push(nextPath)
   }
 
+  const headerClassName = [
+    'app-header sticky top-0 z-30 border-b border-white/10 bg-background/85 backdrop-blur',
+    mobileHeaderHidden ? 'app-header-hidden' : '',
+  ].filter(Boolean).join(' ')
+  const mobileNavClassName = [
+    'mobile-nav-bar fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-background/95 px-2 pt-2 backdrop-blur md:hidden',
+    mobileNavHidden ? 'mobile-nav-bar-hidden' : '',
+  ].filter(Boolean).join(' ')
+
   return (
     <>
       <div className="star-field fixed inset-0 -z-10" />
-      <header className="sticky top-0 z-30 border-b border-white/10 bg-background/85 backdrop-blur">
+      <header className={headerClassName}>
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4">
           <Link href={language === 'de' ? '/de' : language === 'tr' ? '/tr' : '/'} className="focus-ring rounded-md" aria-label="Daily Husna">
             <Image
@@ -115,7 +176,7 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
       </header>
       <main className="mx-auto w-full max-w-6xl px-4 pb-32 pt-6 md:pb-12">{children}</main>
 
-      <footer className="hidden md:block border-t border-white/10 bg-background/60 py-4 text-xs text-muted">
+      <footer className="border-t border-white/10 bg-background/60 py-4 text-xs text-muted">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-6 gap-y-1 px-4">
           <Link href={getLocalizedStaticPath('about', language)} className="hover:text-gold transition-colors">{language === 'de' ? 'Über uns' : language === 'tr' ? 'Hakkımızda' : 'About'}</Link>
           <Link href={getLocalizedStaticPath('contact', language)} className="hover:text-gold transition-colors">{language === 'de' ? 'Kontakt' : language === 'tr' ? 'İletişim' : 'Contact'}</Link>
@@ -124,7 +185,7 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
         </div>
       </footer>
 
-      <nav className="mobile-nav-bar fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-background/95 px-2 pt-2 backdrop-blur md:hidden" aria-label={dict.nav.mobile}>
+      <nav className={mobileNavClassName} aria-label={dict.nav.mobile}>
         <div className="mx-auto grid max-w-md grid-cols-4 gap-1">
           {navItems.map((item) => {
             const active = isActive(item.href)
