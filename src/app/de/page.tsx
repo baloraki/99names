@@ -58,19 +58,19 @@ export default function GermanHomePage() {
           Hinweis: Die App nutzt eine verbreitete Lernreihenfolge. Religiöse Inhalte sollten vor öffentlicher Verwendung fachkundig geprüft werden.
         </p>
         <div className="mt-5 space-y-5">
-          <article className="rounded-xl border border-white/10 bg-black/25 p-4">
+          <article className="rounded-xl border border-white/10 bg-white/[0.06] p-4">
             <p className="text-right font-arabic text-3xl leading-relaxed text-primary" lang="ar" dir="rtl">اللَّهُ لاَ إِلَهَ إِلاَّ هُ</p>
             <p className="mt-3 text-sm text-muted">Allah - es gibt keinen Gott außer Ihm. (2:255)</p>
           </article>
-          <article className="rounded-xl border border-white/10 bg-black/25 p-4">
+          <article className="rounded-xl border border-white/10 bg-white/[0.06] p-4">
             <p className="text-right font-arabic text-3xl leading-relaxed text-primary" lang="ar" dir="rtl">وَلِلّهِ الأَسْمَاء الْحُسْنَى فَادْعُوهُ بِهَا وَذَرُواْ الَّذِينَ يُلْحِدُونَ فِي</p>
             <p className="mt-3 text-sm text-muted">Und Allahs sind die schönsten Namen; so ruft Ihn mit ihnen an. Und lasst diejenigen, die mit Seinen Namen abwegig umgehen. Ihnen wird vergolten, was sie zu tun pflegten. (7:180)</p>
           </article>
-          <article className="rounded-xl border border-white/10 bg-black/25 p-4">
+          <article className="rounded-xl border border-white/10 bg-white/[0.06] p-4">
             <p className="text-right font-arabic text-3xl leading-relaxed text-primary" lang="ar" dir="rtl">اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ ۖ لَهُ الْأَسْمَاءُ الْحُسْنَىٰ</p>
             <p className="mt-3 text-sm text-muted">Allah - es gibt keinen Gott außer Ihm. Sein sind die schönsten Namen. (20:8)</p>
           </article>
-          <article className="rounded-xl border border-white/10 bg-black/25 p-4">
+          <article className="rounded-xl border border-white/10 bg-white/[0.06] p-4">
             <p className="text-right font-arabic text-2xl leading-relaxed text-primary md:text-3xl" lang="ar" dir="rtl">هُوَ اللَّهُ الْخَالِقُ الْبَارِئُ الْمُصَوِّرُ ۖ لَهُ الْأَسْمَاءُ الْحُسْنَىٰ ۚ يُسَبِّحُ لَهُ مَا فِي السَّمَاوَاتِ وَالْأَرْضِ ۖ وَهُوَ الْعَزِيزُ الْحَكِيمُ</p>
             <p className="mt-3 text-sm text-muted">Er ist Allah, der Schöpfer, der Erschaffer, der Gestalter. Sein sind die schönsten Namen. Ihn preist, was in den Himmeln und auf der Erde ist. Und Er ist der Allmächtige und Allweise. (59:24)</p>
           </article>

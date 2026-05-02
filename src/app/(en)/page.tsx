@@ -88,19 +88,19 @@ export default function HomePage() {
           Source-aware note: every name detail page keeps its source note visible. Entries marked with content review required should be checked by qualified reviewers before public religious reliance.
         </p>
         <div className="mt-5 space-y-5">
-          <article className="rounded-xl border border-white/10 bg-black/25 p-4">
+          <article className="rounded-xl border border-white/10 bg-white/[0.06] p-4">
             <p className="text-right font-arabic text-3xl leading-relaxed text-primary" lang="ar" dir="rtl">اللَّهُ لاَ إِلَهَ إِلاَّ هُ</p>
             <p className="mt-3 text-sm text-muted">Allah! There is no god but He. (2:255)</p>
           </article>
-          <article className="rounded-xl border border-white/10 bg-black/25 p-4">
+          <article className="rounded-xl border border-white/10 bg-white/[0.06] p-4">
             <p className="text-right font-arabic text-3xl leading-relaxed text-primary" lang="ar" dir="rtl">وَلِلّهِ الأَسْمَاء الْحُسْنَى فَادْعُوهُ بِهَا وَذَرُواْ الَّذِينَ يُلْحِدُونَ فِي</p>
             <p className="mt-3 text-sm text-muted">And to Allah belong the best names, so invoke Him by them. And leave [the company of] those who practice deviation concerning His names. They will be recompensed for what they have been doing. (7:180)</p>
           </article>
-          <article className="rounded-xl border border-white/10 bg-black/25 p-4">
+          <article className="rounded-xl border border-white/10 bg-white/[0.06] p-4">
             <p className="text-right font-arabic text-3xl leading-relaxed text-primary" lang="ar" dir="rtl">اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ ۖ لَهُ الْأَسْمَاءُ الْحُسْنَىٰ</p>
             <p className="mt-3 text-sm text-muted">Allah! There is no Allah save Him. His are the most beautiful names. (20:8)</p>
           </article>
-          <article className="rounded-xl border border-white/10 bg-black/25 p-4">
+          <article className="rounded-xl border border-white/10 bg-white/[0.06] p-4">
             <p className="text-right font-arabic text-2xl leading-relaxed text-primary md:text-3xl" lang="ar" dir="rtl">هُوَ اللَّهُ الْخَالِقُ الْبَارِئُ الْمُصَوِّرُ ۖ لَهُ الْأَسْمَاءُ الْحُسْنَىٰ ۚ يُسَبِّحُ لَهُ مَا فِي السَّمَاوَاتِ وَالْأَرْضِ ۖ وَهُوَ الْعَزِيزُ الْحَكِيمُ</p>
             <p className="mt-3 text-sm text-muted">He is Allah, the Creator, the Shaper out of naught, the Fashioner. His are the most beautiful names. All that is in the heavens and the earth glorifieth Him, and He is the Mighty, the Wise. (59:24)</p>
           </article>
