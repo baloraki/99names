@@ -15,7 +15,6 @@ const getNavItems = (language: Language) => [
   { href: language === 'de' ? '/de' : language === 'tr' ? '/tr' : '/', key: 'home', icon: HomeIcon },
   { href: language === 'de' ? '/de/namen' : language === 'tr' ? '/tr/esmaul-husna' : '/names', key: 'names', icon: DiamondIcon },
   { href: getLocalizedSeoPath('learn', language), key: 'learn', icon: CompassIcon },
-  { href: getLocalizedSettingsPath(language), key: 'settings', icon: SettingsIcon },
 ] as const
 
 const getInitialLanguage = (routeLanguage?: Language): Language => {
@@ -31,7 +30,6 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
   const language = routeLanguage ?? storedLanguage
   const dict = getDict(language)
   const navItems = getNavItems(language)
-  const mobileNavItems = navItems.filter((item) => item.key !== 'settings')
   const settingsPath = getLocalizedSettingsPath(language)
   const isActive = (href: string) => {
     const exactOnly = href === '/' || href === '/de' || href === '/tr'
@@ -128,7 +126,7 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
 
       <nav className="mobile-nav-bar fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-background/95 px-2 pt-2 backdrop-blur md:hidden" aria-label={dict.nav.mobile}>
         <div className="mx-auto grid max-w-md grid-cols-4 gap-1">
-          {mobileNavItems.map((item) => {
+          {navItems.map((item) => {
             const active = isActive(item.href)
             const Icon = item.icon
             return (
