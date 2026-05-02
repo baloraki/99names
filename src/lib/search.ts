@@ -5,8 +5,11 @@ export function searchNames(names: NameEntry[], query: string, language: Languag
   const q = query.trim().toLowerCase()
   if (!q) return names
   return names.filter(name => {
+    const transliterations = Object.values(name.transliteration)
+    const pronunciations = Object.values(name.pronunciation)
     return (
-      name.transliteration.toLowerCase().includes(q) ||
+      transliterations.some((value) => value.toLowerCase().includes(q)) ||
+      pronunciations.some((value) => value.toLowerCase().includes(q)) ||
       name.arabic.includes(q) ||
       name.meanings[language].toLowerCase().includes(q) ||
       name.slug.includes(q) ||

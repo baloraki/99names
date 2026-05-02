@@ -323,19 +323,20 @@ export function rootMetadata(locale: Language): Metadata {
 }
 
 export function getNamePageMetadata(name: NameEntry, locale: Language): Metadata {
+  const localizedTransliteration = name.transliteration[locale]
   const title =
     locale === 'de'
-      ? `${name.transliteration} Bedeutung – Einer der schönen Namen Allahs`
+      ? `${localizedTransliteration} Bedeutung – Einer der schönen Namen Allahs`
       : locale === 'tr'
-        ? `${name.transliteration} Anlamı – Esmaül Hüsna`
-        : `${name.transliteration} Meaning – One of the Beautiful Names of Allah`
+        ? `${localizedTransliteration} Anlamı – Esmaül Hüsna`
+        : `${localizedTransliteration} Meaning – One of the Beautiful Names of Allah`
 
   const description =
     locale === 'de'
-      ? `${name.transliteration} bedeutet "${name.meanings.de}". Lies Arabisch, Transliteration, Dua-Hinweise, Reflexion und quellenbewusste Notizen.`
+      ? `${localizedTransliteration} bedeutet "${name.meanings.de}". Lies Arabisch, Transliteration, Dua-Hinweise, Reflexion und quellenbewusste Notizen.`
       : locale === 'tr'
-        ? `${name.transliteration}, "${name.meanings.tr}" anlamına gelir. Arapça yazımı, dua kullanımı, tefekkür ve kaynak notunu oku.`
-        : `${name.transliteration} means "${name.meanings.en}". Read the Arabic, transliteration, dua usage, reflection and source-aware note.`
+        ? `${localizedTransliteration}, "${name.meanings.tr}" anlamına gelir. Arapça yazımı, dua kullanımı, tefekkür ve kaynak notunu oku.`
+        : `${localizedTransliteration} means "${name.meanings.en}". Read the Arabic, transliteration, dua usage, reflection and source-aware note.`
 
   return buildMetadata({
     title,
@@ -344,7 +345,7 @@ export function getNamePageMetadata(name: NameEntry, locale: Language): Metadata
     locale,
     alternates: nameAlternates(name.slug),
     type: 'article',
-    imageAlt: `${name.transliteration} meaning in the 99 Names learning aid`,
+    imageAlt: `${localizedTransliteration} meaning in the 99 Names learning aid`,
   })
 }
 

@@ -84,7 +84,7 @@ export function NameIndexContent({ locale }: { locale: Language }) {
               <span className="mt-4 block text-right font-arabic text-4xl leading-tight text-primary" lang="ar" dir="rtl">
                 {name.arabic}
               </span>
-              <span className="mt-4 block text-xl font-semibold text-primary">{name.transliteration}</span>
+              <span className="mt-4 block text-xl font-semibold text-primary">{name.transliteration[locale]}</span>
               <span className="mt-1 block text-sm leading-6 text-muted">{name.meanings[locale]}</span>
             </Link>
           </li>

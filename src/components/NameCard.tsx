@@ -26,7 +26,7 @@ export function NameCard({ name, language, learned = false, favorite = false }: 
         </div>
       </div>
       <p className="mt-4 text-right font-arabic text-4xl leading-tight text-primary">{name.arabic}</p>
-      <h2 className="mt-4 text-xl font-semibold text-primary">{name.transliteration}</h2>
+      <h2 className="mt-4 text-xl font-semibold text-primary">{name.transliteration[language]}</h2>
       <p className="mt-1 text-sm text-muted">{name.meanings[language]}</p>
     </Link>
   )

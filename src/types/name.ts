@@ -1,9 +1,13 @@
+import type { Language } from '@/types/language'
+
+export type LocalizedNameText = Record<Language, string>
+
 export type NameEntry = {
   id: number;
   slug: string;
   arabic: string;
-  transliteration: string;
-  pronunciation: string;
+  transliteration: LocalizedNameText;
+  pronunciation: LocalizedNameText;
   meanings: { de: string; tr: string; en: string };
   explanations: { de: string; tr: string; en: string };
   duaUsage: { de: string; tr: string; en: string };

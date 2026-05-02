@@ -325,7 +325,7 @@ function DuaPage({ locale }: { locale: Language }) {
         {names.map((name) => (
           <Link key={name.id} href={getLocalizedNamePath(locale, name.slug)} className="rounded-lg border border-white/10 bg-surface p-4 hover:border-gold/50 focus-ring">
             <span className="block text-right font-arabic text-4xl" lang="ar" dir="rtl">{name.arabic}</span>
-            <span className="mt-3 block text-xl font-semibold">{name.transliteration}</span>
+            <span className="mt-3 block text-xl font-semibold">{name.transliteration[locale]}</span>
             <span className="mt-3 block text-sm font-semibold text-gold">{name.meanings[locale]}</span>
             <span className="mt-1 block text-sm text-muted">{name.duaUsage[locale]}</span>
           </Link>
@@ -349,7 +349,7 @@ function ReflectionsPage({ locale }: { locale: Language }) {
         {names.map((name) => (
           <Link key={name.id} href={getLocalizedNamePath(locale, name.slug)} className="rounded-lg border border-white/10 bg-surface p-5 hover:border-gold/50 focus-ring">
             <span className="block text-right font-arabic text-4xl" lang="ar" dir="rtl">{name.arabic}</span>
-            <span className="mt-4 block text-xl font-semibold">{name.transliteration}</span>
+            <span className="mt-4 block text-xl font-semibold">{name.transliteration[locale]}</span>
             <span className="mt-1 block text-sm text-gold">{name.meanings[locale]}</span>
             <span className="mt-3 block leading-7 text-muted">{name.reflection?.[locale]}</span>
           </Link>
@@ -393,7 +393,7 @@ function AsmaPage({ locale }: { locale: Language }) {
             <Link href={getLocalizedNamePath(locale, name.slug)} className="block rounded-lg border border-white/10 bg-surface p-4 hover:border-gold/50 focus-ring">
               <span className="text-sm text-gold-muted">#{name.id.toString().padStart(2, '0')}</span>
               <span className="mt-3 block text-right font-arabic text-3xl" lang="ar" dir="rtl">{name.arabic}</span>
-              <span className="mt-3 block font-semibold">{name.transliteration}</span>
+              <span className="mt-3 block font-semibold">{name.transliteration[locale]}</span>
               <span className="mt-1 block text-sm text-muted">{name.meanings[locale]}</span>
             </Link>
           </li>

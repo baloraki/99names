@@ -44,7 +44,7 @@ export default function HomePage() {
         <section className="rounded-lg border border-gold/25 hero-gradient-surface p-6">
           <h2 className="text-sm uppercase tracking-[0.18em] text-gold">{firstName.meanings.en}</h2>
           <p className="mt-5 text-right font-arabic text-6xl leading-tight text-primary" lang="ar" dir="rtl">{firstName.arabic}</p>
-          <p className="mt-6 text-2xl font-semibold">{firstName.transliteration}</p>
+          <p className="mt-6 text-2xl font-semibold">{firstName.transliteration.en}</p>
           <p className="mt-1 text-gold">{firstName.explanations.en}</p>
           <p className="mt-1 text-muted">{firstName.duaUsage.en}</p>
           {firstName.reflection && <p className="mt-1 text-muted">{firstName.reflection?.en}</p>}
@@ -117,7 +117,7 @@ export default function HomePage() {
           {featured.map((name) => (
             <Link key={name.id} href={`/names/${name.slug}`} className="rounded-lg border border-white/10 bg-surface p-4 hover:border-gold/50 focus-ring">
               <span className="block text-right font-arabic text-3xl" lang="ar" dir="rtl">{name.arabic}</span>
-              <span className="mt-3 block font-semibold">{name.transliteration}</span>
+              <span className="mt-3 block font-semibold">{name.transliteration.en}</span>
               <span className="mt-1 block text-sm text-muted">{name.meanings.en}</span>
             </Link>
           ))}

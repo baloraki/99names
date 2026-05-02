@@ -37,7 +37,7 @@ export default function GermanHomePage() {
         <section className="rounded-lg border border-gold/25 hero-gradient-surface p-6">
           <h2 className="text-sm uppercase tracking-[0.18em] text-gold">{firstName.meanings.de}</h2>
           <p className="mt-5 text-right font-arabic text-6xl leading-tight text-primary" lang="ar" dir="rtl">{firstName.arabic}</p>
-          <p className="mt-6 text-2xl font-semibold">{firstName.transliteration}</p>
+          <p className="mt-6 text-2xl font-semibold">{firstName.transliteration.de}</p>
           <p className="mt-1 text-gold">{firstName.explanations.de}</p>
           <p className="mt-1 text-muted">{firstName.duaUsage.de}</p>
           {firstName.reflection && <p className="mt-1 text-muted">{firstName.reflection?.de}</p>}
