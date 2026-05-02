@@ -6,6 +6,7 @@ import { calculateNextDue, isValidInterval } from '@/lib/learningSchedule'
 import { getDict, LANGUAGES } from '@/lib/i18n'
 import type { Language } from '@/types/language'
 import type { LearningScheduleSettings } from '@/types/learningSchedule'
+import { PushReminderSettings } from './PushReminderSettings'
 
 export function SettingsClient() {
   const { language, progress, schedule, actions } = useAppState()
@@ -53,8 +54,8 @@ export function SettingsClient() {
         </div>
         <label className="mt-5 block text-sm text-muted" htmlFor="interval">{dict.settings.interval}</label>
         <select id="interval" className="mt-2 field" value={schedule.interval} onChange={onIntervalChange}>
-          <option value="2h">{dict.settings.every2h}</option>
-          <option value="6h">{dict.settings.every6h}</option>
+          <option value="2h" disabled>{dict.settings.every2h}</option>
+          <option value="6h" disabled>{dict.settings.every6h}</option>
           <option value="daily">{dict.settings.daily}</option>
         </select>
         <dl className="mt-5 grid gap-3 text-sm text-muted sm:grid-cols-2">
@@ -62,6 +63,7 @@ export function SettingsClient() {
           <div><dt>{dict.settings.nextDue}</dt><dd className="text-primary">{schedule.nextDueAt ?? dict.common.notPlanned}</dd></div>
         </dl>
       </section>
+      <PushReminderSettings />
       <section className="rounded-lg border border-white/10 bg-surface p-5">
         <h2 className="text-xl font-semibold">{dict.settings.localData}</h2>
         <p className="mt-2 text-sm leading-6 text-muted">

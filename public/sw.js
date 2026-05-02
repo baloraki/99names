@@ -31,6 +31,14 @@ const APP_SHELL = [
   '/maskable-icon.svg'
 ]
 
+const DEFAULT_NOTIFICATION = {
+  title: 'Zeit zum Lernen',
+  body: 'Wiederhole heute einen Namen Allahs.',
+  icon: '/icon.svg',
+  badge: '/maskable-icon.svg',
+  url: '/learn'
+}
+
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -51,6 +59,7 @@ self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return
   const url = new URL(event.request.url)
   if (url.origin !== self.location.origin) return
+  if (url.pathname.startsWith('/api/')) return
 
   if (event.request.mode === 'navigate') {
     event.respondWith(
@@ -77,3 +86,80 @@ self.addEventListener('fetch', (event) => {
     })
   )
 })
+
+self.addEventListener('push', (event) => {
+  const data = readPushPayload(event)
+  const title = readString(data.title, DEFAULT_NOTIFICATION.title)
+  const options = {
+    body: readString(data.body, DEFAULT_NOTIFICATION.body),
+    icon: readString(data.icon, DEFAULT_NOTIFICATION.icon),
+    badge: readString(data.badge, DEFAULT_NOTIFICATION.badge),
+    data: {
+      url: readNotificationUrl(data.url)
+    }
+  }
+
+  event.waitUntil(self.registration.showNotification(title, options))
+})
+
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close()
+
+  const targetUrl = readNotificationUrl(event.notification.data && event.notification.data.url)
+
+  event.waitUntil((async () => {
+    const windowClients = await clients.matchAll({
+      type: 'window',
+      includeUncontrolled: true
+    })
+
+    for (const client of windowClients) {
+      const clientUrl = new URL(client.url)
+      if (clientUrl.origin !== self.location.origin) continue
+
+      if ('navigate' in client) {
+        await client.navigate(targetUrl)
+      }
+
+      if ('focus' in client) {
+        return client.focus()
+      }
+    }
+
+    return clients.openWindow(targetUrl)
+  })())
+})
+
+function readPushPayload(event) {
+  if (!event.data) return DEFAULT_NOTIFICATION
+
+  try {
+    const json = event.data.json()
+    return json && typeof json === 'object' ? json : DEFAULT_NOTIFICATION
+  } catch {
+    try {
+      return {
+        ...DEFAULT_NOTIFICATION,
+        body: event.data.text()
+      }
+    } catch {
+      return DEFAULT_NOTIFICATION
+    }
+  }
+}
+
+function readString(value, fallback) {
+  return typeof value === 'string' && value.trim().length > 0 ? value : fallback
+}
+
+function readNotificationUrl(value) {
+  const fallback = new URL(DEFAULT_NOTIFICATION.url, self.location.origin).href
+  if (typeof value !== 'string' || value.trim().length === 0) return fallback
+
+  try {
+    const url = new URL(value, self.location.origin)
+    return url.origin === self.location.origin ? url.href : fallback
+  } catch {
+    return fallback
+  }
+}

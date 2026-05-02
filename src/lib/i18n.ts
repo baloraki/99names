@@ -186,7 +186,7 @@ const de: Dict = {
     schedule: 'Lernplan',
     due: 'Eine Lerneinheit ist fällig.',
     notDue: 'Kein fälliger Hinweis.',
-    scheduleNote: 'Hinweise erscheinen nur in der geöffneten App. Es gibt keine Push- oder Browser-Benachrichtigungen.',
+    scheduleNote: 'Hinweise erscheinen in der geöffneten App. Native Push-Erinnerungen können in den Einstellungen zusätzlich aktiviert werden.',
   },
   progress: {
     title: 'Fortschritt',
@@ -245,7 +245,7 @@ const de: Dict = {
     localDataBody: (learned, favorites, lastViewed) => `Gelernt: ${learned}, Favoriten: ${favorites}, zuletzt angesehen: ${lastViewed}.`,
     resetProgress: 'Fortschritt zurücksetzen',
     resetConfirm: 'Fortschritt wirklich zurücksetzen?',
-    notificationNote: 'Diese App verwendet keine Push-Benachrichtigungen und keine Browser-Benachrichtigungen. Der Lernplan wird nur berechnet und angezeigt, solange die App geöffnet ist.',
+    notificationNote: 'Push-Erinnerungen sind optional und werden erst nach ausdrücklicher Aktivierung im Browser eingerichtet.',
   },
   contact: {
     eyebrow: 'Kontakt',
@@ -273,7 +273,7 @@ const de: Dict = {
   privacy: {
     title: 'Datenschutz',
     p1: 'Diese App speichert Sprache, Fortschritt, Favoriten, zuletzt angesehene Namen und Lernplan-Einstellungen lokal im Browser über localStorage.',
-    p2: 'Es werden keine Tracking-Cookies, keine Analytics, keine Push-Benachrichtigungen und keine Browser-Benachrichtigungen verwendet.',
+    p2: 'Es werden keine Tracking-Cookies verwendet. Push-Benachrichtigungen sind optional und müssen im Browser ausdrücklich aktiviert werden.',
     p3: 'Das Kontaktformular sendet die eingegebenen Daten an Web3Forms. Der öffentliche Web3Forms-Schlüssel ist im Client sichtbar.',
   },
   imprint: {
@@ -327,7 +327,7 @@ const tr: Dict = {
     schedule: 'Öğrenme planı',
     due: 'Bir öğrenme oturumu zamanı geldi.',
     notDue: 'Şu anda hatırlatma yok.',
-    scheduleNote: 'Hatırlatmalar yalnızca uygulama açıkken görünür. Push veya tarayıcı bildirimi yoktur.',
+    scheduleNote: 'Hatırlatmalar uygulama açıkken görünür. Yerel push hatırlatmaları Ayarlar bölümünde ayrıca etkinleştirilebilir.',
   },
   progress: {
     title: 'İlerleme',
@@ -386,7 +386,7 @@ const tr: Dict = {
     localDataBody: (learned, favorites, lastViewed) => `Öğrenilen: ${learned}, favoriler: ${favorites}, son görüntülenen: ${lastViewed}.`,
     resetProgress: 'İlerlemeyi sıfırla',
     resetConfirm: 'İlerleme gerçekten sıfırlansın mı?',
-    notificationNote: 'Bu uygulama push bildirimi veya tarayıcı bildirimi kullanmaz. Öğrenme planı yalnızca uygulama açıkken hesaplanır ve gösterilir.',
+    notificationNote: 'Push hatırlatmaları isteğe bağlıdır ve yalnızca tarayıcıda açıkça etkinleştirildikten sonra kurulur.',
   },
   contact: {
     eyebrow: 'İletişim',
@@ -414,7 +414,7 @@ const tr: Dict = {
   privacy: {
     title: 'Gizlilik',
     p1: 'Bu uygulama dili, ilerlemeyi, favorileri, son görüntülenen isimleri ve öğrenme planı ayarlarını tarayıcıda localStorage ile yerel olarak saklar.',
-    p2: 'Takip çerezleri, analytics, push bildirimleri veya tarayıcı bildirimleri kullanılmaz.',
+    p2: 'Takip çerezleri kullanılmaz. Push bildirimleri isteğe bağlıdır ve tarayıcıda açıkça etkinleştirilmelidir.',
     p3: 'İletişim formu girilen verileri Web3Forms hizmetine gönderir. Genel Web3Forms anahtarı istemci tarafında görünür.',
   },
   imprint: {
@@ -468,7 +468,7 @@ const en: Dict = {
     schedule: 'Learning schedule',
     due: 'A learning session is due.',
     notDue: 'No due reminder.',
-    scheduleNote: 'Hints appear only while the app is open. There are no push or browser notifications.',
+    scheduleNote: 'Hints appear while the app is open. Native push reminders can also be enabled in Settings.',
   },
   progress: {
     title: 'Progress',
@@ -527,7 +527,7 @@ const en: Dict = {
     localDataBody: (learned, favorites, lastViewed) => `Learned: ${learned}, favorites: ${favorites}, last viewed: ${lastViewed}.`,
     resetProgress: 'Reset progress',
     resetConfirm: 'Really reset progress?',
-    notificationNote: 'This app does not use push notifications or browser notifications. The learning schedule is calculated and shown only while the app is open.',
+    notificationNote: 'Push reminders are optional and are created only after explicit browser activation.',
   },
   contact: {
     eyebrow: 'Contact',
@@ -555,7 +555,7 @@ const en: Dict = {
   privacy: {
     title: 'Privacy',
     p1: 'This app stores language, progress, favorites, last viewed names, and learning schedule settings locally in the browser using localStorage.',
-    p2: 'No tracking cookies, analytics, push notifications, or browser notifications are used.',
+    p2: 'No tracking cookies are used. Push notifications are optional and must be explicitly enabled in the browser.',
     p3: 'The contact form sends entered data to Web3Forms. The public Web3Forms key is visible in the client.',
   },
   imprint: {
