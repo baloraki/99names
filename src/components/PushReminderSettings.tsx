@@ -5,6 +5,7 @@ import { useEffect, useMemo, useState } from 'react'
 import {
   getBrowserTimeZone,
   getCurrentPushSubscription,
+  isIOSDevice,
   isPushSupported,
   persistPushReminderSettings,
   readPersistedPushReminderSettings,
@@ -241,11 +242,3 @@ export function PushReminderSettings({
   )
 }
 
-function isIOSDevice(): boolean {
-  if (typeof navigator === 'undefined') return false
-
-  return (
-    /iPad|iPhone|iPod/.test(navigator.userAgent) ||
-    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
-  )
-}
