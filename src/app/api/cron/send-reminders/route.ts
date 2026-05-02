@@ -27,7 +27,7 @@ type CronCounts = {
 const reminderPayload = {
   title: 'Zeit zum Lernen',
   body: 'Wiederhole heute einen Namen Allahs.',
-  url: '/learn',
+  url: '/learn#learn-now',
 }
 
 export async function GET(request: Request) {

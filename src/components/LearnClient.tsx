@@ -89,7 +89,7 @@ export function LearnClient({ embedded = false, locale }: { embedded?: boolean; 
 
   if (!current) {
     return (
-      <section className="mx-auto max-w-2xl rounded-lg border border-gold/20 bg-surface p-8 text-center">
+      <section id="learn-now" className="mx-auto max-w-2xl scroll-mt-28 rounded-lg border border-gold/20 bg-surface p-8 text-center">
         <div className="text-4xl">✓</div>
         <p className="mt-3 text-sm uppercase tracking-[0.22em] text-gold">{dict.learn.eyebrow}</p>
         {embedded ? (
@@ -106,7 +106,7 @@ export function LearnClient({ embedded = false, locale }: { embedded?: boolean; 
   }
 
   return (
-    <div className="mx-auto max-w-2xl space-y-5">
+    <div id="learn-now" className="mx-auto max-w-2xl scroll-mt-28 space-y-5">
       {/* Header */}
       <section>
         <p className="text-sm uppercase tracking-[0.22em] text-gold">{dict.learn.eyebrow}</p>

@@ -36,7 +36,7 @@ const DEFAULT_NOTIFICATION = {
   body: 'Wiederhole heute einen Namen Allahs.',
   icon: '/icon.svg',
   badge: '/maskable-icon.svg',
-  url: '/learn'
+  url: '/learn#learn-now'
 }
 
 self.addEventListener('install', (event) => {

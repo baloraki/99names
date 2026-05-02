@@ -263,8 +263,25 @@ export function LocalizedSeoPageContent({ page, locale }: { page: LocalizedSeoPa
   return <QuizPage locale={locale} />
 }
 
-function PageIntro({ page, locale }: { page: LocalizedSeoPage; locale: Language }) {
+function PageIntro({
+  page,
+  locale,
+  headingLevel = 'h1',
+  subdued = false,
+}: {
+  page: LocalizedSeoPage
+  locale: Language
+  headingLevel?: 'h1' | 'h2'
+  subdued?: boolean
+}) {
   const text = copy[page][locale]
+  const Heading = headingLevel
+  const headingClass = subdued
+    ? 'text-2xl font-semibold leading-tight md:text-3xl'
+    : 'text-4xl font-semibold leading-tight md:text-5xl'
+  const introClass = subdued
+    ? 'space-y-3 text-sm leading-7 text-muted'
+    : 'space-y-4 text-base leading-8 text-muted'
   const breadcrumbs = [
     { href: getLocalizedHomePath(locale), label: homeLabels[locale] },
     { href: getLocalizedSeoPath(page, locale), label: text.h1 },
@@ -276,8 +293,8 @@ function PageIntro({ page, locale }: { page: LocalizedSeoPage; locale: Language 
       <Breadcrumbs items={breadcrumbs} />
       <section className="space-y-4">
         <p className="text-sm uppercase tracking-[0.22em] text-gold">{text.eyebrow}</p>
-        <h1 className="text-4xl font-semibold leading-tight md:text-5xl">{text.h1}</h1>
-        <div className="space-y-4 text-base leading-8 text-muted">
+        <Heading className={headingClass}>{text.h1}</Heading>
+        <div className={introClass}>
           {text.intro.map((paragraph) => (
             <p key={paragraph} dangerouslySetInnerHTML={{ __html: paragraph }} />
           ))}
@@ -291,13 +308,13 @@ function LearnPage({ locale }: { locale: Language }) {
   const text = copy.learn[locale]
   return (
     <div lang={locale} className="mx-auto max-w-4xl space-y-8">
-      <PageIntro page="learn" locale={locale} />
+      <LearnClient locale={locale} />
+      <LearningProgressWidget locale={locale} compact />
       <div className="flex flex-col gap-3 sm:flex-row">
         <Link className="btn-primary" href={getLocalizedNamesPath(locale)}>{text.primaryCta}</Link>
         <Link className="btn-secondary" href={getLocalizedSeoPath('reflections', locale)}>{text.secondaryCta}</Link>
       </div>
-      <LearningProgressWidget locale={locale} />
-      <LearnClient embedded locale={locale} />
+      <PageIntro page="learn" locale={locale} headingLevel="h2" subdued />
     </div>
   )
 }
