@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Trailing Slash für konsistente URLs
+  trailingSlash: false,
 };
 
 export default nextConfig;

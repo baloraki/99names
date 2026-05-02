@@ -326,11 +326,12 @@ export function sitemapEntry(
     priority: number
     changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency']
     alternates?: Record<string, string>
+    lastModified?: string | Date
   },
 ): MetadataRoute.Sitemap[number] {
   return {
     url: absoluteUrl(path),
-    lastModified: new Date(),
+    lastModified: options.lastModified || new Date('2024-01-01'),
     changeFrequency: options.changeFrequency,
     priority: options.priority,
     ...(options.alternates
