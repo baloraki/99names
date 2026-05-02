@@ -16,6 +16,7 @@ import {
   requestNotificationPermission,
   shouldShowPushSoftPrompt,
   subscribeBrowserToPush,
+  subscribeToPwaInstallable,
 } from '@/lib/push/client'
 
 export function PushPermissionNudge({
@@ -41,20 +42,17 @@ export function PushPermissionNudge({
   useEffect(() => {
     let cancelled = false
 
-    queueMicrotask(() => {
-      // Check if PWA is already installed
-      if (isPwaInstalled()) {
-        // If PWA is installed, check for push notification prompt
-        if (!shouldShowPushSoftPrompt(vapidPublicKey)) return
+    function decidePrompt() {
+      if (cancelled) return
 
+      if (isPwaInstalled()) {
+        // PWA already installed → offer push
+        if (!shouldShowPushSoftPrompt(vapidPublicKey)) return
         const stored = readPersistedPushReminderSettings()
         if (stored.enabled) return
 
-        // Show immediately, then hide in background if subscription already exists
-        if (!cancelled) {
-          setMode('push')
-          setVisible(true)
-        }
+        setMode('push')
+        setVisible(true)
 
         getCurrentPushSubscription()
           .then((subscription) => {
@@ -65,37 +63,46 @@ export function PushPermissionNudge({
             }
           })
           .catch(() => {/* keep visible */})
-      } else {
-        // PWA is not installed, check if we should show PWA install prompt
-        if (isPwaInstallable() && !hasPwaPromptBeenDeferred()) {
-          setMode('pwa')
-          setVisible(true)
-        } else if (shouldShowPushSoftPrompt(vapidPublicKey)) {
-          // If PWA prompt is not available or was deferred, show push prompt immediately
-          const stored = readPersistedPushReminderSettings()
-          if (stored.enabled) return
+      } else if (isPwaInstallable() && !hasPwaPromptBeenDeferred()) {
+        // PWA installable and not yet deferred → ask first
+        setMode('pwa')
+        setVisible(true)
+      } else if (shouldShowPushSoftPrompt(vapidPublicKey)) {
+        // No PWA prompt available → fall back to push
+        const stored = readPersistedPushReminderSettings()
+        if (stored.enabled) return
 
-          if (!cancelled) {
-            setMode('push')
-            setVisible(true)
-          }
+        setMode('push')
+        setVisible(true)
 
-          // Hide in background if subscription already exists
-          getCurrentPushSubscription()
-            .then((subscription) => {
-              if (cancelled) return
-              if (subscription) {
-                persistPushReminderSettings(true, stored.interval)
-                setVisible(false)
-              }
-            })
-            .catch(() => {/* keep visible */})
-        }
+        getCurrentPushSubscription()
+          .then((subscription) => {
+            if (cancelled) return
+            if (subscription) {
+              persistPushReminderSettings(true, stored.interval)
+              setVisible(false)
+            }
+          })
+          .catch(() => {/* keep visible */})
+      }
+    }
+
+    // Run immediately (covers case where beforeinstallprompt already fired)
+    queueMicrotask(decidePrompt)
+
+    // Also subscribe: if beforeinstallprompt fires late, switch to PWA prompt
+    // (only if we haven't already shown the push prompt or pwa prompt)
+    const unsubscribe = subscribeToPwaInstallable(() => {
+      if (cancelled) return
+      if (!hasPwaPromptBeenDeferred() && !isPwaInstalled()) {
+        setMode('pwa')
+        setVisible(true)
       }
     })
 
     return () => {
       cancelled = true
+      unsubscribe()
     }
   }, [vapidPublicKey])
 

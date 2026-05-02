@@ -12,6 +12,7 @@ const PUSH_SOFT_PROMPT_COOLDOWN_MS = PUSH_SOFT_PROMPT_COOLDOWN_DAYS * DAY_IN_MS
 
 // Global variable to store the beforeinstallprompt event
 let deferredPwaPrompt: BeforeInstallPromptEvent | null = null
+const pwaInstallableListeners: Set<() => void> = new Set()
 
 interface BeforeInstallPromptEvent extends Event {
   readonly platforms: string[]
@@ -153,7 +154,6 @@ export function postponePushSoftPrompt(now = Date.now()): void {
   }
 }
 
-// PWA Installation functions
 // Capture the beforeinstallprompt event at module load time
 if (typeof window !== 'undefined') {
   window.addEventListener('beforeinstallprompt', (event: Event) => {
@@ -161,11 +161,21 @@ if (typeof window !== 'undefined') {
     event.preventDefault()
     // Store the event for later use
     deferredPwaPrompt = event as BeforeInstallPromptEvent
+    // Notify all subscribers
+    for (const listener of pwaInstallableListeners) {
+      listener()
+    }
   })
 }
 
 export function isPwaInstallable(): boolean {
   return deferredPwaPrompt !== null
+}
+
+/** Subscribe to be notified when the PWA becomes installable. Returns an unsubscribe function. */
+export function subscribeToPwaInstallable(callback: () => void): () => void {
+  pwaInstallableListeners.add(callback)
+  return () => pwaInstallableListeners.delete(callback)
 }
 
 export function isPwaInstalled(): boolean {
