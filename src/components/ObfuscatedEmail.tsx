@@ -8,7 +8,7 @@ import { useEffect, useState, startTransition } from 'react'
 // Layer 3 – CSS rtl: reversed chars in DOM, `direction: rtl` flips visually
 //
 // To update: node -e "console.log(Buffer.from('you@example.com').toString('base64'))"
-const ENCODED_EMAIL = 'bGVhcm5odXNuYUBnbXgtdG9wbWFpbC5kZQ=='
+const ENCODED_EMAIL = 'aW5mby5sZWFybmh1c25hQGdteC10b3BtYWlsLmRl'
 
 export function ObfuscatedEmail() {
   const [email, setEmail] = useState<string | null>(null)
