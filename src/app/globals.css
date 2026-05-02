@@ -88,7 +88,7 @@ textarea {
 }
 
 .focus-ring:focus-visible {
-  box-shadow: 0 0 0 2px #d6b25e, 0 0 0 5px #080808;
+  box-shadow: 0 0 0 2px #d6b25e, 0 0 0 5px #060915;
 }
 
 .btn-primary,
@@ -108,7 +108,7 @@ textarea {
 .btn-primary {
   border: 1px solid rgba(214, 178, 94, 0.68);
   background: #d6b25e;
-  color: #080808;
+  color: #060915;
 }
 
 .btn-secondary {
@@ -134,7 +134,7 @@ textarea {
 .btn-danger:focus-visible,
 .chip:focus-visible,
 .field:focus-visible {
-  box-shadow: 0 0 0 2px #d6b25e, 0 0 0 5px #080808;
+  box-shadow: 0 0 0 2px #d6b25e, 0 0 0 5px #060915;
 }
 
 .nav-link {
@@ -190,7 +190,7 @@ textarea {
 .header-icon-link:focus-visible,
 .mobile-menu-item:focus-visible,
 .mobile-menu-toggle:focus-visible {
-  box-shadow: 0 0 0 2px #d6b25e, 0 0 0 5px #080808;
+  box-shadow: 0 0 0 2px #d6b25e, 0 0 0 5px #060915;
 }
 
 .mobile-menu-backdrop {
@@ -206,7 +206,7 @@ textarea {
   margin: 0 auto 1rem;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 8px;
-  background: rgba(8, 8, 8, 0.96);
+  background: rgba(6, 9, 21, 0.96);
   padding: 0.5rem;
   box-shadow: 0 18px 48px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(18px);
@@ -308,7 +308,7 @@ textarea {
   width: 100%;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  background: #111111;
+  background: #0d1324;
   color: #f7f3e8;
   outline: none;
   padding: 0.75rem 0.9rem;
@@ -318,7 +318,7 @@ textarea {
   min-height: 42px;
   border-radius: 8px;
   border: 1px solid rgba(214, 178, 94, 0.42);
-  background: #111111;
+  background: #0d1324;
   color: #f7f3e8;
   outline: none;
   padding: 0.55rem 2rem 0.55rem 0.75rem;
@@ -329,5 +329,5 @@ textarea {
 }
 
 .language-select:focus-visible {
-  box-shadow: 0 0 0 2px #d6b25e, 0 0 0 5px #080808;
+  box-shadow: 0 0 0 2px #d6b25e, 0 0 0 5px #060915;
 }
