@@ -12,5 +12,5 @@ export const viewport: Viewport = {
 }
 
 export default function EnglishRootLayout({ children }: { children: ReactNode }) {
-  return <RootDocument lang="en">{children}</RootDocument>
+  return <RootDocument lang="en" shellLanguage="en">{children}</RootDocument>
 }

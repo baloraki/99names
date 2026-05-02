@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 import Link from 'next/link'
 import { JsonLd } from '@/components/JsonLd'
+import { LanguageRedirect } from '@/components/LanguageRedirect'
 import { LearningProgressWidget } from '@/components/LearningProgressWidget'
 import { names } from '@/data/names'
 import { buildMetadata, homeAlternates } from '@/lib/seo'
@@ -23,6 +24,7 @@ export default function HomePage() {
 
   return (
     <div className="space-y-10">
+      <LanguageRedirect />
       <JsonLd data={[websiteJsonLd(), organizationJsonLd()]} />
       <section className="grid gap-6 py-8 md:grid-cols-[1.1fr_0.9fr] md:items-center md:py-14">
         <div>
