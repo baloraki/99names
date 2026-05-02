@@ -764,14 +764,14 @@ function BrowseMode({
           return (
             <li key={name.id}>
               <div className="flex flex-col gap-2 rounded-lg border border-white/10 bg-surface px-3 py-3 transition-colors hover:border-gold/40">
-                <div className="flex items-stretch gap-2">
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5 md:flex-nowrap md:items-stretch">
+                  <span className="order-1 w-8 shrink-0 text-xs text-gold-muted tabular-nums">
+                    #{name.id.toString().padStart(2, '0')}
+                  </span>
                   <Link
                     href={getLocalizedNamePath(language, name.slug)}
-                    className="flex flex-1 min-w-0 items-center gap-3 focus-ring rounded"
+                    className="order-3 flex w-full min-w-0 items-center gap-3 focus-ring rounded md:order-2 md:w-auto md:flex-1"
                   >
-                    <span className="w-8 shrink-0 text-xs text-gold-muted tabular-nums">
-                      #{name.id.toString().padStart(2, '0')}
-                    </span>
                     <span className="shrink-0 font-arabic text-2xl text-primary" lang="ar" dir="rtl">
                       {name.arabic}
                     </span>
@@ -780,7 +780,7 @@ function BrowseMode({
                       <span className="block truncate text-xs text-muted">{name.meanings[language]}</span>
                     </span>
                   </Link>
-                  <div className="flex shrink-0 items-center gap-1.5">
+                  <div className="order-2 ml-auto flex shrink-0 items-center gap-1.5 md:order-3 md:ml-0">
                     {learned && (
                       <span className="rounded-full border border-success/40 bg-success/10 px-2 py-0.5 text-[10px] font-semibold text-success">
                         {dict.learn.listLearned}
