@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
-import type { ReactNode } from 'react'
+import type { ReactNode, SVGProps } from 'react'
 import { useEffect, useState } from 'react'
 import { getDict, LANGUAGES } from '@/lib/i18n'
 import { isLanguage } from '@/lib/languagePreference'
@@ -12,10 +12,10 @@ import { storage } from '@/lib/storage'
 import type { Language } from '@/types/language'
 
 const getNavItems = (language: Language) => [
-  { href: language === 'de' ? '/de' : language === 'tr' ? '/tr' : '/', key: 'home', icon: '⌂' },
-  { href: language === 'de' ? '/de/namen' : language === 'tr' ? '/tr/esmaul-husna' : '/names', key: 'names', icon: '◇' },
-  { href: getLocalizedSeoPath('learn', language), key: 'learn', icon: '◐' },
-  { href: getLocalizedSettingsPath(language), key: 'settings', icon: '⚙' },
+  { href: language === 'de' ? '/de' : language === 'tr' ? '/tr' : '/', key: 'home', icon: HomeIcon },
+  { href: language === 'de' ? '/de/namen' : language === 'tr' ? '/tr/esmaul-husna' : '/names', key: 'names', icon: DiamondIcon },
+  { href: getLocalizedSeoPath('learn', language), key: 'learn', icon: CompassIcon },
+  { href: getLocalizedSettingsPath(language), key: 'settings', icon: SettingsIcon },
 ] as const
 
 const getInitialLanguage = (routeLanguage?: Language): Language => {
@@ -30,6 +30,8 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
   const [language, setLanguage] = useState<Language>(() => getInitialLanguage(routeLanguage))
   const dict = getDict(language)
   const navItems = getNavItems(language)
+  const mobileNavItems = navItems.filter((item) => item.key !== 'settings')
+  const settingsPath = getLocalizedSettingsPath(language)
   const isActive = (href: string) => {
     const exactOnly = href === '/' || href === '/de' || href === '/tr'
     return pathname === href || (!exactOnly && pathname.startsWith(href))
@@ -83,18 +85,31 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
               {navItems.map((item) => {
                 const active = isActive(item.href)
                 return (
-                  <Link key={item.href} href={item.href} className={active ? 'nav-link nav-link-active' : 'nav-link'}>
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={active ? 'nav-link nav-link-active' : 'nav-link'}
+                    aria-current={active ? 'page' : undefined}
+                  >
                     {dict.nav[item.key]}
                   </Link>
                 )
               })}
               <ShareButton labels={dict.share} variant="desktop" />
+              <LanguageSwitcher language={language} label={dict.settings.language} onChange={onLanguageChange} compact />
             </nav>
-            <LanguageSwitcher language={language} label={dict.settings.language} onChange={onLanguageChange} compact />
+            <Link
+              href={settingsPath}
+              className={isActive(settingsPath) ? 'header-icon-link header-icon-link-active md:hidden' : 'header-icon-link md:hidden'}
+              aria-label={dict.nav.settings}
+              aria-current={isActive(settingsPath) ? 'page' : undefined}
+            >
+              <span className="mobile-nav-icon" aria-hidden="true"><SettingsIcon /></span>
+            </Link>
           </div>
         </div>
       </header>
-      <main className="mx-auto w-full max-w-6xl px-4 pb-28 pt-6 md:pb-12">{children}</main>
+      <main className="mx-auto w-full max-w-6xl px-4 pb-32 pt-6 md:pb-12">{children}</main>
 
       <footer className="hidden md:block border-t border-white/10 bg-background/60 py-4 text-xs text-muted">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-6 gap-y-1 px-4">
@@ -105,14 +120,20 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
         </div>
       </footer>
 
-      <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-background/95 px-2 py-2 backdrop-blur md:hidden" aria-label={dict.nav.mobile}>
-        <div className="mx-auto grid max-w-md grid-cols-5 gap-1">
-          {navItems.map((item) => {
+      <nav className="mobile-nav-bar fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-background/95 px-2 pt-2 backdrop-blur md:hidden" aria-label={dict.nav.mobile}>
+        <div className="mx-auto grid max-w-md grid-cols-4 gap-1">
+          {mobileNavItems.map((item) => {
             const active = isActive(item.href)
+            const Icon = item.icon
             return (
-              <Link key={item.href} href={item.href} className={active ? 'mobile-nav mobile-nav-active' : 'mobile-nav'}>
-                <span aria-hidden="true">{item.icon}</span>
-                <span>{dict.nav[item.key]}</span>
+              <Link
+                key={item.href}
+                href={item.href}
+                className={active ? 'mobile-nav mobile-nav-active' : 'mobile-nav'}
+                aria-current={active ? 'page' : undefined}
+              >
+                <span className="mobile-nav-icon" aria-hidden="true"><Icon /></span>
+                <span className="mobile-nav-label">{dict.nav[item.key]}</span>
               </Link>
             )
           })}
@@ -168,9 +189,9 @@ function ShareButton({
 
   if (variant === 'mobile') {
     return (
-      <button type="button" className="mobile-nav" onClick={onShare} aria-label={labels.button}>
-        <span aria-hidden="true">↗</span>
-        <span aria-live="polite">{label}</span>
+      <button type="button" className="mobile-nav mobile-nav-icon-only" onClick={onShare} aria-label={labels.button}>
+        <span className="mobile-nav-icon" aria-hidden="true"><ShareIcon /></span>
+        <span className="sr-only" aria-live="polite">{label}</span>
       </button>
     )
   }
@@ -179,6 +200,53 @@ function ShareButton({
     <button type="button" className="nav-link" onClick={onShare} aria-label={labels.button}>
       <span aria-live="polite">{label}</span>
     </button>
+  )
+}
+
+function HomeIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M3 10.5L12 3l9 7.5" />
+      <path d="M5 9.5V20h14V9.5" />
+      <path d="M10 20v-6h4v6" />
+    </svg>
+  )
+}
+
+function DiamondIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M12 3l8 9-8 9-8-9 8-9z" />
+      <path d="M8 8h8" />
+    </svg>
+  )
+}
+
+function CompassIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M9.5 14.5l2-5 5-2-2 5-5 2z" />
+    </svg>
+  )
+}
+
+function SettingsIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <circle cx="12" cy="12" r="3" />
+      <path d="M19.4 15a1 1 0 0 0 .2 1.1l.1.1a1 1 0 0 1 0 1.4l-1 1a1 1 0 0 1-1.4 0l-.1-.1a1 1 0 0 0-1.1-.2 1 1 0 0 0-.6.9V20a1 1 0 0 1-1 1h-1.5a1 1 0 0 1-1-1v-.2a1 1 0 0 0-.6-.9 1 1 0 0 0-1.1.2l-.1.1a1 1 0 0 1-1.4 0l-1-1a1 1 0 0 1 0-1.4l.1-.1a1 1 0 0 0 .2-1.1 1 1 0 0 0-.9-.6H4a1 1 0 0 1-1-1v-1.5a1 1 0 0 1 1-1h.2a1 1 0 0 0 .9-.6 1 1 0 0 0-.2-1.1l-.1-.1a1 1 0 0 1 0-1.4l1-1a1 1 0 0 1 1.4 0l.1.1a1 1 0 0 0 1.1.2 1 1 0 0 0 .6-.9V4a1 1 0 0 1 1-1h1.5a1 1 0 0 1 1 1v.2a1 1 0 0 0 .6.9 1 1 0 0 0 1.1-.2l.1-.1a1 1 0 0 1 1.4 0l1 1a1 1 0 0 1 0 1.4l-.1.1a1 1 0 0 0-.2 1.1 1 1 0 0 0 .9.6H20a1 1 0 0 1 1 1v1.5a1 1 0 0 1-1 1h-.2a1 1 0 0 0-.9.6z" />
+    </svg>
+  )
+}
+
+function ShareIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M12 15V4" />
+      <path d="M8 8l4-4 4 4" />
+      <path d="M5 13v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5" />
+    </svg>
   )
 }
 
@@ -195,7 +263,6 @@ function LanguageSwitcher({
 }) {
   return (
     <label className={compact ? 'flex items-center gap-2 text-sm text-muted' : 'block text-sm text-muted'}>
-      <span className={compact ? 'hidden lg:inline' : 'mb-1 block'}>{label}</span>
       <select
         className={compact ? 'language-select language-select-compact' : 'language-select w-full'}
         value={language}
