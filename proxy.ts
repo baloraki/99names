@@ -23,7 +23,7 @@ const CONTENT_SECURITY_POLICY = [
   "worker-src 'self' blob:",
   "form-action 'self'",
   "require-trusted-types-for 'script'",
-  'trusted-types nextjs nextjs-bundler',
+  'trusted-types nextjs-bundler',
   'upgrade-insecure-requests',
 ].join('; ')
 

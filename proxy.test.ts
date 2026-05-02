@@ -120,7 +120,7 @@ describe('proxy', () => {
     expect(response.status).toBeGreaterThanOrEqual(300)
     expect(response.status).toBeLessThan(400)
     expect(response.headers.get('location')).toBe('https://99names.app/tr/gizlilik')
-    expect(response.headers.get('content-security-policy')).toContain("trusted-types nextjs nextjs-bundler")
+    expect(response.headers.get('content-security-policy')).toContain("trusted-types nextjs-bundler")
     expect(response.headers.get('strict-transport-security')).toBe('max-age=63072000; includeSubDomains; preload')
   })
 })
