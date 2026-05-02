@@ -281,6 +281,14 @@ textarea {
   white-space: nowrap;
 }
 
+@media (min-width: 768px) {
+  .mobile-menu-backdrop,
+  .mobile-menu-panel,
+  .mobile-menu-toggle {
+    display: none;
+  }
+}
+
 .chip {
   min-height: 38px;
   border-radius: 999px;
