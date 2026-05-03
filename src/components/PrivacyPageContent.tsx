@@ -1,17 +1,18 @@
 'use client'
 
 import Link from 'next/link'
-import { useAppState } from '@/hooks/useAppState'
 import type { Language } from '@/types/language'
 import { ObfuscatedEmail } from '@/components/ObfuscatedEmail'
 import { getLocalizedStaticPath } from '@/lib/seo'
+import { usePathname } from 'next/navigation'
 
 // The app uses Vercel Analytics + Speed Insights (see RootDocument.tsx).
 // Push reminders use Supabase for storing technical push subscriptions.
 // IMPORTANT before publishing:
 // Replace OPERATOR_NAME and OPERATOR_ADDRESS with the real operator details.
-const OPERATOR_NAME = '[Vorname Nachname]'
-const OPERATOR_ADDRESS = '[Straße und Hausnummer, PLZ Ort, Land]'
+const OPERATOR_NAME = process.env.NEXT_PUBLIC_OPERATOR_NAME ?? 'UNCONFIGURED_OPERATOR_NAME'
+const OPERATOR_ADDRESS = process.env.NEXT_PUBLIC_OPERATOR_ADDRESS ?? 'UNCONFIGURED_OPERATOR_ADDRESS'
+const SUPABASE_PROJECT_REGION = process.env.NEXT_PUBLIC_SUPABASE_PROJECT_REGION ?? 'UNCONFIGURED_REGION'
 
 // E-Mail is intentionally NOT stored here → see <ObfuscatedEmail />
 
@@ -33,7 +34,7 @@ const content: Record<Language, PolicyContent> = {
       {
         heading: '1. Verantwortlicher',
         paragraphs: [
-          `Verantwortlich für die Datenverarbeitung im Sinne der Datenschutz-Grundverordnung (DSGVO) ist: ${OPERATOR_NAME}, ${OPERATOR_ADDRESS}.`,
+          `Verantwortlich für die Datenverarbeitung im Sinne der Datenschutz-Grundverordnung (DSGVO) und des schweizerischen DSG (revDSG) ist: ${OPERATOR_NAME}, ${OPERATOR_ADDRESS}.`,
           { before: 'E-Mail: ', isEmail: true, after: '' },
         ],
       },
@@ -56,7 +57,7 @@ const content: Record<Language, PolicyContent> = {
         heading: '4. Push-Benachrichtigungen',
         paragraphs: [
           'Wenn Sie Push-Erinnerungen ausdrücklich aktivieren, speichern wir den Browser-Push-Endpunkt, technische Push-Schlüssel, das gewählte Erinnerungsintervall, die Zeitzone, den User-Agent, Versandzeitpunkte, Fehlerstatus und technische Zustellprotokolle in Supabase.',
-          'Diese Daten werden ausschließlich verwendet, um die von Ihnen gewünschten Lern-Erinnerungen zuzustellen, fehlerhafte Abonnements zu erkennen und ungültige Push-Abonnements zu deaktivieren.',
+          'Diese Daten werden ausschließlich verwendet, um die von Ihnen gewünschten Lern-Erinnerungen zuzustellen, fehlerhafte Abonnements zu erkennen und ungültige Push-Abonnements zu deaktivieren. Da diese Website religiöse Lerninhalte betrifft, können aktivierte Push-Erinnerungen Rückschlüsse auf ein religiöses Interesse zulassen. Push-Erinnerungen sind vollständig freiwillig, werden nur nach ausdrücklicher Aktivierung eingerichtet, nicht zur Profilbildung genutzt und nicht mit einem Benutzerkonto verknüpft.',
           'Je nach Browser und Betriebssystem wird die technische Zustellung der Push-Benachrichtigung über Push-Dienste des jeweiligen Browser- oder Betriebssystem-Anbieters abgewickelt, z. B. durch Apple, Google, Mozilla oder Microsoft.',
           'Sie können Push-Benachrichtigungen jederzeit in der App oder in den Browser- bzw. Geräteeinstellungen deaktivieren. Beim Deaktivieren wird das Push-Abonnement serverseitig deaktiviert, soweit dies technisch möglich ist.',
           'Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO für die Aktivierung der Push-Erinnerungen sowie Art. 6 Abs. 1 lit. f DSGVO für den sicheren technischen Betrieb, die Fehlerbehandlung und die Deaktivierung ungültiger Abonnements.',
@@ -67,7 +68,7 @@ const content: Record<Language, PolicyContent> = {
         paragraphs: [
           'Zur Speicherung optionaler Push-Abonnements verwenden wir Supabase, einen Dienst der Supabase Inc. Supabase stellt die technische Datenbank-Infrastruktur bereit.',
           'Gespeichert werden nur die für Push-Erinnerungen erforderlichen technischen Daten, insbesondere Push-Endpunkt, Push-Schlüssel, Erinnerungsintervall, Zeitzone, technische Zustellinformationen und Fehlerstatus.',
-          'Die Verarbeitung erfolgt, soweit erforderlich, auf Grundlage eines Auftragsverarbeitungsvertrags. Soweit Daten in Drittländer übermittelt werden, erfolgt dies nach den jeweils anwendbaren Datenschutzgarantien.',
+          'Mit Supabase wird, soweit gesetzlich erforderlich, ein Auftragsverarbeitungsvertrag abgeschlossen. Die Supabase-Projektregion ist: ${SUPABASE_PROJECT_REGION}. Soweit Daten in Drittländer übermittelt werden, erfolgt dies nach den jeweils anwendbaren Datenschutzgarantien.',
           'Die gespeicherten Push-Daten werden gelöscht oder deaktiviert, wenn Sie Push-Benachrichtigungen deaktivieren, das Abonnement ungültig wird oder die Speicherung für den genannten Zweck nicht mehr erforderlich ist.',
         ],
       },
@@ -86,15 +87,15 @@ const content: Record<Language, PolicyContent> = {
         heading: '7. Kontaktformular (Web3Forms)',
         paragraphs: [
           'Wenn Sie das Kontaktformular nutzen, werden Name, E-Mail-Adresse und Ihre Nachricht über den Dienst Web3Forms (Web3Forms, https://web3forms.com) an unsere E-Mail-Adresse übermittelt.',
-          'Web3Forms übermittelt die Daten direkt per E-Mail weiter und speichert diese nach eigenen Angaben nicht dauerhaft auf seinen Servern. Der öffentliche API-Schlüssel ist im Quellcode der Website sichtbar; er berechtigt lediglich zum Senden von Formularen an unsere E-Mail-Adresse.',
-          'Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Ihre Einwilligung durch Absenden des Formulars). Die übermittelten Daten werden ausschließlich zur Beantwortung Ihrer Anfrage verwendet und danach gelöscht, spätestens nach 90 Tagen.',
+          'Web3Forms verarbeitet die über das Kontaktformular eingegebenen Daten zur Weiterleitung an unsere E-Mail-Adresse. Nach Angaben von Web3Forms können dabei technische Logdaten wie IP-Adresse, Browsertyp, Zeitstempel und weitere Zugriffsdaten verarbeitet werden. Web3Forms betreibt seine Server nach eigenen Angaben in der Region US-East und kann zur Spam-Abwehr weitere Dienste einsetzen. Die konkrete Speicherdauer richtet sich nach den Angaben und dem genutzten Tarif von Web3Forms. Laut Web3Forms können Spam-Prevention-Dienste wie CleanTalk und Akismet eingebunden sein, an die u. a. IP-Adresse und E-Mail-Adresse übermittelt werden können. Der öffentliche API-Schlüssel ist im Quellcode sichtbar und autorisiert nur das Senden an unsere Kontaktadresse.',
+          'Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Ihre Einwilligung durch Absenden des Formulars). Die übermittelten Daten werden ausschließlich zur Beantwortung Ihrer Anfrage verwendet und danach gelöscht, spätestens nach 90 Tagen. Bei Kontaktaufnahme per E-Mail oder Kontaktformular werden die Inhalte außerdem in unserem E-Mail-Postfach verarbeitet. Als E-Mail-Anbieter nutzen wir GMX / 1&1 Mail & Media GmbH.',
           'Weitere Informationen zu Web3Forms: https://web3forms.com/privacy',
         ],
       },
       {
         heading: '8. Cookies und vergleichbare Technologien',
         paragraphs: [
-          'Diese Website setzt keine Cookies. Es werden keine Session-, Tracking- oder Marketing-Cookies verwendet.',
+          'Diese Website setzt keine Cookies. Es werden keine Session-, Tracking- oder Marketing-Cookies verwendet. Als Progressive Web App kann diese Website einen Service Worker nutzen und statische App-Dateien, Schriftarten, Bilder und Inhalte im Browser-Cache/Cache Storage speichern, um schneller zu laden und teilweise offline nutzbar zu sein. Diese Speicherung dient nur der technischen Bereitstellung und nicht dem Tracking; sie kann über Browser-/Geräteeinstellungen gelöscht werden.',
           'Für grundlegende App-Funktionen verwenden wir lokalen Browserspeicher (localStorage), z. B. für Spracheinstellung, Lernfortschritt, Favoriten und lokale Erinnerungseinstellungen. Diese Speicherung ist erforderlich, um die ausdrücklich gewünschten App-Funktionen bereitzustellen.',
           'Es findet keine Nutzung des localStorage zu Werbe-, Tracking- oder Profilingzwecken statt.',
         ],
@@ -112,7 +113,7 @@ const content: Record<Language, PolicyContent> = {
           'Sie haben nach der DSGVO folgende Rechte gegenüber dem Verantwortlichen:',
           '• Recht auf Auskunft (Art. 15 DSGVO)\n• Recht auf Berichtigung (Art. 16 DSGVO)\n• Recht auf Löschung (Art. 17 DSGVO)\n• Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)\n• Recht auf Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)\n• Recht auf Datenübertragbarkeit (Art. 20 DSGVO)',
           { before: 'Zur Ausübung Ihrer Rechte wenden Sie sich bitte per E-Mail an: ', isEmail: true, after: '' },
-          'Unbeschadet eines anderweitigen verwaltungsrechtlichen oder gerichtlichen Rechtsbehelfs haben Sie das Recht auf Beschwerde bei einer Datenschutz-Aufsichtsbehörde, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer Daten gegen die DSGVO verstößt.',
+          'Soweit eine Verarbeitung auf Einwilligung beruht, können Sie Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen. Unbeschadet eines anderweitigen verwaltungsrechtlichen oder gerichtlichen Rechtsbehelfs haben Sie das Recht auf Beschwerde bei einer Datenschutz-Aufsichtsbehörde, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer Daten gegen die DSGVO verstößt. Wenn Sie in der Schweiz wohnen, können Sie sich außerdem an den Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB) wenden.',
         ],
       },
       {
@@ -131,7 +132,7 @@ const content: Record<Language, PolicyContent> = {
       {
         heading: '1. Data controller',
         paragraphs: [
-          `The controller for data processing within the meaning of the General Data Protection Regulation (GDPR) is: ${OPERATOR_NAME}, ${OPERATOR_ADDRESS}.`,
+          `The controller for data processing within the meaning of the General Data Protection Regulation (GDPR) and the Swiss FADP (revFADP) is: ${OPERATOR_NAME}, ${OPERATOR_ADDRESS}.`,
           { before: 'Email: ', isEmail: true, after: '' },
         ],
       },
@@ -154,7 +155,7 @@ const content: Record<Language, PolicyContent> = {
         heading: '4. Push notifications',
         paragraphs: [
           'If you explicitly enable push reminders, we store the browser push endpoint, technical push keys, selected reminder interval, timezone, user agent, delivery timestamps, failure state, and technical delivery logs in Supabase.',
-          'This data is used exclusively to deliver the learning reminders requested by you, detect failed subscriptions, and disable invalid push subscriptions.',
+          'This data is used exclusively to deliver the learning reminders requested by you, detect failed subscriptions, and disable invalid push subscriptions. Because this website covers religious learning content, activated reminders can allow inferences about religious interest. Push reminders are fully voluntary, are only set up after explicit activation, are not used for profiling, and are not linked to a user account.',
           'Depending on your browser and operating system, the technical delivery of push notifications may be handled through push services provided by the respective browser or operating system provider, such as Apple, Google, Mozilla, or Microsoft.',
           'You can disable push notifications at any time in the app or in your browser or device settings. When disabled, the push subscription is deactivated on the server side where technically possible.',
           'Legal basis: Art. 6(1)(a) GDPR for enabling push reminders and Art. 6(1)(f) GDPR for secure technical operation, error handling, and deactivation of invalid subscriptions.',
@@ -165,7 +166,7 @@ const content: Record<Language, PolicyContent> = {
         paragraphs: [
           'We use Supabase, a service provided by Supabase Inc., to store optional push subscriptions. Supabase provides the technical database infrastructure.',
           'Only the technical data required for push reminders is stored, in particular the push endpoint, push keys, reminder interval, timezone, technical delivery information, and failure state.',
-          'Where required, processing is carried out on the basis of a data processing agreement. Where data is transferred to third countries, this is done under the applicable data protection safeguards.',
+          'Where legally required, a data processing agreement is concluded with Supabase. The configured Supabase project region is: ${SUPABASE_PROJECT_REGION}. Where data is transferred to third countries, this is done under the applicable data protection safeguards.',
           'Stored push data is deleted or deactivated when you disable push notifications, when the subscription becomes invalid, or when storage is no longer necessary for the stated purpose.',
         ],
       },
@@ -184,15 +185,15 @@ const content: Record<Language, PolicyContent> = {
         heading: '7. Contact form (Web3Forms)',
         paragraphs: [
           'When you use the contact form, your name, email address, and message are transmitted to our email address via the Web3Forms service (https://web3forms.com).',
-          'Web3Forms forwards the data directly by email and, according to its documentation, does not permanently store it on its servers. The public API key is visible in the website source code; it only authorises sending form submissions to our email address.',
-          'Legal basis: Art. 6(1)(a) GDPR (your consent by submitting the form). The transmitted data is used solely to respond to your enquiry and is deleted thereafter, at the latest after 90 days.',
+          'Web3Forms processes the data entered in the contact form to forward it to our email address. According to Web3Forms, technical log data such as IP address, browser type, timestamp, and other access data may be processed. Web3Forms states that its servers run in the US-East region and that additional anti-spam services may be used. The concrete retention period depends on Web3Forms documentation and the selected plan. Web3Forms also names spam-prevention services such as CleanTalk and Akismet, to which IP address and email address may be transmitted. The public API key in the source code only authorises forwarding submissions to our contact address.',
+          'Legal basis: Art. 6(1)(a) GDPR (your consent by submitting the form). The transmitted data is used solely to respond to your enquiry and is deleted thereafter, at the latest after 90 days. When you contact us via email or contact form, the content is also processed in our mailbox. We use GMX / 1&1 Mail & Media GmbH as email provider.',
           'Web3Forms privacy policy: https://web3forms.com/privacy',
         ],
       },
       {
         heading: '8. Cookies and similar technologies',
         paragraphs: [
-          'This website does not set any cookies. No session, tracking, or marketing cookies are used.',
+          'This website does not set any cookies. No session, tracking, or marketing cookies are used. As a progressive web app, this website may use a service worker and cache storage to store static app files, fonts, images, and content for faster loading and partial offline availability. This storage serves only technical delivery, not tracking, and can be removed in browser/device settings.',
           'For basic app functions, we use local browser storage (localStorage), for example for language settings, learning progress, favourites, and local reminder settings. This storage is necessary to provide the app functions explicitly requested by you.',
           'localStorage is not used for advertising, tracking, or profiling purposes.',
         ],
@@ -200,7 +201,7 @@ const content: Record<Language, PolicyContent> = {
       {
         heading: '9. Server logs',
         paragraphs: [
-          'The hosting provider (Vercel Inc.) may log technical access data, such as IP address, timestamp, requested URL, and HTTP status code. This data is processed to provide, secure, and troubleshoot the website and is not used for marketing or profiling purposes.',
+          'The hosting provider (Vercel Inc.) may log technical access data, such as IP address, timestamp, requested URL, and HTTP status code. If server-side functions, cron jobs, or API routes run on Vercel, technical access data and function logs may also be processed for operation, security, and error analysis. This data is not used for marketing or profiling purposes.',
           'Legal basis: Art. 6(1)(f) GDPR (legitimate interest in ensuring technical operation, security, and error analysis).',
         ],
       },
@@ -210,7 +211,7 @@ const content: Record<Language, PolicyContent> = {
           'Under the GDPR you have the following rights against the data controller:',
           '• Right of access (Art. 15 GDPR)\n• Right to rectification (Art. 16 GDPR)\n• Right to erasure (Art. 17 GDPR)\n• Right to restriction of processing (Art. 18 GDPR)\n• Right to object to processing (Art. 21 GDPR)\n• Right to data portability (Art. 20 GDPR)',
           { before: 'To exercise your rights, please contact us by email at: ', isEmail: true, after: '' },
-          'Without prejudice to any other administrative or judicial remedy, you have the right to lodge a complaint with a data protection supervisory authority if you believe that the processing of your data violates the GDPR.',
+          'Where processing is based on consent, you may withdraw your consent at any time with effect for the future. Without prejudice to any other administrative or judicial remedy, you have the right to lodge a complaint with a data protection supervisory authority if you believe that the processing of your data violates the GDPR. If you reside in Switzerland, you may also contact the Federal Data Protection and Information Commissioner (FDPIC).',
         ],
       },
       {
@@ -229,7 +230,7 @@ const content: Record<Language, PolicyContent> = {
       {
         heading: '1. Veri sorumlusu',
         paragraphs: [
-          `Genel Veri Koruma Yönetmeliği (GDPR/DSGVO) kapsamında veri sorumlusu: ${OPERATOR_NAME}, ${OPERATOR_ADDRESS}.`,
+          `Genel Veri Koruma Yönetmeliği (GDPR/DSGVO and Swiss FADP (revFADP) kapsamında veri sorumlusu: ${OPERATOR_NAME}, ${OPERATOR_ADDRESS}.`,
           { before: 'E-posta: ', isEmail: true, after: '' },
         ],
       },
@@ -263,7 +264,7 @@ const content: Record<Language, PolicyContent> = {
         paragraphs: [
           'İsteğe bağlı push aboneliklerini saklamak için Supabase Inc. tarafından sunulan Supabase hizmetini kullanıyoruz. Supabase teknik veritabanı altyapısını sağlar.',
           'Yalnızca push hatırlatmaları için gerekli teknik veriler saklanır; özellikle push uç noktası, push anahtarları, hatırlatma aralığı, saat dilimi, teknik teslimat bilgileri ve hata durumu.',
-          'Gerekli olduğu durumlarda işleme, bir veri işleme sözleşmesi temelinde gerçekleştirilir. Verilerin üçüncü ülkelere aktarılması halinde, bu aktarım geçerli veri koruma güvencelerine uygun şekilde yapılır.',
+          'Yasal olarak gerekli olduğu durumlarda Supabase ile bir veri işleme sözleşmesi yapılır. Yapılandırılan Supabase proje bölgesi: ${SUPABASE_PROJECT_REGION}. Verilerin üçüncü ülkelere aktarılması halinde, bu aktarım geçerli veri koruma güvencelerine uygun şekilde yapılır.',
           'Saklanan push verileri, push bildirimlerini devre dışı bıraktığınızda, abonelik geçersiz hale geldiğinde veya belirtilen amaç için saklama artık gerekli olmadığında silinir ya da devre dışı bırakılır.',
         ],
       },
@@ -282,8 +283,8 @@ const content: Record<Language, PolicyContent> = {
         heading: '7. İletişim formu (Web3Forms)',
         paragraphs: [
           'İletişim formunu kullandığınızda adınız, e-posta adresiniz ve mesajınız Web3Forms hizmeti (https://web3forms.com) aracılığıyla e-posta adresimize iletilir.',
-          'Web3Forms verileri doğrudan e-posta yoluyla iletmekte ve belgelere göre kendi sunucularında kalıcı olarak saklamamaktadır. Web sitesi kaynak kodunda görünen genel API anahtarı yalnızca form gönderimlerinin e-posta adresimize iletilmesine olanak tanır.',
-          'Hukuki dayanak: GDPR Madde 6(1)(a) – formu göndererek verdiğiniz onay. İletilen veriler yalnızca sorunuzu yanıtlamak amacıyla kullanılır ve en geç 90 gün içinde silinir.',
+          'Web3Forms, iletişim formuna girilen verileri e-posta adresimize iletmek için işler. Web3Forms bilgilerine göre IP adresi, tarayıcı türü, zaman damgası ve benzeri teknik erişim verileri işlenebilir. Web3Forms, sunucularının US-East bölgesinde çalıştığını ve spam önleme için ek hizmetler kullanabileceğini belirtir. Saklama süresi, Web3Forms beyanlarına ve kullanılan plana bağlıdır. Web3Forms ayrıca CleanTalk ve Akismet gibi spam önleme hizmetlerini belirtir; bu hizmetlere IP adresi ve e-posta adresi aktarılabilir. Kaynak kodunda görünen genel API anahtarı yalnızca gönderimleri iletişim adresimize iletmeye yarar.',
+          'Hukuki dayanak: GDPR Madde 6(1)(a) – formu göndererek verdiğiniz onay. İletilen veriler yalnızca talebinizi yanıtlamak için kullanılır ve en geç 90 gün içinde silinir. E-posta veya iletişim formu ile iletişimde içerikler ayrıca e-posta kutumuzda işlenir. E-posta sağlayıcısı olarak GMX / 1&1 Mail & Media GmbH kullanıyoruz.',
           'Web3Forms gizlilik politikası: https://web3forms.com/privacy',
         ],
       },
@@ -322,7 +323,8 @@ const content: Record<Language, PolicyContent> = {
 }
 
 export function PrivacyPageContent() {
-  const { language } = useAppState()
+  const pathname = usePathname()
+  const language: Language = pathname.startsWith('/de') ? 'de' : pathname.startsWith('/tr') ? 'tr' : 'en'
   const c = content[language]
 
   return (
