@@ -25,7 +25,7 @@ export function RootDocument({
                 if (theme) {
                   document.documentElement.setAttribute('data-theme', JSON.parse(theme));
                 } else {
-                  document.documentElement.setAttribute('data-theme', 'blue-night');
+                  document.documentElement.setAttribute('data-theme', 'soft-light');
                 }
               } catch (e) {}
             `,

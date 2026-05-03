@@ -52,7 +52,7 @@ const defaultSchedule: LearningScheduleSettings = {
   interval: 'daily',
 }
 
-const defaultTheme: ThemeName = 'blue-night'
+const defaultTheme: ThemeName = 'soft-light'
 
 const defaultLearnState: LearnState = {
   mode: 'card',

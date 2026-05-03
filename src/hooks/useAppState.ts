@@ -27,7 +27,7 @@ export function useAppState() {
   const [ready, setReady] = useState(false)
   const [language, setLanguageState] = useState<Language>('en')
   const [progress, setProgressState] = useState<ProgressState>(initialProgress)
-  const [theme, setThemeState] = useState<ThemeName>('blue-night')
+  const [theme, setThemeState] = useState<ThemeName>('soft-light')
   const [learnState, setLearnStateValue] = useState<LearnState>(initialLearnState)
 
   useEffect(() => {
