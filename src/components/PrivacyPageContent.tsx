@@ -47,7 +47,7 @@ const content: Record<Language, PolicyContent> = {
       {
         heading: '3. Lokaler Browserspeicher (localStorage)',
         paragraphs: [
-          'Diese App speichert folgende Daten lokal im Browserspeicher (localStorage) Ihres Geräts: Spracheinstellung, Lernfortschritt (welche Namen als gelernt markiert wurden), Favoritenliste, zuletzt angesehene Namen sowie den lokalen Status optionaler Push-Erinnerungen.',
+          'Diese App speichert folgende Daten lokal im Browserspeicher (localStorage) Ihres Geräts: Lernfortschritt (welche Namen als gelernt markiert wurden), Favoritenliste, zuletzt angesehene Namen sowie den lokalen Status optionaler Push-Erinnerungen. Die Spracheinstellung wird separat als Cookie gespeichert (siehe Abschnitt 8).',
           'Diese lokalen Daten verlassen Ihr Gerät nicht. Sie können diese Daten jederzeit selbst löschen – über die Einstellungsseite der App oder direkt in Ihren Browsereinstellungen.',
           'Die Nutzung des lokalen Browserspeichers erfolgt ausschließlich zur Bereitstellung der von Ihnen gewünschten App-Funktionen. Es findet keine Nutzung zu Werbe-, Tracking- oder Profilingzwecken statt.',
           'Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bereitstellung einer funktionsfähigen Anwendung).',
@@ -77,9 +77,9 @@ const content: Record<Language, PolicyContent> = {
         paragraphs: [
           'Diese Website verwendet Vercel Analytics und Vercel Speed Insights, Dienste der Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA.',
           'Vercel Analytics erfasst nach Anbieterangaben cookielose, datensparsame Nutzungsdaten, z. B. aufgerufene Seiten, ungefähre geografische Region, Gerätetyp und Herkunft des Besuchs. Vercel Speed Insights misst Seitenlade-Performance und technische Leistungswerte.',
-          'Nach aktuellem Stand von Vercel werden für diese Dienste keine Cookies gesetzt und keine personenbezogenen Identifikatoren für werbliches Tracking verwendet.',
+          'Die dabei erhobenen Daten werden nach Anbieterangaben anonymisiert bzw. aggregiert verarbeitet. Es werden keine Cookies gesetzt und keine personenbezogenen Identifikatoren für werbliches Tracking verwendet. Einzelne Personen sind anhand der erfassten Daten nicht identifizierbar.',
           'Da Vercel Inc. in den USA ansässig ist, können Daten in die USA übermittelt werden. Vercel ist unter dem EU-U.S. Data Privacy Framework zertifiziert, sodass ein angemessenes Datenschutzniveau gewährleistet ist.',
-          'Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Optimierung der Website und Erkennung technischer Fehler). Sie können der Verarbeitung widersprechen, indem Sie Ihren Browser so konfigurieren, dass JavaScript von vercel.com/insights blockiert wird.',
+          'Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Optimierung der Website und Erkennung technischer Fehler). Ein Einwilligungs-Banner ist aufgrund der anonymisierten, cookiefreien Verarbeitung nicht erforderlich. Sie können der Verarbeitung widersprechen, indem Sie Ihren Browser so konfigurieren, dass JavaScript von vercel.com/insights blockiert wird.',
           'Weitere Informationen: https://vercel.com/legal/privacy-policy',
         ],
       },
@@ -95,9 +95,11 @@ const content: Record<Language, PolicyContent> = {
       {
         heading: '8. Cookies und vergleichbare Technologien',
         paragraphs: [
-          'Diese Website setzt keine Cookies. Es werden keine Session-, Tracking- oder Marketing-Cookies verwendet. Als Progressive Web App kann diese Website einen Service Worker nutzen und statische App-Dateien, Schriftarten, Bilder und Inhalte im Browser-Cache/Cache Storage speichern, um schneller zu laden und teilweise offline nutzbar zu sein. Diese Speicherung dient nur der technischen Bereitstellung und nicht dem Tracking; sie kann über Browser-/Geräteeinstellungen gelöscht werden.',
-          'Für grundlegende App-Funktionen verwenden wir lokalen Browserspeicher (localStorage), z. B. für Spracheinstellung, Lernfortschritt, Favoriten und lokale Erinnerungseinstellungen. Diese Speicherung ist erforderlich, um die ausdrücklich gewünschten App-Funktionen bereitzustellen.',
-          'Es findet keine Nutzung des localStorage zu Werbe-, Tracking- oder Profilingzwecken statt.',
+          'Diese Website setzt genau ein Cookie: das Cookie app_language. Es dient ausschließlich dazu, Ihre gewählte Sprache (Deutsch, Englisch oder Türkisch) über Seitenaufrufe hinweg beizubehalten, damit Sie die Website in Ihrer bevorzugten Sprache nutzen können.',
+          'Cookie-Name: app_language | Zweck: Speicherung der Sprachauswahl | Speicherdauer: 1 Jahr | SameSite: Lax | Keine Weitergabe an Dritte.',
+          'Es werden keine Session-, Tracking- oder Marketing-Cookies verwendet. Dieses Cookie enthält keine personenbezogenen Daten und wird nicht zur Nutzeridentifikation oder Profilbildung verwendet.',
+          'Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bereitstellung einer benutzerfreundlichen und sprachkonsistenten Anwendung). Da das Cookie ausschließlich der Funktionalität der Website dient und die Privatsphäre der Nutzer nicht beeinträchtigt, ist keine aktive Einwilligung erforderlich.',
+          'Für grundlegende App-Funktionen wird zusätzlich der lokale Browserspeicher (localStorage) verwendet, z. B. für Lernfortschritt, Favoriten und lokale Erinnerungseinstellungen. Details siehe Abschnitt 3.',
         ],
       },
       {
@@ -145,7 +147,7 @@ const content: Record<Language, PolicyContent> = {
       {
         heading: '3. Local browser storage (localStorage)',
         paragraphs: [
-          'This app stores the following data in the local browser storage (localStorage) of your device: language setting, learning progress (which names have been marked as learned), favourites list, most recently viewed names, and local state for optional push reminders.',
+          'This app stores the following data in the local browser storage (localStorage) of your device: learning progress (which names have been marked as learned), favourites list, most recently viewed names, and local state for optional push reminders. The language preference is stored separately as a cookie (see section 8).',
           'This local data does not leave your device. You can delete it at any time via the app\'s Settings page or directly in your browser settings.',
           'Local browser storage is used only to provide the app functions requested by you. It is not used for advertising, tracking, or profiling purposes.',
           'Legal basis: Art. 6(1)(f) GDPR (legitimate interest in providing a functioning application).',
@@ -175,9 +177,9 @@ const content: Record<Language, PolicyContent> = {
         paragraphs: [
           'This website uses Vercel Analytics and Vercel Speed Insights, services provided by Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA.',
           'According to Vercel, Vercel Analytics collects cookie-free, data-minimised usage data, such as pages visited, approximate geographic region, device type, and referral source. Vercel Speed Insights measures page-load performance and technical performance metrics.',
-          'According to Vercel\'s current documentation, these services do not set cookies and do not use personal identifiers for advertising tracking.',
+          'According to Vercel, the data collected is processed in anonymised or aggregated form. No cookies are set and no personal identifiers are used for advertising tracking. Individual users cannot be identified from the data collected.',
           'Because Vercel Inc. is located in the United States, data may be transferred there. Vercel is certified under the EU–U.S. Data Privacy Framework, ensuring an adequate level of data protection.',
-          'Legal basis: Art. 6(1)(f) GDPR (legitimate interest in optimising the website and detecting technical errors). You can object to this processing by configuring your browser to block JavaScript from vercel.com/insights.',
+          'Legal basis: Art. 6(1)(f) GDPR (legitimate interest in optimising the website and detecting technical errors). No consent banner is required due to the anonymised, cookie-free processing. You can object to this processing by configuring your browser to block JavaScript from vercel.com/insights.',
           'Privacy policy: https://vercel.com/legal/privacy-policy',
         ],
       },
@@ -193,9 +195,11 @@ const content: Record<Language, PolicyContent> = {
       {
         heading: '8. Cookies and similar technologies',
         paragraphs: [
-          'This website does not set any cookies. No session, tracking, or marketing cookies are used. As a progressive web app, this website may use a service worker and cache storage to store static app files, fonts, images, and content for faster loading and partial offline availability. This storage serves only technical delivery, not tracking, and can be removed in browser/device settings.',
-          'For basic app functions, we use local browser storage (localStorage), for example for language settings, learning progress, favourites, and local reminder settings. This storage is necessary to provide the app functions explicitly requested by you.',
-          'localStorage is not used for advertising, tracking, or profiling purposes.',
+          'This website sets exactly one cookie: the app_language cookie. Its sole purpose is to remember your chosen language (English, German, or Turkish) across page visits, so that the site is displayed in your preferred language.',
+          'Cookie name: app_language | Purpose: storing language preference | Storage duration: 1 year | SameSite: Lax | Not shared with third parties.',
+          'No session, tracking, or marketing cookies are used. This cookie contains no personal data and is not used to identify or profile users.',
+          'Legal basis: Art. 6(1)(f) GDPR (legitimate interest in providing a user-friendly and language-consistent application). Because this cookie serves a purely functional purpose and does not affect user privacy, no active consent is required.',
+          'For basic app functions, local browser storage (localStorage) is also used, for example for learning progress, favourites, and local reminder settings. See section 3 for details.',
         ],
       },
       {
@@ -243,7 +247,7 @@ const content: Record<Language, PolicyContent> = {
       {
         heading: '3. Yerel tarayıcı depolama alanı (localStorage)',
         paragraphs: [
-          'Bu uygulama aşağıdaki verileri cihazınızın yerel tarayıcı belleğinde (localStorage) saklar: dil tercihi, öğrenme ilerleme durumu (hangi isimlerin öğrenildi olarak işaretlendiği), favori listesi, en son görüntülenen isimler ve isteğe bağlı push hatırlatmaları için yerel durum.',
+          'Bu uygulama aşağıdaki verileri cihazınızın yerel tarayıcı belleğinde (localStorage) saklar: öğrenme ilerleme durumu (hangi isimlerin öğrenildi olarak işaretlendiği), favori listesi, en son görüntülenen isimler ve isteğe bağlı push hatırlatmaları için yerel durum. Dil tercihi ayrı bir çerez ile saklanır (bkz. bölüm 8).',
           'Bu yerel veriler cihazınızı terk etmez. Uygulamanın Ayarlar sayfasından veya doğrudan tarayıcı ayarlarınızdan bu verileri istediğiniz zaman silebilirsiniz.',
           'Yerel tarayıcı depolama alanı yalnızca talep ettiğiniz uygulama işlevlerini sunmak için kullanılır. Reklam, izleme veya profil oluşturma amacıyla kullanılmaz.',
           'Hukuki dayanak: GDPR Madde 6(1)(f) – işlevsel bir uygulama sunmaya yönelik meşru menfaat.',
@@ -273,9 +277,9 @@ const content: Record<Language, PolicyContent> = {
         paragraphs: [
           'Bu web sitesi, Vercel Inc. (440 N Barranca Ave #4133, Covina, CA 91723, ABD) tarafından sunulan Vercel Analytics ve Vercel Speed Insights hizmetlerini kullanmaktadır.',
           'Vercel\'in açıklamalarına göre Vercel Analytics çerezsiz ve veri minimizasyonuna uygun kullanım verilerini toplar; örneğin ziyaret edilen sayfalar, yaklaşık coğrafi bölge, cihaz türü ve yönlendirme kaynağı. Vercel Speed Insights sayfa yüklenme performansını ve teknik performans değerlerini ölçer.',
-          'Vercel\'in güncel belgelerine göre bu hizmetler çerez yerleştirmez ve reklam takibi için kişisel tanımlayıcılar kullanmaz.',
+          'Vercel\'e göre toplanan veriler anonimleştirilmiş veya toplu hâlde işlenir. Çerez yerleştirilmez ve reklam takibi için kişisel tanımlayıcılar kullanılmaz. Toplanan verilerden bireysel kullanıcılar tanımlanamaz.',
           'Vercel Inc. Amerika Birleşik Devletleri\'nde bulunduğundan veriler ABD\'ye aktarılabilir. Vercel, AB-ABD Veri Gizliliği Çerçevesi kapsamında sertifikalıdır ve yeterli düzeyde veri koruma güvencesi sağlanmaktadır.',
-          'Hukuki dayanak: GDPR Madde 6(1)(f) – web sitesini optimize etmeye ve teknik hataları tespit etmeye yönelik meşru menfaat. Tarayıcınızı vercel.com/insights adresinden gelen JavaScript\'i engelleyecek şekilde yapılandırarak bu işlemeye itiraz edebilirsiniz.',
+          'Hukuki dayanak: GDPR Madde 6(1)(f) – web sitesini optimize etmeye ve teknik hataları tespit etmeye yönelik meşru menfaat. Anonimleştirilmiş ve çerezsiz işleme nedeniyle onay banner\'ı gerekmemektedir. Tarayıcınızı vercel.com/insights adresinden gelen JavaScript\'i engelleyecek şekilde yapılandırarak bu işlemeye itiraz edebilirsiniz.',
           'Vercel gizlilik politikası: https://vercel.com/legal/privacy-policy',
         ],
       },
@@ -291,9 +295,11 @@ const content: Record<Language, PolicyContent> = {
       {
         heading: '8. Çerezler ve benzer teknolojiler',
         paragraphs: [
-          'Bu web sitesi herhangi bir çerez kullanmaz. Oturum, izleme veya pazarlama çerezleri kullanılmaz.',
-          'Temel uygulama işlevleri için yerel tarayıcı depolama alanı (localStorage) kullanılır; örneğin dil ayarları, öğrenme ilerlemesi, favoriler ve yerel hatırlatma ayarları. Bu depolama, açıkça talep ettiğiniz uygulama işlevlerini sunmak için gereklidir.',
-          'localStorage reklam, izleme veya profil oluşturma amacıyla kullanılmaz.',
+          'Bu web sitesi yalnızca bir çerez kullanmaktadır: app_language çerezi. Bu çerezin tek amacı, seçtiğiniz dili (Türkçe, Almanca veya İngilizce) sayfa ziyaretleri arasında hatırlamak ve sitenin tercih ettiğiniz dilde görüntülenmesini sağlamaktır.',
+          'Çerez adı: app_language | Amaç: dil tercihinin saklanması | Saklama süresi: 1 yıl | SameSite: Lax | Üçüncü taraflarla paylaşılmaz.',
+          'Oturum, izleme veya pazarlama çerezi kullanılmamaktadır. Bu çerez kişisel veri içermez ve kullanıcıları tanımlamak ya da profil oluşturmak amacıyla kullanılmaz.',
+          'Hukuki dayanak: GDPR Madde 6(1)(f) – kullanıcı dostu ve dil tutarlı bir uygulama sunmaya yönelik meşru menfaat. Bu çerez yalnızca işlevsel bir amaç taşıdığından ve kullanıcı gizliliğini etkilemediğinden, aktif bir onay (opt-in) gerekmemektedir.',
+          'Temel uygulama işlevleri için ek olarak yerel tarayıcı depolama alanı (localStorage) kullanılır; örneğin öğrenme ilerlemesi, favoriler ve yerel hatırlatma ayarları. Ayrıntılar için bölüm 3\'e bakınız.',
         ],
       },
       {
