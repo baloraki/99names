@@ -47,7 +47,7 @@ const content: Record<Language, PolicyContent> = {
       {
         heading: '3. Lokaler Browserspeicher (localStorage)',
         paragraphs: [
-          'Diese App speichert folgende Daten lokal im Browserspeicher (localStorage) Ihres Geräts: Lernfortschritt (welche Namen als gelernt markiert wurden), Favoritenliste, zuletzt angesehene Namen sowie den lokalen Status optionaler Push-Erinnerungen. Die Spracheinstellung wird separat als Cookie gespeichert (siehe Abschnitt 8).',
+          'Diese App speichert folgende Daten lokal im Browserspeicher (localStorage) Ihres Geräts: Lernfortschritt (welche Namen als gelernt markiert wurden), Favoritenliste, zuletzt angesehene Namen, den lokalen Status optionaler Push-Erinnerungen sowie die Spracheinstellung unter dem Schlüssel app:v1:language (siehe Abschnitt 8).',
           'Diese lokalen Daten verlassen Ihr Gerät nicht. Sie können diese Daten jederzeit selbst löschen – über die Einstellungsseite der App oder direkt in Ihren Browsereinstellungen.',
           'Die Nutzung des lokalen Browserspeichers erfolgt ausschließlich zur Bereitstellung der von Ihnen gewünschten App-Funktionen. Es findet keine Nutzung zu Werbe-, Tracking- oder Profilingzwecken statt.',
           'Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bereitstellung einer funktionsfähigen Anwendung).',
@@ -93,13 +93,13 @@ const content: Record<Language, PolicyContent> = {
         ],
       },
       {
-        heading: '8. Cookies und vergleichbare Technologien',
+        heading: '8. Lokaler Speicher und vergleichbare Technologien',
         paragraphs: [
-          'Diese Website setzt genau ein Cookie: das Cookie app_language. Es dient ausschließlich dazu, Ihre gewählte Sprache (Deutsch, Englisch oder Türkisch) über Seitenaufrufe hinweg beizubehalten, damit Sie die Website in Ihrer bevorzugten Sprache nutzen können.',
-          'Cookie-Name: app_language | Zweck: Speicherung der Sprachauswahl | Speicherdauer: 1 Jahr | SameSite: Lax | Keine Weitergabe an Dritte.',
-          'Es werden keine Session-, Tracking- oder Marketing-Cookies verwendet. Dieses Cookie enthält keine personenbezogenen Daten und wird nicht zur Nutzeridentifikation oder Profilbildung verwendet.',
-          'Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bereitstellung einer benutzerfreundlichen und sprachkonsistenten Anwendung). Da das Cookie ausschließlich der Funktionalität der Website dient und die Privatsphäre der Nutzer nicht beeinträchtigt, ist keine aktive Einwilligung erforderlich.',
-          'Für grundlegende App-Funktionen wird zusätzlich der lokale Browserspeicher (localStorage) verwendet, z. B. für Lernfortschritt, Favoriten und lokale Erinnerungseinstellungen. Details siehe Abschnitt 3.',
+          'Diese Website speichert Ihre gewählte Sprache (Deutsch, Englisch oder Türkisch) im localStorage unter dem Schlüssel app:v1:language, damit die Website in Ihrer bevorzugten Sprache angezeigt wird.',
+          'Es werden keine Session-, Tracking- oder Marketing-Cookies verwendet.',
+          'Der localStorage-Eintrag app:v1:language enthält nur den Sprachcode und wird nicht zur Nutzeridentifikation oder Profilbildung verwendet.',
+          'Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bereitstellung einer benutzerfreundlichen und sprachkonsistenten Anwendung). Da die Speicherung ausschließlich der Funktionalität der Website dient und die Privatsphäre der Nutzer nicht beeinträchtigt, ist keine aktive Einwilligung erforderlich.',
+          'Für weitere grundlegende App-Funktionen wird ebenfalls localStorage verwendet, z. B. für Lernfortschritt, Favoriten und lokale Erinnerungseinstellungen. Details siehe Abschnitt 3.',
         ],
       },
       {
@@ -147,7 +147,7 @@ const content: Record<Language, PolicyContent> = {
       {
         heading: '3. Local browser storage (localStorage)',
         paragraphs: [
-          'This app stores the following data in the local browser storage (localStorage) of your device: learning progress (which names have been marked as learned), favourites list, most recently viewed names, and local state for optional push reminders. The language preference is stored separately as a cookie (see section 8).',
+          'This app stores the following data in the local browser storage (localStorage) of your device: learning progress (which names have been marked as learned), favourites list, most recently viewed names, local state for optional push reminders, and the language preference under the key app:v1:language (see section 8).',
           'This local data does not leave your device. You can delete it at any time via the app\'s Settings page or directly in your browser settings.',
           'Local browser storage is used only to provide the app functions requested by you. It is not used for advertising, tracking, or profiling purposes.',
           'Legal basis: Art. 6(1)(f) GDPR (legitimate interest in providing a functioning application).',
@@ -193,13 +193,13 @@ const content: Record<Language, PolicyContent> = {
         ],
       },
       {
-        heading: '8. Cookies and similar technologies',
+        heading: '8. Local storage and similar technologies',
         paragraphs: [
-          'This website sets exactly one cookie: the app_language cookie. Its sole purpose is to remember your chosen language (English, German, or Turkish) across page visits, so that the site is displayed in your preferred language.',
-          'Cookie name: app_language | Purpose: storing language preference | Storage duration: 1 year | SameSite: Lax | Not shared with third parties.',
-          'No session, tracking, or marketing cookies are used. This cookie contains no personal data and is not used to identify or profile users.',
-          'Legal basis: Art. 6(1)(f) GDPR (legitimate interest in providing a user-friendly and language-consistent application). Because this cookie serves a purely functional purpose and does not affect user privacy, no active consent is required.',
-          'For basic app functions, local browser storage (localStorage) is also used, for example for learning progress, favourites, and local reminder settings. See section 3 for details.',
+          'This website stores your chosen language (English, German, or Turkish) in localStorage under the key app:v1:language, so the site is shown in your preferred language.',
+          'No session, tracking, or marketing cookies are used.',
+          'The app:v1:language localStorage entry contains only the language code and is not used to identify or profile users.',
+          'Legal basis: Art. 6(1)(f) GDPR (legitimate interest in providing a user-friendly and language-consistent application). Because this storage serves a purely functional purpose and does not affect user privacy, no active consent is required.',
+          'For other basic app functions, local browser storage (localStorage) is also used, for example for learning progress, favourites, and local reminder settings. See section 3 for details.',
         ],
       },
       {
@@ -247,7 +247,7 @@ const content: Record<Language, PolicyContent> = {
       {
         heading: '3. Yerel tarayıcı depolama alanı (localStorage)',
         paragraphs: [
-          'Bu uygulama aşağıdaki verileri cihazınızın yerel tarayıcı belleğinde (localStorage) saklar: öğrenme ilerleme durumu (hangi isimlerin öğrenildi olarak işaretlendiği), favori listesi, en son görüntülenen isimler ve isteğe bağlı push hatırlatmaları için yerel durum. Dil tercihi ayrı bir çerez ile saklanır (bkz. bölüm 8).',
+          'Bu uygulama aşağıdaki verileri cihazınızın yerel tarayıcı belleğinde (localStorage) saklar: öğrenme ilerleme durumu (hangi isimlerin öğrenildi olarak işaretlendiği), favori listesi, en son görüntülenen isimler, isteğe bağlı push hatırlatmaları için yerel durum ve app:v1:language anahtarı altında dil tercihi (bkz. bölüm 8).',
           'Bu yerel veriler cihazınızı terk etmez. Uygulamanın Ayarlar sayfasından veya doğrudan tarayıcı ayarlarınızdan bu verileri istediğiniz zaman silebilirsiniz.',
           'Yerel tarayıcı depolama alanı yalnızca talep ettiğiniz uygulama işlevlerini sunmak için kullanılır. Reklam, izleme veya profil oluşturma amacıyla kullanılmaz.',
           'Hukuki dayanak: GDPR Madde 6(1)(f) – işlevsel bir uygulama sunmaya yönelik meşru menfaat.',
@@ -293,13 +293,13 @@ const content: Record<Language, PolicyContent> = {
         ],
       },
       {
-        heading: '8. Çerezler ve benzer teknolojiler',
+        heading: '8. Yerel depolama ve benzer teknolojiler',
         paragraphs: [
-          'Bu web sitesi yalnızca bir çerez kullanmaktadır: app_language çerezi. Bu çerezin tek amacı, seçtiğiniz dili (Türkçe, Almanca veya İngilizce) sayfa ziyaretleri arasında hatırlamak ve sitenin tercih ettiğiniz dilde görüntülenmesini sağlamaktır.',
-          'Çerez adı: app_language | Amaç: dil tercihinin saklanması | Saklama süresi: 1 yıl | SameSite: Lax | Üçüncü taraflarla paylaşılmaz.',
-          'Oturum, izleme veya pazarlama çerezi kullanılmamaktadır. Bu çerez kişisel veri içermez ve kullanıcıları tanımlamak ya da profil oluşturmak amacıyla kullanılmaz.',
-          'Hukuki dayanak: GDPR Madde 6(1)(f) – kullanıcı dostu ve dil tutarlı bir uygulama sunmaya yönelik meşru menfaat. Bu çerez yalnızca işlevsel bir amaç taşıdığından ve kullanıcı gizliliğini etkilemediğinden, aktif bir onay (opt-in) gerekmemektedir.',
-          'Temel uygulama işlevleri için ek olarak yerel tarayıcı depolama alanı (localStorage) kullanılır; örneğin öğrenme ilerlemesi, favoriler ve yerel hatırlatma ayarları. Ayrıntılar için bölüm 3\'e bakınız.',
+          'Bu web sitesi seçtiğiniz dili (Türkçe, Almanca veya İngilizce) app:v1:language anahtarıyla localStorage içinde saklar; böylece site tercih ettiğiniz dilde görüntülenir.',
+          'Oturum, izleme veya pazarlama çerezi kullanılmamaktadır.',
+          'app:v1:language localStorage girdisi yalnızca dil kodunu içerir; kullanıcıları tanımlamak veya profil oluşturmak için kullanılmaz.',
+          'Hukuki dayanak: GDPR Madde 6(1)(f) – kullanıcı dostu ve dil tutarlı bir uygulama sunmaya yönelik meşru menfaat. Bu saklama yalnızca işlevsel bir amaç taşıdığından ve kullanıcı gizliliğini etkilemediğinden, aktif bir onay (opt-in) gerekmemektedir.',
+          'Temel diğer uygulama işlevleri için de yerel tarayıcı depolama alanı (localStorage) kullanılır; örneğin öğrenme ilerlemesi, favoriler ve yerel hatırlatma ayarları. Ayrıntılar için bölüm 3\'e bakınız.',
         ],
       },
       {

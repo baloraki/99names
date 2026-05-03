@@ -157,7 +157,7 @@ The local learning schedule still calculates `nextDueAt` while the app is open. 
 
 ## Privacy Notes
 
-The app stores language, learned IDs, favorite IDs, last viewed name, last learned name, schedule settings, and local push reminder UI state in `localStorage`. If push reminders are enabled, the server stores the browser push endpoint, push keys, reminder interval, timezone, user agent, delivery timestamps, failure state, and delivery logs in Supabase. It uses no tracking cookies and no analytics. Contact submissions are sent to Web3Forms only when configured and submitted by the user.
+The app stores language, learned IDs, favorite IDs, last viewed name, last learned name, schedule settings, and local push reminder UI state in `localStorage`. If push reminders are enabled, the server stores the browser push endpoint, push keys, reminder interval, timezone, user agent, delivery timestamps, failure state, and delivery logs in Supabase. It uses no tracking cookies. Vercel Analytics and Speed Insights are enabled in a cookie-free setup. Contact submissions are sent to Web3Forms only when configured and submitted by the user.
 
 ## Content Notes
 

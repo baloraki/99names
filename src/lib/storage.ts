@@ -5,10 +5,7 @@ import type { Language } from '@/types/language'
 import type { ThemeName } from '@/types/theme'
 import { isThemeName } from '@/types/theme'
 import {
-  createClearedLanguageCookie,
-  createLanguageCookie,
   getBrowserLanguage,
-  getLanguageFromCookieHeader,
   isLanguage,
 } from './languagePreference'
 import { STORAGE_KEYS } from './constants'
@@ -76,15 +73,10 @@ export const storage = {
   getLanguage(): Language {
     const storedLanguage = getItem<unknown>(STORAGE_KEYS.LANGUAGE)
     if (isLanguage(storedLanguage)) return storedLanguage
-
-    const cookieLanguage = isClient ? getLanguageFromCookieHeader(window.document.cookie) : null
-    return cookieLanguage ?? getBrowserLanguage()
+    return getBrowserLanguage()
   },
   setLanguage(language: Language): void {
     setItem(STORAGE_KEYS.LANGUAGE, language)
-    if (isClient) {
-      window.document.cookie = createLanguageCookie(language)
-    }
   },
   getSchedule(): LearningScheduleSettings {
     return getItem<LearningScheduleSettings>(STORAGE_KEYS.SCHEDULE) ?? { ...defaultSchedule }
@@ -113,8 +105,5 @@ export const storage = {
     removeItem(STORAGE_KEYS.SCHEDULE)
     removeItem(STORAGE_KEYS.LEARN_STATE)
     removeItem(STORAGE_KEYS.THEME)
-    if (isClient) {
-      window.document.cookie = createClearedLanguageCookie()
-    }
   },
 }

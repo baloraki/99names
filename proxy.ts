@@ -2,10 +2,6 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 import type { Language } from '@/types/language'
 import {
-  DEFAULT_LANGUAGE,
-  LANGUAGE_COOKIE_MAX_AGE,
-  LANGUAGE_COOKIE_NAME,
-  getLanguageFromCookieHeader,
   pickPreferredLanguage,
 } from '@/lib/languagePreference'
 
@@ -109,25 +105,10 @@ function getLocalizedPathname(pathname: string, language: Language): string | nu
 }
 
 function getPreferredLanguage(request: NextRequest): Language {
-  const cookieLanguage = getLanguageFromCookieHeader(request.headers.get('cookie'))
-  if (cookieLanguage) return cookieLanguage
-
   const acceptLanguage = request.headers.get('accept-language')
   const acceptedLocales = acceptLanguage?.split(',').map((value) => value.split(';')[0]) ?? []
 
   return pickPreferredLanguage(acceptedLocales)
-}
-
-function setLanguageCookie(response: NextResponse, language: Language): NextResponse {
-  response.cookies.set({
-    name: LANGUAGE_COOKIE_NAME,
-    value: language,
-    path: '/',
-    sameSite: 'lax',
-    maxAge: LANGUAGE_COOKIE_MAX_AGE,
-  })
-
-  return response
 }
 
 export function proxy(request: NextRequest) {
@@ -135,7 +116,7 @@ export function proxy(request: NextRequest) {
   const routeLanguage = getRouteLanguage(pathname)
 
   if (routeLanguage) {
-    return applySecurityHeaders(setLanguageCookie(NextResponse.next(), routeLanguage))
+    return applySecurityHeaders(NextResponse.next())
   }
 
   const preferredLanguage = getPreferredLanguage(request)
@@ -144,16 +125,10 @@ export function proxy(request: NextRequest) {
   if (localizedPathname && localizedPathname !== pathname) {
     const redirectUrl = request.nextUrl.clone()
     redirectUrl.pathname = localizedPathname
-    return applySecurityHeaders(setLanguageCookie(NextResponse.redirect(redirectUrl), preferredLanguage))
+    return applySecurityHeaders(NextResponse.redirect(redirectUrl))
   }
 
-  const response = NextResponse.next()
-
-  if (preferredLanguage !== DEFAULT_LANGUAGE || pathname === '/' || pathname === '/names' || pathname === '/settings') {
-    setLanguageCookie(response, preferredLanguage)
-  }
-
-  return applySecurityHeaders(response)
+  return applySecurityHeaders(NextResponse.next())
 }
 
 export const config = {

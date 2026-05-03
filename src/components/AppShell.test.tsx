@@ -36,7 +36,6 @@ afterEach(() => {
   navigationMock.push.mockClear()
   vi.restoreAllMocks()
   window.localStorage.clear()
-  document.cookie = 'app_language=; Max-Age=0; Path=/'
   Object.defineProperty(window, 'scrollY', {
     configurable: true,
     value: 0,

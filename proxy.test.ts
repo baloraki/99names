@@ -15,31 +15,29 @@ describe('proxy', () => {
     expect(response.headers.get('location')).toBe('https://99names.app/de/lernen')
   })
 
-  it('prefers an existing language cookie over the browser header', () => {
+  it('uses the browser language header for unlocalized routes', () => {
     const request = new NextRequest('https://99names.app/quiz', {
       headers: {
-        cookie: 'app_language=tr',
         'accept-language': 'de-DE,de;q=0.9,en;q=0.8',
       },
     })
 
     const response = proxy(request)
 
-    expect(response.headers.get('location')).toBe('https://99names.app/tr/quiz')
+    expect(response.headers.get('location')).toBe('https://99names.app/de/quiz')
   })
 
-  it('stores the locale when a prefixed route is opened directly', () => {
+  it('keeps prefixed routes without redirecting', () => {
     const request = new NextRequest('https://99names.app/de/namen')
 
     const response = proxy(request)
 
     expect(response.status).toBe(200)
-    expect(response.cookies.get('app_language')?.value).toBe('de')
   })
 
   it('redirects settings to the preferred localized settings route', () => {
     const request = new NextRequest('https://99names.app/settings', {
-      headers: { cookie: 'app_language=de' },
+      headers: { 'accept-language': 'de-DE,de;q=0.9,en;q=0.8' },
     })
 
     const response = proxy(request)
@@ -47,34 +45,31 @@ describe('proxy', () => {
     expect(response.status).toBeGreaterThanOrEqual(300)
     expect(response.status).toBeLessThan(400)
     expect(response.headers.get('location')).toBe('https://99names.app/de/einstellungen')
-    expect(response.cookies.get('app_language')?.value).toBe('de')
   })
 
-  it('stores the locale when a localized settings route is opened directly', () => {
+  it('keeps localized settings route when opened directly', () => {
     const request = new NextRequest('https://99names.app/tr/ayarlar')
 
     const response = proxy(request)
 
     expect(response.status).toBe(200)
     expect(response.headers.get('location')).toBeNull()
-    expect(response.cookies.get('app_language')?.value).toBe('tr')
   })
 
   it('keeps English settings on the English route for English preference', () => {
     const request = new NextRequest('https://99names.app/settings', {
-      headers: { cookie: 'app_language=en' },
+      headers: { 'accept-language': 'en-US,en;q=0.9' },
     })
 
     const response = proxy(request)
 
     expect(response.status).toBe(200)
     expect(response.headers.get('location')).toBeNull()
-    expect(response.cookies.get('app_language')?.value).toBe('en')
   })
 
   it('redirects unlocalized privacy route to preferred localized route', () => {
     const request = new NextRequest('https://99names.app/privacy', {
-      headers: { cookie: 'app_language=tr' },
+      headers: { 'accept-language': 'tr-TR,tr;q=0.9,en;q=0.8' },
     })
 
     const response = proxy(request)
@@ -82,7 +77,6 @@ describe('proxy', () => {
     expect(response.status).toBeGreaterThanOrEqual(300)
     expect(response.status).toBeLessThan(400)
     expect(response.headers.get('location')).toBe('https://99names.app/tr/gizlilik')
-    expect(response.cookies.get('app_language')?.value).toBe('tr')
   })
 
   it('keeps localized static route when already localized', () => {
@@ -92,7 +86,6 @@ describe('proxy', () => {
 
     expect(response.status).toBe(200)
     expect(response.headers.get('location')).toBeNull()
-    expect(response.cookies.get('app_language')?.value).toBe('de')
   })
 
   it('sets security headers on normal responses', () => {
@@ -112,7 +105,7 @@ describe('proxy', () => {
 
   it('sets security headers on redirects', () => {
     const request = new NextRequest('https://99names.app/privacy', {
-      headers: { cookie: 'app_language=tr' },
+      headers: { 'accept-language': 'tr-TR,tr;q=0.9,en;q=0.8' },
     })
 
     const response = proxy(request)
