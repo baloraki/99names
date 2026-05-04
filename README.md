@@ -39,6 +39,30 @@ npm run test
 npm run test:watch
 ```
 
+## Privacy Policy Environment Variables
+
+The privacy policy page reads operator details from environment variables at build time. Missing variables cause `next build` to fail immediately (via `assertEnv` in `PrivacyPageContent.tsx`) rather than silently embedding placeholder text in production.
+
+Required variables:
+
+```bash
+NEXT_PUBLIC_OPERATOR_NAME=          # Full legal name of the operator
+NEXT_PUBLIC_OPERATOR_ADDRESS=       # Full address (single line, e.g. "Musterstrasse 1, 8000 Zürich")
+NEXT_PUBLIC_SUPABASE_PROJECT_REGION= # Supabase project region, e.g. "eu-central-1"
+```
+
+Also required for the imprint page (ImprintPageContent.tsx):
+
+```bash
+NEXT_PUBLIC_OPERATOR_STREET=
+NEXT_PUBLIC_OPERATOR_CITY=
+NEXT_PUBLIC_OPERATOR_COUNTRY=       # Defaults to "Schweiz" if unset
+```
+
+Note: The operator email address is currently hardcoded as a base64-obfuscated value in `ObfuscatedEmail.tsx`. A future migration to `NEXT_PUBLIC_OPERATOR_EMAIL` is planned but not yet implemented.
+
+Set all variables in Vercel project settings (Production / Preview / Development) or in `.env.local` for local development. These are `NEXT_PUBLIC_` variables and will be inlined into the client bundle at build time.
+
 ## Web3Forms
 
 Set:
