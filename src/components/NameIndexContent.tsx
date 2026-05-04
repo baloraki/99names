@@ -13,6 +13,14 @@ import { breadcrumbJsonLd, itemListJsonLd } from '@/lib/structuredData'
 import type { Language } from '@/types/language'
 import type { NameEntry } from '@/types/name'
 
+function normalizeForSearch(value: string): string {
+  return value
+    .normalize('NFD')
+    .replace(/\p{Diacritic}/gu, '')
+    .replace(/[-'`'\s]/g, '')
+    .toLowerCase()
+}
+
 const copy = {
   en: {
     eyebrow: 'Asma ul Husna reference',
@@ -97,23 +105,37 @@ export function NameIndexContent({ locale }: { locale: Language }) {
     router.replace(nextUrl, { scroll: false })
   }, [debouncedSearchTerm, pathname, router, searchParams, urlSearch])
 
-  const normalizeForSearch = (value: string): string => value
-    .normalize('NFD')
-    .replace(/\p{Diacritic}/gu, '')
-    .replace(/[-'`’\s]/g, '')
-    .toLowerCase()
+  const normalizedNames = useMemo(
+    () => names.map((name) => ({
+      ...name,
+      _normalized: {
+        arabic: normalizeForSearch(name.arabic),
+        transliteration: {
+          en: normalizeForSearch(name.transliteration.en),
+          de: normalizeForSearch(name.transliteration.de),
+          tr: normalizeForSearch(name.transliteration.tr),
+        },
+        meanings: {
+          en: normalizeForSearch(name.meanings.en),
+          de: normalizeForSearch(name.meanings.de),
+          tr: normalizeForSearch(name.meanings.tr),
+        },
+      },
+    })),
+    [],
+  )
 
   const filteredNames: NameEntry[] = useMemo(() => {
     const query = normalizeForSearch(debouncedSearchTerm)
     if (!query) return names
 
-    return names.filter((name) => {
-      const arabic = normalizeForSearch(name.arabic)
-      const transliteration = normalizeForSearch(name.transliteration[locale])
-      const meaning = normalizeForSearch(name.meanings[locale])
-      return arabic.includes(query) || transliteration.includes(query) || meaning.includes(query)
-    })
-  }, [debouncedSearchTerm, locale])
+    return normalizedNames
+      .filter((name) =>
+        name._normalized.arabic.includes(query)
+        || name._normalized.transliteration[locale].includes(query)
+        || name._normalized.meanings[locale].includes(query))
+      .map(({ _normalized: _, ...name }) => name)
+  }, [debouncedSearchTerm, locale, normalizedNames])
 
   return (
     <div lang={locale} className="space-y-8">
