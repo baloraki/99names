@@ -20,6 +20,22 @@ import {
   subscribeToPwaInstallable,
 } from '@/lib/push/client'
 
+const BATTERY_HINT_KEY = 'battery-hint-dismissed'
+
+function hasBatteryHintBeenDismissed(): boolean {
+  try {
+    return localStorage.getItem(BATTERY_HINT_KEY) === '1'
+  } catch {
+    return false
+  }
+}
+
+function markBatteryHintDismissed(): void {
+  try {
+    localStorage.setItem(BATTERY_HINT_KEY, '1')
+  } catch {/* ignore */}
+}
+
 export function PushPermissionNudge({
   title,
   body,
@@ -30,6 +46,10 @@ export function PushPermissionNudge({
   permissionGuideTitle,
   permissionGuideBody,
   permissionGuideOk,
+  batteryOptimTitle,
+  batteryOptimBody,
+  batteryOptimYes,
+  batteryOptimNo,
 }: {
   title: string
   body: string
@@ -40,9 +60,13 @@ export function PushPermissionNudge({
   permissionGuideTitle: string
   permissionGuideBody: string
   permissionGuideOk: string
+  batteryOptimTitle: string
+  batteryOptimBody: string
+  batteryOptimYes: string
+  batteryOptimNo: string
 }) {
   const [visible, setVisible] = useState(false)
-  const [mode, setMode] = useState<'push' | 'pwa'>('push')
+  const [mode, setMode] = useState<'push' | 'pwa' | 'battery'>('push')
   const [busy, setBusy] = useState(false)
   const [awaitingPermission, setAwaitingPermission] = useState(false)
   const vapidPublicKey = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY ?? ''
@@ -205,6 +229,12 @@ export function PushPermissionNudge({
       const subscription = await subscribeBrowserToPush(vapidPublicKey)
       await saveSubscription(subscription, stored.interval)
       persistPushReminderSettings(true, stored.interval)
+
+      // Show battery optimization hint once, as Android may pause background apps
+      if (!hasBatteryHintBeenDismissed()) {
+        setMode('battery')
+        setVisible(true)
+      }
     } catch {
       setAwaitingPermission(false)
     } finally {
@@ -220,9 +250,21 @@ export function PushPermissionNudge({
         setMode('push')
         return
       }
+    } else if (mode === 'battery') {
+      markBatteryHintDismissed()
     } else {
       postponePushSoftPrompt()
     }
+    setVisible(false)
+  }
+
+  function onBatteryYes() {
+    markBatteryHintDismissed()
+    setVisible(false)
+  }
+
+  function onBatteryNo() {
+    markBatteryHintDismissed()
     setVisible(false)
   }
 
@@ -247,6 +289,19 @@ export function PushPermissionNudge({
   }
 
   if (!visible) return null
+
+  if (mode === 'battery') {
+    return (
+      <section className="fixed inset-x-3 bottom-24 z-30 mx-auto max-w-lg rounded-xl border border-gold/30 bg-surface/95 p-4 shadow-lg backdrop-blur md:bottom-6" aria-live="polite">
+        <p className="text-sm font-semibold text-primary">⚙️ {batteryOptimTitle}</p>
+        <p className="mt-1 text-sm text-muted">{batteryOptimBody}</p>
+        <div className="mt-3 flex gap-2">
+          <button type="button" className="btn-primary" onClick={onBatteryYes}>{batteryOptimYes}</button>
+          <button type="button" className="btn-secondary" onClick={onBatteryNo}>{batteryOptimNo}</button>
+        </div>
+      </section>
+    )
+  }
 
   const displayTitle = mode === 'pwa' ? pwaInstallTitle : title
   const displayBody = mode === 'pwa' ? pwaInstallBody : body
@@ -281,5 +336,4 @@ async function saveSubscription(subscription: PushSubscription, reminderInterval
     throw new Error('The subscription could not be saved.')
   }
 }
-
 

@@ -286,6 +286,10 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
         permissionGuideTitle={dict.settings.pushPermissionGuideTitle}
         permissionGuideBody={dict.settings.pushPermissionGuideBody}
         permissionGuideOk={dict.settings.pushPermissionGuideOk}
+        batteryOptimTitle={dict.settings.batteryOptimTitle}
+        batteryOptimBody={dict.settings.batteryOptimBody}
+        batteryOptimYes={dict.settings.batteryOptimYes}
+        batteryOptimNo={dict.settings.batteryOptimNo}
       />
       <main className="mx-auto w-full max-w-6xl px-4 pb-32 pt-6 md:pb-12">{children}</main>
 
