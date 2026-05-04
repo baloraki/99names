@@ -6,6 +6,7 @@ import { JsonLd } from '@/components/JsonLd'
 import { LearnClient } from '@/components/LearnClient'
 import { SeoNamesSearchSection } from '@/components/SeoNamesSearchSection'
 import { names } from '@/data/names'
+import { getDict } from '@/lib/i18n'
 import {
   buildMetadata,
   getLocalizedHomePath,
@@ -305,6 +306,7 @@ function PageIntro({
 
 function LearnPage({ locale }: { locale: Language }) {
   const text = copy.learn[locale]
+  const dict = getDict(locale)
   return (
     <div lang={locale} className="mx-auto max-w-4xl space-y-8">
       <LearnClient locale={locale} />
@@ -312,6 +314,12 @@ function LearnPage({ locale }: { locale: Language }) {
         <Link className="btn-secondary" href={getLocalizedNamesPath(locale)}>{text.primaryCta}</Link>
         <Link className="btn-secondary" href={getLocalizedSeoPath('reflections', locale)}>{text.secondaryCta}</Link>
       </div>
+      <section className="rounded-lg border border-gold/30 bg-surface p-5 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <p className="text-base leading-7 text-muted">{dict.learn.quizCta}</p>
+        <Link className="btn-primary shrink-0" href={getLocalizedSeoPath('quiz', locale)}>
+          {dict.learn.quizCtaLink}
+        </Link>
+      </section>
       <PageIntro page="learn" locale={locale} headingLevel="h2" subdued />
     </div>
   )
@@ -364,6 +372,24 @@ function QuizPage({ locale }: { locale: Language }) {
         <Link className="btn-primary" href={getLocalizedNamesPath(locale)}>{text.primaryCta}</Link>
         <Link className="btn-secondary" href={getLocalizedSeoPath('learn', locale)}>{text.secondaryCta}</Link>
       </div>
+    </div>
+  )
+}
+
+/** Exported for composing the top-level /quiz pages (SEO prose above QuizSession). */
+export function LocalizedSeoQuizIntro({ locale }: { locale: Language }) {
+  const text = copy.quiz[locale]
+  return (
+    <div lang={locale} className="space-y-6">
+      <PageIntro page="quiz" locale={locale} />
+      {text.practiceTitle && text.practiceItems && (
+        <section className="rounded-lg border border-white/10 bg-surface p-5">
+          <h2 className="text-2xl font-semibold">{text.practiceTitle}</h2>
+          <ol className="mt-4 list-decimal space-y-3 pl-5 leading-7 text-muted">
+            {text.practiceItems.map((item) => <li key={item}>{item}</li>)}
+          </ol>
+        </section>
+      )}
     </div>
   )
 }

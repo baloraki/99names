@@ -13,6 +13,8 @@ export type Dict = {
     learn: string
     favorites: string
     settings: string
+    quiz: string
+    quizBadge: (count: number) => string
     aid: string
     main: string
     mobile: string
@@ -56,6 +58,7 @@ export type Dict = {
     nameOfDay: string
     viewAll: string
     startLearning: string
+    continueReview: (count: number) => string
     openDetails: string
   }
   progress: {
@@ -72,6 +75,8 @@ export type Dict = {
     filterFavorites: string
     filterOpen: string
     noResults: string
+    quizCta: string
+    quizCtaLink: string
   }
   learn: {
     eyebrow: string
@@ -113,6 +118,8 @@ export type Dict = {
     tapToReveal: string
     completedTitle: string
     completedBody: string
+    quizCta: string
+    quizCtaLink: string
   }
   detail: {
     backToOverview: string
@@ -195,6 +202,8 @@ const de: Dict = {
     learn: 'Lernen',
     favorites: 'Favoriten',
     settings: 'Einstellungen',
+    quiz: 'Quiz',
+    quizBadge: (count) => `${count} ${count === 1 ? 'Karte fällig' : 'Karten fällig'}`,
     aid: 'Lernhilfe',
     main: 'Hauptnavigation',
     mobile: 'Mobile Navigation',
@@ -238,6 +247,7 @@ const de: Dict = {
     nameOfDay: 'Name des Tages',
     viewAll: 'Alle Namen ansehen',
     startLearning: 'Lernmodus starten',
+    continueReview: (count) => `Tägliche Wiederholung fortsetzen (${count} fällig)`,
     openDetails: 'Details öffnen',
   },
   progress: {
@@ -254,6 +264,8 @@ const de: Dict = {
     filterFavorites: 'Favoriten',
     filterOpen: 'Offen',
     noResults: 'Keine Namen passen zu deiner Suche oder dem Filter.',
+    quizCta: 'Teste dein Wissen mit dem Spaced-Repetition-Quiz.',
+    quizCtaLink: 'Quiz starten',
   },
   learn: {
     eyebrow: 'Lernmodus',
@@ -295,6 +307,8 @@ const de: Dict = {
     tapToReveal: 'Tippen zum Aufdecken',
     completedTitle: 'Alle 99 Namen gelernt',
     completedBody: 'Mashallah! Du kannst von vorne beginnen oder einzelne Namen erneut wiederholen.',
+    quizCta: 'Fertig gelesen? Teste dein Wissen im aktiven Abrufquiz.',
+    quizCtaLink: 'Zum Quiz',
   },
   detail: {
     backToOverview: 'Zur Übersicht',
@@ -381,6 +395,8 @@ const tr: Dict = {
     learn: 'Öğren',
     favorites: 'Favoriler',
     settings: 'Ayarlar',
+    quiz: 'Quiz',
+    quizBadge: (count) => `${count} kart bekliyor`,
     aid: 'Öğrenme yardımı',
     main: 'Ana gezinme',
     mobile: 'Mobil gezinme',
@@ -424,6 +440,7 @@ const tr: Dict = {
     nameOfDay: 'Günün İsmi',
     viewAll: 'Tüm isimleri gör',
     startLearning: 'Öğrenme modunu başlat',
+    continueReview: (count) => `Günlük tekrara devam et (${count} bekliyor)`,
     openDetails: 'Detayları aç',
   },
   progress: {
@@ -440,6 +457,8 @@ const tr: Dict = {
     filterFavorites: 'Favoriler',
     filterOpen: 'Açık',
     noResults: 'Aramana veya filtreye uygun isim bulunamadı.',
+    quizCta: 'Aralıklı tekrar quiziyle bilgini test et.',
+    quizCtaLink: 'Quize başla',
   },
   learn: {
     eyebrow: 'Öğrenme modu',
@@ -481,6 +500,8 @@ const tr: Dict = {
     tapToReveal: 'Açmak için dokun',
     completedTitle: 'Tüm 99 isim öğrenildi',
     completedBody: 'Maşallah! Baştan başlayabilir veya seçtiğin isimleri yeniden tekrarlayabilirsin.',
+    quizCta: 'Okumayı bitirdin mi? Aktif hatırlama quizinde bilgini test et.',
+    quizCtaLink: 'Quize git',
   },
   detail: {
     backToOverview: 'Genel bakışa dön',
@@ -567,6 +588,8 @@ const en: Dict = {
     learn: 'Learn',
     favorites: 'Favorites',
     settings: 'Settings',
+    quiz: 'Quiz',
+    quizBadge: (count) => `${count} ${count === 1 ? 'card' : 'cards'} due`,
     aid: 'Learning aid',
     main: 'Main navigation',
     mobile: 'Mobile navigation',
@@ -610,6 +633,7 @@ const en: Dict = {
     nameOfDay: 'Name of the Day',
     viewAll: 'View all names',
     startLearning: 'Start learning mode',
+    continueReview: (count) => `Continue Daily Review (${count} due)`,
     openDetails: 'Open details',
   },
   progress: {
@@ -626,6 +650,8 @@ const en: Dict = {
     filterFavorites: 'Favorites',
     filterOpen: 'Open',
     noResults: 'No names match your search or filter.',
+    quizCta: 'Test your knowledge with the Spaced Repetition Quiz.',
+    quizCtaLink: 'Start Quiz',
   },
   learn: {
     eyebrow: 'Learning mode',
@@ -667,6 +693,8 @@ const en: Dict = {
     tapToReveal: 'Tap to reveal',
     completedTitle: 'All 99 names learned',
     completedBody: 'Alhamdulillah. You can start over or revisit individual names.',
+    quizCta: 'Done reading? Test your knowledge in the active recall quiz.',
+    quizCtaLink: 'Go to Quiz',
   },
   detail: {
     backToOverview: 'Back to overview',

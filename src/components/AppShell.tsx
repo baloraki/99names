@@ -5,18 +5,22 @@ import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import type { ReactNode, SVGProps } from 'react'
 import { useEffect, useRef, useState } from 'react'
+import { names } from '@/data/names'
+import { useSpacedRepetition } from '@/hooks/useSpacedRepetition'
 import { getDict, LANGUAGES } from '@/lib/i18n'
 import { isLanguage } from '@/lib/languagePreference'
-import { getEquivalentLocalizedPath, getLocalizedFavoritesPath, getLocalizedSeoPath, getLocalizedSettingsPath, getLocalizedStaticPath } from '@/lib/seo'
+import { getEquivalentLocalizedPath, getLocalizedFavoritesPath, getLocalizedLearnQuizPath, getLocalizedSeoPath, getLocalizedSettingsPath, getLocalizedStaticPath } from '@/lib/seo'
 import { storage } from '@/lib/storage'
 import type { Language } from '@/types/language'
 import { PushPermissionNudge } from './PushPermissionNudge'
 
+const ALL_NAME_IDS: readonly string[] = names.map((n) => String(n.id))
+
 const getNavItems = (language: Language) => [
   { href: language === 'de' ? '/de' : language === 'tr' ? '/tr' : '/', key: 'home', icon: HomeIcon },
   { href: language === 'de' ? '/de/namen' : language === 'tr' ? '/tr/esmaul-husna' : '/names', key: 'names', icon: DiamondIcon },
-  { href: getLocalizedSeoPath('learn', language), key: 'learn', icon: CompassIcon },
   { href: getLocalizedFavoritesPath(language), key: 'favorites', icon: StarIcon },
+  { href: getLocalizedSeoPath('learn', language), key: 'learn', icon: CompassIcon },
 ] as const
 
 const mobileMenuLabels: Record<Language, { open: string; close: string }> = {
@@ -43,6 +47,9 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
   const navItems = getNavItems(language)
   const menuLabels = mobileMenuLabels[language]
   const settingsPath = getLocalizedSettingsPath(language)
+  const quizPath = getLocalizedLearnQuizPath(language)
+  const srs = useSpacedRepetition(ALL_NAME_IDS)
+  const dueCount = srs.ready ? srs.dueIds.length : 0
   const isActive = (href: string) => {
     const exactOnly = href === '/' || href === '/de' || href === '/tr'
     return pathname === href || (!exactOnly && pathname.startsWith(href))
@@ -183,6 +190,21 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
                 )
               })}
               <Link
+                href={quizPath}
+                className={isActive(quizPath) ? 'nav-link nav-link-active relative' : 'nav-link relative'}
+                aria-current={isActive(quizPath) ? 'page' : undefined}
+              >
+                {dict.nav.quiz}
+                {dueCount > 0 && (
+                  <span
+                    className="absolute -right-1 -top-1 flex h-4 min-w-4 items-center justify-center rounded-full bg-gold px-1 text-[10px] font-bold leading-none text-background"
+                    aria-label={dict.nav.quizBadge(dueCount)}
+                  >
+                    {dueCount}
+                  </span>
+                )}
+              </Link>
+              <Link
                 href={settingsPath}
                 className={isActive(settingsPath) ? 'nav-link nav-link-active' : 'nav-link'}
                 aria-current={isActive(settingsPath) ? 'page' : undefined}
@@ -222,6 +244,25 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
                 </Link>
               )
             })}
+            <Link
+              href={quizPath}
+              className={isActive(quizPath) ? 'mobile-menu-item mobile-menu-item-active' : 'mobile-menu-item'}
+              aria-current={isActive(quizPath) ? 'page' : undefined}
+              onClick={closeMobileMenu}
+            >
+              <span className="mobile-menu-icon" aria-hidden="true"><QuizIcon /></span>
+              <span className="mobile-menu-label">
+                {dict.nav.quiz}
+                {dueCount > 0 && (
+                  <span
+                    className="ml-2 inline-flex h-4 min-w-4 items-center justify-center rounded-full bg-gold px-1 text-[10px] font-bold leading-none text-background"
+                    aria-label={dict.nav.quizBadge(dueCount)}
+                  >
+                    {dueCount}
+                  </span>
+                )}
+              </span>
+            </Link>
             <Link
               href={settingsPath}
               className={isActive(settingsPath) ? 'mobile-menu-item mobile-menu-item-active' : 'mobile-menu-item'}
@@ -398,6 +439,16 @@ function CloseIcon(props: SVGProps<SVGSVGElement>) {
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" {...props}>
       <path d="M6 6l12 12" />
       <path d="M18 6L6 18" />
+    </svg>
+  )
+}
+
+function QuizIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.5-2.5 2-2.5 3.5" />
+      <circle cx="12" cy="16.5" r=".5" fill="currentColor" />
     </svg>
   )
 }

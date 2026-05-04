@@ -59,6 +59,10 @@ export function getLocalizedFavoritesPath(locale: Language): string {
   return '/favorites'
 }
 
+export function getLocalizedLearnQuizPath(locale: Language): string {
+  return getLocalizedSeoPath('quiz', locale)
+}
+
 export function favoritesAlternates(): Record<string, string> {
   return {
     en: '/favorites',
@@ -168,6 +172,12 @@ export function getEquivalentLocalizedPath(pathname: string, targetLocale: Langu
 
   if (pathname === '/favorites' || pathname === '/de/favoriten' || pathname === '/tr/favoriler') {
     return getLocalizedFavoritesPath(targetLocale)
+  }
+
+  if (
+    pathname === '/quiz' || pathname === '/de/quiz' || pathname === '/tr/quiz'
+  ) {
+    return getLocalizedLearnQuizPath(targetLocale)
   }
 
   for (const [page, paths] of Object.entries(localizedStaticPaths) as Array<[LocalizedStaticPage, Record<Language, string>]>) {
