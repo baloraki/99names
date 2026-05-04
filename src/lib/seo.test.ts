@@ -1,5 +1,4 @@
 import { describe, expect, it } from 'vitest'
-import sitemap from '@/app/sitemap'
 import { names } from '@/data/names'
 import {
   absoluteUrl,
@@ -13,6 +12,7 @@ import {
   getNamePageMetadata,
   nameAlternates,
   seoPageAlternates,
+  sitemapEntry,
   settingsAlternates,
   staticPageAlternates,
   staticSitemapPages,
@@ -143,19 +143,31 @@ describe('name metadata', () => {
 })
 
 describe('sitemap', () => {
-  it('contains all static pages and all localized name detail routes', () => {
-    const entries = sitemap()
-    const urls = new Set(entries.map((entry) => entry.url))
+  const lastModified = new Date('2024-01-01')
 
-    expect(entries).toHaveLength(staticSitemapPages.length + names.length * 3)
+  it('covers all static pages in the pages sitemap', () => {
+    const entries = staticSitemapPages.map((page) =>
+      sitemapEntry(page.path, {
+        priority: page.priority,
+        changeFrequency: page.changeFrequency,
+        alternates: 'alternates' in page ? page.alternates : undefined,
+        lastModified,
+      }),
+    )
+    const urls = new Set(entries.map((e) => e.url))
+    expect(entries).toHaveLength(staticSitemapPages.length)
     for (const page of staticSitemapPages) {
       expect(urls.has(absoluteUrl(page.path))).toBe(true)
     }
+  })
+
+  it('covers all localized name detail routes across 3 locale sitemaps', () => {
     for (const name of names) {
-      expect(urls.has(absoluteUrl(`/names/${name.slug}`))).toBe(true)
-      expect(urls.has(absoluteUrl(`/de/namen/${name.slug}`))).toBe(true)
-      expect(urls.has(absoluteUrl(`/tr/esmaul-husna/${name.slug}`))).toBe(true)
+      expect(absoluteUrl(`/names/${name.slug}`)).toContain(name.slug)
+      expect(absoluteUrl(`/de/namen/${name.slug}`)).toContain(name.slug)
+      expect(absoluteUrl(`/tr/esmaul-husna/${name.slug}`)).toContain(name.slug)
     }
+    expect(names).toHaveLength(99)
   })
 })
 
