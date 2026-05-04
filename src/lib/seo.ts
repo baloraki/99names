@@ -60,9 +60,7 @@ export function getLocalizedFavoritesPath(locale: Language): string {
 }
 
 export function getLocalizedLearnQuizPath(locale: Language): string {
-  if (locale === 'de') return '/de/lernen/quiz'
-  if (locale === 'tr') return '/tr/ogren/quiz'
-  return '/learn/quiz'
+  return getLocalizedSeoPath('quiz', locale)
 }
 
 export function favoritesAlternates(): Record<string, string> {
@@ -176,7 +174,9 @@ export function getEquivalentLocalizedPath(pathname: string, targetLocale: Langu
     return getLocalizedFavoritesPath(targetLocale)
   }
 
-  if (pathname === '/learn/quiz' || pathname === '/de/lernen/quiz' || pathname === '/tr/ogren/quiz') {
+  if (
+    pathname === '/quiz' || pathname === '/de/quiz' || pathname === '/tr/quiz'
+  ) {
     return getLocalizedLearnQuizPath(targetLocale)
   }
 

@@ -19,8 +19,8 @@ const ALL_NAME_IDS: readonly string[] = names.map((n) => String(n.id))
 const getNavItems = (language: Language) => [
   { href: language === 'de' ? '/de' : language === 'tr' ? '/tr' : '/', key: 'home', icon: HomeIcon },
   { href: language === 'de' ? '/de/namen' : language === 'tr' ? '/tr/esmaul-husna' : '/names', key: 'names', icon: DiamondIcon },
-  { href: getLocalizedSeoPath('learn', language), key: 'learn', icon: CompassIcon },
   { href: getLocalizedFavoritesPath(language), key: 'favorites', icon: StarIcon },
+  { href: getLocalizedSeoPath('learn', language), key: 'learn', icon: CompassIcon },
 ] as const
 
 const mobileMenuLabels: Record<Language, { open: string; close: string }> = {

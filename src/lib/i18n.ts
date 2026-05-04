@@ -118,6 +118,8 @@ export type Dict = {
     tapToReveal: string
     completedTitle: string
     completedBody: string
+    quizCta: string
+    quizCtaLink: string
   }
   detail: {
     backToOverview: string
@@ -305,6 +307,8 @@ const de: Dict = {
     tapToReveal: 'Tippen zum Aufdecken',
     completedTitle: 'Alle 99 Namen gelernt',
     completedBody: 'Mashallah! Du kannst von vorne beginnen oder einzelne Namen erneut wiederholen.',
+    quizCta: 'Fertig gelesen? Teste dein Wissen im aktiven Abrufquiz.',
+    quizCtaLink: 'Zum Quiz',
   },
   detail: {
     backToOverview: 'Zur Übersicht',
@@ -496,6 +500,8 @@ const tr: Dict = {
     tapToReveal: 'Açmak için dokun',
     completedTitle: 'Tüm 99 isim öğrenildi',
     completedBody: 'Maşallah! Baştan başlayabilir veya seçtiğin isimleri yeniden tekrarlayabilirsin.',
+    quizCta: 'Okumayı bitirdin mi? Aktif hatırlama quizinde bilgini test et.',
+    quizCtaLink: 'Quize git',
   },
   detail: {
     backToOverview: 'Genel bakışa dön',
@@ -687,6 +693,8 @@ const en: Dict = {
     tapToReveal: 'Tap to reveal',
     completedTitle: 'All 99 names learned',
     completedBody: 'Alhamdulillah. You can start over or revisit individual names.',
+    quizCta: 'Done reading? Test your knowledge in the active recall quiz.',
+    quizCtaLink: 'Go to Quiz',
   },
   detail: {
     backToOverview: 'Back to overview',
