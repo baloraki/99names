@@ -35,38 +35,65 @@ const clearByLocale: Record<Language, string> = {
 const normalizeForSearch = (value: string): string => value
   .normalize('NFD')
   .replace(/\p{Diacritic}/gu, '')
-  .replace(/[-'`’\s]/g, '')
+  .replace(/[-'`'\s]/g, '')
   .toLowerCase()
 
 export function SeoNamesSearchSection({ locale, variant, names }: SeoNamesSearchSectionProps) {
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
-  const [searchTerm, setSearchTerm] = useState(searchParams.get('search') ?? '')
+  const urlSearch = searchParams.get('search') ?? ''
+  const [searchTerm, setSearchTerm] = useState(urlSearch)
+  const [prevUrlSearch, setPrevUrlSearch] = useState(urlSearch)
+
+  // Derived-state pattern: sync URL → input for back/forward navigation.
+  // Skip when the URL change was caused by our own router.replace (values match).
+  if (prevUrlSearch !== urlSearch) {
+    setPrevUrlSearch(urlSearch)
+    if (urlSearch !== searchTerm.trim()) {
+      setSearchTerm(urlSearch)
+    }
+  }
+
   const debouncedSearchTerm = useDebounce(searchTerm, 300)
 
+  // Push debounced search to URL only when it actually differs and the debounce
+  // has caught up with the current input (stale-debounce guard prevents loops on
+  // external navigation such as language switches).
   useEffect(() => {
-    const params = new URLSearchParams(searchParams.toString())
     const trimmed = debouncedSearchTerm.trim()
+    if (trimmed !== searchTerm.trim()) return
+    if (trimmed === urlSearch) return
+    const params = new URLSearchParams(searchParams.toString())
     if (trimmed) params.set('search', trimmed)
     else params.delete('search')
-
     const nextQuery = params.toString()
     const nextUrl = nextQuery ? `${pathname}?${nextQuery}` : pathname
     router.replace(nextUrl, { scroll: false })
-  }, [debouncedSearchTerm, pathname, router, searchParams])
+  }, [debouncedSearchTerm, searchTerm, pathname, router, searchParams, urlSearch])
+
+  const normalizedNames = useMemo(
+    () => names.map((name) => ({
+      ...name,
+      _n: {
+        arabic: normalizeForSearch(name.arabic),
+        transliteration: normalizeForSearch(name.transliteration[locale]),
+        meaning: normalizeForSearch(name.meanings[locale]),
+      },
+    })),
+    [names, locale],
+  )
 
   const filteredNames = useMemo(() => {
     const query = normalizeForSearch(debouncedSearchTerm)
     if (!query) return names
-
-    return names.filter((name) => {
-      const arabic = normalizeForSearch(name.arabic)
-      const transliteration = normalizeForSearch(name.transliteration[locale])
-      const meaning = normalizeForSearch(name.meanings[locale])
-      return arabic.includes(query) || transliteration.includes(query) || meaning.includes(query)
-    })
-  }, [debouncedSearchTerm, locale, names])
+    return normalizedNames
+      .filter((name) =>
+        name._n.arabic.includes(query)
+        || name._n.transliteration.includes(query)
+        || name._n.meaning.includes(query))
+      .map(({ _n: _ignored, ...name }) => name)
+  }, [debouncedSearchTerm, names, normalizedNames])
 
   return (
     <section className="space-y-4">

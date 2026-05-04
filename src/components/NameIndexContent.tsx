@@ -91,8 +91,13 @@ export function NameIndexContent({ locale }: { locale: Language }) {
   ]
 
   // Push the debounced search term to the URL, but only when it actually differs.
+  // The extra guard `trimmed !== searchTerm.trim()` catches the window between an
+  // external URL change (e.g. language switch) resetting searchTerm and the debounce
+  // catching up: during that window debouncedSearchTerm is stale and must not be
+  // written back to the URL or it creates a navigation loop.
   useEffect(() => {
     const trimmed = debouncedSearchTerm.trim()
+    if (trimmed !== searchTerm.trim()) return
     if (trimmed === urlSearch) return
     const params = new URLSearchParams(searchParams.toString())
     if (trimmed) {
@@ -103,7 +108,7 @@ export function NameIndexContent({ locale }: { locale: Language }) {
     const nextQuery = params.toString()
     const nextUrl = nextQuery ? `${pathname}?${nextQuery}` : pathname
     router.replace(nextUrl, { scroll: false })
-  }, [debouncedSearchTerm, pathname, router, searchParams, urlSearch])
+  }, [debouncedSearchTerm, searchTerm, pathname, router, searchParams, urlSearch])
 
   const normalizedNames = useMemo(
     () => names.map((name) => ({
