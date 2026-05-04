@@ -99,7 +99,7 @@ export function NameIndexContent({ locale }: { locale: Language }) {
 
   return (
     <div lang={locale} className="space-y-8">
-      <JsonLd data={itemListJsonLd(filteredNames, locale)} />
+      <JsonLd data={itemListJsonLd(names, locale)} />
       <JsonLd data={breadcrumbJsonLd(breadcrumbItems.map((item) => ({ name: item.label, path: item.href })))} />
       <Breadcrumbs items={breadcrumbItems} />
       <section className="space-y-5">
