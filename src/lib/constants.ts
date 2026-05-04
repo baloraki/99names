@@ -4,4 +4,5 @@ export const STORAGE_KEYS = {
   SCHEDULE: 'app:v1:schedule',
   LEARN_STATE: 'app:v1:learnState',
   THEME: 'app:v1:theme',
+  SRS: 'app:v1:srs',
 } as const

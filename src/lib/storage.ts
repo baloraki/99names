@@ -2,6 +2,7 @@ import type { ProgressState } from '@/types/progress'
 import type { LearningScheduleSettings } from '@/types/learningSchedule'
 import type { LearnState } from '@/types/learnState'
 import type { Language } from '@/types/language'
+import type { SrsState } from '@/types/srs'
 import type { ThemeName } from '@/types/theme'
 import { isThemeName } from '@/types/theme'
 import {
@@ -9,6 +10,7 @@ import {
   isLanguage,
 } from './languagePreference'
 import { STORAGE_KEYS } from './constants'
+import { emptyState, parseSrsState } from './srs'
 
 const isClient = typeof window !== 'undefined'
 
@@ -99,11 +101,20 @@ export const storage = {
   setLearnState(state: LearnState): void {
     setItem(STORAGE_KEYS.LEARN_STATE, state)
   },
+  getSrsState(): SrsState {
+    const stored = getItem<unknown>(STORAGE_KEYS.SRS)
+    if (stored === null) return emptyState()
+    return parseSrsState(stored)
+  },
+  setSrsState(state: SrsState): void {
+    setItem(STORAGE_KEYS.SRS, state)
+  },
   clearAll(): void {
     removeItem(STORAGE_KEYS.PROGRESS)
     removeItem(STORAGE_KEYS.LANGUAGE)
     removeItem(STORAGE_KEYS.SCHEDULE)
     removeItem(STORAGE_KEYS.LEARN_STATE)
     removeItem(STORAGE_KEYS.THEME)
+    removeItem(STORAGE_KEYS.SRS)
   },
 }
