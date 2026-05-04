@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { Suspense } from 'react'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { JsonLd } from '@/components/JsonLd'
 import { LearnClient } from '@/components/LearnClient'
@@ -322,7 +323,9 @@ function DuaPage({ locale }: { locale: Language }) {
   return (
     <div lang={locale} className="mx-auto max-w-4xl space-y-8">
       <PageIntro page="dua" locale={locale} />
-      <SeoNamesSearchSection locale={locale} variant="dua" names={names} />
+      <Suspense>
+        <SeoNamesSearchSection locale={locale} variant="dua" names={names} />
+      </Suspense>
       {text.sourceTitle && text.sourceBody && (
         <section className="rounded-lg border border-gold/20 bg-surface p-5">
           <h2 className="text-2xl font-semibold">{text.sourceTitle}</h2>
@@ -337,7 +340,9 @@ function ReflectionsPage({ locale }: { locale: Language }) {
   return (
     <div lang={locale} className="mx-auto max-w-4xl space-y-8">
       <PageIntro page="reflections" locale={locale} />
-      <SeoNamesSearchSection locale={locale} variant="reflections" names={names} />
+      <Suspense>
+        <SeoNamesSearchSection locale={locale} variant="reflections" names={names} />
+      </Suspense>
     </div>
   )
 }
