@@ -7,7 +7,7 @@ export const SITE_NAME = '99 Names'
 export const SITE_TAGLINE = 'Learn Asma ul Husna with meaning, dua, and reflection'
 export const DEFAULT_OG_IMAGE = '/api/og'
 
-const fallbackSiteUrl = 'https://99names.app'
+const fallbackSiteUrl = 'https://learnhusna.cc'
 
 function normalizeSiteUrl(value: string | undefined): string {
   if (!value) return fallbackSiteUrl

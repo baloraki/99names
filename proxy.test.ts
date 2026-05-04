@@ -4,7 +4,7 @@ import { proxy } from './proxy'
 
 describe('proxy', () => {
   it('redirects unlocalized English content routes to the browser language', () => {
-    const request = new NextRequest('https://99names.app/learn', {
+    const request = new NextRequest('https://learnhusna.cc/learn', {
       headers: { 'accept-language': 'de-DE,de;q=0.9,en;q=0.8' },
     })
 
@@ -12,11 +12,11 @@ describe('proxy', () => {
 
     expect(response.status).toBeGreaterThanOrEqual(300)
     expect(response.status).toBeLessThan(400)
-    expect(response.headers.get('location')).toBe('https://99names.app/de/lernen')
+    expect(response.headers.get('location')).toBe('https://learnhusna.cc/de/lernen')
   })
 
   it('uses the browser language header for unlocalized routes', () => {
-    const request = new NextRequest('https://99names.app/quiz', {
+    const request = new NextRequest('https://learnhusna.cc/quiz', {
       headers: {
         'accept-language': 'de-DE,de;q=0.9,en;q=0.8',
       },
@@ -24,11 +24,11 @@ describe('proxy', () => {
 
     const response = proxy(request)
 
-    expect(response.headers.get('location')).toBe('https://99names.app/de/quiz')
+    expect(response.headers.get('location')).toBe('https://learnhusna.cc/de/quiz')
   })
 
   it('keeps prefixed routes without redirecting', () => {
-    const request = new NextRequest('https://99names.app/de/namen')
+    const request = new NextRequest('https://learnhusna.cc/de/namen')
 
     const response = proxy(request)
 
@@ -36,7 +36,7 @@ describe('proxy', () => {
   })
 
   it('redirects settings to the preferred localized settings route', () => {
-    const request = new NextRequest('https://99names.app/settings', {
+    const request = new NextRequest('https://learnhusna.cc/settings', {
       headers: { 'accept-language': 'de-DE,de;q=0.9,en;q=0.8' },
     })
 
@@ -44,11 +44,11 @@ describe('proxy', () => {
 
     expect(response.status).toBeGreaterThanOrEqual(300)
     expect(response.status).toBeLessThan(400)
-    expect(response.headers.get('location')).toBe('https://99names.app/de/einstellungen')
+    expect(response.headers.get('location')).toBe('https://learnhusna.cc/de/einstellungen')
   })
 
   it('keeps localized settings route when opened directly', () => {
-    const request = new NextRequest('https://99names.app/tr/ayarlar')
+    const request = new NextRequest('https://learnhusna.cc/tr/ayarlar')
 
     const response = proxy(request)
 
@@ -57,7 +57,7 @@ describe('proxy', () => {
   })
 
   it('keeps English settings on the English route for English preference', () => {
-    const request = new NextRequest('https://99names.app/settings', {
+    const request = new NextRequest('https://learnhusna.cc/settings', {
       headers: { 'accept-language': 'en-US,en;q=0.9' },
     })
 
@@ -68,7 +68,7 @@ describe('proxy', () => {
   })
 
   it('redirects unlocalized privacy route to preferred localized route', () => {
-    const request = new NextRequest('https://99names.app/privacy', {
+    const request = new NextRequest('https://learnhusna.cc/privacy', {
       headers: { 'accept-language': 'tr-TR,tr;q=0.9,en;q=0.8' },
     })
 
@@ -76,11 +76,11 @@ describe('proxy', () => {
 
     expect(response.status).toBeGreaterThanOrEqual(300)
     expect(response.status).toBeLessThan(400)
-    expect(response.headers.get('location')).toBe('https://99names.app/tr/gizlilik')
+    expect(response.headers.get('location')).toBe('https://learnhusna.cc/tr/gizlilik')
   })
 
   it('keeps localized static route when already localized', () => {
-    const request = new NextRequest('https://99names.app/de/impressum')
+    const request = new NextRequest('https://learnhusna.cc/de/impressum')
 
     const response = proxy(request)
 
@@ -89,7 +89,7 @@ describe('proxy', () => {
   })
 
   it('sets security headers on normal responses', () => {
-    const request = new NextRequest('https://99names.app/de/namen')
+    const request = new NextRequest('https://learnhusna.cc/de/namen')
 
     const response = proxy(request)
 
@@ -104,7 +104,7 @@ describe('proxy', () => {
   })
 
   it('sets security headers on redirects', () => {
-    const request = new NextRequest('https://99names.app/privacy', {
+    const request = new NextRequest('https://learnhusna.cc/privacy', {
       headers: { 'accept-language': 'tr-TR,tr;q=0.9,en;q=0.8' },
     })
 
@@ -112,7 +112,7 @@ describe('proxy', () => {
 
     expect(response.status).toBeGreaterThanOrEqual(300)
     expect(response.status).toBeLessThan(400)
-    expect(response.headers.get('location')).toBe('https://99names.app/tr/gizlilik')
+    expect(response.headers.get('location')).toBe('https://learnhusna.cc/tr/gizlilik')
     expect(response.headers.get('content-security-policy')).toContain("trusted-types nextjs-bundler")
     expect(response.headers.get('strict-transport-security')).toBe('max-age=63072000; includeSubDomains; preload')
   })
