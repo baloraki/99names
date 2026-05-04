@@ -56,8 +56,24 @@ export function NameIndexContent({ locale }: { locale: Language }) {
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
-  const initialSearchTerm = searchParams.get('search') ?? ''
-  const [searchTerm, setSearchTerm] = useState(initialSearchTerm)
+  const urlSearch = searchParams.get('search') ?? ''
+  const [searchTerm, setSearchTerm] = useState(urlSearch)
+  // Tracks the last URL search value seen so we can detect external URL changes
+  // (back/forward navigation) vs. changes we caused via router.replace.
+  const [prevUrlSearch, setPrevUrlSearch] = useState(urlSearch)
+
+  // Derived-state pattern (React-recommended alternative to setState-in-effect):
+  // When the URL search param changes, decide whether to sync it into the input.
+  // - If it matches what the input already contains (trimmed), the change was caused
+  //   by our own router.replace call → skip to avoid a cascade.
+  // - Otherwise it's an external navigation (back/forward) → update the input.
+  if (prevUrlSearch !== urlSearch) {
+    setPrevUrlSearch(urlSearch)
+    if (urlSearch !== searchTerm.trim()) {
+      setSearchTerm(urlSearch)
+    }
+  }
+
   const debouncedSearchTerm = useDebounce(searchTerm, 300)
   const text = copy[locale]
   const listPath = getLocalizedNamesPath(locale)
@@ -66,9 +82,11 @@ export function NameIndexContent({ locale }: { locale: Language }) {
     { href: listPath, label: text.breadcrumbs[1] },
   ]
 
+  // Push the debounced search term to the URL, but only when it actually differs.
   useEffect(() => {
-    const params = new URLSearchParams(searchParams.toString())
     const trimmed = debouncedSearchTerm.trim()
+    if (trimmed === urlSearch) return
+    const params = new URLSearchParams(searchParams.toString())
     if (trimmed) {
       params.set('search', trimmed)
     } else {
@@ -77,7 +95,7 @@ export function NameIndexContent({ locale }: { locale: Language }) {
     const nextQuery = params.toString()
     const nextUrl = nextQuery ? `${pathname}?${nextQuery}` : pathname
     router.replace(nextUrl, { scroll: false })
-  }, [debouncedSearchTerm, pathname, router, searchParams])
+  }, [debouncedSearchTerm, pathname, router, searchParams, urlSearch])
 
   const normalizeForSearch = (value: string): string => value
     .normalize('NFD')
