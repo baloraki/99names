@@ -1,11 +1,13 @@
 'use client'
 
+import Link from 'next/link'
 import { useMemo, useState } from 'react'
 import { names } from '@/data/names'
 import { useAppState } from '@/hooks/useAppState'
 import { filterNames } from '@/lib/filters'
 import { getDict } from '@/lib/i18n'
 import { searchNames } from '@/lib/search'
+import { getLocalizedLearnQuizPath } from '@/lib/seo'
 import { NameCard } from './NameCard'
 import { ProgressSummary } from './ProgressSummary'
 
@@ -16,6 +18,7 @@ export function NamesExplorer() {
   const dict = getDict(language)
   const [query, setQuery] = useState('')
   const [filter, setFilter] = useState<FilterMode>('all')
+  const quizPath = getLocalizedLearnQuizPath(language)
 
   const filtered = useMemo(() => {
     const searched = searchNames(names, query, language)
@@ -77,6 +80,15 @@ export function NamesExplorer() {
           ))}
         </div>
       )}
+      <section className="flex flex-col items-start justify-between gap-4 rounded-lg border border-gold/20 bg-surface p-6 sm:flex-row sm:items-center">
+        <p className="text-sm leading-6 text-muted">{dict.names.quizCta}</p>
+        <Link
+          href={quizPath}
+          className="shrink-0 rounded-md border border-gold/40 px-4 py-2 text-sm font-semibold text-gold transition hover:border-gold hover:bg-gold/10 focus-ring"
+        >
+          {dict.names.quizCtaLink}
+        </Link>
+      </section>
     </div>
   )
 }

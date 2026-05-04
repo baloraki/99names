@@ -1,10 +1,15 @@
 'use client'
 
 import Link from 'next/link'
+import { useMemo } from 'react'
 import { names } from '@/data/names'
 import { useAppState } from '@/hooks/useAppState'
+import { useSpacedRepetition } from '@/hooks/useSpacedRepetition'
 import { getDict } from '@/lib/i18n'
+import { getLocalizedLearnQuizPath, getLocalizedSeoPath } from '@/lib/seo'
 import { ProgressSummary } from './ProgressSummary'
+
+const ALL_NAME_IDS: readonly string[] = names.map((n) => String(n.id))
 
 function getNameOfDay() {
   const start = Date.UTC(2026, 0, 1)
@@ -16,6 +21,14 @@ export function HomeClient() {
   const { language, progress } = useAppState()
   const dict = getDict(language)
   const name = getNameOfDay()
+  const srs = useSpacedRepetition(ALL_NAME_IDS)
+  const quizPath = useMemo(() => getLocalizedLearnQuizPath(language), [language])
+  const learnPath = useMemo(() => getLocalizedSeoPath('learn', language), [language])
+
+  const primaryHref = srs.ready && srs.dueIds.length > 0 ? quizPath : learnPath
+  const primaryLabel = srs.ready && srs.dueIds.length > 0
+    ? dict.home.continueReview(srs.dueIds.length)
+    : dict.home.startLearning
 
   return (
     <div className="space-y-8">
@@ -30,7 +43,7 @@ export function HomeClient() {
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link className="btn-primary" href="/names">{dict.home.viewAll}</Link>
-            <Link className="btn-secondary" href="/learn">{dict.home.startLearning}</Link>
+            <Link className="btn-secondary" href={primaryHref}>{primaryLabel}</Link>
           </div>
         </div>
         <div className="rounded-lg border border-gold/25 hero-gradient-surface p-6">
