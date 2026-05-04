@@ -1,11 +1,17 @@
+"use client"
+
 import Link from 'next/link'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { useEffect, useMemo, useState } from 'react'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { JsonLd } from '@/components/JsonLd'
 import { LearningProgressWidget } from '@/components/LearningProgressWidget'
 import { names } from '@/data/names'
+import { useDebounce } from '@/hooks/useDebounce'
 import { getLocalizedNamePath, getLocalizedNamesPath } from '@/lib/seo'
 import { breadcrumbJsonLd, itemListJsonLd } from '@/lib/structuredData'
 import type { Language } from '@/types/language'
+import type { NameEntry } from '@/types/name'
 
 const copy = {
   en: {
@@ -47,12 +53,49 @@ const copy = {
 } as const
 
 export function NameIndexContent({ locale }: { locale: Language }) {
+  const router = useRouter()
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
+  const initialSearchTerm = searchParams.get('search') ?? ''
+  const [searchTerm, setSearchTerm] = useState(initialSearchTerm)
+  const debouncedSearchTerm = useDebounce(searchTerm, 300)
   const text = copy[locale]
   const listPath = getLocalizedNamesPath(locale)
   const breadcrumbItems = [
     { href: locale === 'en' ? '/' : `/${locale}`, label: text.breadcrumbs[0] },
     { href: listPath, label: text.breadcrumbs[1] },
   ]
+
+  useEffect(() => {
+    const params = new URLSearchParams(searchParams.toString())
+    const trimmed = debouncedSearchTerm.trim()
+    if (trimmed) {
+      params.set('search', trimmed)
+    } else {
+      params.delete('search')
+    }
+    const nextQuery = params.toString()
+    const nextUrl = nextQuery ? `${pathname}?${nextQuery}` : pathname
+    router.replace(nextUrl, { scroll: false })
+  }, [debouncedSearchTerm, pathname, router, searchParams])
+
+  const normalizeForSearch = (value: string): string => value
+    .normalize('NFD')
+    .replace(/\p{Diacritic}/gu, '')
+    .replace(/[-'`’\s]/g, '')
+    .toLowerCase()
+
+  const filteredNames: NameEntry[] = useMemo(() => {
+    const query = normalizeForSearch(debouncedSearchTerm)
+    if (!query) return names
+
+    return names.filter((name) => {
+      const arabic = normalizeForSearch(name.arabic)
+      const transliteration = normalizeForSearch(name.transliteration[locale])
+      const meaning = normalizeForSearch(name.meanings[locale])
+      return arabic.includes(query) || transliteration.includes(query) || meaning.includes(query)
+    })
+  }, [debouncedSearchTerm, locale])
 
   return (
     <div lang={locale} className="space-y-8">
@@ -70,8 +113,47 @@ export function NameIndexContent({ locale }: { locale: Language }) {
         </p>
       </section>
       <LearningProgressWidget locale={locale} />
+      <section className="space-y-4">
+        <div className="sticky top-[4.25rem] z-20 rounded-lg border border-white/10 bg-background/95 p-3 backdrop-blur supports-[backdrop-filter]:bg-background/80 sm:top-[4.5rem]">
+          <div className="flex items-center gap-2 rounded-lg border border-white/15 bg-surface px-3 py-2">
+            <span aria-hidden="true" className="text-gold-muted">
+              <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.35-4.35" />
+              </svg>
+            </span>
+            <input
+              type="search"
+              value={searchTerm}
+              onChange={(event) => setSearchTerm(event.target.value)}
+              placeholder={locale === 'de' ? 'Namen suchen …' : locale === 'tr' ? 'İsim ara…' : 'Search names…'}
+              className="w-full bg-transparent text-base text-primary outline-none placeholder:text-muted"
+              aria-label={locale === 'de' ? 'Namen durchsuchen' : locale === 'tr' ? 'İsimlerde ara' : 'Search names'}
+            />
+            {searchTerm.trim().length > 0 ? (
+              <button
+                type="button"
+                onClick={() => setSearchTerm('')}
+                className="rounded-md p-1 text-muted transition hover:bg-white/10 hover:text-primary focus:outline-none focus:ring-2 focus:ring-gold"
+                aria-label={locale === 'de' ? 'Suche löschen' : locale === 'tr' ? 'Aramayı temizle' : 'Clear search'}
+              >
+                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M18 6 6 18" />
+                  <path d="m6 6 12 12" />
+                </svg>
+              </button>
+            ) : null}
+          </div>
+        </div>
+
+        {filteredNames.length === 0 ? (
+          <div className="rounded-lg border border-white/10 bg-surface p-6 text-sm text-muted">
+            Keine Namen gefunden für &quot;{debouncedSearchTerm}&quot;.
+          </div>
+        ) : null}
+      </section>
       <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {names.map((name) => (
+        {filteredNames.map((name) => (
           <li key={name.id}>
             <Link
               href={getLocalizedNamePath(locale, name.slug)}
