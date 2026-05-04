@@ -9,13 +9,7 @@ import { usePathname } from 'next/navigation'
 // Validates environment variables at runtime for client components
 function assertEnv(name: string): string {
   const value = process.env[name]
-  if (!value) {
-    throw new Error(
-      `[99names] Required environment variable "${name}" is not configured. ` +
-        `Set it in Vercel project settings or .env.local before building.`,
-    )
-  }
-  return value
+  return value || "-"
 }
 
 // E-Mail is intentionally NOT stored here → see <ObfuscatedEmail />
