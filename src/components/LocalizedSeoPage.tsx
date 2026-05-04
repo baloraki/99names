@@ -312,13 +312,13 @@ function LearnPage({ locale }: { locale: Language }) {
         <Link className="btn-secondary" href={getLocalizedNamesPath(locale)}>{text.primaryCta}</Link>
         <Link className="btn-secondary" href={getLocalizedSeoPath('reflections', locale)}>{text.secondaryCta}</Link>
       </div>
-      <PageIntro page="learn" locale={locale} headingLevel="h2" subdued />
       <section className="rounded-lg border border-gold/30 bg-surface p-5 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-base leading-7 text-muted">{dict.learn.quizCta}</p>
         <Link className="btn-primary shrink-0" href={getLocalizedSeoPath('quiz', locale)}>
           {dict.learn.quizCtaLink}
         </Link>
       </section>
+      <PageIntro page="learn" locale={locale} headingLevel="h2" subdued />
     </div>
   )
 }
