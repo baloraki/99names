@@ -153,6 +153,10 @@ export type Dict = {
     pushPermissionGuideOk: string
     pwaInstallTitle: string
     pwaInstallBody: string
+    batteryOptimTitle: string
+    batteryOptimBody: string
+    batteryOptimYes: string
+    batteryOptimNo: string
   }
   contact: {
     eyebrow: string
@@ -346,6 +350,10 @@ const de: Dict = {
     pushPermissionGuideOk: 'OK',
     pwaInstallTitle: 'App installieren – für Erinnerungen nötig',
     pwaInstallBody: 'Damit wir dich mit kurzen Lern-Erinnerungen erreichen können, muss Daily Husna als App installiert sein.',
+    batteryOptimTitle: 'Letzter Schritt für zuverlässige Benachrichtigungen',
+    batteryOptimBody: 'Öffne die App-Info, gehe zu „App-Aktivität bei Nichtbenutzung pausieren" und schalte diese Option aus – nur so können wir dich jederzeit benachrichtigen.',
+    batteryOptimYes: 'Ja, erledigt',
+    batteryOptimNo: 'Nein',
   },
   contact: {
     eyebrow: 'Kontakt',
@@ -539,6 +547,10 @@ const tr: Dict = {
     pushPermissionGuideOk: 'Tamam',
     pwaInstallTitle: 'Uygulama kurulumu – bildirimler için gerekli',
     pwaInstallBody: 'Kısa öğrenme hatırlatmaları gönderebilmemiz için Daily Husna\'nın uygulama olarak kurulması gerekiyor.',
+    batteryOptimTitle: 'Güvenilir bildirimler için son adım',
+    batteryOptimBody: 'Uygulama Bilgisi\'ni aç, "Kullanılmadığında uygulama etkinliğini duraklat" seçeneğini bul ve kapat – seni her zaman bildirebilmemiz için bu gerekli.',
+    batteryOptimYes: 'Evet, yaptım',
+    batteryOptimNo: 'Hayır',
   },
   contact: {
     eyebrow: 'İletişim',
@@ -732,6 +744,10 @@ const en: Dict = {
     pushPermissionGuideOk: 'OK',
     pwaInstallTitle: 'Install the app – needed for reminders',
     pwaInstallBody: 'To send you short learning reminders, Daily Husna needs to be installed as an app.',
+    batteryOptimTitle: 'One last step for reliable notifications',
+    batteryOptimBody: 'Open App Info, find "Pause app activity if unused" and turn it off – only then can we notify you at any time.',
+    batteryOptimYes: 'Done',
+    batteryOptimNo: 'No',
   },
   contact: {
     eyebrow: 'Contact',
