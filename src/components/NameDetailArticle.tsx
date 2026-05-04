@@ -2,6 +2,7 @@ import Link from 'next/link'
 import type { ReactNode } from 'react'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { JsonLd } from '@/components/JsonLd'
+import { NameDetailStarToggle } from '@/components/NameDetailStarToggle'
 import { names } from '@/data/names'
 import { getLocalizedNamePath, getLocalizedNamesPath } from '@/lib/seo'
 import { breadcrumbJsonLd, nameLearningResourceJsonLd } from '@/lib/structuredData'
@@ -116,7 +117,10 @@ export function NameDetailArticle({ name, locale }: { name: NameEntry; locale: L
       <JsonLd data={breadcrumbJsonLd(breadcrumbItems.map((item) => ({ name: item.label, path: item.href })))} />
       <Breadcrumbs items={breadcrumbItems} />
       <header className="rounded-lg border border-gold/20 bg-surface p-6">
-        <p className="text-sm text-gold-muted">#{name.id.toString().padStart(2, '0')}</p>
+        <div className="flex items-center justify-between">
+          <p className="text-sm text-gold-muted">#{name.id.toString().padStart(2, '0')}</p>
+          <NameDetailStarToggle nameId={name.id} locale={locale} />
+        </div>
         <p className="mt-6 text-right font-arabic text-7xl leading-tight text-primary" lang="ar" dir="rtl">
           {name.arabic}
         </p>
