@@ -22,11 +22,12 @@ export function HomeClient() {
   const dict = getDict(language)
   const name = getNameOfDay()
   const srs = useSpacedRepetition(ALL_NAME_IDS)
+  const hasReviewsDue = srs.ready && srs.dueIds.length > 0
   const quizPath = useMemo(() => getLocalizedLearnQuizPath(language), [language])
   const learnPath = useMemo(() => getLocalizedSeoPath('learn', language), [language])
 
-  const primaryHref = srs.ready && srs.dueIds.length > 0 ? quizPath : learnPath
-  const primaryLabel = srs.ready && srs.dueIds.length > 0
+  const primaryHref = hasReviewsDue ? quizPath : learnPath
+  const primaryLabel = hasReviewsDue
     ? dict.home.continueReview(srs.dueIds.length)
     : dict.home.startLearning
 

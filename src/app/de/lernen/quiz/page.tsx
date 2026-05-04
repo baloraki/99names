@@ -5,7 +5,7 @@ import { buildMetadata } from '@/lib/seo'
 export const metadata: Metadata = buildMetadata({
   title: 'Spaced-Repetition-Quiz – 99 Namen Allahs',
   description:
-    'Übe die 99 Namen Allahs mit einem aktiven Wiederholungsquiz. Karten tauchen nach einem Spaced-Repetition-Plan wieder auf, je nachdem wie gut du dich erinnert hast.',
+    'Übe die 99 Namen Allahs mit einem aktiven Abrufquiz. Karten tauchen nach einem Spaced-Repetition-Plan wieder auf, je nachdem wie gut du dich erinnert hast.',
   path: '/de/lernen/quiz',
   locale: 'de',
   index: false,
