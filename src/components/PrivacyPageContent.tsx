@@ -6,8 +6,7 @@ import { ObfuscatedEmail } from '@/components/ObfuscatedEmail'
 import { getLocalizedStaticPath } from '@/lib/seo'
 import { usePathname } from 'next/navigation'
 
-// Throws at module-load time so `next build` fails immediately when a required
-// NEXT_PUBLIC_* variable is absent, rather than silently embedding a placeholder.
+// Validates environment variables at runtime for client components
 function assertEnv(name: string): string {
   const value = process.env[name]
   if (!value) {
@@ -19,10 +18,6 @@ function assertEnv(name: string): string {
   return value
 }
 
-const OPERATOR_NAME = assertEnv('NEXT_PUBLIC_OPERATOR_NAME')
-const OPERATOR_ADDRESS = assertEnv('NEXT_PUBLIC_OPERATOR_ADDRESS')
-const SUPABASE_PROJECT_REGION = assertEnv('NEXT_PUBLIC_SUPABASE_PROJECT_REGION')
-
 // E-Mail is intentionally NOT stored here → see <ObfuscatedEmail />
 
 // A paragraph is either plain text OR a sentence that contains the e-mail
@@ -32,18 +27,18 @@ type Paragraph = string | { before: string; isEmail: true; after: string }
 type PolicyContent = {
   title: string
   lastUpdated: string
-  sections: { heading: string; paragraphs: Paragraph[] }[]
+  sections: (operatorName: string, operatorAddress: string, supabaseRegion: string) => { heading: string; paragraphs: Paragraph[] }[]
 }
 
 const content: Record<Language, PolicyContent> = {
   de: {
     title: 'Datenschutzerklärung',
     lastUpdated: 'Stand: Mai 2026',
-    sections: [
+    sections: (operatorName, operatorAddress, supabaseRegion) => [
       {
         heading: '1. Verantwortlicher',
         paragraphs: [
-          `Verantwortlich für die Datenverarbeitung im Sinne der Datenschutz-Grundverordnung (DSGVO) und des schweizerischen DSG (revDSG) ist: ${OPERATOR_NAME}, ${OPERATOR_ADDRESS}.`,
+          `Verantwortlich für die Datenverarbeitung im Sinne der Datenschutz-Grundverordnung (DSGVO) und des schweizerischen DSG (revDSG) ist: ${operatorName}, ${operatorAddress}.`,
           { before: 'E-Mail: ', isEmail: true, after: '' },
         ],
       },
@@ -77,7 +72,7 @@ const content: Record<Language, PolicyContent> = {
         paragraphs: [
           'Zur Speicherung optionaler Push-Abonnements verwenden wir Supabase, einen Dienst der Supabase Inc. Supabase stellt die technische Datenbank-Infrastruktur bereit.',
           'Gespeichert werden nur die für Push-Erinnerungen erforderlichen technischen Daten, insbesondere Push-Endpunkt, Push-Schlüssel, Erinnerungsintervall, Zeitzone, technische Zustellinformationen und Fehlerstatus.',
-          `Mit Supabase wird, soweit gesetzlich erforderlich, ein Auftragsverarbeitungsvertrag abgeschlossen. Die Supabase-Projektregion ist: ${SUPABASE_PROJECT_REGION}. Soweit Daten in Drittländer übermittelt werden, erfolgt dies nach den jeweils anwendbaren Datenschutzgarantien.`,
+          `Mit Supabase wird, soweit gesetzlich erforderlich, ein Auftragsverarbeitungsvertrag abgeschlossen. Die Supabase-Projektregion ist: ${supabaseRegion}. Soweit Daten in Drittländer übermittelt werden, erfolgt dies nach den jeweils anwendbaren Datenschutzgarantien.`,
           'Die gespeicherten Push-Daten werden gelöscht oder deaktiviert, wenn Sie Push-Benachrichtigungen deaktivieren, das Abonnement ungültig wird oder die Speicherung für den genannten Zweck nicht mehr erforderlich ist.',
         ],
       },
@@ -141,11 +136,11 @@ const content: Record<Language, PolicyContent> = {
   en: {
     title: 'Privacy Policy',
     lastUpdated: 'Last updated: May 2026',
-    sections: [
+    sections: (operatorName, operatorAddress, supabaseRegion) => [
       {
         heading: '1. Data controller',
         paragraphs: [
-          `The controller for data processing within the meaning of the General Data Protection Regulation (GDPR) and the Swiss FADP (revFADP) is: ${OPERATOR_NAME}, ${OPERATOR_ADDRESS}.`,
+          `The controller for data processing within the meaning of the General Data Protection Regulation (GDPR) and the Swiss FADP (revFADP) is: ${operatorName}, ${operatorAddress}.`,
           { before: 'Email: ', isEmail: true, after: '' },
         ],
       },
@@ -179,7 +174,7 @@ const content: Record<Language, PolicyContent> = {
         paragraphs: [
           'We use Supabase, a service provided by Supabase Inc., to store optional push subscriptions. Supabase provides the technical database infrastructure.',
           'Only the technical data required for push reminders is stored, in particular the push endpoint, push keys, reminder interval, timezone, technical delivery information, and failure state.',
-          `Where legally required, a data processing agreement is concluded with Supabase. The configured Supabase project region is: ${SUPABASE_PROJECT_REGION}. Where data is transferred to third countries, this is done under the applicable data protection safeguards.`,
+          `Where legally required, a data processing agreement is concluded with Supabase. The configured Supabase project region is: ${supabaseRegion}. Where data is transferred to third countries, this is done under the applicable data protection safeguards.`,
           'Stored push data is deleted or deactivated when you disable push notifications, when the subscription becomes invalid, or when storage is no longer necessary for the stated purpose.',
         ],
       },
@@ -243,11 +238,11 @@ const content: Record<Language, PolicyContent> = {
   tr: {
     title: 'Gizlilik Politikası',
     lastUpdated: 'Son güncelleme: Mayıs 2026',
-    sections: [
+    sections: (operatorName, operatorAddress, supabaseRegion) => [
       {
         heading: '1. Veri sorumlusu',
         paragraphs: [
-          `Genel Veri Koruma Yönetmeliği (GDPR/DSGVO) ve İsviçre FADP (revFADP) kapsamında veri sorumlusu: ${OPERATOR_NAME}, ${OPERATOR_ADDRESS}.`,
+          `Genel Veri Koruma Yönetmeliği (GDPR/DSGVO) ve İsviçre FADP (revFADP) kapsamında veri sorumlusu: ${operatorName}, ${operatorAddress}.`,
           { before: 'E-posta: ', isEmail: true, after: '' },
         ],
       },
@@ -284,7 +279,7 @@ const content: Record<Language, PolicyContent> = {
           'İsteğe bağlı push aboneliklerini saklamak için Supabase Inc. tarafından sunulan Supabase hizmetini kullanıyoruz. Supabase teknik veritabanı altyapısını sağlar.',
           'Yalnızca push hatırlatmaları için gerekli teknik veriler saklanır; özellikle push uç noktası, push anahtarları, hatırlatma aralığı, saat dilimi, teknik teslimat bilgileri ve hata durumu.',
           // TODO: native speaker review – region variable and third-country transfer wording
-          `Yasal olarak gerekli olduğu durumlarda Supabase ile bir veri işleme sözleşmesi yapılır. Yapılandırılan Supabase proje bölgesi: ${SUPABASE_PROJECT_REGION}. Verilerin üçüncü ülkelere aktarılması halinde, bu aktarım geçerli veri koruma güvencelerine uygun şekilde yapılır.`,
+          `Yasal olarak gerekli olduğu durumlarda Supabase ile bir veri işleme sözleşmesi yapılır. Yapılandırılan Supabase proje bölgesi: ${supabaseRegion}. Verilerin üçüncü ülkelere aktarılması halinde, bu aktarım geçerli veri koruma güvencelerine uygun şekilde yapılır.`,
           'Saklanan push verileri, push bildirimlerini devre dışı bıraktığınızda, abonelik geçersiz hale geldiğinde veya belirtilen amaç için saklama artık gerekli olmadığında silinir ya da devre dışı bırakılır.',
         ],
       },
@@ -357,6 +352,13 @@ export function PrivacyPageContent() {
   const language: Language = pathname.startsWith('/de') ? 'de' : pathname.startsWith('/tr') ? 'tr' : 'en'
   const c = content[language]
 
+  // Validate environment variables at runtime (when the component is rendered)
+  const operatorName = assertEnv('NEXT_PUBLIC_OPERATOR_NAME')
+  const operatorAddress = assertEnv('NEXT_PUBLIC_OPERATOR_ADDRESS')
+  const supabaseRegion = assertEnv('NEXT_PUBLIC_SUPABASE_PROJECT_REGION')
+
+  const sections = c.sections(operatorName, operatorAddress, supabaseRegion)
+
   return (
     <article lang={language} className="mx-auto max-w-3xl space-y-6">
       <header className="space-y-1">
@@ -364,7 +366,7 @@ export function PrivacyPageContent() {
         <p className="text-sm text-muted">{c.lastUpdated}</p>
       </header>
 
-      {c.sections.map((section) => (
+      {sections.map((section) => (
         <section key={section.heading} className="rounded-lg border border-white/10 bg-surface p-5 space-y-3">
           <h2 className="text-lg font-semibold text-primary">{section.heading}</h2>
           <div className="space-y-3 leading-7 text-muted">
