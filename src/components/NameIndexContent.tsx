@@ -99,7 +99,7 @@ export function NameIndexContent({ locale }: { locale: Language }) {
 
   return (
     <div lang={locale} className="space-y-8">
-      <JsonLd data={itemListJsonLd(names, locale)} />
+      <JsonLd data={itemListJsonLd(filteredNames, locale)} />
       <JsonLd data={breadcrumbJsonLd(breadcrumbItems.map((item) => ({ name: item.label, path: item.href })))} />
       <Breadcrumbs items={breadcrumbItems} />
       <section className="space-y-5">
@@ -148,7 +148,7 @@ export function NameIndexContent({ locale }: { locale: Language }) {
 
         {filteredNames.length === 0 ? (
           <div className="rounded-lg border border-white/10 bg-surface p-6 text-sm text-muted">
-            Keine Namen gefunden für &quot;{debouncedSearchTerm}&quot;.
+            {locale === 'de' ? 'Keine Namen gefunden für' : locale === 'tr' ? 'İsim bulunamadı:' : 'No names found for'} &quot;{debouncedSearchTerm}&quot;.
           </div>
         ) : null}
       </section>
