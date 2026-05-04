@@ -11,10 +11,18 @@ export type Dict = {
     home: string
     names: string
     learn: string
+    favorites: string
     settings: string
     aid: string
     main: string
     mobile: string
+  }
+  favorites: {
+    eyebrow: string
+    title: string
+    subtitle: string
+    empty: string
+    browseLink: string
   }
   share: {
     button: string
@@ -185,10 +193,18 @@ const de: Dict = {
     home: 'Start',
     names: 'Namen',
     learn: 'Lernen',
+    favorites: 'Favoriten',
     settings: 'Einstellungen',
     aid: 'Lernhilfe',
     main: 'Hauptnavigation',
     mobile: 'Mobile Navigation',
+  },
+  favorites: {
+    eyebrow: 'Deine Auswahl',
+    title: 'Favoriten',
+    subtitle: 'Eine ruhige Sammlung der Namen, die du persönlich vertiefen möchtest.',
+    empty: 'Du hast noch keine Favoriten gespeichert. Klicke auf den Stern neben einem Namen, um ihn hier hinzuzufügen.',
+    browseLink: 'Zur Übersicht',
   },
   share: {
     button: 'Teilen',
@@ -363,10 +379,18 @@ const tr: Dict = {
     home: 'Ana Sayfa',
     names: 'İsimler',
     learn: 'Öğren',
+    favorites: 'Favoriler',
     settings: 'Ayarlar',
     aid: 'Öğrenme yardımı',
     main: 'Ana gezinme',
     mobile: 'Mobil gezinme',
+  },
+  favorites: {
+    eyebrow: 'Senin seçimin',
+    title: 'Favoriler',
+    subtitle: 'Üzerinde durmak istediğin isimler için sakin bir koleksiyon.',
+    empty: 'Henüz favori eklemedin. Bir ismin yanındaki yıldıza dokunarak buraya ekleyebilirsin.',
+    browseLink: 'Tüm isimlere git',
   },
   share: {
     button: 'Paylaş',
@@ -541,10 +565,18 @@ const en: Dict = {
     home: 'Home',
     names: 'Names',
     learn: 'Learn',
+    favorites: 'Favorites',
     settings: 'Settings',
     aid: 'Learning aid',
     main: 'Main navigation',
     mobile: 'Mobile navigation',
+  },
+  favorites: {
+    eyebrow: 'Your selection',
+    title: 'Favorites',
+    subtitle: 'A calm collection of the names you want to revisit.',
+    empty: "You haven't saved any favorites yet. Tap the star next to a name to add it here.",
+    browseLink: 'Browse all names',
   },
   share: {
     button: 'Share',

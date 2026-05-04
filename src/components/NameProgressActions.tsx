@@ -5,6 +5,7 @@ import { useAppState } from '@/hooks/useAppState'
 import { getDict } from '@/lib/i18n'
 import type { Language } from '@/types/language'
 import type { NameEntry } from '@/types/name'
+import { StarToggle } from './StarToggle'
 
 export function NameProgressActions({ name, language }: { name: NameEntry; language: Language }) {
   const { progress, actions } = useAppState()
@@ -17,16 +18,19 @@ export function NameProgressActions({ name, language }: { name: NameEntry; langu
   }, [actions, name.slug])
 
   return (
-    <div className="flex flex-wrap gap-3">
+    <div className="flex flex-wrap items-center gap-3">
       <button
         className={learned ? 'btn-secondary' : 'btn-primary'}
         onClick={() => learned ? actions.unmarkLearned(name.id) : actions.markLearned(name.id, name.slug)}
       >
         {learned ? dict.detail.markOpen : dict.detail.markLearned}
       </button>
-      <button className="btn-secondary" onClick={() => actions.toggleFavorite(name.id)}>
-        {favorite ? dict.detail.removeFavorite : dict.detail.addFavorite}
-      </button>
+      <StarToggle
+        active={favorite}
+        onToggle={() => actions.toggleFavorite(name.id)}
+        labelAdd={dict.detail.addFavorite}
+        labelRemove={dict.detail.removeFavorite}
+      />
     </div>
   )
 }
