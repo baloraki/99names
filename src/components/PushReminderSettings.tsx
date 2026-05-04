@@ -4,6 +4,7 @@ import type { ChangeEvent } from 'react'
 import { useEffect, useMemo, useState } from 'react'
 import {
   getBrowserTimeZone,
+  getPushDiagnostics,
   getCurrentPushSubscription,
   isIOSDevice,
   isPushSupported,
@@ -13,6 +14,7 @@ import {
   subscribeBrowserToPush,
   unsubscribeBrowserFromPush,
 } from '@/lib/push/client'
+import type { PushDiagnostics } from '@/lib/push/client'
 import type { ReminderInterval } from '@/lib/push/reminders'
 
 type SupportState = 'checking' | 'supported' | 'unsupported'
@@ -39,6 +41,8 @@ export function PushReminderSettings({
   const [isIOS, setIsIOS] = useState(false)
   const [isBusy, setIsBusy] = useState(false)
   const [message, setMessage] = useState<string | null>(null)
+  const [diagnostics, setDiagnostics] = useState<PushDiagnostics | null>(null)
+  const [diagnosticsBusy, setDiagnosticsBusy] = useState(false)
 
   const vapidPublicKey = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY ?? ''
   const supported = supportState === 'supported'
@@ -78,6 +82,9 @@ export function PushReminderSettings({
           const nextEnabled = Boolean(subscription)
           setEnabled(nextEnabled)
           persistPushReminderSettings(nextEnabled, stored.interval)
+          if (nextEnabled) {
+            return getPushDiagnostics().then(setDiagnostics).catch(() => undefined)
+          }
         })
         .catch(() => undefined)
     })
@@ -137,6 +144,8 @@ export function PushReminderSettings({
       setEnabled(true)
       persistPushReminderSettings(true, selectedInterval)
       setMessage('Learning reminders are enabled.')
+      const nextDiagnostics = await getPushDiagnostics()
+      setDiagnostics(nextDiagnostics)
     } catch (error) {
       setMessage(error instanceof Error ? error.message : 'Learning reminders could not be enabled.')
     } finally {
@@ -163,6 +172,7 @@ export function PushReminderSettings({
       }
 
       setEnabled(false)
+      setDiagnostics(null)
       persistPushReminderSettings(false, selectedInterval)
       setMessage('Learning reminders are disabled.')
     } catch {
@@ -171,6 +181,35 @@ export function PushReminderSettings({
       setMessage('Reminders were disabled in this browser. Server cleanup may finish on the next send attempt.')
     } finally {
       setIsBusy(false)
+    }
+  }
+
+  async function checkNotificationSetup() {
+    setDiagnosticsBusy(true)
+    try {
+      const nextDiagnostics = await getPushDiagnostics()
+      setDiagnostics(nextDiagnostics)
+    } finally {
+      setDiagnosticsBusy(false)
+    }
+  }
+
+  async function sendTestNotification() {
+    setDiagnosticsBusy(true)
+    setMessage(null)
+    try {
+      const registration = await navigator.serviceWorker.ready
+      await registration.showNotification('Notification test', {
+        body: 'If you can see this, this device can display notifications from the service worker.',
+        icon: '/icon.svg',
+        badge: '/maskable-icon.svg',
+        data: { url: '/learn#learn-now' },
+      })
+      setMessage('Test notification sent on this device. This only verifies local display, not remote push delivery.')
+    } catch {
+      setMessage('The local test notification could not be shown on this device.')
+    } finally {
+      setDiagnosticsBusy(false)
     }
   }
 
@@ -238,7 +277,43 @@ export function PushReminderSettings({
         <p className="mt-4 text-sm text-danger">Notification permission is denied. Change the browser permission to enable reminders.</p>
       ) : null}
       {message ? <p className="mt-4 text-sm text-muted">{message}</p> : null}
+      {enabled && !pushUnavailableOnIOS ? (
+        <div className="mt-4 space-y-3 rounded-lg border border-gold/30 bg-gold/10 p-3 text-sm text-muted">
+          <p>
+            Reminders are enabled in this browser. If you do not receive notifications while the app is closed, Android or your browser may still be blocking background notifications. Please check that notifications are allowed for this app/browser, that app activity is not paused when unused, and that battery/background restrictions are disabled.
+          </p>
+          <div className="flex flex-col gap-2 sm:flex-row">
+            <button className="btn-secondary disabled:opacity-50" type="button" onClick={checkNotificationSetup} disabled={diagnosticsBusy}>
+              {diagnosticsBusy ? 'Checking...' : 'Check notification setup'}
+            </button>
+            {permission === 'granted' ? (
+              <button className="btn-secondary disabled:opacity-50" type="button" onClick={sendTestNotification} disabled={diagnosticsBusy}>
+                Send test notification on this device
+              </button>
+            ) : null}
+          </div>
+          <p className="text-xs text-muted">This app can only check browser permission/subscription state. It cannot read the exact Android unused-app system toggle directly.</p>
+          {diagnostics ? (
+            <div className="space-y-1 text-xs">
+              <p>Notification permission: {diagnostics.notificationPermission ?? 'unavailable'}</p>
+              <p>Push subscription: {diagnostics.hasPushSubscription ? 'active' : 'missing'}</p>
+              <p>Push permission state: {diagnostics.pushPermissionState ?? 'unknown'}</p>
+              {diagnostics.likelySystemLevelIssue ? (
+                <p>The browser subscription looks active. If notifications still only appear while the app is open, this is likely caused by Android/browser system settings rather than the app code.</p>
+              ) : null}
+              {diagnostics.issues.length ? <p>Checks: {diagnostics.issues.join(', ')}</p> : null}
+              <ul className="list-disc pl-5">
+                <li>Open Android Settings.</li>
+                <li>Apps.</li>
+                <li>Chrome or this installed PWA.</li>
+                <li>Notifications: allow.</li>
+                <li>Permissions: disable &quot;Remove permissions if app is unused&quot;.</li>
+                <li>Battery: set to unrestricted / allow background activity.</li>
+              </ul>
+            </div>
+          ) : null}
+        </div>
+      ) : null}
     </section>
   )
 }
-

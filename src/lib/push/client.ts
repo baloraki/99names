@@ -102,6 +102,110 @@ export async function unsubscribeBrowserFromPush(): Promise<string | null> {
   return endpoint
 }
 
+export type PushDiagnostics = {
+  notificationApiAvailable: boolean
+  notificationPermission: NotificationPermission | null
+  permissionsApiSupported: boolean
+  permissionsApiNotificationState: PermissionState | 'unsupported' | null
+  serviceWorkerSupported: boolean
+  pushManagerSupported: boolean
+  serviceWorkerReady: boolean
+  serviceWorkerScope: string | null
+  hasPushSubscription: boolean
+  pushEndpoint: string | null
+  pushPermissionState: PermissionState | 'unsupported' | null
+  userAgent: string
+  likelySystemLevelIssue: boolean
+  issues: string[]
+}
+
+export async function getPushDiagnostics(): Promise<PushDiagnostics> {
+  const notificationApiAvailable = typeof Notification !== 'undefined'
+  const serviceWorkerSupported = typeof navigator !== 'undefined' && typeof navigator.serviceWorker !== 'undefined'
+  const pushManagerSupported = typeof window !== 'undefined' && typeof window.PushManager !== 'undefined'
+  const permissionsApiSupported = typeof navigator !== 'undefined' && 'permissions' in navigator
+
+  const diagnostics: PushDiagnostics = {
+    notificationApiAvailable,
+    notificationPermission: notificationApiAvailable ? Notification.permission : null,
+    permissionsApiSupported,
+    permissionsApiNotificationState: permissionsApiSupported ? null : 'unsupported',
+    serviceWorkerSupported,
+    pushManagerSupported,
+    serviceWorkerReady: false,
+    serviceWorkerScope: null,
+    hasPushSubscription: false,
+    pushEndpoint: null,
+    pushPermissionState: pushManagerSupported ? null : 'unsupported',
+    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
+    likelySystemLevelIssue: false,
+    issues: [],
+  }
+
+  try {
+    if (permissionsApiSupported) {
+      const status = await navigator.permissions.query({ name: 'notifications' as PermissionName })
+      diagnostics.permissionsApiNotificationState = status.state
+    }
+  } catch {
+    diagnostics.permissionsApiNotificationState = null
+  }
+
+  if (diagnostics.notificationPermission === 'denied') {
+    diagnostics.issues.push('notifications-denied')
+  } else if (diagnostics.notificationPermission !== 'granted') {
+    diagnostics.issues.push('notifications-not-granted')
+  }
+
+  if (!serviceWorkerSupported) {
+    diagnostics.issues.push('service-worker-unsupported')
+    return diagnostics
+  }
+
+  if (!pushManagerSupported) {
+    diagnostics.issues.push('push-manager-unsupported')
+    return diagnostics
+  }
+
+  try {
+    const registration = await navigator.serviceWorker.ready
+    diagnostics.serviceWorkerReady = true
+    diagnostics.serviceWorkerScope = registration.scope
+
+    const subscription = await registration.pushManager.getSubscription()
+    diagnostics.hasPushSubscription = Boolean(subscription)
+    diagnostics.pushEndpoint = subscription?.endpoint ?? null
+
+    if (typeof registration.pushManager.permissionState === 'function') {
+      diagnostics.pushPermissionState = await registration.pushManager.permissionState({ userVisibleOnly: true })
+    } else {
+      diagnostics.pushPermissionState = 'unsupported'
+    }
+  } catch {
+    diagnostics.issues.push('service-worker-not-ready')
+  }
+
+  if (!diagnostics.hasPushSubscription) {
+    diagnostics.issues.push('missing-subscription')
+  }
+  if (diagnostics.pushPermissionState === 'denied') {
+    diagnostics.issues.push('push-permission-denied')
+  }
+
+  const appearsTechnicallyHealthy =
+    diagnostics.notificationPermission === 'granted' &&
+    diagnostics.hasPushSubscription &&
+    diagnostics.serviceWorkerReady &&
+    diagnostics.pushPermissionState !== 'denied'
+
+  if (appearsTechnicallyHealthy) {
+    diagnostics.likelySystemLevelIssue = true
+    diagnostics.issues.push('system-level-settings-may-block-notifications')
+  }
+
+  return diagnostics
+}
+
 export function getBrowserTimeZone(): string {
   return Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC'
 }
@@ -244,4 +348,3 @@ export function markPwaPromptAsDeferred(): void {
     // localStorage can be unavailable in private modes or strict browser settings.
   }
 }
-

@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import type { ReminderInterval } from '@/lib/push/reminders'
 import {
   getBrowserTimeZone,
+  getPushDiagnostics,
   getCurrentPushSubscription,
   hasEnoughLearningProgress,
   hasPwaPromptBeenDeferred,
@@ -205,6 +206,7 @@ export function PushPermissionNudge({
       const subscription = await subscribeBrowserToPush(vapidPublicKey)
       await saveSubscription(subscription, stored.interval)
       persistPushReminderSettings(true, stored.interval)
+      await getPushDiagnostics()
     } catch {
       setAwaitingPermission(false)
     } finally {
@@ -281,5 +283,4 @@ async function saveSubscription(subscription: PushSubscription, reminderInterval
     throw new Error('The subscription could not be saved.')
   }
 }
-
 

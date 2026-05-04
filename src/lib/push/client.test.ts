@@ -1,11 +1,12 @@
 import { afterEach, describe, expect, it } from 'vitest'
-import { postponePushSoftPrompt, shouldShowPushSoftPrompt } from './client'
+import { getPushDiagnostics, postponePushSoftPrompt, shouldShowPushSoftPrompt } from './client'
 
 const originalServiceWorker = navigator.serviceWorker
 const originalPushManager = (window as Window & { PushManager?: unknown }).PushManager
 const originalNotification = (window as Window & { Notification?: unknown }).Notification
 const originalNavigatorPlatform = navigator.platform
 const originalNavigatorMaxTouchPoints = navigator.maxTouchPoints
+const originalPermissions = (navigator as Navigator & { permissions?: unknown }).permissions
 
 function mockSupportedBrowser(permission: NotificationPermission = 'default') {
   Object.defineProperty(navigator, 'serviceWorker', {
@@ -34,6 +35,21 @@ function mockSupportedBrowser(permission: NotificationPermission = 'default') {
   })
 }
 
+function mockReadyServiceWorker(subscription: PushSubscription | null, permissionState: PermissionState = 'granted') {
+  Object.defineProperty(navigator, 'serviceWorker', {
+    configurable: true,
+    value: {
+      ready: Promise.resolve({
+        scope: '/',
+        pushManager: {
+          getSubscription: async () => subscription,
+          permissionState: async () => permissionState,
+        },
+      }),
+    },
+  })
+}
+
 afterEach(() => {
   window.localStorage.clear()
 
@@ -56,6 +72,10 @@ afterEach(() => {
   Object.defineProperty(navigator, 'maxTouchPoints', {
     configurable: true,
     value: originalNavigatorMaxTouchPoints,
+  })
+  Object.defineProperty(navigator, 'permissions', {
+    configurable: true,
+    value: originalPermissions,
   })
 })
 
@@ -89,3 +109,53 @@ describe('push soft prompt', () => {
   })
 })
 
+describe('getPushDiagnostics', () => {
+  it('handles missing Notification API', async () => {
+    Object.defineProperty(window, 'Notification', { configurable: true, value: undefined })
+    const result = await getPushDiagnostics()
+    expect(result.notificationApiAvailable).toBe(false)
+    expect(result.issues).toContain('notifications-not-granted')
+  })
+
+  it('reports permission denied', async () => {
+    mockSupportedBrowser('denied')
+    mockReadyServiceWorker(null)
+    const result = await getPushDiagnostics()
+    expect(result.notificationPermission).toBe('denied')
+    expect(result.issues).toContain('notifications-denied')
+  })
+
+  it('reports service worker unsupported', async () => {
+    Object.defineProperty(navigator, 'serviceWorker', { configurable: true, value: undefined })
+    const result = await getPushDiagnostics()
+    expect(result.serviceWorkerSupported).toBe(false)
+    expect(result.issues).toContain('service-worker-unsupported')
+  })
+
+  it('reports PushManager unsupported', async () => {
+    mockSupportedBrowser('default')
+    Object.defineProperty(window, 'PushManager', { configurable: true, value: undefined })
+    const result = await getPushDiagnostics()
+    expect(result.pushManagerSupported).toBe(false)
+    expect(result.issues).toContain('push-manager-unsupported')
+  })
+
+  it('returns healthy subscription state when granted and subscribed', async () => {
+    mockSupportedBrowser('granted')
+    mockReadyServiceWorker({ endpoint: 'https://example.com/sub' } as PushSubscription)
+    const result = await getPushDiagnostics()
+    expect(result.hasPushSubscription).toBe(true)
+    expect(result.pushEndpoint).toBe('https://example.com/sub')
+    expect(result.likelySystemLevelIssue).toBe(true)
+    expect(result.issues).toContain('system-level-settings-may-block-notifications')
+  })
+
+  it('reports missing subscription after previously enabled', async () => {
+    mockSupportedBrowser('granted')
+    window.localStorage.setItem('99names.pushReminders.enabled', 'yes')
+    mockReadyServiceWorker(null)
+    const result = await getPushDiagnostics()
+    expect(result.hasPushSubscription).toBe(false)
+    expect(result.issues).toContain('missing-subscription')
+  })
+})
