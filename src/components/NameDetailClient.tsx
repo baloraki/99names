@@ -6,6 +6,7 @@ import type { NameEntry } from '@/types/name'
 import { useAppState } from '@/hooks/useAppState'
 import { getDict } from '@/lib/i18n'
 import { names } from '@/data/names'
+import { StarToggle } from './StarToggle'
 
 export function NameDetailClient({ name }: { name: NameEntry }) {
   const { language, progress, actions } = useAppState()
@@ -31,9 +32,12 @@ export function NameDetailClient({ name }: { name: NameEntry }) {
           <button className={learned ? 'btn-secondary' : 'btn-primary'} onClick={() => learned ? actions.unmarkLearned(name.id) : actions.markLearned(name.id, name.slug)}>
             {learned ? dict.detail.markOpen : dict.detail.markLearned}
           </button>
-          <button className="btn-secondary" onClick={() => actions.toggleFavorite(name.id)}>
-            {favorite ? dict.detail.removeFavorite : dict.detail.addFavorite}
-          </button>
+          <StarToggle
+            active={favorite}
+            onToggle={() => actions.toggleFavorite(name.id)}
+            labelAdd={dict.detail.addFavorite}
+            labelRemove={dict.detail.removeFavorite}
+          />
         </div>
       </section>
       <InfoBlock title={dict.common.meaning} body={name.meanings[language]} />

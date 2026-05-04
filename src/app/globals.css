@@ -258,6 +258,17 @@ textarea {
   }
 }
 
+@keyframes star-pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.3); }
+  70% { transform: scale(0.92); }
+  100% { transform: scale(1); }
+}
+
+.star-toggle-pulse {
+  animation: star-pop 240ms ease-out;
+}
+
 .focus-ring {
   outline: none;
 }

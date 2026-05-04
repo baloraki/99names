@@ -7,7 +7,7 @@ import type { ReactNode, SVGProps } from 'react'
 import { useEffect, useRef, useState } from 'react'
 import { getDict, LANGUAGES } from '@/lib/i18n'
 import { isLanguage } from '@/lib/languagePreference'
-import { getEquivalentLocalizedPath, getLocalizedSeoPath, getLocalizedSettingsPath, getLocalizedStaticPath } from '@/lib/seo'
+import { getEquivalentLocalizedPath, getLocalizedFavoritesPath, getLocalizedSeoPath, getLocalizedSettingsPath, getLocalizedStaticPath } from '@/lib/seo'
 import { storage } from '@/lib/storage'
 import type { Language } from '@/types/language'
 import { PushPermissionNudge } from './PushPermissionNudge'
@@ -16,6 +16,7 @@ const getNavItems = (language: Language) => [
   { href: language === 'de' ? '/de' : language === 'tr' ? '/tr' : '/', key: 'home', icon: HomeIcon },
   { href: language === 'de' ? '/de/namen' : language === 'tr' ? '/tr/esmaul-husna' : '/names', key: 'names', icon: DiamondIcon },
   { href: getLocalizedSeoPath('learn', language), key: 'learn', icon: CompassIcon },
+  { href: getLocalizedFavoritesPath(language), key: 'favorites', icon: StarIcon },
 ] as const
 
 const mobileMenuLabels: Record<Language, { open: string; close: string }> = {
@@ -351,6 +352,14 @@ function CompassIcon(props: SVGProps<SVGSVGElement>) {
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" {...props}>
       <circle cx="12" cy="12" r="9" />
       <path d="M9.5 14.5l2-5 5-2-2 5-5 2z" />
+    </svg>
+  )
+}
+
+function StarIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M12 3.5l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17.6 6.6 20.4l1-6.1L3.2 10l6.1-.9L12 3.5z" />
     </svg>
   )
 }

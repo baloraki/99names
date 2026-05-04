@@ -12,7 +12,7 @@ import { ProgressSummary } from './ProgressSummary'
 type FilterMode = 'all' | 'learned' | 'favorites' | 'open'
 
 export function NamesExplorer() {
-  const { language, progress } = useAppState()
+  const { language, progress, actions } = useAppState()
   const dict = getDict(language)
   const [query, setQuery] = useState('')
   const [filter, setFilter] = useState<FilterMode>('all')
@@ -72,6 +72,7 @@ export function NamesExplorer() {
               language={language}
               learned={progress.learnedIds.includes(name.id)}
               favorite={progress.favoriteIds.includes(name.id)}
+              onToggleFavorite={actions.toggleFavorite}
             />
           ))}
         </div>
