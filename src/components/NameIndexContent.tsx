@@ -1,11 +1,25 @@
+"use client"
+
 import Link from 'next/link'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { useEffect, useMemo, useState } from 'react'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { JsonLd } from '@/components/JsonLd'
 import { LearningProgressWidget } from '@/components/LearningProgressWidget'
 import { names } from '@/data/names'
+import { useDebounce } from '@/hooks/useDebounce'
 import { getLocalizedNamePath, getLocalizedNamesPath } from '@/lib/seo'
 import { breadcrumbJsonLd, itemListJsonLd } from '@/lib/structuredData'
 import type { Language } from '@/types/language'
+import type { NameEntry } from '@/types/name'
+
+function normalizeForSearch(value: string): string {
+  return value
+    .normalize('NFD')
+    .replace(/\p{Diacritic}/gu, '')
+    .replace(/[-'`'\s]/g, '')
+    .toLowerCase()
+}
 
 const copy = {
   en: {
@@ -47,6 +61,28 @@ const copy = {
 } as const
 
 export function NameIndexContent({ locale }: { locale: Language }) {
+  const router = useRouter()
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
+  const urlSearch = searchParams.get('search') ?? ''
+  const [searchTerm, setSearchTerm] = useState(urlSearch)
+  // Tracks the last URL search value seen so we can detect external URL changes
+  // (back/forward navigation) vs. changes we caused via router.replace.
+  const [prevUrlSearch, setPrevUrlSearch] = useState(urlSearch)
+
+  // Derived-state pattern (React-recommended alternative to setState-in-effect):
+  // When the URL search param changes, decide whether to sync it into the input.
+  // - If it matches what the input already contains (trimmed), the change was caused
+  //   by our own router.replace call → skip to avoid a cascade.
+  // - Otherwise it's an external navigation (back/forward) → update the input.
+  if (prevUrlSearch !== urlSearch) {
+    setPrevUrlSearch(urlSearch)
+    if (urlSearch !== searchTerm.trim()) {
+      setSearchTerm(urlSearch)
+    }
+  }
+
+  const debouncedSearchTerm = useDebounce(searchTerm, 300)
   const text = copy[locale]
   const listPath = getLocalizedNamesPath(locale)
   const breadcrumbItems = [
@@ -54,9 +90,61 @@ export function NameIndexContent({ locale }: { locale: Language }) {
     { href: listPath, label: text.breadcrumbs[1] },
   ]
 
+  // Push the debounced search term to the URL, but only when it actually differs.
+  // The extra guard `trimmed !== searchTerm.trim()` catches the window between an
+  // external URL change (e.g. language switch) resetting searchTerm and the debounce
+  // catching up: during that window debouncedSearchTerm is stale and must not be
+  // written back to the URL or it creates a navigation loop.
+  useEffect(() => {
+    const trimmed = debouncedSearchTerm.trim()
+    if (trimmed !== searchTerm.trim()) return
+    if (trimmed === urlSearch) return
+    const params = new URLSearchParams(searchParams.toString())
+    if (trimmed) {
+      params.set('search', trimmed)
+    } else {
+      params.delete('search')
+    }
+    const nextQuery = params.toString()
+    const nextUrl = nextQuery ? `${pathname}?${nextQuery}` : pathname
+    router.replace(nextUrl, { scroll: false })
+  }, [debouncedSearchTerm, searchTerm, pathname, router, searchParams, urlSearch])
+
+  const normalizedNames = useMemo(
+    () => names.map((name) => ({
+      ...name,
+      _normalized: {
+        arabic: normalizeForSearch(name.arabic),
+        transliteration: {
+          en: normalizeForSearch(name.transliteration.en),
+          de: normalizeForSearch(name.transliteration.de),
+          tr: normalizeForSearch(name.transliteration.tr),
+        },
+        meanings: {
+          en: normalizeForSearch(name.meanings.en),
+          de: normalizeForSearch(name.meanings.de),
+          tr: normalizeForSearch(name.meanings.tr),
+        },
+      },
+    })),
+    [],
+  )
+
+  const filteredNames: NameEntry[] = useMemo(() => {
+    const query = normalizeForSearch(debouncedSearchTerm)
+    if (!query) return names
+
+    return normalizedNames
+      .filter((name) =>
+        name._normalized.arabic.includes(query)
+        || name._normalized.transliteration[locale].includes(query)
+        || name._normalized.meanings[locale].includes(query))
+      .map(({ _normalized: _, ...name }) => name)
+  }, [debouncedSearchTerm, locale, normalizedNames])
+
   return (
     <div lang={locale} className="space-y-8">
-      <JsonLd data={itemListJsonLd(names, locale)} />
+      <JsonLd data={itemListJsonLd(filteredNames, locale)} />
       <JsonLd data={breadcrumbJsonLd(breadcrumbItems.map((item) => ({ name: item.label, path: item.href })))} />
       <Breadcrumbs items={breadcrumbItems} />
       <section className="space-y-5">
@@ -70,8 +158,47 @@ export function NameIndexContent({ locale }: { locale: Language }) {
         </p>
       </section>
       <LearningProgressWidget locale={locale} />
+      <section className="space-y-4">
+        <div className="sticky top-[4.25rem] z-20 rounded-lg border border-white/10 bg-background/95 p-3 backdrop-blur supports-[backdrop-filter]:bg-background/80 sm:top-[4.5rem]">
+          <div className="flex items-center gap-2 rounded-lg border border-white/15 bg-surface px-3 py-2">
+            <span aria-hidden="true" className="text-gold-muted">
+              <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.35-4.35" />
+              </svg>
+            </span>
+            <input
+              type="search"
+              value={searchTerm}
+              onChange={(event) => setSearchTerm(event.target.value)}
+              placeholder={locale === 'de' ? 'Namen suchen …' : locale === 'tr' ? 'İsim ara…' : 'Search names…'}
+              className="w-full bg-transparent text-base text-primary outline-none placeholder:text-muted"
+              aria-label={locale === 'de' ? 'Namen durchsuchen' : locale === 'tr' ? 'İsimlerde ara' : 'Search names'}
+            />
+            {searchTerm.trim().length > 0 ? (
+              <button
+                type="button"
+                onClick={() => setSearchTerm('')}
+                className="rounded-md p-1 text-muted transition hover:bg-white/10 hover:text-primary focus:outline-none focus:ring-2 focus:ring-gold"
+                aria-label={locale === 'de' ? 'Suche löschen' : locale === 'tr' ? 'Aramayı temizle' : 'Clear search'}
+              >
+                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M18 6 6 18" />
+                  <path d="m6 6 12 12" />
+                </svg>
+              </button>
+            ) : null}
+          </div>
+        </div>
+
+        {filteredNames.length === 0 ? (
+          <div className="rounded-lg border border-white/10 bg-surface p-6 text-sm text-muted">
+            {locale === 'de' ? 'Keine Namen gefunden für' : locale === 'tr' ? 'İsim bulunamadı:' : 'No names found for'} &quot;{debouncedSearchTerm}&quot;.
+          </div>
+        ) : null}
+      </section>
       <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {names.map((name) => (
+        {filteredNames.map((name) => (
           <li key={name.id}>
             <Link
               href={getLocalizedNamePath(locale, name.slug)}

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Suspense } from 'react'
 import { NameIndexContent } from '@/components/NameIndexContent'
 import { buildMetadata, namesAlternates } from '@/lib/seo'
 
@@ -11,5 +12,9 @@ export const metadata: Metadata = buildMetadata({
 })
 
 export default function TurkishNamesPage() {
-  return <NameIndexContent locale="tr" />
+  return (
+    <Suspense>
+      <NameIndexContent locale="tr" />
+    </Suspense>
+  )
 }

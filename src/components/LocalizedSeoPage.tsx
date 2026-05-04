@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { Suspense } from 'react'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { JsonLd } from '@/components/JsonLd'
 import { LearnClient } from '@/components/LearnClient'
+import { SeoNamesSearchSection } from '@/components/SeoNamesSearchSection'
 import { names } from '@/data/names'
 import {
   buildMetadata,
@@ -321,16 +323,9 @@ function DuaPage({ locale }: { locale: Language }) {
   return (
     <div lang={locale} className="mx-auto max-w-4xl space-y-8">
       <PageIntro page="dua" locale={locale} />
-      <section className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {names.map((name) => (
-          <Link key={name.id} href={getLocalizedNamePath(locale, name.slug)} className="rounded-lg border border-white/10 bg-surface p-4 hover:border-gold/50 focus-ring">
-            <span className="block text-right font-arabic text-4xl" lang="ar" dir="rtl">{name.arabic}</span>
-            <span className="mt-3 block text-xl font-semibold">{name.transliteration[locale]}</span>
-            <span className="mt-3 block text-sm font-semibold text-gold">{name.meanings[locale]}</span>
-            <span className="mt-1 block text-sm text-muted">{name.duaUsage[locale]}</span>
-          </Link>
-        ))}
-      </section>
+      <Suspense>
+        <SeoNamesSearchSection locale={locale} variant="dua" names={names} />
+      </Suspense>
       {text.sourceTitle && text.sourceBody && (
         <section className="rounded-lg border border-gold/20 bg-surface p-5">
           <h2 className="text-2xl font-semibold">{text.sourceTitle}</h2>
@@ -345,16 +340,9 @@ function ReflectionsPage({ locale }: { locale: Language }) {
   return (
     <div lang={locale} className="mx-auto max-w-4xl space-y-8">
       <PageIntro page="reflections" locale={locale} />
-      <section className="grid gap-4 sm:grid-cols-2">
-        {names.map((name) => (
-          <Link key={name.id} href={getLocalizedNamePath(locale, name.slug)} className="rounded-lg border border-white/10 bg-surface p-5 hover:border-gold/50 focus-ring">
-            <span className="block text-right font-arabic text-4xl" lang="ar" dir="rtl">{name.arabic}</span>
-            <span className="mt-4 block text-xl font-semibold">{name.transliteration[locale]}</span>
-            <span className="mt-1 block text-sm text-gold">{name.meanings[locale]}</span>
-            <span className="mt-3 block leading-7 text-muted">{name.reflection?.[locale]}</span>
-          </Link>
-        ))}
-      </section>
+      <Suspense>
+        <SeoNamesSearchSection locale={locale} variant="reflections" names={names} />
+      </Suspense>
     </div>
   )
 }
