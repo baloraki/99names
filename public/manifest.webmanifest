@@ -6,7 +6,7 @@
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "display_override": ["standalone", "minimal-ui"],
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
   "background_color": "#080808",
   "theme_color": "#080808",
   "orientation": "portrait-primary",
@@ -52,19 +52,22 @@
   "screenshots": [
     {
       "src": "/screenshots/screenshot-wide.png",
-      "sizes": "1280x800",
+      "sizes": "1712x861",
       "type": "image/png",
       "form_factor": "wide",
       "label": "99 Names – Names list"
     },
     {
       "src": "/screenshots/screenshot-narrow.png",
-      "sizes": "390x844",
+      "sizes": "485x863",
       "type": "image/png",
       "form_factor": "narrow",
       "label": "99 Names – Learn mode"
     }
   ],
+  "edge_side_panel": {
+    "preferred_width": 480
+  },
   "shortcuts": [
     {
       "name": "Learn",
