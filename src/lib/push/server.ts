@@ -23,8 +23,8 @@ export async function sendPushNotification(
   configureWebPush()
 
   await webPush.sendNotification(subscription, JSON.stringify({
-    icon: '/icon.svg',
-    badge: '/maskable-icon.svg',
+    icon: '/icon-192.png',
+    badge: '/maskable-icon-512.png',
     ...payload,
   }))
 }
