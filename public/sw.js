@@ -1,4 +1,4 @@
-const CACHE_NAME = '99names-app-shell-v4'
+const CACHE_NAME = '99names-app-shell-v5'
 const APP_SHELL = [
   '/',
   '/names',
@@ -30,7 +30,10 @@ const APP_SHELL = [
   '/manifest.webmanifest',
   '/logo.svg',
   '/icon.svg',
-  '/maskable-icon.svg'
+  '/icon-192.png',
+  '/icon-512.png',
+  '/maskable-icon.svg',
+  '/maskable-icon-512.png'
 ]
 
 const DEFAULT_NOTIFICATION = {
@@ -102,6 +105,26 @@ self.addEventListener('push', (event) => {
   }
 
   event.waitUntil(self.registration.showNotification(title, options))
+})
+
+self.addEventListener('sync', (event) => {
+  // Placeholder for future background sync logic (e.g. syncing progress to server)
+  if (event.tag === 'sync-progress') {
+    event.waitUntil(Promise.resolve())
+  }
+})
+
+self.addEventListener('periodicsync', (event) => {
+  if (event.tag === 'daily-reminder') {
+    event.waitUntil(
+      self.registration.showNotification(DEFAULT_NOTIFICATION.title, {
+        body: DEFAULT_NOTIFICATION.body,
+        icon: DEFAULT_NOTIFICATION.icon,
+        badge: DEFAULT_NOTIFICATION.badge,
+        data: { url: DEFAULT_NOTIFICATION.url }
+      })
+    )
+  }
 })
 
 self.addEventListener('notificationclick', (event) => {
