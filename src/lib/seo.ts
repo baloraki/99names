@@ -366,7 +366,7 @@ export function rootMetadata(locale: Language): Metadata {
     icons: {
       icon: '/icon.svg',
       shortcut: '/icon.svg',
-      apple: '/icon.svg',
+      apple: '/icon-192.png',
     },
     formatDetection: {
       telephone: false,

@@ -1,4 +1,4 @@
-const CACHE_NAME = '99names-app-shell-v5'
+const CACHE_NAME = '99names-app-shell-v6'
 const APP_SHELL = [
   '/',
   '/names',
@@ -39,8 +39,8 @@ const APP_SHELL = [
 const DEFAULT_NOTIFICATION = {
   title: 'Zeit zum Lernen',
   body: 'Wiederhole heute einen Namen Allahs.',
-  icon: '/icon.svg',
-  badge: '/maskable-icon.svg',
+  icon: '/icon-192.png',
+  badge: '/maskable-icon-512.png',
   url: '/learn#learn-now'
 }
 
