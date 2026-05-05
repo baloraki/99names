@@ -217,8 +217,8 @@ export function PushReminderSettings({
         onChange={onIntervalChange}
         disabled={controlsDisabled}
       >
-        <option value="2h" disabled>{intervalLabels['2h']}</option>
-        <option value="6h" disabled>{intervalLabels['6h']}</option>
+        <option value="2h">{intervalLabels['2h']}</option>
+        <option value="6h">{intervalLabels['6h']}</option>
         <option value="daily">{intervalLabels.daily}</option>
       </select>
 
