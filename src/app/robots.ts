@@ -21,7 +21,6 @@ export default function robots(): MetadataRoute.Robots {
         '/tr/kunye',
       ],
     },
-    sitemap: absoluteUrl('/sitemap.xml'),
-    host: SITE_URL,
+    sitemap: absoluteUrl('/sitemap.xml')
   }
 }
