@@ -14,6 +14,8 @@ type Phase = 'question' | 'answer'
 type DragDir = null | 'left' | 'right' | 'up'
 
 const SWIPE_THRESHOLD = 80
+// Set to true to re-enable the audio feature
+const AUDIO_ENABLED = false
 
 function seededShuffle<T>(input: T[], seed: number): T[] {
   const arr = [...input]
@@ -182,7 +184,7 @@ export function LearnClient({ embedded = false, locale }: { embedded?: boolean; 
         handleRepeat()
       } else if (e.key === 'f' || e.key === 'F') {
         handleFavorite()
-      } else if (e.key === 'a' || e.key === 'A') {
+      } else if ((e.key === 'a' || e.key === 'A') && AUDIO_ENABLED) {
         handleAudio()
       }
     }
@@ -314,7 +316,7 @@ export function LearnClient({ embedded = false, locale }: { embedded?: boolean; 
           reversed={reversed}
           isFavorite={isFavorite}
           shuffleOn={learnState.shuffle}
-          audioState={audioState}
+          audioState={AUDIO_ENABLED ? audioState : 'unsupported'}
           cardRef={cardRef}
           onPointerDown={onPointerDown}
           onPointerMove={onPointerMove}
