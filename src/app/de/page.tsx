@@ -6,7 +6,7 @@ import { LearningProgressWidget } from '@/components/LearningProgressWidget'
 import { RandomDuaSnippet, RandomDuaSnippetFallback } from '@/components/RandomDuaSnippet'
 import {firstName, names} from '@/data/names'
 import { buildMetadata, homeAlternates } from '@/lib/seo'
-import { organizationJsonLd, websiteJsonLd } from '@/lib/structuredData'
+import { homeFaqJsonLd, organizationJsonLd, websiteJsonLd } from '@/lib/structuredData'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Die 99 Namen Allahs – Bedeutung, Arabisch, Dua & Reflexion',
@@ -22,6 +22,7 @@ export default function GermanHomePage() {
   return (
     <div lang="de" className="space-y-10">
       <JsonLd data={[websiteJsonLd(), organizationJsonLd()]} />
+      <JsonLd data={homeFaqJsonLd('de')} />
       <section className="grid gap-6 py-8 md:grid-cols-[1.1fr_0.9fr] md:items-center md:py-14">
         <div>
           <p className="text-sm uppercase tracking-[0.22em] text-gold">Asma ul Husna Deutsch</p>

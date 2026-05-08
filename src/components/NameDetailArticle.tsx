@@ -5,7 +5,7 @@ import { JsonLd } from '@/components/JsonLd'
 import { NameDetailStarToggle } from '@/components/NameDetailStarToggle'
 import { names } from '@/data/names'
 import { getLocalizedNamePath, getLocalizedNamesPath } from '@/lib/seo'
-import { breadcrumbJsonLd, nameLearningResourceJsonLd } from '@/lib/structuredData'
+import { breadcrumbJsonLd, nameFaqJsonLd, nameLearningResourceJsonLd } from '@/lib/structuredData'
 import type { Language } from '@/types/language'
 import type { NameEntry } from '@/types/name'
 
@@ -115,6 +115,7 @@ export function NameDetailArticle({ name, locale }: { name: NameEntry; locale: L
     <article lang={locale} className="mx-auto max-w-4xl space-y-8">
       <JsonLd data={nameLearningResourceJsonLd(name, locale)} />
       <JsonLd data={breadcrumbJsonLd(breadcrumbItems.map((item) => ({ name: item.label, path: item.href })))} />
+      <JsonLd data={nameFaqJsonLd(name, locale)} />
       <Breadcrumbs items={breadcrumbItems} />
       <header className="rounded-lg border border-gold/20 bg-surface p-6">
         <div className="flex items-center justify-between">

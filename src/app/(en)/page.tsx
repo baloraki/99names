@@ -7,7 +7,7 @@ import { LearningProgressWidget } from '@/components/LearningProgressWidget'
 import { RandomDuaSnippet, RandomDuaSnippetFallback } from '@/components/RandomDuaSnippet'
 import { firstName, names } from '@/data/names'
 import { buildMetadata, homeAlternates } from '@/lib/seo'
-import { organizationJsonLd, websiteJsonLd } from '@/lib/structuredData'
+import { homeFaqJsonLd, organizationJsonLd, websiteJsonLd } from '@/lib/structuredData'
 
 const title = '99 Names of Allah – Learn Asma ul Husna with Meaning, Dua & Reflection'
 const description = 'Learn the 99 Names of Allah with Arabic, transliteration, meaning, dua usage, reflection and daily learning progress.'
@@ -27,6 +27,7 @@ export default function HomePage() {
     <div className="space-y-10">
       <LanguageRedirect />
       <JsonLd data={[websiteJsonLd(), organizationJsonLd()]} />
+      <JsonLd data={homeFaqJsonLd('en')} />
       <section className="grid gap-6 py-8 md:grid-cols-[1.1fr_0.9fr] md:items-center md:py-14">
         <div>
           <p className="text-sm uppercase tracking-[0.22em] text-gold">Asma ul Husna learning aid</p>
@@ -63,7 +64,7 @@ export default function HomePage() {
             The general concept of calling upon Allah by His beautiful names is rooted in Islamic teaching, and the report that Allah has ninety-nine names is authentically known. This app treats the exact common list with caution: it does not claim every individual entry is independently sahih-confirmed unless the dataset source note supports that claim.
           </p>
         </div>
-        <p className="ounded-lg border border-gold/20 bg-surface p-4 text-sm leading-6 text-muted">
+        <p className="rounded-lg border border-gold/20 bg-surface p-4 text-sm leading-6 text-muted">
           Source-aware note: every name detail page keeps its source note visible. Entries marked with content review required should be checked by qualified reviewers before public religious reliance.
         </p>
         <div className="mt-5 space-y-5">
