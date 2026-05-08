@@ -6,7 +6,19 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/api/', '/offline'],
+      disallow: [
+        '/api/',
+        '/offline',
+        '/contact',
+        '/de/kontakt',
+        '/tr/iletisim',
+        '/privacy',
+        '/de/datenschutz',
+        '/tr/gizlilik',
+        '/imprint',
+        '/de/impressum',
+        '/tr/kunye',
+      ],
     },
     sitemap: absoluteUrl('/sitemap.xml'),
   }
