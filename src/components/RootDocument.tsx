@@ -3,6 +3,7 @@ import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { AppShell } from '@/components/AppShell'
 import { ServiceWorkerRegister } from '@/components/ServiceWorkerRegister'
+import { fontArabic, fontSans } from '@/app/fonts'
 import type { Language } from '@/types/language'
 
 export function RootDocument({
@@ -15,7 +16,11 @@ export function RootDocument({
   shellLanguage?: Language
 }) {
   return (
-    <html lang={lang} className="h-full antialiased" suppressHydrationWarning>
+    <html
+      lang={lang}
+      className={`h-full antialiased ${fontSans.variable} ${fontArabic.variable}`}
+      suppressHydrationWarning
+    >
       <head>
         <script
           dangerouslySetInnerHTML={{

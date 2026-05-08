@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { absoluteUrl, SITE_URL } from '@/lib/seo'
+import { absoluteUrl } from '@/lib/seo'
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -7,20 +7,19 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
       disallow: [
-        // Contact
+        '/api/',
+        '/offline',
         '/contact',
         '/de/kontakt',
         '/tr/iletisim',
-        // Privacy
         '/privacy',
         '/de/datenschutz',
         '/tr/gizlilik',
-        // Imprint
         '/imprint',
         '/de/impressum',
         '/tr/kunye',
       ],
     },
-    sitemap: absoluteUrl('/sitemap.xml')
+    sitemap: absoluteUrl('/sitemap.xml'),
   }
 }
