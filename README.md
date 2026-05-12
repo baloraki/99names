@@ -139,4 +139,5 @@ Please see [SECURITY.md](./SECURITY.md) for responsible disclosure instructions.
 
 ## License
 
-This project is licensed under the **MIT License**. See [LICENSE](./LICENSE).
+- The source code in this repository is licensed under the **MIT License**. See [LICENSE](./LICENSE).
+- The educational/religious content in [`src/data/names.ts`](./src/data/names.ts) is licensed under **CC BY-NC-SA 4.0** unless stated otherwise.
