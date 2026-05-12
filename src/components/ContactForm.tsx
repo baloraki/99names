@@ -10,15 +10,15 @@ import { validateContactForm } from '@/lib/validation'
 
 const privacyNote: Record<string, { text: string; linkLabel: string }> = {
   de: {
-    text: 'Die von Ihnen eingegebenen Daten (Name, E-Mail, Nachricht) werden über Web3Forms verarbeitet und direkt per E-Mail an uns weitergeleitet. Es findet keine Speicherung der Daten auf den Servern von Web3Forms statt. Weitere Informationen finden Sie in unserer ',
+    text: 'Die von Ihnen eingegebenen Daten werden über Web3Forms verarbeitet und per E-Mail an uns weitergeleitet. Je nach Web3Forms-Plan können Einsendungen dort zeitlich begrenzt gespeichert werden. Details finden Sie in unserer ',
     linkLabel: 'Datenschutzerklärung',
   },
   en: {
-    text: 'The data you enter (name, email, message) is processed via Web3Forms and forwarded directly to us by email. According to Web3Forms, no data is stored on their servers. For details see our ',
+    text: 'The data you enter is processed via Web3Forms and forwarded to us by email. Depending on the Web3Forms plan, submissions may be stored there for a limited period. For details see our ',
     linkLabel: 'Privacy Policy',
   },
   tr: {
-    text: 'Girdiğiniz veriler (ad, e-posta, mesaj) Web3Forms aracılığıyla işlenerek doğrudan e-posta ile tarafımıza iletilir. Web3Forms\'un belirttiğine göre veriler kendi sunucularında saklanmamaktadır. Ayrıntılar için ',
+    text: 'Girdiğiniz veriler Web3Forms aracılığıyla işlenerek e-posta ile tarafımıza iletilir. Web3Forms planına bağlı olarak gönderiler belirli bir süre orada saklanabilir. Ayrıntılar için ',
     linkLabel: 'Gizlilik Politikamıza',
   },
 }
