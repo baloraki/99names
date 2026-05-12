@@ -1,3 +1,14 @@
+Repository licensing summary
+===========================
+
+Except where otherwise noted, the source code in this repository is licensed under
+the MIT License below.
+
+The educational/religious content in `src/data/names.ts` is licensed under the
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+(CC BY-NC-SA 4.0) unless stated otherwise:
+https://creativecommons.org/licenses/by-nc-sa/4.0/
+
 MIT License
 
 Copyright (c) 2026 baloraki
