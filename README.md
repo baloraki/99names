@@ -1,8 +1,8 @@
 # 99 Names
 
-A mobile-first learning app for the 99 Names of Allah, built with Next.js App Router.
+Open-source learning aid for the 99 Names of Allah — cautious, source-aware, and open for review.
 
-The app supports **German**, **Turkish**, and **English** (German default), and provides searchable name cards with meanings, reflections, and personal progress tracking.
+A mobile-first PWA built with Next.js App Router. The app supports **German**, **Turkish**, and **English** and provides searchable name cards with meanings, reflections, dua usage, and personal progress tracking.
 
 ## Features
 
@@ -100,6 +100,7 @@ Keep `VAPID_PRIVATE_KEY`, `SUPABASE_SERVICE_ROLE_KEY`, and `CRON_SECRET` server-
 
 This project is a learning aid, **not** a theological authority.
 Content is intentionally cautious and should be reviewed by qualified scholars before public religious use.
+The content is source-aware and open for review. Corrections, source improvements, and qualified feedback are welcome.
 
 ## Privacy Notes
 

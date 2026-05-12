@@ -1,6 +1,7 @@
 {
   "name": "99names",
   "version": "0.1.0",
+  "description": "Open-source learning aid for the 99 Names of Allah.",
   "private": true,
   "scripts": {
     "dev": "next dev",
