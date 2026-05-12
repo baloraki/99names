@@ -74,7 +74,7 @@ export function SeoNamesSearchSection({ locale, variant, names }: SeoNamesSearch
 
   const normalizedNames = useMemo(
     () => names.map((name) => ({
-      ...name,
+      name,
       _n: {
         arabic: normalizeForSearch(name.arabic),
         transliteration: normalizeForSearch(name.transliteration[locale]),
@@ -92,7 +92,7 @@ export function SeoNamesSearchSection({ locale, variant, names }: SeoNamesSearch
         name._n.arabic.includes(query)
         || name._n.transliteration.includes(query)
         || name._n.meaning.includes(query))
-      .map(({ _n: _ignored, ...name }) => name)
+      .map(({ name }) => name)
   }, [debouncedSearchTerm, names, normalizedNames])
 
   return (

@@ -21,7 +21,7 @@ export function RootDocument({
       className={`h-full antialiased ${fontSans.variable} ${fontArabic.variable}`}
       suppressHydrationWarning
     >
-      <head>
+      <body className="min-h-screen bg-background text-primary">
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -36,8 +36,6 @@ export function RootDocument({
             `,
           }}
         />
-      </head>
-      <body className="min-h-screen bg-background text-primary">
         <ServiceWorkerRegister />
         <AppShell routeLanguage={shellLanguage}>{children}</AppShell>
         <Analytics />
