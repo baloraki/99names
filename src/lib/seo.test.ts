@@ -115,9 +115,10 @@ describe('name metadata', () => {
     expect(ogImage).toMatchObject({ width: 1200, height: 630 })
     if (typeof ogImage === 'string') throw new Error('expected object image metadata')
     const ogImageUrl = ogImage instanceof URL ? ogImage.toString() : ogImage?.url?.toString() ?? ''
-    expect(ogImageUrl).toContain('/api/og?')
-    expect(ogImageUrl).toContain('title=Ar-Rahman+Meaning')
-    expect(ogImageUrl).toContain('locale=en')
+    const ogImageParams = new URL(ogImageUrl, 'https://example.com')
+    expect(ogImageParams.pathname).toBe('/api/og')
+    expect(ogImageParams.searchParams.get('title')).toBe(metadata.title)
+    expect(ogImageParams.searchParams.get('locale')).toBe('en')
   })
 
   it('adds locale and alternate locale fields for Open Graph', () => {

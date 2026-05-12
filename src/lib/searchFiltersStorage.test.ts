@@ -14,7 +14,7 @@ describe('searchNames', () => {
   })
 
   it('finds German meaning', () => {
-    expect(searchNames(names, 'Barmherzige', 'de').some((name) => name.slug === 'ar-rahman')).toBe(true)
+    expect(searchNames(names, 'Allerbarmer', 'de').some((name) => name.slug === 'ar-rahman')).toBe(true)
   })
 
   it('returns an empty array when there is no result', () => {
