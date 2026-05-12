@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import type { ReactNode } from 'react'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { JsonLd } from '@/components/JsonLd'
 import { NameDetailStarToggle } from '@/components/NameDetailStarToggle'

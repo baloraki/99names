@@ -112,7 +112,7 @@ export function NameIndexContent({ locale }: { locale: Language }) {
 
   const normalizedNames = useMemo(
     () => names.map((name) => ({
-      ...name,
+      name,
       _normalized: {
         arabic: normalizeForSearch(name.arabic),
         transliteration: {
@@ -139,7 +139,7 @@ export function NameIndexContent({ locale }: { locale: Language }) {
         name._normalized.arabic.includes(query)
         || name._normalized.transliteration[locale].includes(query)
         || name._normalized.meanings[locale].includes(query))
-      .map(({ _normalized: _, ...name }) => name)
+      .map(({ name }) => name)
   }, [debouncedSearchTerm, locale, normalizedNames])
 
   return (
