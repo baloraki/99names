@@ -24,6 +24,15 @@ type PolicyContent = {
   sections: (operatorName: string, operatorAddress: string, supabaseRegion: string) => { heading: string; paragraphs: Paragraph[] }[]
 }
 
+function getOperatorAddress(): string {
+  const street = process.env.NEXT_PUBLIC_OPERATOR_STREET?.trim() ?? ''
+  const city = process.env.NEXT_PUBLIC_OPERATOR_CITY?.trim() ?? ''
+  const country = process.env.NEXT_PUBLIC_OPERATOR_COUNTRY?.trim() ?? ''
+
+  const parts = [street, city, country].filter(Boolean)
+  return parts.length > 0 ? parts.join(', ') : '-'
+}
+
 const content: Record<Language, PolicyContent> = {
   de: {
     title: 'Datenschutzerklärung',
@@ -348,7 +357,7 @@ export function PrivacyPageContent() {
 
   // Validate environment variables at runtime (when the component is rendered)
   const operatorName = assertEnv('NEXT_PUBLIC_OPERATOR_NAME')
-  const operatorAddress = assertEnv('NEXT_PUBLIC_OPERATOR_ADDRESS')
+  const operatorAddress = getOperatorAddress()
   const supabaseRegion = assertEnv('NEXT_PUBLIC_SUPABASE_PROJECT_REGION')
 
   const sections = c.sections(operatorName, operatorAddress, supabaseRegion)

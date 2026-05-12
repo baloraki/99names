@@ -60,12 +60,12 @@ npm run test:watch
 The privacy/imprint pages require these values. Missing values will fail `next build`.
 
 ```bash
+NEXT_PUBLIC_SITE_URL=
 NEXT_PUBLIC_OPERATOR_NAME=
-NEXT_PUBLIC_OPERATOR_ADDRESS=
-NEXT_PUBLIC_SUPABASE_PROJECT_REGION=
 NEXT_PUBLIC_OPERATOR_STREET=
 NEXT_PUBLIC_OPERATOR_CITY=
 NEXT_PUBLIC_OPERATOR_COUNTRY=   # defaults to "Schweiz" if unset
+NEXT_PUBLIC_SUPABASE_PROJECT_REGION=
 ```
 
 ### Optional: contact form
@@ -105,6 +105,7 @@ Content is intentionally cautious and should be reviewed by qualified scholars b
 
 The app stores language and learning state in `localStorage`.
 If push reminders are enabled, push subscription metadata and delivery logs are stored in Supabase.
+Vercel Analytics and Vercel Speed Insights are enabled for aggregate usage/performance insights.
 No tracking cookies are used by default.
 
 ## Project Structure
@@ -134,7 +135,7 @@ Contributions are welcome.
 
 ## Security
 
-If you find a security issue, please open a private report first (or contact the maintainer directly) instead of posting exploit details publicly.
+Please see [SECURITY.md](./SECURITY.md) for responsible disclosure instructions.
 
 ## License
 
