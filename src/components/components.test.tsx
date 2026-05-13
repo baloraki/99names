@@ -40,9 +40,9 @@ describe('ContactForm', () => {
   it('blocks submit if Web3Forms key is missing', () => {
     vi.stubEnv('NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY', '')
     render(<ContactForm />)
-    fireEvent.change(screen.getByLabelText('Name'), { target: { value: 'Test' } })
-    fireEvent.change(screen.getByLabelText('Email'), { target: { value: 'test@example.com' } })
-    fireEvent.change(screen.getByLabelText('Message'), { target: { value: 'Hello' } })
+    fireEvent.change(screen.getByLabelText('Name *'), { target: { value: 'Test' } })
+    fireEvent.change(screen.getByLabelText('Email *'), { target: { value: 'test@example.com' } })
+    fireEvent.change(screen.getByLabelText('Message *'), { target: { value: 'Hello' } })
     fireEvent.click(screen.getByRole('button', { name: 'Send' }))
     expect(screen.getByText('The contact form is not configured yet.')).toBeInTheDocument()
   })
