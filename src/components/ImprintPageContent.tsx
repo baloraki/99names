@@ -5,16 +5,10 @@ import type { Language } from '@/types/language'
 import { ObfuscatedEmail } from '@/components/ObfuscatedEmail'
 import { getLocalizedStaticPath } from '@/lib/seo'
 import { usePathname } from 'next/navigation'
+import { getOperatorData } from '@/lib/legal'
 
 // ─── OPERATOR DATA ────────────────────────────────────────────────────────────
-// TODO: Replace ALL values below with real data before going live.
-//       Without this the site is not legally compliant in Germany (§ 5 TMG).
-const OPERATOR = {
-  name: process.env.NEXT_PUBLIC_OPERATOR_NAME ?? 'UNCONFIGURED_OPERATOR_NAME',
-  street: process.env.NEXT_PUBLIC_OPERATOR_STREET ?? 'UNCONFIGURED_OPERATOR_STREET',
-  city: process.env.NEXT_PUBLIC_OPERATOR_CITY ?? 'UNCONFIGURED_OPERATOR_CITY',
-  country: process.env.NEXT_PUBLIC_OPERATOR_COUNTRY ?? 'Schweiz',
-}
+const OPERATOR = getOperatorData()
 
 // ─── EMAIL OBFUSCATION ────────────────────────────────────────────────────────
 // Handled by <ObfuscatedEmail /> (see ObfuscatedEmail.tsx)

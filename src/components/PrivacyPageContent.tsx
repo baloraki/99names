@@ -5,12 +5,7 @@ import type { Language } from '@/types/language'
 import { ObfuscatedEmail } from '@/components/ObfuscatedEmail'
 import { getLocalizedStaticPath } from '@/lib/seo'
 import { usePathname } from 'next/navigation'
-
-// Validates environment variables at runtime for client components
-function assertEnv(name: string): string {
-  const value = process.env[name]
-  return value || "-"
-}
+import { getLegalEnvVar, getOperatorAddress, getOperatorData } from '@/lib/legal'
 
 // E-Mail is intentionally NOT stored here → see <ObfuscatedEmail />
 
@@ -22,15 +17,6 @@ type PolicyContent = {
   title: string
   lastUpdated: string
   sections: (operatorName: string, operatorAddress: string, supabaseRegion: string) => { heading: string; paragraphs: Paragraph[] }[]
-}
-
-function getOperatorAddress(): string {
-  const street = process.env.NEXT_PUBLIC_OPERATOR_STREET?.trim() ?? ''
-  const city = process.env.NEXT_PUBLIC_OPERATOR_CITY?.trim() ?? ''
-  const country = process.env.NEXT_PUBLIC_OPERATOR_COUNTRY?.trim() ?? ''
-
-  const parts = [street, city, country].filter(Boolean)
-  return parts.length > 0 ? parts.join(', ') : '-'
 }
 
 const content: Record<Language, PolicyContent> = {
@@ -356,9 +342,9 @@ export function PrivacyPageContent() {
   const c = content[language]
 
   // Validate environment variables at runtime (when the component is rendered)
-  const operatorName = assertEnv('NEXT_PUBLIC_OPERATOR_NAME')
+  const operatorName = getOperatorData().name
   const operatorAddress = getOperatorAddress()
-  const supabaseRegion = assertEnv('NEXT_PUBLIC_SUPABASE_PROJECT_REGION')
+  const supabaseRegion = getLegalEnvVar('NEXT_PUBLIC_SUPABASE_PROJECT_REGION')
 
   const sections = c.sections(operatorName, operatorAddress, supabaseRegion)
 
