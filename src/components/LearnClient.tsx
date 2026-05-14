@@ -17,6 +17,8 @@ const SWIPE_THRESHOLD = 80
 // Set to true to re-enable the audio feature
 const AUDIO_ENABLED = false
 
+const namesMap = new Map<number, NameEntry>(names.map((n) => [n.id, n]))
+
 function seededShuffle<T>(input: T[], seed: number): T[] {
   const arr = [...input]
   let s = seed || 1
@@ -52,7 +54,7 @@ export function LearnClient({ embedded = false, locale }: { embedded?: boolean; 
 
   const repeatQueue: NameEntry[] = useMemo(() => {
     return learnState.repeatIds
-      .map((id) => names.find((n) => n.id === id))
+      .map((id) => namesMap.get(id))
       .filter((n): n is NameEntry => Boolean(n) && !progress.learnedIds.includes(n!.id))
   }, [learnState.repeatIds, progress.learnedIds])
 
