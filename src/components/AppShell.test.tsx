@@ -56,17 +56,19 @@ afterEach(() => {
 })
 
 describe('AppShell', () => {
-  it('renders the language switcher only once', () => {
+  it('renders the language switcher only once', async () => {
     render(
       <AppShell routeLanguage="de">
         <div>Inhalt</div>
       </AppShell>,
     )
 
-    expect(screen.getAllByRole('combobox', { name: 'Sprache' })).toHaveLength(1)
+    await waitFor(() => {
+      expect(screen.getAllByRole('combobox', { name: 'Sprache' })).toHaveLength(1)
+    })
   })
 
-  it('links to the localized settings route in German navigation', () => {
+  it('links to the localized settings route in German navigation', async () => {
     navigationMock.pathname = '/de/einstellungen'
 
     render(
@@ -75,7 +77,9 @@ describe('AppShell', () => {
       </AppShell>,
     )
 
-    expect(screen.getAllByRole('combobox', { name: 'Sprache' })).toHaveLength(1)
+    await waitFor(() => {
+      expect(screen.getAllByRole('combobox', { name: 'Sprache' })).toHaveLength(1)
+    })
     fireEvent.click(screen.getByRole('button', { name: 'Menü öffnen' }))
 
     expect(screen.getAllByRole('link', { name: 'Namen' })).toHaveLength(2)
@@ -93,7 +97,7 @@ describe('AppShell', () => {
     expect(screen.getByRole('link', { name: 'Impressum' })).toHaveAttribute('href', '/de/impressum')
   })
 
-  it('marks active and inactive navigation links with proper aria-current states', () => {
+  it('marks active and inactive navigation links with proper aria-current states', async () => {
     navigationMock.pathname = '/names'
 
     render(
@@ -101,6 +105,10 @@ describe('AppShell', () => {
         <div>Names</div>
       </AppShell>,
     )
+
+    await waitFor(() => {
+      expect(screen.getByRole('banner')).toBeInTheDocument()
+    })
 
     fireEvent.click(screen.getByRole('button', { name: 'Open menu' }))
 
@@ -113,7 +121,7 @@ describe('AppShell', () => {
     }
   })
 
-  it('keeps English content routes bound to the English navigation when the route is English', () => {
+  it('keeps English content routes bound to the English navigation when the route is English', async () => {
     navigationMock.pathname = '/names'
 
     render(
@@ -122,7 +130,9 @@ describe('AppShell', () => {
       </AppShell>,
     )
 
-    expect(screen.getAllByRole('combobox', { name: 'Language' })).toHaveLength(1)
+    await waitFor(() => {
+      expect(screen.getAllByRole('combobox', { name: 'Language' })).toHaveLength(1)
+    })
     fireEvent.click(screen.getByRole('button', { name: 'Open menu' }))
 
     expect(screen.getAllByRole('link', { name: 'Names' })).toHaveLength(2)
@@ -139,14 +149,16 @@ describe('AppShell', () => {
     expect(screen.getByRole('contentinfo')).not.toHaveClass('hidden')
   })
 
-  it('updates static footer links when routeLanguage changes', () => {
+  it('updates static footer links when routeLanguage changes', async () => {
     const { rerender } = render(
       <AppShell routeLanguage="en">
         <div>Content</div>
       </AppShell>,
     )
 
-    expect(screen.getByRole('link', { name: 'About' })).toHaveAttribute('href', '/about')
+    await waitFor(() => {
+      expect(screen.getByRole('link', { name: 'About' })).toHaveAttribute('href', '/about')
+    })
 
     rerender(
       <AppShell routeLanguage="de">
@@ -154,7 +166,9 @@ describe('AppShell', () => {
       </AppShell>,
     )
 
-    expect(screen.getByRole('link', { name: 'Über uns' })).toHaveAttribute('href', '/de/uber-uns')
+    await waitFor(() => {
+      expect(screen.getByRole('link', { name: 'Über uns' })).toHaveAttribute('href', '/de/uber-uns')
+    })
   })
 
   it('keeps the burger in the mobile header and preserves header scroll behavior', async () => {
@@ -277,6 +291,6 @@ describe('AppShell', () => {
     await waitFor(() => {
       expect(writeText).toHaveBeenCalledWith(window.location.href)
     })
-    expect(screen.getByText('Kopiert')).toBeInTheDocument()
+    expect(await screen.findByText('Kopiert')).toBeInTheDocument()
   })
 })
