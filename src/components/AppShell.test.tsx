@@ -65,7 +65,9 @@ describe('AppShell', () => {
       )
     })
 
-    expect(screen.getAllByRole('combobox', { name: 'Sprache' })).toHaveLength(1)
+    await waitFor(() => {
+      expect(screen.getAllByRole('combobox', { name: 'Sprache' })).toHaveLength(1)
+    })
   })
 
   it('links to the localized settings route in German navigation', async () => {
@@ -79,7 +81,9 @@ describe('AppShell', () => {
       )
     })
 
-    expect(screen.getAllByRole('combobox', { name: 'Sprache' })).toHaveLength(1)
+    await waitFor(() => {
+      expect(screen.getAllByRole('combobox', { name: 'Sprache' })).toHaveLength(1)
+    })
     fireEvent.click(screen.getByRole('button', { name: 'Menü öffnen' }))
 
     expect(screen.getAllByRole('link', { name: 'Namen' })).toHaveLength(2)
@@ -108,6 +112,10 @@ describe('AppShell', () => {
       )
     })
 
+    await waitFor(() => {
+      expect(screen.getByRole('banner')).toBeInTheDocument()
+    })
+
     fireEvent.click(screen.getByRole('button', { name: 'Open menu' }))
 
     for (const link of screen.getAllByRole('link', { name: 'Names' })) {
@@ -130,7 +138,9 @@ describe('AppShell', () => {
       )
     })
 
-    expect(screen.getAllByRole('combobox', { name: 'Language' })).toHaveLength(1)
+    await waitFor(() => {
+      expect(screen.getAllByRole('combobox', { name: 'Language' })).toHaveLength(1)
+    })
     fireEvent.click(screen.getByRole('button', { name: 'Open menu' }))
 
     expect(screen.getAllByRole('link', { name: 'Names' })).toHaveLength(2)
@@ -154,7 +164,9 @@ describe('AppShell', () => {
       </AppShell>,
     )
 
-    expect(screen.getByRole('link', { name: 'About' })).toHaveAttribute('href', '/about')
+    await waitFor(() => {
+      expect(screen.getByRole('link', { name: 'About' })).toHaveAttribute('href', '/about')
+    })
 
     await act(async () => {
       rerender(
@@ -164,7 +176,9 @@ describe('AppShell', () => {
       )
     })
 
-    expect(screen.getByRole('link', { name: 'Über uns' })).toHaveAttribute('href', '/de/uber-uns')
+    await waitFor(() => {
+      expect(screen.getByRole('link', { name: 'Über uns' })).toHaveAttribute('href', '/de/uber-uns')
+    })
   })
 
   it('keeps the burger in the mobile header and preserves header scroll behavior', async () => {
