@@ -268,11 +268,9 @@ const content: Record<Language, PolicyContent> = {
         heading: '4. Push bildirimleri',
         paragraphs: [
           'Push hatırlatmalarını açıkça etkinleştirirseniz, tarayıcı push uç noktasını, teknik push anahtarlarını, seçilen hatırlatma aralığını, saat dilimini, kullanıcı aracısı bilgisini, gönderim zamanlarını, hata durumunu ve teknik teslimat günlüklerini Supabase içinde saklarız.',
-          // TODO: native speaker review – legal language around religious data and explicit consent
           'Bu veriler yalnızca talep ettiğiniz öğrenme hatırlatmalarını göndermek, başarısız abonelikleri tespit etmek ve geçersiz push aboneliklerini devre dışı bırakmak için kullanılır. Bu web sitesi dini öğrenme içerikleri sunduğundan, etkinleştirilen push hatırlatmaları dini bir ilgi olduğuna dair çıkarımlar yapılmasına olanak tanıyabilir. Push hatırlatmalarını bilinçli olarak etkinleştirerek, dini inançlarınıza ilişkin çıkarımlar içerebilecek verilerin işlenmesine açıkça onay vermiş olursunuz. Push hatırlatmaları tamamen gönüllülük esasına dayanır, yalnızca açık etkinleştirme sonrasında kurulur, profil oluşturma amacıyla kullanılmaz ve bir kullanıcı hesabıyla ilişkilendirilmez.',
           'Tarayıcınıza ve işletim sisteminize bağlı olarak push bildirimlerinin teknik teslimi Apple, Google, Mozilla veya Microsoft gibi ilgili tarayıcı ya da işletim sistemi sağlayıcılarının push hizmetleri üzerinden gerçekleştirilebilir.',
           'Push bildirimlerini istediğiniz zaman uygulama içinde veya tarayıcı ya da cihaz ayarlarınızdan devre dışı bırakabilirsiniz. Devre dışı bırakıldığında, teknik olarak mümkün olduğu ölçüde push aboneliği sunucu tarafında devre dışı bırakılır.',
-          // TODO: native speaker review – Art. 9 GDPR reference
           'Hukuki dayanak: Push hatırlatmalarının etkinleştirilmesine ilişkin onay için GDPR Madde 6(1)(a). Din bilgisi veya dini ilgi GDPR Madde 9 kapsamında özel kategori kişisel veri oluşturduğundan, ek olarak GDPR Madde 9(2)(a) (açık onay) da uygulanır. Push özelliğini etkinleştirerek bu onayı vermiş olursunuz. Güvenli teknik işletim, hata yönetimi ve geçersiz aboneliklerin devre dışı bırakılması için GDPR Madde 6(1)(f) uygulanır.',
         ],
       },
@@ -281,7 +279,6 @@ const content: Record<Language, PolicyContent> = {
         paragraphs: [
           'İsteğe bağlı push aboneliklerini saklamak için Supabase Inc. tarafından sunulan Supabase hizmetini kullanıyoruz. Supabase teknik veritabanı altyapısını sağlar.',
           'Yalnızca push hatırlatmaları için gerekli teknik veriler saklanır; özellikle push uç noktası, push anahtarları, hatırlatma aralığı, saat dilimi, teknik teslimat bilgileri ve hata durumu.',
-          // TODO: native speaker review – region variable and third-country transfer wording
           `Yasal olarak gerekli olduğu durumlarda Supabase ile bir veri işleme sözleşmesi yapılır. Yapılandırılan Supabase proje bölgesi: ${supabaseRegion}. Verilerin üçüncü ülkelere aktarılması halinde, bu aktarım geçerli veri koruma güvencelerine uygun şekilde yapılır.`,
           'Saklanan push verileri, push bildirimlerini devre dışı bıraktığınızda, abonelik geçersiz hale geldiğinde veya belirtilen amaç için saklama artık gerekli olmadığında silinir ya da devre dışı bırakılır.',
         ],
@@ -301,13 +298,9 @@ const content: Record<Language, PolicyContent> = {
         heading: '7. İletişim formu (Web3Forms)',
         paragraphs: [
           'İletişim formunu kullandığınızda adınız, e-posta adresiniz ve mesajınız Web3Forms hizmeti (https://web3forms.com) aracılığıyla e-posta adresimize iletilir.',
-          // TODO: native speaker review – third-country transfer, DPF status, FISA 702 risk notice
           "Web3Forms, form gönderimlerini kendi açıklamalarına göre 30 gün (Ücretsiz plan) veya 1 yıl (Pro plan) süreyle saklar; bu süreden sonra otomatik olarak silinirler. Web3Forms, sunucularının ABD'nin US-East bölgesinde bulunduğunu belirtmektedir. Avrupa Komisyonu ABD için bir yeterlilik kararı almamış olup Web3Forms, AB-ABD Veri Gizliliği Çerçevesi kapsamında sertifikalı değildir; bu nedenle söz konusu aktarım, eşdeğer bir koruma düzeyi bulunmayan üçüncü ülkeye yapılan bir aktarım niteliği taşımaktadır. Risk uyarısı: ABD makamları belirli koşullar altında (örn. FISA 702 kapsamında) ABD'li sağlayıcılarda depolanan verilere erişebilir.",
-          // TODO: native speaker review – sub-processors and DPA status
           'Web3Forms, kullanılan planda etkinleştirilmişse spam önleme amacıyla CleanTalk ve/veya Akismet gibi alt işlemciler kullanabilir. Bu durumda IP adresi ve e-posta adresi bu hizmetlere iletilebilir. Web3Forms ile şu ana kadar bir Veri İşleme Sözleşmesi (DPA) imzalanmamıştır.',
-          // TODO: native speaker review – Art. 49(1)(a) GDPR consent for third-country transfer
           "Hukuki dayanak: GDPR Madde 6(1)(a) ile birlikte GDPR Madde 49(1)(a) (yeterlilik kararı olmaksızın üçüncü ülkeye aktarım için açık onay). Formu göndererek, verilerinizin ABD'ye aktarılmasına ve bununla ilgili risklere açıkça onay vermiş olursunuz.",
-          // TODO: native speaker review – email retention period
           'İletişim formuna girilen veriler yalnızca talebinizi yanıtlamak için kullanılır. Kendi e-posta kutumuzda, talepler işlemin tamamlanmasından itibaren en fazla 90 gün içinde silinir. E-posta sağlayıcısı olarak GMX / 1&1 Mail & Media GmbH kullanıyoruz.',
           'Web3Forms gizlilik politikası: https://web3forms.com/privacy',
         ],
@@ -325,7 +318,6 @@ const content: Record<Language, PolicyContent> = {
       {
         heading: '9. Sunucu günlükleri',
         paragraphs: [
-          // TODO: native speaker review – log retention period
           'Barındırma sağlayıcısı (Vercel Inc.) IP adresi, zaman damgası, istenen URL ve HTTP durum kodu gibi teknik erişim verilerini kayıt altına alabilir. Bu günlükler genellikle en fazla 30 gün süreyle saklanır. Bu veriler web sitesini sunmak, güvenliğini sağlamak ve hataları analiz etmek için işlenir; pazarlama veya profil oluşturma amacıyla kullanılmaz.',
           'Hukuki dayanak: GDPR Madde 6(1)(f) – teknik işletimin, güvenliğin ve hata analizinin sağlanmasına yönelik meşru menfaat.',
         ],
@@ -336,7 +328,6 @@ const content: Record<Language, PolicyContent> = {
           'GDPR kapsamında veri sorumlusuna karşı aşağıdaki haklara sahipsiniz:',
           '• Erişim hakkı (Madde 15)\n• Düzeltme hakkı (Madde 16)\n• Silme hakkı (Madde 17)\n• İşlemeyi kısıtlama hakkı (Madde 18)\n• İşlemeye itiraz hakkı (Madde 21)\n• Veri taşınabilirliği hakkı (Madde 20)',
           { before: 'Haklarınızı kullanmak için lütfen e-posta ile iletişime geçin: ', isEmail: true, after: '' },
-          // TODO: native speaker review – supervisory authority names and translations
           "Başka bir idari veya yargısal başvuru yoluna halel gelmeksizin, verilerinizin GDPR'a aykırı olarak işlendiğine inanıyorsanız bir veri koruma denetim makamına şikayette bulunma hakkına sahipsiniz. Yetkili denetim makamı ikamet ettiğiniz ülkeye göre değişir; bunlar arasında özellikle şunlar yer almaktadır:\n• Türkiye: Kişisel Verileri Koruma Kurumu (KVKK), kvkk.gov.tr\n• İsviçre: Federal Veri Koruma ve Bilgi Komiseri (EDÖB), edoeb.admin.ch\n• Almanya: Yetkili eyalet veri koruma makamı (genel bakış: bfdi.bund.de)\n• Avusturya: Veri Koruma Makamı (DSB), dsb.gv.at",
         ],
       },
