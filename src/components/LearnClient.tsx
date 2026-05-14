@@ -53,9 +53,10 @@ export function LearnClient({ embedded = false, locale }: { embedded?: boolean; 
   }, [progress.learnedIds, learnState.shuffle, shuffleSeed])
 
   const repeatQueue: NameEntry[] = useMemo(() => {
+    const learnedSet = new Set(progress.learnedIds)
     return learnState.repeatIds
       .map((id) => namesMap.get(id))
-      .filter((n): n is NameEntry => Boolean(n) && !progress.learnedIds.includes(n!.id))
+      .filter((n): n is NameEntry => Boolean(n) && !learnedSet.has(n!.id))
   }, [learnState.repeatIds, progress.learnedIds])
 
   const queue: NameEntry[] = useMemo(() => {
