@@ -1,7 +1,6 @@
 import type { PushSubscription } from 'web-push'
 import { calculateFollowingNextSendAt, isValidReminderInterval, type ReminderInterval } from '@/lib/push/reminders'
 import { assertPushServerConfigured, sendPushNotification } from '@/lib/push/server'
-import { timingSafeEqual } from '@/lib/security'
 import { getSupabaseAdminClient } from '@/lib/supabase/server'
 
 export const runtime = 'nodejs'
@@ -35,7 +34,7 @@ export async function GET(request: Request) {
   const cronSecret = process.env.CRON_SECRET
   const authorization = request.headers.get('authorization')
 
-  if (!cronSecret || !authorization || !timingSafeEqual(authorization, `Bearer ${cronSecret}`)) {
+  if (!cronSecret || authorization !== `Bearer ${cronSecret}`) {
     return Response.json({ success: false, error: 'Unauthorized.' }, { status: 401 })
   }
 

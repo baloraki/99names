@@ -1,6 +1,5 @@
 "use client"
 
-import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { useEffect, useMemo, useState } from 'react'
@@ -175,7 +174,6 @@ export function NameIndexContent({ locale }: { locale: Language }) {
               placeholder={locale === 'de' ? 'Namen suchen …' : locale === 'tr' ? 'İsim ara…' : 'Search names…'}
               className="w-full bg-transparent text-base text-primary outline-none placeholder:text-muted"
               aria-label={locale === 'de' ? 'Namen durchsuchen' : locale === 'tr' ? 'İsimlerde ara' : 'Search names'}
-              autoFocus
             />
             {searchTerm.trim().length > 0 ? (
               <button
@@ -195,48 +193,30 @@ export function NameIndexContent({ locale }: { locale: Language }) {
 
         {filteredNames.length === 0 ? (
           <div className="rounded-lg border border-white/10 bg-surface p-6 text-sm text-muted">
-            <p className="mb-1 text-base font-medium text-primary">
-              {locale === 'de' ? 'Keine Namen gefunden für' : locale === 'tr' ? 'İsim bulunamadı:' : 'No names found for'} &quot;{debouncedSearchTerm}&quot;.
-            </p>
-            <p>
-              {locale === 'de'
-                ? 'Versuche nach einer anderen Bedeutung, Transliteration oder arabischen Schreibweise zu suchen.'
-                : locale === 'tr'
-                  ? 'Farklı bir anlam, transliterasyon veya Arapça yazılış aramayı deneyin.'
-                  : 'Try searching for a different meaning, transliteration, or Arabic spelling.'}
-            </p>
+            {locale === 'de' ? 'Keine Namen gefunden für' : locale === 'tr' ? 'İsim bulunamadı:' : 'No names found for'} &quot;{debouncedSearchTerm}&quot;.
           </div>
         ) : null}
       </section>
-      <motion.ol layout className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <AnimatePresence>
-          {filteredNames.map((name) => (
-            <motion.li
-              key={name.id}
-              layout
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95, transition: { duration: 0.2 } }}
-              transition={{ duration: 0.3 }}
+      <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {filteredNames.map((name) => (
+          <li key={name.id}>
+            <Link
+              href={getLocalizedNamePath(locale, name.slug)}
+              className="group block h-full rounded-lg border border-white/10 bg-surface p-4 shadow-[0_18px_60px_rgba(0,0,0,0.22)] transition hover:border-gold/50 hover:bg-surface-soft focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-background"
             >
-              <Link
-                href={getLocalizedNamePath(locale, name.slug)}
-                className="group block h-full rounded-lg border border-white/10 bg-surface p-4 shadow-[0_18px_60px_rgba(0,0,0,0.22)] transition hover:border-gold/50 hover:bg-surface-soft focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-background"
-              >
-                <div className="flex items-center justify-between gap-3">
-                  <span className="text-sm text-gold-muted">#{name.id.toString().padStart(2, '0')}</span>
-                  <span className="text-xs font-semibold text-gold">{text.open}</span>
-                </div>
-                <span className="mt-4 block text-right font-arabic text-4xl leading-tight text-primary" lang="ar" dir="rtl">
-                  {name.arabic}
-                </span>
-                <span className="mt-4 block text-xl font-semibold text-primary">{name.transliteration[locale]}</span>
-                <span className="mt-1 block text-sm leading-6 text-muted">{name.meanings[locale]}</span>
-              </Link>
-            </motion.li>
-          ))}
-        </AnimatePresence>
-      </motion.ol>
+              <div className="flex items-center justify-between gap-3">
+                <span className="text-sm text-gold-muted">#{name.id.toString().padStart(2, '0')}</span>
+                <span className="text-xs font-semibold text-gold">{text.open}</span>
+              </div>
+              <span className="mt-4 block text-right font-arabic text-4xl leading-tight text-primary" lang="ar" dir="rtl">
+                {name.arabic}
+              </span>
+              <span className="mt-4 block text-xl font-semibold text-primary">{name.transliteration[locale]}</span>
+              <span className="mt-1 block text-sm leading-6 text-muted">{name.meanings[locale]}</span>
+            </Link>
+          </li>
+        ))}
+      </ol>
     </div>
   )
 }
