@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, waitFor } from '@testing-library/react'
+import { act, fireEvent, render, screen, waitFor } from '@testing-library/react'
 import type { AnchorHTMLAttributes, ImgHTMLAttributes } from 'react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { AppShell } from './AppShell'
@@ -56,24 +56,28 @@ afterEach(() => {
 })
 
 describe('AppShell', () => {
-  it('renders the language switcher only once', () => {
-    render(
-      <AppShell routeLanguage="de">
-        <div>Inhalt</div>
-      </AppShell>,
-    )
+  it('renders the language switcher only once', async () => {
+    await act(async () => {
+      render(
+        <AppShell routeLanguage="de">
+          <div>Inhalt</div>
+        </AppShell>,
+      )
+    })
 
     expect(screen.getAllByRole('combobox', { name: 'Sprache' })).toHaveLength(1)
   })
 
-  it('links to the localized settings route in German navigation', () => {
+  it('links to the localized settings route in German navigation', async () => {
     navigationMock.pathname = '/de/einstellungen'
 
-    render(
-      <AppShell routeLanguage="de">
-        <div>Einstellungen</div>
-      </AppShell>,
-    )
+    await act(async () => {
+      render(
+        <AppShell routeLanguage="de">
+          <div>Einstellungen</div>
+        </AppShell>,
+      )
+    })
 
     expect(screen.getAllByRole('combobox', { name: 'Sprache' })).toHaveLength(1)
     fireEvent.click(screen.getByRole('button', { name: 'Menü öffnen' }))
@@ -93,14 +97,16 @@ describe('AppShell', () => {
     expect(screen.getByRole('link', { name: 'Impressum' })).toHaveAttribute('href', '/de/impressum')
   })
 
-  it('marks active and inactive navigation links with proper aria-current states', () => {
+  it('marks active and inactive navigation links with proper aria-current states', async () => {
     navigationMock.pathname = '/names'
 
-    render(
-      <AppShell routeLanguage="en">
-        <div>Names</div>
-      </AppShell>,
-    )
+    await act(async () => {
+      render(
+        <AppShell routeLanguage="en">
+          <div>Names</div>
+        </AppShell>,
+      )
+    })
 
     fireEvent.click(screen.getByRole('button', { name: 'Open menu' }))
 
@@ -113,14 +119,16 @@ describe('AppShell', () => {
     }
   })
 
-  it('keeps English content routes bound to the English navigation when the route is English', () => {
+  it('keeps English content routes bound to the English navigation when the route is English', async () => {
     navigationMock.pathname = '/names'
 
-    render(
-      <AppShell routeLanguage="en">
-        <div>Names</div>
-      </AppShell>,
-    )
+    await act(async () => {
+      render(
+        <AppShell routeLanguage="en">
+          <div>Names</div>
+        </AppShell>,
+      )
+    })
 
     expect(screen.getAllByRole('combobox', { name: 'Language' })).toHaveLength(1)
     fireEvent.click(screen.getByRole('button', { name: 'Open menu' }))
@@ -139,7 +147,7 @@ describe('AppShell', () => {
     expect(screen.getByRole('contentinfo')).not.toHaveClass('hidden')
   })
 
-  it('updates static footer links when routeLanguage changes', () => {
+  it('updates static footer links when routeLanguage changes', async () => {
     const { rerender } = render(
       <AppShell routeLanguage="en">
         <div>Content</div>
@@ -148,11 +156,13 @@ describe('AppShell', () => {
 
     expect(screen.getByRole('link', { name: 'About' })).toHaveAttribute('href', '/about')
 
-    rerender(
-      <AppShell routeLanguage="de">
-        <div>Inhalt</div>
-      </AppShell>,
-    )
+    await act(async () => {
+      rerender(
+        <AppShell routeLanguage="de">
+          <div>Inhalt</div>
+        </AppShell>,
+      )
+    })
 
     expect(screen.getByRole('link', { name: 'Über uns' })).toHaveAttribute('href', '/de/uber-uns')
   })
@@ -175,11 +185,13 @@ describe('AppShell', () => {
       value: 0,
     })
 
-    render(
-      <AppShell routeLanguage="en">
-        <div>Content</div>
-      </AppShell>,
-    )
+    await act(async () => {
+      render(
+        <AppShell routeLanguage="en">
+          <div>Content</div>
+        </AppShell>,
+      )
+    })
 
     const header = screen.getByRole('banner')
     const menuButton = screen.getByRole('button', { name: 'Open menu' })
@@ -231,11 +243,13 @@ describe('AppShell', () => {
       value: 2000,
     })
 
-    render(
-      <AppShell routeLanguage="en">
-        <div>Content</div>
-      </AppShell>,
-    )
+    await act(async () => {
+      render(
+        <AppShell routeLanguage="en">
+          <div>Content</div>
+        </AppShell>,
+      )
+    })
 
     const header = screen.getByRole('banner')
 
@@ -266,17 +280,19 @@ describe('AppShell', () => {
       value: { writeText },
     })
 
-    render(
-      <AppShell routeLanguage="de">
-        <div>Inhalt</div>
-      </AppShell>,
-    )
+    await act(async () => {
+      render(
+        <AppShell routeLanguage="de">
+          <div>Inhalt</div>
+        </AppShell>,
+      )
+    })
 
     fireEvent.click(screen.getAllByRole('button', { name: 'Teilen' })[0])
 
     await waitFor(() => {
       expect(writeText).toHaveBeenCalledWith(window.location.href)
     })
-    expect(screen.getByText('Kopiert')).toBeInTheDocument()
+    expect(await screen.findByText('Kopiert')).toBeInTheDocument()
   })
 })
