@@ -56,7 +56,13 @@ export function NamesExplorer() {
             ['favorites', dict.names.filterFavorites],
             ['open', dict.names.filterOpen],
           ] as const).map(([value, label]) => (
-            <button key={value} className={filter === value ? 'chip chip-active' : 'chip'} onClick={() => setFilter(value)}>
+            <button
+              key={value}
+              type="button"
+              aria-pressed={filter === value}
+              className={filter === value ? 'chip chip-active' : 'chip'}
+              onClick={() => setFilter(value)}
+            >
               {label}
             </button>
           ))}
