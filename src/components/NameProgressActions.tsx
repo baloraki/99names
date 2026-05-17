@@ -20,6 +20,8 @@ export function NameProgressActions({ name, language }: { name: NameEntry; langu
   return (
     <div className="flex flex-wrap items-center gap-3">
       <button
+        type="button"
+        aria-pressed={learned}
         className={learned ? 'btn-secondary' : 'btn-primary'}
         onClick={() => learned ? actions.unmarkLearned(name.id) : actions.markLearned(name.id, name.slug)}
       >

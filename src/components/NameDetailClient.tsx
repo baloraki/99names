@@ -29,7 +29,12 @@ export function NameDetailClient({ name }: { name: NameEntry }) {
         <p className="mt-2 text-muted">{dict.common.pronunciation}: {name.pronunciation[language]}</p>
         <p className="mt-4 text-xl text-gold">{name.meanings[language]}</p>
         <div className="mt-6 flex flex-wrap gap-3">
-          <button className={learned ? 'btn-secondary' : 'btn-primary'} onClick={() => learned ? actions.unmarkLearned(name.id) : actions.markLearned(name.id, name.slug)}>
+          <button
+            type="button"
+            aria-pressed={learned}
+            className={learned ? 'btn-secondary' : 'btn-primary'}
+            onClick={() => learned ? actions.unmarkLearned(name.id) : actions.markLearned(name.id, name.slug)}
+          >
             {learned ? dict.detail.markOpen : dict.detail.markLearned}
           </button>
           <StarToggle

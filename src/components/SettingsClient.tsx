@@ -60,7 +60,7 @@ export function SettingsClient({ locale }: { locale: Language }) {
         <p className="mt-2 text-sm leading-6 text-muted">
           {dict.settings.localDataBody(progress.learnedIds.length, progress.favoriteIds.length, progress.lastViewedSlug ?? dict.common.none)}
         </p>
-        <button className="btn-danger mt-5" onClick={() => window.confirm(dict.settings.resetConfirm) && actions.resetProgress()}>
+        <button type="button" className="btn-danger mt-5" onClick={() => window.confirm(dict.settings.resetConfirm) && actions.resetProgress()}>
           {dict.settings.resetProgress}
         </button>
       </section>
