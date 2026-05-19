@@ -468,21 +468,23 @@ function LanguageSwitcher({
   onChange: (language: Language) => void
   compact?: boolean
 }) {
+  const selectId = compact ? 'language-select-compact' : 'language-select'
   return (
-    <label className={compact ? 'flex items-center gap-2 text-sm text-muted' : 'block text-sm text-muted'}>
+    <div className={compact ? 'flex items-center gap-2 text-sm text-muted' : 'block text-sm text-muted'}>
+      <label htmlFor={selectId} className="sr-only">{label}</label>
       <select
+        id={selectId}
         className={compact ? 'language-select language-select-compact' : 'language-select w-full'}
         value={language}
         onChange={(event) => {
           const next = event.target.value
           if (isLanguage(next)) onChange(next)
         }}
-        aria-label={label}
       >
         {LANGUAGES.map((item) => (
           <option key={item.value} value={item.value}>{item.label}</option>
         ))}
       </select>
-    </label>
+    </div>
   )
 }

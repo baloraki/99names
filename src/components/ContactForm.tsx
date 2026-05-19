@@ -72,14 +72,14 @@ export function ContactForm() {
         onChange={(event) => setValues({ ...values, honeypot: event.target.value })}
         aria-hidden="true"
       />
-      <Field label={dict.contact.name} required error={translateError(errors.name, dict)}>
-        <input className="field" required aria-invalid={!!errors.name} value={values.name} maxLength={100} onChange={(event) => setValues({ ...values, name: event.target.value })} />
+      <Field id="contact-name" label={dict.contact.name} required error={translateError(errors.name, dict)}>
+        <input id="contact-name" className="field" required aria-invalid={!!errors.name} aria-describedby={errors.name ? 'contact-name-error' : undefined} value={values.name} maxLength={100} onChange={(event) => setValues({ ...values, name: event.target.value })} />
       </Field>
-      <Field label={dict.contact.email} required error={translateError(errors.email, dict)}>
-        <input className="field" required aria-invalid={!!errors.email} type="email" value={values.email} maxLength={200} onChange={(event) => setValues({ ...values, email: event.target.value })} />
+      <Field id="contact-email" label={dict.contact.email} required error={translateError(errors.email, dict)}>
+        <input id="contact-email" className="field" required aria-invalid={!!errors.email} aria-describedby={errors.email ? 'contact-email-error' : undefined} type="email" value={values.email} maxLength={200} onChange={(event) => setValues({ ...values, email: event.target.value })} />
       </Field>
-      <Field label={dict.contact.message} required error={translateError(errors.message, dict)}>
-        <textarea className="field min-h-40 resize-y" required aria-invalid={!!errors.message} value={values.message} maxLength={maxMessageLength + 1} onChange={(event) => setValues({ ...values, message: event.target.value })} />
+      <Field id="contact-message" label={dict.contact.message} required error={translateError(errors.message, dict)}>
+        <textarea id="contact-message" className="field min-h-40 resize-y" required aria-invalid={!!errors.message} aria-describedby={errors.message ? 'contact-message-error' : undefined} value={values.message} maxLength={maxMessageLength + 1} onChange={(event) => setValues({ ...values, message: event.target.value })} />
       </Field>
       {errors.honeypot && <p className="text-sm text-danger">{translateError(errors.honeypot, dict)}</p>}
       {status === 'missing-key' && <p className="text-sm text-danger">{dict.contact.noKey}</p>}
@@ -122,14 +122,14 @@ function translateError(code: string | undefined, dict: ReturnType<typeof getDic
   return dict.validation[code as keyof typeof dict.validation] ?? code
 }
 
-function Field({ label, error, required, children }: { label: string; error?: string; required?: boolean; children: ReactNode }) {
+function Field({ id, label, error, required, children }: { id: string; label: string; error?: string; required?: boolean; children: ReactNode }) {
   return (
-    <label className="block">
-      <span className="text-sm text-muted">
+    <div className="block">
+      <label htmlFor={id} className="text-sm text-muted">
         {label}{required && <span className="text-danger" aria-hidden="true"> *</span>}
-      </span>
-      <span className="mt-2 block">{children}</span>
-      {error && <span className="mt-1 block text-sm text-danger">{error}</span>}
-    </label>
+      </label>
+      <div className="mt-2 block">{children}</div>
+      {error && <span id={`${id}-error`} className="mt-1 block text-sm text-danger">{error}</span>}
+    </div>
   )
 }
