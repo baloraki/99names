@@ -3,6 +3,8 @@ import { calculateFollowingNextSendAt, isValidReminderInterval, type ReminderInt
 import { assertPushServerConfigured, sendPushNotification } from '@/lib/push/server'
 import { timingSafeEqual } from '@/lib/security'
 import { getSupabaseAdminClient } from '@/lib/supabase/server'
+import { isLanguage } from '@/lib/languagePreference'
+import type { Language } from '@/types/language'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -13,6 +15,7 @@ type PushSubscriptionRow = {
   auth: string
   reminder_interval: string
   timezone: string | null
+  locale: string | null
   failed_count: number | null
 }
 
@@ -25,10 +28,30 @@ type CronCounts = {
   expired: number
 }
 
-const reminderPayload = {
-  title: 'Zeit zum Lernen',
-  body: 'Wiederhole heute einen Namen Allahs.',
-  url: '/learn#learn-now',
+const learnUrls: Record<Language, string> = {
+  en: '/learn#learn-now',
+  de: '/de/lernen#learn-now',
+  tr: '/tr/ogren#learn-now',
+}
+
+const reminderTitles: Record<Language, string> = {
+  en: 'Time to learn',
+  de: 'Zeit zum Lernen',
+  tr: 'Öğrenme zamanı',
+}
+
+const reminderBodies: Record<Language, string> = {
+  en: 'Review one of the Names of Allah today.',
+  de: 'Wiederhole heute einen Namen Allahs.',
+  tr: 'Bugün Allah\'ın isimlerinden birini tekrarla.',
+}
+
+function getReminderPayload(locale: Language) {
+  return {
+    title: reminderTitles[locale],
+    body: reminderBodies[locale],
+    url: learnUrls[locale],
+  }
 }
 
 export async function GET(request: Request) {
@@ -89,7 +112,7 @@ export async function GET(request: Request) {
     .is('disabled_at', null)
     .lte('next_send_at', nowIso)
     .or(`locked_until.is.null,locked_until.lt.${nowIso}`)
-    .select('endpoint,p256dh,auth,reminder_interval,timezone,failed_count')
+    .select('endpoint,p256dh,auth,reminder_interval,timezone,locale,failed_count')
 
   if (lockError) {
     console.error('Push cron lock failed:', lockError)
@@ -113,12 +136,14 @@ export async function GET(request: Request) {
 async function sendReminderForRow(row: PushSubscriptionRow, counts: CronCounts, now: Date): Promise<void> {
   const supabase = getSupabaseAdminClient()
   const interval = getReminderInterval(row.reminder_interval)
+  const locale: Language = isLanguage(row.locale) ? row.locale : 'en'
+  const payload = getReminderPayload(locale)
 
   if (!interval) {
     const lastError = 'Invalid reminder interval stored for subscription.'
     const failedCount = (row.failed_count ?? 0) + 1
     await markFailed(row, failedCount, lastError)
-    await insertDeliveryLog(row.endpoint, 'failed', lastError)
+    await insertDeliveryLog(row.endpoint, 'failed', lastError, payload)
     counts.failed += 1
     return
   }
@@ -132,7 +157,7 @@ async function sendReminderForRow(row: PushSubscriptionRow, counts: CronCounts, 
   }
 
   try {
-    await sendPushNotification(subscription, reminderPayload)
+    await sendPushNotification(subscription, payload)
 
     const updateTime = new Date()
     const { error } = await supabase
@@ -149,7 +174,7 @@ async function sendReminderForRow(row: PushSubscriptionRow, counts: CronCounts, 
 
     if (error) throw error
 
-    await insertDeliveryLog(row.endpoint, 'sent', null)
+    await insertDeliveryLog(row.endpoint, 'sent', null, payload)
     counts.sent += 1
   } catch (error) {
     const statusCode = getPushStatusCode(error)
@@ -157,14 +182,14 @@ async function sendReminderForRow(row: PushSubscriptionRow, counts: CronCounts, 
 
     if (statusCode === 404 || statusCode === 410) {
       await markExpired(row, lastError)
-      await insertDeliveryLog(row.endpoint, 'expired', lastError)
+      await insertDeliveryLog(row.endpoint, 'expired', lastError, payload)
       counts.expired += 1
       return
     }
 
     const failedCount = (row.failed_count ?? 0) + 1
     await markFailed(row, failedCount, lastError)
-    await insertDeliveryLog(row.endpoint, 'failed', lastError)
+    await insertDeliveryLog(row.endpoint, 'failed', lastError, payload)
     counts.failed += 1
   }
 }
@@ -216,14 +241,14 @@ async function markFailed(row: PushSubscriptionRow, failedCount: number, lastErr
   if (error) console.error('Could not mark push subscription failed:', error)
 }
 
-async function insertDeliveryLog(endpoint: string, status: DeliveryStatus, errorMessage: string | null): Promise<void> {
+async function insertDeliveryLog(endpoint: string, status: DeliveryStatus, errorMessage: string | null, payload: ReturnType<typeof getReminderPayload>): Promise<void> {
   const { error } = await getSupabaseAdminClient()
     .from('push_delivery_logs')
     .insert({
       endpoint,
       status,
       error_message: errorMessage,
-      payload: reminderPayload,
+      payload,
       created_at: new Date().toISOString(),
     })
 

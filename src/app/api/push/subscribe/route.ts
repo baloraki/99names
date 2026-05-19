@@ -4,6 +4,8 @@ import {
   isValidReminderInterval,
   type ReminderInterval,
 } from '@/lib/push/reminders'
+import { isLanguage } from '@/lib/languagePreference'
+import type { Language } from '@/types/language'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -20,6 +22,7 @@ type SubscribeBody = {
   subscription?: PushSubscriptionInput
   reminderInterval?: unknown
   timezone?: unknown
+  locale?: unknown
 }
 
 export async function POST(request: Request) {
@@ -38,6 +41,7 @@ export async function POST(request: Request) {
 
   const now = new Date()
   const timezone = normalizeTimezone(body.timezone)
+  const locale = normalizeLocale(body.locale)
   const nextSendAt = calculateInitialNextSendAt(validation.reminderInterval, timezone, now)
 
   try {
@@ -50,6 +54,7 @@ export async function POST(request: Request) {
         auth: validation.subscription.keys.auth,
         reminder_interval: validation.reminderInterval,
         timezone,
+        locale,
         next_send_at: nextSendAt.toISOString(),
         disabled_at: null,
         failed_count: 0,
@@ -123,4 +128,9 @@ function normalizeTimezone(value: unknown): string {
   if (typeof value !== 'string') return 'UTC'
   const timezone = value.trim()
   return timezone.length > 0 && timezone.length <= 100 ? timezone : 'UTC'
+}
+
+function normalizeLocale(value: unknown): Language {
+  if (typeof value === 'string' && isLanguage(value)) return value
+  return 'en'
 }

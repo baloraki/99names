@@ -14,6 +14,7 @@ import {
   unsubscribeBrowserFromPush,
 } from '@/lib/push/client'
 import type { ReminderInterval } from '@/lib/push/reminders'
+import type { Language } from '@/types/language'
 
 type SupportState = 'checking' | 'supported' | 'unsupported'
 
@@ -27,10 +28,12 @@ export function PushReminderSettings({
   title,
   iosPushUnavailable,
   iosPwaNote,
+  locale,
 }: {
   title: string
   iosPushUnavailable: string
   iosPwaNote: string
+  locale: Language
 }) {
   const [supportState, setSupportState] = useState<SupportState>('checking')
   const [permission, setPermission] = useState<NotificationPermission>('default')
@@ -184,6 +187,7 @@ export function PushReminderSettings({
         subscription: subscription.toJSON(),
         reminderInterval,
         timezone: getBrowserTimeZone(),
+        locale,
       }),
     })
 

@@ -54,7 +54,7 @@ export function SettingsClient({ locale }: { locale: Language }) {
           {THEMES.map((item) => <option key={item} value={item}>{dict.settings.themeOptions[item]}</option>)}
         </select>
       </section>
-      <PushReminderSettings title={dict.settings.pushReminderTitle} iosPushUnavailable={dict.settings.iosPushUnavailable} iosPwaNote={dict.settings.iosPwaNote} />
+      <PushReminderSettings title={dict.settings.pushReminderTitle} iosPushUnavailable={dict.settings.iosPushUnavailable} iosPwaNote={dict.settings.iosPwaNote} locale={locale} />
       <section className="rounded-lg border border-white/10 bg-surface p-5">
         <h2 className="text-xl font-semibold">{dict.settings.localData}</h2>
         <p className="mt-2 text-sm leading-6 text-muted">
