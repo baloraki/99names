@@ -72,14 +72,14 @@ export function ContactForm() {
         onChange={(event) => setValues({ ...values, honeypot: event.target.value })}
         aria-hidden="true"
       />
-      <Field label={dict.contact.name} required error={translateError(errors.name, dict)} htmlFor="contact-name">
-        <input id="contact-name" className="field" required aria-invalid={!!errors.name} value={values.name} maxLength={100} onChange={(event) => setValues({ ...values, name: event.target.value })} />
+      <Field label={dict.contact.name} required error={translateError(errors.name, dict)} htmlFor="contact-name" errorId="contact-name-error">
+        <input id="contact-name" className="field" required aria-invalid={!!errors.name} aria-describedby={errors.name ? "contact-name-error" : undefined} value={values.name} maxLength={100} onChange={(event) => setValues({ ...values, name: event.target.value })} />
       </Field>
-      <Field label={dict.contact.email} required error={translateError(errors.email, dict)} htmlFor="contact-email">
-        <input id="contact-email" className="field" required aria-invalid={!!errors.email} type="email" value={values.email} maxLength={200} onChange={(event) => setValues({ ...values, email: event.target.value })} />
+      <Field label={dict.contact.email} required error={translateError(errors.email, dict)} htmlFor="contact-email" errorId="contact-email-error">
+        <input id="contact-email" className="field" required aria-invalid={!!errors.email} aria-describedby={errors.email ? "contact-email-error" : undefined} type="email" value={values.email} maxLength={200} onChange={(event) => setValues({ ...values, email: event.target.value })} />
       </Field>
-      <Field label={dict.contact.message} required error={translateError(errors.message, dict)} htmlFor="contact-message">
-        <textarea id="contact-message" className="field min-h-40 resize-y" required aria-invalid={!!errors.message} value={values.message} maxLength={maxMessageLength + 1} onChange={(event) => setValues({ ...values, message: event.target.value })} />
+      <Field label={dict.contact.message} required error={translateError(errors.message, dict)} htmlFor="contact-message" errorId="contact-message-error">
+        <textarea id="contact-message" className="field min-h-40 resize-y" required aria-invalid={!!errors.message} aria-describedby={errors.message ? "contact-message-error" : undefined} value={values.message} maxLength={maxMessageLength + 1} onChange={(event) => setValues({ ...values, message: event.target.value })} />
       </Field>
       {errors.honeypot && <p className="text-sm text-danger">{translateError(errors.honeypot, dict)}</p>}
       {status === 'missing-key' && <p className="text-sm text-danger">{dict.contact.noKey}</p>}
@@ -94,7 +94,7 @@ export function ContactForm() {
         {language === 'tr' ? ' bakabilirsiniz.' : '.'}
       </p>
 
-      <button className="btn-primary gap-2" disabled={status === 'loading'}>
+      <button type="submit" className="btn-primary gap-2" disabled={status === 'loading'}>
         {status === 'loading' ? (
           <>
             <Spinner />
@@ -122,14 +122,14 @@ function translateError(code: string | undefined, dict: ReturnType<typeof getDic
   return dict.validation[code as keyof typeof dict.validation] ?? code
 }
 
-function Field({ label, error, required, children, htmlFor }: { label: string; error?: string; required?: boolean; children: ReactNode; htmlFor?: string }) {
+function Field({ label, error, required, children, htmlFor, errorId }: { label: string; error?: string; required?: boolean; children: ReactNode; htmlFor?: string; errorId?: string }) {
   return (
     <label className="block" htmlFor={htmlFor}>
       <span className="text-sm text-muted">
         {label}{required && <span className="text-danger" aria-hidden="true"> *</span>}
       </span>
       <span className="mt-2 block">{children}</span>
-      {error && <span className="mt-1 block text-sm text-danger">{error}</span>}
+      {error && <span id={errorId} className="mt-1 block text-sm text-danger">{error}</span>}
     </label>
   )
 }
