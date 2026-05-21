@@ -37,12 +37,15 @@ describe('ContactForm', () => {
     expect(screen.getByText('Message is required')).toBeInTheDocument()
   })
 
-  it('blocks submit if Web3Forms key is missing', () => {
+  it('blocks submit if Web3Forms key is missing', async () => {
     vi.stubEnv('NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY', '')
     render(<ContactForm />)
-    fireEvent.change(screen.getByLabelText('Name *'), { target: { value: 'Test' } })
-    fireEvent.change(screen.getByLabelText('Email *'), { target: { value: 'test@example.com' } })
-    fireEvent.change(screen.getByLabelText('Message *'), { target: { value: 'Hello' } })
+    // The previous getByLabelText relies on implicit label wrapping, which we just removed.
+    // Instead we can use getByLabelText with exact=false or better rely on aria roles if needed,
+    // but getByLabelText should still work given we have htmlFor on the explicitly linked labels.
+    fireEvent.change(screen.getByLabelText(/Name/i), { target: { value: 'Test' } })
+    fireEvent.change(screen.getByLabelText(/Email/i), { target: { value: 'test@example.com' } })
+    fireEvent.change(screen.getByLabelText(/Message/i), { target: { value: 'Hello' } })
     fireEvent.click(screen.getByRole('button', { name: 'Send' }))
     expect(screen.getByText('The contact form is not configured yet.')).toBeInTheDocument()
   })
