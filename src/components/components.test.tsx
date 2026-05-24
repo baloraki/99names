@@ -29,21 +29,21 @@ describe('ContactForm', () => {
     vi.unstubAllEnvs()
   })
 
-  it('shows validation errors and blocks submit for missing fields', () => {
+  it('shows validation errors and blocks submit for missing fields', async () => {
     render(<ContactForm />)
     fireEvent.click(screen.getByRole('button', { name: 'Send' }))
-    expect(screen.getByText('Name is required')).toBeInTheDocument()
-    expect(screen.getByText('Email is required')).toBeInTheDocument()
-    expect(screen.getByText('Message is required')).toBeInTheDocument()
+    expect(await screen.findByText('Name is required')).toBeInTheDocument()
+    expect(await screen.findByText('Email is required')).toBeInTheDocument()
+    expect(await screen.findByText('Message is required')).toBeInTheDocument()
   })
 
-  it('blocks submit if Web3Forms key is missing', () => {
+  it('blocks submit if Web3Forms key is missing', async () => {
     vi.stubEnv('NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY', '')
     render(<ContactForm />)
     fireEvent.change(screen.getByLabelText('Name *'), { target: { value: 'Test' } })
     fireEvent.change(screen.getByLabelText('Email *'), { target: { value: 'test@example.com' } })
     fireEvent.change(screen.getByLabelText('Message *'), { target: { value: 'Hello' } })
     fireEvent.click(screen.getByRole('button', { name: 'Send' }))
-    expect(screen.getByText('The contact form is not configured yet.')).toBeInTheDocument()
+    expect(await screen.findByText('The contact form is not configured yet.')).toBeInTheDocument()
   })
 })
