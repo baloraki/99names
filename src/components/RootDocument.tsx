@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { AppShell } from '@/components/AppShell'
@@ -40,6 +41,7 @@ export function RootDocument({
         <AppShell routeLanguage={shellLanguage}>{children}</AppShell>
         <Analytics />
         <SpeedInsights />
+        <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
       </body>
     </html>
   )
