@@ -54,7 +54,7 @@ const content: Record<Language, PolicyContent> = {
       {
         heading: '3. Lokaler Browserspeicher (localStorage)',
         paragraphs: [
-          'Diese App speichert folgende Daten lokal im Browserspeicher (localStorage) Ihres Geräts: Lernfortschritt (welche Namen als gelernt markiert wurden), Favoritenliste, zuletzt angesehene Namen, den lokalen Status optionaler Push-Erinnerungen sowie die Spracheinstellung unter dem Schlüssel app:v1:language (siehe Abschnitt 8).',
+          'Diese App speichert folgende Daten lokal im Browserspeicher (localStorage) Ihres Geräts: Lernfortschritt (welche Namen als gelernt markiert wurden), Favoritenliste, zuletzt angesehene Namen, den lokalen Status optionaler Push-Erinnerungen sowie die Spracheinstellung unter dem Schlüssel app:v1:language (siehe Abschnitt 9).',
           'Diese lokalen Daten verlassen Ihr Gerät nicht. Sie können diese Daten jederzeit selbst löschen – über die Einstellungsseite der App oder direkt in Ihren Browsereinstellungen.',
           'Die Nutzung des lokalen Browserspeichers erfolgt ausschliesslich zur Bereitstellung der von Ihnen gewünschten App-Funktionen. Es findet keine Nutzung zu Werbe-, Tracking- oder Profilingzwecken statt.',
           'Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bereitstellung einer funktionsfähigen Anwendung).',
@@ -91,7 +91,16 @@ const content: Record<Language, PolicyContent> = {
         ],
       },
       {
-        heading: '7. Kontaktformular (Web3Forms)',
+        heading: '7. Simple Analytics',
+        paragraphs: [
+          'Wir nutzen Simple Analytics (Simple Analytics B.V., Niederlande, https://www.simpleanalytics.com) zur datenschutzfreundlichen Reichweitenmessung.',
+          'Simple Analytics setzt keine Cookies, erstellt keine geräteübergreifenden Profile und überträgt keine Daten in Drittländer außerhalb der EU/des EWR. Erhoben werden anonymisierte, aggregierte Statistiken (z. B. Seitenaufrufe, Referrer, ungefähres Land aus der gekürzten IP-Adresse, Browser- und Geräte-Klasse). IP-Adressen werden nur kurzzeitig im Speicher verarbeitet und nicht gespeichert. Es entstehen keine personenbezogenen Profile.',
+          'Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer cookiefreien, datensparsamen Reichweitenanalyse zur Verbesserung des Angebots). Da kein Zugriff auf Endgeräte-Informationen i. S. v. § 25 TDDDG erfolgt, ist keine Einwilligung erforderlich.',
+          'Mehr Informationen: https://docs.simpleanalytics.com/what-we-collect',
+        ],
+      },
+      {
+        heading: '8. Kontaktformular (Web3Forms)',
         paragraphs: [
           'Wenn Sie das Kontaktformular nutzen, werden Name, E-Mail-Adresse und Ihre Nachricht über den Dienst Web3Forms (https://web3forms.com) an unsere E-Mail-Adresse übermittelt.',
           'Web3Forms speichert Formular-Einsendungen nach eigenen Angaben 30 Tage (Free-Plan) bzw. 1 Jahr (Pro-Plan), bevor sie automatisch gelöscht werden. Die Server von Web3Forms befinden sich nach eigenen Angaben in der Region US-East (USA). Da für die USA kein Angemessenheitsbeschluss der EU-Kommission besteht und Web3Forms nicht unter dem EU-U.S. Data Privacy Framework zertifiziert ist, stellt dies eine Drittlandübermittlung ohne gleichwertiges Schutzniveau dar. Hinweis auf mögliche Risiken: US-Behörden können unter bestimmten Voraussetzungen (z. B. nach FISA 702) auf bei US-Anbietern gespeicherte Daten zugreifen.',
@@ -102,7 +111,7 @@ const content: Record<Language, PolicyContent> = {
         ],
       },
       {
-        heading: '8. Lokaler Speicher und vergleichbare Technologien',
+        heading: '9. Lokaler Speicher und vergleichbare Technologien',
         paragraphs: [
           'Diese Website speichert Ihre gewählte Sprache (Deutsch, Englisch oder Türkisch) im localStorage unter dem Schlüssel app:v1:language, damit die Website in Ihrer bevorzugten Sprache angezeigt wird.',
           'Es werden keine Session-, Tracking- oder Marketing-Cookies verwendet.',
@@ -112,14 +121,14 @@ const content: Record<Language, PolicyContent> = {
         ],
       },
       {
-        heading: '9. Server-Logs',
+        heading: '10. Server-Logs',
         paragraphs: [
           'Der Hosting-Anbieter (Vercel Inc.) kann technische Zugriffsdaten protokollieren, z. B. IP-Adresse, Zeitstempel, abgerufene URL und HTTP-Statuscode. Diese Protokolldaten werden in der Regel für max. 30 Tage gespeichert. Sie werden zur Bereitstellung, Sicherheit und Fehleranalyse der Website verarbeitet und nicht für Marketing- oder Profilingzwecke genutzt.',
           'Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Sicherstellung des technischen Betriebs, der Sicherheit und der Fehleranalyse).',
         ],
       },
       {
-        heading: '10. Ihre Rechte',
+        heading: '11. Ihre Rechte',
         paragraphs: [
           'Sie haben nach der DSGVO folgende Rechte gegenüber dem Verantwortlichen:',
           '• Recht auf Auskunft (Art. 15 DSGVO)\n• Recht auf Berichtigung (Art. 16 DSGVO)\n• Recht auf Löschung (Art. 17 DSGVO)\n• Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)\n• Recht auf Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)\n• Recht auf Datenübertragbarkeit (Art. 20 DSGVO)',
@@ -128,7 +137,7 @@ const content: Record<Language, PolicyContent> = {
         ],
       },
       {
-        heading: '11. Änderungen dieser Datenschutzerklärung',
+        heading: '12. Änderungen dieser Datenschutzerklärung',
         paragraphs: [
           'Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen, um sie stets den aktuellen rechtlichen Anforderungen und den tatsächlich eingesetzten Funktionen anzupassen. Bitte prüfen Sie bei regelmässigen Besuchen die aktuelle Fassung.',
         ],
@@ -156,7 +165,7 @@ const content: Record<Language, PolicyContent> = {
       {
         heading: '3. Local browser storage (localStorage)',
         paragraphs: [
-          'This app stores the following data in the local browser storage (localStorage) of your device: learning progress (which names have been marked as learned), favourites list, most recently viewed names, local state for optional push reminders, and the language preference under the key app:v1:language (see section 8).',
+          'This app stores the following data in the local browser storage (localStorage) of your device: learning progress (which names have been marked as learned), favourites list, most recently viewed names, local state for optional push reminders, and the language preference under the key app:v1:language (see section 9).',
           "This local data does not leave your device. You can delete it at any time via the app's Settings page or directly in your browser settings.",
           'Local browser storage is used only to provide the app functions requested by you. It is not used for advertising, tracking, or profiling purposes.',
           'Legal basis: Art. 6(1)(f) GDPR (legitimate interest in providing a functioning application).',
@@ -193,7 +202,16 @@ const content: Record<Language, PolicyContent> = {
         ],
       },
       {
-        heading: '7. Contact form (Web3Forms)',
+        heading: '7. Simple Analytics',
+        paragraphs: [
+          'This website uses Simple Analytics (Simple Analytics B.V., Netherlands, https://www.simpleanalytics.com) for privacy-friendly reach measurement.',
+          'Simple Analytics sets no cookies, creates no cross-device profiles, and does not transfer data to third countries outside the EU/EEA. Anonymised, aggregated statistics are collected (e.g. page views, referrer, approximate country derived from the truncated IP address, browser and device class). IP addresses are processed only briefly in memory and are not stored. No personal profiles are created.',
+          'Legal basis: Art. 6(1)(f) GDPR (legitimate interest in cookie-free, data-minimised reach analysis to improve the service). Since no access to end-device information within the meaning of § 25 TDDDG takes place, no consent is required.',
+          'More information: https://docs.simpleanalytics.com/what-we-collect',
+        ],
+      },
+      {
+        heading: '8. Contact form (Web3Forms)',
         paragraphs: [
           'When you use the contact form, your name, email address, and message are transmitted to our email address via the Web3Forms service (https://web3forms.com).',
           'According to Web3Forms, form submissions are stored for 30 days (Free plan) or 1 year (Pro plan), after which they are automatically deleted. Web3Forms states that its servers are located in the US-East region (USA). Because the European Commission has not issued an adequacy decision for the United States and Web3Forms is not certified under the EU–U.S. Data Privacy Framework, this constitutes a third-country transfer without an equivalent level of data protection. Risk notice: US authorities may, under certain conditions (e.g. under FISA 702), access data stored with US-based providers.',
@@ -204,7 +222,7 @@ const content: Record<Language, PolicyContent> = {
         ],
       },
       {
-        heading: '8. Local storage and similar technologies',
+        heading: '9. Local storage and similar technologies',
         paragraphs: [
           'This website stores your chosen language (English, German, or Turkish) in localStorage under the key app:v1:language, so the site is shown in your preferred language.',
           'No session, tracking, or marketing cookies are used.',
@@ -214,14 +232,14 @@ const content: Record<Language, PolicyContent> = {
         ],
       },
       {
-        heading: '9. Server logs',
+        heading: '10. Server logs',
         paragraphs: [
           'The hosting provider (Vercel Inc.) may log technical access data, such as IP address, timestamp, requested URL, and HTTP status code. These logs are typically retained for a maximum of 30 days. If server-side functions, cron jobs, or API routes run on Vercel, technical access data and function logs may also be processed for operation, security, and error analysis. This data is not used for marketing or profiling purposes.',
           'Legal basis: Art. 6(1)(f) GDPR (legitimate interest in ensuring technical operation, security, and error analysis).',
         ],
       },
       {
-        heading: '10. Your rights',
+        heading: '11. Your rights',
         paragraphs: [
           'Under the GDPR you have the following rights against the data controller:',
           '• Right of access (Art. 15 GDPR)\n• Right to rectification (Art. 16 GDPR)\n• Right to erasure (Art. 17 GDPR)\n• Right to restriction of processing (Art. 18 GDPR)\n• Right to object to processing (Art. 21 GDPR)\n• Right to data portability (Art. 20 GDPR)',
@@ -230,7 +248,7 @@ const content: Record<Language, PolicyContent> = {
         ],
       },
       {
-        heading: '11. Changes to this privacy policy',
+        heading: '12. Changes to this privacy policy',
         paragraphs: [
           'We reserve the right to update this privacy policy to reflect legal requirements and the functions actually used on this website. Please check this page periodically for the current version.',
         ],
@@ -258,7 +276,7 @@ const content: Record<Language, PolicyContent> = {
       {
         heading: '3. Yerel tarayıcı depolama alanı (localStorage)',
         paragraphs: [
-          'Bu uygulama aşağıdaki verileri cihazınızın yerel tarayıcı belleğinde (localStorage) saklar: öğrenme ilerleme durumu (hangi isimlerin öğrenildi olarak işaretlendiği), favori listesi, en son görüntülenen isimler, isteğe bağlı push hatırlatmaları için yerel durum ve app:v1:language anahtarı altında dil tercihi (bkz. bölüm 8).',
+          'Bu uygulama aşağıdaki verileri cihazınızın yerel tarayıcı belleğinde (localStorage) saklar: öğrenme ilerleme durumu (hangi isimlerin öğrenildi olarak işaretlendiği), favori listesi, en son görüntülenen isimler, isteğe bağlı push hatırlatmaları için yerel durum ve app:v1:language anahtarı altında dil tercihi (bkz. bölüm 9).',
           'Bu yerel veriler cihazınızı terk etmez. Uygulamanın Ayarlar sayfasından veya doğrudan tarayıcı ayarlarınızdan bu verileri istediğiniz zaman silebilirsiniz.',
           'Yerel tarayıcı depolama alanı yalnızca talep ettiğiniz uygulama işlevlerini sunmak için kullanılır. Reklam, izleme veya profil oluşturma amacıyla kullanılmaz.',
           'Hukuki dayanak: GDPR Madde 6(1)(f) – işlevsel bir uygulama sunmaya yönelik meşru menfaat.',
@@ -295,7 +313,16 @@ const content: Record<Language, PolicyContent> = {
         ],
       },
       {
-        heading: '7. İletişim formu (Web3Forms)',
+        heading: '7. Simple Analytics',
+        paragraphs: [
+          'Bu web sitesi, gizlilik dostu erişim ölçümü için Simple Analytics (Simple Analytics B.V., Hollanda, https://www.simpleanalytics.com) hizmetini kullanmaktadır.',
+          'Simple Analytics çerez yerleştirmez, cihazlar arası profil oluşturmaz ve AB/AEA dışındaki üçüncü ülkelere veri aktarmaz. Anonimleştirilmiş, toplu istatistikler toplanır (örn. sayfa görüntülemeleri, yönlendirici, kısaltılmış IP adresinden elde edilen yaklaşık ülke, tarayıcı ve cihaz sınıfı). IP adresleri yalnızca kısa süreliğine bellekte işlenir ve depolanmaz. Kişisel profil oluşturulmaz.',
+          'Hukuki dayanak: GDPR Madde 6(1)(f) – hizmeti iyileştirmek amacıyla çerezsiz, veri minimizasyonuna uygun erişim analizi yapılmasına yönelik meşru menfaat. § 25 TDDDG anlamında son kullanıcı cihazlarına erişim gerçekleşmediğinden, onay alınması gerekmemektedir.',
+          'Daha fazla bilgi: https://docs.simpleanalytics.com/what-we-collect',
+        ],
+      },
+      {
+        heading: '8. İletişim formu (Web3Forms)',
         paragraphs: [
           'İletişim formunu kullandığınızda adınız, e-posta adresiniz ve mesajınız Web3Forms hizmeti (https://web3forms.com) aracılığıyla e-posta adresimize iletilir.',
           "Web3Forms, form gönderimlerini kendi açıklamalarına göre 30 gün (Ücretsiz plan) veya 1 yıl (Pro plan) süreyle saklar; bu süreden sonra otomatik olarak silinirler. Web3Forms, sunucularının ABD'nin US-East bölgesinde bulunduğunu belirtmektedir. Avrupa Komisyonu ABD için bir yeterlilik kararı almamış olup Web3Forms, AB-ABD Veri Gizliliği Çerçevesi kapsamında sertifikalı değildir; bu nedenle söz konusu aktarım, eşdeğer bir koruma düzeyi bulunmayan üçüncü ülkeye yapılan bir aktarım niteliği taşımaktadır. Risk uyarısı: ABD makamları belirli koşullar altında (örn. FISA 702 kapsamında) ABD'li sağlayıcılarda depolanan verilere erişebilir.",
@@ -306,7 +333,7 @@ const content: Record<Language, PolicyContent> = {
         ],
       },
       {
-        heading: '8. Yerel depolama ve benzer teknolojiler',
+        heading: '9. Yerel depolama ve benzer teknolojiler',
         paragraphs: [
           'Bu web sitesi seçtiğiniz dili (Türkçe, Almanca veya İngilizce) app:v1:language anahtarıyla localStorage içinde saklar; böylece site tercih ettiğiniz dilde görüntülenir.',
           'Oturum, izleme veya pazarlama çerezi kullanılmamaktadır.',
@@ -316,14 +343,14 @@ const content: Record<Language, PolicyContent> = {
         ],
       },
       {
-        heading: '9. Sunucu günlükleri',
+        heading: '10. Sunucu günlükleri',
         paragraphs: [
           'Barındırma sağlayıcısı (Vercel Inc.) IP adresi, zaman damgası, istenen URL ve HTTP durum kodu gibi teknik erişim verilerini kayıt altına alabilir. Bu günlükler genellikle en fazla 30 gün süreyle saklanır. Bu veriler web sitesini sunmak, güvenliğini sağlamak ve hataları analiz etmek için işlenir; pazarlama veya profil oluşturma amacıyla kullanılmaz.',
           'Hukuki dayanak: GDPR Madde 6(1)(f) – teknik işletimin, güvenliğin ve hata analizinin sağlanmasına yönelik meşru menfaat.',
         ],
       },
       {
-        heading: '10. Haklarınız',
+        heading: '11. Haklarınız',
         paragraphs: [
           'GDPR kapsamında veri sorumlusuna karşı aşağıdaki haklara sahipsiniz:',
           '• Erişim hakkı (Madde 15)\n• Düzeltme hakkı (Madde 16)\n• Silme hakkı (Madde 17)\n• İşlemeyi kısıtlama hakkı (Madde 18)\n• İşlemeye itiraz hakkı (Madde 21)\n• Veri taşınabilirliği hakkı (Madde 20)',
@@ -332,7 +359,7 @@ const content: Record<Language, PolicyContent> = {
         ],
       },
       {
-        heading: '11. Bu politikadaki değişiklikler',
+        heading: '12. Bu politikadaki değişiklikler',
         paragraphs: [
           'Yasal gereklilikleri ve bu web sitesinde fiilen kullanılan işlevleri yansıtmak amacıyla bu gizlilik politikasını güncelleme hakkımızı saklı tutarız. Güncel sürüm için bu sayfayı düzenli aralıklarla kontrol etmenizi öneririz.',
         ],
