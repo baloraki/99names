@@ -11,7 +11,7 @@ export const dynamic = 'force-dynamic'
 
 // Push notification system is not in use – returning 503 until re-enabled.
 export async function GET() {
-  return Response.json({ success: false, error: 'Push cron is not enabled.' }, { status: 503 })
+  return Response.json({ success: false, error: 'Push notifications are currently disabled.' }, { status: 503 })
 }
 
 /*
