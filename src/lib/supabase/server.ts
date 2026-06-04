@@ -1,3 +1,7 @@
+// Supabase connection disabled – notification system is not in use.
+// Uncomment to re-enable.
+
+/*
 import 'server-only'
 
 import { createClient, type SupabaseClient } from '@supabase/supabase-js'
@@ -23,3 +27,4 @@ export function getSupabaseAdminClient(): SupabaseClient {
 
   return supabaseAdmin
 }
+*/

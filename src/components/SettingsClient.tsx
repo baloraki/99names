@@ -9,7 +9,7 @@ import { isLanguage } from '@/lib/languagePreference'
 import { getEquivalentLocalizedPath } from '@/lib/seo'
 import type { Language } from '@/types/language'
 import { THEMES, type ThemeName } from '@/types/theme'
-import { PushReminderSettings } from './PushReminderSettings'
+// import { PushReminderSettings } from './PushReminderSettings'
 
 export function SettingsClient({ locale }: { locale: Language }) {
   const pathname = usePathname()
@@ -54,7 +54,9 @@ export function SettingsClient({ locale }: { locale: Language }) {
           {THEMES.map((item) => <option key={item} value={item}>{dict.settings.themeOptions[item]}</option>)}
         </select>
       </section>
+      {/* PushReminderSettings disabled – notification system is not in use
       <PushReminderSettings title={dict.settings.pushReminderTitle} iosPushUnavailable={dict.settings.iosPushUnavailable} iosPwaNote={dict.settings.iosPwaNote} locale={locale} />
+      */}
       <section className="rounded-lg border border-white/10 bg-surface p-5">
         <h2 className="text-xl font-semibold">{dict.settings.localData}</h2>
         <p className="mt-2 text-sm leading-6 text-muted">

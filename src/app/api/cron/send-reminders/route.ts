@@ -1,14 +1,20 @@
-import type { PushSubscription } from 'web-push'
-import { calculateFollowingNextSendAt, isValidReminderInterval, type ReminderInterval } from '@/lib/push/reminders'
-import { assertPushServerConfigured, sendPushNotification } from '@/lib/push/server'
-import { timingSafeEqual } from '@/lib/security'
-import { getSupabaseAdminClient } from '@/lib/supabase/server'
-import { isLanguage } from '@/lib/languagePreference'
-import type { Language } from '@/types/language'
+// import type { PushSubscription } from 'web-push'
+// import { calculateFollowingNextSendAt, isValidReminderInterval, type ReminderInterval } from '@/lib/push/reminders'
+// import { assertPushServerConfigured, sendPushNotification } from '@/lib/push/server'
+// import { timingSafeEqual } from '@/lib/security'
+// import { getSupabaseAdminClient } from '@/lib/supabase/server'
+// import { isLanguage } from '@/lib/languagePreference'
+// import type { Language } from '@/types/language'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
+// Push notification system is not in use – returning 503 until re-enabled.
+export async function GET() {
+  return Response.json({ success: false, error: 'Push notifications are currently disabled.' }, { status: 503 })
+}
+
+/*
 type PushSubscriptionRow = {
   endpoint: string
   p256dh: string
@@ -273,3 +279,4 @@ function getErrorMessage(error: unknown): string {
     return 'Unknown push error.'
   }
 }
+*/
