@@ -1,8 +1,14 @@
-import { getSupabaseAdminClient } from '@/lib/supabase/server'
+// import { getSupabaseAdminClient } from '@/lib/supabase/server'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
+// Push notification system is not in use – returning 503 until re-enabled.
+export async function POST() {
+  return Response.json({ success: false, error: 'Push notifications are not enabled.' }, { status: 503 })
+}
+
+/*
 type UnsubscribeBody = {
   endpoint?: unknown
 }
@@ -42,3 +48,4 @@ export async function POST(request: Request) {
     return Response.json({ success: false, error: 'Push unsubscribe is not configured.' }, { status: 500 })
   }
 }
+*/

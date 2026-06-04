@@ -12,7 +12,7 @@ import { isLanguage } from '@/lib/languagePreference'
 import { getEquivalentLocalizedPath, getLocalizedFavoritesPath, getLocalizedLearnQuizPath, getLocalizedSeoPath, getLocalizedSettingsPath, getLocalizedStaticPath } from '@/lib/seo'
 import { storage } from '@/lib/storage'
 import type { Language } from '@/types/language'
-import { PushPermissionNudge } from './PushPermissionNudge'
+// import { PushPermissionNudge } from './PushPermissionNudge'
 
 const ALL_NAME_IDS: readonly string[] = names.map((n) => String(n.id))
 
@@ -276,6 +276,7 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
           </nav>
         ) : null}
       </header>
+      {/* PushPermissionNudge disabled – notification system is not in use
       <PushPermissionNudge
         title={dict.settings.pushNudgeTitle}
         body={dict.settings.pushNudgeBody}
@@ -291,6 +292,7 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
         batteryOptimYes={dict.settings.batteryOptimYes}
         batteryOptimNo={dict.settings.batteryOptimNo}
       />
+      */}
       <main className="mx-auto w-full max-w-6xl px-4 pb-32 pt-6 md:pb-12">{children}</main>
 
       <footer className="border-t border-white/10 bg-background/60 py-4 text-xs text-muted">

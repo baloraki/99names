@@ -1,15 +1,21 @@
-import { getSupabaseAdminClient } from '@/lib/supabase/server'
-import {
-  calculateInitialNextSendAt,
-  isValidReminderInterval,
-  type ReminderInterval,
-} from '@/lib/push/reminders'
-import { isLanguage } from '@/lib/languagePreference'
-import type { Language } from '@/types/language'
+// import { getSupabaseAdminClient } from '@/lib/supabase/server'
+// import {
+//   calculateInitialNextSendAt,
+//   isValidReminderInterval,
+//   type ReminderInterval,
+// } from '@/lib/push/reminders'
+// import { isLanguage } from '@/lib/languagePreference'
+// import type { Language } from '@/types/language'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
+// Push notification system is not in use – returning 503 until re-enabled.
+export async function POST() {
+  return Response.json({ success: false, error: 'Push notifications are not enabled.' }, { status: 503 })
+}
+
+/*
 type PushSubscriptionInput = {
   endpoint?: unknown
   keys?: {
@@ -134,3 +140,4 @@ function normalizeLocale(value: unknown): Language {
   if (typeof value === 'string' && isLanguage(value)) return value
   return 'en'
 }
+*/
