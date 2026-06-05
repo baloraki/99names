@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Open-source learning aid for the 99 Names of Allah.",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
