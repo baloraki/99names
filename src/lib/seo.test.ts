@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import sitemap from '@/app/sitemap'
+import { generateSitemap } from '@/lib/sitemap'
 import { names } from '@/data/names'
 import {
   absoluteUrl,
@@ -145,10 +145,11 @@ describe('name metadata', () => {
 
 describe('sitemap', () => {
   it('contains all static pages and all localized name detail routes', () => {
-    const entries = sitemap()
+    const entries = generateSitemap()
     const urls = new Set(entries.map((entry) => entry.url))
 
     expect(entries).toHaveLength(staticSitemapPages.length + names.length * 3)
+
     for (const page of staticSitemapPages) {
       expect(urls.has(absoluteUrl(page.path))).toBe(true)
     }
@@ -157,6 +158,16 @@ describe('sitemap', () => {
       expect(urls.has(absoluteUrl(`/de/namen/${name.slug}`))).toBe(true)
       expect(urls.has(absoluteUrl(`/tr/esmaul-husna/${name.slug}`))).toBe(true)
     }
+  })
+
+  it('does not include robots-disallowed pages in the sitemap', () => {
+    const entries = generateSitemap()
+    const urls = new Set(entries.map((entry) => entry.url))
+
+    expect(urls.has(absoluteUrl('/offline'))).toBe(false)
+    expect(urls.has(absoluteUrl('/settings'))).toBe(false)
+    expect(urls.has(absoluteUrl('/de/einstellungen'))).toBe(false)
+    expect(urls.has(absoluteUrl('/tr/ayarlar'))).toBe(false)
   })
 })
 
