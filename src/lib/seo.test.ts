@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import sitemap from '@/app/sitemap'
+import { generateSitemap } from '@/lib/sitemap'
 import { names } from '@/data/names'
 import {
   absoluteUrl,
@@ -145,7 +145,7 @@ describe('name metadata', () => {
 
 describe('sitemap', () => {
   it('contains all static pages and all localized name detail routes', () => {
-    const entries = sitemap()
+    const entries = generateSitemap()
     const urls = new Set(entries.map((entry) => entry.url))
 
     expect(entries).toHaveLength(staticSitemapPages.length + names.length * 3)
@@ -161,7 +161,7 @@ describe('sitemap', () => {
   })
 
   it('does not include robots-disallowed pages in the sitemap', () => {
-    const entries = sitemap()
+    const entries = generateSitemap()
     const urls = new Set(entries.map((entry) => entry.url))
 
     expect(urls.has(absoluteUrl('/offline'))).toBe(false)
