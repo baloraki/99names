@@ -435,10 +435,9 @@ export const staticSitemapPages = [
   { path: '/about', priority: 0.5, changeFrequency: 'yearly', alternates: staticPageAlternates('about') },
   { path: '/de/uber-uns', priority: 0.5, changeFrequency: 'yearly', alternates: staticPageAlternates('about') },
   { path: '/tr/hakkimizda', priority: 0.5, changeFrequency: 'yearly', alternates: staticPageAlternates('about') },
-  { path: '/settings', priority: 0.35, changeFrequency: 'yearly', alternates: settingsAlternates() },
-  { path: '/de/einstellungen', priority: 0.35, changeFrequency: 'yearly', alternates: settingsAlternates() },
-  { path: '/tr/ayarlar', priority: 0.35, changeFrequency: 'yearly', alternates: settingsAlternates() },
-  { path: '/offline', priority: 0.2, changeFrequency: 'yearly' },
+  // /offline, /settings, /de/einstellungen, /tr/ayarlar intentionally omitted —
+  // they are disallowed in robots.txt and adding them to the sitemap
+  // would create a conflict that can cause Google to reject the sitemap.
 ] as const satisfies ReadonlyArray<{
   path: string
   priority: number
@@ -457,7 +456,7 @@ export function sitemapEntry(
 ): MetadataRoute.Sitemap[number] {
   return {
     url: absoluteUrl(path),
-    lastModified: options.lastModified || new Date('2024-01-01'),
+    lastModified: options.lastModified || new Date().toISOString(),
     changeFrequency: options.changeFrequency,
     priority: options.priority,
     ...(options.alternates
