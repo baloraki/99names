@@ -17,6 +17,11 @@ function esc(s: string): string {
 function renderUrl(entry: ReturnType<typeof generateSitemap>[number]): string {
   let xml = `  <url>\n    <loc>${esc(entry.url)}</loc>\n`
 
+  xml += `    <lastmod>${esc(entry.lastModified as string)}</lastmod>\n`
+  xml += `    <changefreq>${esc(entry.changeFrequency as string)}</changefreq>\n`
+  xml += `    <priority>${entry.priority}</priority>\n`
+
+  // xhtml:link must come after all standard elements per Google's sitemap spec
   const languages = entry.alternates?.languages
   if (languages) {
     for (const [lang, href] of Object.entries(languages)) {
@@ -24,9 +29,6 @@ function renderUrl(entry: ReturnType<typeof generateSitemap>[number]): string {
     }
   }
 
-  xml += `    <lastmod>${esc(entry.lastModified as string)}</lastmod>\n`
-  xml += `    <changefreq>${esc(entry.changeFrequency as string)}</changefreq>\n`
-  xml += `    <priority>${entry.priority}</priority>\n`
   xml += `  </url>\n`
 
   return xml
