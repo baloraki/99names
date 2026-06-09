@@ -149,6 +149,7 @@ describe('sitemap', () => {
     const urls = new Set(entries.map((entry) => entry.url))
 
     expect(entries).toHaveLength(staticSitemapPages.length + names.length * 3)
+
     for (const page of staticSitemapPages) {
       expect(urls.has(absoluteUrl(page.path))).toBe(true)
     }
@@ -157,6 +158,16 @@ describe('sitemap', () => {
       expect(urls.has(absoluteUrl(`/de/namen/${name.slug}`))).toBe(true)
       expect(urls.has(absoluteUrl(`/tr/esmaul-husna/${name.slug}`))).toBe(true)
     }
+  })
+
+  it('does not include robots-disallowed pages in the sitemap', () => {
+    const entries = sitemap()
+    const urls = new Set(entries.map((entry) => entry.url))
+
+    expect(urls.has(absoluteUrl('/offline'))).toBe(false)
+    expect(urls.has(absoluteUrl('/settings'))).toBe(false)
+    expect(urls.has(absoluteUrl('/de/einstellungen'))).toBe(false)
+    expect(urls.has(absoluteUrl('/tr/ayarlar'))).toBe(false)
   })
 })
 
