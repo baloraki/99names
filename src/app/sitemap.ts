@@ -5,7 +5,6 @@ import type { Language } from '@/types/language'
 
 const NAME_PRIORITY = 0.7
 const NAME_CHANGE_FREQUENCY: MetadataRoute.Sitemap[number]['changeFrequency'] = 'monthly'
-const NAMES_PER_SITEMAP = 33
 
 const localePathBuilders: Record<Language, (slug: string) => string> = {
   en: (slug) => `/names/${slug}`,
@@ -13,35 +12,20 @@ const localePathBuilders: Record<Language, (slug: string) => string> = {
   tr: (slug) => `/tr/esmaul-husna/${slug}`,
 }
 
-// Use numeric IDs — Next.js 16 generates file names from the ID
-// and some versions call .replace() on it (string IDs like 'static'
-// work in principle but can hit edge cases in built-in serialization).
-export function generateSitemaps() {
-  const nameBatchCount = Math.ceil(names.length / NAMES_PER_SITEMAP)
-  // id: 0 = static pages, id: 1..N = name batches
-  return Array.from({ length: 1 + nameBatchCount }, (_, i) => ({ id: i }))
-}
+export default function sitemap(): MetadataRoute.Sitemap {
+  const staticEntries = staticSitemapPages.map((page) =>
+    sitemapEntry(page.path, {
+      priority: page.priority,
+      changeFrequency: page.changeFrequency,
+      alternates: 'alternates' in page ? page.alternates : undefined,
+    }),
+  )
 
-export default function sitemap({ id }: { id: number }): MetadataRoute.Sitemap {
-  if (id === 0) {
-    return staticSitemapPages.map((page) =>
-      sitemapEntry(page.path, {
-        priority: page.priority,
-        changeFrequency: page.changeFrequency,
-        alternates: 'alternates' in page ? page.alternates : undefined,
-      }),
-    )
-  }
-
-  const batchIndex = id - 1
-  const start = batchIndex * NAMES_PER_SITEMAP
-  const batch = names.slice(start, start + NAMES_PER_SITEMAP)
-
-  const entries: MetadataRoute.Sitemap = []
-  for (const name of batch) {
+  const nameEntries: MetadataRoute.Sitemap = []
+  for (const name of names) {
     const alternates = nameAlternates(name.slug)
     for (const locale of ['en', 'de', 'tr'] as const) {
-      entries.push(
+      nameEntries.push(
         sitemapEntry(localePathBuilders[locale](name.slug), {
           priority: NAME_PRIORITY,
           changeFrequency: NAME_CHANGE_FREQUENCY,
@@ -51,5 +35,5 @@ export default function sitemap({ id }: { id: number }): MetadataRoute.Sitemap {
     }
   }
 
-  return entries
+  return [...staticEntries, ...nameEntries]
 }

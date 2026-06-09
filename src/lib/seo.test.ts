@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import sitemap, { generateSitemaps } from '@/app/sitemap'
+import sitemap from '@/app/sitemap'
 import { names } from '@/data/names'
 import {
   absoluteUrl,
@@ -144,49 +144,30 @@ describe('name metadata', () => {
 })
 
 describe('sitemap', () => {
-  it('generates sitemap index entries for static pages and name batches', () => {
-    const sitemaps = generateSitemaps()
-
-    expect(sitemaps).toHaveLength(4) // static + 3 name batches (99 names / 33)
-    expect(sitemaps[0]).toEqual({ id: 0 })
-    expect(sitemaps[1]).toEqual({ id: 1 })
-    expect(sitemaps[2]).toEqual({ id: 2 })
-    expect(sitemaps[3]).toEqual({ id: 3 })
-  })
-
-  it('contains all static pages in the static sub-sitemap', () => {
-    const entries = sitemap({ id: 0 })
+  it('contains all static pages and all localized name detail routes', () => {
+    const entries = sitemap()
     const urls = new Set(entries.map((entry) => entry.url))
 
-    expect(entries).toHaveLength(staticSitemapPages.length)
+    expect(entries).toHaveLength(staticSitemapPages.length + names.length * 3)
+
     for (const page of staticSitemapPages) {
       expect(urls.has(absoluteUrl(page.path))).toBe(true)
+    }
+    for (const name of names) {
+      expect(urls.has(absoluteUrl(`/names/${name.slug}`))).toBe(true)
+      expect(urls.has(absoluteUrl(`/de/namen/${name.slug}`))).toBe(true)
+      expect(urls.has(absoluteUrl(`/tr/esmaul-husna/${name.slug}`))).toBe(true)
     }
   })
 
   it('does not include robots-disallowed pages in the sitemap', () => {
-    const entries = sitemap({ id: 0 })
+    const entries = sitemap()
     const urls = new Set(entries.map((entry) => entry.url))
 
     expect(urls.has(absoluteUrl('/offline'))).toBe(false)
     expect(urls.has(absoluteUrl('/settings'))).toBe(false)
     expect(urls.has(absoluteUrl('/de/einstellungen'))).toBe(false)
     expect(urls.has(absoluteUrl('/tr/ayarlar'))).toBe(false)
-  })
-
-  it('covers all localized name detail routes across name batches', () => {
-    const allEntries = Array.from({ length: 3 }).flatMap((_, i) =>
-      sitemap({ id: i + 1 }),
-    )
-
-    const urls = new Set(allEntries.map((entry) => entry.url))
-    expect(allEntries).toHaveLength(names.length * 3)
-
-    for (const name of names) {
-      expect(urls.has(absoluteUrl(`/names/${name.slug}`))).toBe(true)
-      expect(urls.has(absoluteUrl(`/de/namen/${name.slug}`))).toBe(true)
-      expect(urls.has(absoluteUrl(`/tr/esmaul-husna/${name.slug}`))).toBe(true)
-    }
   })
 })
 
