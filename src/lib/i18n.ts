@@ -18,6 +18,7 @@ export type Dict = {
     aid: string
     main: string
     mobile: string
+    skipToContent: string
   }
   favorites: {
     eyebrow: string
@@ -211,6 +212,7 @@ const de: Dict = {
     aid: 'Lernhilfe',
     main: 'Hauptnavigation',
     mobile: 'Mobile Navigation',
+    skipToContent: 'Zum Inhalt springen',
   },
   favorites: {
     eyebrow: 'Deine Auswahl',
@@ -408,6 +410,7 @@ const tr: Dict = {
     aid: 'Öğrenme yardımı',
     main: 'Ana gezinme',
     mobile: 'Mobil gezinme',
+    skipToContent: 'İçeriğe atla',
   },
   favorites: {
     eyebrow: 'Senin seçimin',
@@ -605,6 +608,7 @@ const en: Dict = {
     aid: 'Learning aid',
     main: 'Main navigation',
     mobile: 'Mobile navigation',
+    skipToContent: 'Skip to content',
   },
   favorites: {
     eyebrow: 'Your selection',

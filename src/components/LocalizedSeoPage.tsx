@@ -320,7 +320,7 @@ function LearnPage({ locale }: { locale: Language }) {
           {dict.learn.quizCtaLink}
         </Link>
       </section>
-      <PageIntro page="learn" locale={locale} headingLevel="h2" subdued />
+      <PageIntro page="learn" locale={locale} headingLevel="h1" subdued />
     </div>
   )
 }

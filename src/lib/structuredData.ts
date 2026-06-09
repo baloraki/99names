@@ -35,6 +35,14 @@ export function websiteJsonLd(): JsonLdValue {
     alternateName: ['99 Names of Allah', 'Asma ul Husna', 'Al Asma ul Husna'],
     url: absoluteUrl('/'),
     inLanguage: ['en', 'de', 'tr'],
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${absoluteUrl('/names')}?search={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
   }
 }
 

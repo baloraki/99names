@@ -7,6 +7,7 @@ export const metadata: Metadata = buildMetadata({
   description: 'Offline fallback page for cached 99 Names learning aid content and locally bundled name data.',
   path: '/offline',
   locale: 'en',
+  index: false,
 })
 
 export default function OfflinePage() {

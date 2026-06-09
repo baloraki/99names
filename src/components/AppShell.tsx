@@ -160,6 +160,12 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
   return (
     <>
       <div className="star-field fixed inset-0 -z-10" />
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded focus:px-4 focus:py-2 focus:bg-gold focus:text-background focus:font-semibold focus:no-underline"
+      >
+        {dict.nav.skipToContent}
+      </a>
       <header className={headerClassName}>
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4">
           <Link href={language === 'de' ? '/de' : language === 'tr' ? '/tr' : '/'} className="focus-ring rounded-md" aria-label="Daily Husna">
@@ -170,9 +176,10 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
               height={512}
               priority
               unoptimized
+              sizes="80px"
               className="h-18 w-18 sm:h-20 sm:w-20"
             />
-            <span className="block text-center text-[11px] text-gold">{dict.nav.aid}</span>
+            <span className="block text-center text-xs text-gold">{dict.nav.aid}</span>
           </Link>
           <div className="flex items-center gap-3">
             <nav className="hidden items-center gap-2 md:flex" aria-label={dict.nav.main}>
@@ -197,7 +204,7 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
                 {dict.nav.quiz}
                 {dueCount > 0 && (
                   <span
-                    className="absolute -right-1 -top-1 flex h-4 min-w-4 items-center justify-center rounded-full bg-gold px-1 text-[10px] font-bold leading-none text-background"
+                    className="absolute -right-1 -top-1 flex h-4 min-w-4 items-center justify-center rounded-full bg-gold px-1 text-xs font-bold leading-none text-background"
                     aria-label={dict.nav.quizBadge(dueCount)}
                   >
                     {dueCount}
@@ -255,7 +262,7 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
                 {dict.nav.quiz}
                 {dueCount > 0 && (
                   <span
-                    className="ml-2 inline-flex h-4 min-w-4 items-center justify-center rounded-full bg-gold px-1 text-[10px] font-bold leading-none text-background"
+                    className="ml-2 inline-flex h-4 min-w-4 items-center justify-center rounded-full bg-gold px-1 text-xs font-bold leading-none text-background"
                     aria-label={dict.nav.quizBadge(dueCount)}
                   >
                     {dueCount}
@@ -293,7 +300,7 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
         batteryOptimNo={dict.settings.batteryOptimNo}
       />
       */}
-      <main className="mx-auto w-full max-w-6xl px-4 pb-32 pt-6 md:pb-12">{children}</main>
+      <main id="main-content" className="mx-auto w-full max-w-6xl px-4 pb-32 pt-6 md:pb-12">{children}</main>
 
       <footer className="border-t border-white/10 bg-background/60 py-4 text-xs text-muted">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-6 gap-y-1 px-4">

@@ -457,7 +457,7 @@ export function sitemapEntry(
 ): MetadataRoute.Sitemap[number] {
   return {
     url: absoluteUrl(path),
-    lastModified: options.lastModified || new Date('2024-01-01'),
+    lastModified: options.lastModified || new Date(),
     changeFrequency: options.changeFrequency,
     priority: options.priority,
     ...(options.alternates

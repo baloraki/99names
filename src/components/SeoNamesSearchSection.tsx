@@ -105,6 +105,7 @@ export function SeoNamesSearchSection({ locale, variant, names }: SeoNamesSearch
             value={searchTerm}
             onChange={(event) => setSearchTerm(event.target.value)}
             placeholder={placeholderByLocale[locale]}
+            aria-label={placeholderByLocale[locale]}
             className="w-full bg-transparent text-base text-primary outline-none placeholder:text-muted"
           />
           {searchTerm.trim().length > 0 ? (
