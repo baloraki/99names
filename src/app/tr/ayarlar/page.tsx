@@ -8,6 +8,7 @@ export const metadata: Metadata = buildMetadata({
   path: '/tr/ayarlar',
   locale: 'tr',
   alternates: settingsAlternates(),
+  index: false,
 })
 
 export default function TurkishSettingsPage() {

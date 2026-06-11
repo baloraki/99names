@@ -66,6 +66,7 @@ html[data-theme='dark-classic'] {
   --color-background-soft: #111111;
   --color-surface: #161616;
   --color-surface-soft: #1f1f1f;
+  --color-gold-muted: #a6833e;
   --color-hero-surface-end: rgba(22, 22, 22, 0.96);
   --color-hero-surface-end-strong: rgba(22, 22, 22, 0.99);
 }
@@ -353,8 +354,8 @@ textarea {
 
 .header-icon-link {
   display: inline-flex;
-  min-height: 42px;
-  min-width: 42px;
+  min-height: 44px;
+  min-width: 44px;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
@@ -497,7 +498,7 @@ textarea {
 }
 
 .chip {
-  min-height: 38px;
+  min-height: 44px;
   border-radius: 999px;
   border: 1px solid var(--color-chip-border);
   padding: 0.45rem 0.8rem;
@@ -522,7 +523,7 @@ textarea {
 }
 
 .language-select {
-  min-height: 42px;
+  min-height: 44px;
   border-radius: 8px;
   border: 1px solid var(--color-language-select-border);
   background: var(--color-language-select-bg);

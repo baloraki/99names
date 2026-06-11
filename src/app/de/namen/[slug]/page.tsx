@@ -17,7 +17,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const name = getNameBySlug(slug)
-  if (!name) return {}
+  if (!name) return { title: 'Name nicht gefunden', robots: { index: false } }
   return getNamePageMetadata(name, 'de')
 }
 

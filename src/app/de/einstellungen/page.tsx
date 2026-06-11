@@ -8,6 +8,7 @@ export const metadata: Metadata = buildMetadata({
   path: '/de/einstellungen',
   locale: 'de',
   alternates: settingsAlternates(),
+  index: false,
 })
 
 export default function GermanSettingsPage() {

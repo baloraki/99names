@@ -41,7 +41,7 @@ export function RootDocument({
         <AppShell routeLanguage={shellLanguage}>{children}</AppShell>
         <Analytics />
         <SpeedInsights />
-        <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
+        <Script src="https://scripts.simpleanalyticscdn.com/latest.js" strategy="lazyOnload" />
       </body>
     </html>
   )

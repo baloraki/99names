@@ -344,7 +344,7 @@ export function LearnClient({ embedded = false, locale }: { embedded?: boolean; 
 
       {/* Keyboard hint - only in card mode */}
       {learnState.mode === 'card' && (
-        <p className="text-center text-xs text-muted/40 select-none" aria-hidden="true">
+        <p className="text-center text-xs text-muted/40 select-none">
           {dict.learn.keyboard}
         </p>
       )}
@@ -691,7 +691,7 @@ function CardMode({
                 key={n.id}
                 className="rounded-lg border border-white/5 bg-surface-soft/60 p-3 text-center"
               >
-                <p className="text-[10px] uppercase tracking-widest text-muted/50 tabular-nums">
+                <p className="text-xs uppercase tracking-widest text-muted/50 tabular-nums">
                   #{n.id.toString().padStart(2, '0')}
                 </p>
                 <p className="mt-1.5 text-right font-arabic text-2xl leading-none text-primary/80" lang="ar" dir="rtl">
@@ -784,17 +784,17 @@ function BrowseMode({
                   </Link>
                   <div className="order-2 ml-auto flex shrink-0 items-center gap-1.5 md:order-3 md:ml-0">
                     {learned && (
-                      <span className="rounded-full border border-success/40 bg-success/10 px-2 py-0.5 text-[10px] font-semibold text-success">
+                      <span className="rounded-full border border-success/40 bg-success/10 px-2 py-0.5 text-xs font-semibold text-success">
                         {dict.learn.listLearned}
                       </span>
                     )}
                     {!learned && repeat && (
-                      <span className="rounded-full border border-sky-400/40 bg-sky-500/10 px-2 py-0.5 text-[10px] font-semibold text-sky-300">
+                      <span className="rounded-full border border-sky-400/40 bg-sky-500/10 px-2 py-0.5 text-xs font-semibold text-sky-300">
                         {dict.learn.listRepeat}
                       </span>
                     )}
                     {!learned && !repeat && (
-                      <span className="rounded-full border border-white/10 bg-surface-soft px-2 py-0.5 text-[10px] font-semibold text-muted">
+                      <span className="rounded-full border border-white/10 bg-surface-soft px-2 py-0.5 text-xs font-semibold text-muted">
                         {dict.learn.listOpen}
                       </span>
                     )}

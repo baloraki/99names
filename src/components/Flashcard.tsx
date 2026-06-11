@@ -128,7 +128,7 @@ function GradeButton({
   return (
     <button type="button" onClick={onClick} className={className} aria-label={`${label}: ${hint}`}>
       <span className="text-base font-semibold">{label}</span>
-      <span className="text-[11px] font-normal opacity-80">{hint}</span>
+      <span className="text-xs font-normal opacity-80">{hint}</span>
     </button>
   )
 }

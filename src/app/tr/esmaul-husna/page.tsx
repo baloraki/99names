@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Suspense } from 'react'
 import { NameIndexContent } from '@/components/NameIndexContent'
+import { NamesGridSkeleton } from '@/components/NamesGridSkeleton'
 import { buildMetadata, namesAlternates } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
@@ -13,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
 
 export default function TurkishNamesPage() {
   return (
-    <Suspense>
+    <Suspense fallback={<NamesGridSkeleton />}>
       <NameIndexContent locale="tr" />
     </Suspense>
   )
