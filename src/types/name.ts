@@ -14,5 +14,5 @@ export type NameEntry = {
   reflection?: { de: string; tr: string; en: string };
   sourceNote?: { de: string; tr: string; en: string };
   source?: { de: string; tr: string; en: string };
-  contentReviewRequired: boolean;
+  scholarlyReviewed: boolean;
 }

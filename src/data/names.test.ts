@@ -20,7 +20,7 @@ describe('names data', () => {
   it('fills required multilingual fields and review flags', () => {
     for (const name of names) {
       expect(name.arabic).toBeTruthy()
-      expect(typeof name.contentReviewRequired).toBe('boolean')
+      expect(typeof name.scholarlyReviewed).toBe('boolean')
       for (const language of languages) {
         expect(name.transliteration[language]).toBeTruthy()
         expect(name.pronunciation[language]).toBeTruthy()
@@ -34,7 +34,20 @@ describe('names data', () => {
   })
 
   it('does not make invented source references', () => {
-    const content = JSON.stringify(names).toLowerCase()
+    // Exclude source and sourceNote fields — they are explicitly for scholarly attribution
+    // and may contain legitimate hadith references (e.g. Jami' at-Tirmidhi 3507).
+    // The check still guards against fabricated hadith citations in content fields
+    // (explanations, duaUsage, reflection, etc.) where they do not belong.
+    const fieldsToCheck = names.flatMap((n) => [
+      n.arabic,
+      ...languages.map((l) => n.explanations[l]),
+      ...languages.map((l) => n.duaUsage[l]),
+      ...languages.map((l) => n.reflection?.[l] ?? ''),
+      ...languages.map((l) => n.meanings[l]),
+      ...languages.map((l) => n.transliteration[l]),
+      ...languages.map((l) => n.pronunciation[l]),
+    ])
+    const content = JSON.stringify(fieldsToCheck).toLowerCase()
     // Detects formatted citation claims like "Bukhari 123" / "Hadith no. 456".
     expect(content).not.toMatch(/\b(?:sahih|bukhari|muslim|tirmidhi|hadith)\s*(?:no\.?|nr\.?|#)?\s*\d+\b/)
   })

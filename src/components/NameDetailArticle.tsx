@@ -3,7 +3,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { JsonLd } from '@/components/JsonLd'
 import { NameDetailStarToggle } from '@/components/NameDetailStarToggle'
 import { names } from '@/data/names'
-import { getLocalizedNamePath, getLocalizedNamesPath } from '@/lib/seo'
+import { getLocalizedNamePath, getLocalizedNamesPath, getLocalizedStaticPath } from '@/lib/seo'
 import { breadcrumbJsonLd, nameFaqJsonLd, nameLearningResourceJsonLd } from '@/lib/structuredData'
 import type { Language } from '@/types/language'
 import type { NameEntry } from '@/types/name'
@@ -23,8 +23,10 @@ const labels = {
     dua: 'Dua usage',
     reflection: 'Reflection',
     source: 'Source note',
-    review: 'Content review required',
-    reviewBody: 'This entry is marked for review before public religious reliance.',
+    review: 'Not scholar-reviewed',
+    reviewBody: 'This information draws on open sources and has not been reviewed by a qualified scholar.',
+    reviewContact: 'Found an error, or are you a scholar able to help review?',
+    reviewContactLink: 'Get in touch',
     previous: 'Previous name',
     next: 'Next name',
     related: 'Related names',
@@ -48,8 +50,10 @@ const labels = {
     dua: 'Dua-Hinweis',
     reflection: 'Reflexion',
     source: 'Quellenhinweis',
-    review: 'Inhaltliche Prüfung erforderlich',
-    reviewBody: 'Dieser Eintrag ist vor öffentlicher religiöser Verwendung zur Prüfung markiert.',
+    review: 'Wissenschaftlich ungeprüft',
+    reviewBody: 'Diese Angaben stützen sich auf offene Quellen und wurden nicht von einem qualifizierten Gelehrten geprüft.',
+    reviewContact: 'Fehler gefunden oder sind Sie ein Gelehrter, der bei der Prüfung helfen kann?',
+    reviewContactLink: 'Kontaktieren Sie uns',
     previous: 'Vorheriger Name',
     next: 'Nächster Name',
     related: 'Verwandte Namen',
@@ -73,8 +77,10 @@ const labels = {
     dua: 'Dua kullanımı',
     reflection: 'Tefekkür',
     source: 'Kaynak notu',
-    review: 'İçerik incelemesi gerekli',
-    reviewBody: 'Bu kayıt, kamuya açık dini kullanım öncesi inceleme gerektirir.',
+    review: 'Alim incelemesinden geçmemiştir',
+    reviewBody: 'Bu bilgiler açık kaynaklara dayanmaktadır ve yetkin bir alim tarafından incelenmemiştir.',
+    reviewContact: 'Bir hata buldunuz veya incelemeye yardımcı olabilecek bir alim misiniz?',
+    reviewContactLink: 'Bize ulaşın',
     previous: 'Önceki isim',
     next: 'Sonraki isim',
     related: 'İlgili isimler',
@@ -149,17 +155,23 @@ export function NameDetailArticle({ name, locale }: { name: NameEntry; locale: L
         </dl>
       </header>
 
-      {name.contentReviewRequired && (
-        <section className="rounded-lg border border-danger/40 bg-danger/10 p-4">
-          <h2 className="text-lg font-semibold text-primary">{text.review}</h2>
-          <p className="mt-2 text-sm leading-6 text-muted">{text.reviewBody}</p>
-        </section>
-      )}
-
       <InfoBlock title={text.qMeaning(localizedTransliteration)} body={name.explanations[locale]} />
       <InfoBlock title={text.qDua(localizedTransliteration)} body={name.duaUsage[locale]} />
       {name.reflection && <InfoBlock title={text.reflection} body={name.reflection[locale]} />}
       {name.sourceNote && <InfoBlock title={text.source} body={name.sourceNote[locale]} subtle={name.source ? name.source[locale] : undefined} />}
+      {!name.scholarlyReviewed && (
+          <section className="rounded-lg border border-danger/40 bg-danger/10 p-4">
+            <h2 className="text-lg font-semibold text-primary">{text.review}</h2>
+            <p className="mt-2 text-sm leading-6 text-muted">{text.reviewBody}</p>
+            <p className="mt-2 text-sm leading-6 text-muted">
+              {text.reviewContact}{' '}
+              <Link href={getLocalizedStaticPath('contact', locale)} className="text-gold underline hover:text-gold-muted">
+                {text.reviewContactLink}
+              </Link>
+              .
+            </p>
+          </section>
+      )}
 
       <nav className="grid gap-3 sm:grid-cols-2" aria-label={`${title} navigation`}>
         <Link className="btn-secondary" href={getLocalizedNamePath(locale, previous.slug)}>
