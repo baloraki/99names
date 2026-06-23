@@ -1152,14 +1152,14 @@ export const names: NameEntry[] = [
             "en": "Reflecting on this name frees the believer from the need for worldly validation. True 'Izzah' (honour) is found in servitude to Allah, protecting one from being a slave to the opinions of others."
         },
         "sourceNote": {
-            "de": "Hängt eng mit dem Begriff 'Izzah' zusammen. Sein direktes Gegenstück ist 'Al-Mudhill' (Der Demütigende).",
-            "tr": "El-Müzill isminin zıddıdır. İzzet, sadece güç değil, aynı zamanda kimsenin zarar veremeyeceği bir sağlamlık ve üstünlük manasına gelir.",
-            "en": "Linked to the concept of 'Izzat' (honour/might). It is traditionally paired with 'Al-Mudhill' to show the divine control over the rise and fall of dignity."
+            "de": "Der Qur'an-Vers belegt die Handlung des Ehrens/Erhöhens durch Allah; die isolierte Namensform 'Al-Muʿizz' stammt aus der traditionellen Liste und wird durch die Bedeutung des Verses gestützt.",
+            "tr": "Ayet Allah'ın dilediğini aziz kılmasını fiil olarak bildirir; 'El-Muizz' lafzı doğrudan müstakil isim olarak değil, geleneksel liste ve ayetin anlam alanı üzerinden desteklenir.",
+            "en": "The verse supports Allah's act of granting honor; the isolated name-form 'Al-Muʿizz' is traditional-list based and supported by the verse's meaning."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (3:26)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (3:26)",
-            "en": "Qur'anic reference / basis: (3:26)"
+            "de": "Traditionelle Listenbasis: Jami' at-Tirmidhi 3507; Handlungs-/Attributbasis im Qur'an: (3:26)",
+            "tr": "Geleneksel liste dayanağı: Câmiʿu't-Tirmizî 3507; Kur'an'da fiil/sıfat temeli: (3:26)",
+            "en": "Traditional list basis: Jami' at-Tirmidhi 3507; Qur'anic action/attribute basis: (3:26)"
         },
         "scholarlyReviewed": false
     },
@@ -1198,14 +1198,14 @@ export const names: NameEntry[] = [
             "en": "Reflecting on this name teaches that power and prestige are a trust. When that trust is betrayed through pride, Al-Mudhill restores justice by revealing the inherent weakness of the arrogant."
         },
         "sourceNote": {
-            "de": "Das direkte Gegenstück zu 'Al-Mu‘izz'. Beide Namen zeigen, dass Ehre und Demütigung Werkzeuge der göttlichen Erziehung und Gerechtigkeit sind.",
-            "tr": "El-Muizz isminin zıddıdır. Bu isim, Allah'ın mutlak iradesinin bir tecellisi olarak hak edenlerin itibarını sarsmasını ifade eder.",
-            "en": "Traditionally paired with 'Al-Mu‘izz'. These names together illustrate that true might and lowliness are determined solely by Allah’s wisdom and justice."
+            "de": "Der Qur'an-Vers belegt die Handlung des Erniedrigens durch Allah; die isolierte Namensform 'Al-Mudhill' ist traditionelle Listenform und kein eindeutiger direkter Namensbeleg aus dem Vers.",
+            "tr": "Ayet Allah'ın dilediğini zelil kılmasını fiil olarak bildirir; 'El-Müzill' lafzı geleneksel liste formudur ve ayette müstakil isim lafzı olarak geçmez.",
+            "en": "The verse supports Allah's act of abasing; the isolated name-form 'Al-Mudhill' is a traditional-list form and not a clear direct name occurrence in the verse."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (3:26)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (3:26)",
-            "en": "Qur'anic reference / basis: (3:26)"
+            "de": "Traditionelle Listenbasis: Jami' at-Tirmidhi 3507; Handlungs-/Attributbasis im Qur'an: (3:26)",
+            "tr": "Geleneksel liste dayanağı: Câmiʿu't-Tirmizî 3507; Kur'an'da fiil/sıfat temeli: (3:26)",
+            "en": "Traditional list basis: Jami' at-Tirmidhi 3507; Qur'anic action/attribute basis: (3:26)"
         },
         "scholarlyReviewed": false
     },
@@ -2330,7 +2330,7 @@ export const names: NameEntry[] = [
         "meanings": {
             "de": "Der Zeuge, der Allgegenwärtige",
             "tr": "Her şeye şahit olan",
-            "en": "The All-Witnessing, The Omnipresent"
+            "en": "The All-Witnessing, The Ever-Present"
         },
         "explanations": {
             "de": "Derjenige, dessen Zeugnis absolut ist. Er ist bei jedem Ereignis präsent und kennt die Wahrheit hinter jeder Aussage.",
@@ -2716,14 +2716,14 @@ export const names: NameEntry[] = [
             "en": "Reflection on Al-Mubdi’ fills the soul with awe for the sheer originality of the cosmos."
         },
         "sourceNote": {
-            "de": "Wird oft zusammen mit Al-Mu'id betrachtet.",
-            "tr": "Yaratılışın başlangıç noktasıdır.",
-            "en": "Focuses on the initiation of life and the cosmos."
+            "de": "Die angeführten Verse belegen, dass Allah die Schöpfung beginnen lässt; die Form 'Al-Mubdiʾ' wird hier als traditionelle Namensform mit Qur'anischer Handlungsbasis geführt.",
+            "tr": "Ayetler Allah'ın yaratmayı başlatmasını bildirir; 'El-Mübdi' burada Kur'anî fiil temeline dayanan geleneksel isim formu olarak verilmiştir.",
+            "en": "The cited verses support Allah's act of originating creation; 'Al-Mubdiʾ' is treated here as a traditional name-form with Qur'anic action basis."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (10:34) (27:64) (29:19) (85:13)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (10:34) (27:64) (29:19) (85:13)",
-            "en": "Qur'anic reference / basis: (10:34) (27:64) (29:19) (85:13)"
+            "de": "Traditionelle Listenbasis: Jami' at-Tirmidhi 3507; Handlungs-/Attributbasis im Qur'an: (10:34) (27:64) (29:19) (85:13)",
+            "tr": "Geleneksel liste dayanağı: Câmiʿu't-Tirmizî 3507; Kur'an'da fiil/sıfat temeli: (10:34) (27:64) (29:19) (85:13)",
+            "en": "Traditional list basis: Jami' at-Tirmidhi 3507; Qur'anic action/attribute basis: (10:34) (27:64) (29:19) (85:13)"
         },
         "scholarlyReviewed": false
     },
@@ -2762,14 +2762,14 @@ export const names: NameEntry[] = [
             "en": "Faith in Al-Mu’īd is the antidote to despair; nothing lost is truly gone if Allah chooses to restore it."
         },
         "sourceNote": {
-            "de": "Eng verknüpft mit dem Konzept der Auferstehung (Ma’ad).",
-            "tr": "Ebedi dönüşün ve dirilişin ismidir.",
-            "en": "Emphasizes the cyclical power of divine creation and resurrection."
+            "de": "Die angeführten Verse belegen, dass Allah die Schöpfung wiederholt/zurückbringt; die Form 'Al-Muʿīd' wird als traditionelle Namensform mit Qur'anischer Handlungsbasis geführt.",
+            "tr": "Ayetler Allah'ın yaratmayı iade etmesini bildirir; 'El-Muîd' burada Kur'anî fiil temeline dayanan geleneksel isim formu olarak verilmiştir.",
+            "en": "The cited verses support Allah's act of restoring/repeating creation; 'Al-Muʿīd' is treated as a traditional name-form with Qur'anic action basis."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (10:34) (27:64) (29:19) (85:13)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (10:34) (27:64) (29:19) (85:13)",
-            "en": "Qur'anic reference / basis: (10:34) (27:64) (29:19) (85:13)"
+            "de": "Traditionelle Listenbasis: Jami' at-Tirmidhi 3507; Handlungs-/Attributbasis im Qur'an: (10:34) (27:64) (29:19) (85:13)",
+            "tr": "Geleneksel liste dayanağı: Câmiʿu't-Tirmizî 3507; Kur'an'da fiil/sıfat temeli: (10:34) (27:64) (29:19) (85:13)",
+            "en": "Traditional list basis: Jami' at-Tirmidhi 3507; Qur'anic action/attribute basis: (10:34) (27:64) (29:19) (85:13)"
         },
         "scholarlyReviewed": false
     },
@@ -2808,14 +2808,14 @@ export const names: NameEntry[] = [
             "en": "Life is a sacred trust. To know Al-Muḥyī is to honor every living thing as a sign of His vitality."
         },
         "sourceNote": {
-            "de": "Bezieht sich auf die biologische und die spirituelle Existenz.",
-            "tr": "Hayatın yegane kaynağıdır.",
-            "en": "Attribute of active, life-bestowing creation."
+            "de": "Die Verse belegen Allahs Handlung des Lebendigmachens; 'Al-Muḥyī' ist hier als traditionelle Namensform mit direkter Bedeutungs-/Handlungsbasis geführt.",
+            "tr": "Ayetler Allah'ın hayat vermesini bildirir; 'El-Muhyî' burada doğrudan anlam/fiil temeline dayanan geleneksel isim formudur.",
+            "en": "The verses support Allah's act of giving life; 'Al-Muḥyī' is treated as a traditional name-form with direct meaning/action basis."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (7:158) (15:23) (30:50) (57:2)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (7:158) (15:23) (30:50) (57:2)",
-            "en": "Qur'anic reference / basis: (7:158) (15:23) (30:50) (57:2)"
+            "de": "Traditionelle Listenbasis: Jami' at-Tirmidhi 3507; Handlungs-/Attributbasis im Qur'an: (7:158) (15:23) (30:50) (57:2)",
+            "tr": "Geleneksel liste dayanağı: Câmiʿu't-Tirmizî 3507; Kur'an'da fiil/sıfat temeli: (7:158) (15:23) (30:50) (57:2)",
+            "en": "Traditional list basis: Jami' at-Tirmidhi 3507; Qur'anic action/attribute basis: (7:158) (15:23) (30:50) (57:2)"
         },
         "scholarlyReviewed": false
     },
@@ -2854,14 +2854,14 @@ export const names: NameEntry[] = [
             "en": "Reflection on Al-Mumīt encourages prioritizing eternal values over fleeting worldly pleasures."
         },
         "sourceNote": {
-            "de": "Ein notwendiges Gegenstück zu Al-Muḥyī.",
-            "tr": "Kudretin ölüm üzerindeki hükmüdür.",
-            "en": "Attribute reflecting divine authority over the cycle of mortality."
+            "de": "Die Verse belegen Allahs Handlung des Sterbenlassens; 'Al-Mumīt' ist hier als traditionelle Namensform mit Qur'anischer Handlungsbasis geführt.",
+            "tr": "Ayetler Allah'ın öldürmesini bildirir; 'El-Mümît' burada Kur'anî fiil temeline dayanan geleneksel isim formu olarak verilmiştir.",
+            "en": "The verses support Allah's act of causing death; 'Al-Mumīt' is treated as a traditional name-form with Qur'anic action basis."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (3:156) (7:158) (15:23) (57:2)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (3:156) (7:158) (15:23) (57:2)",
-            "en": "Qur'anic reference / basis: (3:156) (7:158) (15:23) (57:2)"
+            "de": "Traditionelle Listenbasis: Jami' at-Tirmidhi 3507; Handlungs-/Attributbasis im Qur'an: (3:156) (7:158) (15:23) (57:2)",
+            "tr": "Geleneksel liste dayanağı: Câmiʿu't-Tirmizî 3507; Kur'an'da fiil/sıfat temeli: (3:156) (7:158) (15:23) (57:2)",
+            "en": "Traditional list basis: Jami' at-Tirmidhi 3507; Qur'anic action/attribute basis: (3:156) (7:158) (15:23) (57:2)"
         },
         "scholarlyReviewed": false
     },
@@ -3038,14 +3038,14 @@ export const names: NameEntry[] = [
             "en": "Reflection on Al-Mājid inspires awe at the combination of divine power and boundless nobility."
         },
         "sourceNote": {
-            "de": "Nuance der Nobilität (Karam) innerhalb der Größe.",
-            "tr": "Şeref ve cömertliğin birleştiği makamdır.",
-            "en": "Similar to Al-Majid but emphasizes the outpouring of nobility."
+            "de": "Traditionell in der bekannten Namensliste genannt. Nicht mit 'Al-Majīd' zu verwechseln: (11:73) belegt 'Majīd', nicht die isolierte Form 'Mājid'. Daher wird dieser Eintrag nicht als direkter Qur'an-Namensbeleg geführt.",
+            "tr": "Geleneksel isim listesinde yer alır. 'El-Mecîd' ile karıştırılmamalıdır: (11:73) 'Mecîd' lafzını destekler, müstakil 'Mâcid' formunu değil. Bu yüzden doğrudan Kur'an ismi olarak gösterilmez.",
+            "en": "Traditionally included in the well-known list. It should not be confused with 'Al-Majīd': (11:73) supports 'Majīd', not the isolated form 'Mājid'. Therefore this entry is not presented as a direct Qur'anic name occurrence."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (11:73)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (11:73)",
-            "en": "Qur'anic reference / basis: (11:73)"
+            "de": "Traditionelle Listenbasis: Jami' at-Tirmidhi 3507; kein eindeutiger direkter Qur'an-Namensbeleg für die isolierte Form 'Al-Mājid'",
+            "tr": "Geleneksel liste dayanağı: Câmiʿu't-Tirmizî 3507; müstakil 'El-Mâcid' formu için açık doğrudan Kur'an lafzı yoktur",
+            "en": "Traditional list basis: Jami' at-Tirmidhi 3507; no clear direct Qur'anic name occurrence for the isolated form 'Al-Mājid'"
         },
         "scholarlyReviewed": false
     },
@@ -3604,7 +3604,7 @@ export const names: NameEntry[] = [
     {
         "id": 78,
         "slug": "al-muta-ali",
-        "arabic": "ٱلْمُتَعَالِي",
+        "arabic": "الْمُتَعَالِي",
         "transliteration": {
             "de": "Al-Muta'ālī",
             "tr": "El-Müteâlî",
@@ -3774,14 +3774,14 @@ export const names: NameEntry[] = [
             "en": "Reflecting on Al-Muntaqim reminds us that no injustice goes unnoticed and that ultimate accountability is inevitable."
         },
         "sourceNote": {
-            "de": "Wird im Koran meist im Kontext der Bestrafung von Unverbesserlichen genannt.",
-            "tr": "İlahi adalet ve ceza sıfatıdır.",
-            "en": "Signifies divine accountability and the protection of the moral order."
+            "de": "Die Qur'an-Stellen belegen Allahs Vergeltung/Gerechtigkeit gegenüber Unrecht; 'Al-Muntaqim' wird hier als traditionelle Namensform mit Qur'anischer Bedeutungsbasis geführt, nicht als eindeutiger isolierter Namensbeleg.",
+            "tr": "Ayetler Allah'ın zulme karşı intikam/adil karşılık vermesini bildirir; 'El-Müntakim' burada doğrudan müstakil isim lafzı değil, geleneksel isim formu ve anlam temeli olarak verilmiştir.",
+            "en": "The verses support Allah's retribution against wrongdoing; 'Al-Muntaqim' is treated as a traditional name-form with Qur'anic meaning basis, not as an unambiguous isolated name occurrence."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (32:22) (43:41) (44:16)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (32:22) (43:41) (44:16)",
-            "en": "Qur'anic reference / basis: (32:22) (43:41) (44:16)"
+            "de": "Traditionelle Listenbasis: Jami' at-Tirmidhi 3507; Handlungs-/Attributbasis im Qur'an: (32:22) (43:41) (44:16)",
+            "tr": "Geleneksel liste dayanağı: Câmiʿu't-Tirmizî 3507; Kur'an'da fiil/sıfat temeli: (32:22) (43:41) (44:16)",
+            "en": "Traditional list basis: Jami' at-Tirmidhi 3507; Qur'anic action/attribute basis: (32:22) (43:41) (44:16)"
         },
         "scholarlyReviewed": false
     },
@@ -4510,14 +4510,14 @@ export const names: NameEntry[] = [
             "en": "Reflection on Al-Warith demystifies material wealth. It teaches us to be generous stewards of our resources, knowing we cannot take them with us."
         },
         "sourceNote": {
-            "de": "Zentral für das Verständnis von Eigentum im Islam (Sure 15:23).",
-            "tr": "Mülkün gerçek ve ebedî sahibidir.",
-            "en": "Emphasizes that worldly power is transient and borrowed."
+            "de": "(15:23) belegt die göttliche Bedeutung des Erbens/Bleibens nach allem Geschaffenen; die Stelle steht in pluralischer Form ('Wir sind die Erben') und ist deshalb vorsichtig als Handlungs-/Attributbasis zu behandeln.",
+            "tr": "(15:23) Allah'ın her şeyden sonra baki kalan ve miras sahibi olan anlamını destekler; ifade çoğul biçimdedir ('Biz varisleriz'), bu yüzden müstakil isim lafzı olarak dikkatli kullanılmalıdır.",
+            "en": "(15:23) supports the divine meaning of inheriting/remaining after creation; the wording is plural ('We are the inheritors'), so it is treated cautiously as an action/attribute basis."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (15:23)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (15:23)",
-            "en": "Qur'anic reference / basis: (15:23)"
+            "de": "Traditionelle Listenbasis: Jami' at-Tirmidhi 3507; Handlungs-/Attributbasis im Qur'an: (15:23)",
+            "tr": "Geleneksel liste dayanağı: Câmiʿu't-Tirmizî 3507; Kur'an'da fiil/sıfat temeli: (15:23)",
+            "en": "Traditional list basis: Jami' at-Tirmidhi 3507; Qur'anic action/attribute basis: (15:23)"
         },
         "scholarlyReviewed": false
     },
