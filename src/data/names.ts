@@ -1,7 +1,7 @@
 import type {NameEntry} from '@/types/name'
 
 export const firstName: NameEntry = {
-    "id": 1,
+    "id": 0,
     "slug": "allah",
     "arabic": "الله",
     "transliteration": {
@@ -35,9 +35,9 @@ export const firstName: NameEntry = {
         "en": "Contemplating this name strengthens the understanding of the ultimate source of existence. True self-knowledge begins with the recognition of one's Creator."
     },
     "sourceNote": {
-        "de": "Dieser Name ist unübersetzbar und exklusiv für den Schöpfer reserviert. Er bildet die Basis, aus der alle anderen Namen hervorgehen.",
-        "tr": "İsimlerin sultanıdır (Lafza-i Celal); başka hiçbir varlık için kullanılamaz ve tüm güzel isimlerin merkezidir.",
-        "en": "The foundational name and the 'Name of Majesty'. It belongs uniquely to the Creator and is the origin from which all other names derive."
+        "de": "Der Eigenname Allahs ist unübersetzbar und exklusiv für den Schöpfer reserviert. Er wird hier bewusst separat geführt und nicht als zusätzlicher Eintrag der nummerierten Namenliste gezählt.",
+        "tr": "Allah lafzı tercüme edilemez ve yalnızca Yaratıcı'ya mahsustur. Burada bilinçli olarak ayrı tutulur ve numaralı isim listesine ek bir madde olarak sayılmaz.",
+        "en": "The proper name Allah is untranslatable and belongs uniquely to the Creator. It is intentionally kept separate here and is not counted as an additional entry in the numbered names list."
     },
     "source": {
         "de": "Im Koran erwähnt in: (1:1) (3:18)",
@@ -48,11 +48,12 @@ export const firstName: NameEntry = {
 };
 
 // Content policy for this dataset:
-// - Theology follows a Sunni Hanafi / Maturidi-compatible tanzih approach.
+// - Theology follows a Sunni Hanafi / Maturidi-compatible tanzih approach: Allah is unlike creation and is not described with body, place, direction, physical light, or created qualities.
 // - Qur'an 7:180 is the basis for calling upon Allah by His beautiful names.
-// - Sahih al-Bukhari 7392 and Sahih Muslim 2677 establish the ninety-nine-name merit in general.
-// - The common ordered list follows the well-known teaching order reported in Jami' at-Tirmidhi 3507; that ordered list is treated as pedagogical, not as an exclusive limit on Allah's names.
-// - Not every entry in the common ordered list is asserted here as an exact Qur'anic name; source fields therefore use cautious "reference / basis" wording.
+// - Sahih al-Bukhari 7392 and Sahih Muslim 2677 establish the general merit of Allah's ninety-nine names.
+// - The commonly taught ordered list is associated with Jami' at-Tirmidhi 3507; that listed narration is treated here as pedagogical/traditional, not as a definitive exclusive canon, because the listed narration is graded weak by some hadith scholars.
+// - The exported firstName object (Allah) is a standalone core name and must not be counted as an additional 100th list item in the UI.
+// - Not every entry in this dataset is asserted as an exact Qur'anic name. Some entries use a thematic Qur'anic basis, action/attribute basis, or traditional list basis.
 // - No fixed dhikr counts, guaranteed worldly effects, amulets, medical claims, or unsourced virtue claims are asserted.
 // - Every entry remains review-required before public religious publication; duaUsage must be phrased as a request to Allah, not as a guaranteed effect or causal formula.
 
@@ -1380,14 +1381,14 @@ export const names: NameEntry[] = [
             "en": "Reflecting on Al-Adl teaches us that nothing in the universe is haphazard. Divine justice ensures that no atom's weight of good or evil goes unnoticed, providing a profound sense of moral order."
         },
         "sourceNote": {
-            "de": "Ein Infinitiv (Substantiv), der als Name verwendet wird, was bedeutet: Er 'ist' die Gerechtigkeit selbst. Es bildet die ethische Basis des islamischen Weltbildes.",
-            "tr": "Bir sıfat değil, mastardır; yani adaletin bizzat kendisidir. Allah'ın her işinde mutlak bir nizam ve hakkaniyet olduğunu simgeler.",
-            "en": "A linguistic intensive: He is not just just, He is Justice itself. It emphasizes that His decrees are the very definition of what is right and balanced."
+            "de": "Traditionell in der bekannten Namensliste genannt. Die angeführte Qur'an-Stelle belegt Allahs vollkommene Wahrheit und Gerechtigkeit, ist aber kein eindeutiger direkter Namensbeleg für 'Al-Adl'.",
+            "tr": "Geleneksel isim listesinde yer alır. Verilen ayet Allah'ın kelamındaki doğruluk ve adaleti bildirir; ancak 'El-Adl' ismini doğrudan lafız olarak göstermez.",
+            "en": "Traditionally included in the well-known list. The cited Qur'anic verse supports Allah's perfect truth and justice, but it is not a clear direct occurrence of the name 'Al-Adl'."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (6:115)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (6:115)",
-            "en": "Qur'anic reference / basis: (6:115)"
+            "de": "Traditionelle Listenbasis; thematischer Qur'an-Bezug zur göttlichen Gerechtigkeit: (6:115)",
+            "tr": "Geleneksel liste dayanağı; ilahî adaletle ilgili Kur'anî tema: (6:115)",
+            "en": "Traditional list basis; thematic Qur'anic reference for divine justice: (6:115)"
         },
         "contentReviewRequired": false
     },
@@ -2300,14 +2301,14 @@ export const names: NameEntry[] = [
             "en": "A reminder that life is a cycle of awakening, and that the ultimate awakening is the Return to Him."
         },
         "sourceNote": {
-            "de": "Bezieht sich auf die physische und spirituelle Erweckung.",
-            "tr": "Yeniden dirilişin ve hidayetin müjdecisidir.",
-            "en": "Dual meaning: sending prophets and resurrecting souls."
+            "de": "Traditionell in der bekannten Namensliste genannt. Die Qur'an-Stelle belegt Allahs Auferweckung der Toten, ist aber kein eindeutiger direkter Namensbeleg für 'Al-Bā'ith'.",
+            "tr": "Geleneksel isim listesinde yer alır. Verilen ayet Allah'ın ölüleri diriltmesini bildirir; fakat 'El-Bâis' ismini doğrudan lafız olarak göstermez.",
+            "en": "Traditionally included in the well-known list. The cited verse establishes Allah's raising of the dead, but it is not a clear direct occurrence of the name 'Al-Bā'ith'."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (22:7)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (22:7)",
-            "en": "Qur'anic reference / basis: (22:7)"
+            "de": "Traditionelle Listenbasis; thematischer Qur'an-Bezug zur Auferweckung: (22:7)",
+            "tr": "Geleneksel liste dayanağı; yeniden diriltmeye dair Kur'anî tema: (22:7)",
+            "en": "Traditional list basis; thematic Qur'anic reference for resurrection: (22:7)"
         },
         "contentReviewRequired": false
     },
@@ -2990,14 +2991,14 @@ export const names: NameEntry[] = [
             "en": "Reflecting on Al-Wājid reminds us that God is always present and aware of our location and state."
         },
         "sourceNote": {
-            "de": "Drückt Fülle und ständige Wahrnehmung aus.",
-            "tr": "İlahi zenginlik ve buluş ismidir.",
-            "en": "Focuses on divine self-sufficiency and effortless perception."
+            "de": "Traditionell in der bekannten Namensliste genannt. Der Verweis auf (38:44) darf nicht als direkter Namensbeleg verstanden werden; er ist höchstens bedeutungsnah und muss vorsichtig behandelt werden.",
+            "tr": "Geleneksel isim listesinde yer alır. (38:44) doğrudan 'El-Vâcid' ismini göstermez; en fazla anlam ilişkisi açısından dikkatli kullanılabilir.",
+            "en": "Traditionally included in the well-known list. The reference to (38:44) should not be treated as a direct occurrence of the name; at most it is a meaning-related reference and must be used cautiously."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (38:44)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (38:44)",
-            "en": "Qur'anic reference / basis: (38:44)"
+            "de": "Traditionelle Listenbasis: Jami' at-Tirmidhi 3507; kein eindeutiger direkter Qur'an-Namensbeleg in (38:44)",
+            "tr": "Geleneksel liste dayanağı: Câmiʿu't-Tirmizî 3507; (38:44) içinde doğrudan Kur'anî isim lafzı yoktur",
+            "en": "Traditional list basis: Jami' at-Tirmidhi 3507; no clear direct Qur'anic name occurrence in (38:44)"
         },
         "contentReviewRequired": false
     },
@@ -3476,14 +3477,14 @@ export const names: NameEntry[] = [
             "en": "Az-Za-hir"
         },
         "meanings": {
-            "de": "Der Offenbare, der Sichtbare",
-            "tr": "Varlığı aşikâr olan",
-            "en": "The Manifest, The Evident"
+            "de": "Der Offenbare, der über allem Erscheinende",
+            "tr": "Varlığı delilleriyle aşikâr olan, her şeyin üstünde olan",
+            "en": "The Manifest, The Evident One"
         },
         "explanations": {
-            "de": "Derjenige, dessen Existenz durch Seine Zeichen in der Natur und im Universum vollkommen offensichtlich ist. Er steht über allem.",
-            "tr": "Eserleriyle, delilleriyle varlığı apaçık görünen; her şeyin üstünde galip olan.",
-            "en": "The One who is Manifest. His existence is clearly evidenced by His creation, and His power is triumphant over all. He is the Outward Reality."
+            "de": "Derjenige, dessen Existenz durch Seine Zeichen in der Schöpfung offensichtlich ist und der über allem steht. Dies meint keine körperliche Sichtbarkeit und keine räumliche Erscheinung.",
+            "tr": "Eserleriyle ve delilleriyle varlığı apaçık olan; her şeyin üstünde ve her şeye galip olan. Bu, cismanî bir görünürlük veya mekâna bağlı bir zuhur anlamına gelmez.",
+            "en": "The One whose existence is made evident through His signs in creation and who is above all. This does not imply bodily visibility or spatial manifestation."
         },
         "duaUsage": {
             "de": "Ya Ẓāhir, lass mich Deine Zeichen in der Schöpfung erkennen und stärke meinen Glauben durch das, was ich sehe.",
@@ -3496,9 +3497,9 @@ export const names: NameEntry[] = [
             "en": "To know Aẓ-Ẓāhir is to see the universe as a vast mirror reflecting the attributes of the Creator."
         },
         "sourceNote": {
-            "de": "Gegenstück zu Al-Bāṭin (76).",
-            "tr": "Aşikârlık ve galebe ismidir.",
-            "en": "Focuses on the objective signs of God's existence."
+            "de": "Gegenstück zu Al-Bāṭin. Tanzih-Hinweis: 'offenbar' bedeutet durch Zeichen und Wirkung erkennbar, nicht körperlich sichtbar.",
+            "tr": "El-Bâtın isminin karşılığıdır. Tenzih açısından 'zâhir', delillerle bilinir olmak demektir; bedensel görünürlük anlamına gelmez.",
+            "en": "Complementary to Al-Bāṭin. Tanzih note: 'manifest' means evident through signs and effects, not physically visible."
         },
         "source": {
             "de": "Koranischer Bezug / Grundlage: (57:3)",
@@ -3522,14 +3523,14 @@ export const names: NameEntry[] = [
             "en": "Al-Baa-tin"
         },
         "meanings": {
-            "de": "Der Verborgene, der Innerliche",
-            "tr": "Yüceliği gizli olan, her şeyin iç yüzünü bilen",
-            "en": "The Hidden, The Inward"
+            "de": "Der Verborgene, der dem Verstand nicht vollständig Erfassbare",
+            "tr": "Zâtı akılla kuşatılamayan, her şeyin iç yüzünü bilen",
+            "en": "The Hidden, The Inwardly Aware"
         },
         "explanations": {
-            "de": "Derjenige, dessen wahres Wesen dem Verstand verborgen bleibt und der zugleich das Innerste aller Dinge kennt.",
-            "tr": "Zatının hakikati akıllardan gizli olan, ancak her şeyin iç yüzüne, sırlarına vakıf olan.",
-            "en": "The One who is Hidden. His essence cannot be fully grasped by the senses or the mind, yet He is closer to things than they are to themselves. He is the Inward Reality."
+            "de": "Derjenige, dessen wahres Wesen den Sinnen und dem Verstand verborgen bleibt und der zugleich das Innerste aller Dinge vollkommen kennt.",
+            "tr": "Zâtının hakikati duyularla ve akılla kuşatılamayan; buna rağmen her şeyin iç yüzünü, sırlarını ve gizlisini eksiksiz bilen.",
+            "en": "The One whose true essence is hidden from the senses and cannot be fully encompassed by the intellect, while He perfectly knows the inward reality of all things."
         },
         "duaUsage": {
             "de": "Ya Bāṭin, reinige mein Inneres, das nur Du siehst, und schenke mir tiefes spirituelles Verständnis.",
@@ -3542,9 +3543,9 @@ export const names: NameEntry[] = [
             "en": "Reflection on Al-Bāṭin encourages inwardness and contemplation, reminding us that reality is more than what meets the eye."
         },
         "sourceNote": {
-            "de": "Beschreibt die Unbegreiflichkeit des göttlichen Wesens.",
-            "tr": "Gizlilik ve derinlik ismidir.",
-            "en": "Refers to the divine essence that lies beyond form and physical perception."
+            "de": "Beschreibt die Unbegreiflichkeit des göttlichen Wesens. Es ist keine räumliche oder körperliche Innerlichkeit gemeint.",
+            "tr": "İlâhî zâtın kuşatılamazlığını bildirir. Mekânsal veya bedensel bir içkinlik anlamına gelmez.",
+            "en": "Describes the incomprehensibility of the Divine Essence. It does not imply spatial or bodily inwardness."
         },
         "source": {
             "de": "Koranischer Bezug / Grundlage: (57:3)",
@@ -3923,7 +3924,7 @@ export const names: NameEntry[] = [
     },
     {
         "id": 85,
-        "slug": "dhul-dschalami-wal-ikram",
+        "slug": "dhul-dschalali-wal-ikram",
         "arabic": "ذُو الجَلَالِ وَالإِكْرَام",
         "transliteration": {
             "de": "Dhū al-Jalāli wa al-Ikrām",
@@ -4186,14 +4187,14 @@ export const names: NameEntry[] = [
             "en": "Reflecting on Al-Māni' helps build patience. We learn to say 'Alhamdulillah' even for the things we did not get."
         },
         "sourceNote": {
-            "de": "Bezeichnet Gott als den ultimativen Beschützer durch Prävention.",
-            "tr": "Hikmetli engel ve koruma ismidir.",
-            "en": "A name that illustrates divine protection through intervention."
+            "de": "Traditionell in der bekannten Namensliste genannt. Die Qur'an-Stelle belegt das Zurückhalten der Versorgung thematisch, ist aber kein eindeutiger direkter Namensbeleg für 'Al-Māni'.",
+            "tr": "Geleneksel isim listesinde yer alır. Verilen ayet rızkın engellenmesi/geri tutulması temasını destekler; ancak 'El-Mâni' ismini doğrudan lafız olarak göstermez.",
+            "en": "Traditionally included in the well-known list. The cited verse supports the theme of withholding provision, but it is not a clear direct occurrence of the name 'Al-Māni'."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (67:21)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (67:21)",
-            "en": "Qur'anic reference / basis: (67:21)"
+            "de": "Traditionelle Listenbasis; thematischer Qur'an-Bezug zum Zurückhalten der Versorgung: (67:21)",
+            "tr": "Geleneksel liste dayanağı; rızkın geri tutulmasına dair Kur'anî tema: (67:21)",
+            "en": "Traditional list basis; thematic Qur'anic reference for withholding provision: (67:21)"
         },
         "contentReviewRequired": false
     },
@@ -4222,9 +4223,9 @@ export const names: NameEntry[] = [
             "en": "Ad-Darr must not be understood as an isolated attribute of malice. It signifies that harm, trials, and loss are within Allah’s sovereign power and wisdom. He is the ultimate cause of all conditions, and this name is paired with An-Nafi to show that neither harm nor benefit occurs outside His decree."
         },
         "duaUsage": {
-            "de": "Wird angerufen, um Schutz vor den schädlichen Folgen eigener Fehler oder vor Prüfungen zu bitten, denen man nicht gewachsen ist. Man erkennt an, dass nur Er den Schaden abwenden kann, den Er zugelassen hat.",
-            "tr": "Ya Darr, hatalarımın zararlı sonuçlarından ve taşıyamayacağım imtihanlardan Sana sığınırım. Senden gelen her sıkıntıyı yine Senin rahmetinle gidermeni dilerim.",
-            "en": "Invoke with deep humility to ask for protection from trials and to acknowledge that as He is the one who allows hardship, He is also the only one who can remove it."
+            "de": "Dieser Name sollte nicht isoliert oder grob verwendet werden. Sinnvoll ist eine Bitte an Allah um Schutz vor Schaden, um Entfernung von Prüfungen und um Nutzen nach Erschwernis, besonders zusammen mit An-Nāfi'.",
+            "tr": "Bu isim tek başına kaba bir anlamla kullanılmamalıdır. Allah'tan zarardan korunma, imtihanların kaldırılması ve darlıktan sonra fayda istemek için özellikle En-Nâfi ismiyle birlikte düşünülmelidir.",
+            "en": "This name should not be used in an isolated or crude sense. It is best understood when asking Allah for protection from harm, removal of trials, and benefit after hardship, especially together with An-Nāfi'."
         },
         "reflection": {
             "de": "Dieser Name schützt vor der Vergötterung von Ursachen. Menschen oder Umstände können uns nur schaden, wenn Allah es zulässt. Dies befreit von der Furcht vor der Schöpfung und lenkt den Blick auf den Schöpfer.",
@@ -4232,14 +4233,14 @@ export const names: NameEntry[] = [
             "en": "Reflecting on Ad-Darr removes the fear of created things. It teaches that no person or system has ultimate power to harm unless the Creator permits it for a higher wisdom."
         },
         "sourceNote": {
-            "de": "Theologisch wird dieser Name stets paarweise mit An-Nafi erklärt, um ein einseitiges Gottesbild zu vermeiden.",
-            "tr": "Zatî bir kemal sıfatı olarak An-Nâfi ismiyle birlikte zikredilmesi edep gereğidir.",
-            "en": "Theologically paired with An-Nafi to maintain the balance of Divine attributes."
+            "de": "Traditionell in der bekannten Namensliste genannt. Theologisch nur im Gleichgewicht mit An-Nāfi' zu erklären; die Qur'an-Stelle ist ein thematischer Bezug, kein eindeutiger direkter Namensbeleg.",
+            "tr": "Geleneksel isim listesinde yer alır. Teolojik olarak En-Nâfi ile dengeli açıklanmalıdır; verilen ayet tematik bir dayanaktır, doğrudan isim lafzı değildir.",
+            "en": "Traditionally included in the well-known list. Theologically it should be explained in balance with An-Nāfi'; the cited verse is thematic, not a clear direct name occurrence."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (6:17)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (6:17)",
-            "en": "Qur'anic reference / basis: (6:17)"
+            "de": "Traditionelle Listenbasis; thematischer Qur'an-Bezug zu Schaden und Schutz: (6:17)",
+            "tr": "Geleneksel liste dayanağı; zarar ve korunmaya dair Kur'anî tema: (6:17)",
+            "en": "Traditional list basis; thematic Qur'anic reference for harm and protection: (6:17)"
         },
         "contentReviewRequired": false
     },
@@ -4278,14 +4279,14 @@ export const names: NameEntry[] = [
             "en": "Reflection on An-Nafi' teaches us to seek 'wholesome' benefit. We should evaluate our gains not just by profit, but by their alignment with truth and divine pleasure."
         },
         "sourceNote": {
-            "de": "Bildet mit Ad-Darr (91) eine theologische Einheit der Souveränität.",
-            "tr": "Hayrın ve menfaatin yegane kaynağı olduğunu vurgular.",
-            "en": "Complements Ad-Darr to show total control over all outcomes."
+            "de": "Traditionell in der bekannten Namensliste genannt. Die Qur'an-Stelle belegt Allahs Ausweitung und Verengung der Versorgung thematisch, ist aber kein eindeutiger direkter Namensbeleg für 'An-Nāfi'.",
+            "tr": "Geleneksel isim listesinde yer alır. Verilen ayet rızkın genişletilmesi ve daraltılması temasını destekler; ancak 'En-Nâfi' ismini doğrudan lafız olarak göstermez.",
+            "en": "Traditionally included in the well-known list. The cited verse supports the theme of expanding and restricting provision, but it is not a clear direct occurrence of the name 'An-Nāfi'."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (30:37)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (30:37)",
-            "en": "Qur'anic reference / basis: (30:37)"
+            "de": "Traditionelle Listenbasis; thematischer Qur'an-Bezug zu Versorgung und Nutzen: (30:37)",
+            "tr": "Geleneksel liste dayanağı; rızık ve fayda temasına dair Kur'anî ilişki: (30:37)",
+            "en": "Traditional list basis; thematic Qur'anic reference for provision and benefit: (30:37)"
         },
         "contentReviewRequired": false
     },
@@ -4304,14 +4305,14 @@ export const names: NameEntry[] = [
             "en": "an-NOOR"
         },
         "meanings": {
-            "de": "Das Licht, der Erleuchter",
-            "tr": "Nur olan, alemleri nurlandıran",
-            "en": "The Light, The Illuminator"
+            "de": "Der Lichtgebende, die Quelle der Rechtleitung",
+            "tr": "Hidayet nuru veren, hakikati görünür kılan",
+            "en": "The Light-Giver, The Source of Guidance"
         },
         "explanations": {
-            "de": "Allah ist das Licht der Himmel und der Erde. Er ist das metaphysische Licht, das die Existenz aus der Dunkelheit des Nichts hervorholt und den Herzen durch Rechtleitung Klarheit schenkt. Dieses 'Licht' wird ohne körperliche Form oder Richtung verstanden (Tanzih).",
-            "tr": "En-Nûr ismi Allah’ın göklerin ve yerin nuru olduğunu bildirir. O, varlığı aydınlatan, kalplere iman ışığı veren ve hakikati görünür kılandır. O'nun nuru mahlûkatın nuruna benzemez.",
-            "en": "An-Nur is the Light of the heavens and the earth. He is the one who makes things manifest, guides the lost out of darkness, and illuminates the hearts of believers with faith and understanding."
+            "de": "Allah ist das Licht der Himmel und der Erde im Sinne von Rechtleitung, Erhellung und Offenbarmachung der Wahrheit. Dieses Licht wird ohne Körperlichkeit, Richtung, Ort oder Ähnlichkeit mit erschaffenem Licht verstanden.",
+            "tr": "Allah göklerin ve yerin nurudur; bu, hidayet, hakikati açığa çıkarma ve kalpleri aydınlatma anlamında anlaşılır. O'nun nuru mahlûkatın nuruna benzemez; cisim, yön ve mekânla kayıtlı değildir.",
+            "en": "Allah is the Light of the heavens and the earth in the sense of guidance, illumination, and making truth manifest. This is understood without corporeality, direction, place, or resemblance to created light."
         },
         "duaUsage": {
             "de": "Wird angerufen, um Allah um Rechtleitung, Klarheit im Herzen und Schutz vor Verwirrung und Sünde zu bitten.",
@@ -4324,9 +4325,9 @@ export const names: NameEntry[] = [
             "en": "Reflecting on An-Nur reminds us that without divine guidance, the soul is in total darkness. Guidance is a light that requires a transparent and humble heart to be received."
         },
         "sourceNote": {
-            "de": "Basierend auf Sure An-Nur (24:35).",
-            "tr": "Kur'an-ı Kerim'de müstakil bir sureye adını veren yüce bir isimdir.",
-            "en": "Derived from the famous 'Verse of Light' in the Quran (24:35)."
+            "de": "Basierend auf dem Lichtvers (24:35). Tanzih-Hinweis: nicht als physisches Licht, Körper oder Richtung verstehen.",
+            "tr": "Nur ayetine (24:35) dayanır. Tenzih açısından fiziksel ışık, cisim veya yön anlamında anlaşılmamalıdır.",
+            "en": "Based on the Verse of Light (24:35). Tanzih note: it must not be understood as physical light, body, or direction."
         },
         "source": {
             "de": "Koranischer Bezug / Grundlage: (24:35)",
@@ -4600,14 +4601,14 @@ export const names: NameEntry[] = [
             "en": "Reflection on As-Sabur teaches us that strength is often shown through restraint. If the Creator is patient with us, we should strive to be patient with ourselves and others."
         },
         "sourceNote": {
-            "de": "Der letzte Name in der klassischen Aufzählung; er schließt den Kreis der göttlichen Gnade.",
-            "tr": "Cezada acele etmemek ve mühlet vermek O'nun şanındandır.",
-            "en": "A beautiful conclusion to the 99 Names, emphasizing Divine restraint and mercy."
+            "de": "Traditionell als letzter Name in der bekannten Aufzählung genannt. Die angeführten Qur'an-Stellen belegen Sabr/Geduld als Thema, aber nicht eindeutig 'As-Sabūr' als direkten Qur'an-Namen.",
+            "tr": "Geleneksel listede son isim olarak geçer. Verilen ayetler sabır temasını destekler; fakat 'Es-Sabûr' ismini doğrudan Kur'an lafzı olarak göstermez.",
+            "en": "Traditionally listed as the final name in the well-known enumeration. The cited Qur'anic verses support the theme of patience, but do not clearly present 'As-Sabūr' as a direct Qur'anic name."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (2:153) (3:200) (103:3)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (2:153) (3:200) (103:3)",
-            "en": "Qur'anic reference / basis: (2:153) (3:200) (103:3)"
+            "de": "Traditionelle Listenbasis: Jami' at-Tirmidhi 3507; thematischer Qur'an-Bezug zu Sabr/Geduld: (2:153) (3:200) (103:3)",
+            "tr": "Geleneksel liste dayanağı: Câmiʿu't-Tirmizî 3507; sabır temasına dair Kur'anî bağlantı: (2:153) (3:200) (103:3)",
+            "en": "Traditional list basis: Jami' at-Tirmidhi 3507; thematic Qur'anic reference for patience: (2:153) (3:200) (103:3)"
         },
         "contentReviewRequired": false
     }
