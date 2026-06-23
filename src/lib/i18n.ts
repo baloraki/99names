@@ -382,8 +382,8 @@ const de: Dict = {
   },
   privacy: {
     title: 'Datenschutz',
-    p1: 'Diese App speichert Sprache, Fortschritt, Favoriten, zuletzt angesehene Namen und den lokalen Status optionaler Push-Erinnerungen im Browser über localStorage.',
-    p2: 'Es werden keine Tracking-Cookies verwendet. Push-Benachrichtigungen sind optional und müssen im Browser ausdrücklich aktiviert werden.',
+    p1: 'Diese App speichert Sprache, Fortschritt, Favoriten und zuletzt angesehene Namen im Browser über localStorage.',
+    p2: 'Es werden keine Tracking-Cookies verwendet.',
     p3: 'Das Kontaktformular sendet die eingegebenen Daten an Web3Forms. Der öffentliche Web3Forms-Schlüssel ist im Client sichtbar.',
   },
   imprint: {
@@ -580,8 +580,8 @@ const tr: Dict = {
   },
   privacy: {
     title: 'Gizlilik',
-    p1: 'Bu uygulama dili, ilerlemeyi, favorileri, son görüntülenen isimleri ve isteğe bağlı push hatırlatmalarının yerel durumunu tarayıcıda localStorage ile saklar.',
-    p2: 'Takip çerezleri kullanılmaz. Push bildirimleri isteğe bağlıdır ve tarayıcıda açıkça etkinleştirilmelidir.',
+    p1: 'Bu uygulama dili, ilerlemeyi, favorileri ve son görüntülenen isimleri tarayıcıda localStorage ile saklar.',
+    p2: 'Takip çerezleri kullanılmaz.',
     p3: 'İletişim formu girilen verileri Web3Forms hizmetine gönderir. Genel Web3Forms anahtarı istemci tarafında görünür.',
   },
   imprint: {
@@ -778,8 +778,8 @@ const en: Dict = {
   },
   privacy: {
     title: 'Privacy',
-    p1: 'This app stores language, progress, favorites, last viewed names, and local state for optional push reminders in the browser using localStorage.',
-    p2: 'No tracking cookies are used. Push notifications are optional and must be explicitly enabled in the browser.',
+    p1: 'This app stores language, progress, favorites, and last viewed names in the browser using localStorage.',
+    p2: 'No tracking cookies are used.',
     p3: 'The contact form sends entered data to Web3Forms. The public Web3Forms key is visible in the client.',
   },
   imprint: {

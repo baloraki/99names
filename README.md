@@ -105,7 +105,6 @@ The content is source-aware and open for review. Corrections, source improvement
 ## Privacy Notes
 
 The app stores language and learning state in `localStorage`.
-If push reminders are enabled, push subscription metadata and delivery logs are stored in Supabase.
 Vercel Analytics and Vercel Speed Insights are enabled for aggregate usage/performance insights.
 No tracking cookies are used by default.
 

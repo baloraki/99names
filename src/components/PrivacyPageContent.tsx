@@ -21,7 +21,7 @@ type Paragraph = string | { before: string; isEmail: true; after: string }
 type PolicyContent = {
   title: string
   lastUpdated: string
-  sections: (operatorName: string, operatorAddress: string, supabaseRegion: string) => { heading: string; paragraphs: Paragraph[] }[]
+  sections: (operatorName: string, operatorAddress: string) => { heading: string; paragraphs: Paragraph[] }[]
 }
 
 function getOperatorAddress(): string {
@@ -37,7 +37,7 @@ const content: Record<Language, PolicyContent> = {
   de: {
     title: 'Datenschutzerklärung',
     lastUpdated: 'Stand: Mai 2026',
-    sections: (operatorName, operatorAddress, supabaseRegion) => [
+    sections: (operatorName, operatorAddress) => [
       {
         heading: '1. Verantwortlicher',
         paragraphs: [
@@ -54,33 +54,14 @@ const content: Record<Language, PolicyContent> = {
       {
         heading: '3. Lokaler Browserspeicher (localStorage)',
         paragraphs: [
-          'Diese App speichert folgende Daten lokal im Browserspeicher (localStorage) Ihres Geräts: Lernfortschritt (welche Namen als gelernt markiert wurden), Favoritenliste, zuletzt angesehene Namen, den lokalen Status optionaler Push-Erinnerungen sowie die Spracheinstellung unter dem Schlüssel app:v1:language (siehe Abschnitt 9).',
+          'Diese App speichert folgende Daten lokal im Browserspeicher (localStorage) Ihres Geräts: Lernfortschritt (welche Namen als gelernt markiert wurden), Favoritenliste, zuletzt angesehene Namen sowie die Spracheinstellung unter dem Schlüssel app:v1:language (siehe Abschnitt 7).',
           'Diese lokalen Daten verlassen Ihr Gerät nicht. Sie können diese Daten jederzeit selbst löschen – über die Einstellungsseite der App oder direkt in Ihren Browsereinstellungen.',
           'Die Nutzung des lokalen Browserspeichers erfolgt ausschliesslich zur Bereitstellung der von Ihnen gewünschten App-Funktionen. Es findet keine Nutzung zu Werbe-, Tracking- oder Profilingzwecken statt.',
           'Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bereitstellung einer funktionsfähigen Anwendung).',
         ],
       },
       {
-        heading: '4. Push-Benachrichtigungen',
-        paragraphs: [
-          'Wenn Sie Push-Erinnerungen ausdrücklich aktivieren, speichern wir den Browser-Push-Endpunkt, technische Push-Schlüssel, das gewählte Erinnerungsintervall, die Zeitzone, den User-Agent, Versandzeitpunkte, Fehlerstatus und technische Zustellprotokolle in Supabase.',
-          'Diese Daten werden ausschliesslich verwendet, um die von Ihnen gewünschten Lern-Erinnerungen zuzustellen, fehlerhafte Abonnements zu erkennen und ungültige Push-Abonnements zu deaktivieren. Da diese Website religiöse Lerninhalte betrifft, können aktivierte Push-Erinnerungen Rückschlüsse auf ein religiöses Interesse zulassen. Durch das bewusste Aktivieren der Push-Erinnerungen willigen Sie ausdrücklich in die Verarbeitung dieser Daten ein, einschliesslich solcher, die Rückschlüsse auf Ihre religiöse Überzeugung zulassen können. Push-Erinnerungen sind vollständig freiwillig, werden nur nach ausdrücklicher Aktivierung eingerichtet, nicht zur Profilbildung genutzt und nicht mit einem Benutzerkonto verknüpft.',
-          'Je nach Browser und Betriebssystem wird die technische Zustellung der Push-Benachrichtigung über Push-Dienste des jeweiligen Browser- oder Betriebssystem-Anbieters abgewickelt, z. B. durch Apple, Google, Mozilla oder Microsoft.',
-          'Sie können Push-Benachrichtigungen jederzeit in der App oder in den Browser- bzw. Geräteeinstellungen deaktivieren. Beim Deaktivieren wird das Push-Abonnement serverseitig deaktiviert, soweit dies technisch möglich ist.',
-          'Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO für die Einwilligung in die Aktivierung der Push-Erinnerungen. Da Religionszugehörigkeit oder religiöses Interesse eine besondere Kategorie personenbezogener Daten nach Art. 9 DSGVO darstellt, gilt ergänzend Art. 9 Abs. 2 lit. a DSGVO (ausdrückliche Einwilligung). Die Einwilligung erteilen Sie durch das aktive Aktivieren der Push-Funktion. Für den sicheren technischen Betrieb, die Fehlerbehandlung und die Deaktivierung ungültiger Abonnements gilt Art. 6 Abs. 1 lit. f DSGVO.',
-        ],
-      },
-      {
-        heading: '5. Supabase',
-        paragraphs: [
-          'Zur Speicherung optionaler Push-Abonnements verwenden wir Supabase, einen Dienst der Supabase Inc. Supabase stellt die technische Datenbank-Infrastruktur bereit.',
-          'Gespeichert werden nur die für Push-Erinnerungen erforderlichen technischen Daten, insbesondere Push-Endpunkt, Push-Schlüssel, Erinnerungsintervall, Zeitzone, technische Zustellinformationen und Fehlerstatus.',
-          `Mit Supabase wird, soweit gesetzlich erforderlich, ein Auftragsverarbeitungsvertrag abgeschlossen. Die Supabase-Projektregion ist: ${supabaseRegion}. Soweit Daten in Drittländer übermittelt werden, erfolgt dies nach den jeweils anwendbaren Datenschutzgarantien.`,
-          'Die gespeicherten Push-Daten werden gelöscht oder deaktiviert, wenn Sie Push-Benachrichtigungen deaktivieren, das Abonnement ungültig wird oder die Speicherung für den genannten Zweck nicht mehr erforderlich ist.',
-        ],
-      },
-      {
-        heading: '6. Vercel Analytics & Speed Insights',
+        heading: '4. Vercel Analytics & Speed Insights',
         paragraphs: [
           'Diese Website verwendet Vercel Analytics und Vercel Speed Insights, Dienste der Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA.',
           'Vercel Analytics erfasst nach Anbieterangaben cookielose, datensparsame Nutzungsdaten, z. B. aufgerufene Seiten, ungefähre geografische Region, Gerätetyp und Herkunft des Besuchs. Vercel Speed Insights misst Seitenlade-Performance und technische Leistungswerte.',
@@ -91,7 +72,7 @@ const content: Record<Language, PolicyContent> = {
         ],
       },
       {
-        heading: '7. Simple Analytics',
+        heading: '5. Simple Analytics',
         paragraphs: [
           'Wir nutzen Simple Analytics (Simple Analytics B.V., Niederlande, https://www.simpleanalytics.com) zur datenschutzfreundlichen Reichweitenmessung.',
           'Simple Analytics setzt keine Cookies, erstellt keine geräteübergreifenden Profile und überträgt keine Daten in Drittländer außerhalb der EU/des EWR. Erhoben werden anonymisierte, aggregierte Statistiken (z. B. Seitenaufrufe, Referrer, ungefähres Land aus der gekürzten IP-Adresse, Browser- und Geräte-Klasse). IP-Adressen werden nur kurzzeitig im Speicher verarbeitet und nicht gespeichert. Es entstehen keine personenbezogenen Profile.',
@@ -100,7 +81,7 @@ const content: Record<Language, PolicyContent> = {
         ],
       },
       {
-        heading: '8. Kontaktformular (Web3Forms)',
+        heading: '6. Kontaktformular (Web3Forms)',
         paragraphs: [
           'Wenn Sie das Kontaktformular nutzen, werden Name, E-Mail-Adresse und Ihre Nachricht über den Dienst Web3Forms (https://web3forms.com) an unsere E-Mail-Adresse übermittelt.',
           'Web3Forms speichert Formular-Einsendungen nach eigenen Angaben 30 Tage (Free-Plan) bzw. 1 Jahr (Pro-Plan), bevor sie automatisch gelöscht werden. Die Server von Web3Forms befinden sich nach eigenen Angaben in der Region US-East (USA). Da für die USA kein Angemessenheitsbeschluss der EU-Kommission besteht und Web3Forms nicht unter dem EU-U.S. Data Privacy Framework zertifiziert ist, stellt dies eine Drittlandübermittlung ohne gleichwertiges Schutzniveau dar. Hinweis auf mögliche Risiken: US-Behörden können unter bestimmten Voraussetzungen (z. B. nach FISA 702) auf bei US-Anbietern gespeicherte Daten zugreifen.',
@@ -111,24 +92,24 @@ const content: Record<Language, PolicyContent> = {
         ],
       },
       {
-        heading: '9. Lokaler Speicher und vergleichbare Technologien',
+        heading: '7. Lokaler Speicher und vergleichbare Technologien',
         paragraphs: [
           'Diese Website speichert Ihre gewählte Sprache (Deutsch, Englisch oder Türkisch) im localStorage unter dem Schlüssel app:v1:language, damit die Website in Ihrer bevorzugten Sprache angezeigt wird.',
           'Es werden keine Session-, Tracking- oder Marketing-Cookies verwendet.',
           'Der localStorage-Eintrag app:v1:language enthält nur den Sprachcode und wird nicht zur Nutzeridentifikation oder Profilbildung verwendet.',
           'Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bereitstellung einer benutzerfreundlichen und sprachkonsistenten Anwendung). Da die Speicherung ausschliesslich der Funktionalität der Website dient und die Privatsphäre der Nutzer nicht beeinträchtigt, ist keine aktive Einwilligung erforderlich.',
-          'Für weitere grundlegende App-Funktionen wird ebenfalls localStorage verwendet, z. B. für Lernfortschritt, Favoriten und lokale Erinnerungseinstellungen. Details siehe Abschnitt 3.',
+          'Für weitere grundlegende App-Funktionen wird ebenfalls localStorage verwendet, z. B. für Lernfortschritt und Favoriten. Details siehe Abschnitt 3.',
         ],
       },
       {
-        heading: '10. Server-Logs',
+        heading: '8. Server-Logs',
         paragraphs: [
           'Der Hosting-Anbieter (Vercel Inc.) kann technische Zugriffsdaten protokollieren, z. B. IP-Adresse, Zeitstempel, abgerufene URL und HTTP-Statuscode. Diese Protokolldaten werden in der Regel für max. 30 Tage gespeichert. Sie werden zur Bereitstellung, Sicherheit und Fehleranalyse der Website verarbeitet und nicht für Marketing- oder Profilingzwecke genutzt.',
           'Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Sicherstellung des technischen Betriebs, der Sicherheit und der Fehleranalyse).',
         ],
       },
       {
-        heading: '11. Ihre Rechte',
+        heading: '9. Ihre Rechte',
         paragraphs: [
           'Sie haben nach der DSGVO folgende Rechte gegenüber dem Verantwortlichen:',
           '• Recht auf Auskunft (Art. 15 DSGVO)\n• Recht auf Berichtigung (Art. 16 DSGVO)\n• Recht auf Löschung (Art. 17 DSGVO)\n• Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)\n• Recht auf Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)\n• Recht auf Datenübertragbarkeit (Art. 20 DSGVO)',
@@ -137,7 +118,7 @@ const content: Record<Language, PolicyContent> = {
         ],
       },
       {
-        heading: '12. Änderungen dieser Datenschutzerklärung',
+        heading: '10. Änderungen dieser Datenschutzerklärung',
         paragraphs: [
           'Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen, um sie stets den aktuellen rechtlichen Anforderungen und den tatsächlich eingesetzten Funktionen anzupassen. Bitte prüfen Sie bei regelmässigen Besuchen die aktuelle Fassung.',
         ],
@@ -148,7 +129,7 @@ const content: Record<Language, PolicyContent> = {
   en: {
     title: 'Privacy Policy',
     lastUpdated: 'Last updated: May 2026',
-    sections: (operatorName, operatorAddress, supabaseRegion) => [
+    sections: (operatorName, operatorAddress) => [
       {
         heading: '1. Data controller',
         paragraphs: [
@@ -165,33 +146,14 @@ const content: Record<Language, PolicyContent> = {
       {
         heading: '3. Local browser storage (localStorage)',
         paragraphs: [
-          'This app stores the following data in the local browser storage (localStorage) of your device: learning progress (which names have been marked as learned), favourites list, most recently viewed names, local state for optional push reminders, and the language preference under the key app:v1:language (see section 9).',
+          'This app stores the following data in the local browser storage (localStorage) of your device: learning progress (which names have been marked as learned), favourites list, most recently viewed names, and the language preference under the key app:v1:language (see section 7).',
           "This local data does not leave your device. You can delete it at any time via the app's Settings page or directly in your browser settings.",
           'Local browser storage is used only to provide the app functions requested by you. It is not used for advertising, tracking, or profiling purposes.',
           'Legal basis: Art. 6(1)(f) GDPR (legitimate interest in providing a functioning application).',
         ],
       },
       {
-        heading: '4. Push notifications',
-        paragraphs: [
-          'If you explicitly enable push reminders, we store the browser push endpoint, technical push keys, selected reminder interval, timezone, user agent, delivery timestamps, failure state, and technical delivery logs in Supabase.',
-          'This data is used exclusively to deliver the learning reminders requested by you, detect failed subscriptions, and disable invalid push subscriptions. Because this website covers religious learning content, activated reminders can allow inferences about religious interest. By consciously activating push reminders, you explicitly consent to the processing of data that may allow inferences about your religious beliefs. Push reminders are fully voluntary, are only set up after explicit activation, are not used for profiling, and are not linked to a user account.',
-          'Depending on your browser and operating system, the technical delivery of push notifications may be handled through push services provided by the respective browser or operating system provider, such as Apple, Google, Mozilla, or Microsoft.',
-          'You can disable push notifications at any time in the app or in your browser or device settings. When disabled, the push subscription is deactivated on the server side where technically possible.',
-          'Legal basis: Art. 6(1)(a) GDPR for consent to enabling push reminders. Because religious affiliation or interest constitutes a special category of personal data under Art. 9 GDPR, Art. 9(2)(a) GDPR (explicit consent) applies in addition. You grant consent by actively enabling the push feature. Art. 6(1)(f) GDPR applies to secure technical operation, error handling, and deactivation of invalid subscriptions.',
-        ],
-      },
-      {
-        heading: '5. Supabase',
-        paragraphs: [
-          'We use Supabase, a service provided by Supabase Inc., to store optional push subscriptions. Supabase provides the technical database infrastructure.',
-          'Only the technical data required for push reminders is stored, in particular the push endpoint, push keys, reminder interval, timezone, technical delivery information, and failure state.',
-          `Where legally required, a data processing agreement is concluded with Supabase. The configured Supabase project region is: ${supabaseRegion}. Where data is transferred to third countries, this is done under the applicable data protection safeguards.`,
-          'Stored push data is deleted or deactivated when you disable push notifications, when the subscription becomes invalid, or when storage is no longer necessary for the stated purpose.',
-        ],
-      },
-      {
-        heading: '6. Vercel Analytics & Speed Insights',
+        heading: '4. Vercel Analytics & Speed Insights',
         paragraphs: [
           'This website uses Vercel Analytics and Vercel Speed Insights, services provided by Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA.',
           'According to Vercel, Vercel Analytics collects cookie-free, data-minimised usage data, such as pages visited, approximate geographic region, device type, and referral source. Vercel Speed Insights measures page-load performance and technical performance metrics.',
@@ -202,7 +164,7 @@ const content: Record<Language, PolicyContent> = {
         ],
       },
       {
-        heading: '7. Simple Analytics',
+        heading: '5. Simple Analytics',
         paragraphs: [
           'This website uses Simple Analytics (Simple Analytics B.V., Netherlands, https://www.simpleanalytics.com) for privacy-friendly reach measurement.',
           'Simple Analytics sets no cookies, creates no cross-device profiles, and does not transfer data to third countries outside the EU/EEA. Anonymised, aggregated statistics are collected (e.g. page views, referrer, approximate country derived from the truncated IP address, browser and device class). IP addresses are processed only briefly in memory and are not stored. No personal profiles are created.',
@@ -211,7 +173,7 @@ const content: Record<Language, PolicyContent> = {
         ],
       },
       {
-        heading: '8. Contact form (Web3Forms)',
+        heading: '6. Contact form (Web3Forms)',
         paragraphs: [
           'When you use the contact form, your name, email address, and message are transmitted to our email address via the Web3Forms service (https://web3forms.com).',
           'According to Web3Forms, form submissions are stored for 30 days (Free plan) or 1 year (Pro plan), after which they are automatically deleted. Web3Forms states that its servers are located in the US-East region (USA). Because the European Commission has not issued an adequacy decision for the United States and Web3Forms is not certified under the EU–U.S. Data Privacy Framework, this constitutes a third-country transfer without an equivalent level of data protection. Risk notice: US authorities may, under certain conditions (e.g. under FISA 702), access data stored with US-based providers.',
@@ -222,24 +184,24 @@ const content: Record<Language, PolicyContent> = {
         ],
       },
       {
-        heading: '9. Local storage and similar technologies',
+        heading: '7. Local storage and similar technologies',
         paragraphs: [
           'This website stores your chosen language (English, German, or Turkish) in localStorage under the key app:v1:language, so the site is shown in your preferred language.',
           'No session, tracking, or marketing cookies are used.',
           'The app:v1:language localStorage entry contains only the language code and is not used to identify or profile users.',
           'Legal basis: Art. 6(1)(f) GDPR (legitimate interest in providing a user-friendly and language-consistent application). Because this storage serves a purely functional purpose and does not affect user privacy, no active consent is required.',
-          'For other basic app functions, local browser storage (localStorage) is also used, for example for learning progress, favourites, and local reminder settings. See section 3 for details.',
+          'For other basic app functions, local browser storage (localStorage) is also used, for example for learning progress and favourites. See section 3 for details.',
         ],
       },
       {
-        heading: '10. Server logs',
+        heading: '8. Server logs',
         paragraphs: [
           'The hosting provider (Vercel Inc.) may log technical access data, such as IP address, timestamp, requested URL, and HTTP status code. These logs are typically retained for a maximum of 30 days. If server-side functions, cron jobs, or API routes run on Vercel, technical access data and function logs may also be processed for operation, security, and error analysis. This data is not used for marketing or profiling purposes.',
           'Legal basis: Art. 6(1)(f) GDPR (legitimate interest in ensuring technical operation, security, and error analysis).',
         ],
       },
       {
-        heading: '11. Your rights',
+        heading: '9. Your rights',
         paragraphs: [
           'Under the GDPR you have the following rights against the data controller:',
           '• Right of access (Art. 15 GDPR)\n• Right to rectification (Art. 16 GDPR)\n• Right to erasure (Art. 17 GDPR)\n• Right to restriction of processing (Art. 18 GDPR)\n• Right to object to processing (Art. 21 GDPR)\n• Right to data portability (Art. 20 GDPR)',
@@ -248,7 +210,7 @@ const content: Record<Language, PolicyContent> = {
         ],
       },
       {
-        heading: '12. Changes to this privacy policy',
+        heading: '10. Changes to this privacy policy',
         paragraphs: [
           'We reserve the right to update this privacy policy to reflect legal requirements and the functions actually used on this website. Please check this page periodically for the current version.',
         ],
@@ -259,7 +221,7 @@ const content: Record<Language, PolicyContent> = {
   tr: {
     title: 'Gizlilik Politikası',
     lastUpdated: 'Son güncelleme: Mayıs 2026',
-    sections: (operatorName, operatorAddress, supabaseRegion) => [
+    sections: (operatorName, operatorAddress) => [
       {
         heading: '1. Veri sorumlusu',
         paragraphs: [
@@ -276,33 +238,14 @@ const content: Record<Language, PolicyContent> = {
       {
         heading: '3. Yerel tarayıcı depolama alanı (localStorage)',
         paragraphs: [
-          'Bu uygulama aşağıdaki verileri cihazınızın yerel tarayıcı belleğinde (localStorage) saklar: öğrenme ilerleme durumu (hangi isimlerin öğrenildi olarak işaretlendiği), favori listesi, en son görüntülenen isimler, isteğe bağlı push hatırlatmaları için yerel durum ve app:v1:language anahtarı altında dil tercihi (bkz. bölüm 9).',
+          'Bu uygulama aşağıdaki verileri cihazınızın yerel tarayıcı belleğinde (localStorage) saklar: öğrenme ilerleme durumu (hangi isimlerin öğrenildi olarak işaretlendiği), favori listesi, en son görüntülenen isimler ve app:v1:language anahtarı altında dil tercihi (bkz. bölüm 7).',
           'Bu yerel veriler cihazınızı terk etmez. Uygulamanın Ayarlar sayfasından veya doğrudan tarayıcı ayarlarınızdan bu verileri istediğiniz zaman silebilirsiniz.',
           'Yerel tarayıcı depolama alanı yalnızca talep ettiğiniz uygulama işlevlerini sunmak için kullanılır. Reklam, izleme veya profil oluşturma amacıyla kullanılmaz.',
           'Hukuki dayanak: GDPR Madde 6(1)(f) – işlevsel bir uygulama sunmaya yönelik meşru menfaat.',
         ],
       },
       {
-        heading: '4. Push bildirimleri',
-        paragraphs: [
-          'Push hatırlatmalarını açıkça etkinleştirirseniz, tarayıcı push uç noktasını, teknik push anahtarlarını, seçilen hatırlatma aralığını, saat dilimini, kullanıcı aracısı bilgisini, gönderim zamanlarını, hata durumunu ve teknik teslimat günlüklerini Supabase içinde saklarız.',
-          'Bu veriler yalnızca talep ettiğiniz öğrenme hatırlatmalarını göndermek, başarısız abonelikleri tespit etmek ve geçersiz push aboneliklerini devre dışı bırakmak için kullanılır. Bu web sitesi dini öğrenme içerikleri sunduğundan, etkinleştirilen push hatırlatmaları dini bir ilgi olduğuna dair çıkarımlar yapılmasına olanak tanıyabilir. Push hatırlatmalarını bilinçli olarak etkinleştirerek, dini inançlarınıza ilişkin çıkarımlar içerebilecek verilerin işlenmesine açıkça onay vermiş olursunuz. Push hatırlatmaları tamamen gönüllülük esasına dayanır, yalnızca açık etkinleştirme sonrasında kurulur, profil oluşturma amacıyla kullanılmaz ve bir kullanıcı hesabıyla ilişkilendirilmez.',
-          'Tarayıcınıza ve işletim sisteminize bağlı olarak push bildirimlerinin teknik teslimi Apple, Google, Mozilla veya Microsoft gibi ilgili tarayıcı ya da işletim sistemi sağlayıcılarının push hizmetleri üzerinden gerçekleştirilebilir.',
-          'Push bildirimlerini istediğiniz zaman uygulama içinde veya tarayıcı ya da cihaz ayarlarınızdan devre dışı bırakabilirsiniz. Devre dışı bırakıldığında, teknik olarak mümkün olduğu ölçüde push aboneliği sunucu tarafında devre dışı bırakılır.',
-          'Hukuki dayanak: Push hatırlatmalarının etkinleştirilmesine ilişkin onay için GDPR Madde 6(1)(a). Din bilgisi veya dini ilgi GDPR Madde 9 kapsamında özel kategori kişisel veri oluşturduğundan, ek olarak GDPR Madde 9(2)(a) (açık onay) da uygulanır. Push özelliğini etkinleştirerek bu onayı vermiş olursunuz. Güvenli teknik işletim, hata yönetimi ve geçersiz aboneliklerin devre dışı bırakılması için GDPR Madde 6(1)(f) uygulanır.',
-        ],
-      },
-      {
-        heading: '5. Supabase',
-        paragraphs: [
-          'İsteğe bağlı push aboneliklerini saklamak için Supabase Inc. tarafından sunulan Supabase hizmetini kullanıyoruz. Supabase teknik veritabanı altyapısını sağlar.',
-          'Yalnızca push hatırlatmaları için gerekli teknik veriler saklanır; özellikle push uç noktası, push anahtarları, hatırlatma aralığı, saat dilimi, teknik teslimat bilgileri ve hata durumu.',
-          `Yasal olarak gerekli olduğu durumlarda Supabase ile bir veri işleme sözleşmesi yapılır. Yapılandırılan Supabase proje bölgesi: ${supabaseRegion}. Verilerin üçüncü ülkelere aktarılması halinde, bu aktarım geçerli veri koruma güvencelerine uygun şekilde yapılır.`,
-          'Saklanan push verileri, push bildirimlerini devre dışı bıraktığınızda, abonelik geçersiz hale geldiğinde veya belirtilen amaç için saklama artık gerekli olmadığında silinir ya da devre dışı bırakılır.',
-        ],
-      },
-      {
-        heading: '6. Vercel Analytics ve Speed Insights',
+        heading: '4. Vercel Analytics ve Speed Insights',
         paragraphs: [
           "Bu web sitesi, Vercel Inc. (440 N Barranca Ave #4133, Covina, CA 91723, ABD) tarafından sunulan Vercel Analytics ve Vercel Speed Insights hizmetlerini kullanmaktadır.",
           "Vercel'in açıklamalarına göre Vercel Analytics çerezsiz ve veri minimizasyonuna uygun kullanım verilerini toplar; örneğin ziyaret edilen sayfalar, yaklaşık coğrafi bölge, cihaz türü ve yönlendirme kaynağı. Vercel Speed Insights sayfa yüklenme performansını ve teknik performans değerlerini ölçer.",
@@ -313,7 +256,7 @@ const content: Record<Language, PolicyContent> = {
         ],
       },
       {
-        heading: '7. Simple Analytics',
+        heading: '5. Simple Analytics',
         paragraphs: [
           'Bu web sitesi, gizlilik dostu erişim ölçümü için Simple Analytics (Simple Analytics B.V., Hollanda, https://www.simpleanalytics.com) hizmetini kullanmaktadır.',
           'Simple Analytics çerez yerleştirmez, cihazlar arası profil oluşturmaz ve AB/AEA dışındaki üçüncü ülkelere veri aktarmaz. Anonimleştirilmiş, toplu istatistikler toplanır (örn. sayfa görüntülemeleri, yönlendirici, kısaltılmış IP adresinden elde edilen yaklaşık ülke, tarayıcı ve cihaz sınıfı). IP adresleri yalnızca kısa süreliğine bellekte işlenir ve depolanmaz. Kişisel profil oluşturulmaz.',
@@ -322,7 +265,7 @@ const content: Record<Language, PolicyContent> = {
         ],
       },
       {
-        heading: '8. İletişim formu (Web3Forms)',
+        heading: '6. İletişim formu (Web3Forms)',
         paragraphs: [
           'İletişim formunu kullandığınızda adınız, e-posta adresiniz ve mesajınız Web3Forms hizmeti (https://web3forms.com) aracılığıyla e-posta adresimize iletilir.',
           "Web3Forms, form gönderimlerini kendi açıklamalarına göre 30 gün (Ücretsiz plan) veya 1 yıl (Pro plan) süreyle saklar; bu süreden sonra otomatik olarak silinirler. Web3Forms, sunucularının ABD'nin US-East bölgesinde bulunduğunu belirtmektedir. Avrupa Komisyonu ABD için bir yeterlilik kararı almamış olup Web3Forms, AB-ABD Veri Gizliliği Çerçevesi kapsamında sertifikalı değildir; bu nedenle söz konusu aktarım, eşdeğer bir koruma düzeyi bulunmayan üçüncü ülkeye yapılan bir aktarım niteliği taşımaktadır. Risk uyarısı: ABD makamları belirli koşullar altında (örn. FISA 702 kapsamında) ABD'li sağlayıcılarda depolanan verilere erişebilir.",
@@ -333,24 +276,24 @@ const content: Record<Language, PolicyContent> = {
         ],
       },
       {
-        heading: '9. Yerel depolama ve benzer teknolojiler',
+        heading: '7. Yerel depolama ve benzer teknolojiler',
         paragraphs: [
           'Bu web sitesi seçtiğiniz dili (Türkçe, Almanca veya İngilizce) app:v1:language anahtarıyla localStorage içinde saklar; böylece site tercih ettiğiniz dilde görüntülenir.',
           'Oturum, izleme veya pazarlama çerezi kullanılmamaktadır.',
           'app:v1:language localStorage girdisi yalnızca dil kodunu içerir; kullanıcıları tanımlamak veya profil oluşturmak için kullanılmaz.',
           "Hukuki dayanak: GDPR Madde 6(1)(f) – kullanıcı dostu ve dil tutarlı bir uygulama sunmaya yönelik meşru menfaat. Bu saklama yalnızca işlevsel bir amaç taşıdığından ve kullanıcı gizliliğini etkilemediğinden, aktif bir onay (opt-in) gerekmemektedir.",
-          "Temel diğer uygulama işlevleri için de yerel tarayıcı depolama alanı (localStorage) kullanılır; örneğin öğrenme ilerlemesi, favoriler ve yerel hatırlatma ayarları. Ayrıntılar için bölüm 3'e bakınız.",
+          "Temel diğer uygulama işlevleri için de yerel tarayıcı depolama alanı (localStorage) kullanılır; örneğin öğrenme ilerlemesi ve favoriler. Ayrıntılar için bölüm 3'e bakınız.",
         ],
       },
       {
-        heading: '10. Sunucu günlükleri',
+        heading: '8. Sunucu günlükleri',
         paragraphs: [
           'Barındırma sağlayıcısı (Vercel Inc.) IP adresi, zaman damgası, istenen URL ve HTTP durum kodu gibi teknik erişim verilerini kayıt altına alabilir. Bu günlükler genellikle en fazla 30 gün süreyle saklanır. Bu veriler web sitesini sunmak, güvenliğini sağlamak ve hataları analiz etmek için işlenir; pazarlama veya profil oluşturma amacıyla kullanılmaz.',
           'Hukuki dayanak: GDPR Madde 6(1)(f) – teknik işletimin, güvenliğin ve hata analizinin sağlanmasına yönelik meşru menfaat.',
         ],
       },
       {
-        heading: '11. Haklarınız',
+        heading: '9. Haklarınız',
         paragraphs: [
           'GDPR kapsamında veri sorumlusuna karşı aşağıdaki haklara sahipsiniz:',
           '• Erişim hakkı (Madde 15)\n• Düzeltme hakkı (Madde 16)\n• Silme hakkı (Madde 17)\n• İşlemeyi kısıtlama hakkı (Madde 18)\n• İşlemeye itiraz hakkı (Madde 21)\n• Veri taşınabilirliği hakkı (Madde 20)',
@@ -359,7 +302,7 @@ const content: Record<Language, PolicyContent> = {
         ],
       },
       {
-        heading: '12. Bu politikadaki değişiklikler',
+        heading: '10. Bu politikadaki değişiklikler',
         paragraphs: [
           'Yasal gereklilikleri ve bu web sitesinde fiilen kullanılan işlevleri yansıtmak amacıyla bu gizlilik politikasını güncelleme hakkımızı saklı tutarız. Güncel sürüm için bu sayfayı düzenli aralıklarla kontrol etmenizi öneririz.',
         ],
@@ -376,9 +319,8 @@ export function PrivacyPageContent() {
   // Validate environment variables at runtime (when the component is rendered)
   const operatorName = assertEnv('NEXT_PUBLIC_OPERATOR_NAME')
   const operatorAddress = getOperatorAddress()
-  const supabaseRegion = assertEnv('NEXT_PUBLIC_SUPABASE_PROJECT_REGION')
 
-  const sections = c.sections(operatorName, operatorAddress, supabaseRegion)
+  const sections = c.sections(operatorName, operatorAddress)
 
   return (
     <article lang={language} className="mx-auto max-w-3xl space-y-6">
