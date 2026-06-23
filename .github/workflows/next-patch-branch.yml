@@ -1,0 +1,37 @@
+name: Maintain next-patch Branch
+
+on:
+  push:
+    branches:
+      - main
+  delete:
+    branches:
+      - next-patch
+
+permissions:
+  contents: write
+
+jobs:
+  sync-next-patch:
+    runs-on: ubuntu-latest
+    if: |
+      (github.event_name == 'push' && github.ref == 'refs/heads/main') ||
+      (github.event_name == 'delete' && github.event.ref == 'next-patch')
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Sync next-patch to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Create or force-update next-patch to point at main
+          git checkout main
+          git branch -f next-patch main
+          git push origin next-patch --force
