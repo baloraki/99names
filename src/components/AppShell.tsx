@@ -179,7 +179,6 @@ export function AppShell({ children, routeLanguage }: { children: ReactNode; rou
               sizes="80px"
               className="h-18 w-18 sm:h-20 sm:w-20"
             />
-            <span className="block text-center text-xs text-gold">{dict.nav.aid}</span>
           </Link>
           <div className="flex items-center gap-3">
             <nav className="hidden items-center gap-2 md:flex" aria-label={dict.nav.main}>

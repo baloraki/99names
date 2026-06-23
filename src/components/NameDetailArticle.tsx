@@ -3,7 +3,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { JsonLd } from '@/components/JsonLd'
 import { NameDetailStarToggle } from '@/components/NameDetailStarToggle'
 import { names } from '@/data/names'
-import { getLocalizedNamePath, getLocalizedNamesPath } from '@/lib/seo'
+import { getLocalizedNamePath, getLocalizedNamesPath, getLocalizedStaticPath } from '@/lib/seo'
 import { breadcrumbJsonLd, nameFaqJsonLd, nameLearningResourceJsonLd } from '@/lib/structuredData'
 import type { Language } from '@/types/language'
 import type { NameEntry } from '@/types/name'
@@ -25,6 +25,8 @@ const labels = {
     source: 'Source note',
     review: 'Not scholar-reviewed',
     reviewBody: 'This information draws on open sources and has not been reviewed by a qualified scholar.',
+    reviewContact: 'Found an error, or are you a scholar able to help review?',
+    reviewContactLink: 'Get in touch',
     previous: 'Previous name',
     next: 'Next name',
     related: 'Related names',
@@ -50,6 +52,8 @@ const labels = {
     source: 'Quellenhinweis',
     review: 'Wissenschaftlich ungeprüft',
     reviewBody: 'Diese Angaben stützen sich auf offene Quellen und wurden nicht von einem qualifizierten Gelehrten geprüft.',
+    reviewContact: 'Fehler gefunden oder sind Sie ein Gelehrter, der bei der Prüfung helfen kann?',
+    reviewContactLink: 'Kontaktieren Sie uns',
     previous: 'Vorheriger Name',
     next: 'Nächster Name',
     related: 'Verwandte Namen',
@@ -75,6 +79,8 @@ const labels = {
     source: 'Kaynak notu',
     review: 'Alim incelemesinden geçmemiştir',
     reviewBody: 'Bu bilgiler açık kaynaklara dayanmaktadır ve yetkin bir alim tarafından incelenmemiştir.',
+    reviewContact: 'Bir hata buldunuz veya incelemeye yardımcı olabilecek bir alim misiniz?',
+    reviewContactLink: 'Bize ulaşın',
     previous: 'Önceki isim',
     next: 'Sonraki isim',
     related: 'İlgili isimler',
@@ -157,6 +163,13 @@ export function NameDetailArticle({ name, locale }: { name: NameEntry; locale: L
           <section className="rounded-lg border border-danger/40 bg-danger/10 p-4">
             <h2 className="text-lg font-semibold text-primary">{text.review}</h2>
             <p className="mt-2 text-sm leading-6 text-muted">{text.reviewBody}</p>
+            <p className="mt-2 text-sm leading-6 text-muted">
+              {text.reviewContact}{' '}
+              <Link href={getLocalizedStaticPath('contact', locale)} className="text-gold underline hover:text-gold-muted">
+                {text.reviewContactLink}
+              </Link>
+              .
+            </p>
           </section>
       )}
 
