@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation'
 
 // ─── OPERATOR DATA ────────────────────────────────────────────────────────────
 // TODO: Replace ALL values below with real data before going live.
-//       Without this the site is not legally compliant in Germany (§ 5 TMG).
+//       Without this the site is not legally compliant in Germany (Anbieterkennzeichnung).
 const OPERATOR = {
   name: process.env.NEXT_PUBLIC_OPERATOR_NAME ?? 'UNCONFIGURED_OPERATOR_NAME',
   street: process.env.NEXT_PUBLIC_OPERATOR_STREET ?? 'UNCONFIGURED_OPERATOR_STREET',
@@ -34,7 +34,7 @@ type Content = {
 const content: Record<Language, Content> = {
   de: {
     title: 'Impressum',
-    subtitle: 'Angaben gemäß § 5 TMG und § 18 Abs. 2 MStV',
+    subtitle: 'Anbieterkennzeichnung',
     sections: [
       {
         heading: 'Verantwortlicher',
@@ -69,7 +69,7 @@ const content: Record<Language, Content> = {
   },
   en: {
     title: 'Legal Notice',
-    subtitle: 'Information pursuant to § 5 TMG and § 18 (2) MStV (German law)',
+    subtitle: 'Legal Notice',
     sections: [
       {
         heading: 'Operator',
@@ -104,7 +104,7 @@ const content: Record<Language, Content> = {
   },
   tr: {
     title: 'Künye',
-    subtitle: 'Alman Telemedya Kanunu § 5 TMG ve § 18 Abs. 2 MStV uyarınca bilgiler',
+    subtitle: 'Yasal Bildirim',
     sections: [
       {
         heading: 'Sorumlu Kişi',

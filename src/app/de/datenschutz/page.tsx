@@ -5,7 +5,7 @@ import { buildMetadata, staticPageAlternates } from '@/lib/seo'
 export const metadata: Metadata = buildMetadata({
   title: 'Datenschutzerklärung – 99 Namen Lernhilfe',
   description:
-    'Datenschutzerklärung der 99-Namen-Lernhilfe mit Informationen zu localStorage, Analytics, Kontaktformular und Push-Erinnerungen.',
+    'Datenschutzerklärung der 99-Namen-Lernhilfe mit Informationen zu localStorage, Analytics und Kontaktformular.',
   path: '/de/datenschutz',
   locale: 'de',
   alternates: staticPageAlternates('privacy'),
