@@ -5,9 +5,9 @@ export const firstName: NameEntry = {
     "slug": "allah",
     "arabic": "الله",
     "transliteration": {
-        "de": "Allah",
-        "tr": "Allah",
-        "en": "Allah"
+        "de": "Allah (C.C.)",
+        "tr": "Allah (C.C.)",
+        "en": "Allah (C.C.)"
     },
     "pronunciation": {
         "de": "Al-lah",
