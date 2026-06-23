@@ -149,7 +149,7 @@ export function NameDetailArticle({ name, locale }: { name: NameEntry; locale: L
         </dl>
       </header>
 
-      {name.contentReviewRequired && (
+      {name.scholarlyReviewed && (
         <section className="rounded-lg border border-danger/40 bg-danger/10 p-4">
           <h2 className="text-lg font-semibold text-primary">{text.review}</h2>
           <p className="mt-2 text-sm leading-6 text-muted">{text.reviewBody}</p>

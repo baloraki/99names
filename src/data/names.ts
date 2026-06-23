@@ -44,7 +44,7 @@ export const firstName: NameEntry = {
         "tr": "Kur'an'da geçtiği ayetler: (1:1) (3:18)",
         "en": "Found in Qur'an: (1:1) (3:18)"
     },
-    "contentReviewRequired": false
+    "scholarlyReviewed": false
 };
 
 // Content policy for this dataset:
@@ -102,7 +102,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (1:3) (17:110)",
             "en": "Qur'anic reference / basis: (1:3) (17:110)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 2,
@@ -148,7 +148,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (2:163) (3:31) (4:100) (5:3)",
             "en": "Qur'anic reference / basis: (2:163) (3:31) (4:100) (5:3)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 3,
@@ -194,7 +194,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (20:114) (23:116) (59:23) (62:1)",
             "en": "Qur'anic reference / basis: (20:114) (23:116) (59:23) (62:1)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 4,
@@ -240,7 +240,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (59:23) (62:1)",
             "en": "Qur'anic reference / basis: (59:23) (62:1)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 5,
@@ -286,7 +286,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (59:23)",
             "en": "Qur'anic reference / basis: (59:23)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 6,
@@ -332,7 +332,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (59:23)",
             "en": "Qur'anic reference / basis: (59:23)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 7,
@@ -378,7 +378,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (59:23)",
             "en": "Qur'anic reference / basis: (59:23)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 8,
@@ -424,7 +424,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (3:6) (4:158) (9:40) (48:7)",
             "en": "Qur'anic reference / basis: (3:6) (4:158) (9:40) (48:7)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 9,
@@ -470,7 +470,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (59:23)",
             "en": "Qur'anic reference / basis: (59:23)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 10,
@@ -516,7 +516,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (59:23)",
             "en": "Qur'anic reference / basis: (59:23)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 11,
@@ -562,7 +562,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (6:102) (13:16) (39:62) (40:62) (59:24)",
             "en": "Qur'anic reference / basis: (6:102) (13:16) (39:62) (40:62) (59:24)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 12,
@@ -608,7 +608,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (59:24)",
             "en": "Qur'anic reference / basis: (59:24)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 13,
@@ -654,7 +654,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (59:24)",
             "en": "Qur'anic reference / basis: (59:24)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 14,
@@ -700,7 +700,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (20:82) (38:66) (39:5) (40:42) (71:10)",
             "en": "Qur'anic reference / basis: (20:82) (38:66) (39:5) (40:42) (71:10)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 15,
@@ -746,7 +746,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (13:16) (14:48) (38:65) (39:4) (40:16)",
             "en": "Qur'anic reference / basis: (13:16) (14:48) (38:65) (39:4) (40:16)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 16,
@@ -792,7 +792,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (3:8) (38:9) (38:35)",
             "en": "Qur'anic reference / basis: (3:8) (38:9) (38:35)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 17,
@@ -838,7 +838,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (51:58)",
             "en": "Qur'anic reference / basis: (51:58)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 18,
@@ -884,7 +884,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (34:26)",
             "en": "Qur'anic reference / basis: (34:26)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 19,
@@ -930,7 +930,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (2:158) (3:92) (4:35) (24:41) (33:40)",
             "en": "Qur'anic reference / basis: (2:158) (3:92) (4:35) (24:41) (33:40)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 20,
@@ -976,7 +976,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (2:245)",
             "en": "Qur'anic reference / basis: (2:245)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 21,
@@ -1022,7 +1022,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (2:245)",
             "en": "Qur'anic reference / basis: (2:245)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 22,
@@ -1068,7 +1068,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (95:5)",
             "en": "Qur'anic reference / basis: (95:5)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 23,
@@ -1114,7 +1114,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (58:11) (6:83)",
             "en": "Qur'anic reference / basis: (58:11) (6:83)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 24,
@@ -1160,7 +1160,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (3:26)",
             "en": "Qur'anic reference / basis: (3:26)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 25,
@@ -1206,7 +1206,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (3:26)",
             "en": "Qur'anic reference / basis: (3:26)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 26,
@@ -1252,7 +1252,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (2:127) (2:256) (8:17) (49:1)",
             "en": "Qur'anic reference / basis: (2:127) (2:256) (8:17) (49:1)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 27,
@@ -1298,7 +1298,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (4:58) (17:1) (42:11) (42:27)",
             "en": "Qur'anic reference / basis: (4:58) (17:1) (42:11) (42:27)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 28,
@@ -1344,7 +1344,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (22:69)",
             "en": "Qur'anic reference / basis: (22:69)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 29,
@@ -1390,7 +1390,7 @@ export const names: NameEntry[] = [
             "tr": "Geleneksel liste dayanağı; ilahî adaletle ilgili Kur'anî tema: (6:115)",
             "en": "Traditional list basis; thematic Qur'anic reference for divine justice: (6:115)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 30,
@@ -1436,7 +1436,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (6:103) (22:63) (31:16) (33:34)",
             "en": "Qur'anic reference / basis: (6:103) (22:63) (31:16) (33:34)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 31,
@@ -1482,7 +1482,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (6:18) (17:30) (49:13) (59:18)",
             "en": "Qur'anic reference / basis: (6:18) (17:30) (49:13) (59:18)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 32,
@@ -1528,7 +1528,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (2:235) (17:44) (22:59) (35:41)",
             "en": "Qur'anic reference / basis: (2:235) (17:44) (22:59) (35:41)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 33,
@@ -1574,7 +1574,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (2:255) (42:4) (56:96)",
             "en": "Qur'anic reference / basis: (2:255) (42:4) (56:96)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 34,
@@ -1620,7 +1620,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (2:173) (8:69) (16:110) (41:32)",
             "en": "Qur'anic reference / basis: (2:173) (8:69) (16:110) (41:32)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 35,
@@ -1666,7 +1666,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (35:30) (35:34) (42:23) (64:17)",
             "en": "Qur'anic reference / basis: (35:30) (35:34) (42:23) (64:17)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 36,
@@ -1712,7 +1712,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (4:34) (31:30) (42:4) (42:51)",
             "en": "Qur'anic reference / basis: (4:34) (31:30) (42:4) (42:51)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 37,
@@ -1758,7 +1758,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (13:9) (22:62) (31:30)",
             "en": "Qur'anic reference / basis: (13:9) (22:62) (31:30)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 38,
@@ -1804,7 +1804,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (11:57) (34:21) (42:6)",
             "en": "Qur'anic reference / basis: (11:57) (34:21) (42:6)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 39,
@@ -1850,7 +1850,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (4:85)",
             "en": "Qur'anic reference / basis: (4:85)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 40,
@@ -1896,7 +1896,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (4:6) (4:86) (33:39)",
             "en": "Qur'anic reference / basis: (4:6) (4:86) (33:39)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 41,
@@ -1942,7 +1942,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (55:27) (39:14) (7:143)",
             "en": "Qur'anic reference / basis: (55:27) (39:14) (7:143)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 42,
@@ -1988,7 +1988,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (27:40) (82:6)",
             "en": "Qur'anic reference / basis: (27:40) (82:6)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 43,
@@ -2034,7 +2034,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (4:1) (5:117)",
             "en": "Qur'anic reference / basis: (4:1) (5:117)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 44,
@@ -2080,7 +2080,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (11:61)",
             "en": "Qur'anic reference / basis: (11:61)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 45,
@@ -2126,7 +2126,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (2:268) (3:73) (5:54)",
             "en": "Qur'anic reference / basis: (2:268) (3:73) (5:54)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 46,
@@ -2172,7 +2172,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (31:27) (46:2) (57:1) (66:2)",
             "en": "Qur'anic reference / basis: (31:27) (46:2) (57:1) (66:2)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 47,
@@ -2218,7 +2218,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (11:90) (85:14)",
             "en": "Qur'anic reference / basis: (11:90) (85:14)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 48,
@@ -2264,7 +2264,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (11:73)",
             "en": "Qur'anic reference / basis: (11:73)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 49,
@@ -2310,7 +2310,7 @@ export const names: NameEntry[] = [
             "tr": "Geleneksel liste dayanağı; yeniden diriltmeye dair Kur'anî tema: (22:7)",
             "en": "Traditional list basis; thematic Qur'anic reference for resurrection: (22:7)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 50,
@@ -2356,7 +2356,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (4:166) (22:17) (41:53) (48:28)",
             "en": "Qur'anic reference / basis: (4:166) (22:17) (41:53) (48:28)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 51,
@@ -2402,7 +2402,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (6:62) (22:6) (23:116) (24:25)",
             "en": "Qur'anic reference / basis: (6:62) (22:6) (23:116) (24:25)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 52,
@@ -2448,7 +2448,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (3:173) (4:171) (28:28) (73:9)",
             "en": "Qur'anic reference / basis: (3:173) (4:171) (28:28) (73:9)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 53,
@@ -2494,7 +2494,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (22:40) (22:74) (42:19) (57:25)",
             "en": "Qur'anic reference / basis: (22:40) (22:74) (42:19) (57:25)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 54,
@@ -2540,7 +2540,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (51:58)",
             "en": "Qur'anic reference / basis: (51:58)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 55,
@@ -2586,7 +2586,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (4:45) (7:196) (42:28) (45:19)",
             "en": "Qur'anic reference / basis: (4:45) (7:196) (42:28) (45:19)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 56,
@@ -2632,7 +2632,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (14:8) (31:12) (31:26) (41:42)",
             "en": "Qur'anic reference / basis: (14:8) (31:12) (31:26) (41:42)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 57,
@@ -2678,7 +2678,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (72:28) (78:29) (82:10-12)",
             "en": "Qur'anic reference / basis: (72:28) (78:29) (82:10-12)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 58,
@@ -2724,7 +2724,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (10:34) (27:64) (29:19) (85:13)",
             "en": "Qur'anic reference / basis: (10:34) (27:64) (29:19) (85:13)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 59,
@@ -2770,7 +2770,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (10:34) (27:64) (29:19) (85:13)",
             "en": "Qur'anic reference / basis: (10:34) (27:64) (29:19) (85:13)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 60,
@@ -2816,7 +2816,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (7:158) (15:23) (30:50) (57:2)",
             "en": "Qur'anic reference / basis: (7:158) (15:23) (30:50) (57:2)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 61,
@@ -2862,7 +2862,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (3:156) (7:158) (15:23) (57:2)",
             "en": "Qur'anic reference / basis: (3:156) (7:158) (15:23) (57:2)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 62,
@@ -2908,7 +2908,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (2:255) (3:2) (25:58) (40:65)",
             "en": "Qur'anic reference / basis: (2:255) (3:2) (25:58) (40:65)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 63,
@@ -2954,7 +2954,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (2:255) (3:2) (20:111)",
             "en": "Qur'anic reference / basis: (2:255) (3:2) (20:111)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 64,
@@ -3000,7 +3000,7 @@ export const names: NameEntry[] = [
             "tr": "Geleneksel liste dayanağı: Câmiʿu't-Tirmizî 3507; (38:44) içinde doğrudan Kur'anî isim lafzı yoktur",
             "en": "Traditional list basis: Jami' at-Tirmidhi 3507; no clear direct Qur'anic name occurrence in (38:44)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 65,
@@ -3046,7 +3046,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (11:73)",
             "en": "Qur'anic reference / basis: (11:73)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 66,
@@ -3092,7 +3092,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (2:163) (5:73) (9:31) (18:110)",
             "en": "Qur'anic reference / basis: (2:163) (5:73) (9:31) (18:110)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 67,
@@ -3138,7 +3138,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (112:1)",
             "en": "Qur'anic reference / basis: (112:1)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 68,
@@ -3184,7 +3184,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (112:2)",
             "en": "Qur'anic reference / basis: (112:2)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 69,
@@ -3230,7 +3230,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (6:65) (36:81) (46:33) (75:40)",
             "en": "Qur'anic reference / basis: (6:65) (36:81) (46:33) (75:40)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 70,
@@ -3276,7 +3276,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (18:45) (54:42) (54:55)",
             "en": "Qur'anic reference / basis: (18:45) (54:42) (54:55)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 71,
@@ -3322,7 +3322,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (16:61) (17:34)",
             "en": "Qur'anic reference / basis: (16:61) (17:34)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 72,
@@ -3368,7 +3368,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (71:4)",
             "en": "Qur'anic reference / basis: (71:4)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 73,
@@ -3414,7 +3414,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (57:3)",
             "en": "Qur'anic reference / basis: (57:3)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 74,
@@ -3460,7 +3460,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (57:3)",
             "en": "Qur'anic reference / basis: (57:3)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 75,
@@ -3506,7 +3506,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (57:3)",
             "en": "Qur'anic reference / basis: (57:3)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 76,
@@ -3552,7 +3552,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (57:3)",
             "en": "Qur'anic reference / basis: (57:3)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 77,
@@ -3598,7 +3598,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (13:11) (22:7)",
             "en": "Qur'anic reference / basis: (13:11) (22:7)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 78,
@@ -3644,7 +3644,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (13:9)",
             "en": "Qur'anic reference / basis: (13:9)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 79,
@@ -3690,7 +3690,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (52:28)",
             "en": "Qur'anic reference / basis: (52:28)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 80,
@@ -3736,7 +3736,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (2:128) (4:64) (49:12) (110:3)",
             "en": "Qur'anic reference / basis: (2:128) (4:64) (49:12) (110:3)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 81,
@@ -3782,7 +3782,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (32:22) (43:41) (44:16)",
             "en": "Qur'anic reference / basis: (32:22) (43:41) (44:16)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 82,
@@ -3828,7 +3828,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (4:99) (4:149) (22:60)",
             "en": "Qur'anic reference / basis: (4:99) (4:149) (22:60)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 83,
@@ -3874,7 +3874,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (3:30) (9:117) (57:9) (59:10)",
             "en": "Qur'anic reference / basis: (3:30) (9:117) (57:9) (59:10)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 84,
@@ -3920,7 +3920,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (3:26)",
             "en": "Qur'anic reference / basis: (3:26)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 85,
@@ -3966,7 +3966,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (55:27) (55:78)",
             "en": "Qur'anic reference / basis: (55:27) (55:78)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 86,
@@ -4012,7 +4012,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (7:29) (3:18)",
             "en": "Qur'anic reference / basis: (7:29) (3:18)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 87,
@@ -4058,7 +4058,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (3:9)",
             "en": "Qur'anic reference / basis: (3:9)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 88,
@@ -4104,7 +4104,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (3:97) (39:7) (47:38) (57:24)",
             "en": "Qur'anic reference / basis: (3:97) (39:7) (47:38) (57:24)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 89,
@@ -4150,7 +4150,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (9:28)",
             "en": "Qur'anic reference / basis: (9:28)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 90,
@@ -4196,7 +4196,7 @@ export const names: NameEntry[] = [
             "tr": "Geleneksel liste dayanağı; rızkın geri tutulmasına dair Kur'anî tema: (67:21)",
             "en": "Traditional list basis; thematic Qur'anic reference for withholding provision: (67:21)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 91,
@@ -4242,7 +4242,7 @@ export const names: NameEntry[] = [
             "tr": "Geleneksel liste dayanağı; zarar ve korunmaya dair Kur'anî tema: (6:17)",
             "en": "Traditional list basis; thematic Qur'anic reference for harm and protection: (6:17)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 92,
@@ -4288,7 +4288,7 @@ export const names: NameEntry[] = [
             "tr": "Geleneksel liste dayanağı; rızık ve fayda temasına dair Kur'anî ilişki: (30:37)",
             "en": "Traditional list basis; thematic Qur'anic reference for provision and benefit: (30:37)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 93,
@@ -4334,7 +4334,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (24:35)",
             "en": "Qur'anic reference / basis: (24:35)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 94,
@@ -4380,7 +4380,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (25:31)",
             "en": "Qur'anic reference / basis: (25:31)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 95,
@@ -4426,7 +4426,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (2:117) (6:101)",
             "en": "Qur'anic reference / basis: (2:117) (6:101)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 96,
@@ -4472,7 +4472,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (55:27)",
             "en": "Qur'anic reference / basis: (55:27)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 97,
@@ -4518,7 +4518,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (15:23)",
             "en": "Qur'anic reference / basis: (15:23)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 98,
@@ -4564,7 +4564,7 @@ export const names: NameEntry[] = [
             "tr": "Kur'an'daki ilgili ayetler / dayanak: (2:256)",
             "en": "Qur'anic reference / basis: (2:256)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     },
     {
         "id": 99,
@@ -4610,7 +4610,7 @@ export const names: NameEntry[] = [
             "tr": "Geleneksel liste dayanağı: Câmiʿu't-Tirmizî 3507; sabır temasına dair Kur'anî bağlantı: (2:153) (3:200) (103:3)",
             "en": "Traditional list basis: Jami' at-Tirmidhi 3507; thematic Qur'anic reference for patience: (2:153) (3:200) (103:3)"
         },
-        "contentReviewRequired": false
+        "scholarlyReviewed": false
     }
 ]
 
