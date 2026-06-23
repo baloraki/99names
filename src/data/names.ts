@@ -54,7 +54,7 @@ export const firstName: NameEntry = {
 // - The common ordered list follows the well-known teaching order reported in Jami' at-Tirmidhi 3507; that ordered list is treated as pedagogical, not as an exclusive limit on Allah's names.
 // - Not every entry in the common ordered list is asserted here as an exact Qur'anic name; source fields therefore use cautious "reference / basis" wording.
 // - No fixed dhikr counts, guaranteed worldly effects, amulets, medical claims, or unsourced virtue claims are asserted.
-// - Every entry remains review-required before public religious publication.
+// - Every entry remains review-required before public religious publication; duaUsage must be phrased as a request to Allah, not as a guaranteed effect or causal formula.
 
 export const names: NameEntry[] = [
     {
@@ -266,9 +266,9 @@ export const names: NameEntry[] = [
             "en": "The Giver of peace and security who is Himself free from all imperfections and provides safety to His creation."
         },
         "duaUsage": {
-            "de": "Ya As-Salam, schenke meinem Herzen inneren Frieden und bewahre mich vor den Unruhen dieser Welt.",
-            "tr": "Ya Selâm, kalbime huzur ver, beni her türlü korku ve tehlikeden selamete ulaştır.",
-            "en": "Invoke 'Ya As-Salam' to seek tranquility of the soul, safety in times of crisis, and a heart free from anxiety."
+            "de": "Ya As-Salām, ich bitte Dich um inneren Frieden, Standhaftigkeit und Ruhe in Zeiten von Unruhe und Unsicherheit.",
+            "tr": "Ya Selâm, kalbime huzur, sebat ve sıkıntılı zamanlarda sükûnet nasip eyle.",
+            "en": "Invoke 'Ya As-Salām' to ask Allah for inner peace, steadiness, and calm during times of fear or unrest."
         },
         "reflection": {
             "de": "Wahrer Friede entsteht durch das Vertrauen in Gott. Wer sich Ihm hingibt, findet Schutz vor innerer Zerrissenheit.",
@@ -818,9 +818,9 @@ export const names: NameEntry[] = [
             "en": "The One who creates and delivers sustenance to all His creation. He provides not only material nourishment but also spiritual provision, such as knowledge and faith."
         },
         "duaUsage": {
-            "de": "Ya Ar-Razzāq, segne meine Arbeit, schenke mir ein rechtmäßiges Einkommen und nähre meine Seele mit Deiner Weisheit.",
-            "tr": "Ya Rezzâk, rızkımı helal ve bereketli kıl, beni darlık ve açlıktan muhafaza eyle; gönlümü marifetinle doyur.",
-            "en": "Invoke 'Ya Ar-Razzāq' to seek lawful sustenance, relief from financial anxiety, and the enrichment of the soul through divine knowledge."
+            "de": "Ya Ar-Razzāq, ich bitte Dich um erlaubte Versorgung, Genügsamkeit, Baraka und Vertrauen in Deine Weisheit.",
+            "tr": "Ya Rezzâk, bana helal rızık, kanaat, bereket ve takdirine güvenen bir kalp nasip eyle.",
+            "en": "Invoke 'Ya Ar-Razzāq' to ask Allah for lawful provision, contentment, barakah, and trust in His decree."
         },
         "reflection": {
             "de": "Das Vertrauen in diesen Namen befreit von der Sorge um die Zukunft. Wer weiß, dass Gott der Versorger ist, wird großzügig gegenüber anderen, anstatt aus Angst zu horten.",
@@ -861,7 +861,7 @@ export const names: NameEntry[] = [
         "explanations": {
             "de": "Derjenige, der die Türen zu Wissen, Erfolg und Versorgung öffnet. Er ist auch der Richter, der die Wahrheit vom Falschen trennt und jede festgefahrene Situation auflöst.",
             "tr": "Her türlü müşkülü çözen, hayır kapılarını açan ve hak ile batılın arasını hükmüyle ayıran; darlıktan ferahlığa çıkaran.",
-            "en": "The One who opens the doors to success, knowledge, and mercy. He is the ultimate judge who clarifies what is hidden and resolves all complex matters with justice."
+            "en": "The One who opens doors of mercy, knowledge, and judgment according to His wisdom. He is the ultimate judge who clarifies what is hidden and resolves matters with justice."
         },
         "duaUsage": {
             "de": "Ya Al-Fattāḥ, öffne mir die Tore Deiner Rechtleitung, nimm die Lasten von meinem Herzen und zeige mir einen Ausweg aus meinen Sorgen.",
@@ -1188,7 +1188,7 @@ export const names: NameEntry[] = [
         "duaUsage": {
             "de": "Ya Al-Mudhill, bewahre mich davor, jemals stolz oder herablassend gegenüber Deiner Schöpfung zu sein, und schütze mich vor der Demütigung durch meine eigenen Fehltritte.",
             "tr": "Ya Müzill, beni nefsimin gururundan ve rezil olmaktan muhafaza eyle; zalimlerin baskısını üzerimizden kaldır ve onları adaletinle zelil et.",
-            "en": "Invoke 'Ya Al-Mudhill' to seek protection from the arrogance of the self, to be shielded from social disgrace, and to ask for the subduing of oppressive forces."
+            "en": "Invoke 'Ya Al-Mudhill' to ask Allah for humility, protection from self-disgrace through sin, and justice against oppression."
         },
         "reflection": {
             "de": "Wahre Erniedrigung ist nicht Armut oder ein niedriger sozialer Status, sondern der Verlust der Nähe zu Gott. Wer sich von Gott abwendet, um Ehre bei anderen zu suchen, wird letztlich Enttäuschung erfahren.",
@@ -1280,7 +1280,7 @@ export const names: NameEntry[] = [
         "duaUsage": {
             "de": "Ya Al-Baṣīr, schenke mir geistige Einsicht (Basira), bewahre mich vor den Irrtümern meiner Augen und leite mich dazu an, das Schöne in Deiner Schöpfung zu erkennen.",
             "tr": "Ya Basîr, basiretimi aç, bana eşyanın hakikatini görmeyi nasip et ve beni Senin razı olmayacağın her türlü günahtan muhafaza eyle.",
-            "en": "Invoke 'Ya Al-Baṣīr' to seek clarity of vision (both physical and spiritual), to ask for guidance in making correct choices, and to find solace in the fact that He sees one's silent struggles."
+            "en": "Invoke 'Ya Al-Baṣīr' to ask Allah for insight, guidance in choices, and sincerity under His perfect awareness."
         },
         "reflection": {
             "de": "Das Bewusstsein, dass Gott uns in jedem Moment sieht (Ihsan), ist die höchste Stufe der spirituellen Achtsamkeit. Es schützt uns in der Einsamkeit vor Fehltritten und gibt uns Kraft, wenn wir uns von Menschen missverstanden fühlen.",
@@ -1786,7 +1786,7 @@ export const names: NameEntry[] = [
         "duaUsage": {
             "de": "Ya Ḥafīẓ, beschütze mich, meine Familie und meinen Glauben vor den Versuchungen und Gefahren dieser Welt.",
             "tr": "Ya Hafîz, beni ve sevdiklerimi görünür görünmez kazalardan, nefsimin ve şeytanın şerrinden koru.",
-            "en": "Invoke for protection during travel, against spiritual corruption, and for the safety of loved ones."
+            "en": "Invoke to ask Allah for protection during travel, steadfastness in faith, and safety for loved ones."
         },
         "reflection": {
             "de": "Wahrer Schutz kommt nicht von Sicherheitsvorkehrungen, sondern von Gott. Er bewahrt auch unser Wissen und unsere Taten für das Jenseits.",
@@ -1832,7 +1832,7 @@ export const names: NameEntry[] = [
         "duaUsage": {
             "de": "Ya Muqīt, gib mir Kraft für meinen Gehorsam und versorge mich mit dem, was mein Herz lebendig hält.",
             "tr": "Ya Mukît, rızkımı helalinden ver ve kalbimi iman gıdasıyla doyur.",
-            "en": "Invoke when feeling weak, either physically or spiritually, asking for the 'sustenance' needed to carry on."
+            "en": "Invoke to ask Allah for the strength, provision, and spiritual nourishment needed to remain steadfast."
         },
         "reflection": {
             "de": "Unsere Versorgung steht unter Gottes Wissen und Weisheit. Statt aus Sorge um das Morgen in Panik zu geraten, sollten wir uns darauf konzentrieren, wofür wir unsere Kraft einsetzen.",
@@ -2750,9 +2750,9 @@ export const names: NameEntry[] = [
             "en": "The One who restores and repeats the creation. He has the power to bring back what has perished and will resurrect all beings after death."
         },
         "duaUsage": {
-            "de": "Ya Mu’īd, stelle meinen Glauben wieder her, wenn er schwach wird, und schenke mir eine Rückkehr zu Dir in Schönheit.",
-            "tr": "Ya Muîd, kalbimdeki huzuru geri ver; beni en güzel halimle Sana döndür.",
-            "en": "Invoke to find hope in renewal—whether it be restoration of health, faith, or the final resurrection."
+            "de": "Ya Al-Muʿīd, ich bitte Dich um Erneuerung meines Glaubens, Standhaftigkeit und eine schöne Rückkehr zu Dir.",
+            "tr": "Ya Muîd, imanımı yenile, kalbime sebat ver ve beni güzel bir dönüşle Sana yönelt.",
+            "en": "Invoke to ask Allah for renewal of faith, steadiness, and a return to what is pleasing to Him."
         },
         "reflection": {
             "de": "Wer den ersten Anfang gemacht hat (Al-Mubdi’), dem fällt es leicht, die Schöpfung zu wiederholen. Der Tod ist kein Ende, sondern eine Pause.",
@@ -3302,12 +3302,12 @@ export const names: NameEntry[] = [
             "en": "The One who brings forward whatever He wills. He grants precedence to certain people or events according to His infinite wisdom and justice."
         },
         "duaUsage": {
-            "de": "Ya Muqaddim, bringe mich in den guten Taten voran und lass mich zu denen gehören, die Dir am nächsten sind.",
-            "tr": "Ya Mukaddim, beni Sana yaklaştıracak amellerde öne geçir; hidayette beni ileri kıl.",
-            "en": "Invoke to ask for spiritual advancement or for the successful acceleration of beneficial projects."
+            "de": "Ya Al-Muqaddim, ich bitte Dich, mich in dem voranzubringen, was gut für meinen Glauben und Charakter ist.",
+            "tr": "Ya Mukaddim, beni Sana yaklaştıracak hayırlı amellerde ileri kıl ve bana doğru öncelikler nasip eyle.",
+            "en": "Invoke to ask Allah to advance what is beneficial, delay what is harmful, and guide one toward the right priorities."
         },
         "reflection": {
-            "de": "Wer von Gott nach vorne gebracht wird, den kann niemand zurückhalten. Erfolg ist die Frucht Seiner Beförderung.",
+            "de": "Wer vorankommen möchte, sollte streben und zugleich wissen, dass Rang, Reihenfolge und Ausgang in Gottes Weisheit liegen.",
             "tr": "Önde olmanın bir üstünlük değil, Allah'ın bir takdiri ve imtihanı olduğunu bilmek gerekir.",
             "en": "Reflecting on Al-Muqaddim teaches us to strive, while trusting that the final 'rank' is in Allah's hands."
         },
@@ -3718,11 +3718,11 @@ export const names: NameEntry[] = [
         "duaUsage": {
             "de": "Ya Tawwāb, führe mein Herz zur aufrichtigen Reue und nimm meine Umkehr an. Lass mich nicht in meinen Fehlern verharren.",
             "tr": "Ya Tevvâb, tövbemi kabul et ve beni Sana yönelenlerin arasından ayırma.",
-            "en": "Invoke when feeling burdened by sins, asking for the grace to change one's ways and for the assurance of being forgiven."
+            "en": "Invoke when feeling burdened by sins, asking Allah for sincere repentance, reform, and acceptance of one's return to Him."
         },
         "reflection": {
             "de": "Gott liebt die Reue mehr als die Sündlosigkeit der Arroganten. At-Tawwāb ist die Hoffnung für jede Seele, die sich verirrt hat.",
-            "tr": "Tevbe etmek, kulun Rabbine olan en samimi dönüşüdür; Tevvâb ismi bu dönüşün karşılıksız kalmayacağının garantisidir.",
+            "tr": "Tevbe etmek, kulun Rabbine olan en samimi dönüşüdür; Tevvâb ismi, Allah’ın rahmet kapısının samimi dönüşe açık olduğunu hatırlatır.",
             "en": "Reflection on At-Tawwāb removes despair. It teaches that the door to God's pleasure is never permanently closed to a sincere seeker."
         },
         "sourceNote": {
@@ -4038,9 +4038,9 @@ export const names: NameEntry[] = [
             "en": "The One who gathers. He will assemble all of humanity for the Day of Reckoning, and He is the One who unifies hearts and disparate elements of the universe."
         },
         "duaUsage": {
-            "de": "Wird angerufen, um Einheit in der Familie oder Gemeinde zu erbitten oder um verlorene Dinge wiederzufinden.",
-            "tr": "Ya Câmi, dağınık işlerimi toparla; kalplerimizi sevgi ve tevhid üzere birleştir.",
-            "en": "Invoke to ask for reconciliation between people or to ask for the gathering of one's scattered thoughts and efforts."
+            "de": "Wird angerufen, um Allah um Einheit, Klärung und Zusammenführung von Zerstreutem zu bitten.",
+            "tr": "Ya Câmi, dağınık olan işlerimi hayır üzere toparla; kalplerimizi tevhid, merhamet ve doğruluk üzere birleştir.",
+            "en": "Invoke to ask Allah for reconciliation, clarity, and the gathering of scattered hearts, thoughts, or efforts in what is good."
         },
         "reflection": {
             "de": "Al-Jāmi' zeigt uns, dass alles in der Schöpfung Teil eines großen Ganzen ist. Er bringt Ordnung in die Vielfalt.",
@@ -4130,8 +4130,8 @@ export const names: NameEntry[] = [
             "en": "The One who grants wealth and sufficiency. He provides His servants with what they need, whether in material possessions or in spiritual contentment."
         },
         "duaUsage": {
-            "de": "Wird angerufen, um aus einer finanziellen Notlage befreit zu werden oder um die Gabe der Zufriedenheit mit dem Erhaltenen zu bitten.",
-            "tr": "Ya Muğnî, helalinden rızık ver; beni ve ailemi Sana muhtaçlığımızı bilerek insanlara yük olmaktan koru.",
+            "de": "Wird angerufen, um Allah um erlaubte Versorgung, Genügsamkeit und Zufriedenheit mit Seiner Bestimmung zu bitten.",
+            "tr": "Ya Muğnî, bize helal rızık, kanaat ve yalnız Sana muhtaç olduğumuzu bilen bir kalp nasip eyle.",
             "en": "Invoke to seek lawful provision and to ask for a heart that is satisfied with Allah's decree."
         },
         "reflection": {
@@ -4268,9 +4268,9 @@ export const names: NameEntry[] = [
             "en": "An-Nafi' signifies that all true benefit and goodness originate from Allah. While the world provides means—like medicine or wealth—the actual benefit within them is a gift from the Creator."
         },
         "duaUsage": {
-            "de": "Wird angerufen, um nützliches Wissen, heilsame Entscheidungen und Segen in den eigenen Bemühungen zu erbitten. Man bittet Ihn, dass das Erreichte einem nicht nur weltlich, sondern auch spirituell nützt.",
-            "tr": "Ya Nâfi, ömrümü, ilmimi ve kazancımı hakkımda faydalı kıl; bana hem dünyada hem ahirette yarar sağlayacak ameller nasip et.",
-            "en": "Invoke when seeking beneficial knowledge, fruitful outcomes in work, or when needing a 'blessing' (Barakah) in one's time and efforts."
+            "de": "Wird angerufen, um Allah um nützliches Wissen, richtige Entscheidungen und Baraka in Zeit, Arbeit und Bemühung zu bitten.",
+            "tr": "Ya Nâfi, ömrümü, ilmimi, vaktimi ve emeğimi Senin rızana uygun ve faydalı kıl.",
+            "en": "Invoke to ask Allah to make one's knowledge, time, work, and efforts beneficial and blessed."
         },
         "reflection": {
             "de": "Nicht alles, was kurzfristig nützt, ist langfristig gut. Der Name lehrt uns, Nutzen an moralischen Werten und der Ewigkeit zu messen.",
@@ -4314,9 +4314,9 @@ export const names: NameEntry[] = [
             "en": "An-Nur is the Light of the heavens and the earth. He is the one who makes things manifest, guides the lost out of darkness, and illuminates the hearts of believers with faith and understanding."
         },
         "duaUsage": {
-            "de": "Wird angerufen, um Erleuchtung des Verstandes, Klarheit im Herzen und Schutz vor der Dunkelheit der Verwirrung oder Sünde zu erbitten.",
-            "tr": "Ya Nûr, kalbimi nurunla aydınlat; beni karanlıklardan selamete çıkar ve yolumu rızanla ışıklandır.",
-            "en": "Invoke to ask for spiritual clarity, light in the grave, and the ability to discern truth from falsehood in confusing times."
+            "de": "Wird angerufen, um Allah um Rechtleitung, Klarheit im Herzen und Schutz vor Verwirrung und Sünde zu bitten.",
+            "tr": "Ya Nûr, kalbime hidayet ve basiret ver; beni karanlıklardan ve günahtan uzaklaştır.",
+            "en": "Invoke to ask Allah for guidance, clarity of heart, and the ability to discern truth from falsehood."
         },
         "reflection": {
             "de": "Licht dient der Orientierung. Wer Gottes Licht sucht, muss bereit sein, den Stolz und die Selbsttäuschung abzulegen, die wie Schatten auf der Seele liegen.",
