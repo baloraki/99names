@@ -79,6 +79,13 @@ export const storage = {
   },
   setLanguage(language: Language): void {
     setItem(STORAGE_KEYS.LANGUAGE, language)
+    if (isClient) {
+      try {
+        document.cookie = `language=${language};path=/;max-age=31536000;SameSite=Lax`
+      } catch {
+        // ignore
+      }
+    }
   },
   getSchedule(): LearningScheduleSettings {
     return getItem<LearningScheduleSettings>(STORAGE_KEYS.SCHEDULE) ?? { ...defaultSchedule }

@@ -18,8 +18,19 @@ export function middleware(request: NextRequest) {
   // Skip API routes, static files, etc.
   if (pathname.startsWith('/api/') || pathname.startsWith('/_next/')) return
 
-  // 302 redirect based on Accept-Language for root path only
+  // 302 redirect based on language cookie or Accept-Language for root path only
   if (pathname === '/') {
+    const cookieLang = request.cookies.get('language')?.value
+    if (cookieLang === 'de') {
+      return NextResponse.redirect(new URL('/de', request.url), 302)
+    }
+    if (cookieLang === 'tr') {
+      return NextResponse.redirect(new URL('/tr', request.url), 302)
+    }
+    if (cookieLang === 'en') {
+      // User explicitly prefers English — do not redirect
+      return
+    }
     const acceptLanguage = request.headers.get('accept-language') || ''
     if (acceptLanguage.startsWith('de')) {
       return NextResponse.redirect(new URL('/de', request.url), 302)
