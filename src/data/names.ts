@@ -25,9 +25,9 @@ export const firstName: NameEntry = {
         "en": "The proper name of the One True God, encompassing all attributes of perfection. He is the only one Almighty and alone worthy of worship."
     },
     "duaUsage": {
-        "de": "Wird verwendet, um Gott in Seiner Gesamtheit, Allmacht und Majestät anzurufen. Es ist das Fundament jedes Bittgebets (Ya Allah).",
-        "tr": "Her türlü yakarışın başında ve sonunda, O'nun mutlak azametine sığınmak ve birliğini ikrar etmek için zikredilir.",
-        "en": "Invoke 'Allah' to call upon Him in His totality, acknowledging that He alone is the ultimate source of all answers and the only one worthy of worship."
+        "de": "Ya Allah, ich bitte Dich um Deine Rechtleitung, Barmherzigkeit und Nähe und bekenne, dass nur Dir wahre Anbetung gebührt.",
+        "tr": "Ya Allah, hidayetini, rahmetini ve yakınlığını dilerim; gerçek kulluğun yalnız Sana ait olduğunu ikrar ederim.",
+        "en": "Ya Allah, I ask You for guidance, mercy, and closeness, affirming that You alone are worthy of worship."
     },
     "reflection": {
         "de": "Gott ist die einzige Realität, der wahre Anbetung gebührt. Die Erkenntnis dieses Namens befreit den Menschen von der Abhängigkeit gegenüber der Schöpfung.",
@@ -51,11 +51,12 @@ export const firstName: NameEntry = {
 // - Theology follows a Sunni Hanafi / Maturidi-compatible tanzih approach: Allah is unlike creation and is not described with body, place, direction, physical light, or created qualities.
 // - Qur'an 7:180 is the basis for calling upon Allah by His beautiful names.
 // - Sahih al-Bukhari 7392 and Sahih Muslim 2677 establish the general merit of Allah's ninety-nine names.
-// - The commonly taught ordered list is associated with Jami' at-Tirmidhi 3507; that listed narration is treated here as pedagogical/traditional, not as a definitive exclusive canon, because the listed narration is graded weak by some hadith scholars.
-// - The exported firstName object (Allah) is a standalone core name and must not be counted as an additional 100th list item in the UI.
-// - Not every entry in this dataset is asserted as an exact Qur'anic name. Some entries use a thematic Qur'anic basis, action/attribute basis, or traditional list basis.
+// - This dataset is a curated educational list. It is based on the common Tirmidhi order, but it is not a verbatim reproduction of Jami' at-Tirmidhi 3507.
+// - Allah is kept as a standalone foundational name (firstName). Al-Ahad is included in the numbered list because it is directly Qur'anic in 112:1.
+// - The list in Jami' at-Tirmidhi 3507 is treated as traditional/pedagogical and not as a definitive exclusive canon; the listed narration is graded weak by some hadith scholars.
+// - Not every entry is asserted as an exact Qur'anic name. Some entries use a direct Qur'anic name basis, while others use thematic, action/attribute, or traditional-list basis.
 // - No fixed dhikr counts, guaranteed worldly effects, amulets, medical claims, or unsourced virtue claims are asserted.
-// - Every entry remains review-required before public religious publication; duaUsage must be phrased as a request to Allah, not as a guaranteed effect or causal formula.
+// - Every entry requires scholarly/content review before public religious publication; duaUsage must be phrased as a request to Allah, not as a guaranteed effect or causal formula.
 
 export const names: NameEntry[] = [
     {
@@ -461,9 +462,9 @@ export const names: NameEntry[] = [
             "en": "Reflecting on this name teaches us that while Allah's power is absolute, it is also the source of ultimate comfort and restoration."
         },
         "sourceNote": {
-            "de": "Die Wurzel 'j-b-r' bezieht sich ursprünglich auf das Schienen eines gebrochenen Knochens (Heilung und Zwang zur Form).",
-            "tr": "İsim kökeni olan 'cebr', kırık bir kemiği düzeltip sarmak (iyileştirmek) anlamına da gelir.",
-            "en": "The root 'j-b-r' traditionally refers to setting a broken bone, implying both the use of force and the act of healing."
+            "de": "Eine bekannte lexikalische Bedeutung der Wurzel j-b-r ist auch das Richten oder Schienen eines Gebrochenen; daraus ergibt sich die Verbindung von Übermacht und Wiederherstellung.",
+            "tr": "j-b-r kökünün bilinen anlamlarından biri de kırığı düzeltmek/sarmaktır; bu yüzden isim hem mutlak kudret hem de onarma mânasıyla açıklanır.",
+            "en": "One known lexical meaning of the root j-b-r is to set or mend what is broken; this explains the combination of compelling power and restoration."
         },
         "source": {
             "de": "Koranischer Bezug / Grundlage: (59:23)",
@@ -967,14 +968,14 @@ export const names: NameEntry[] = [
             "en": "Constriction in life is not a sign of abandonment, but a call to patience and trust. It reminds the believer that true control lies solely with the Creator."
         },
         "sourceNote": {
-            "de": "Dieser Name sollte immer im Kontext mit Al-Bāsiṭ (dem Ausdehnenden) verstanden werden, um ein einseitiges Gottesbild zu vermeiden.",
-            "tr": "Genellikle El-Bâsıt ismiyle birlikte zikredilir; bu denge, Allah'ın hem imtihan edici hem de lütfedici sıfatlarını bir arada gösterir.",
-            "en": "This name is complementary to Al-Bāsiṭ (The Expander). Together, they represent the divine balance of life's ebbs and flows."
+            "de": "Traditionell mit Al-Bāsiṭ zusammen verstanden. Der Qur'an-Bezug stützt die Handlung des Zurückhaltens/Einengens, ist aber kein eindeutiger isolierter Namensbeleg.",
+            "tr": "Geleneksel olarak El-Bâsıt ile birlikte anlaşılır. Kur'an bağlantısı kabz/daraltma fiilini destekler; fakat tek başına doğrudan isim lafzı olarak kesin gösterilmemelidir.",
+            "en": "Traditionally understood together with Al-Bāsiṭ. The Qur'anic reference supports the act of withholding/constricting, but should not be treated as an unambiguous isolated name occurrence."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (2:245)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (2:245)",
-            "en": "Qur'anic reference / basis: (2:245)"
+            "de": "Traditionelle Listenbasis: Jami' at-Tirmidhi 3507; Handlungs-/Attributbasis im Qur'an: (2:245)",
+            "tr": "Geleneksel liste dayanağı: Câmiʿu't-Tirmizî 3507; Kur'an'da fiil/sıfat temeli: (2:245)",
+            "en": "Traditional list basis: Jami' at-Tirmidhi 3507; Qur'anic action/attribute basis: (2:245)"
         },
         "scholarlyReviewed": false
     },
@@ -1013,14 +1014,14 @@ export const names: NameEntry[] = [
             "en": "Expansion (Bast) is a state that requires gratitude. Recognizing Allah as the source of relief helps a believer remain humble during times of ease and prosperity."
         },
         "sourceNote": {
-            "de": "Ergänzt Al-Qābiḍ. Zusammen beschreiben sie das rhythmische Geben und Nehmen, das Leben und das Universum bestimmt.",
-            "tr": "El-Kâbıd ismiyle beraber kâinattaki dengeyi temsil eder. Bir kapıyı kapatan, diğerini en hayırlı şekilde açan O'dur.",
-            "en": "Complements Al-Qābiḍ. Together, these names illustrate the divine rhythm of life—the contraction and expansion that guide spiritual growth."
+            "de": "Ergänzt Al-Qābiḍ. Der Qur'an-Bezug stützt die Handlung des Ausweitens/Gewährens, ist aber kein eindeutiger isolierter Namensbeleg.",
+            "tr": "El-Kâbıd ismini tamamlar. Kur'an bağlantısı bast/genişletme fiilini destekler; fakat tek başına doğrudan isim lafzı olarak kesin gösterilmemelidir.",
+            "en": "Complements Al-Qābiḍ. The Qur'anic reference supports the act of expanding/giving, but should not be treated as an unambiguous isolated name occurrence."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (2:245)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (2:245)",
-            "en": "Qur'anic reference / basis: (2:245)"
+            "de": "Traditionelle Listenbasis: Jami' at-Tirmidhi 3507; Handlungs-/Attributbasis im Qur'an: (2:245)",
+            "tr": "Geleneksel liste dayanağı: Câmiʿu't-Tirmizî 3507; Kur'an'da fiil/sıfat temeli: (2:245)",
+            "en": "Traditional list basis: Jami' at-Tirmidhi 3507; Qur'anic action/attribute basis: (2:245)"
         },
         "scholarlyReviewed": false
     },
@@ -1059,14 +1060,14 @@ export const names: NameEntry[] = [
             "en": "True status is granted by Allah alone. Reflecting on this name reminds us that no power or rank is permanent if it is built on injustice or pride."
         },
         "sourceNote": {
-            "de": "Wird traditionell zusammen mit 'Ar-Rāfi‘' (dem Erhöhenden) genannt. Es beschreibt die göttliche Justierung der Ränge.",
-            "tr": "Genellikle 'Er-Râfi' ismiyle birlikte düşünülür. Allah'ın hikmetiyle kimini düşürüp kimini yükseltmesini ifade eder.",
-            "en": "Traditionally paired with 'Ar-Rāfi‘' (The Exalter). It represents the divine adjustment of scales and ranks based on truth and merit."
+            "de": "Traditionell zusammen mit Ar-Rāfiʿ genannt. Der Qur'an-Bezug ist thematisch/handlungsbezogen und kein eindeutiger direkter Namensbeleg für 'Al-Khāfiḍ'.",
+            "tr": "Geleneksel olarak Er-Râfiʿ ile birlikte zikredilir. Kur'an bağlantısı tematik/fiilîdir; 'El-Hâfıd' ismini doğrudan lafız olarak göstermez.",
+            "en": "Traditionally paired with Ar-Rāfiʿ. The Qur'anic reference is thematic/action-based and is not a clear direct occurrence of the name 'Al-Khāfiḍ'."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (95:5)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (95:5)",
-            "en": "Qur'anic reference / basis: (95:5)"
+            "de": "Traditionelle Listenbasis: Jami' at-Tirmidhi 3507; thematischer Qur'an-Bezug zum Herabsetzen: (95:5)",
+            "tr": "Geleneksel liste dayanağı: Câmiʿu't-Tirmizî 3507; alçaltma temasına dair Kur'anî bağlantı: (95:5)",
+            "en": "Traditional list basis: Jami' at-Tirmidhi 3507; thematic Qur'anic reference for abasement: (95:5)"
         },
         "scholarlyReviewed": false
     },
@@ -1105,14 +1106,14 @@ export const names: NameEntry[] = [
             "en": "Reflecting on this name teaches us that true honor comes from Allah alone. To be raised high by the Creator, one must practice humility and serve others with a pure heart."
         },
         "sourceNote": {
-            "de": "Ergänzt 'Al-Khāfiḍ'. Während 'Al-Khāfiḍ' die Hochmütigen senkt, hebt 'Ar-Rāfi‘' die Bescheidenen hervor.",
-            "tr": "Hâfıd isminin zıddıdır; bu iki isim birlikte ilahi adaletin ve liyakatin nasıl işlediğini gösterir.",
-            "en": "The direct counterpart to 'Al-Khāfiḍ'. Together, they represent the divine mechanism of justice where pride leads to abasement and humility leads to exaltation."
+            "de": "Ergänzt Al-Khāfiḍ. Die angegebenen Verse belegen das Erhöhen von Rängen als göttliche Handlung, aber nicht eindeutig 'Ar-Rāfiʿ' als direkten Qur'an-Namen.",
+            "tr": "El-Hâfıd ismini tamamlar. Verilen ayetler dereceleri yükseltmeyi Allah'ın fiili olarak destekler; fakat 'Er-Râfiʿ' ismini doğrudan lafız olarak göstermez.",
+            "en": "Complements Al-Khāfiḍ. The cited verses support elevation of ranks as a divine act, but do not clearly present 'Ar-Rāfiʿ' as a direct Qur'anic name."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (58:11) (6:83)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (58:11) (6:83)",
-            "en": "Qur'anic reference / basis: (58:11) (6:83)"
+            "de": "Traditionelle Listenbasis: Jami' at-Tirmidhi 3507; Handlungs-/Attributbasis im Qur'an: (58:11) (6:83)",
+            "tr": "Geleneksel liste dayanağı: Câmiʿu't-Tirmizî 3507; Kur'an'da fiil/sıfat temeli: (58:11) (6:83)",
+            "en": "Traditional list basis: Jami' at-Tirmidhi 3507; Qur'anic action/attribute basis: (58:11) (6:83)"
         },
         "scholarlyReviewed": false
     },
@@ -1335,14 +1336,14 @@ export const names: NameEntry[] = [
             "en": "Reflecting on this name brings peace to the oppressed, knowing that a final, perfect judgment awaits. It also warns the oppressor that no worldly authority can bypass divine justice."
         },
         "sourceNote": {
-            "de": "Drückt die Souveränität Gottes aus. Sein Urteil (Hukm) ist zeitlos und unvoreingenommen.",
-            "tr": "Hüküm verenlerin en hayırlısıdır. Bu isim, Allah'ın hem bu dünyadaki kozmik yasalarını hem de ahiretteki adaletini kapsar.",
-            "en": "Emphasizes that Allah is the ultimate source of law and order. His decrees are binding, impartial, and based on infinite wisdom."
+            "de": "Stützt sich direkt auf den Qur'an-Wortlaut in (6:114), wo 'ḥakam' für Allah verwendet wird; (22:69) ergänzt das Thema des göttlichen Richtens.",
+            "tr": "Doğrudan (6:114) ayetindeki 'hakem' lafzına dayanır; (22:69) ilahî hüküm verme temasını destekler.",
+            "en": "Directly supported by the Qur'anic wording in (6:114), where 'ḥakam' is used for Allah; (22:69) supports the broader theme of divine judgment."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (22:69)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (22:69)",
-            "en": "Qur'anic reference / basis: (22:69)"
+            "de": "Direkter Qur'an-Beleg: (6:114); ergänzender thematischer Bezug: (22:69)",
+            "tr": "Doğrudan Kur'anî dayanak: (6:114); ek tematik bağlantı: (22:69)",
+            "en": "Direct Qur'anic basis: (6:114); additional thematic reference: (22:69)"
         },
         "scholarlyReviewed": false
     },
@@ -1933,14 +1934,14 @@ export const names: NameEntry[] = [
             "en": "True majesty belongs to Allah alone; human power is but a shadow and should never lead to arrogance."
         },
         "sourceNote": {
-            "de": "Betont die ehrfurchtgebietende Seite Gottes.",
-            "tr": "Ululuk ve şan sahibidir.",
-            "en": "Focuses on the qualities that inspire awe and reverence."
+            "de": "Traditionell in der bekannten Namensliste genannt. Der direkte Qur'an-Wortlaut belegt besonders 'Dhul-Jalāli wal-Ikrām'; 'Al-Jalīl' ist daraus traditionell/semantisch abgeleitet.",
+            "tr": "Geleneksel isim listesinde yer alır. Kur'an lafzı özellikle 'Zü'l-Celâli ve'l-İkrâm' ifadesini gösterir; 'El-Celîl' bu anlam alanından geleneksel/semantik olarak açıklanır.",
+            "en": "Traditionally included in the well-known list. The direct Qur'anic wording especially supports 'Dhul-Jalāli wal-Ikrām'; 'Al-Jalīl' is traditionally/semantically derived from that meaning-field."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (55:27) (39:14) (7:143)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (55:27) (39:14) (7:143)",
-            "en": "Qur'anic reference / basis: (55:27) (39:14) (7:143)"
+            "de": "Traditionelle Listenbasis: Jami' at-Tirmidhi 3507; direkter Qur'an-Bezug zu 'Dhul-Jalāli wal-Ikrām': (55:27); thematische Bezüge: (39:14) (7:143)",
+            "tr": "Geleneksel liste dayanağı: Câmiʿu't-Tirmizî 3507; 'Zü'l-Celâli ve'l-İkrâm' için doğrudan Kur'anî bağlantı: (55:27); tematik bağlantılar: (39:14) (7:143)",
+            "en": "Traditional list basis: Jami' at-Tirmidhi 3507; direct Qur'anic reference for 'Dhul-Jalāli wal-Ikrām': (55:27); thematic references: (39:14) (7:143)"
         },
         "scholarlyReviewed": false
     },
@@ -2669,14 +2670,14 @@ export const names: NameEntry[] = [
             "en": "Precision in the divine record ensures ultimate justice on the Day of Account."
         },
         "sourceNote": {
-            "de": "Bezieht sich auf die Unendlichkeit des Wissens in Zahlen ausgedrückt.",
-            "tr": "İlahi kuşatıcılığın sayısal ifadesidir.",
-            "en": "Highlights the meticulous nature of divine knowledge."
+            "de": "Traditionell in der bekannten Namensliste genannt. Die Verse belegen Allahs umfassendes Erfassen und Zählen aller Dinge, aber nicht eindeutig 'Al-Muḥṣī' als direkten Qur'an-Namen.",
+            "tr": "Geleneksel isim listesinde yer alır. Ayetler Allah'ın her şeyi kuşatıp saymasını destekler; fakat 'El-Muhsî' ismini doğrudan Kur'an lafzı olarak göstermez.",
+            "en": "Traditionally included in the well-known list. The verses support Allah's encompassing and counting of all things, but do not clearly present 'Al-Muḥṣī' as a direct Qur'anic name."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (72:28) (78:29) (82:10-12)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (72:28) (78:29) (82:10-12)",
-            "en": "Qur'anic reference / basis: (72:28) (78:29) (82:10-12)"
+            "de": "Traditionelle Listenbasis: Jami' at-Tirmidhi 3507; Handlungs-/Attributbasis im Qur'an: (72:28) (78:29) (82:10-12)",
+            "tr": "Geleneksel liste dayanağı: Câmiʿu't-Tirmizî 3507; Kur'an'da fiil/sıfat temeli: (72:28) (78:29) (82:10-12)",
+            "en": "Traditional list basis: Jami' at-Tirmidhi 3507; Qur'anic action/attribute basis: (72:28) (78:29) (82:10-12)"
         },
         "scholarlyReviewed": false
     },
@@ -3129,14 +3130,14 @@ export const names: NameEntry[] = [
             "en": "Reflecting on Al-Ahad inspires a sense of awe for a Reality that is completely 'Other' and self-contained."
         },
         "sourceNote": {
-            "de": "Höchster Ausdruck der göttlichen Einzigartigkeit (Sure 112).",
-            "tr": "İhlas Suresi'nin özü olan isimdir.",
-            "en": "The most absolute expression of divine oneness in the Quran."
+            "de": "Direkt im Qur'an belegt (112:1). In dieser kuratierten Liste ersetzt Al-Aḥad nicht den Eigennamen Allah; Allah wird separat als firstName geführt und nicht als zusätzlicher 100. Eintrag gezählt.",
+            "tr": "Kur'an'da doğrudan geçer (112:1). Bu derlenmiş listede El-Ahad, Allah lafzının yerine konulmaz; Allah firstName olarak ayrı tutulur ve 100. madde sayılmaz.",
+            "en": "Directly attested in the Qur'an (112:1). In this curated list, Al-Aḥad does not replace the proper name Allah; Allah is kept separately as firstName and is not counted as a 100th item."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (112:1)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (112:1)",
-            "en": "Qur'anic reference / basis: (112:1)"
+            "de": "Direkter Qur'an-Beleg: (112:1); kuratierte Ergänzung zur traditionellen Tirmidhi-Reihenfolge",
+            "tr": "Doğrudan Kur'anî dayanak: (112:1); geleneksel Tirmizî sıralamasına göre kuratörlü ekleme",
+            "en": "Direct Qur'anic basis: (112:1); curated addition relative to the traditional Tirmidhi ordering"
         },
         "scholarlyReviewed": false
     },
@@ -3313,14 +3314,14 @@ export const names: NameEntry[] = [
             "en": "Reflecting on Al-Muqaddim teaches us to strive, while trusting that the final 'rank' is in Allah's hands."
         },
         "sourceNote": {
-            "de": "Wird meist paarweise mit Al-Mu'akhkhir (72) genannt.",
-            "tr": "Tertip ve düzen ismidir.",
-            "en": "Relates to the order and sequence of creation."
+            "de": "Traditionell meist zusammen mit Al-Mu'akhkhir genannt. Die Verse belegen göttliches Vorziehen/Fristsetzen als Handlung, aber nicht eindeutig 'Al-Muqaddim' als direkten Qur'an-Namen.",
+            "tr": "Geleneksel olarak El-Mu'ahhir ile birlikte zikredilir. Ayetler öne alma/süre verme fiilini destekler; fakat 'El-Mukaddim' ismini doğrudan Kur'an lafzı olarak göstermez.",
+            "en": "Traditionally paired with Al-Mu'akhkhir. The verses support divine advancing/appointing of terms as an act, but do not clearly present 'Al-Muqaddim' as a direct Qur'anic name."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (16:61) (17:34)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (16:61) (17:34)",
-            "en": "Qur'anic reference / basis: (16:61) (17:34)"
+            "de": "Traditionelle Listenbasis: Jami' at-Tirmidhi 3507; Handlungs-/Attributbasis im Qur'an: (16:61) (17:34)",
+            "tr": "Geleneksel liste dayanağı: Câmiʿu't-Tirmizî 3507; Kur'an'da fiil/sıfat temeli: (16:61) (17:34)",
+            "en": "Traditional list basis: Jami' at-Tirmidhi 3507; Qur'anic action/attribute basis: (16:61) (17:34)"
         },
         "scholarlyReviewed": false
     },
@@ -3359,14 +3360,14 @@ export const names: NameEntry[] = [
             "en": "Delay is not denial. Al-Mu'akhkhir acts with wisdom to ensure everything happens at the best possible moment."
         },
         "sourceNote": {
-            "de": "Das Gegenstück zu Al-Muqaddim.",
-            "tr": "Mühlet ve hikmet ismidir.",
-            "en": "Often linked to the concept of tests and the 'reprieve' given to people."
+            "de": "Gegenstück zu Al-Muqaddim. Der Qur'an-Bezug stützt das Aufschieben/Fristsetzen als Handlung, ist aber kein eindeutiger direkter Namensbeleg für 'Al-Mu'akhkhir'.",
+            "tr": "El-Mukaddim'in karşılığıdır. Kur'an bağlantısı erteleme/süre verme fiilini destekler; fakat 'El-Mu'ahhir' ismini doğrudan lafız olarak göstermez.",
+            "en": "Counterpart to Al-Muqaddim. The Qur'anic reference supports delaying/appointing a term as an act, but is not a clear direct name occurrence for 'Al-Mu'akhkhir'."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (71:4)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (71:4)",
-            "en": "Qur'anic reference / basis: (71:4)"
+            "de": "Traditionelle Listenbasis: Jami' at-Tirmidhi 3507; Handlungs-/Attributbasis im Qur'an: (71:4)",
+            "tr": "Geleneksel liste dayanağı: Câmiʿu't-Tirmizî 3507; Kur'an'da fiil/sıfat temeli: (71:4)",
+            "en": "Traditional list basis: Jami' at-Tirmidhi 3507; Qur'anic action/attribute basis: (71:4)"
         },
         "scholarlyReviewed": false
     },
@@ -3589,14 +3590,14 @@ export const names: NameEntry[] = [
             "en": "Reflecting on Al-Wālī encourages trust in the divine management of life, fostering a sense of security that the world is in capable hands."
         },
         "sourceNote": {
-            "de": "Unterscheidet sich von Al-Waliy (56), da hier die administrative Souveränität im Vordergrund steht.",
-            "tr": "Kainatın yönetim ve tasarruf ismidir.",
-            "en": "Refers to administrative sovereignty and governance over the cosmos."
+            "de": "Traditionell in der bekannten Namensliste genannt und von Al-Waliyy zu unterscheiden. Der Verweis ist hier vorsichtig als thematischer/lexikalischer Bezug zu verstehen, nicht als eindeutiger direkter Namensbeleg.",
+            "tr": "Geleneksel isim listesinde yer alır ve El-Veliyy isminden ayırt edilmelidir. Buradaki ayet bağlantısı tematik/lugatî destek olarak görülmelidir; doğrudan isim lafzı olarak kesin gösterilmemelidir.",
+            "en": "Traditionally included in the well-known list and to be distinguished from Al-Waliyy. The reference should be understood cautiously as thematic/lexical support, not as an unambiguous direct name occurrence."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (13:11) (22:7)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (13:11) (22:7)",
-            "en": "Qur'anic reference / basis: (13:11) (22:7)"
+            "de": "Traditionelle Listenbasis: Jami' at-Tirmidhi 3507; vorsichtiger thematischer/lexikalischer Qur'an-Bezug: (13:11)",
+            "tr": "Geleneksel liste dayanağı: Câmiʿu't-Tirmizî 3507; ihtiyatlı tematik/lugatî Kur'an bağlantısı: (13:11)",
+            "en": "Traditional list basis: Jami' at-Tirmidhi 3507; cautious thematic/lexical Qur'anic reference: (13:11)"
         },
         "scholarlyReviewed": false
     },
@@ -4003,14 +4004,14 @@ export const names: NameEntry[] = [
             "en": "Reflecting on Al-Muqsiṭ inspires us to be mediators of peace and fairness in our communities."
         },
         "sourceNote": {
-            "de": "Bezieht sich auf die 'gerechte Verteilung' und Balance.",
-            "tr": "Hakkaniyet ve denge ismidir.",
-            "en": "Focuses on the practical and harmonizing aspect of justice."
+            "de": "Traditionell in der bekannten Namensliste genannt. Die Verse belegen göttliche Gerechtigkeit/qisṭ, aber nicht eindeutig 'Al-Muqsiṭ' als direkten Qur'an-Namen.",
+            "tr": "Geleneksel isim listesinde yer alır. Ayetler ilahî adalet/kıst temasını destekler; fakat 'El-Muksit' ismini doğrudan Kur'an lafzı olarak göstermez.",
+            "en": "Traditionally included in the well-known list. The verses support divine justice/qisṭ, but do not clearly present 'Al-Muqsiṭ' as a direct Qur'anic name."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (7:29) (3:18)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (7:29) (3:18)",
-            "en": "Qur'anic reference / basis: (7:29) (3:18)"
+            "de": "Traditionelle Listenbasis: Jami' at-Tirmidhi 3507; thematischer Qur'an-Bezug zu qisṭ/Gerechtigkeit: (7:29) (3:18)",
+            "tr": "Geleneksel liste dayanağı: Câmiʿu't-Tirmizî 3507; kıst/adalet temasına dair Kur'anî bağlantı: (7:29) (3:18)",
+            "en": "Traditional list basis: Jami' at-Tirmidhi 3507; thematic Qur'anic reference for qisṭ/justice: (7:29) (3:18)"
         },
         "scholarlyReviewed": false
     },
@@ -4141,14 +4142,14 @@ export const names: NameEntry[] = [
             "en": "True enrichment is when Allah suffices a person so that they no longer look toward the hands of others."
         },
         "sourceNote": {
-            "de": "Eng verknüpft mit Al-Ghaniy (88).",
-            "tr": "Lütuf ve kerem ismidir.",
-            "en": "Often mentioned in the context of Allah's bounty after hardship."
+            "de": "Eng mit Al-Ghaniyy verbunden. Der Qur'an-Bezug belegt Allahs Reichmachen als Handlung, aber nicht eindeutig 'Al-Mughnī' als direkten Qur'an-Namen.",
+            "tr": "El-Ganiyy ismiyle yakından bağlantılıdır. Kur'an bağlantısı Allah'ın zenginleştirmesini fiil olarak destekler; fakat 'El-Muğnî' ismini doğrudan lafız olarak göstermez.",
+            "en": "Closely connected with Al-Ghaniyy. The Qur'anic reference supports Allah's act of enriching, but does not clearly present 'Al-Mughnī' as a direct Qur'anic name."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (9:28)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (9:28)",
-            "en": "Qur'anic reference / basis: (9:28)"
+            "de": "Traditionelle Listenbasis: Jami' at-Tirmidhi 3507; Handlungs-/Attributbasis im Qur'an: (9:28)",
+            "tr": "Geleneksel liste dayanağı: Câmiʿu't-Tirmizî 3507; Kur'an'da fiil/sıfat temeli: (9:28)",
+            "en": "Traditional list basis: Jami' at-Tirmidhi 3507; Qur'anic action/attribute basis: (9:28)"
         },
         "scholarlyReviewed": false
     },
@@ -4463,14 +4464,14 @@ export const names: NameEntry[] = [
             "en": "Reflection on Al-Baqi provides a sense of detachment (Zuhd). It humbles the ego by reminding us that our physical lives are brief whispers compared to His eternity."
         },
         "sourceNote": {
-            "de": "Ein Name der göttlichen Beständigkeit (Sure 55:27).",
-            "tr": "Beka sıfatının tecellisidir.",
-            "en": "Reflects the attribute of 'Baqa' (Eternity)."
+            "de": "Traditionell in der bekannten Namensliste genannt. (55:27) belegt Allahs Bleiben/Beständigkeit, aber nicht eindeutig 'Al-Bāqī' als direkten Qur'an-Namen.",
+            "tr": "Geleneksel isim listesinde yer alır. (55:27) Allah'ın baki kalmasını destekler; fakat 'El-Bâkî' ismini doğrudan Kur'an lafzı olarak göstermez.",
+            "en": "Traditionally included in the well-known list. (55:27) supports Allah's permanence, but does not clearly present 'Al-Bāqī' as a direct Qur'anic name."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (55:27)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (55:27)",
-            "en": "Qur'anic reference / basis: (55:27)"
+            "de": "Traditionelle Listenbasis: Jami' at-Tirmidhi 3507; thematischer Qur'an-Bezug zur göttlichen Beständigkeit: (55:27)",
+            "tr": "Geleneksel liste dayanağı: Câmiʿu't-Tirmizî 3507; ilahî beka temasına dair Kur'anî bağlantı: (55:27)",
+            "en": "Traditional list basis: Jami' at-Tirmidhi 3507; thematic Qur'anic reference for divine permanence: (55:27)"
         },
         "scholarlyReviewed": false
     },
@@ -4555,14 +4556,14 @@ export const names: NameEntry[] = [
             "en": "Reflection on Ar-Rashid reminds us that success is not just about effort, but about alignment with the divine order and wisdom."
         },
         "sourceNote": {
-            "de": "Bezieht sich auf die vollkommene Zielstrebigkeit und Weisheit Gottes.",
-            "tr": "Doğru yolun ve olgunluğun kaynağıdır.",
-            "en": "Signifies the perfect planning and execution of the Divine Will."
+            "de": "Traditionell in der bekannten Namensliste genannt. (2:256) belegt Rushd/Rechtleitung thematisch, aber nicht eindeutig 'Ar-Rashīd' als direkten Qur'an-Namen.",
+            "tr": "Geleneksel isim listesinde yer alır. (2:256) rüşd/doğru yol temasını destekler; fakat 'Er-Reşîd' ismini doğrudan Kur'an lafzı olarak göstermez.",
+            "en": "Traditionally included in the well-known list. (2:256) supports the theme of rushd/right guidance, but does not clearly present 'Ar-Rashīd' as a direct Qur'anic name."
         },
         "source": {
-            "de": "Koranischer Bezug / Grundlage: (2:256)",
-            "tr": "Kur'an'daki ilgili ayetler / dayanak: (2:256)",
-            "en": "Qur'anic reference / basis: (2:256)"
+            "de": "Traditionelle Listenbasis: Jami' at-Tirmidhi 3507; thematischer Qur'an-Bezug zu Rushd/Rechtleitung: (2:256)",
+            "tr": "Geleneksel liste dayanağı: Câmiʿu't-Tirmizî 3507; rüşd/doğru yol temasına dair Kur'anî bağlantı: (2:256)",
+            "en": "Traditional list basis: Jami' at-Tirmidhi 3507; thematic Qur'anic reference for rushd/right guidance: (2:256)"
         },
         "scholarlyReviewed": false
     },
