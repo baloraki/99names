@@ -6,12 +6,6 @@ import { ObfuscatedEmail } from '@/components/ObfuscatedEmail'
 import { getLocalizedStaticPath } from '@/lib/seo'
 import { usePathname } from 'next/navigation'
 
-// Validates environment variables at runtime for client components
-function assertEnv(name: string): string {
-  const value = process.env[name]
-  return value || "-"
-}
-
 // E-Mail is intentionally NOT stored here → see <ObfuscatedEmail />
 
 // A paragraph is either plain text OR a sentence that contains the e-mail
@@ -317,7 +311,7 @@ export function PrivacyPageContent() {
   const c = content[language]
 
   // Validate environment variables at runtime (when the component is rendered)
-  const operatorName = assertEnv('NEXT_PUBLIC_OPERATOR_NAME')
+  const operatorName = process.env.NEXT_PUBLIC_OPERATOR_NAME?.trim() || '-'
   const operatorAddress = getOperatorAddress()
 
   const sections = c.sections(operatorName, operatorAddress)
