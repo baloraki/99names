@@ -127,6 +127,23 @@ export function useAppState() {
         storage.setLearnState(nextLearn)
         broadcastLearn(nextLearn)
       },
+      resetAll() {
+        storage.clearAll()
+        if (typeof document !== 'undefined') {
+          try {
+            const cookies = document.cookie.split(';')
+            for (const cookie of cookies) {
+              const name = cookie.split('=')[0]?.trim()
+              if (name) {
+                document.cookie = `${name}=;path=/;max-age=0;SameSite=Lax`
+              }
+            }
+          } catch {
+            // ignore
+          }
+        }
+        window.location.reload()
+      },
       setMode(mode: LearnMode) {
         setLearnStateValue((current) => {
           const next = { ...current, mode }
