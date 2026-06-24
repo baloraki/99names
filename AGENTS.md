@@ -20,6 +20,14 @@ This project uses **Next.js 16 App Router** — not the classic Pages Router. AP
 
 ---
 
+## Coding Standards
+
+See [STANDARDS.md](./STANDARDS.md) for cross-project best practices on forms, error handling, auth, i18n, SEO, email templates, and more.
+
+See [CODING.md](./CODING.md) for hard coding rules (no inline ifs, no `any`, early return, etc.) — table format, add your own.
+
+---
+
 ## Tech stack
 
 | Area | Technology |
