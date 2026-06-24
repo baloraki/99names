@@ -31,6 +31,7 @@ type PageCopy = {
   sourceBody?: string
   practiceTitle?: string
   practiceItems?: string[]
+  duaDisclaimer?: string
 }
 
 const copy: Record<LocalizedSeoPage, Record<Language, PageCopy>> = {
@@ -120,6 +121,7 @@ const copy: Record<LocalizedSeoPage, Record<Language, PageCopy>> = {
       primaryCta: 'Read dua usage',
       sourceTitle: 'Source-aware wording',
       sourceBody: 'The safest pattern here is not to invent special invocations or promise specific results. Use the meanings as a guide for personal supplication, keep adab in mind, and consult qualified teachers for religious rulings or devotional practices.',
+      duaDisclaimer: 'This is not a transmitted dua, but a free learning formulation.',
     },
     de: {
       eyebrow: 'Dua mit den Namen Allahs',
@@ -133,6 +135,7 @@ const copy: Record<LocalizedSeoPage, Record<Language, PageCopy>> = {
       primaryCta: 'Dua-Hinweis lesen',
       sourceTitle: 'Quellenbewusste Formulierung',
       sourceBody: 'Am sichersten ist es, keine besonderen Anrufungen zu erfinden und keine konkreten Ergebnisse zu versprechen. Nutze die Bedeutungen als Orientierung für persönliche Bittgebete und frage qualifizierte Lehrpersonen bei religiösen Detailfragen.',
+      duaDisclaimer: 'Dies ist kein überliefertes Dua, sondern eine freie Lernformulierung.',
     },
     tr: {
       eyebrow: "Allah'ın isimleriyle dua",
@@ -146,6 +149,7 @@ const copy: Record<LocalizedSeoPage, Record<Language, PageCopy>> = {
       primaryCta: 'Dua kullanımını oku',
       sourceTitle: 'Kaynak bilinciyle ifade',
       sourceBody: 'En güvenli yol özel zikirler uydurmamak ve belirli sonuçlar vaat etmemektir. Anlamları kişisel dua için rehber kabul et; dini hükümler ve uygulamalar için ehil kişilere danış.',
+      duaDisclaimer: 'Bu, rivayet edilen bir dua değil, serbest bir öğrenme formülasyonudur.',
     },
   },
   reflections: {
@@ -331,6 +335,11 @@ function DuaPage({ locale }: { locale: Language }) {
   return (
     <div lang={locale} className="mx-auto max-w-4xl space-y-8">
       <PageIntro page="dua" locale={locale} />
+      {text.duaDisclaimer && (
+        <p className="rounded-lg border border-gold/30 bg-surface p-4 text-sm italic leading-7 text-muted">
+          {text.duaDisclaimer}
+        </p>
+      )}
       <Suspense>
         <SeoNamesSearchSection locale={locale} variant="dua" names={names} />
       </Suspense>
