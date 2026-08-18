@@ -62,9 +62,14 @@ export function SettingsClient({ locale }: { locale: Language }) {
         <p className="mt-2 text-sm leading-6 text-muted">
           {dict.settings.localDataBody(progress.learnedIds.length, progress.favoriteIds.length, progress.lastViewedSlug ?? dict.common.none)}
         </p>
-        <button type="button" className="btn-danger mt-5" onClick={() => window.confirm(dict.settings.resetConfirm) && actions.resetProgress()}>
-          {dict.settings.resetProgress}
-        </button>
+        <div className="mt-5 flex flex-wrap gap-3">
+          <button type="button" className="btn-danger" onClick={() => window.confirm(dict.settings.resetConfirm) && actions.resetProgress()}>
+            {dict.settings.resetProgress}
+          </button>
+          <button type="button" className="btn-danger" onClick={() => window.confirm(dict.settings.resetAllConfirm) && actions.resetAll()}>
+            {dict.settings.resetAll}
+          </button>
+        </div>
       </section>
       <p className="rounded-lg border border-white/10 bg-white/[0.03] p-4 text-sm leading-6 text-muted">
         {dict.settings.notificationNote}

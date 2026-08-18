@@ -141,6 +141,8 @@ export type Dict = {
     localDataBody: (learned: number, favorites: number, lastViewed: string) => string
     resetProgress: string
     resetConfirm: string
+    resetAll: string
+    resetAllConfirm: string
     pushReminderTitle: string
     iosPushUnavailable: string
     iosPwaNote: string
@@ -339,6 +341,8 @@ const de: Dict = {
     localDataBody: (learned, favorites, lastViewed) => `Gelernt: ${learned}, Favoriten: ${favorites}, zuletzt angesehen: ${lastViewed}.`,
     resetProgress: 'Fortschritt zurücksetzen',
     resetConfirm: 'Fortschritt wirklich zurücksetzen?',
+    resetAll: 'Gesamte App zurücksetzen',
+    resetAllConfirm: 'Die gesamte App wirklich zurücksetzen? Alle lokalen Daten, Cookies und Einstellungen werden gelöscht.',
     pushReminderTitle: 'Push-Erinnerungen',
     iosPushUnavailable: 'Push-Erinnerungen sind auf iOS nicht verfügbar.',
     iosPwaNote: 'iPhone-Hinweis: Daily Husna bleibt im Browser vollständig nutzbar. Push-Erinnerungen werden auf iOS hier nicht angeboten. Bitte nutze die App ohne Push-Benachrichtigungen.',
@@ -537,6 +541,8 @@ const tr: Dict = {
     localDataBody: (learned, favorites, lastViewed) => `Öğrenilen: ${learned}, favoriler: ${favorites}, son görüntülenen: ${lastViewed}.`,
     resetProgress: 'İlerlemeyi sıfırla',
     resetConfirm: 'İlerleme gerçekten sıfırlansın mı?',
+    resetAll: 'Tüm uygulamayı sıfırla',
+    resetAllConfirm: 'Tüm uygulama gerçekten sıfırlansın mı? Tüm yerel veriler, çerezler ve ayarlar silinecek.',
     pushReminderTitle: 'Push hatırlatmaları',
     iosPushUnavailable: 'Push hatırlatmaları iOS\'ta kullanılamaz.',
     iosPwaNote: 'iPhone notu: Daily Husna tarayıcıda tamamen kullanılabilir. iOS\'ta push hatırlatmaları burada sunulmuyor. Lütfen uygulamayı push bildirimleri olmadan kullan.',
@@ -735,6 +741,8 @@ const en: Dict = {
     localDataBody: (learned, favorites, lastViewed) => `Learned: ${learned}, favorites: ${favorites}, last viewed: ${lastViewed}.`,
     resetProgress: 'Reset progress',
     resetConfirm: 'Really reset progress?',
+    resetAll: 'Reset full application',
+    resetAllConfirm: 'Really reset the full application? All local data, cookies, and settings will be deleted.',
     pushReminderTitle: 'Push reminders',
     iosPushUnavailable: 'Push reminders are not available on iOS.',
     iosPwaNote: 'iPhone note: Daily Husna works fully in the browser. Push reminders are not offered on iOS here. Please use the app without push notifications.',
